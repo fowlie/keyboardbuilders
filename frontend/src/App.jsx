@@ -5,7 +5,7 @@ import Profile from './components/Profile'
 import LoginButton from './components/LoginButton'
 import LogoutButton from './components/LogoutButton'
 import KeyboardList from './components/KeyboardList'
-import KeyboardForm from './components/KeyboardForm'
+import NewKeyboardPage from './pages/NewKeyboardPage'
 
 function Home() {
   return (
@@ -42,7 +42,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/keyboards" element={<KeyboardList />} />
-            <Route path="/keyboards/new" element={<KeyboardForm />} />
+            <Route path="/keyboards/new" element={<NewKeyboardPage />} />
           </Routes>
         </Container>
       </Container>

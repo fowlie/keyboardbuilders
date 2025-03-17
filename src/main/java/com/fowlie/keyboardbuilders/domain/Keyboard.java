@@ -13,4 +13,7 @@ public class Keyboard {
 
     @Column(nullable = false)
     private String name;
+
+    @Column
+    private String description;
 }
