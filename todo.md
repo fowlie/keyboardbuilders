@@ -1,0 +1,8 @@
+- [x] Feature: Auth and session management using Auth0
+- [ ] Validate JWT tokens in backend
+- [ ] Add the domain model to backend
+- [ ] Feature: Create new keyboard
+- [ ] Feature: All keyboards table
+- [ ] Feature: Favorites
+- [ ] Feature: Detailed Keyboards page
+- [ ] Feature: Image upload
