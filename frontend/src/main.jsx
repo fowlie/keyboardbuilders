@@ -8,8 +8,8 @@ const root = createRoot(document.getElementById('root'));
 
 root.render(
   <Auth0Provider
-    domain="dev-keyboardbuilders.eu.auth0.com"
-    clientId="Acan7xXV0oeyXHcjLgbHAE5U81m0xKn5"
+    domain="keyboardbuilders.eu.auth0.com"
+    clientId="yJarVAikY1ak0vDbNwxQAiO6Dc0tOpCt"
     authorizationParams={{
       redirect_uri: window.location.origin
     }}
