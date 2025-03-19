@@ -1,0 +1,6 @@
+---
+description: This tool performs debugging for frontend development
+globs: frontend/**/*
+alwaysApply: false
+---
+When I say /debug, gather console logs, take a screenshot and look for network errors in the app to help fix issues. After you fix the issue, always offer to create a unit test so the bug won't come back in the future.

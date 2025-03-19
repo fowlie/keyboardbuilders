@@ -1,0 +1,6 @@
+---
+description: This rule helps with using git and creating commit messages
+globs: 
+alwaysApply: false
+---
+When I say /commit, I mean you should add the relevant files using `git add <file1 file2 etc>`, then come up with a short and sweet git commit message. Follow the conventional commits principles.
