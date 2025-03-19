@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Header, Button, Card, Loader } from 'semantic-ui-react'
-
+import { useAuth0 } from '@auth0/auth0-react'
 function KeyboardList() {
   const navigate = useNavigate()
   const [keyboards, setKeyboards] = useState([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
+  const { isAuthenticated } = useAuth0()
 
   useEffect(() => {
     fetchKeyboards()
@@ -53,12 +54,14 @@ function KeyboardList() {
         alignItems: 'center'
       }}>
         <Header as='h2' content="Keyboard List" />
-        <button 
-          className="ui primary button"
-          onClick={handleAddKeyboard}
-        >
-          Add Keyboard
-        </button>
+        {isAuthenticated && (
+          <button 
+            className="ui primary button"
+            onClick={handleAddKeyboard}
+          >
+            Add Keyboard
+          </button>
+        )}
       </div>
 
       {error && (
@@ -87,7 +90,7 @@ function KeyboardList() {
 
       {keyboards.length === 0 && !error && (
         <div style={{ textAlign: 'center', marginTop: '2rem', color: '#666' }}>
-          No keyboards found. Click "Add Keyboard" to create one!
+          No keyboards found.
         </div>
       )}
     </div>
