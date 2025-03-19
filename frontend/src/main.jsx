@@ -12,7 +12,8 @@ root.render(
     domain="keyboardbuilders.eu.auth0.com"
     clientId="yJarVAikY1ak0vDbNwxQAiO6Dc0tOpCt"
     authorizationParams={{
-      redirect_uri: window.location.origin
+      redirect_uri: window.location.origin,
+      audience: 'https://keyboardbuilders.eu.auth0.com/api/v2/'
     }}
   >
     <App />
