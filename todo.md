@@ -6,3 +6,4 @@
 - [ ] Feature: Favorites
 - [ ] Feature: Detailed Keyboards page
 - [ ] Feature: Image upload
+- [ ] Idea: Take inspiration from StackOverflow, earn rights to edit, create a badge system, etc.
