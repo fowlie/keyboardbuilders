@@ -24,6 +24,7 @@ public class JWTSecurityConfig {
                 .authorizeHttpRequests(authorize -> authorize
                         .requestMatchers(HttpMethod.GET, "/api/keyboards/**").permitAll()
                         .requestMatchers(HttpMethod.POST, "/api/keyboards").authenticated()
+                        .requestMatchers(HttpMethod.GET, "/api/users/me").authenticated()
                 )
                 .cors(cors -> cors.configurationSource(corsConfigurationSource))
                 .oauth2ResourceServer(oauth2 -> oauth2
