@@ -19,3 +19,17 @@ root.render(
     <App />
   </Auth0Provider>,
 );
+
+// Suppress the React DevTools warning in development mode
+if (process.env.NODE_ENV === 'development') {
+  const originalConsoleInfo = console.info;
+  console.info = (...args) => {
+    if (
+      typeof args[0] === 'string' &&
+      args[0].includes('Download the React DevTools') 
+    ) {
+      return;
+    }
+    originalConsoleInfo(...args);
+  };
+}

@@ -8,6 +8,7 @@ import LogoutButton from './components/LogoutButton'
 import KeyboardList from './components/KeyboardList'
 import NewKeyboardPage from './pages/NewKeyboardPage'
 import ProfilePage from './pages/ProfilePage'
+import KeyboardDetailPage from './pages/KeyboardDetailPage'
 import { usersApi } from './api/usersApi'
 
 // Create a context to share user registration state
@@ -122,6 +123,7 @@ function App() {
               <Route path="/profile" element={<ProfilePage />} />
               <Route path="/keyboards" element={<KeyboardList />} />
               <Route path="/keyboards/new" element={<NewKeyboardPage />} />
+              <Route path="/keyboards/:id" element={<KeyboardDetailPage />} />
             </Routes>
           </Container>
         </Container>
