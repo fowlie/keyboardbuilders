@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { Header, Card, Loader } from 'semantic-ui-react'
+import { Header, Card, Loader, Label } from 'semantic-ui-react'
 import { useAuth0 } from '@auth0/auth0-react'
 import ErrorDisplay from './ErrorDisplay'
 
@@ -86,10 +86,9 @@ function KeyboardList() {
               >
                 <Card.Content>
                   <Card.Header>{keyboard.name}</Card.Header>
-                  <Card.Meta>{keyboard.switchType}</Card.Meta>
-                  <Card.Description>
-                    {keyboard.description || 'No description available'}
-                  </Card.Description>
+                  <Card.Meta>
+                    {keyboard.split && <Label color="blue">Split</Label>}
+                  </Card.Meta>
                 </Card.Content>
               </Card>
             ))}

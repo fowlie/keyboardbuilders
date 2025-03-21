@@ -81,4 +81,25 @@ export const keyboardsApi = {
     
     return response.json()
   },
+
+  // Get keyboards for a specific user
+  getByUserId: async (userId, getAccessToken) => {
+    try {
+      const token = await getAccessToken();
+      const response = await fetch(`${API_BASE_URL}/user/${userId}`, {
+        headers: {
+          'Authorization': `Bearer ${token}`
+        }
+      });
+      
+      if (!response.ok) {
+        throw new Error(`Failed to get keyboards for user (status: ${response.status})`);
+      }
+      
+      return response.json();
+    } catch (error) {
+      console.error('Error getting user keyboards:', error);
+      throw error;
+    }
+  },
 } 

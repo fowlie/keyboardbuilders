@@ -32,6 +32,7 @@ public class KeyboardService {
         return keyboardRepository.findById(id)
                 .map(keyboard -> {
                     keyboard.setName(keyboardDetails.getName());
+                    keyboard.setSplit(keyboardDetails.isSplit());
                     return keyboardRepository.save(keyboard);
                 })
                 .orElseThrow(() -> new RuntimeException("Keyboard not found"));
@@ -39,5 +40,9 @@ public class KeyboardService {
 
     public void delete(Long id) {
         keyboardRepository.deleteById(id);
+    }
+
+    public List<Keyboard> getByUserId(String userId) {
+        return keyboardRepository.findByUserIdOrderByIdDesc(userId);
     }
 }

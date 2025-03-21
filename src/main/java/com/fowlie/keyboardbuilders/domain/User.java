@@ -4,9 +4,6 @@ import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.ArrayList;
-import java.util.List;
-
 @Entity
 @Table(name = "users")
 @Data
@@ -23,9 +20,6 @@ public class User {
     
     @Column(name = "picture_url")
     private String pictureUrl;
-    
-    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<Keyboard> keyboards = new ArrayList<>();
     
     public User(String id, String name, String email, String pictureUrl) {
         this.id = id;

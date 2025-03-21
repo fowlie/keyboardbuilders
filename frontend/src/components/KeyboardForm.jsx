@@ -6,7 +6,7 @@ function KeyboardForm({ keyboard, onSubmit, mode = 'new' }) {
   const navigate = useNavigate()
   const [formData, setFormData] = useState(keyboard || {
     name: '',
-    description: ''
+    split: false
   })
 
   const handleChange = (e) => {
@@ -41,14 +41,20 @@ function KeyboardForm({ keyboard, onSubmit, mode = 'new' }) {
         </Form.Field>
 
         <Form.Field>
-          <label>Description</label>
-          <textarea
-            className="ui textarea"
-            name="description"
-            value={formData.description}
-            onChange={handleChange}
-            required
-            style={{ minHeight: 100, width: '100%', padding: '0.67857143em 1em', borderRadius: '0.28571429rem', border: '1px solid rgba(34,36,38,.15)' }}
+          <label>Split</label>
+          <div style={{ fontSize: '0.9em', color: '#666', marginBottom: '0.5em' }}>
+            Hint: A split keyboard usually means two physical parts, but it could also be a split keyboard even if it's just one physical keyboard (like the Reviung).
+          </div>
+          <input
+            type="checkbox"
+            name="split"
+            checked={formData.split || false}
+            onChange={(e) => handleChange({
+              target: {
+                name: 'split',
+                value: e.target.checked
+              }
+            })}
           />
         </Form.Field>
 
@@ -63,4 +69,4 @@ function KeyboardForm({ keyboard, onSubmit, mode = 'new' }) {
   )
 }
 
-export default KeyboardForm 
+export default KeyboardForm

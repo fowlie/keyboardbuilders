@@ -31,14 +31,48 @@ public class UserController {
     @GetMapping("/me")
     public ResponseEntity<User> getCurrentUser(@AuthenticationPrincipal Jwt jwt) {
         String userId = jwt.getSubject();
-        return ResponseEntity.ok(userService.getUserById(userId));
+        try {
+            User user = userService.getUserById(userId);
+            return ResponseEntity.ok(user);
+        } catch (RuntimeException e) {
+            // User not found
+            return ResponseEntity.notFound().build();
+        }
     }
 
     @PostMapping
-    public ResponseEntity<User> createUser(@RequestBody User user, @AuthenticationPrincipal Jwt jwt) {
-        // Ensure the user ID matches the authenticated user's ID
-        user.setId(jwt.getSubject());
-        return ResponseEntity.ok(userService.createUser(user));
+    public ResponseEntity<?> createUser(@RequestBody User user, @AuthenticationPrincipal Jwt jwt) {
+        try {
+            // Ensure the user ID matches the authenticated user's ID
+            if (jwt == null) {
+                return ResponseEntity.status(401).body("Authentication required to create a user profile");
+            }
+            
+            user.setId(jwt.getSubject());
+            
+            // Validate required fields
+            if (user.getName() == null || user.getName().isEmpty()) {
+                return ResponseEntity.badRequest().body("Name is required");
+            }
+            
+            if (user.getEmail() == null || user.getEmail().isEmpty()) {
+                return ResponseEntity.badRequest().body("Email is required");
+            }
+            
+            // Check if user already exists
+            try {
+                User existingUser = userService.getUserById(jwt.getSubject());
+                // User exists, return it
+                return ResponseEntity.ok(existingUser);
+            } catch (RuntimeException e) {
+                // User doesn't exist, continue with creation
+            }
+            
+            User createdUser = userService.createUser(user);
+            return ResponseEntity.status(201).body(createdUser);
+        } catch (Exception e) {
+            return ResponseEntity.status(500).body("Failed to create user: " + e.getMessage());
+        }
     }
 
     @PutMapping("/{id}")

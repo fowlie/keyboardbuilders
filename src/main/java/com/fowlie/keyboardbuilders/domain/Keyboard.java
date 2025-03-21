@@ -20,4 +20,7 @@ public class Keyboard {
 
     @Column
     private String description;
+
+    @Column
+    private boolean split;
 }
