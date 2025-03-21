@@ -88,6 +88,7 @@ function KeyboardList() {
                   <Card.Header>{keyboard.name}</Card.Header>
                   <Card.Meta>
                     {keyboard.split && <Label color="blue">Split</Label>}
+                    {keyboard.hotswap && <Label color="blue">Hotswap</Label>}
                   </Card.Meta>
                 </Card.Content>
               </Card>

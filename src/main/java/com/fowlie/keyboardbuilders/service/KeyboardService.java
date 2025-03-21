@@ -33,6 +33,7 @@ public class KeyboardService {
                 .map(keyboard -> {
                     keyboard.setName(keyboardDetails.getName());
                     keyboard.setSplit(keyboardDetails.isSplit());
+                    keyboard.setHotswap(keyboardDetails.isHotswap());
                     return keyboardRepository.save(keyboard);
                 })
                 .orElseThrow(() -> new RuntimeException("Keyboard not found"));

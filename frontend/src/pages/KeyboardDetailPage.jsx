@@ -67,9 +67,7 @@ const KeyboardDetailPage = () => {
       <Header as="h1">{keyboard.name}</Header>
       <Segment>
         <p><strong>Type:</strong> {keyboard.split ? 'Split' : 'Non-split'}</p>
-        {keyboard.description && (
-          <p><strong>Description:</strong> {keyboard.description}</p>
-        )}
+        <p><strong>Hotswap:</strong> {keyboard.hotswap ? 'Yes' : 'No'}</p>
         {keyboard.user && (
           <p><strong>Owner:</strong> {keyboard.user.name}</p>
         )}

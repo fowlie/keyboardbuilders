@@ -6,7 +6,8 @@ function KeyboardForm({ keyboard, onSubmit, mode = 'new' }) {
   const navigate = useNavigate()
   const [formData, setFormData] = useState(keyboard || {
     name: '',
-    split: false
+    split: false,
+    hotswap: false
   })
 
   const handleChange = (e) => {
@@ -52,6 +53,21 @@ function KeyboardForm({ keyboard, onSubmit, mode = 'new' }) {
             onChange={(e) => handleChange({
               target: {
                 name: 'split',
+                value: e.target.checked
+              }
+            })}
+          />
+        </Form.Field>
+
+        <Form.Field>
+          <label>Hotswap</label>
+          <input
+            type="checkbox"
+            name="hotswap"
+            checked={formData.hotswap || false}
+            onChange={(e) => handleChange({
+              target: {
+                name: 'hotswap',
                 value: e.target.checked
               }
             })}

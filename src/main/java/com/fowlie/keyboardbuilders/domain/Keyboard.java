@@ -19,8 +19,8 @@ public class Keyboard {
     private String name;
 
     @Column
-    private String description;
+    private boolean split;
 
     @Column
-    private boolean split;
+    private boolean hotswap;
 }
