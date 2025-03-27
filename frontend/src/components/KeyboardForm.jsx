@@ -1,9 +1,13 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { Form, Container, Header } from 'semantic-ui-react'
+import { Form, Container, Header, Dropdown, Checkbox, Segment, Button } from 'semantic-ui-react'
+import { useAuth0 } from '@auth0/auth0-react'
+import { devBoardsApi } from '../api/devBoardsApi'
+import { controllersApi } from '../api/controllersApi'
 
 function KeyboardForm({ keyboard, onSubmit, mode = 'new' }) {
   const navigate = useNavigate()
+  const { getAccessTokenSilently } = useAuth0()
   const [formData, setFormData] = useState(keyboard || {
     name: '',
     split: false,
@@ -12,8 +16,39 @@ function KeyboardForm({ keyboard, onSubmit, mode = 'new' }) {
     splay: false,
     rowStagger: false,
     columnStagger: false,
-    url: ''
+    url: '',
+    devBoard: null,
+    controller: null
   })
+  const [devBoards, setDevBoards] = useState([])
+  const [controllers, setControllers] = useState([])
+  const [loading, setLoading] = useState(false)
+  const [newDevBoard, setNewDevBoard] = useState({
+    name: '',
+    wireless: false,
+    controller: null
+  })
+  const [showNewDevBoardForm, setShowNewDevBoardForm] = useState(false)
+
+  useEffect(() => {
+    const fetchData = async () => {
+      setLoading(true)
+      try {
+        const [devBoardsData, controllersData] = await Promise.all([
+          devBoardsApi.getAll(),
+          controllersApi.getAll()
+        ])
+        setDevBoards(devBoardsData)
+        setControllers(controllersData)
+      } catch (error) {
+        console.error('Error fetching data:', error)
+      } finally {
+        setLoading(false)
+      }
+    }
+
+    fetchData()
+  }, [])
 
   const handleChange = (e) => {
     const { name, value } = e.target
@@ -23,16 +58,105 @@ function KeyboardForm({ keyboard, onSubmit, mode = 'new' }) {
     }))
   }
 
+  const handleDevBoardChange = (e, { value }) => {
+    if (value === 'new') {
+      setShowNewDevBoardForm(true)
+      setFormData(prev => ({
+        ...prev,
+        devBoard: null,
+        controller: null
+      }))
+    } else {
+      setShowNewDevBoardForm(false)
+      // If selecting a dev board, clear controller
+      setFormData(prev => ({
+        ...prev,
+        devBoard: value ? devBoards.find(b => b.id === value) : null,
+        controller: null
+      }))
+    }
+  }
+
+  const handleControllerChange = (e, { value }) => {
+    // If selecting a controller, clear dev board
+    setFormData(prev => ({
+      ...prev,
+      controller: value ? controllers.find(c => c.id === value) : null,
+      devBoard: null
+    }))
+    
+    // Also update the controller in the new dev board form
+    if (showNewDevBoardForm) {
+      setNewDevBoard(prev => ({
+        ...prev,
+        controller: value ? controllers.find(c => c.id === value) : null
+      }))
+    }
+  }
+
+  const handleNewDevBoardChange = (e) => {
+    const { name, value } = e.target
+    setNewDevBoard(prev => ({
+      ...prev,
+      [name]: value
+    }))
+  }
+
+  const handleNewDevBoardWirelessChange = (e, { checked }) => {
+    setNewDevBoard(prev => ({
+      ...prev,
+      wireless: checked
+    }))
+  }
+
   const handleSubmit = async (e) => {
     e.preventDefault()
-    await onSubmit(formData)
+    
+    // If creating a new dev board
+    if (showNewDevBoardForm && newDevBoard.name && newDevBoard.controller) {
+      try {
+        // Create the new dev board
+        const createdDevBoard = await devBoardsApi.create(newDevBoard, getAccessTokenSilently)
+        
+        // Update the form data with the newly created dev board
+        const updatedFormData = {
+          ...formData,
+          devBoard: createdDevBoard,
+          controller: null
+        }
+        
+        // Submit the updated form data
+        await onSubmit(updatedFormData)
+      } catch (error) {
+        console.error('Error creating dev board:', error)
+      }
+    } else {
+      // Normal form submission
+      await onSubmit(formData)
+    }
+    
     navigate('/keyboards')
   }
+
+  const devBoardOptions = [
+    ...devBoards.map(board => ({
+      key: board.id,
+      text: board.name + (board.controller ? ` (${board.controller.name})` : ''),
+      value: board.id
+    })),
+    { key: 'new', text: '+ Add New Dev Board', value: 'new' }
+  ]
+
+  const controllerOptions = controllers.map(controller => ({
+    key: controller.id,
+    text: `${controller.name} - ${controller.manufacturer || 'Unknown'} ${controller.chipset || ''}`,
+    value: controller.id
+  }))
 
   return (
     <Container>
       <Header as='h2'>{mode === 'new' ? 'Add New Keyboard' : 'Edit Keyboard'}</Header>
-      <Form onSubmit={handleSubmit}>
+      <Form onSubmit={handleSubmit} loading={loading}>
         <Form.Field>
           <label>Name</label>
           <input
@@ -152,9 +276,93 @@ function KeyboardForm({ keyboard, onSubmit, mode = 'new' }) {
           />
         </Form.Field>
 
+        {!showNewDevBoardForm ? (
+          <>
+            <Form.Field>
+              <label>Dev Board</label>
+              <div style={{ fontSize: '0.9em', color: '#666', marginBottom: '0.5em' }}>
+                Note: You can only select either a Dev Board or a Controller (directly), not both.
+              </div>
+              <Dropdown
+                selection
+                clearable
+                options={devBoardOptions}
+                placeholder="Select Dev Board"
+                value={formData.devBoard ? formData.devBoard.id : null}
+                onChange={handleDevBoardChange}
+                disabled={formData.controller !== null}
+              />
+            </Form.Field>
+
+            <Form.Field>
+              <label>Controller (Direct)</label>
+              <div style={{ fontSize: '0.9em', color: '#666', marginBottom: '0.5em' }}>
+                Note: Select this only if the controller is connected directly to the keyboard, not through a dev board.
+              </div>
+              <Dropdown
+                selection
+                clearable
+                options={controllerOptions}
+                placeholder="Select Controller"
+                value={formData.controller ? formData.controller.id : null}
+                onChange={handleControllerChange}
+                disabled={formData.devBoard !== null || showNewDevBoardForm}
+              />
+            </Form.Field>
+          </>
+        ) : (
+          // New Dev Board Form
+          <Segment>
+            <Header as='h3'>Add New Dev Board</Header>
+            <Form.Field>
+              <label>Dev Board Name</label>
+              <input
+                className="ui input"
+                type="text"
+                name="name"
+                value={newDevBoard.name}
+                onChange={handleNewDevBoardChange}
+                required
+                placeholder="e.g., nice!nano v2"
+                style={{ width: '100%', padding: '0.67857143em 1em', borderRadius: '0.28571429rem', border: '1px solid rgba(34,36,38,.15)' }}
+              />
+            </Form.Field>
+
+            <Form.Field>
+              <label>Wireless</label>
+              <Checkbox
+                toggle
+                name="wireless"
+                checked={newDevBoard.wireless}
+                onChange={handleNewDevBoardWirelessChange}
+              />
+            </Form.Field>
+
+            <Form.Field>
+              <label>Controller Type</label>
+              <div style={{ fontSize: '0.9em', color: '#666', marginBottom: '0.5em' }}>
+                Select the controller used in this dev board.
+              </div>
+              <Dropdown
+                selection
+                options={controllerOptions}
+                placeholder="Select Controller"
+                value={newDevBoard.controller ? newDevBoard.controller.id : null}
+                onChange={handleControllerChange}
+                required
+              />
+            </Form.Field>
+            
+            <Button type="button" onClick={() => setShowNewDevBoardForm(false)}>
+              Cancel
+            </Button>
+          </Segment>
+        )}
+
         <button
           className="ui primary button"
           type="submit"
+          style={{ marginTop: '1rem' }}
         >
           {mode === 'new' ? 'Create Keyboard' : 'Update Keyboard'}
         </button>

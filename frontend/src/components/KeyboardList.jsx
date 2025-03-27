@@ -102,6 +102,7 @@ function KeyboardList() {
                   <Table.HeaderCell>Splay</Table.HeaderCell>
                   <Table.HeaderCell>Row Stagger</Table.HeaderCell>
                   <Table.HeaderCell>Column Stagger</Table.HeaderCell>
+                  <Table.HeaderCell>Board/Controller</Table.HeaderCell>
                   {/* Add more columns here as new properties are added */}
                 </Table.Row>
               </Table.Header>
@@ -123,6 +124,18 @@ function KeyboardList() {
                     <Table.Cell>{renderYesNo(keyboard.splay)}</Table.Cell>
                     <Table.Cell>{renderYesNo(keyboard.rowStagger)}</Table.Cell>
                     <Table.Cell>{renderYesNo(keyboard.columnStagger)}</Table.Cell>
+                    <Table.Cell>
+                      {keyboard.devBoard ? 
+                        <span style={{ color: 'blue' }}>
+                          DevBoard: {keyboard.devBoard.name}
+                          {keyboard.devBoard.controller && 
+                            <span style={{ fontStyle: 'italic', color: 'purple' }}> ({keyboard.devBoard.controller.name})</span>
+                          }
+                        </span> : 
+                        keyboard.controller ? 
+                        <span style={{ color: 'purple' }}>Controller: {keyboard.controller.name}</span> : 
+                        <span style={{ color: 'gray', fontStyle: 'italic' }}>None</span>}
+                    </Table.Cell>
                     {/* Add more cells here as new properties are added */}
                   </Table.Row>
                 ))}

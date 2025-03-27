@@ -2,11 +2,14 @@ package com.fowlie.keyboardbuilders.controller;
 
 import com.fowlie.keyboardbuilders.domain.User;
 import com.fowlie.keyboardbuilders.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.env.Environment;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.oauth2.jwt.Jwt;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.UUID;
 
@@ -14,9 +17,12 @@ import java.util.UUID;
 @RequestMapping("/api/users")
 public class UserController {
     private final UserService userService;
+    private final Environment environment;
 
-    public UserController(UserService userService) {
+    @Autowired
+    public UserController(UserService userService, Environment environment) {
         this.userService = userService;
+        this.environment = environment;
     }
 
     @GetMapping
@@ -31,6 +37,31 @@ public class UserController {
 
     @GetMapping("/me")
     public ResponseEntity<User> getCurrentUser(@AuthenticationPrincipal Jwt jwt) {
+        // In noauth profile, return the first user or create one
+        boolean isNoAuthProfile = Arrays.asList(environment.getActiveProfiles()).contains("noauth");
+        if (isNoAuthProfile) {
+            try {
+                List<User> users = userService.getAllUsers();
+                if (!users.isEmpty()) {
+                    return ResponseEntity.ok(users.get(0));
+                } else {
+                    // Create a dummy user
+                    User dummyUser = new User();
+                    dummyUser.setName("Test User");
+                    dummyUser.setEmail("test@example.com");
+                    dummyUser.setAuthProviderId("test-auth-provider-id");
+                    return ResponseEntity.ok(userService.createUser(dummyUser));
+                }
+            } catch (Exception e) {
+                return ResponseEntity.status(500).build();
+            }
+        }
+        
+        // Normal auth flow
+        if (jwt == null) {
+            return ResponseEntity.status(401).build();
+        }
+        
         String authProviderId = jwt.getSubject();
         try {
             User user = userService.getUserByAuthProviderId(authProviderId);
@@ -44,7 +75,27 @@ public class UserController {
     @PostMapping
     public ResponseEntity<?> createUser(@RequestBody User user, @AuthenticationPrincipal Jwt jwt) {
         try {
-            // Ensure the user ID matches the authenticated user's ID
+            boolean isNoAuthProfile = Arrays.asList(environment.getActiveProfiles()).contains("noauth");
+            
+            // In noauth profile, don't require authentication
+            if (isNoAuthProfile) {
+                if (user.getName() == null || user.getName().isEmpty()) {
+                    return ResponseEntity.badRequest().body("Name is required");
+                }
+                
+                if (user.getEmail() == null || user.getEmail().isEmpty()) {
+                    return ResponseEntity.badRequest().body("Email is required");
+                }
+                
+                if (user.getAuthProviderId() == null || user.getAuthProviderId().isEmpty()) {
+                    user.setAuthProviderId("test-auth-provider-id");
+                }
+                
+                User createdUser = userService.createUser(user);
+                return ResponseEntity.status(201).body(createdUser);
+            }
+            
+            // Normal auth flow
             if (jwt == null) {
                 return ResponseEntity.status(401).body("Authentication required to create a user profile");
             }

@@ -1,8 +1,8 @@
 package com.fowlie.keyboardbuilders.controller;
 
-import com.fowlie.keyboardbuilders.domain.Keyboard;
+import com.fowlie.keyboardbuilders.domain.Controller;
 import com.fowlie.keyboardbuilders.domain.User;
-import com.fowlie.keyboardbuilders.service.KeyboardService;
+import com.fowlie.keyboardbuilders.service.ControllerService;
 import com.fowlie.keyboardbuilders.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
@@ -16,72 +16,72 @@ import java.util.List;
 import java.util.UUID;
 
 @RestController
-@RequestMapping("/api/keyboards")
-public class KeyboardController {
+@RequestMapping("/api/controllers")
+public class ControllerController {
 
-    private final KeyboardService keyboardService;
+    private final ControllerService controllerService;
     private final UserService userService;
     private final Environment environment;
     private final NoAuthControllerHelper noAuthControllerHelper;
 
     @Autowired
-    public KeyboardController(KeyboardService keyboardService, UserService userService,
-                             Environment environment,
-                             @Autowired(required = false) NoAuthControllerHelper noAuthControllerHelper) {
-        this.keyboardService = keyboardService;
+    public ControllerController(ControllerService controllerService, UserService userService, 
+                               Environment environment, 
+                               @Autowired(required = false) NoAuthControllerHelper noAuthControllerHelper) {
+        this.controllerService = controllerService;
         this.userService = userService;
         this.environment = environment;
         this.noAuthControllerHelper = noAuthControllerHelper;
     }
 
     @GetMapping
-    public List<Keyboard> getAll() {
-        return keyboardService.getAll();
+    public List<Controller> getAll() {
+        return controllerService.getAll();
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Keyboard> getById(@PathVariable Long id) {
-        return keyboardService.getByIdWithDetails(id)
+    public ResponseEntity<Controller> getById(@PathVariable Long id) {
+        return controllerService.getById(id)
                 .map(ResponseEntity::ok)
                 .orElse(ResponseEntity.notFound().build());
     }
 
     @PostMapping
-    public Keyboard create(@RequestBody Keyboard keyboard, @AuthenticationPrincipal Jwt jwt) {
+    public Controller create(@RequestBody Controller controller, @AuthenticationPrincipal Jwt jwt) {
         boolean isNoAuthProfile = Arrays.asList(environment.getActiveProfiles()).contains("noauth");
         
         if (isNoAuthProfile) {
             // In noauth profile, use the helper to get or create a test user
             User user = noAuthControllerHelper.getUserForAuthContext(jwt);
-            keyboard.setUser(user);
+            controller.setUser(user);
         } else if (jwt != null) {
             // Normal authentication flow
             try {
                 User user = userService.getUserByAuthProviderId(jwt.getSubject());
-                keyboard.setUser(user);
+                controller.setUser(user);
             } catch (Exception e) {
-                throw new RuntimeException("User not found. Please ensure your profile is created before adding keyboards.", e);
+                throw new RuntimeException("User not found. Please ensure your profile is created before adding controllers.", e);
             }
         } else {
-            throw new RuntimeException("Authentication required to create a keyboard.");
+            throw new RuntimeException("Authentication required to create a controller.");
         }
         
-        return keyboardService.create(keyboard);
+        return controllerService.create(controller);
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Keyboard> update(@PathVariable Long id, @RequestBody Keyboard keyboard) {
-        return ResponseEntity.ok(keyboardService.update(id, keyboard));
+    public ResponseEntity<Controller> update(@PathVariable Long id, @RequestBody Controller controller) {
+        return ResponseEntity.ok(controllerService.update(id, controller));
     }
 
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> delete(@PathVariable Long id) {
-        keyboardService.delete(id);
+        controllerService.delete(id);
         return ResponseEntity.noContent().build();
     }
 
     @GetMapping("/user/{userId}")
-    public List<Keyboard> getByUserId(@PathVariable UUID userId) {
-        return keyboardService.getByUserId(userId);
+    public List<Controller> getByUserId(@PathVariable UUID userId) {
+        return controllerService.getByUserId(userId);
     }
-}
+} 

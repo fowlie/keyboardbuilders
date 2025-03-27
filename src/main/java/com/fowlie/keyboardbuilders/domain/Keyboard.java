@@ -38,4 +38,13 @@ public class Keyboard {
 
     @Column
     private String url;
+    
+    // A keyboard can have either a dev board or a controller, but not both
+    @ManyToOne
+    @JoinColumn(name = "dev_board_id")
+    private DevBoard devBoard;
+    
+    @ManyToOne
+    @JoinColumn(name = "controller_id")
+    private Controller controller;
 }

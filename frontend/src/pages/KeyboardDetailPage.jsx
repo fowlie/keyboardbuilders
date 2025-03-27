@@ -17,6 +17,9 @@ const KeyboardDetailPage = () => {
       try {
         setLoading(true);
         const data = await keyboardsApi.getById(id);
+        console.log('Keyboard data:', data);
+        console.log('DevBoard:', data.devBoard);
+        console.log('Controller:', data.controller);
         setKeyboard(data);
         setError(null);
       } catch (err) {
@@ -72,6 +75,56 @@ const KeyboardDetailPage = () => {
         <p><strong>Splay:</strong> {keyboard.splay ? 'Yes' : 'No'}</p>
         <p><strong>Row Stagger:</strong> {keyboard.rowStagger ? 'Yes' : 'No'}</p>
         <p><strong>Column Stagger:</strong> {keyboard.columnStagger ? 'Yes' : 'No'}</p>
+        
+        {keyboard.devBoard && (
+          <div>
+            <Header as="h3">Dev Board</Header>
+            <p><strong>Name:</strong> {keyboard.devBoard.name}</p>
+            <p><strong>Wireless:</strong> {keyboard.devBoard.wireless ? 'Yes' : 'No'}</p>
+            {keyboard.devBoard.controller && (
+              <div style={{ marginLeft: '1.5rem' }}>
+                <Header as="h4">Controller</Header>
+                <p><strong>Name:</strong> {keyboard.devBoard.controller.name}</p>
+                {keyboard.devBoard.controller.manufacturer && <p><strong>Manufacturer:</strong> {keyboard.devBoard.controller.manufacturer}</p>}
+                {keyboard.devBoard.controller.chipset && <p><strong>Chipset:</strong> {keyboard.devBoard.controller.chipset}</p>}
+                {keyboard.devBoard.controller.url && (
+                  <p>
+                    <strong>URL:</strong>{' '}
+                    <a href={keyboard.devBoard.controller.url} target="_blank" rel="noopener noreferrer">
+                      {keyboard.devBoard.controller.url}
+                    </a>
+                  </p>
+                )}
+              </div>
+            )}
+            {keyboard.devBoard.url && (
+              <p>
+                <strong>URL:</strong>{' '}
+                <a href={keyboard.devBoard.url} target="_blank" rel="noopener noreferrer">
+                  {keyboard.devBoard.url}
+                </a>
+              </p>
+            )}
+          </div>
+        )}
+
+        {keyboard.controller && (
+          <div>
+            <Header as="h3">Controller</Header>
+            <p><strong>Name:</strong> {keyboard.controller.name}</p>
+            {keyboard.controller.manufacturer && <p><strong>Manufacturer:</strong> {keyboard.controller.manufacturer}</p>}
+            {keyboard.controller.chipset && <p><strong>Chipset:</strong> {keyboard.controller.chipset}</p>}
+            {keyboard.controller.url && (
+              <p>
+                <strong>URL:</strong>{' '}
+                <a href={keyboard.controller.url} target="_blank" rel="noopener noreferrer">
+                  {keyboard.controller.url}
+                </a>
+              </p>
+            )}
+          </div>
+        )}
+        
         {keyboard.url && (
           <p>
             <strong>URL:</strong>{' '}
