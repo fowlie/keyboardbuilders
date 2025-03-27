@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { Header, Card, Loader, Label } from 'semantic-ui-react'
+import { Header, Table, Loader, Icon } from 'semantic-ui-react'
 import { useAuth0 } from '@auth0/auth0-react'
 import ErrorDisplay from './ErrorDisplay'
 
@@ -37,6 +37,14 @@ function KeyboardList() {
 
   const handleKeyboardClick = (id) => {
     navigate(`/keyboards/${id}`)
+  }
+
+  // Helper function to render Yes/No values with icons
+  const renderYesNo = (value) => {
+    if (value) {
+      return <span style={{ color: 'green' }}><Icon name="check" /> Yes</span>
+    }
+    return <span style={{ color: 'red' }}><Icon name="close" /> No</span>
   }
 
   if (loading) {
@@ -77,29 +85,73 @@ function KeyboardList() {
 
       {!error && (
         <>
-          <Card.Group>
-            {keyboards.map((keyboard) => (
-              <Card
-                key={keyboard.id}
-                onClick={() => handleKeyboardClick(keyboard.id)}
-                style={{ cursor: 'pointer' }}
-              >
-                <Card.Content>
-                  <Card.Header>{keyboard.name}</Card.Header>
-                  <Card.Meta>
-                    {keyboard.split && <Label color="blue">Split</Label>}
-                    {keyboard.hotswap && <Label color="blue">Hotswap</Label>}
-                  </Card.Meta>
-                </Card.Content>
-              </Card>
-            ))}
-          </Card.Group>
+          <div className="table-container" style={{ 
+            overflowX: 'auto', 
+            width: '100%',
+            boxShadow: '0 1px 3px rgba(0,0,0,0.1)',
+            borderRadius: '4px',
+            WebkitOverflowScrolling: 'touch', // For smoother scrolling on iOS
+          }}>
+            <Table celled striped selectable unstackable style={{ minWidth: '650px' }}>
+              <Table.Header>
+                <Table.Row>
+                  <Table.HeaderCell>Name</Table.HeaderCell>
+                  <Table.HeaderCell>Split</Table.HeaderCell>
+                  <Table.HeaderCell>Hotswap</Table.HeaderCell>
+                  {/* Add more columns here as new properties are added */}
+                </Table.Row>
+              </Table.Header>
+
+              <Table.Body>
+                {keyboards.map((keyboard) => (
+                  <Table.Row 
+                    key={keyboard.id} 
+                    onClick={() => handleKeyboardClick(keyboard.id)}
+                    style={{ cursor: 'pointer' }}
+                    className="keyboard-row"
+                  >
+                    <Table.Cell>
+                      <strong>{keyboard.name}</strong>
+                    </Table.Cell>
+                    <Table.Cell>{renderYesNo(keyboard.split)}</Table.Cell>
+                    <Table.Cell>{renderYesNo(keyboard.hotswap)}</Table.Cell>
+                    {/* Add more cells here as new properties are added */}
+                  </Table.Row>
+                ))}
+              </Table.Body>
+            </Table>
+          </div>
 
           {keyboards.length === 0 && (
             <div style={{ textAlign: 'center', marginTop: '2rem', color: '#666' }}>
               No keyboards found.
             </div>
           )}
+
+          <style jsx>{`
+            .keyboard-row:hover {
+              background-color: #f9fafb !important;
+            }
+            
+            .table-container::-webkit-scrollbar {
+              height: 8px;
+            }
+            
+            .table-container::-webkit-scrollbar-thumb {
+              background-color: rgba(0, 0, 0, 0.2);
+              border-radius: 4px;
+            }
+            
+            .table-container::-webkit-scrollbar-track {
+              background-color: rgba(0, 0, 0, 0.05);
+            }
+            
+            @media (max-width: 767px) {
+              .table-container {
+                margin-bottom: 1rem;
+              }
+            }
+          `}</style>
         </>
       )}
     </div>
