@@ -95,4 +95,34 @@ describe('App Component', () => {
     expect(screen.getByTestId('logout-button')).toBeInTheDocument();
     expect(screen.queryByTestId('login-button')).not.toBeInTheDocument();
   });
+
+  test('hides profile button when not authenticated', () => {
+    // Set up mocks for not authenticated state
+    useAuth0.mockReturnValue({
+      isAuthenticated: false,
+      isLoading: false
+    });
+    
+    // Render app
+    render(<App />);
+    
+    // Test that profile button is not in the document
+    expect(screen.queryByTestId('profile-button')).not.toBeInTheDocument();
+    expect(screen.getByTestId('login-button')).toBeInTheDocument();
+  });
+
+  test('shows profile button when authenticated', () => {
+    // Set up mocks for authenticated state
+    useAuth0.mockReturnValue({
+      isAuthenticated: true,
+      isLoading: false
+    });
+    
+    // Render app
+    render(<App />);
+    
+    // Test that profile button is in the document
+    expect(screen.getByTestId('profile-button')).toBeInTheDocument();
+    expect(screen.getByTestId('logout-button')).toBeInTheDocument();
+  });
 }); 

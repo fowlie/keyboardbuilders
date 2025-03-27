@@ -41,9 +41,11 @@ function App() {
             <Menu.Item as={Link} to="/">Home</Menu.Item>
             <Menu.Item as={Link} to="/keyboards">Keyboards</Menu.Item>
             <Menu.Menu position='right'>
-              <Menu.Item as={Link} to="/profile">
-                <ProfileButton />
-              </Menu.Item>
+              {isAuthenticated && (
+                <Menu.Item as={Link} to="/profile">
+                  <ProfileButton />
+                </Menu.Item>
+              )}
               <Menu.Item>
                 {!isAuthenticated && <LoginButton />}
                 {isAuthenticated && <LogoutButton />}

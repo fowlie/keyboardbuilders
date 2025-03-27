@@ -89,7 +89,7 @@ describe('App Component (User Registration Flow)', () => {
       expect(usersApi.getMe).toHaveBeenCalledWith(mockGetAccessTokenSilently);
       expect(usersApi.register).toHaveBeenCalledWith(
         {
-          id: mockUser.sub,
+          authProviderId: mockUser.sub,
           name: mockUser.name,
           email: mockUser.email,
           pictureUrl: mockUser.picture,
