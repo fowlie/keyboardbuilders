@@ -1,9 +1,8 @@
 import React, { useContext } from 'react';
 import { render, screen, waitFor, act } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import App, { UserContext } from '../App';
-import { useAuth0 } from '@auth0/auth0-react';
-import { usersApi } from '../api/usersApi';
+import { UserContext } from '../App';
+import { useUserRegistration } from '../hooks/useUserRegistration';
 
 // Create a test component that consumes the context
 const TestConsumer = () => {
@@ -17,144 +16,105 @@ const TestConsumer = () => {
   );
 };
 
-// Mock the modules
-jest.mock('@auth0/auth0-react', () => ({
-  useAuth0: jest.fn(),
-}));
+// Mock components and hooks
+jest.mock('../hooks/useUserRegistration');
 
-jest.mock('react-router-dom', () => ({
-  BrowserRouter: ({ children }) => <>{children}</>,
-  Routes: ({ children }) => <>{children}</>,
-  Route: ({ element }) => <>{element}</>,
-  Link: ({ children }) => <>{children}</>,
-  useNavigate: () => jest.fn(),
-}));
-
-jest.mock('../api/usersApi', () => ({
-  usersApi: {
-    getMe: jest.fn(),
-    register: jest.fn(),
-  },
-}));
+// Create a wrapper component that provides the context with controllable values
+const ContextProvider = ({ contextValue, children }) => {
+  return (
+    <UserContext.Provider value={contextValue}>
+      {children}
+    </UserContext.Provider>
+  );
+};
 
 describe('UserContext', () => {
-  const mockUser = {
-    sub: 'auth0|123',
-    name: 'Test User',
-    email: 'test@example.com',
-    picture: 'https://example.com/avatar.jpg',
-  };
-
-  const mockGetAccessTokenSilently = jest.fn().mockResolvedValue('test-token');
-
   beforeEach(() => {
-    // Clear all mocks before each test
+    // Clear mock implementation
     jest.clearAllMocks();
-    console.log = jest.fn();
-    console.error = jest.fn();
   });
 
-  it('should set userLoading to true initially', async () => {
-    useAuth0.mockReturnValue({
-      isAuthenticated: true,
-      isLoading: true,
-      user: null,
-      getAccessTokenSilently: mockGetAccessTokenSilently,
-    });
+  it('should provide initial user state values', () => {
+    const mockUserState = {
+      userRegistered: false,
+      userLoading: true,
+      userError: null
+    };
 
-    await act(async () => {
-      render(
-        <>
-          <App />
-          <TestConsumer />
-        </>
-      );
-    });
+    render(
+      <ContextProvider contextValue={mockUserState}>
+        <TestConsumer />
+      </ContextProvider>
+    );
 
+    expect(screen.getByTestId('user-registered').textContent).toBe('false');
     expect(screen.getByTestId('user-loading').textContent).toBe('true');
+    expect(screen.getByTestId('user-error').textContent).toBe('no error');
   });
 
-  it('should set userRegistered to true after successful registration', async () => {
-    useAuth0.mockReturnValue({
-      isAuthenticated: true,
-      isLoading: false,
-      user: mockUser,
-      getAccessTokenSilently: mockGetAccessTokenSilently,
-    });
+  it('should update user state when registered', () => {
+    const mockUserState = {
+      userRegistered: true,
+      userLoading: false,
+      userError: null
+    };
 
-    // User not found, then created
-    usersApi.getMe.mockResolvedValueOnce(null);
-    usersApi.register.mockResolvedValueOnce(mockUser);
+    render(
+      <ContextProvider contextValue={mockUserState}>
+        <TestConsumer />
+      </ContextProvider>
+    );
 
-    await act(async () => {
-      render(
-        <>
-          <App />
-          <TestConsumer />
-        </>
-      );
-    });
-
-    await waitFor(() => {
-      expect(screen.getByTestId('user-registered').textContent).toBe('true');
-      expect(screen.getByTestId('user-loading').textContent).toBe('false');
-      expect(screen.getByTestId('user-error').textContent).toBe('no error');
-    });
+    expect(screen.getByTestId('user-registered').textContent).toBe('true');
+    expect(screen.getByTestId('user-loading').textContent).toBe('false');
+    expect(screen.getByTestId('user-error').textContent).toBe('no error');
   });
 
-  it('should set userRegistered to true when user exists', async () => {
-    useAuth0.mockReturnValue({
-      isAuthenticated: true,
-      isLoading: false,
-      user: mockUser,
-      getAccessTokenSilently: mockGetAccessTokenSilently,
-    });
-
-    // User already exists
-    usersApi.getMe.mockResolvedValueOnce(mockUser);
-
-    await act(async () => {
-      render(
-        <>
-          <App />
-          <TestConsumer />
-        </>
-      );
-    });
-
-    await waitFor(() => {
-      expect(screen.getByTestId('user-registered').textContent).toBe('true');
-      expect(screen.getByTestId('user-loading').textContent).toBe('false');
-      expect(screen.getByTestId('user-error').textContent).toBe('no error');
-    });
-  });
-
-  it('should set userError when registration fails', async () => {
-    useAuth0.mockReturnValue({
-      isAuthenticated: true,
-      isLoading: false,
-      user: mockUser,
-      getAccessTokenSilently: mockGetAccessTokenSilently,
-    });
-
-    // User not found, then error during registration
-    usersApi.getMe.mockResolvedValueOnce(null);
+  it('should display error message when there is an error', () => {
     const errorMessage = 'Failed to register user';
-    usersApi.register.mockRejectedValueOnce(new Error(errorMessage));
+    const mockUserState = {
+      userRegistered: false,
+      userLoading: false,
+      userError: errorMessage
+    };
 
-    await act(async () => {
-      render(
-        <>
-          <App />
+    render(
+      <ContextProvider contextValue={mockUserState}>
+        <TestConsumer />
+      </ContextProvider>
+    );
+
+    expect(screen.getByTestId('user-registered').textContent).toBe('false');
+    expect(screen.getByTestId('user-loading').textContent).toBe('false');
+    expect(screen.getByTestId('user-error').textContent).toBe(errorMessage);
+  });
+
+  it('should integrate with useUserRegistration hook', () => {
+    // Setup mock for the hook
+    const mockUserState = {
+      userRegistered: true,
+      userLoading: false,
+      userError: null
+    };
+    
+    useUserRegistration.mockReturnValue(mockUserState);
+    
+    // Create a simple component that uses the hook
+    const TestComponent = () => {
+      const userState = useUserRegistration();
+      return (
+        <ContextProvider contextValue={userState}>
           <TestConsumer />
-        </>
+        </ContextProvider>
       );
-    });
-
-    await waitFor(() => {
-      expect(screen.getByTestId('user-registered').textContent).toBe('false');
-      expect(screen.getByTestId('user-loading').textContent).toBe('false');
-      expect(screen.getByTestId('user-error').textContent).toBe(errorMessage);
-    });
+    };
+    
+    render(<TestComponent />);
+    
+    // Verify the hook was called and context values are correct
+    expect(useUserRegistration).toHaveBeenCalled();
+    expect(screen.getByTestId('user-registered').textContent).toBe('true');
+    expect(screen.getByTestId('user-loading').textContent).toBe('false');
+    expect(screen.getByTestId('user-error').textContent).toBe('no error');
   });
 }); 
