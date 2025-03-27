@@ -23,12 +23,47 @@ const ProfilePage = () => {
     const fetchUserKeyboards = async () => {
         try {
             setKeyboardsLoading(true);
-            const keyboards = await keyboardsApi.getByUserId(user.sub, getAccessTokenSilently);
+            console.log('Fetching keyboards for user:', user.sub);
+            
+            // Check if getAccessTokenSilently is available
+            if (typeof getAccessTokenSilently !== 'function') {
+                console.error('getAccessTokenSilently is not available or not a function');
+                setKeyboardsError('Authentication error. Please try logging out and back in.');
+                return;
+            }
+
+            // First, get the current user's info from the backend to get their UUID
+            const token = await getAccessTokenSilently();
+            const userResponse = await fetch('http://localhost:8080/api/users/me', {
+                headers: {
+                    'Authorization': `Bearer ${token}`
+                }
+            });
+
+            if (!userResponse.ok) {
+                throw new Error(`Failed to get user profile (status: ${userResponse.status})`);
+            }
+
+            const userData = await userResponse.json();
+            console.log('Got user profile with ID:', userData.id);
+            
+            // Now use the actual UUID from our database to fetch keyboards
+            const keyboards = await keyboardsApi.getByUserId(userData.id, getAccessTokenSilently);
             setUserKeyboards(keyboards);
             setKeyboardsError(null);
         } catch (error) {
             console.error('Error fetching user keyboards:', error);
-            setKeyboardsError('Failed to load your keyboards. Please try again.');
+            
+            // Provide a more user-friendly error message based on the error
+            if (error.message.includes('401') || error.message.includes('403')) {
+                setKeyboardsError('Authentication error. Please try logging out and back in.');
+            } else if (error.message.includes('404')) {
+                setKeyboardsError('The requested resource was not found. Please contact support.');
+            } else if (error.message.includes('500')) {
+                setKeyboardsError('Server error. Please try again later.');
+            } else {
+                setKeyboardsError(`Failed to load your keyboards: ${error.message}`);
+            }
         } finally {
             setKeyboardsLoading(false);
         }

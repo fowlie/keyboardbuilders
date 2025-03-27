@@ -85,18 +85,42 @@ export const keyboardsApi = {
   // Get keyboards for a specific user
   getByUserId: async (userId, getAccessToken) => {
     try {
+      console.log('Fetching keyboards for user with ID:', userId);
+      
+      // Validate userId
+      if (!userId) {
+        throw new Error('User ID is required');
+      }
+      
+      // Make sure we have the getAccessToken function
+      if (typeof getAccessToken !== 'function') {
+        console.error('getAccessToken is not a function:', getAccessToken);
+        throw new Error('Authentication error: getAccessToken is not a function');
+      }
+      
       const token = await getAccessToken();
-      const response = await fetch(`${API_BASE_URL}/user/${userId}`, {
+      console.log('Got auth token for user keyboards request:', !!token);
+      
+      const url = `${API_BASE_URL}/user/${userId}`;
+      console.log('Requesting from URL:', url);
+      
+      const response = await fetch(url, {
         headers: {
           'Authorization': `Bearer ${token}`
         }
       });
       
+      console.log('Response status:', response.status);
+      
       if (!response.ok) {
-        throw new Error(`Failed to get keyboards for user (status: ${response.status})`);
+        const errorText = await response.text();
+        console.error('Error response body:', errorText || 'No response body');
+        throw new Error(`Failed to get keyboards for user (status: ${response.status})${errorText ? ': ' + errorText : ''}`);
       }
       
-      return response.json();
+      const data = await response.json();
+      console.log('Successfully retrieved keyboards for user, count:', data.length);
+      return data;
     } catch (error) {
       console.error('Error getting user keyboards:', error);
       throw error;
