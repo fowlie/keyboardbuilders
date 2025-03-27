@@ -7,7 +7,12 @@ function KeyboardForm({ keyboard, onSubmit, mode = 'new' }) {
   const [formData, setFormData] = useState(keyboard || {
     name: '',
     split: false,
-    hotswap: false
+    hotswap: false,
+    unibody: false,
+    splay: false,
+    rowStagger: false,
+    columnStagger: false,
+    url: ''
   })
 
   const handleChange = (e) => {
@@ -71,6 +76,79 @@ function KeyboardForm({ keyboard, onSubmit, mode = 'new' }) {
                 value: e.target.checked
               }
             })}
+          />
+        </Form.Field>
+
+        <Form.Field>
+          <label>Unibody</label>
+          <input
+            type="checkbox"
+            name="unibody"
+            checked={formData.unibody || false}
+            onChange={(e) => handleChange({
+              target: {
+                name: 'unibody',
+                value: e.target.checked
+              }
+            })}
+          />
+        </Form.Field>
+
+        <Form.Field>
+          <label>Splay</label>
+          <input
+            type="checkbox"
+            name="splay"
+            checked={formData.splay || false}
+            onChange={(e) => handleChange({
+              target: {
+                name: 'splay',
+                value: e.target.checked
+              }
+            })}
+          />
+        </Form.Field>
+
+        <Form.Field>
+          <label>Row Stagger</label>
+          <input
+            type="checkbox"
+            name="rowStagger"
+            checked={formData.rowStagger || false}
+            onChange={(e) => handleChange({
+              target: {
+                name: 'rowStagger',
+                value: e.target.checked
+              }
+            })}
+          />
+        </Form.Field>
+
+        <Form.Field>
+          <label>Column Stagger</label>
+          <input
+            type="checkbox"
+            name="columnStagger"
+            checked={formData.columnStagger || false}
+            onChange={(e) => handleChange({
+              target: {
+                name: 'columnStagger',
+                value: e.target.checked
+              }
+            })}
+          />
+        </Form.Field>
+
+        <Form.Field>
+          <label>URL</label>
+          <input
+            className="ui input"
+            type="url"
+            name="url"
+            value={formData.url || ''}
+            onChange={handleChange}
+            placeholder="https://example.com/keyboard"
+            style={{ width: '100%', padding: '0.67857143em 1em', borderRadius: '0.28571429rem', border: '1px solid rgba(34,36,38,.15)' }}
           />
         </Form.Field>
 

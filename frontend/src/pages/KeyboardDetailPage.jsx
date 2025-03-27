@@ -68,6 +68,18 @@ const KeyboardDetailPage = () => {
       <Segment>
         <p><strong>Type:</strong> {keyboard.split ? 'Split' : 'Non-split'}</p>
         <p><strong>Hotswap:</strong> {keyboard.hotswap ? 'Yes' : 'No'}</p>
+        <p><strong>Unibody:</strong> {keyboard.unibody ? 'Yes' : 'No'}</p>
+        <p><strong>Splay:</strong> {keyboard.splay ? 'Yes' : 'No'}</p>
+        <p><strong>Row Stagger:</strong> {keyboard.rowStagger ? 'Yes' : 'No'}</p>
+        <p><strong>Column Stagger:</strong> {keyboard.columnStagger ? 'Yes' : 'No'}</p>
+        {keyboard.url && (
+          <p>
+            <strong>URL:</strong>{' '}
+            <a href={keyboard.url} target="_blank" rel="noopener noreferrer">
+              {keyboard.url}
+            </a>
+          </p>
+        )}
         {keyboard.user && (
           <p><strong>Owner:</strong> {keyboard.user.name}</p>
         )}

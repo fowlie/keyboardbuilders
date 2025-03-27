@@ -23,4 +23,19 @@ public class Keyboard {
 
     @Column
     private boolean hotswap;
+
+    @Column
+    private boolean unibody;
+
+    @Column
+    private boolean splay;
+
+    @Column(name = "row_stagger")
+    private boolean rowStagger;
+
+    @Column(name = "column_stagger")
+    private boolean columnStagger;
+
+    @Column
+    private String url;
 }

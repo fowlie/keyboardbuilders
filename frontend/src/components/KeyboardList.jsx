@@ -98,6 +98,10 @@ function KeyboardList() {
                   <Table.HeaderCell>Name</Table.HeaderCell>
                   <Table.HeaderCell>Split</Table.HeaderCell>
                   <Table.HeaderCell>Hotswap</Table.HeaderCell>
+                  <Table.HeaderCell>Unibody</Table.HeaderCell>
+                  <Table.HeaderCell>Splay</Table.HeaderCell>
+                  <Table.HeaderCell>Row Stagger</Table.HeaderCell>
+                  <Table.HeaderCell>Column Stagger</Table.HeaderCell>
                   {/* Add more columns here as new properties are added */}
                 </Table.Row>
               </Table.Header>
@@ -115,6 +119,10 @@ function KeyboardList() {
                     </Table.Cell>
                     <Table.Cell>{renderYesNo(keyboard.split)}</Table.Cell>
                     <Table.Cell>{renderYesNo(keyboard.hotswap)}</Table.Cell>
+                    <Table.Cell>{renderYesNo(keyboard.unibody)}</Table.Cell>
+                    <Table.Cell>{renderYesNo(keyboard.splay)}</Table.Cell>
+                    <Table.Cell>{renderYesNo(keyboard.rowStagger)}</Table.Cell>
+                    <Table.Cell>{renderYesNo(keyboard.columnStagger)}</Table.Cell>
                     {/* Add more cells here as new properties are added */}
                   </Table.Row>
                 ))}
