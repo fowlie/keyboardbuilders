@@ -10,6 +10,7 @@ import org.springframework.security.oauth2.jwt.Jwt;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.UUID;
 
 @RestController
 @RequestMapping("/api/keyboards")
@@ -39,7 +40,7 @@ public class KeyboardController {
     public Keyboard create(@RequestBody Keyboard keyboard, @AuthenticationPrincipal Jwt jwt) {
         if (jwt != null) {
             try {
-                User user = userService.getUserById(jwt.getSubject());
+                User user = userService.getUserByAuthProviderId(jwt.getSubject());
                 keyboard.setUser(user);
             } catch (Exception e) {
                 throw new RuntimeException("User not found. Please ensure your profile is created before adding keyboards.", e);
@@ -62,7 +63,7 @@ public class KeyboardController {
     }
 
     @GetMapping("/user/{userId}")
-    public List<Keyboard> getByUserId(@PathVariable String userId) {
+    public List<Keyboard> getByUserId(@PathVariable UUID userId) {
         return keyboardService.getByUserId(userId);
     }
 }

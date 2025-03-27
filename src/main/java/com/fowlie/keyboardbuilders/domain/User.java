@@ -3,6 +3,9 @@ package com.fowlie.keyboardbuilders.domain;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.GenericGenerator;
+
+import java.util.UUID;
 
 @Entity
 @Table(name = "users")
@@ -10,7 +13,16 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class User {
     @Id
-    private String id; // Auth0 subject ID
+    @GeneratedValue(generator = "UUID")
+    @GenericGenerator(
+        name = "UUID",
+        strategy = "org.hibernate.id.UUIDGenerator"
+    )
+    @Column(name = "id", updatable = false, nullable = false)
+    private UUID id;
+    
+    @Column(name = "auth_provider_id", unique = true, nullable = false)
+    private String authProviderId; // Auth0 subject ID
     
     @Column(nullable = false)
     private String name;
@@ -21,8 +33,8 @@ public class User {
     @Column(name = "picture_url")
     private String pictureUrl;
     
-    public User(String id, String name, String email, String pictureUrl) {
-        this.id = id;
+    public User(String authProviderId, String name, String email, String pictureUrl) {
+        this.authProviderId = authProviderId;
         this.name = name;
         this.email = email;
         this.pictureUrl = pictureUrl;

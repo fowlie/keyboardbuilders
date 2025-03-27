@@ -27,7 +27,7 @@ export function useUserRegistration() {
             console.log('User not found in database, creating...');
             // User not found, create a new user from Auth0 profile
             const userData = {
-              id: user.sub,
+              authProviderId: user.sub,
               name: user.name,
               email: user.email,
               pictureUrl: user.picture

@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.UUID;
 
 @Service
 public class KeyboardService {
@@ -43,7 +44,7 @@ public class KeyboardService {
         keyboardRepository.deleteById(id);
     }
 
-    public List<Keyboard> getByUserId(String userId) {
+    public List<Keyboard> getByUserId(UUID userId) {
         return keyboardRepository.findByUserIdOrderByIdDesc(userId);
     }
 }

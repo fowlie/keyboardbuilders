@@ -8,6 +8,7 @@ import org.springframework.security.oauth2.jwt.Jwt;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.UUID;
 
 @RestController
 @RequestMapping("/api/users")
@@ -24,15 +25,15 @@ public class UserController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<User> getUserById(@PathVariable String id) {
+    public ResponseEntity<User> getUserById(@PathVariable UUID id) {
         return ResponseEntity.ok(userService.getUserById(id));
     }
 
     @GetMapping("/me")
     public ResponseEntity<User> getCurrentUser(@AuthenticationPrincipal Jwt jwt) {
-        String userId = jwt.getSubject();
+        String authProviderId = jwt.getSubject();
         try {
-            User user = userService.getUserById(userId);
+            User user = userService.getUserByAuthProviderId(authProviderId);
             return ResponseEntity.ok(user);
         } catch (RuntimeException e) {
             // User not found
@@ -48,7 +49,7 @@ public class UserController {
                 return ResponseEntity.status(401).body("Authentication required to create a user profile");
             }
             
-            user.setId(jwt.getSubject());
+            user.setAuthProviderId(jwt.getSubject());
             
             // Validate required fields
             if (user.getName() == null || user.getName().isEmpty()) {
@@ -61,7 +62,7 @@ public class UserController {
             
             // Check if user already exists
             try {
-                User existingUser = userService.getUserById(jwt.getSubject());
+                User existingUser = userService.getUserByAuthProviderId(jwt.getSubject());
                 // User exists, return it
                 return ResponseEntity.ok(existingUser);
             } catch (RuntimeException e) {
@@ -77,27 +78,59 @@ public class UserController {
 
     @PutMapping("/{id}")
     public ResponseEntity<User> updateUser(
-            @PathVariable String id,
+            @PathVariable UUID id,
             @RequestBody User userDetails,
             @AuthenticationPrincipal Jwt jwt
     ) {
-        // Ensure users can only update their own profile
-        if (!jwt.getSubject().equals(id)) {
-            return ResponseEntity.status(403).build();
+        try {
+            User user = userService.getUserById(id);
+            // Ensure users can only update their own profile
+            if (!jwt.getSubject().equals(user.getAuthProviderId())) {
+                return ResponseEntity.status(403).build();
+            }
+            return ResponseEntity.ok(userService.updateUser(id, userDetails));
+        } catch (RuntimeException e) {
+            return ResponseEntity.notFound().build();
         }
-        return ResponseEntity.ok(userService.updateUser(id, userDetails));
     }
 
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteUser(
-            @PathVariable String id,
+            @PathVariable UUID id,
             @AuthenticationPrincipal Jwt jwt
     ) {
-        // Ensure users can only delete their own profile
-        if (!jwt.getSubject().equals(id)) {
-            return ResponseEntity.status(403).build();
+        try {
+            User user = userService.getUserById(id);
+            // Ensure users can only delete their own profile
+            if (!jwt.getSubject().equals(user.getAuthProviderId())) {
+                return ResponseEntity.status(403).build();
+            }
+            userService.deleteUser(id);
+            return ResponseEntity.noContent().build();
+        } catch (RuntimeException e) {
+            return ResponseEntity.notFound().build();
         }
-        userService.deleteUser(id);
-        return ResponseEntity.noContent().build();
+    }
+    
+    @PutMapping("/me")
+    public ResponseEntity<User> updateCurrentUser(
+            @RequestBody User userDetails,
+            @AuthenticationPrincipal Jwt jwt
+    ) {
+        try {
+            return ResponseEntity.ok(userService.updateUserByAuthProviderId(jwt.getSubject(), userDetails));
+        } catch (RuntimeException e) {
+            return ResponseEntity.notFound().build();
+        }
+    }
+    
+    @DeleteMapping("/me")
+    public ResponseEntity<Void> deleteCurrentUser(@AuthenticationPrincipal Jwt jwt) {
+        try {
+            userService.deleteUserByAuthProviderId(jwt.getSubject());
+            return ResponseEntity.noContent().build();
+        } catch (RuntimeException e) {
+            return ResponseEntity.notFound().build();
+        }
     }
 } 
