@@ -9,6 +9,9 @@ import KeyboardList from './components/KeyboardList'
 import NewKeyboardPage from './pages/NewKeyboardPage'
 import ProfilePage from './pages/ProfilePage'
 import KeyboardDetailPage from './pages/KeyboardDetailPage'
+import DevBoardsPage from './pages/DevBoardsPage'
+import DevBoardDetailPage from './pages/DevBoardDetailPage'
+import NewDevBoardPage from './pages/NewDevBoardPage'
 import { useUserRegistration } from './hooks/useUserRegistration'
 
 // Create a context to share user registration state
@@ -40,6 +43,7 @@ function App() {
             </Menu.Item>
             <Menu.Item as={Link} to="/">Home</Menu.Item>
             <Menu.Item as={Link} to="/keyboards">Keyboards</Menu.Item>
+            <Menu.Item as={Link} to="/devboards">Dev Boards</Menu.Item>
             <Menu.Menu position='right'>
               {isAuthenticated && (
                 <Menu.Item as={Link} to="/profile">
@@ -60,6 +64,9 @@ function App() {
               <Route path="/keyboards" element={<KeyboardList />} />
               <Route path="/keyboards/new" element={<NewKeyboardPage />} />
               <Route path="/keyboards/:id" element={<KeyboardDetailPage />} />
+              <Route path="/devboards" element={<DevBoardsPage />} />
+              <Route path="/devboards/new" element={<NewDevBoardPage />} />
+              <Route path="/devboards/:id" element={<DevBoardDetailPage />} />
             </Routes>
           </Container>
         </Container>

@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { Container, Header, Segment, Button, Icon, Loader, Message } from 'semantic-ui-react';
+import { Container, Header, Segment, Button, Icon, Loader, Message, Grid } from 'semantic-ui-react';
 import { keyboardsApi } from '../api/keyboardsApi';
 import { useAuth0 } from '@auth0/auth0-react';
 import SafeImage from '../components/SafeImage';
+import DevBoardCard from '../components/DevBoardCard.jsx';
+import ControllerCard from '../components/ControllerCard.jsx';
 
 const KeyboardDetailPage = () => {
   const [keyboard, setKeyboard] = useState(null);
@@ -69,73 +71,47 @@ const KeyboardDetailPage = () => {
     <Container>
       <Header as="h1">{keyboard.name}</Header>
       <Segment>
-        <p><strong>Type:</strong> {keyboard.split ? 'Split' : 'Non-split'}</p>
-        <p><strong>Hotswap:</strong> {keyboard.hotswap ? 'Yes' : 'No'}</p>
-        <p><strong>Unibody:</strong> {keyboard.unibody ? 'Yes' : 'No'}</p>
-        <p><strong>Splay:</strong> {keyboard.splay ? 'Yes' : 'No'}</p>
-        <p><strong>Row Stagger:</strong> {keyboard.rowStagger ? 'Yes' : 'No'}</p>
-        <p><strong>Column Stagger:</strong> {keyboard.columnStagger ? 'Yes' : 'No'}</p>
-        
-        {keyboard.devBoard && (
-          <div>
-            <Header as="h3">Dev Board</Header>
-            <p><strong>Name:</strong> {keyboard.devBoard.name}</p>
-            <p><strong>Wireless:</strong> {keyboard.devBoard.wireless ? 'Yes' : 'No'}</p>
-            {keyboard.devBoard.controller && (
-              <div style={{ marginLeft: '1.5rem' }}>
-                <Header as="h4">Controller</Header>
-                <p><strong>Name:</strong> {keyboard.devBoard.controller.name}</p>
-                {keyboard.devBoard.controller.manufacturer && <p><strong>Manufacturer:</strong> {keyboard.devBoard.controller.manufacturer}</p>}
-                {keyboard.devBoard.controller.chipset && <p><strong>Chipset:</strong> {keyboard.devBoard.controller.chipset}</p>}
-                {keyboard.devBoard.controller.url && (
-                  <p>
-                    <strong>URL:</strong>{' '}
-                    <a href={keyboard.devBoard.controller.url} target="_blank" rel="noopener noreferrer">
-                      {keyboard.devBoard.controller.url}
-                    </a>
-                  </p>
-                )}
-              </div>
-            )}
-            {keyboard.devBoard.url && (
-              <p>
-                <strong>URL:</strong>{' '}
-                <a href={keyboard.devBoard.url} target="_blank" rel="noopener noreferrer">
-                  {keyboard.devBoard.url}
-                </a>
-              </p>
-            )}
-          </div>
-        )}
+        <Grid>
+          <Grid.Row>
+            <Grid.Column width={10}>
+              <Header as="h3">Keyboard Properties</Header>
+              <p><strong>Type:</strong> {keyboard.split ? 'Split' : 'Non-split'}</p>
+              <p><strong>Hotswap:</strong> {keyboard.hotswap ? 'Yes' : 'No'}</p>
+              <p><strong>Unibody:</strong> {keyboard.unibody ? 'Yes' : 'No'}</p>
+              <p><strong>Splay:</strong> {keyboard.splay ? 'Yes' : 'No'}</p>
+              <p><strong>Row Stagger:</strong> {keyboard.rowStagger ? 'Yes' : 'No'}</p>
+              <p><strong>Column Stagger:</strong> {keyboard.columnStagger ? 'Yes' : 'No'}</p>
+              
+              {keyboard.url && (
+                <p>
+                  <strong>URL:</strong>{' '}
+                  <a href={keyboard.url} target="_blank" rel="noopener noreferrer">
+                    {keyboard.url}
+                  </a>
+                </p>
+              )}
+              {keyboard.user && (
+                <p><strong>Owner:</strong> {keyboard.user.name}</p>
+              )}
+            </Grid.Column>
+            
+            <Grid.Column width={6}>
+              {keyboard.devBoard && (
+                <div>
+                  <Header as="h3">Dev Board</Header>
+                  <DevBoardCard devBoard={keyboard.devBoard} />
+                </div>
+              )}
 
-        {keyboard.controller && (
-          <div>
-            <Header as="h3">Controller</Header>
-            <p><strong>Name:</strong> {keyboard.controller.name}</p>
-            {keyboard.controller.manufacturer && <p><strong>Manufacturer:</strong> {keyboard.controller.manufacturer}</p>}
-            {keyboard.controller.chipset && <p><strong>Chipset:</strong> {keyboard.controller.chipset}</p>}
-            {keyboard.controller.url && (
-              <p>
-                <strong>URL:</strong>{' '}
-                <a href={keyboard.controller.url} target="_blank" rel="noopener noreferrer">
-                  {keyboard.controller.url}
-                </a>
-              </p>
-            )}
-          </div>
-        )}
-        
-        {keyboard.url && (
-          <p>
-            <strong>URL:</strong>{' '}
-            <a href={keyboard.url} target="_blank" rel="noopener noreferrer">
-              {keyboard.url}
-            </a>
-          </p>
-        )}
-        {keyboard.user && (
-          <p><strong>Owner:</strong> {keyboard.user.name}</p>
-        )}
+              {keyboard.controller && (
+                <div style={{ marginTop: '1.5rem' }}>
+                  <Header as="h3">Controller</Header>
+                  <ControllerCard controller={keyboard.controller} />
+                </div>
+              )}
+            </Grid.Column>
+          </Grid.Row>
+        </Grid>
       </Segment>
       <Button as={Link} to="/keyboards" primary>
         <Icon name="arrow left" /> Back to Keyboards

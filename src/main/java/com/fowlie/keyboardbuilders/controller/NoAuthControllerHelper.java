@@ -6,8 +6,6 @@ import org.springframework.context.annotation.Profile;
 import org.springframework.security.oauth2.jwt.Jwt;
 import org.springframework.stereotype.Component;
 
-import java.util.UUID;
-
 @Component
 @Profile("noauth")
 public class NoAuthControllerHelper {
