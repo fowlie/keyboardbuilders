@@ -1,0 +1,98 @@
+[
+  {
+    "name": "Cantor remix",
+    "mcu": "Blackpill",
+    "wireless": "No",
+    "oled": "No",
+    "diodes": "No",
+    "choc": "Yes",
+    "hotswap": "No",
+    "case": "None",
+    "link": "https://github.com/nilokr/cantor-remix",
+    "image": "https://github.com/nilokr/cantor-remix/raw/main/assets/cantor-remix.jpg"
+  },
+  {
+    "name": "Corne keyboard",
+    "mcu": "Pro Micro",
+    "wireless": "Optional",
+    "oled": "Optional",
+    "diodes": "Yes",
+    "choc": "Optional",
+    "hotswap": "Optional",
+    "case": "3D Print",
+    "link": "https://github.com/foostan/crkbd",
+    "image": "https://private-user-images.githubusercontent.com/736191/313449315-bc32e4e8-f737-4516-b92b-55a7cb93a336.jpg?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTM4MTI2NDIsIm5iZiI6MTc1MzgxMjM0MiwicGF0aCI6Ii83MzYxOTEvMzEzNDQ5MzE1LWJjMzJlNGU4LWY3MzctNDUxNi1iOTJiLTU1YTdjYjkzYTMzNi5qcGc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwNzI5JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDcyOVQxODA1NDJaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT04MmI4Mjk4NzZiZDU0NjFlNWQxYzNlM2IxZjlmZWY0N2Q2ZjRkNDllNmIzMGM4NjNlN2I5N2FhMWFhZTE4YzVmJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.yEfgLfXBoi81XS1-FaSiDJiHHN0g9qU_664fWsfcAJE"
+  },
+  {
+    "name": "Crowboard",
+    "mcu": "rp2040",
+    "wireless": "No",
+    "oled": "No",
+    "diodes": "Yes",
+    "choc": "Yes",
+    "hotswap": "No",
+    "case": "None",
+    "link": "https://github.com/doesntfazer/CrowBoard",
+    "image": "https://camo.githubusercontent.com/7cb8009db27872ff568c2b21fbb162abd1c2de3d422361371d8bb5a62adc7e48/68747470733a2f2f692e696d6775722e636f6d2f526737495950772e6a7067"
+  },
+  {
+    "name": "Ferris Sweep",
+    "mcu": "nice!nano",
+    "wireless": "Yes",
+    "oled": "No",
+    "diodes": "Yes",
+    "choc": "Yes",
+    "hotswap": "Yes",
+    "case": "None",
+    "link": "https://github.com/davidphilipbarr/Sweep",
+    "image": "https://private-user-images.githubusercontent.com/27895007/264190906-97e13cdc-b84b-4545-8e09-139a4bb935e5.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTM3OTgyNTIsIm5iZiI6MTc1Mzc5Nzk1MiwicGF0aCI6Ii8yNzg5NTAwNy8yNjQxOTA5MDYtOTdlMTNjZGMtYjg0Yi00NTQ1LThlMDktMTM5YTRiYjkzNWU1LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA3MjklMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwNzI5VDE0MDU1MlomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWRiMTVmMDk1ODBhOWQ2NTEzMTdkNDExNTQxMWYzYjQ0MjBhZGZkNmVmN2RmODM0MDZmMjdkMTRjNTQzZDQwMGImWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.VG_Gb6DIdpGjHP49YLGuxw5lf2tMtdVh8cp0GRIkji0"
+  },
+  {
+    "name": "Kyria",
+    "mcu": "Pro Micro",
+    "wireless": "No",
+    "oled": "Yes",
+    "diodes": "Yes",
+    "choc": "Yes",
+    "hotswap": "Yes",
+    "case": "Acrylic",
+    "link": "https://github.com/splitkb/kyria",
+    "image": "https://splitkb.com/cdn/shop/files/HalcyonKyria1_820x547.jpg?v=1744190834"
+  },
+  {
+    "name": "Lily58",
+    "mcu": "Pro Micro",
+    "wireless": "Optional",
+    "oled": "Yes",
+    "diodes": "Yes",
+    "choc": "No",
+    "hotswap": "Yes",
+    "case": "3D Print",
+    "link": "https://github.com/kata0510/Lily58",
+    "image": "https://user-images.githubusercontent.com/6285554/84393842-13960900-ac37-11ea-811e-65db2948ca73.jpg"
+  },
+  {
+    "name": "Reviung41",
+    "mcu": "Pro Micro",
+    "wireless": "Optional",
+    "oled": "No",
+    "diodes": "Yes",
+    "choc": "No",
+    "hotswap": "Yes",
+    "case": "Acrylic",
+    "link": "https://github.com/gtips/reviung/tree/master/reviung41",
+    "image": "https://github.com/gtips/reviung/raw/master/reviung41/image/REVIUNG41B-1.jpg"
+  },
+  {
+    "name": "Urchin",
+    "mcu": "nice!nano",
+    "wireless": "Yes",
+    "oled": "Yes",
+    "diodes": "Yes",
+    "choc": "Yes",
+    "hotswap": "Yes",
+    "case": "3D Print",
+    "link": "https://github.com/duckyb/urchin",
+    "image": "https://github.com/duckyb/urchin/raw/main/gallery/case/coral/urchin-coral.jpg"
+  }
+]
