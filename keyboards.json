@@ -1,5 +1,17 @@
 [
   {
+    "name": "3w6",
+    "mcu": "AtMega32U4",
+    "wireless": "No",
+    "oled": "No",
+    "diodes": "No",
+    "choc": "Yes",
+    "hotswap": "No",
+    "case": "None",
+    "link": "https://github.com/weteor/3W6",
+    "image": "https://raw.githubusercontent.com/weteor/3W6/main/images/3w6_rev2_1s.jpg"
+  },
+  {
     "name": "Cantor remix",
     "mcu": "Blackpill",
     "wireless": "No",
