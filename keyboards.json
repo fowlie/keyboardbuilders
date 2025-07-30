@@ -117,6 +117,19 @@
     "image": "https://splitkb.com/cdn/shop/files/HalcyonKyria1_820x547.jpg?v=1744190834"
   },
   {
+    "name": "LambBT",
+    "keys": "34",
+    "mcu": "nice!nano",
+    "wireless": "Yes",
+    "oled": "No",
+    "diodes": "No",
+    "choc": "Yes",
+    "hotswap": "Yes",
+    "case": "3D Print",
+    "link": "https://github.com/johnlamb/LambBT",
+    "image": "https://github.com/johnlamb/LambBT/raw/main/images/lambbt.jpeg"
+  },
+  {
     "name": "Lily58",
     "keys": "58",
     "mcu": "Pro Micro",
