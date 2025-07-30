@@ -30,96 +30,107 @@ Having said that, I'm happy to accept pull requests to improve the site.
     */
 
     body {
-    margin: 0;
-    font-family: system-ui, sans-serif;
-    background-color: #34623F;
-    background-image:
-      repeating-linear-gradient(0deg, #fff2 0, #fff2 1px, transparent 1px, transparent 40px),
-      repeating-linear-gradient(90deg, #fff2 0, #fff2 1px, transparent 1px, transparent 40px);
+      margin: 0;
+      font-family: system-ui, sans-serif;
+      background-color: #34623F;
+      background-image:
+        repeating-linear-gradient(0deg, #fff2 0, #fff2 1px, transparent 1px, transparent 40px),
+        repeating-linear-gradient(90deg, #fff2 0, #fff2 1px, transparent 1px, transparent 40px);
+    }
+
+    /* These two makes the footer stick to the bottom of the screen */
+    html, body {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    main {
+      flex: 1;
     }
 
     header {
-    padding: 1rem;
-    text-align: left;
-    background-color: #1E2F23;
-    box-shadow: 0 4px 24px #0004;
+      padding: 1rem;
+      text-align: left;
+      background-color: #1E2F23;
+      box-shadow: 0 4px 24px #0004;
     }
 
     .site-logo {
-    height: 48px;
-    vertical-align: middle;
-    margin-right: 1rem;
+      height: 48px;
+      vertical-align: middle;
+      margin-right: 1rem;
     }
 
     .site-title {
-    display: inline;
-    vertical-align: middle;
+      display: inline;
+      vertical-align: middle;
     }
 
     h1,h2,h3 {
-    margin: 0;
-    color: #E0D7B8;
-    text-shadow:
-      0 4px 16px #181717,
-      0 2px 0 #768948,
-      0 1px 0 #E0D7B8;
+      margin: 0;
+      color: #E0D7B8;
+      text-shadow:
+        0 4px 16px #181717,
+        0 2px 0 #768948,
+        0 1px 0 #E0D7B8;
     }
 
     p {
-    text-align: center;
-    margin: 1rem 0;
-    color: #E0D7B8;
+      text-align: center;
+      margin: 1rem 0;
+      color: #E0D7B8;
     }
 
     #keyboard-table {
-    max-width: 100%;
-    margin: 2rem auto;
-    padding: 1rem;
-    background: #1E2F23;
-    border-radius: 8px;
+      max-width: 100%;
+      margin: 2rem auto;
+      padding: 1rem;
+      background: #1E2F23;
+      border-radius: 8px;
     }
 
     #featured-keyboard {
-    filter: drop-shadow(20px 20px 4px #181717);
+      filter: drop-shadow(20px 20px 4px #181717);
     }
 
     #featured-keyboard img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px #0003;
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px #0003;
     }
 
     #featured-keyboard-specs {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 1rem 0;
+      list-style: none;
+      padding: 0;
+      margin: 0 0 1rem 0;
     }
 
     .github-corner {
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: 8px;
-    z-index: 1000;
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 8px;
+      z-index: 1000;
     }
+
     .github-corner svg {
-    fill: #E0D7B8;
-    stroke: #181717;
-    stroke-width: 0.5;
-    height: 32px;
-    width: 32px;
-    display: block;
+      fill: #E0D7B8;
+      stroke: #181717;
+      stroke-width: 0.5;
+      height: 32px;
+      width: 32px;
+      display: block;
     }
 
     kbd {
-    border: 1px solid #181717;
-    border-radius: 4px;
-    background: #E0D7B8;
-    padding: 2px 6px;
-    font-size: 1em;
-    font-family: monospace;
-    color: #34623F;
+      border: 1px solid #181717;
+      border-radius: 4px;
+      background: #E0D7B8;
+      padding: 2px 6px;
+      font-size: 1em;
+      font-family: monospace;
+      color: #34623F;
     }
 
     .image-wrapper {
@@ -154,8 +165,29 @@ Having said that, I'm happy to accept pull requests to improve the site.
       opacity: 1;
     }
 
-    #visitors {
-      color: #768948;
+    #goatcounter-stats {
+      font-weight: bold;
+      border: 1px solid #181717;
+      border-radius: 4px;
+      background: #34623F;
+      padding: 2px 6px;
+      font-size: 1em;
+      font-family: monospace;
+      color: #E0D7B8;
+    }
+
+    footer {
+      box-shadow: 0 4px 24px #0004;
+      margin-top: 2rem;
+      padding: 2rem;
+      text-align: center;
+      background-color: #1E2F23;
+      color: #E0D7B8;
+      box-shadow: 0 -4px 24px #0004;
+    }
+
+    footer a {
+      color: #E0D7B8;
     }
   </style>
 </head>
@@ -170,7 +202,6 @@ Having said that, I'm happy to accept pull requests to improve the site.
   <header>
     <img src="logo.png" alt="Keyboard Builders logo" class="site-logo">
     <h1 class="site-title">Keyboard Builders</h1>
-    <div id="visitors">Number of visitors: <span id="visitors-count"></span></div>
   </header>
 
   <main>
@@ -193,6 +224,13 @@ Having said that, I'm happy to accept pull requests to improve the site.
       <a id="featured-keyboard-link" href="https://github.com/kata0510/Lily58" target="_blank" rel="noopener" style="color: #9ef7b3; text-decoration: underline;">View Project</a>
     </section>
   </main>
+
+  <footer>
+    <div id="goatcounter">
+        Created by <a href="https://fowlie.github.io" target="_blank">fowlie</a> -
+        <a href="https://www.goatcounter.com" target="_blank">Goat counter</a> <span id="goatcounter-stats"></span>
+    </div>
+  </footer>
 
   <script src="https://unpkg.com/tabulator-tables@6.3.1/dist/js/tabulator.min.js"></script>
 
@@ -288,7 +326,7 @@ Having said that, I'm happy to accept pull requests to improve the site.
 <script>
     let r = new XMLHttpRequest();
     r.addEventListener('load', function() {
-        document.querySelector('#visitors-count').innerText = JSON.parse(this.responseText).count
+        document.querySelector('#goatcounter-stats').innerText = JSON.parse(this.responseText).count
     })
     r.open('GET', 'https://keyboardbuilders.goatcounter.com/counter/' + encodeURIComponent(location.pathname) + '.json')
     r.send()
