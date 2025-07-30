@@ -39,6 +39,19 @@
     "image": "https://github.com/nilokr/cantor-remix/raw/main/assets/cantor-remix.jpg"
   },
   {
+    "name": "Cheapino",
+    "keys": "36",
+    "mcu": "RP2040-Zero",
+    "wireless": "No",
+    "oled": "No",
+    "diodes": "Yes",
+    "choc": "No",
+    "hotswap": "Yes",
+    "case": "3D Print",
+    "link": "https://github.com/tompi/cheapino",
+    "image": "https://github.com/tompi/cheapino/raw/master/doc/gallery/27.png"
+  },
+  {
     "name": "Chocofi",
     "keys": "36",
     "mcu": "Pro Micro",
