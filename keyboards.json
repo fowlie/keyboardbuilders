@@ -39,6 +39,19 @@
     "image": "https://github.com/nilokr/cantor-remix/raw/main/assets/cantor-remix.jpg"
   },
   {
+    "name": "Chocofi",
+    "keys": "36",
+    "mcu": "Pro Micro",
+    "wireless": "No",
+    "oled": "No",
+    "diodes": "Yes",
+    "choc": "Yes",
+    "hotswap": "Yes",
+    "case": "3D Print",
+    "link": "https://github.com/pashutk/chocofi",
+    "image": "https://github.com/pashutk/chocofi/raw/main/images/IMG_7067.jpeg"
+  },
+  {
     "name": "Corne keyboard",
     "keys": "36/42",
     "mcu": "Pro Micro",
