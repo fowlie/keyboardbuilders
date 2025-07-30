@@ -121,6 +121,38 @@ Having said that, I'm happy to accept pull requests to improve the site.
     font-family: monospace;
     color: #34623F;
     }
+
+    .image-wrapper {
+      position: relative;
+      display: inline-block;
+      width: 100%;
+    }
+
+    .image-wrapper img {
+      display: block;
+      max-width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px #0003;
+    }
+
+    .loading-text {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba(24, 23, 23, 0.6);
+      color: #E0D7B8;
+      font-weight: bold;
+      font-size: 1.2rem;
+      border-radius: 8px;
+      opacity: 0;
+      transition: opacity 0.2s ease;
+    }
+
+    .image-wrapper.loading .loading-text {
+      opacity: 1;
+    }
   </style>
 </head>
 <body>
@@ -147,7 +179,10 @@ Having said that, I'm happy to accept pull requests to improve the site.
 
     <section id="featured-keyboard" style="max-width: 500px; margin: 2rem auto; background: #223b2c; color: #E0D7B8; border-radius: 8px; box-shadow: 0 2px 8px #0003; padding: 1.5rem; text-align: center;">
       <h2 id="featured-keyboard-title"></h2>
-      <img id="featured-keyboard-img" alt="Featured Keyboard" >
+      <div class="image-wrapper loading">
+        <img id="featured-keyboard-img" alt="Featured Keyboard">
+        <div class="loading-text">Loading…</div>
+      </div>
       <ul id="featured-keyboard-specs">
       </ul>
       <a id="featured-keyboard-link" href="https://github.com/kata0510/Lily58" target="_blank" rel="noopener" style="color: #9ef7b3; text-decoration: underline;">View Project</a>
@@ -158,7 +193,13 @@ Having said that, I'm happy to accept pull requests to improve the site.
 
   <script>
     function updateFeaturedKeyboard(keyboard) {
-      document.getElementById("featured-keyboard-img").src = keyboard.image;
+      const wrapper = document.querySelector(".image-wrapper");
+      const img = document.getElementById("featured-keyboard-img");
+
+      wrapper.classList.add("loading");
+      img.onload = () => wrapper.classList.remove("loading");
+      img.src = keyboard.image;
+
       document.getElementById("featured-keyboard-title").textContent = keyboard.name;
       document.getElementById("featured-keyboard-specs").innerHTML = `
         <li><strong>Keys:</strong> ${keyboard.keys || ""}</li>
