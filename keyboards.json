@@ -13,6 +13,19 @@
     "image": "https://raw.githubusercontent.com/weteor/3W6/main/images/3w6_rev2_1s.jpg"
   },
   {
+    "name": "Architeuthis dux",
+    "keys": "34",
+    "mcu": "Pro Micro",
+    "wireless": "No",
+    "oled": "No",
+    "diodes": "No",
+    "choc": "yes",
+    "hotswap": "Yes",
+    "case": "3D Print",
+    "link": "https://github.com/tapioki/cephalopoda/tree/main/Architeuthis%20dux",
+    "image": "https://github.com/tapioki/cephalopoda/raw/main/Images/architeuthis_dux.png"
+  },
+  {
     "name": "Cantor remix",
     "keys": "36",
     "mcu": "Blackpill",
