@@ -1,10 +1,10 @@
-# keyboardbuilders
+# Keyboard Builders
 
-A project to gather a list of open source keyboard projects.
+A website with a list of open source keyboards.
 
 ## What is this?
 
-When I was looking for a keyboard project to build, I found it hard to find a list of open source keyboard projects. So I decided to create this repository to gather all the open source keyboard projects I could find. It's a work in progress, so feel free to contribute!
+When I first was looking for a keyboard project to build, I couldn't find a complete list of open source keyboards. So I decided to create this website to gather all open source keyboard projects I could find. Please feel free to add more keyboards to `keyboards.json`! :-)
 
 ## License
 
