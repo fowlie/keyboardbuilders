@@ -1,6 +1,7 @@
 [
   {
     "name": "3w6",
+    "keys": "36",
     "mcu": "AtMega32U4",
     "wireless": "No",
     "oled": "No",
@@ -13,6 +14,7 @@
   },
   {
     "name": "Cantor remix",
+    "keys": "36",
     "mcu": "Blackpill",
     "wireless": "No",
     "oled": "No",
@@ -25,6 +27,7 @@
   },
   {
     "name": "Corne keyboard",
+    "keys": "36/42",
     "mcu": "Pro Micro",
     "wireless": "Optional",
     "oled": "Optional",
@@ -37,6 +40,7 @@
   },
   {
     "name": "Crowboard",
+    "keys": "36",
     "mcu": "rp2040",
     "wireless": "No",
     "oled": "No",
@@ -49,6 +53,7 @@
   },
   {
     "name": "Ferris Sweep",
+    "keys": "34",
     "mcu": "nice!nano",
     "wireless": "Yes",
     "oled": "No",
@@ -61,6 +66,7 @@
   },
   {
     "name": "Kyria",
+    "keys": "50",
     "mcu": "Pro Micro",
     "wireless": "No",
     "oled": "Yes",
@@ -73,6 +79,7 @@
   },
   {
     "name": "Lily58",
+    "keys": "58",
     "mcu": "Pro Micro",
     "wireless": "Optional",
     "oled": "Yes",
@@ -85,6 +92,7 @@
   },
   {
     "name": "Reviung41",
+    "keys": "41",
     "mcu": "Pro Micro",
     "wireless": "Optional",
     "oled": "No",
@@ -97,6 +105,7 @@
   },
   {
     "name": "Urchin",
+    "keys": "34",
     "mcu": "nice!nano",
     "wireless": "Yes",
     "oled": "Yes",
