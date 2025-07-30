@@ -153,6 +153,10 @@ Having said that, I'm happy to accept pull requests to improve the site.
     .image-wrapper.loading .loading-text {
       opacity: 1;
     }
+
+    #visitors {
+      color: #768948;
+    }
   </style>
 </head>
 <body>
@@ -166,6 +170,7 @@ Having said that, I'm happy to accept pull requests to improve the site.
   <header>
     <img src="logo.png" alt="Keyboard Builders logo" class="site-logo">
     <h1 class="site-title">Keyboard Builders</h1>
+    <div id="visitors">Number of visitors: <span id="visitors-count"></span></div>
   </header>
 
   <main>
@@ -280,6 +285,15 @@ Having said that, I'm happy to accept pull requests to improve the site.
       }
     });
   </script>
-  <script data-goatcounter="https://keyboardbuilders.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+<script>
+    let r = new XMLHttpRequest();
+    r.addEventListener('load', function() {
+        document.querySelector('#visitors-count').innerText = JSON.parse(this.responseText).count
+    })
+    r.open('GET', 'https://keyboardbuilders.goatcounter.com/counter/' + encodeURIComponent(location.pathname) + '.json')
+    r.send()
+</script>
+  <script data-goatcounter="https://keyboardbuilders.goatcounter.com/count"
+          async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
