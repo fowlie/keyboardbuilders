@@ -242,5 +242,24 @@
     ],
     "source": "github-search",
     "last_checked": "2025-08-08"
+  },
+  {
+    "name": "miryoku_qmk",
+    "repo": "https://github.com/manna-harbour/miryoku_qmk",
+    "homepage": "https://github.com/manna-harbour/miryoku_qmk/tree/miryoku/users/manna-harbour_miryoku",
+    "image": "https://opengraph.githubassets.com/1/manna-harbour/miryoku_qmk",
+    "layout_base": "row-stagger",
+    "form_factors": [],
+    "splay": false,
+    "unibody": false,
+    "keys": null,
+    "keys_alt": [],
+    "controller_onboard": null,
+    "controller_footprint": [],
+    "firmware_targets": [
+      "QMK"
+    ],
+    "source": "github-search",
+    "last_checked": "2025-08-08"
   }
 ]
