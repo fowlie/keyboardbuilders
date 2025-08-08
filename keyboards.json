@@ -184,5 +184,25 @@
     "firmware_targets": [],
     "source": "github-search",
     "last_checked": "2025-08-08"
+  },
+  {
+    "name": "scottokeebs",
+    "repo": "https://github.com/joe-scotto/scottokeebs",
+    "homepage": "https://scottokeebs.com",
+    "image": "https://github.com/joe-scotto/scottokeebs/assets/8194147/d13ea430-0d15-4b06-acb6-fe8aa295f84d",
+    "layout_base": "row-stagger",
+    "form_factors": [],
+    "splay": false,
+    "unibody": false,
+    "keys": null,
+    "keys_alt": [],
+    "controller_onboard": null,
+    "controller_footprint": [
+      "pico",
+      "pro-micro"
+    ],
+    "firmware_targets": [],
+    "source": "github-search",
+    "last_checked": "2025-08-08"
   }
 ]
