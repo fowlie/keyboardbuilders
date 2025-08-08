@@ -204,5 +204,24 @@
     "firmware_targets": [],
     "source": "github-search",
     "last_checked": "2025-08-08"
+  },
+  {
+    "name": "capsicain",
+    "repo": "https://github.com/cajhin/capsicain",
+    "homepage": "",
+    "image": "https://opengraph.githubassets.com/1/cajhin/capsicain",
+    "layout_base": "row-stagger",
+    "form_factors": [],
+    "splay": false,
+    "unibody": false,
+    "keys": null,
+    "keys_alt": [],
+    "controller_onboard": null,
+    "controller_footprint": [],
+    "firmware_targets": [
+      "QMK"
+    ],
+    "source": "github-search",
+    "last_checked": "2025-08-08"
   }
 ]
