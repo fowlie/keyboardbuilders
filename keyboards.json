@@ -302,5 +302,24 @@
     "firmware_targets": [],
     "source": "github-search",
     "last_checked": "2025-08-08"
+  },
+  {
+    "name": "steno",
+    "repo": "https://github.com/crides/steno",
+    "homepage": "",
+    "image": "https://opengraph.githubassets.com/1/crides/steno",
+    "layout_base": "row-stagger",
+    "form_factors": [],
+    "splay": false,
+    "unibody": false,
+    "keys": 23,
+    "keys_alt": [],
+    "controller_onboard": null,
+    "controller_footprint": [],
+    "firmware_targets": [
+      "QMK"
+    ],
+    "source": "github-search",
+    "last_checked": "2025-08-08"
   }
 ]
