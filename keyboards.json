@@ -167,5 +167,22 @@
     "case": "3D Print",
     "link": "https://github.com/duckyb/urchin",
     "image": "https://github.com/duckyb/urchin/raw/main/gallery/case/coral/urchin-coral.jpg"
+  },
+  {
+    "name": "qmk_firmware",
+    "repo": "https://github.com/qmk/qmk_firmware",
+    "homepage": "https://qmk.fm",
+    "image": "https://opengraph.githubassets.com/1/qmk/qmk_firmware",
+    "layout_base": "row-stagger",
+    "form_factors": [],
+    "splay": false,
+    "unibody": false,
+    "keys": null,
+    "keys_alt": [],
+    "controller_onboard": null,
+    "controller_footprint": [],
+    "firmware_targets": [],
+    "source": "github-search",
+    "last_checked": "2025-08-08"
   }
 ]
