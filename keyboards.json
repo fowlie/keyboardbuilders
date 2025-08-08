@@ -283,5 +283,24 @@
     ],
     "source": "github-search",
     "last_checked": "2025-08-08"
+  },
+  {
+    "name": "tp78_v2",
+    "repo": "https://github.com/ChnMasterOG/tp78_v2",
+    "homepage": "https://www.bilibili.com/video/BV1Ho4y1b78t",
+    "image": "https://opengraph.githubassets.com/1/ChnMasterOG/tp78_v2",
+    "layout_base": "row-stagger",
+    "form_factors": [
+      "split"
+    ],
+    "splay": false,
+    "unibody": false,
+    "keys": null,
+    "keys_alt": [],
+    "controller_onboard": null,
+    "controller_footprint": [],
+    "firmware_targets": [],
+    "source": "github-search",
+    "last_checked": "2025-08-08"
   }
 ]
