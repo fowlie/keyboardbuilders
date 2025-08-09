@@ -8,7 +8,7 @@ When I first was looking for a keyboard project to build, I couldn't find a comp
 
 ## Setup
 
-Just run `mise dev` or `npx live-server` and you are ready to go!
+Just run `npm install` and `npm run dev` and you are ready to go!
 
 ## License
 

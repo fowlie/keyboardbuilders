@@ -221,7 +221,7 @@ Having said that, I'm happy to accept pull requests to improve the site.
       </div>
       <ul id="featured-keyboard-specs">
       </ul>
-      <a id="featured-keyboard-link" href="https://github.com/kata0510/Lily58" target="_blank" rel="noopener" style="color: #9ef7b3; text-decoration: underline;">View Project</a>
+      <a id="featured-keyboard-link" href="https://github.com/kata0510/Lily58" target="_blank" rel="noopener" style="color: #9ef7b3; text-decoration: underline;">Go to repo</a>
     </section>
   </main>
 
@@ -246,13 +246,11 @@ Having said that, I'm happy to accept pull requests to improve the site.
       document.getElementById("featured-keyboard-title").textContent = keyboard.name;
       document.getElementById("featured-keyboard-specs").innerHTML = `
         <li><strong>Keys:</strong> ${keyboard.keys || ""}</li>
+        <li><strong>Form factors:</strong> ${keyboard.form_factors || ""}</li>
         <li><strong>MCU:</strong> ${keyboard.mcu || ""}</li>
-        <li><strong>Wireless:</strong> ${keyboard.wireless || ""}</li>
-        <li><strong>OLED:</strong> ${keyboard.oled || ""}</li>
-        <li><strong>Choc:</strong> ${keyboard.choc || ""}</li>
-        <li><strong>Hotswap:</strong> ${keyboard.hotswap || ""}</li>
+        <li><strong>Firmware:</strong> ${keyboard.firmware_targets || ""}</li>
       `;
-      document.getElementById("featured-keyboard-link").href = keyboard.link;
+      document.getElementById("featured-keyboard-link").href = keyboard.repo;
     }
 
     var table = new Tabulator("#keyboard-table", {
@@ -265,19 +263,9 @@ Having said that, I'm happy to accept pull requests to improve the site.
       columns: [
         { title: "Name", field: "name", headerFilter: true, width: 120 },
         { title: "Keys", field: "keys", headerFilter: true, width: 70 },
-        { title: "MCU", field: "mcu", width: 100, },
-        { title: "Wireless", field: "wireless", hozAlign: "center" },
-        { title: "OLED", field: "oled", hozAlign: "center" },
-        { title: "Diodes", field: "diodes", hozAlign: "center", width: 100 },
-        { title: "Choc", field: "choc", hozAlign: "center" },
-        { title: "Hotswap", field: "hotswap", hozAlign: "center", width: 100 },
-        { title: "Case", field: "case" },
-        { title: "Link", field: "link", 
-          formatter: function(cell) {
-            const url = cell.getValue();
-            return url ? `<a href="${url}" target="_blank" rel="noopener noreferrer">Open</a>` : "";
-          }
-        },
+        { title: "Form factors", field: "form_factors", headerFilter: true },
+        { title: "MCU", field: "mcu", headerFilter: true },
+        { title: "Firmware", field: "firmware_targets", headerFilter: true },
       ],
     });
     table.on("rowClick", function(e, row) {

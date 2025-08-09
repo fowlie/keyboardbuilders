@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "dev": "live-server",
+    "add_repo": "node scripts/add_repo.mjs --repo",
+    "validate": "node scripts/validate.mjs"
+  },
+  "devDependencies": {
+    "ajv-cli": "^5.0.0",
+    "ajv-formats": "^3.0.1",
+    "live-server": "^1.2.2"
+  }
+}

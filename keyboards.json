@@ -1,171 +1,168 @@
 [
   {
-    "name": "3w6",
-    "keys": "36",
-    "mcu": "AtMega32U4",
-    "wireless": "No",
-    "oled": "No",
-    "diodes": "No",
-    "choc": "Yes",
-    "hotswap": "No",
-    "case": "None",
-    "link": "https://github.com/weteor/3W6",
-    "image": "https://raw.githubusercontent.com/weteor/3W6/main/images/3w6_rev2_1s.jpg"
-  },
-  {
     "name": "Architeuthis dux",
-    "keys": "34",
+    "repo": "https://github.com/tapioki/cephalopoda/tree/main/Architeuthis%20dux",
+    "image": "https://raw.githubusercontent.com/tapioki/cephalopoda/main/Images/architeuthis_dux.png",
+    "form_factors": [
+      "splay",
+      "split"
+    ],
+    "keys": 34,
     "mcu": "Pro Micro",
-    "wireless": "No",
-    "oled": "No",
-    "diodes": "No",
-    "choc": "yes",
-    "hotswap": "Yes",
-    "case": "3D Print",
-    "link": "https://github.com/tapioki/cephalopoda/tree/main/Architeuthis%20dux",
-    "image": "https://github.com/tapioki/cephalopoda/raw/main/Images/architeuthis_dux.png"
-  },
-  {
-    "name": "Cantor remix",
-    "keys": "36",
-    "mcu": "Blackpill",
-    "wireless": "No",
-    "oled": "No",
-    "diodes": "No",
-    "choc": "Yes",
-    "hotswap": "No",
-    "case": "None",
-    "link": "https://github.com/nilokr/cantor-remix",
-    "image": "https://github.com/nilokr/cantor-remix/raw/main/assets/cantor-remix.jpg"
+    "firmware_targets": [
+      "QMK",
+      "ZMK"
+    ],
+    "last_checked": "2025-08-09"
   },
   {
     "name": "Cheapino",
-    "keys": "36",
-    "mcu": "RP2040-Zero",
-    "wireless": "No",
-    "oled": "No",
-    "diodes": "Yes",
-    "choc": "No",
-    "hotswap": "Yes",
-    "case": "3D Print",
-    "link": "https://github.com/tompi/cheapino",
-    "image": "https://github.com/tompi/cheapino/raw/master/doc/gallery/27.png"
+    "repo": "https://github.com/tompi/cheapino",
+    "image": "https://raw.githubusercontent.com/tompi/cheapino/master/doc/gallery/27.png",
+    "form_factors": [
+      "split"
+    ],
+    "keys": 36,
+    "mcu": "RP2040 Zero",
+    "firmware_targets": [
+      "QMK"
+    ],
+    "last_checked": "2025-08-09"
   },
   {
     "name": "Chocofi",
-    "keys": "36",
+    "repo": "https://github.com/pashutk/chocofi",
+    "image": "https://raw.githubusercontent.com/pashutk/chocofi/main/images/IMG_7067.jpeg",
+    "form_factors": [
+      "split"
+    ],
+    "keys": 36,
     "mcu": "Pro Micro",
-    "wireless": "No",
-    "oled": "No",
-    "diodes": "Yes",
-    "choc": "Yes",
-    "hotswap": "Yes",
-    "case": "3D Print",
-    "link": "https://github.com/pashutk/chocofi",
-    "image": "https://github.com/pashutk/chocofi/raw/main/images/IMG_7067.jpeg"
+    "firmware_targets": [
+      "QMK",
+      "ZMK"
+    ],
+    "last_checked": "2025-08-09"
   },
   {
-    "name": "Corne keyboard",
-    "keys": "36/42",
+    "name": "Corne",
+    "repo": "https://github.com/foostan/crkbd",
+    "image": "https://github.com/foostan/crkbd/assets/736191/bc32e4e8-f737-4516-b92b-55a7cb93a336",
+    "form_factors": [
+      "split"
+    ],
+    "keys": 42,
     "mcu": "Pro Micro",
-    "wireless": "Optional",
-    "oled": "Optional",
-    "diodes": "Yes",
-    "choc": "Optional",
-    "hotswap": "Optional",
-    "case": "3D Print",
-    "link": "https://github.com/foostan/crkbd",
-    "image": "https://github.com/foostan/crkbd/assets/736191/bc32e4e8-f737-4516-b92b-55a7cb93a336"
+    "firmware_targets": [
+      "QMK",
+      "ZMK"
+    ],
+    "last_checked": "2025-08-09"
   },
   {
-    "name": "Crowboard",
-    "keys": "36",
-    "mcu": "rp2040",
-    "wireless": "No",
-    "oled": "No",
-    "diodes": "Yes",
-    "choc": "Yes",
-    "hotswap": "No",
-    "case": "None",
-    "link": "https://github.com/doesntfazer/CrowBoard",
-    "image": "https://camo.githubusercontent.com/7cb8009db27872ff568c2b21fbb162abd1c2de3d422361371d8bb5a62adc7e48/68747470733a2f2f692e696d6775722e636f6d2f526737495950772e6a7067"
-  },
-  {
-    "name": "Ferris Sweep",
-    "keys": "34",
-    "mcu": "nice!nano",
-    "wireless": "Yes",
-    "oled": "No",
-    "diodes": "Yes",
-    "choc": "Yes",
-    "hotswap": "Yes",
-    "case": "None",
-    "link": "https://github.com/davidphilipbarr/Sweep",
-    "image": "https://github.com/davidphilipbarr/Sweep/assets/27895007/97e13cdc-b84b-4545-8e09-139a4bb935e5"
+    "name": "CrowBoard",
+    "repo": "https://github.com/doesntfazer/CrowBoard",
+    "image": "https://camo.githubusercontent.com/7cb8009db27872ff568c2b21fbb162abd1c2de3d422361371d8bb5a62adc7e48/68747470733a2f2f692e696d6775722e636f6d2f526737495950772e6a7067",
+    "form_factors": [
+      "split",
+      "unibody"
+    ],
+    "keys": 36,
+    "mcu": "Pico",
+    "firmware_targets": [
+      "QMK"
+    ],
+    "last_checked": "2025-08-09"
   },
   {
     "name": "Kyria",
-    "keys": "50",
+    "repo": "https://github.com/splitkb/kyria",
+    "image": "https://splitkb.com/cdn/shop/files/HalcyonKyria1_924x616.jpg?v=1744190834",
+    "form_factors": [
+      "split"
+    ],
+    "keys": 50,
     "mcu": "Pro Micro",
-    "wireless": "No",
-    "oled": "Yes",
-    "diodes": "Yes",
-    "choc": "Yes",
-    "hotswap": "Yes",
-    "case": "Acrylic",
-    "link": "https://github.com/splitkb/kyria",
-    "image": "https://splitkb.com/cdn/shop/files/HalcyonKyria1_820x547.jpg?v=1744190834"
+    "firmware_targets": [
+      "QMK",
+      "ZMK"
+    ],
+    "last_checked": "2025-08-09"
   },
   {
     "name": "LambBT",
-    "keys": "34",
+    "repo": "https://github.com/johnlamb/LambBT",
+    "image": "https://raw.githubusercontent.com/johnlamb/LambBT/main/images/lambbt.jpeg",
+    "form_factors": [
+      "splay",
+      "split"
+    ],
+    "keys": 34,
     "mcu": "nice!nano",
-    "wireless": "Yes",
-    "oled": "No",
-    "diodes": "No",
-    "choc": "Yes",
-    "hotswap": "Yes",
-    "case": "3D Print",
-    "link": "https://github.com/johnlamb/LambBT",
-    "image": "https://github.com/johnlamb/LambBT/raw/main/images/lambbt.jpeg"
+    "firmware_targets": [
+      "ZMK"
+    ],
+    "last_checked": "2025-08-09"
   },
   {
     "name": "Lily58",
-    "keys": "58",
+    "repo": "https://github.com/kata0510/Lily58",
+    "image": "https://user-images.githubusercontent.com/6285554/84393842-13960900-ac37-11ea-811e-65db2948ca73.jpg",
+    "form_factors": [
+      "split"
+    ],
+    "keys": 58,
     "mcu": "Pro Micro",
-    "wireless": "Optional",
-    "oled": "Yes",
-    "diodes": "Yes",
-    "choc": "No",
-    "hotswap": "Yes",
-    "case": "3D Print",
-    "link": "https://github.com/kata0510/Lily58",
-    "image": "https://user-images.githubusercontent.com/6285554/84393842-13960900-ac37-11ea-811e-65db2948ca73.jpg"
+    "firmware_targets": [
+      "QMK",
+      "ZMK"
+    ],
+    "last_checked": "2025-08-09"
   },
   {
-    "name": "Reviung41",
-    "keys": "41",
+    "name": "Reviung 41",
+    "repo": "https://github.com/gtips/reviung/tree/master/reviung41",
+    "image": "https://raw.githubusercontent.com/gtips/reviung/master/reviung41/image/REVIUNG41B-1.jpg",
+    "form_factors": [
+      "split",
+      "unibody"
+    ],
+    "keys": 41,
     "mcu": "Pro Micro",
-    "wireless": "Optional",
-    "oled": "No",
-    "diodes": "Yes",
-    "choc": "No",
-    "hotswap": "Yes",
-    "case": "Acrylic",
-    "link": "https://github.com/gtips/reviung/tree/master/reviung41",
-    "image": "https://github.com/gtips/reviung/raw/master/reviung41/image/REVIUNG41B-1.jpg"
+    "firmware_targets": [
+      "QMK",
+      "ZMK"
+    ],
+    "last_checked": "2025-08-09"
+  },
+  {
+    "name": "Sweep",
+    "repo": "https://github.com/davidphilipbarr/Sweep",
+    "image": "https://user-images.githubusercontent.com/27895007/264190906-97e13cdc-b84b-4545-8e09-139a4bb935e5.png",
+    "form_factors": [
+      "split"
+    ],
+    "keys": 34,
+    "mcu": "Pro Micro",
+    "firmware_targets": [
+      "BlueMicro",
+      "QMK",
+      "ZMK"
+    ],
+    "last_checked": "2025-08-09"
   },
   {
     "name": "Urchin",
-    "keys": "34",
+    "repo": "https://github.com/duckyb/urchin",
+    "image": "https://raw.githubusercontent.com/duckyb/urchin/main/./gallery/case/coral/urchin-coral.jpg",
+    "form_factors": [
+      "split"
+    ],
+    "keys": 34,
     "mcu": "nice!nano",
-    "wireless": "Yes",
-    "oled": "Yes",
-    "diodes": "Yes",
-    "choc": "Yes",
-    "hotswap": "Yes",
-    "case": "3D Print",
-    "link": "https://github.com/duckyb/urchin",
-    "image": "https://github.com/duckyb/urchin/raw/main/gallery/case/coral/urchin-coral.jpg"
+    "firmware_targets": [
+      "ZMK"
+    ],
+    "last_checked": "2025-08-09"
   }
 ]

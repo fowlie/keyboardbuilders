@@ -1,0 +1,42 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "KeyboardBuilders index",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "name",
+      "repo",
+      "image",
+      "form_factors",
+      "firmware_targets",
+      "mcu"
+    ],
+    "properties": {
+      "name": { "type": "string", "minLength": 1 },
+      "repo": { "type": "string", "format": "uri" },
+      "image": { "type": "string", "format": "uri" },
+
+      "form_factors": {
+        "type": "array",
+        "items": { "enum": ["split", "unibody", "splay", "concave", "tilt"] },
+        "uniqueItems": true,
+        "minItems": 0
+      },
+
+      "keys": { "type": ["integer", "null"], "minimum": 10, "maximum": 120 },
+
+      "mcu": { "enum": ["Pro Micro","Blackpill","nice!nano","ATmega32U4","RP2040", "RP2040 Zero", "Pico"] },
+
+      "firmware_targets": {
+        "type": "array",
+        "items": { "enum": ["BlueMicro", "Vial", "QMK", "ZMK"] },
+        "minItems": 1,
+        "uniqueItems": true
+      },
+
+      "last_checked": { "type": "string", "format": "date" }
+    }
+  }
+}
