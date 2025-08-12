@@ -63,10 +63,14 @@
     "name": "Balbuzard",
     "repo": "https://github.com/brow/balbuzard",
     "image": "https://github.com/brow/balbuzard/raw/main/images/0.2_smores.jpg",
-    "form_factors": ["split"],
+    "form_factors": [
+      "split"
+    ],
     "keys": 38,
     "mcu": "Pro Micro",
-    "firmware_targets": ["QMK"],
+    "firmware_targets": [
+      "QMK"
+    ],
     "last_updated": "2025-08-12"
   },
   {
@@ -111,6 +115,18 @@
       "ZMK"
     ],
     "last_updated": "2025-08-09"
+  },
+  {
+    "name": "Claw44",
+    "repo": "https://github.com/yfuku/claw44",
+    "image": "https://camo.githubusercontent.com/e10b21de4f3c442b8f8f7ce0b6d505586c8a82cbe9ce08ad7eb225e44dac548d/68747470733a2f2f692e696d6775722e636f6d2f356138696f676c2e6a7067",
+    "form_factors": [
+      "split"
+    ],
+    "keys": 44,
+    "mcu": "Pro Micro",
+    "firmware_targets": ["QMK"],
+    "last_updated": "2025-08-12"
   },
   {
     "name": "Corne",
