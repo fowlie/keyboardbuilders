@@ -54,7 +54,19 @@
     ],
     "keys": 42,
     "mcu": "Teensy 2.0",
-    "firmware_targets": ["Atreus"],
+    "firmware_targets": [
+      "Atreus"
+    ],
+    "last_updated": "2025-08-12"
+  },
+  {
+    "name": "Balbuzard",
+    "repo": "https://github.com/brow/balbuzard",
+    "image": "https://github.com/brow/balbuzard/raw/main/images/0.2_smores.jpg",
+    "form_factors": ["split"],
+    "keys": 38,
+    "mcu": "Pro Micro",
+    "firmware_targets": ["QMK"],
     "last_updated": "2025-08-12"
   },
   {
