@@ -356,7 +356,7 @@ function createBranchCommitPR(record, { branchPrefix, base }) {
       keys,
       mcu,                    // REQUIRED by schema
       firmware_targets,
-      last_checked: todayISO()
+      last_updated: todayISO()
     };
 
     if (args.dryRun) {

@@ -249,6 +249,7 @@ Having said that, I'm happy to accept pull requests to improve the site.
         <li><strong>Form factors:</strong> ${keyboard.form_factors || ""}</li>
         <li><strong>MCU:</strong> ${keyboard.mcu || ""}</li>
         <li><strong>Firmware:</strong> ${keyboard.firmware_targets || ""}</li>
+        <li><strong>Last updated:</strong> ${keyboard.last_updated || ""}</li>
       `;
       document.getElementById("featured-keyboard-link").href = keyboard.repo;
     }
@@ -266,6 +267,7 @@ Having said that, I'm happy to accept pull requests to improve the site.
         { title: "Form factors", field: "form_factors", headerFilter: true },
         { title: "MCU", field: "mcu", headerFilter: true },
         { title: "Firmware", field: "firmware_targets", headerFilter: true },
+        { title: "Last updated", field: "last_updated", headerFilter: true, width: 120 },
       ],
     });
     table.on("rowClick", function(e, row) {

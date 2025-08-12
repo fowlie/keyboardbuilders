@@ -36,7 +36,7 @@
         "uniqueItems": true
       },
 
-      "last_checked": { "type": "string", "format": "date" }
+      "last_updated": { "type": "string", "format": "date" }
     }
   }
 }
