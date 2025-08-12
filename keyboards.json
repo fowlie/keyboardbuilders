@@ -14,6 +14,16 @@
     "last_updated": "2025-08-12"
   },
   {
+    "name": "Absolem",
+    "repo": "https://github.com/mrzealot/absolem",
+    "image": "https://zealot.hu/absolem/pics/splash.jpg",
+    "form_factors": ["split", "unibody"],
+    "keys": 36,
+    "mcu": "Adafruit Feather nRF52 Bluefruit",
+    "firmware_targets": ["Absolem"],
+    "last_updated": "2025-08-12"
+  },
+  {
     "name": "Architeuthis dux",
     "repo": "https://github.com/tapioki/cephalopoda/tree/main/Architeuthis%20dux",
     "image": "https://raw.githubusercontent.com/tapioki/cephalopoda/main/Images/architeuthis_dux.png",

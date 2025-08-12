@@ -27,11 +27,11 @@
 
       "keys": { "type": ["integer", "null"], "minimum": 10, "maximum": 120 },
 
-      "mcu": { "enum": ["Pro Micro","Blackpill","nice!nano","ATmega32U4","RP2040", "RP2040 Zero", "Pico"] },
+      "mcu": { "enum": ["Pro Micro","Blackpill","nice!nano","ATmega32U4","RP2040", "RP2040 Zero", "Pico", "Adafruit Feather nRF52 Bluefruit"] },
 
       "firmware_targets": {
         "type": "array",
-        "items": { "enum": ["BlueMicro", "Vial", "QMK", "ZMK"] },
+        "items": { "enum": ["Absolem", "BlueMicro", "Vial", "QMK", "ZMK"] },
         "minItems": 1,
         "uniqueItems": true
       },
