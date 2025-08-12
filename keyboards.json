@@ -17,10 +17,15 @@
     "name": "Absolem",
     "repo": "https://github.com/mrzealot/absolem",
     "image": "https://zealot.hu/absolem/pics/splash.jpg",
-    "form_factors": ["split", "unibody"],
+    "form_factors": [
+      "split",
+      "unibody"
+    ],
     "keys": 36,
     "mcu": "Adafruit Feather nRF52 Bluefruit",
-    "firmware_targets": ["Absolem"],
+    "firmware_targets": [
+      "Absolem"
+    ],
     "last_updated": "2025-08-12"
   },
   {
@@ -38,6 +43,19 @@
       "ZMK"
     ],
     "last_updated": "2025-08-09"
+  },
+  {
+    "name": "Atreus",
+    "repo": "https://github.com/ckhroulev/atreus",
+    "image": "https://github.com/ckhroulev/atreus/raw/master/atreus.jpg",
+    "form_factors": [
+      "split",
+      "unibody"
+    ],
+    "keys": 42,
+    "mcu": "Teensy 2.0",
+    "firmware_targets": ["Atreus"],
+    "last_updated": "2025-08-12"
   },
   {
     "name": "Cantor-remix",
