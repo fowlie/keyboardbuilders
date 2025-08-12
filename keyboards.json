@@ -1,5 +1,19 @@
 [
   {
+    "name": "3W6",
+    "repo": "https://github.com/weteor/3W6",
+    "image": "https://raw.githubusercontent.com/weteor/3W6/main/images/3w6_rev2_1s.jpg",
+    "form_factors": [
+      "split"
+    ],
+    "keys": 36,
+    "mcu": "ATmega32U4",
+    "firmware_targets": [
+      "QMK"
+    ],
+    "last_checked": "2025-08-12"
+  },
+  {
     "name": "Architeuthis dux",
     "repo": "https://github.com/tapioki/cephalopoda/tree/main/Architeuthis%20dux",
     "image": "https://raw.githubusercontent.com/tapioki/cephalopoda/main/Images/architeuthis_dux.png",
