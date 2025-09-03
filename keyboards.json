@@ -125,8 +125,25 @@
     ],
     "keys": 44,
     "mcu": "Pro Micro",
-    "firmware_targets": ["QMK"],
+    "firmware_targets": [
+      "QMK"
+    ],
     "last_updated": "2025-08-12"
+  },
+  {
+    "name": "Clog V2",
+    "repo": "https://github.com/smores56/clog-v2",
+    "image": "https://github.com/smores56/clog-v2/raw/main/pictures/clog-v2-left-half.jpg",
+    "form_factors": [
+      "split",
+      "splay"
+    ],
+    "keys": 34,
+    "mcu": "Xiao BLE",
+    "firmware_targets": [
+      "ZMK"
+    ],
+    "last_updated": "2025-09-03"
   },
   {
     "name": "Corne",
@@ -144,6 +161,21 @@
     "last_updated": "2025-08-09"
   },
   {
+    "name": "CRBN-Featherlight",
+    "repo": "https://github.com/PolarityWorks/CRBN-Featherlight",
+    "image": "https://camo.githubusercontent.com/eb292fbcce56ab1cbdd6225248de69ea7e9da46122953771b4c908dfd0926b4e/68747470733a2f2f692e696d6775722e636f6d2f474655534a53452e6a7067",
+    "form_factors": [
+      "unibody"
+    ],
+    "keys": 47,
+    "mcu": "Elite-C",
+    "firmware_targets": [
+      "QMK",
+      "ZMK"
+    ],
+    "last_updated": "2025-09-03"
+  },
+  {
     "name": "CrowBoard",
     "repo": "https://github.com/doesntfazer/CrowBoard",
     "image": "https://camo.githubusercontent.com/7cb8009db27872ff568c2b21fbb162abd1c2de3d422361371d8bb5a62adc7e48/68747470733a2f2f692e696d6775722e636f6d2f526737495950772e6a7067",
@@ -157,6 +189,142 @@
       "QMK"
     ],
     "last_updated": "2025-08-09"
+  },
+  {
+    "name": "Eek_doc",
+    "repo": "https://github.com/Klackygears/eek_doc",
+    "image": "https://camo.githubusercontent.com/b27663eb815b10f54dc501e85662baeb89da2ddc24dbbed740c6da782147b182/68747470733a2f2f692e696d6775722e636f6d2f33344f33784b572e6a7067",
+    "form_factors": [
+      "split"
+    ],
+    "keys": 36,
+    "mcu": "Elite-C",
+    "firmware_targets": [
+      "QMK",
+      "ZMK"
+    ],
+    "last_updated": "2025-09-03"
+  },
+  {
+    "name": "Elephant42",
+    "repo": "https://github.com/illness072/elephant42",
+    "image": "https://raw.githubusercontent.com/illness072/elephant42/master/what-is-this.jpg",
+    "form_factors": [
+      "split"
+    ],
+    "keys": 42,
+    "mcu": "Pro Micro",
+    "firmware_targets": [
+      "QMK",
+      "ZMK"
+    ],
+    "last_updated": "2025-09-03"
+  },
+  {
+    "name": "ErgoDash",
+    "repo": "https://github.com/omkbd/ErgoDash",
+    "image": "https://raw.githubusercontent.com/omkbd/picture/master/Ergodash.jpg",
+    "form_factors": [
+      "split"
+    ],
+    "keys": 70,
+    "mcu": "Pro Micro",
+    "firmware_targets": [
+      "QMK",
+      "ZMK"
+    ],
+    "last_updated": "2025-09-03"
+  },
+  {
+    "name": "Eternal-keypad",
+    "repo": "https://github.com/duckyb/eternal-keypad",
+    "image": "https://user-images.githubusercontent.com/27895007/167808526-7cf01c83-1738-40c4-bed5-d04d67a561a3.png",
+    "form_factors": [
+      "unibody"
+    ],
+    "keys": 36,
+    "mcu": "Elite-C",
+    "firmware_targets": [
+      "VIA",
+      "QMK",
+      "ZMK"
+    ],
+    "last_updated": "2025-09-03"
+  },
+  {
+    "name": "Fourier",
+    "repo": "https://github.com/keebio/fourier",
+    "image": "https://cdn.shopify.com/s/files/1/1851/5125/products/image_1d38793c-ebb6-4df8-bab5-933162628fe5_1024x1024@2x.jpg",
+    "form_factors": [
+      "split"
+    ],
+    "keys": 47,
+    "mcu": "Pro Micro",
+    "firmware_targets": [
+      "QMK",
+      "ZMK"
+    ],
+    "last_updated": "2025-09-03"
+  },
+  {
+    "name": "Helix",
+    "repo": "https://github.com/MakotoKurauchi/helix",
+    "image": "https://camo.githubusercontent.com/257b75a0cb959884f1c9edff0b8f5b93b6515854c3cee51bf409e38e6932dd34/68747470733a2f2f692e696d6775722e636f6d2f5842416d796e4e2e6a7067",
+    "form_factors": [
+      "split"
+    ],
+    "keys": 64,
+    "mcu": "Pro Micro",
+    "firmware_targets": [
+      "QMK",
+      "ZMK"
+    ],
+    "last_updated": "2025-09-03"
+  },
+  {
+    "name": "Hummingbird",
+    "repo": "https://github.com/PJE66/hummingbird",
+    "image": "https://github.com/PJE66/hummingbird/raw/main/Images/Hummingbird_Top.png",
+    "form_factors": [
+      "split",
+      "unibody"
+    ],
+    "keys": 30,
+    "mcu": "Xiao BLE",
+    "firmware_targets": [
+      "ZMK"
+    ],
+    "last_updated": "2025-09-03"
+  },
+  {
+    "name": "Jian-Info",
+    "repo": "https://github.com/KGOH/Jian-Info",
+    "image": "https://camo.githubusercontent.com/3fb3fe801b8468cd08bbad750ba4b1c97ba50d36413aafe87953b8eb4f977c83/68747470733a2f2f692e696d6775722e636f6d2f6953334962486b2e6a7067",
+    "form_factors": [
+      "split"
+    ],
+    "keys": 44,
+    "mcu": "ATmega32U4",
+    "firmware_targets": [
+      "QMK"
+    ],
+    "last_updated": "2025-09-03"
+  },
+  {
+    "name": "Jorne",
+    "repo": "https://github.com/joric/jorne",
+    "image": "https://raw.githubusercontent.com/joric/jorne/jorne/images/jorne.jpg",
+    "form_factors": [
+      "split",
+      "tilt"
+    ],
+    "keys": 44,
+    "mcu": "Pro Micro",
+    "firmware_targets": [
+      "QMK",
+      "ZMK"
+    ],
+    "last_updated": "2025-09-03"
   },
   {
     "name": "Kyria",
@@ -204,6 +372,52 @@
     "last_updated": "2025-08-09"
   },
   {
+    "name": "Lotus-58-Classic",
+    "repo": "https://github.com/TweetyDaBird/Lotus-58-Classic",
+    "image": "https://camo.githubusercontent.com/e7fa8018d3ec813a5c1524e9e2533565548a6016ae92dc3a0cc7bdcb470877ec/68747470733a2f2f707265766965772e726564642e69742f376170676f6d793637716636312e6a70673f77696474683d3430333226666f726d61743d706a7067266175746f3d7765627026733d63653166303435333339313439613939333131353832643434623435386338386332623136376133",
+    "form_factors": [
+      "split"
+    ],
+    "keys": 58,
+    "mcu": "Pro Micro",
+    "firmware_targets": [
+      "QMK",
+      "ZMK"
+    ],
+    "last_updated": "2025-09-03"
+  },
+  {
+    "name": "Osprette",
+    "repo": "https://github.com/smores56/osprette",
+    "image": "https://raw.githubusercontent.com/smores56/osprette/main/./images/osprette-front.jpg",
+    "form_factors": [
+      "split",
+      "unibody"
+    ],
+    "keys": 34,
+    "mcu": "Pro Micro",
+    "firmware_targets": [
+      "ZMK"
+    ],
+    "last_updated": "2025-09-03"
+  },
+  {
+    "name": "Redox-keyboard",
+    "repo": "https://github.com/mattdibi/redox-keyboard",
+    "image": "https://github.com/mattdibi/redox-keyboard/raw/master/img/redox-1.jpg",
+    "form_factors": [
+      "split"
+    ],
+    "keys": 70,
+    "mcu": "Pro Micro",
+    "firmware_targets": [
+      "QMK",
+      "ZMK",
+      "KMK"
+    ],
+    "last_updated": "2025-09-03"
+  },
+  {
     "name": "Reviung 41",
     "repo": "https://github.com/gtips/reviung/tree/master/reviung41",
     "image": "https://raw.githubusercontent.com/gtips/reviung/master/reviung41/image/REVIUNG41B-1.jpg",
@@ -220,6 +434,35 @@
     "last_updated": "2025-08-09"
   },
   {
+    "name": "SofleKeyboard",
+    "repo": "https://github.com/josefadamcik/SofleKeyboard",
+    "image": "https://raw.githubusercontent.com/josefadamcik/SofleKeyboard/master/docs/images/sofle_keyboard.jpg",
+    "form_factors": [
+      "split"
+    ],
+    "keys": 58,
+    "mcu": "Pro Micro",
+    "firmware_targets": [
+      "QMK",
+      "ZMK"
+    ],
+    "last_updated": "2025-09-03"
+  },
+  {
+    "name": "Splitreus62",
+    "repo": "https://github.com/Na-Cly/splitreus62",
+    "image": "https://raw.githubusercontent.com/Na-Cly/splitreus62/master/splitreus62.jpg",
+    "form_factors": [
+      "split"
+    ],
+    "keys": 62,
+    "mcu": "Pro Micro",
+    "firmware_targets": [
+      "ZMK"
+    ],
+    "last_updated": "2025-09-03"
+  },
+  {
     "name": "Sweep",
     "repo": "https://github.com/davidphilipbarr/Sweep",
     "image": "https://user-images.githubusercontent.com/27895007/264190906-97e13cdc-b84b-4545-8e09-139a4bb935e5.png",
@@ -234,6 +477,21 @@
       "ZMK"
     ],
     "last_updated": "2025-08-09"
+  },
+  {
+    "name": "Tg4x",
+    "repo": "https://github.com/MythosMann/tg4x",
+    "image": "https://raw.githubusercontent.com/MythosMann/tg4x/master/aesthetic.jpg",
+    "form_factors": [
+      "unibody"
+    ],
+    "keys": 46,
+    "mcu": "Pro Micro",
+    "firmware_targets": [
+      "QMK",
+      "ZMK"
+    ],
+    "last_updated": "2025-09-03"
   },
   {
     "name": "Urchin",

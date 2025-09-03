@@ -14,29 +14,75 @@
       "mcu"
     ],
     "properties": {
-      "name": { "type": "string", "minLength": 1 },
-      "repo": { "type": "string", "format": "uri" },
-      "image": { "type": "string", "format": "uri" },
-
+      "name": {
+        "type": "string",
+        "minLength": 1
+      },
+      "repo": {
+        "type": "string",
+        "format": "uri"
+      },
+      "image": {
+        "type": "string",
+        "format": "uri"
+      },
       "form_factors": {
         "type": "array",
-        "items": { "enum": ["split", "unibody", "splay", "concave", "tilt"] },
+        "items": {
+          "enum": [
+            "split",
+            "unibody",
+            "splay",
+            "concave",
+            "tilt"
+          ]
+        },
         "uniqueItems": true,
         "minItems": 0
       },
-
-      "keys": { "type": ["integer", "null"], "minimum": 10, "maximum": 120 },
-
-      "mcu": { "enum": ["Pro Micro","Blackpill","nice!nano","ATmega32U4","RP2040", "RP2040 Zero", "Pico", "Adafruit Feather nRF52 Bluefruit", "Teensy 2.0"] },
-
+      "keys": {
+        "type": [
+          "integer",
+          "null"
+        ],
+        "minimum": 10,
+        "maximum": 120
+      },
+      "mcu": {
+        "enum": [
+          "ATmega32U4",
+          "Adafruit Feather nRF52 Bluefruit",
+          "Blackpill",
+          "Pico",
+          "Pro Micro",
+          "RP2040 Zero",
+          "RP2040",
+          "Teensy 2.0",
+          "nice!nano",
+          "Xiao BLE"
+        ]
+      },
       "firmware_targets": {
         "type": "array",
-        "items": { "enum": ["Absolem", "Atreus", "BlueMicro", "Vial", "QMK", "ZMK"] },
+        "items": {
+          "enum": [
+            "Absolem",
+            "Atreus",
+            "BlueMicro",
+            "VIA",
+            "Vial",
+            "QMK",
+            "ZMK",
+            "KMK"
+          ]
+        },
         "minItems": 1,
         "uniqueItems": true
       },
-
-      "last_updated": { "type": "string", "format": "date" }
+      "last_updated": {
+        "type": "string",
+        "format": "date"
+      }
     }
   }
 }
