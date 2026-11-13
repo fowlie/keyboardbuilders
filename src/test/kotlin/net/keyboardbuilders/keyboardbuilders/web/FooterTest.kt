@@ -43,17 +43,19 @@ class FooterTest {
         assertFalse("&#9825; Favorites" in page || "\u2661 Favorites" in page)
     }
 
+    /** Owner, 2026-11-13: no separate Privacy link. It led to the same page as "About this
+     *  site" right above it, and the column was cramped once Source code joined it. */
     @Test
-    fun `the footer links to about, privacy and the contact address`() {
+    fun `the footer links to about and the contact address, not privacy on its own`() {
         val footer = footer("/")
 
         assertTrue("""href="/about"""" in footer, footer)
-        assertTrue("""href="/about#privacy"""" in footer, footer)
+        assertFalse("""href="/about#privacy"""" in footer, footer)
         assertTrue("""href="mailto:hello@keyboardbuilders.net""" in footer, footer)
     }
 
     @Test
-    fun `the about page has the privacy section the footer points at`() {
+    fun `the about page keeps its privacy section`() {
         val about = mockMvc.get("/about").andReturn().response.contentAsString
 
         assertTrue("""<h2 id="privacy">""" in about, "no #privacy anchor on /about")

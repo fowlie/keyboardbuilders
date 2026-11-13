@@ -177,7 +177,6 @@
         <nav class="foot-col" aria-label="About">
             <p class="foot-label">About</p>
             <a href="/about">About this site</a>
-            <a href="/about#privacy">Privacy</a>
             <a href="/account">Designers: sign in</a>
             <a href="mailto:hello@keyboardbuilders.net?subject=keyboardbuilders">hello@<wbr>keyboardbuilders.net</a>
             <%-- AGPL §13 asks a site running AGPL code to offer its source; every page does. --%>
