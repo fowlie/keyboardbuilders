@@ -1,0 +1,9 @@
+keyboardbuilders.net
+
+The code is licensed under the GNU Affero General Public License, version 3.
+See LICENSE.
+
+The design data is not covered by that licence. The summaries in
+seed/summaries.toml and src/main/resources/seed/designs.json quote the
+designers' own READMEs, and those quotes stay under each designer's terms.
+Each design links to its source repository.

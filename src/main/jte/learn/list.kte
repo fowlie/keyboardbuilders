@@ -1,0 +1,28 @@
+@import net.keyboardbuilders.keyboardbuilders.web.LearnList
+@param list: LearnList
+
+<%-- One live list on a learn page: a heading with how many designs it holds, at most three
+     of them as the site's own cards (designs/card.kte, the home page's strip-card), and the
+     catalog filter holding the whole set where one exists. Where none does, the count is
+     stated instead, so three cards never read as the whole answer.
+
+     NO BACKTICKS IN THIS FILE: it is included from templates wrapped in a Kotlin raw
+     string, and a backtick anywhere closes the content block with an error pointing at
+     the wrong line. --%>
+<h3 class="learn-list-head">${list.heading} <span class="learn-count">${list.total}</span></h3>
+@if(list.cards.isEmpty())
+    <p class="summary unrecorded">None in the catalog yet.</p>
+@else
+    <ul class="strip learn-strip">
+        @for(item in list.cards)
+            <li>@template.designs.card(card = item.card, cls = "strip-card", reason = item.note)</li>
+        @endfor
+    </ul>
+@endif
+@if(list.seeAll != null && list.total == 1)
+    <p class="learn-more"><a class="learn-all" href="${list.seeAll}">See it in the catalog &rarr;</a></p>
+@elseif(list.seeAll != null && list.total > 1)
+    <p class="learn-more"><a class="learn-all" href="${list.seeAll}">See all ${list.total} in the catalog &rarr;</a></p>
+@elseif(list.total > list.cards.size)
+    <p class="learn-more">${list.cards.size} of ${list.total} shown. The catalog has no filter for this list yet.</p>
+@endif

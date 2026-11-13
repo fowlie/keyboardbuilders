@@ -1,0 +1,370 @@
+# seed/photo-declines.toml -- designs whose README photos the owner looked at
+# and did not pick one from. Written by scripts/intake_answer.py from his reply
+# to an `intake/photo` issue (backlog #104); read by scripts/intake_ask.py.
+#
+#   none   no photo of this board among the images shown
+#   skip   not sure; don't ask again
+#
+# `images` fingerprints the candidates shown, so a README that gains or loses
+# an image is asked about again. The build reads nothing here: a decline
+# leaves the photo Unknown, never "has no photo".
+
+[[entry]]
+slug = "dilemma-diy-v2"
+verdict = "none"
+images = "615b1e477ed8"
+issue = 50
+
+[[entry]]
+slug = "4by3"
+verdict = "none"
+images = "9e4ade11dedc"
+issue = 53
+
+[[entry]]
+slug = "squiggle-low-profile"
+verdict = "none"
+images = "8011a1175ba6"
+issue = 83
+
+[[entry]]
+slug = "voyager60"
+verdict = "none"
+images = "fd53b5a12ff9"
+issue = 86
+
+[[entry]]
+slug = "ua62"
+verdict = "none"
+images = "8950cc1a436f"
+issue = 85
+
+[[entry]]
+slug = "reviung61"
+verdict = "none"
+images = "970afc732d7d"
+issue = 75
+
+[[entry]]
+slug = "steal-this"
+verdict = "none"
+images = "942e8534fe04"
+issue = 84
+
+[[entry]]
+slug = "slime88"
+verdict = "none"
+images = "662c328665ca"
+issue = 81
+
+[[entry]]
+slug = "schwann-rev0-5b"
+verdict = "none"
+images = "016892a4d85e"
+issue = 80
+
+[[entry]]
+slug = "rosaline-ortho"
+verdict = "none"
+images = "f5d0108a92c6"
+issue = 78
+
+[[entry]]
+slug = "rosaline"
+verdict = "none"
+images = "f5d0108a92c6"
+issue = 77
+
+[[entry]]
+slug = "np12"
+verdict = "none"
+images = "cf8b1ea342b5"
+issue = 73
+
+[[entry]]
+slug = "mini-e-li-xi-vy"
+verdict = "none"
+images = "546aeffaf87f"
+issue = 72
+
+[[entry]]
+slug = "keyboar-layout"
+verdict = "none"
+images = "289e2122805e"
+issue = 71
+
+[[entry]]
+slug = "jp60"
+verdict = "none"
+images = "96de5307c57d"
+issue = 69
+
+[[entry]]
+slug = "jorne-classic-2-1"
+verdict = "none"
+images = "9108088d1f62"
+issue = 68
+
+[[entry]]
+slug = "gummy-key"
+verdict = "none"
+images = "dbdaa6cf143b"
+issue = 67
+
+[[entry]]
+slug = "for-science"
+verdict = "none"
+images = "1d36d863abcd"
+issue = 66
+
+[[entry]]
+slug = "env-mcro"
+verdict = "none"
+images = "b967ba34d3e7"
+issue = 65
+
+[[entry]]
+slug = "env-kb60-mxhs"
+verdict = "none"
+images = "06717d105968"
+issue = 64
+
+[[entry]]
+slug = "elcantorhs"
+verdict = "none"
+images = "da1f635aaa46"
+issue = 63
+
+[[entry]]
+slug = "romac"
+verdict = "none"
+images = "016892a4d85e"
+issue = 76
+
+[[entry]]
+slug = "reviung46"
+verdict = "none"
+images = "970afc732d7d"
+issue = 74
+
+[[entry]]
+slug = "dropout"
+verdict = "none"
+images = "c2b50258821c"
+issue = 62
+
+[[entry]]
+slug = "andean-condor"
+verdict = "none"
+images = "ec6372416d82"
+issue = 55
+
+[[entry]]
+slug = "dilemma-max"
+verdict = "none"
+images = "615b1e477ed8"
+issue = 54
+
+[[entry]]
+slug = "zodiark"
+verdict = "none"
+images = "7d1b44257225"
+issue = 156
+
+[[entry]]
+slug = "voyager60"
+verdict = "none"
+images = "5ab5c0ad2f37"
+issue = 155
+
+[[entry]]
+slug = "sweepv2"
+verdict = "none"
+images = "0633df459d3f"
+issue = 154
+
+[[entry]]
+slug = "sweepbling-lp"
+verdict = "none"
+images = "81896d114445"
+issue = 153
+
+[[entry]]
+slug = "sweep-high-m"
+verdict = "none"
+images = "615952a5ac22"
+issue = 152
+
+[[entry]]
+slug = "sweep-high"
+verdict = "none"
+images = "7cc6e33ccd21"
+issue = 151
+
+[[entry]]
+slug = "sweep-half-swept"
+verdict = "none"
+images = "c28372faccec"
+issue = 150
+
+[[entry]]
+slug = "sweep-bling-mx"
+verdict = "none"
+images = "aaa098dd5245"
+issue = 149
+
+[[entry]]
+slug = "stoutgatv2"
+verdict = "none"
+images = "538a541b3234"
+issue = 148
+
+[[entry]]
+slug = "steal-this"
+verdict = "none"
+images = "55269378bcc6"
+issue = 147
+
+[[entry]]
+slug = "sl40"
+verdict = "none"
+images = "5b3d44b064ad"
+issue = 146
+
+[[entry]]
+slug = "sith-zhuyin40"
+verdict = "none"
+images = "baa4564edce3"
+issue = 145
+
+[[entry]]
+slug = "sepia-officinalis"
+verdict = "none"
+images = "396505fa8ac7"
+issue = 144
+
+[[entry]]
+slug = "schwann-rev0-5b"
+verdict = "none"
+images = "7d67d98ed7d9"
+issue = 143
+
+[[entry]]
+slug = "romac"
+verdict = "none"
+images = "b6de46226a52"
+issue = 141
+
+[[entry]]
+slug = "prkl30"
+verdict = "none"
+images = "c65bbf52b7ee"
+issue = 139
+
+[[entry]]
+slug = "paws60"
+verdict = "none"
+images = "3f0442d35045"
+issue = 138
+
+[[entry]]
+slug = "mini-e-li-xi-vy"
+verdict = "none"
+images = "c78530a6d68a"
+issue = 137
+
+[[entry]]
+slug = "macrocat"
+verdict = "none"
+images = "4a6f0ccb8cbf"
+issue = 136
+
+[[entry]]
+slug = "lck75"
+verdict = "none"
+images = "91f845ba411a"
+issue = 135
+
+[[entry]]
+slug = "largelad"
+verdict = "none"
+images = "78f578aee035"
+issue = 134
+
+[[entry]]
+slug = "kobold"
+verdict = "none"
+images = "26c3bedfdd9a"
+issue = 133
+
+[[entry]]
+slug = "gud70"
+verdict = "none"
+images = "3384834b952d"
+issue = 125
+
+[[entry]]
+slug = "env-mcro"
+verdict = "none"
+images = "6ebd2e0573fb"
+issue = 123
+
+[[entry]]
+slug = "env-kb60-mxhs"
+verdict = "none"
+images = "5b7b18d67b01"
+issue = 122
+
+[[entry]]
+slug = "choc-v2-env-kb65"
+verdict = "none"
+images = "14a1b07479c1"
+issue = 120
+
+[[entry]]
+slug = "andean-condor"
+verdict = "none"
+images = "4a95a681de2d"
+issue = 115
+
+[[entry]]
+slug = "alpha-pro-micro"
+verdict = "none"
+images = "0bc9819c8536"
+issue = 114
+
+[[entry]]
+slug = "alpha"
+verdict = "none"
+images = "0bc9819c8536"
+issue = 113
+
+[[entry]]
+slug = "4by3"
+verdict = "none"
+images = "043bb92c88c1"
+issue = 112
+
+[[entry]]
+slug = "45"
+verdict = "none"
+images = "cc016040dc98"
+issue = 111
+
+[[entry]]
+slug = "desire65"
+verdict = "none"
+images = "974eca43a87a"
+issue = 61
+
+[[entry]]
+slug = "sweep-bling-lp"
+verdict = "none"
+images = "81896d114445"
+issue = 167
+
+[[entry]]
+slug = "arisu"
+verdict = "none"
+images = "72d548a97d5a"
+issue = 56

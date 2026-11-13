@@ -1,0 +1,34 @@
+# seed/exposed-components-overrides.toml -- owner rulings on exposed components, applied
+# last by scripts/measure_exposed_components.py over what the diode measurement found.
+#
+# `exposed` is the owner's verdict; `note` is why.
+
+[[entry]]
+slug    = "dilemma-max"
+exposed = false
+note    = "Owner, 2026-10-04: no. 76% of its diodes sit outside a keycap, along the inner edge, but that is not the on-show look."
+
+[[entry]]
+slug    = "setta21"
+exposed = false
+note    = "Owner, 2026-10-04: no. Measured 67%, a column of diodes on the right edge."
+
+[[entry]]
+slug    = "chocofly"
+exposed = false
+note    = "Owner, 2026-10-04: no. Measured 55%, diodes falling into the gaps its splay leaves."
+
+[[entry]]
+slug    = "orthocode"
+exposed = false
+note    = "Owner, 2026-10-04: no. The board does put all 72 diodes in a band above the top row, but the repo ships a PCB case (orthoCodeCase.kicad_pcb) that likely covers it."
+
+[[entry]]
+slug    = "framework-rev0"
+exposed = true
+note    = "Owner, 2026-10-04: yes, after seeing its board render (rendered that day; it had none). Already measured yes; pinned so a threshold change cannot flip it."
+
+[[entry]]
+slug    = "fruity60"
+exposed = true
+note    = "Owner, 2026-10-04: yes, after seeing its board render (rendered that day; it had none). Already measured yes; pinned so a threshold change cannot flip it."

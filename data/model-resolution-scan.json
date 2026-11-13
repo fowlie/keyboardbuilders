@@ -1,0 +1,5354 @@
+{
+ "3w6": {
+  "by_cause": {
+   "other": {
+    "absolute": 4,
+    "stock-live": 63
+   },
+   "switch": {}
+  },
+  "other_footprints": 77,
+  "other_footprints_with_any_model": 67,
+  "other_rate": 0.818,
+  "repo": "weteor/3w6",
+  "switch_footprints": 36,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "3x3macropad": {
+  "by_cause": {
+   "other": {
+    "absolute": 1,
+    "stock-dead": 1,
+    "stock-live": 6
+   },
+   "switch": {
+    "kiprjmod": 9
+   }
+  },
+  "other_footprints": 14,
+  "other_footprints_with_any_model": 8,
+  "other_rate": 0.429,
+  "repo": "rarepotato8de/3x3macropad",
+  "switch_footprints": 9,
+  "switch_footprints_with_any_model": 9,
+  "switch_rate": 1.0
+ },
+ "3x5-2-dilemma": {
+  "by_cause": {
+   "other": {
+    "absolute": 1,
+    "stock-live": 5
+   },
+   "switch": {}
+  },
+  "other_footprints": 64,
+  "other_footprints_with_any_model": 6,
+  "other_rate": 0.078,
+  "repo": "Bastardkb/Dilemma",
+  "switch_footprints": 18,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "3x5-3-dilemma": {
+  "by_cause": {
+   "other": {
+    "absolute": 48,
+    "kiprjmod": 36,
+    "stock-dead": 2,
+    "stock-live": 104
+   },
+   "switch": {}
+  },
+  "other_footprints": 221,
+  "other_footprints_with_any_model": 148,
+  "other_rate": 0.633,
+  "repo": "Bastardkb/Dilemma",
+  "switch_footprints": 36,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "3x5-3-procyon-dilemma": {
+  "by_cause": {
+   "other": {
+    "absolute": 48,
+    "kiprjmod": 36,
+    "stock-dead": 2,
+    "stock-live": 106
+   },
+   "switch": {}
+  },
+  "other_footprints": 233,
+  "other_footprints_with_any_model": 150,
+  "other_rate": 0.609,
+  "repo": "Bastardkb/Dilemma",
+  "switch_footprints": 36,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "41-1350": {
+  "by_cause": {
+   "other": {
+    "absolute": 3,
+    "stock-live": 84
+   },
+   "switch": {
+    "absolute": 2
+   }
+  },
+  "other_footprints": 91,
+  "other_footprints_with_any_model": 86,
+  "other_rate": 0.923,
+  "repo": "cyril279/keyboards",
+  "switch_footprints": 43,
+  "switch_footprints_with_any_model": 2,
+  "switch_rate": 0.0
+ },
+ "41-1353-r41l2": {
+  "by_cause": {
+   "other": {
+    "absolute": 1,
+    "stock-live": 41
+   },
+   "switch": {
+    "absolute": 41
+   }
+  },
+  "other_footprints": 46,
+  "other_footprints_with_any_model": 42,
+  "other_rate": 0.891,
+  "repo": "cyril279/keyboards",
+  "switch_footprints": 42,
+  "switch_footprints_with_any_model": 41,
+  "switch_rate": 0.0
+ },
+ "42": {
+  "by_cause": {
+   "other": {
+    "absolute": 1
+   },
+   "switch": {}
+  },
+  "other_footprints": 43,
+  "other_footprints_with_any_model": 1,
+  "other_rate": 0.0,
+  "repo": "nglgzz/42",
+  "switch_footprints": 42,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "45": {
+  "by_cause": {
+   "other": {
+    "absolute": 1,
+    "stock-live": 60
+   },
+   "switch": {}
+  },
+  "other_footprints": 63,
+  "other_footprints_with_any_model": 61,
+  "other_rate": 0.952,
+  "repo": "lighteningab/45keyboard_v1",
+  "switch_footprints": 46,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "4by3": {
+  "by_cause": {
+   "other": {
+    "absolute": 12
+   },
+   "switch": {}
+  },
+  "other_footprints": 22,
+  "other_footprints_with_any_model": 12,
+  "other_rate": 0.0,
+  "repo": "eliassjogreen/4by3",
+  "switch_footprints": 12,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "4x6-4-dilemma": {
+  "by_cause": {
+   "other": {
+    "absolute": 58,
+    "kiprjmod": 48,
+    "stock-dead": 2,
+    "stock-live": 152
+   },
+   "switch": {}
+  },
+  "other_footprints": 327,
+  "other_footprints_with_any_model": 208,
+  "other_rate": 0.612,
+  "repo": "Bastardkb/Dilemma",
+  "switch_footprints": 56,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "67-e": {
+  "by_cause": {
+   "other": {
+    "stock-live": 56
+   },
+   "switch": {}
+  },
+  "other_footprints": 64,
+  "other_footprints_with_any_model": 56,
+  "other_rate": 0.875,
+  "repo": "str-dst/67mk_E",
+  "switch_footprints": 76,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "8pack": {
+  "by_cause": {
+   "other": {},
+   "switch": {}
+  },
+  "other_footprints": 11,
+  "other_footprints_with_any_model": 0,
+  "other_rate": 0.0,
+  "repo": "cgarcia2097/8-pack",
+  "switch_footprints": 8,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "abacus": {
+  "by_cause": {
+   "other": {
+    "stock-live": 34
+   },
+   "switch": {}
+  },
+  "other_footprints": 97,
+  "other_footprints_with_any_model": 34,
+  "other_rate": 0.351,
+  "repo": "nickolaij/Abacus_Rev2",
+  "switch_footprints": 43,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "adalyn": {
+  "by_cause": {
+   "other": {
+    "stock-live": 36
+   },
+   "switch": {}
+  },
+  "other_footprints": 42,
+  "other_footprints_with_any_model": 36,
+  "other_rate": 0.857,
+  "repo": "marvfpv/adalyn",
+  "switch_footprints": 34,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "adelheid": {
+  "by_cause": {
+   "other": {
+    "absolute": 9,
+    "stock-dead": 16,
+    "stock-live": 204
+   },
+   "switch": {}
+  },
+  "other_footprints": 243,
+  "other_footprints_with_any_model": 229,
+  "other_rate": 0.84,
+  "repo": "floookay/adelheid",
+  "switch_footprints": 80,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "aek2-usb": {
+  "by_cause": {
+   "other": {
+    "stock-live": 130
+   },
+   "switch": {}
+  },
+  "other_footprints": 136,
+  "other_footprints_with_any_model": 130,
+  "other_rate": 0.956,
+  "repo": "kb-elmo/aek2_usb",
+  "switch_footprints": 105,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "ajisai74": {
+  "by_cause": {
+   "other": {
+    "absolute": 171
+   },
+   "switch": {}
+  },
+  "other_footprints": 224,
+  "other_footprints_with_any_model": 171,
+  "other_rate": 0.0,
+  "repo": "Salicylic-acid3/PCB_Data",
+  "switch_footprints": 141,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "alice": {
+  "by_cause": {
+   "other": {
+    "absolute": 3,
+    "kiprjmod": 1,
+    "stock-dead": 1,
+    "stock-live": 84
+   },
+   "switch": {
+    "absolute": 134
+   }
+  },
+  "other_footprints": 86,
+  "other_footprints_with_any_model": 86,
+  "other_rate": 0.988,
+  "repo": "tyraelwastaken/equanimity",
+  "switch_footprints": 67,
+  "switch_footprints_with_any_model": 67,
+  "switch_rate": 0.0
+ },
+ "anavi-arrows": {
+  "by_cause": {
+   "other": {
+    "stock-dead": 1,
+    "stock-live": 15
+   },
+   "switch": {}
+  },
+  "other_footprints": 22,
+  "other_footprints_with_any_model": 16,
+  "other_rate": 0.682,
+  "repo": "anavitechnology/anavi-arrows",
+  "switch_footprints": 4,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "anavi-macro-pad-10": {
+  "by_cause": {
+   "other": {
+    "absolute": 11,
+    "stock-dead": 1,
+    "stock-live": 22
+   },
+   "switch": {}
+  },
+  "other_footprints": 40,
+  "other_footprints_with_any_model": 34,
+  "other_rate": 0.55,
+  "repo": "anavitechnology/anavi-macro-pad-10",
+  "switch_footprints": 9,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "anavi-macro-pad-12": {
+  "by_cause": {
+   "other": {
+    "absolute": 2,
+    "stock-live": 43
+   },
+   "switch": {}
+  },
+  "other_footprints": 51,
+  "other_footprints_with_any_model": 45,
+  "other_rate": 0.843,
+  "repo": "anavitechnology/anavi-macro-pad-12",
+  "switch_footprints": 12,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "andean-condor": {
+  "by_cause": {
+   "other": {
+    "absolute": 48,
+    "kiprjmod": 48,
+    "stock-live": 3
+   },
+   "switch": {
+    "stock-live": 1
+   }
+  },
+  "other_footprints": 53,
+  "other_footprints_with_any_model": 51,
+  "other_rate": 0.962,
+  "repo": "guidoism/andean-condor",
+  "switch_footprints": 97,
+  "switch_footprints_with_any_model": 1,
+  "switch_rate": 0.01
+ },
+ "architeuthis-dux": {
+  "by_cause": {
+   "other": {},
+   "switch": {}
+  },
+  "other_footprints": 4,
+  "other_footprints_with_any_model": 0,
+  "other_rate": 0.0,
+  "repo": "tapioki/cephalopoda",
+  "switch_footprints": 34,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "arisu": {
+  "by_cause": {
+   "other": {
+    "absolute": 9,
+    "stock-dead": 93
+   },
+   "switch": {
+    "stock-dead": 64
+   }
+  },
+  "other_footprints": 112,
+  "other_footprints_with_any_model": 102,
+  "other_rate": 0.0,
+  "repo": "fatenozomi/arisu-pcb",
+  "switch_footprints": 64,
+  "switch_footprints_with_any_model": 64,
+  "switch_rate": 0.0
+ },
+ "atom47-rev5": {
+  "by_cause": {
+   "other": {
+    "absolute": 74,
+    "stock-dead": 1,
+    "stock-live": 51
+   },
+   "switch": {}
+  },
+  "other_footprints": 135,
+  "other_footprints_with_any_model": 126,
+  "other_rate": 0.378,
+  "repo": "evyd13/atom47",
+  "switch_footprints": 49,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "atom47-rev5-c": {
+  "by_cause": {
+   "other": {
+    "absolute": 76,
+    "stock-dead": 1,
+    "stock-live": 51
+   },
+   "switch": {}
+  },
+  "other_footprints": 137,
+  "other_footprints_with_any_model": 128,
+  "other_rate": 0.372,
+  "repo": "evyd13/atom47",
+  "switch_footprints": 49,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "atreyu": {
+  "by_cause": {
+   "other": {
+    "absolute": 2,
+    "stock-dead": 6,
+    "stock-live": 5
+   },
+   "switch": {
+    "absolute": 124
+   }
+  },
+  "other_footprints": 162,
+  "other_footprints_with_any_model": 13,
+  "other_rate": 0.031,
+  "repo": "climent/atreyu",
+  "switch_footprints": 126,
+  "switch_footprints_with_any_model": 124,
+  "switch_rate": 0.0
+ },
+ "atreyu-v2-choc": {
+  "by_cause": {
+   "other": {
+    "absolute": 1,
+    "stock-dead": 2,
+    "stock-live": 4
+   },
+   "switch": {}
+  },
+  "other_footprints": 86,
+  "other_footprints_with_any_model": 7,
+  "other_rate": 0.047,
+  "repo": "climent/atreyu",
+  "switch_footprints": 63,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "avalanche-hotswap": {
+  "by_cause": {
+   "other": {
+    "absolute": 89,
+    "stock-dead": 3
+   },
+   "switch": {}
+  },
+  "other_footprints": 105,
+  "other_footprints_with_any_model": 85,
+  "other_rate": 0.0,
+  "repo": "vlkv/avalanche",
+  "switch_footprints": 34,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "axon": {
+  "by_cause": {
+   "other": {
+    "stock-live": 62
+   },
+   "switch": {}
+  },
+  "other_footprints": 81,
+  "other_footprints_with_any_model": 62,
+  "other_rate": 0.765,
+  "repo": "thatfellarobin/axon",
+  "switch_footprints": 46,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "aya": {
+  "by_cause": {
+   "other": {
+    "stock-live": 76
+   },
+   "switch": {
+    "stock-dead": 70
+   }
+  },
+  "other_footprints": 110,
+  "other_footprints_with_any_model": 76,
+  "other_rate": 0.691,
+  "repo": "dannixon/aya",
+  "switch_footprints": 70,
+  "switch_footprints_with_any_model": 70,
+  "switch_rate": 0.0
+ },
+ "bad-wings-bold": {
+  "by_cause": {
+   "other": {
+    "absolute": 1,
+    "stock-live": 36
+   },
+   "switch": {
+    "absolute": 144
+   }
+  },
+  "other_footprints": 46,
+  "other_footprints_with_any_model": 37,
+  "other_rate": 0.783,
+  "repo": "hazels-garage/bad-wings",
+  "switch_footprints": 36,
+  "switch_footprints_with_any_model": 36,
+  "switch_rate": 0.0
+ },
+ "bad-wings-slim": {
+  "by_cause": {
+   "other": {
+    "stock-live": 39
+   },
+   "switch": {}
+  },
+  "other_footprints": 41,
+  "other_footprints_with_any_model": 39,
+  "other_rate": 0.951,
+  "repo": "hazels-garage/bad-wings",
+  "switch_footprints": 36,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "badge": {
+  "by_cause": {
+   "other": {},
+   "switch": {}
+  },
+  "other_footprints": 13,
+  "other_footprints_with_any_model": 0,
+  "other_rate": 0.0,
+  "repo": "fharding1/pdxkbc-badge",
+  "switch_footprints": 6,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "bakeneko-65": {
+  "by_cause": {
+   "other": {
+    "stock-live": 85
+   },
+   "switch": {}
+  },
+  "other_footprints": 88,
+  "other_footprints_with_any_model": 85,
+  "other_rate": 0.966,
+  "repo": "kkatano/bakeneko-65",
+  "switch_footprints": 73,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "banime40": {
+  "by_cause": {
+   "other": {
+    "absolute": 3,
+    "stock-dead": 42,
+    "stock-live": 2
+   },
+   "switch": {}
+  },
+  "other_footprints": 56,
+  "other_footprints_with_any_model": 47,
+  "other_rate": 0.036,
+  "repo": "chrischrislolo/banime40",
+  "switch_footprints": 43,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "barracuda": {
+  "by_cause": {
+   "other": {
+    "absolute": 33,
+    "stock-live": 12
+   },
+   "switch": {}
+  },
+  "other_footprints": 58,
+  "other_footprints_with_any_model": 45,
+  "other_rate": 0.207,
+  "repo": "knaruo/barracuda",
+  "switch_footprints": 33,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "bartlepslit": {
+  "by_cause": {
+   "other": {
+    "absolute": 4,
+    "stock-live": 45
+   },
+   "switch": {
+    "absolute": 126
+   }
+  },
+  "other_footprints": 78,
+  "other_footprints_with_any_model": 49,
+  "other_rate": 0.577,
+  "repo": "kyrremann/bartlesplit",
+  "switch_footprints": 42,
+  "switch_footprints_with_any_model": 42,
+  "switch_rate": 0.0
+ },
+ "base-ferris": {
+  "by_cause": {
+   "other": {
+    "absolute": 2,
+    "stock-live": 59
+   },
+   "switch": {}
+  },
+  "other_footprints": 64,
+  "other_footprints_with_any_model": 61,
+  "other_rate": 0.922,
+  "repo": "pierrechevalier83/ferris",
+  "switch_footprints": 34,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "basketweave": {
+  "by_cause": {
+   "other": {
+    "absolute": 2,
+    "stock-dead": 2,
+    "stock-live": 89
+   },
+   "switch": {}
+  },
+  "other_footprints": 111,
+  "other_footprints_with_any_model": 92,
+  "other_rate": 0.802,
+  "repo": "null-ll/basketweave",
+  "switch_footprints": 66,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "bevi": {
+  "by_cause": {
+   "other": {
+    "absolute": 1,
+    "stock-dead": 80,
+    "stock-live": 2
+   },
+   "switch": {}
+  },
+  "other_footprints": 85,
+  "other_footprints_with_any_model": 83,
+  "other_rate": 0.024,
+  "repo": "sendyyeah/bevi",
+  "switch_footprints": 80,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "bfo-9000": {
+  "by_cause": {
+   "other": {
+    "absolute": 3,
+    "stock-dead": 54,
+    "stock-live": 3
+   },
+   "switch": {}
+  },
+  "other_footprints": 232,
+  "other_footprints_with_any_model": 60,
+  "other_rate": 0.013,
+  "repo": "keebio/bfo9000-pcb",
+  "switch_footprints": 54,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "bling-ferris": {
+  "by_cause": {
+   "other": {
+    "absolute": 2,
+    "stock-live": 77
+   },
+   "switch": {}
+  },
+  "other_footprints": 111,
+  "other_footprints_with_any_model": 79,
+  "other_rate": 0.694,
+  "repo": "pierrechevalier83/ferris",
+  "switch_footprints": 34,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "blue-team-pad": {
+  "by_cause": {
+   "other": {
+    "stock-live": 55
+   },
+   "switch": {
+    "kiprjmod": 66
+   }
+  },
+  "other_footprints": 60,
+  "other_footprints_with_any_model": 55,
+  "other_rate": 0.917,
+  "repo": "fearherbs1/blue-team-pad",
+  "switch_footprints": 22,
+  "switch_footprints_with_any_model": 22,
+  "switch_rate": 1.0
+ },
+ "bm42": {
+  "by_cause": {
+   "other": {
+    "absolute": 1,
+    "stock-live": 62
+   },
+   "switch": {}
+  },
+  "other_footprints": 54,
+  "other_footprints_with_any_model": 40,
+  "other_rate": 0.741,
+  "repo": "kb-elmo/bm42",
+  "switch_footprints": 48,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "bto-layout": {
+  "by_cause": {
+   "other": {
+    "stock-live": 100
+   },
+   "switch": {}
+  },
+  "other_footprints": 117,
+  "other_footprints_with_any_model": 100,
+  "other_rate": 0.855,
+  "repo": "bit-trade-one/ADKB96-hardware",
+  "switch_footprints": 96,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "buzzard": {
+  "by_cause": {
+   "other": {
+    "absolute": 40,
+    "stock-dead": 5,
+    "stock-live": 3
+   },
+   "switch": {}
+  },
+  "other_footprints": 66,
+  "other_footprints_with_any_model": 28,
+  "other_rate": 0.045,
+  "repo": "crehmann/buzzard",
+  "switch_footprints": 21,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "bw2-v2": {
+  "by_cause": {
+   "other": {
+    "absolute": 2,
+    "stock-live": 57
+   },
+   "switch": {
+    "absolute": 144
+   }
+  },
+  "other_footprints": 71,
+  "other_footprints_with_any_model": 59,
+  "other_rate": 0.803,
+  "repo": "hazels-garage/bad-wings",
+  "switch_footprints": 36,
+  "switch_footprints_with_any_model": 36,
+  "switch_rate": 0.0
+ },
+ "cantor": {
+  "by_cause": {
+   "other": {
+    "absolute": 14
+   },
+   "switch": {}
+  },
+  "other_footprints": 4,
+  "other_footprints_with_any_model": 4,
+  "other_rate": 0.0,
+  "repo": "diepala/cantor",
+  "switch_footprints": 42,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "cantor-remix": {
+  "by_cause": {
+   "other": {
+    "absolute": 7
+   },
+   "switch": {}
+  },
+  "other_footprints": 3,
+  "other_footprints_with_any_model": 2,
+  "other_rate": 0.0,
+  "repo": "nilokr/cantor-remix",
+  "switch_footprints": 18,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "ccd60": {
+  "by_cause": {
+   "other": {
+    "absolute": 1,
+    "stock-live": 83
+   },
+   "switch": {}
+  },
+  "other_footprints": 96,
+  "other_footprints_with_any_model": 84,
+  "other_rate": 0.865,
+  "repo": "westfoxtrot/ccd60",
+  "switch_footprints": 67,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "chameleon": {
+  "by_cause": {
+   "other": {
+    "absolute": 32,
+    "stock-live": 99
+   },
+   "switch": {
+    "absolute": 120
+   }
+  },
+  "other_footprints": 141,
+  "other_footprints_with_any_model": 125,
+  "other_rate": 0.702,
+  "repo": "TweetyDaBird/Fat-Chameleon",
+  "switch_footprints": 60,
+  "switch_footprints_with_any_model": 60,
+  "switch_rate": 0.0
+ },
+ "chameleon-v1-0-v1-00": {
+  "by_cause": {
+   "other": {
+    "absolute": 38,
+    "stock-live": 99
+   },
+   "switch": {
+    "absolute": 120
+   }
+  },
+  "other_footprints": 145,
+  "other_footprints_with_any_model": 131,
+  "other_rate": 0.683,
+  "repo": "TweetyDaBird/Fat-Chameleon",
+  "switch_footprints": 60,
+  "switch_footprints_with_any_model": 60,
+  "switch_rate": 0.0
+ },
+ "chameleon-v1-0-v1-01": {
+  "by_cause": {
+   "other": {
+    "absolute": 38,
+    "stock-live": 99
+   },
+   "switch": {
+    "absolute": 120
+   }
+  },
+  "other_footprints": 145,
+  "other_footprints_with_any_model": 131,
+  "other_rate": 0.683,
+  "repo": "TweetyDaBird/Fat-Chameleon",
+  "switch_footprints": 60,
+  "switch_footprints_with_any_model": 60,
+  "switch_rate": 0.0
+ },
+ "chameleon-v1-10": {
+  "by_cause": {
+   "other": {
+    "absolute": 38,
+    "stock-live": 99
+   },
+   "switch": {
+    "absolute": 120
+   }
+  },
+  "other_footprints": 145,
+  "other_footprints_with_any_model": 131,
+  "other_rate": 0.683,
+  "repo": "TweetyDaBird/Fat-Chameleon",
+  "switch_footprints": 60,
+  "switch_footprints_with_any_model": 60,
+  "switch_rate": 0.0
+ },
+ "chameleon-v1-11": {
+  "by_cause": {
+   "other": {
+    "absolute": 38,
+    "stock-live": 99
+   },
+   "switch": {
+    "absolute": 120
+   }
+  },
+  "other_footprints": 145,
+  "other_footprints_with_any_model": 131,
+  "other_rate": 0.683,
+  "repo": "TweetyDaBird/Fat-Chameleon",
+  "switch_footprints": 60,
+  "switch_footprints_with_any_model": 60,
+  "switch_rate": 0.0
+ },
+ "cheapino": {
+  "by_cause": {
+   "other": {
+    "stock-dead": 22,
+    "stock-live": 2
+   },
+   "switch": {}
+  },
+  "other_footprints": 41,
+  "other_footprints_with_any_model": 24,
+  "other_rate": 0.049,
+  "repo": "tompi/cheapino",
+  "switch_footprints": 18,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "choc-ergo-travel": {
+  "by_cause": {
+   "other": {
+    "stock-dead": 8,
+    "stock-live": 1
+   },
+   "switch": {
+    "absolute": 54
+   }
+  },
+  "other_footprints": 49,
+  "other_footprints_with_any_model": 9,
+  "other_rate": 0.02,
+  "repo": "jpconstantineau/ergotravel",
+  "switch_footprints": 27,
+  "switch_footprints_with_any_model": 27,
+  "switch_rate": 0.0
+ },
+ "choc-led-ergo-travel": {
+  "by_cause": {
+   "other": {
+    "stock-dead": 8,
+    "stock-live": 118
+   },
+   "switch": {
+    "absolute": 54
+   }
+  },
+  "other_footprints": 168,
+  "other_footprints_with_any_model": 126,
+  "other_rate": 0.702,
+  "repo": "jpconstantineau/ergotravel",
+  "switch_footprints": 27,
+  "switch_footprints_with_any_model": 27,
+  "switch_rate": 0.0
+ },
+ "choc-rgb-ergo-travel": {
+  "by_cause": {
+   "other": {
+    "stock-dead": 5,
+    "stock-live": 65
+   },
+   "switch": {
+    "absolute": 54
+   }
+  },
+  "other_footprints": 110,
+  "other_footprints_with_any_model": 70,
+  "other_rate": 0.591,
+  "repo": "jpconstantineau/ergotravel",
+  "switch_footprints": 27,
+  "switch_footprints_with_any_model": 27,
+  "switch_rate": 0.0
+ },
+ "choc-v": {
+  "by_cause": {
+   "other": {
+    "stock-live": 37
+   },
+   "switch": {}
+  },
+  "other_footprints": 48,
+  "other_footprints_with_any_model": 37,
+  "other_rate": 0.771,
+  "repo": "brickbots/chocv",
+  "switch_footprints": 36,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "choc-v2-env-kb65": {
+  "by_cause": {
+   "other": {
+    "stock-dead": 1,
+    "stock-live": 70
+   },
+   "switch": {
+    "absolute": 70
+   }
+  },
+  "other_footprints": 77,
+  "other_footprints_with_any_model": 71,
+  "other_rate": 0.909,
+  "repo": "Envious-Data/Env-KB65M",
+  "switch_footprints": 70,
+  "switch_footprints_with_any_model": 70,
+  "switch_rate": 0.0
+ },
+ "chocofly": {
+  "by_cause": {
+   "other": {
+    "absolute": 210
+   },
+   "switch": {}
+  },
+  "other_footprints": 216,
+  "other_footprints_with_any_model": 204,
+  "other_rate": 0.0,
+  "repo": "vlkv/chocofly",
+  "switch_footprints": 186,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "chocolatebar": {
+  "by_cause": {
+   "other": {
+    "stock-live": 98
+   },
+   "switch": {
+    "absolute": 114
+   }
+  },
+  "other_footprints": 98,
+  "other_footprints_with_any_model": 98,
+  "other_rate": 1.0,
+  "repo": "misonoworks/chocolate-bar",
+  "switch_footprints": 58,
+  "switch_footprints_with_any_model": 57,
+  "switch_rate": 0.0
+ },
+ "chouchou": {
+  "by_cause": {
+   "other": {},
+   "switch": {}
+  },
+  "other_footprints": 11,
+  "other_footprints_with_any_model": 0,
+  "other_rate": 0.0,
+  "repo": "dlip/chouchou",
+  "switch_footprints": 40,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "clog": {
+  "by_cause": {
+   "other": {
+    "absolute": 5,
+    "stock-live": 2
+   },
+   "switch": {}
+  },
+  "other_footprints": 13,
+  "other_footprints_with_any_model": 5,
+  "other_rate": 0.154,
+  "repo": "smores56/clog",
+  "switch_footprints": 17,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "compact-ferris-0-1": {
+  "by_cause": {
+   "other": {
+    "absolute": 2,
+    "stock-live": 59
+   },
+   "switch": {}
+  },
+  "other_footprints": 68,
+  "other_footprints_with_any_model": 61,
+  "other_rate": 0.868,
+  "repo": "pierrechevalier83/ferris",
+  "switch_footprints": 34,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "compact-ferris-0-2": {
+  "by_cause": {
+   "other": {
+    "absolute": 2,
+    "stock-live": 65
+   },
+   "switch": {}
+  },
+  "other_footprints": 75,
+  "other_footprints_with_any_model": 67,
+  "other_rate": 0.867,
+  "repo": "pierrechevalier83/ferris",
+  "switch_footprints": 34,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "contender": {
+  "by_cause": {
+   "other": {
+    "stock-dead": 1,
+    "stock-live": 75
+   },
+   "switch": {}
+  },
+  "other_footprints": 117,
+  "other_footprints_with_any_model": 76,
+  "other_rate": 0.641,
+  "repo": "sotoba/contender",
+  "switch_footprints": 25,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "contra": {
+  "by_cause": {
+   "other": {
+    "stock-dead": 49
+   },
+   "switch": {}
+  },
+  "other_footprints": 62,
+  "other_footprints_with_any_model": 49,
+  "other_rate": 0.0,
+  "repo": "ai03-2725/contra",
+  "switch_footprints": 48,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "corne-cherry": {
+  "by_cause": {
+   "other": {
+    "absolute": 54,
+    "kiprjmod": 4,
+    "stock-live": 66
+   },
+   "switch": {
+    "absolute": 42
+   }
+  },
+  "other_footprints": 138,
+  "other_footprints_with_any_model": 124,
+  "other_rate": 0.507,
+  "repo": "foostan/crkbd",
+  "switch_footprints": 42,
+  "switch_footprints_with_any_model": 42,
+  "switch_rate": 0.0
+ },
+ "corne-chocolate": {
+  "by_cause": {
+   "other": {
+    "absolute": 58,
+    "stock-live": 66
+   },
+   "switch": {
+    "absolute": 42
+   }
+  },
+  "other_footprints": 138,
+  "other_footprints_with_any_model": 124,
+  "other_rate": 0.478,
+  "repo": "foostan/crkbd",
+  "switch_footprints": 42,
+  "switch_footprints_with_any_model": 42,
+  "switch_rate": 0.0
+ },
+ "cornia": {
+  "by_cause": {
+   "other": {
+    "kiprjmod": 23,
+    "stock-dead": 1,
+    "stock-live": 7
+   },
+   "switch": {
+    "kiprjmod": 23
+   }
+  },
+  "other_footprints": 55,
+  "other_footprints_with_any_model": 31,
+  "other_rate": 0.545,
+  "repo": "vaarai/cornia",
+  "switch_footprints": 23,
+  "switch_footprints_with_any_model": 23,
+  "switch_rate": 1.0
+ },
+ "cradio": {
+  "by_cause": {
+   "other": {
+    "absolute": 2
+   },
+   "switch": {}
+  },
+  "other_footprints": 6,
+  "other_footprints_with_any_model": 2,
+  "other_rate": 0.0,
+  "repo": "davidphilipbarr/36keys",
+  "switch_footprints": 34,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "cradio-ble": {
+  "by_cause": {
+   "other": {},
+   "switch": {}
+  },
+  "other_footprints": 2,
+  "other_footprints_with_any_model": 0,
+  "other_rate": 0.0,
+  "repo": "davidphilipbarr/36keys",
+  "switch_footprints": 17,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "cradio-f": {
+  "by_cause": {
+   "other": {
+    "absolute": 1
+   },
+   "switch": {}
+  },
+  "other_footprints": 3,
+  "other_footprints_with_any_model": 1,
+  "other_rate": 0.0,
+  "repo": "davidphilipbarr/36keys",
+  "switch_footprints": 17,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "cradio-mb": {
+  "by_cause": {
+   "other": {
+    "absolute": 1
+   },
+   "switch": {}
+  },
+  "other_footprints": 3,
+  "other_footprints_with_any_model": 1,
+  "other_rate": 0.0,
+  "repo": "davidphilipbarr/36keys",
+  "switch_footprints": 17,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "cradio-z": {
+  "by_cause": {
+   "other": {
+    "absolute": 5
+   },
+   "switch": {}
+  },
+  "other_footprints": 6,
+  "other_footprints_with_any_model": 3,
+  "other_rate": 0.0,
+  "repo": "davidphilipbarr/36keys",
+  "switch_footprints": 17,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "cradio10": {
+  "by_cause": {
+   "other": {
+    "absolute": 1
+   },
+   "switch": {}
+  },
+  "other_footprints": 3,
+  "other_footprints_with_any_model": 1,
+  "other_rate": 0.0,
+  "repo": "davidphilipbarr/36keys",
+  "switch_footprints": 17,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "craftwalk": {
+  "by_cause": {
+   "other": {
+    "absolute": 14
+   },
+   "switch": {}
+  },
+  "other_footprints": 48,
+  "other_footprints_with_any_model": 14,
+  "other_rate": 0.0,
+  "repo": "sotoba/craftwalk",
+  "switch_footprints": 14,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "cyclops": {
+  "by_cause": {
+   "other": {
+    "stock-dead": 6,
+    "stock-live": 77
+   },
+   "switch": {}
+  },
+  "other_footprints": 92,
+  "other_footprints_with_any_model": 83,
+  "other_rate": 0.837,
+  "repo": "westfoxtrot/cyclops_pcb",
+  "switch_footprints": 68,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "cypher": {
+  "by_cause": {
+   "other": {
+    "absolute": 4,
+    "stock-live": 211
+   },
+   "switch": {}
+  },
+  "other_footprints": 228,
+  "other_footprints_with_any_model": 215,
+  "other_rate": 0.925,
+  "repo": "westfoxtrot/cypher_pcb",
+  "switch_footprints": 96,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "desire65": {
+  "by_cause": {
+   "other": {
+    "absolute": 17,
+    "stock-live": 118
+   },
+   "switch": {
+    "absolute": 68
+   }
+  },
+  "other_footprints": 135,
+  "other_footprints_with_any_model": 135,
+  "other_rate": 0.874,
+  "repo": "akyp/desire65-pcb",
+  "switch_footprints": 73,
+  "switch_footprints_with_any_model": 68,
+  "switch_rate": 0.0
+ },
+ "discipad": {
+  "by_cause": {
+   "other": {
+    "absolute": 2,
+    "stock-dead": 1,
+    "stock-live": 35
+   },
+   "switch": {
+    "stock-dead": 17
+   }
+  },
+  "other_footprints": 46,
+  "other_footprints_with_any_model": 37,
+  "other_rate": 0.761,
+  "repo": "coseyfannitutti/discipad",
+  "switch_footprints": 17,
+  "switch_footprints_with_any_model": 17,
+  "switch_rate": 0.0
+ },
+ "discipline": {
+  "by_cause": {
+   "other": {
+    "absolute": 3,
+    "stock-dead": 2,
+    "stock-live": 90
+   },
+   "switch": {
+    "stock-dead": 77
+   }
+  },
+  "other_footprints": 120,
+  "other_footprints_with_any_model": 92,
+  "other_rate": 0.742,
+  "repo": "coseyfannitutti/discipline",
+  "switch_footprints": 77,
+  "switch_footprints_with_any_model": 77,
+  "switch_rate": 0.0
+ },
+ "dizzy40": {
+  "by_cause": {
+   "other": {
+    "absolute": 9,
+    "stock-live": 62
+   },
+   "switch": {}
+  },
+  "other_footprints": 58,
+  "other_footprints_with_any_model": 48,
+  "other_rate": 0.69,
+  "repo": "kb-elmo/dizzy40",
+  "switch_footprints": 48,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "dk60": {
+  "by_cause": {
+   "other": {
+    "absolute": 12,
+    "stock-dead": 6
+   },
+   "switch": {
+    "absolute": 9
+   }
+  },
+  "other_footprints": 90,
+  "other_footprints_with_any_model": 18,
+  "other_rate": 0.0,
+  "repo": "Dbroqua/DK60",
+  "switch_footprints": 81,
+  "switch_footprints_with_any_model": 9,
+  "switch_rate": 0.0
+ },
+ "dogtag": {
+  "by_cause": {
+   "other": {
+    "absolute": 40
+   },
+   "switch": {
+    "absolute": 8
+   }
+  },
+  "other_footprints": 36,
+  "other_footprints_with_any_model": 21,
+  "other_rate": 0.0,
+  "repo": "takashicompany/dogtag",
+  "switch_footprints": 8,
+  "switch_footprints_with_any_model": 8,
+  "switch_rate": 0.0
+ },
+ "dolphin": {
+  "by_cause": {
+   "other": {
+    "absolute": 40,
+    "stock-live": 1
+   },
+   "switch": {}
+  },
+  "other_footprints": 44,
+  "other_footprints_with_any_model": 41,
+  "other_rate": 0.023,
+  "repo": "evyd13/fin-pad",
+  "switch_footprints": 27,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "pancake-v1": {
+  "by_cause": {
+   "other": {
+    "stock-live": 1
+   },
+   "switch": {}
+  },
+  "other_footprints": 57,
+  "other_footprints_with_any_model": 1,
+  "other_rate": 0.018,
+  "repo": "spaceboards/spaceboardshardware",
+  "switch_footprints": 49,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "pancake-v2": {
+  "by_cause": {
+   "other": {
+    "absolute": 1,
+    "kiprjmod": 48,
+    "stock-live": 18
+   },
+   "switch": {
+    "absolute": 96
+   }
+  },
+  "other_footprints": 78,
+  "other_footprints_with_any_model": 66,
+  "other_rate": 0.846,
+  "repo": "spaceboards/spaceboardshardware",
+  "switch_footprints": 48,
+  "switch_footprints_with_any_model": 48,
+  "switch_rate": 0.0
+ },
+ "dropout": {
+  "by_cause": {
+   "other": {
+    "stock-dead": 1,
+    "stock-live": 4
+   },
+   "switch": {}
+  },
+  "other_footprints": 32,
+  "other_footprints_with_any_model": 5,
+  "other_rate": 0.125,
+  "repo": "enochchau/dropout-numpad",
+  "switch_footprints": 16,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "egg58v2": {
+  "by_cause": {
+   "other": {
+    "absolute": 1,
+    "stock-live": 2
+   },
+   "switch": {}
+  },
+  "other_footprints": 21,
+  "other_footprints_with_any_model": 3,
+  "other_rate": 0.095,
+  "repo": "eggsworks/egg58",
+  "switch_footprints": 58,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "elcantorhs": {
+  "by_cause": {
+   "other": {
+    "absolute": 6,
+    "kiprjmod": 1
+   },
+   "switch": {
+    "absolute": 22,
+    "kiprjmod": 66
+   }
+  },
+  "other_footprints": 6,
+  "other_footprints_with_any_model": 2,
+  "other_rate": 0.167,
+  "repo": "azhizhinov/elcantorhs",
+  "switch_footprints": 22,
+  "switch_footprints_with_any_model": 22,
+  "switch_rate": 1.0
+ },
+ "elephant42": {
+  "by_cause": {
+   "other": {
+    "stock-dead": 4,
+    "stock-live": 44
+   },
+   "switch": {
+    "stock-dead": 42
+   }
+  },
+  "other_footprints": 113,
+  "other_footprints_with_any_model": 48,
+  "other_rate": 0.389,
+  "repo": "illness072/elephant42",
+  "switch_footprints": 42,
+  "switch_footprints_with_any_model": 42,
+  "switch_rate": 0.0
+ },
+ "eliza": {
+  "by_cause": {
+   "other": {
+    "absolute": 1,
+    "stock-live": 60
+   },
+   "switch": {}
+  },
+  "other_footprints": 44,
+  "other_footprints_with_any_model": 39,
+  "other_rate": 0.886,
+  "repo": "kb-elmo/eliza",
+  "switch_footprints": 39,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "endzone34": {
+  "by_cause": {
+   "other": {
+    "absolute": 97,
+    "stock-live": 9
+   },
+   "switch": {
+    "absolute": 34
+   }
+  },
+  "other_footprints": 68,
+  "other_footprints_with_any_model": 58,
+  "other_rate": 0.132,
+  "repo": "takashicompany/endzone34",
+  "switch_footprints": 34,
+  "switch_footprints_with_any_model": 34,
+  "switch_rate": 0.0
+ },
+ "env-kb60-mxhs": {
+  "by_cause": {
+   "other": {
+    "absolute": 2,
+    "kiprjmod": 6,
+    "stock-dead": 1,
+    "stock-live": 71
+   },
+   "switch": {}
+  },
+  "other_footprints": 88,
+  "other_footprints_with_any_model": 78,
+  "other_rate": 0.864,
+  "repo": "Envious-Data/Env-KB60F",
+  "switch_footprints": 65,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "env-mcro": {
+  "by_cause": {
+   "other": {
+    "absolute": 2,
+    "stock-live": 26
+   },
+   "switch": {
+    "kiprjmod": 12,
+    "stock-live": 24
+   }
+  },
+  "other_footprints": 40,
+  "other_footprints_with_any_model": 28,
+  "other_rate": 0.65,
+  "repo": "Envious-Data/Env-MCRO",
+  "switch_footprints": 48,
+  "switch_footprints_with_any_model": 36,
+  "switch_rate": 0.75
+ },
+ "env-rgb": {
+  "by_cause": {
+   "other": {
+    "absolute": 2,
+    "kiprjmod": 4,
+    "stock-live": 182
+   },
+   "switch": {
+    "stock-live": 87
+   }
+  },
+  "other_footprints": 201,
+  "other_footprints_with_any_model": 188,
+  "other_rate": 0.925,
+  "repo": "Envious-Data/Env-KB",
+  "switch_footprints": 176,
+  "switch_footprints_with_any_model": 87,
+  "switch_rate": 0.494
+ },
+ "ergo33": {
+  "by_cause": {
+   "other": {
+    "stock-dead": 1,
+    "stock-live": 77
+   },
+   "switch": {}
+  },
+  "other_footprints": 94,
+  "other_footprints_with_any_model": 78,
+  "other_rate": 0.819,
+  "repo": "kulmajaba/tunks-keyboard",
+  "switch_footprints": 33,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "ergodash": {
+  "by_cause": {
+   "other": {
+    "stock-dead": 289
+   },
+   "switch": {}
+  },
+  "other_footprints": 417,
+  "other_footprints_with_any_model": 289,
+  "other_rate": 0.0,
+  "repo": "omkbd/ergodash",
+  "switch_footprints": 294,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "ergoslab": {
+  "by_cause": {
+   "other": {
+    "absolute": 17,
+    "stock-dead": 2,
+    "stock-live": 28
+   },
+   "switch": {}
+  },
+  "other_footprints": 66,
+  "other_footprints_with_any_model": 45,
+  "other_rate": 0.424,
+  "repo": "tomsaleeba/ergoslab",
+  "switch_footprints": 36,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "eternal-keypad": {
+  "by_cause": {
+   "other": {
+    "absolute": 41,
+    "stock-dead": 1,
+    "stock-live": 45
+   },
+   "switch": {
+    "stock-dead": 108
+   }
+  },
+  "other_footprints": 57,
+  "other_footprints_with_any_model": 49,
+  "other_rate": 0.789,
+  "repo": "duckyb/eternal-keypad",
+  "switch_footprints": 36,
+  "switch_footprints_with_any_model": 36,
+  "switch_rate": 0.0
+ },
+ "euisopcb": {
+  "by_cause": {
+   "other": {
+    "stock-live": 68
+   },
+   "switch": {}
+  },
+  "other_footprints": 78,
+  "other_footprints_with_any_model": 68,
+  "other_rate": 0.872,
+  "repo": "TuckTuckFloof/EUISO-pcb",
+  "switch_footprints": 56,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "fnrow": {
+  "by_cause": {
+   "other": {
+    "stock-live": 30
+   },
+   "switch": {
+    "stock-dead": 13
+   }
+  },
+  "other_footprints": 41,
+  "other_footprints_with_any_model": 30,
+  "other_rate": 0.732,
+  "repo": "dinofizz/fnrow-pcb",
+  "switch_footprints": 13,
+  "switch_footprints_with_any_model": 13,
+  "switch_rate": 0.0
+ },
+ "for-science": {
+  "by_cause": {
+   "other": {},
+   "switch": {}
+  },
+  "other_footprints": 34,
+  "other_footprints_with_any_model": 0,
+  "other_rate": 0.0,
+  "repo": "peej/for-science-keyboard",
+  "switch_footprints": 23,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "fourier": {
+  "by_cause": {
+   "other": {
+    "absolute": 2,
+    "stock-dead": 53
+   },
+   "switch": {}
+  },
+  "other_footprints": 205,
+  "other_footprints_with_any_model": 55,
+  "other_rate": 0.0,
+  "repo": "keebio/fourier",
+  "switch_footprints": 69,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "frankie-macropad": {
+  "by_cause": {
+   "other": {
+    "absolute": 3,
+    "stock-live": 36
+   },
+   "switch": {
+    "stock-dead": 16
+   }
+  },
+  "other_footprints": 42,
+  "other_footprints_with_any_model": 39,
+  "other_rate": 0.857,
+  "repo": "eric-wood/macro-pad",
+  "switch_footprints": 8,
+  "switch_footprints_with_any_model": 8,
+  "switch_rate": 0.0
+ },
+ "friedrich": {
+  "by_cause": {
+   "other": {
+    "absolute": 1,
+    "stock-live": 70
+   },
+   "switch": {}
+  },
+  "other_footprints": 72,
+  "other_footprints_with_any_model": 70,
+  "other_rate": 0.972,
+  "repo": "marvfpv/friedrich",
+  "switch_footprints": 50,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "frooastboard-nano": {
+  "by_cause": {
+   "other": {
+    "stock-live": 29
+   },
+   "switch": {}
+  },
+  "other_footprints": 34,
+  "other_footprints_with_any_model": 29,
+  "other_rate": 0.853,
+  "repo": "Frooastside/Frooastboard",
+  "switch_footprints": 2,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "g35": {
+  "by_cause": {
+   "other": {
+    "kiprjmod": 7,
+    "stock-live": 65
+   },
+   "switch": {}
+  },
+  "other_footprints": 80,
+  "other_footprints_with_any_model": 65,
+  "other_rate": 0.812,
+  "repo": "kaylynb/mechllama-g35",
+  "switch_footprints": 35,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "game-hand": {
+  "by_cause": {
+   "other": {
+    "absolute": 1,
+    "stock-live": 45
+   },
+   "switch": {}
+  },
+  "other_footprints": 48,
+  "other_footprints_with_any_model": 45,
+  "other_rate": 0.938,
+  "repo": "kb-elmo/gamehand",
+  "switch_footprints": 26,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "gh80-1800": {
+  "by_cause": {
+   "other": {
+    "absolute": 7,
+    "stock-dead": 13
+   },
+   "switch": {}
+  },
+  "other_footprints": 148,
+  "other_footprints_with_any_model": 20,
+  "other_rate": 0.0,
+  "repo": "evyd13/gh80-series",
+  "switch_footprints": 127,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "gh80-3700": {
+  "by_cause": {
+   "other": {
+    "absolute": 45,
+    "stock-dead": 2,
+    "stock-live": 2
+   },
+   "switch": {}
+  },
+  "other_footprints": 54,
+  "other_footprints_with_any_model": 49,
+  "other_rate": 0.037,
+  "repo": "evyd13/gh80-series",
+  "switch_footprints": 33,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "glyphkbd": {
+  "by_cause": {
+   "other": {
+    "kiprjmod": 6,
+    "stock-live": 170
+   },
+   "switch": {
+    "kiprjmod": 148
+   }
+  },
+  "other_footprints": 176,
+  "other_footprints_with_any_model": 176,
+  "other_rate": 1.0,
+  "repo": "galile0-designs/glyphkbd",
+  "switch_footprints": 148,
+  "switch_footprints_with_any_model": 148,
+  "switch_rate": 1.0
+ },
+ "grooveboard-atmel-au": {
+  "by_cause": {
+   "other": {
+    "stock-live": 19
+   },
+   "switch": {}
+  },
+  "other_footprints": 25,
+  "other_footprints_with_any_model": 18,
+  "other_rate": 0.72,
+  "repo": "ianklug/grooveboard",
+  "switch_footprints": 4,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "grooveboard-atmel-mu": {
+  "by_cause": {
+   "other": {
+    "stock-live": 19
+   },
+   "switch": {}
+  },
+  "other_footprints": 25,
+  "other_footprints_with_any_model": 18,
+  "other_rate": 0.72,
+  "repo": "ianklug/grooveboard",
+  "switch_footprints": 4,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "grooveboard-choc-atmel-au": {
+  "by_cause": {
+   "other": {
+    "stock-live": 19
+   },
+   "switch": {}
+  },
+  "other_footprints": 25,
+  "other_footprints_with_any_model": 18,
+  "other_rate": 0.72,
+  "repo": "ianklug/grooveboard",
+  "switch_footprints": 4,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "grooveboard-choc-atmel-mu": {
+  "by_cause": {
+   "other": {
+    "stock-live": 19
+   },
+   "switch": {}
+  },
+  "other_footprints": 25,
+  "other_footprints_with_any_model": 18,
+  "other_rate": 0.72,
+  "repo": "ianklug/grooveboard",
+  "switch_footprints": 4,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "grooveboard-choc-rp": {
+  "by_cause": {
+   "other": {
+    "stock-live": 29
+   },
+   "switch": {}
+  },
+  "other_footprints": 43,
+  "other_footprints_with_any_model": 28,
+  "other_rate": 0.651,
+  "repo": "ianklug/grooveboard",
+  "switch_footprints": 4,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "grooveboard-mx-atmel-au": {
+  "by_cause": {
+   "other": {
+    "stock-live": 19
+   },
+   "switch": {}
+  },
+  "other_footprints": 25,
+  "other_footprints_with_any_model": 18,
+  "other_rate": 0.72,
+  "repo": "ianklug/grooveboard",
+  "switch_footprints": 4,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "grooveboard-mx-atmel-mu": {
+  "by_cause": {
+   "other": {
+    "stock-live": 19
+   },
+   "switch": {}
+  },
+  "other_footprints": 25,
+  "other_footprints_with_any_model": 18,
+  "other_rate": 0.72,
+  "repo": "ianklug/grooveboard",
+  "switch_footprints": 4,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "grooveboard-mx-rp": {
+  "by_cause": {
+   "other": {
+    "stock-live": 29
+   },
+   "switch": {}
+  },
+  "other_footprints": 43,
+  "other_footprints_with_any_model": 28,
+  "other_rate": 0.651,
+  "repo": "ianklug/grooveboard",
+  "switch_footprints": 4,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "grooveboard-rp": {
+  "by_cause": {
+   "other": {
+    "stock-live": 29
+   },
+   "switch": {}
+  },
+  "other_footprints": 43,
+  "other_footprints_with_any_model": 28,
+  "other_rate": 0.651,
+  "repo": "ianklug/grooveboard",
+  "switch_footprints": 4,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "gud70": {
+  "by_cause": {
+   "other": {},
+   "switch": {}
+  },
+  "other_footprints": 0,
+  "other_footprints_with_any_model": 0,
+  "other_rate": 0.0,
+  "repo": "evyd13/gud70-pcb",
+  "switch_footprints": 0,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "guide68-assemble": {
+  "by_cause": {
+   "other": {
+    "absolute": 70
+   },
+   "switch": {}
+  },
+  "other_footprints": 88,
+  "other_footprints_with_any_model": 70,
+  "other_rate": 0.0,
+  "repo": "Salicylic-acid3/PCB_Data",
+  "switch_footprints": 68,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "gummy-key": {
+  "by_cause": {
+   "other": {
+    "absolute": 8,
+    "stock-live": 62
+   },
+   "switch": {
+    "absolute": 58
+   }
+  },
+  "other_footprints": 79,
+  "other_footprints_with_any_model": 70,
+  "other_rate": 0.785,
+  "repo": "gumorr/gummykey",
+  "switch_footprints": 58,
+  "switch_footprints_with_any_model": 58,
+  "switch_rate": 0.0
+ },
+ "helix": {
+  "by_cause": {
+   "other": {
+    "absolute": 48
+   },
+   "switch": {}
+  },
+  "other_footprints": 190,
+  "other_footprints_with_any_model": 46,
+  "other_rate": 0.0,
+  "repo": "makotokurauchi/helix",
+  "switch_footprints": 33,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "high-ferris-0-1": {
+  "by_cause": {
+   "other": {
+    "absolute": 2,
+    "stock-live": 59
+   },
+   "switch": {}
+  },
+  "other_footprints": 68,
+  "other_footprints_with_any_model": 61,
+  "other_rate": 0.868,
+  "repo": "pierrechevalier83/ferris",
+  "switch_footprints": 34,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "high-ferris-0-2": {
+  "by_cause": {
+   "other": {
+    "absolute": 2,
+    "stock-live": 65
+   },
+   "switch": {}
+  },
+  "other_footprints": 75,
+  "other_footprints_with_any_model": 67,
+  "other_rate": 0.867,
+  "repo": "pierrechevalier83/ferris",
+  "switch_footprints": 34,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "hillside-48": {
+  "by_cause": {
+   "other": {
+    "absolute": 14,
+    "stock-live": 16
+   },
+   "switch": {}
+  },
+  "other_footprints": 42,
+  "other_footprints_with_any_model": 26,
+  "other_rate": 0.381,
+  "repo": "mmccoyd/hillside",
+  "switch_footprints": 24,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "hillside-46": {
+  "by_cause": {
+   "other": {
+    "absolute": 13,
+    "stock-live": 19
+   },
+   "switch": {}
+  },
+  "other_footprints": 69,
+  "other_footprints_with_any_model": 28,
+  "other_rate": 0.275,
+  "repo": "mmccoyd/hillside",
+  "switch_footprints": 23,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "hillside-52": {
+  "by_cause": {
+   "other": {
+    "absolute": 14,
+    "stock-live": 19
+   },
+   "switch": {}
+  },
+  "other_footprints": 63,
+  "other_footprints_with_any_model": 29,
+  "other_rate": 0.302,
+  "repo": "mmccoyd/hillside",
+  "switch_footprints": 26,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "hnah40-atmega328p-v1": {
+  "by_cause": {
+   "other": {
+    "absolute": 68,
+    "stock-live": 14
+   },
+   "switch": {
+    "kiprjmod": 42
+   }
+  },
+  "other_footprints": 72,
+  "other_footprints_with_any_model": 60,
+  "other_rate": 0.194,
+  "repo": "vuhopkep/pcb",
+  "switch_footprints": 48,
+  "switch_footprints_with_any_model": 42,
+  "switch_rate": 0.875
+ },
+ "horizon-choc": {
+  "by_cause": {
+   "other": {
+    "stock-live": 53
+   },
+   "switch": {}
+  },
+  "other_footprints": 64,
+  "other_footprints_with_any_model": 53,
+  "other_rate": 0.828,
+  "repo": "skarrmann/horizon",
+  "switch_footprints": 52,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "horizon-mx": {
+  "by_cause": {
+   "other": {
+    "stock-live": 53
+   },
+   "switch": {}
+  },
+  "other_footprints": 64,
+  "other_footprints_with_any_model": 53,
+  "other_rate": 0.828,
+  "repo": "skarrmann/horizon",
+  "switch_footprints": 52,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "hotswap-rgb-dumbpad": {
+  "by_cause": {
+   "other": {
+    "absolute": 16,
+    "stock-dead": 1
+   },
+   "switch": {
+    "absolute": 48
+   }
+  },
+  "other_footprints": 46,
+  "other_footprints_with_any_model": 17,
+  "other_rate": 0.0,
+  "repo": "imchipwood/dumbpad",
+  "switch_footprints": 16,
+  "switch_footprints_with_any_model": 16,
+  "switch_rate": 0.0
+ },
+ "hub20": {
+  "by_cause": {
+   "other": {
+    "kiprjmod": 82,
+    "stock-live": 456
+   },
+   "switch": {
+    "kiprjmod": 176
+   }
+  },
+  "other_footprints": 636,
+  "other_footprints_with_any_model": 536,
+  "other_rate": 0.843,
+  "repo": "joshajohnson/hub20",
+  "switch_footprints": 88,
+  "switch_footprints_with_any_model": 88,
+  "switch_rate": 1.0
+ },
+ "index-tab": {
+  "by_cause": {
+   "other": {
+    "stock-live": 107
+   },
+   "switch": {}
+  },
+  "other_footprints": 110,
+  "other_footprints_with_any_model": 107,
+  "other_rate": 0.973,
+  "repo": "kyrremann/index-tab",
+  "switch_footprints": 81,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "isometria-75-iso": {
+  "by_cause": {
+   "other": {
+    "kiprjmod": 21,
+    "stock-live": 215
+   },
+   "switch": {}
+  },
+  "other_footprints": 240,
+  "other_footprints_with_any_model": 236,
+  "other_rate": 0.983,
+  "repo": "ebastler/isometria-75",
+  "switch_footprints": 81,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "janus": {
+  "by_cause": {
+   "other": {
+    "stock-live": 17
+   },
+   "switch": {}
+  },
+  "other_footprints": 28,
+  "other_footprints_with_any_model": 17,
+  "other_rate": 0.607,
+  "repo": "skarrmann/janus",
+  "switch_footprints": 34,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "jiran-cherry": {
+  "by_cause": {
+   "other": {
+    "absolute": 1
+   },
+   "switch": {}
+  },
+  "other_footprints": 46,
+  "other_footprints_with_any_model": 1,
+  "other_rate": 0.0,
+  "repo": "ladniy/jiran",
+  "switch_footprints": 28,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "jiran-classic": {
+  "by_cause": {
+   "other": {
+    "absolute": 1
+   },
+   "switch": {}
+  },
+  "other_footprints": 104,
+  "other_footprints_with_any_model": 1,
+  "other_rate": 0.0,
+  "repo": "ladniy/jiran",
+  "switch_footprints": 28,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "jiran-hotswap": {
+  "by_cause": {
+   "other": {
+    "absolute": 1
+   },
+   "switch": {}
+  },
+  "other_footprints": 46,
+  "other_footprints_with_any_model": 1,
+  "other_rate": 0.0,
+  "repo": "ladniy/jiran",
+  "switch_footprints": 28,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "jp60": {
+  "by_cause": {
+   "other": {
+    "absolute": 1,
+    "kiprjmod": 1,
+    "stock-live": 85
+   },
+   "switch": {
+    "absolute": 64
+   }
+  },
+  "other_footprints": 89,
+  "other_footprints_with_any_model": 86,
+  "other_rate": 0.955,
+  "repo": "ai03-2725/jp60",
+  "switch_footprints": 64,
+  "switch_footprints_with_any_model": 64,
+  "switch_rate": 0.0
+ },
+ "juliet": {
+  "by_cause": {
+   "other": {
+    "absolute": 1,
+    "stock-live": 45
+   },
+   "switch": {
+    "absolute": 1,
+    "stock-dead": 47
+   }
+  },
+  "other_footprints": 65,
+  "other_footprints_with_any_model": 46,
+  "other_rate": 0.692,
+  "repo": "na-cly/juliet",
+  "switch_footprints": 48,
+  "switch_footprints_with_any_model": 48,
+  "switch_rate": 0.0
+ },
+ "junco": {
+  "by_cause": {
+   "other": {
+    "absolute": 80,
+    "kiprjmod": 2,
+    "stock-live": 62
+   },
+   "switch": {
+    "absolute": 58
+   }
+  },
+  "other_footprints": 152,
+  "other_footprints_with_any_model": 142,
+  "other_rate": 0.421,
+  "repo": "daneski13/junco",
+  "switch_footprints": 58,
+  "switch_footprints_with_any_model": 58,
+  "switch_rate": 0.0
+ },
+ "k34": {
+  "by_cause": {
+   "other": {
+    "absolute": 1,
+    "stock-live": 34
+   },
+   "switch": {
+    "absolute": 34
+   }
+  },
+  "other_footprints": 35,
+  "other_footprints_with_any_model": 35,
+  "other_rate": 0.971,
+  "repo": "wongjingping/k34",
+  "switch_footprints": 34,
+  "switch_footprints_with_any_model": 34,
+  "switch_rate": 0.0
+ },
+ "kaly": {
+  "by_cause": {
+   "other": {
+    "absolute": 2
+   },
+   "switch": {}
+  },
+  "other_footprints": 18,
+  "other_footprints_with_any_model": 2,
+  "other_rate": 0.0,
+  "repo": "dwctor/kaly",
+  "switch_footprints": 84,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "kapl": {
+  "by_cause": {
+   "other": {
+    "absolute": 2,
+    "stock-dead": 1
+   },
+   "switch": {
+    "absolute": 34
+   }
+  },
+  "other_footprints": 94,
+  "other_footprints_with_any_model": 3,
+  "other_rate": 0.0,
+  "repo": "keyzog/kapl",
+  "switch_footprints": 34,
+  "switch_footprints_with_any_model": 34,
+  "switch_rate": 0.0
+ },
+ "karina": {
+  "by_cause": {
+   "other": {
+    "stock-live": 204
+   },
+   "switch": {}
+  },
+  "other_footprints": 208,
+  "other_footprints_with_any_model": 204,
+  "other_rate": 0.981,
+  "repo": "autumnisacutie/karina",
+  "switch_footprints": 100,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "karn": {
+  "by_cause": {
+   "other": {
+    "absolute": 2,
+    "stock-live": 5
+   },
+   "switch": {}
+  },
+  "other_footprints": 49,
+  "other_footprints_with_any_model": 7,
+  "other_rate": 0.102,
+  "repo": "robcmills/karn-keyboard",
+  "switch_footprints": 38,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "karn-2": {
+  "by_cause": {
+   "other": {
+    "absolute": 14
+   },
+   "switch": {}
+  },
+  "other_footprints": 4,
+  "other_footprints_with_any_model": 4,
+  "other_rate": 0.0,
+  "repo": "robcmills/karn-keyboard",
+  "switch_footprints": 19,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "karn-3": {
+  "by_cause": {
+   "other": {
+    "absolute": 14
+   },
+   "switch": {}
+  },
+  "other_footprints": 4,
+  "other_footprints_with_any_model": 4,
+  "other_rate": 0.0,
+  "repo": "robcmills/karn-keyboard",
+  "switch_footprints": 19,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "kb58-pico": {
+  "by_cause": {
+   "other": {
+    "absolute": 122
+   },
+   "switch": {
+    "stock-dead": 58
+   }
+  },
+  "other_footprints": 78,
+  "other_footprints_with_any_model": 64,
+  "other_rate": 0.0,
+  "repo": "beanaccle/kb58_pico",
+  "switch_footprints": 58,
+  "switch_footprints_with_any_model": 58,
+  "switch_rate": 0.0
+ },
+ "kbd-template": {
+  "by_cause": {
+   "other": {
+    "absolute": 90,
+    "stock-live": 10
+   },
+   "switch": {
+    "absolute": 45
+   }
+  },
+  "other_footprints": 71,
+  "other_footprints_with_any_model": 55,
+  "other_rate": 0.141,
+  "repo": "takashicompany/radialex",
+  "switch_footprints": 45,
+  "switch_footprints_with_any_model": 45,
+  "switch_rate": 0.0
+ },
+ "kbic65": {
+  "by_cause": {
+   "other": {
+    "absolute": 1,
+    "stock-live": 70
+   },
+   "switch": {}
+  },
+  "other_footprints": 78,
+  "other_footprints_with_any_model": 71,
+  "other_rate": 0.897,
+  "repo": "b-karl/KBIC65",
+  "switch_footprints": 78,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "keaboard-rev1": {
+  "by_cause": {
+   "other": {
+    "absolute": 2
+   },
+   "switch": {}
+  },
+  "other_footprints": 34,
+  "other_footprints_with_any_model": 2,
+  "other_rate": 0.0,
+  "repo": "keawade/keaboard",
+  "switch_footprints": 27,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "keyboar-layout": {
+  "by_cause": {
+   "other": {
+    "stock-live": 4
+   },
+   "switch": {}
+  },
+  "other_footprints": 56,
+  "other_footprints_with_any_model": 4,
+  "other_rate": 0.071,
+  "repo": "ncwhale/keyboard_design",
+  "switch_footprints": 44,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "kintsugi": {
+  "by_cause": {
+   "other": {
+    "absolute": 2,
+    "stock-dead": 1,
+    "stock-live": 98
+   },
+   "switch": {
+    "absolute": 63
+   }
+  },
+  "other_footprints": 101,
+  "other_footprints_with_any_model": 101,
+  "other_rate": 0.97,
+  "repo": "adpenrose/kintsugi_keeb",
+  "switch_footprints": 63,
+  "switch_footprints_with_any_model": 63,
+  "switch_rate": 0.0
+ },
+ "klor": {
+  "by_cause": {
+   "other": {
+    "absolute": 25,
+    "stock-dead": 2,
+    "stock-live": 25
+   },
+   "switch": {}
+  },
+  "other_footprints": 68,
+  "other_footprints_with_any_model": 52,
+  "other_rate": 0.368,
+  "repo": "geigeigeist/klor",
+  "switch_footprints": 21,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "kobold": {
+  "by_cause": {
+   "other": {
+    "absolute": 13,
+    "stock-live": 46
+   },
+   "switch": {
+    "absolute": 35
+   }
+  },
+  "other_footprints": 69,
+  "other_footprints_with_any_model": 59,
+  "other_rate": 0.667,
+  "repo": "tzarc/keyboards",
+  "switch_footprints": 35,
+  "switch_footprints_with_any_model": 35,
+  "switch_rate": 0.0
+ },
+ "koca58": {
+  "by_cause": {
+   "other": {
+    "kiprjmod": 4,
+    "stock-live": 62
+   },
+   "switch": {
+    "kiprjmod": 58
+   }
+  },
+  "other_footprints": 98,
+  "other_footprints_with_any_model": 64,
+  "other_rate": 0.653,
+  "repo": "hardware7253/koca58",
+  "switch_footprints": 58,
+  "switch_footprints_with_any_model": 58,
+  "switch_rate": 1.0
+ },
+ "korris": {
+  "by_cause": {
+   "other": {
+    "absolute": 3,
+    "stock-dead": 2,
+    "stock-live": 76
+   },
+   "switch": {
+    "absolute": 88
+   }
+  },
+  "other_footprints": 84,
+  "other_footprints_with_any_model": 81,
+  "other_rate": 0.905,
+  "repo": "yanghu/unicorne",
+  "switch_footprints": 44,
+  "switch_footprints_with_any_model": 44,
+  "switch_rate": 0.0
+ },
+ "kuro65": {
+  "by_cause": {
+   "other": {
+    "absolute": 3,
+    "stock-live": 235
+   },
+   "switch": {}
+  },
+  "other_footprints": 255,
+  "other_footprints_with_any_model": 238,
+  "other_rate": 0.922,
+  "repo": "0x544D/kuro65",
+  "switch_footprints": 69,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "la-nc": {
+  "by_cause": {
+   "other": {
+    "absolute": 43
+   },
+   "switch": {
+    "absolute": 42
+   }
+  },
+  "other_footprints": 55,
+  "other_footprints_with_any_model": 43,
+  "other_rate": 0.0,
+  "repo": "subrezon/la_nc",
+  "switch_footprints": 42,
+  "switch_footprints_with_any_model": 42,
+  "switch_rate": 0.0
+ },
+ "lagom": {
+  "by_cause": {
+   "other": {
+    "absolute": 1,
+    "stock-dead": 2,
+    "stock-live": 80
+   },
+   "switch": {
+    "stock-dead": 84
+   }
+  },
+  "other_footprints": 94,
+  "other_footprints_with_any_model": 83,
+  "other_rate": 0.851,
+  "repo": "mohoyt/lagom",
+  "switch_footprints": 84,
+  "switch_footprints_with_any_model": 84,
+  "switch_rate": 0.0
+ },
+ "lancer-hotswap": {
+  "by_cause": {
+   "other": {
+    "stock-live": 1
+   },
+   "switch": {}
+  },
+  "other_footprints": 61,
+  "other_footprints_with_any_model": 1,
+  "other_rate": 0.016,
+  "repo": "subrezon/lancer",
+  "switch_footprints": 36,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "largelad": {
+  "by_cause": {
+   "other": {
+    "absolute": 6,
+    "stock-dead": 1,
+    "stock-live": 148
+   },
+   "switch": {}
+  },
+  "other_footprints": 158,
+  "other_footprints_with_any_model": 150,
+  "other_rate": 0.937,
+  "repo": "hyphen-ated/large-lad-keyboard",
+  "switch_footprints": 147,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "layout-jopr": {
+  "by_cause": {
+   "other": {
+    "stock-live": 120
+   },
+   "switch": {}
+  },
+  "other_footprints": 123,
+  "other_footprints_with_any_model": 120,
+  "other_rate": 0.976,
+  "repo": "joelproko/keyboard_layout_jopr",
+  "switch_footprints": 106,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "lck75": {
+  "by_cause": {
+   "other": {
+    "absolute": 3,
+    "stock-dead": 2,
+    "stock-live": 103
+   },
+   "switch": {}
+  },
+  "other_footprints": 123,
+  "other_footprints_with_any_model": 105,
+  "other_rate": 0.829,
+  "repo": "lyso1/lck75",
+  "switch_footprints": 84,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "lily58": {
+  "by_cause": {
+   "other": {
+    "absolute": 18
+   },
+   "switch": {}
+  },
+  "other_footprints": 59,
+  "other_footprints_with_any_model": 14,
+  "other_rate": 0.0,
+  "repo": "kata0510/lily58",
+  "switch_footprints": 29,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "lily58-lite-rev3": {
+  "by_cause": {
+   "other": {
+    "stock-live": 30
+   },
+   "switch": {}
+  },
+  "other_footprints": 60,
+  "other_footprints_with_any_model": 30,
+  "other_rate": 0.5,
+  "repo": "kata0510/lily58",
+  "switch_footprints": 58,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "lily58-pro": {
+  "by_cause": {
+   "other": {
+    "absolute": 18
+   },
+   "switch": {}
+  },
+  "other_footprints": 58,
+  "other_footprints_with_any_model": 14,
+  "other_rate": 0.0,
+  "repo": "kata0510/lily58",
+  "switch_footprints": 29,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "lime": {
+  "by_cause": {
+   "other": {
+    "absolute": 19,
+    "stock-dead": 1,
+    "stock-live": 1
+   },
+   "switch": {}
+  },
+  "other_footprints": 73,
+  "other_footprints_with_any_model": 17,
+  "other_rate": 0.014,
+  "repo": "hellsingcoder/limekeyboard",
+  "switch_footprints": 30,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "litl": {
+  "by_cause": {
+   "other": {
+    "absolute": 1,
+    "stock-dead": 2,
+    "stock-live": 1
+   },
+   "switch": {
+    "stock-dead": 52
+   }
+  },
+  "other_footprints": 53,
+  "other_footprints_with_any_model": 4,
+  "other_rate": 0.019,
+  "repo": "mohoyt/litl",
+  "switch_footprints": 52,
+  "switch_footprints_with_any_model": 52,
+  "switch_rate": 0.0
+ },
+ "lotus58": {
+  "by_cause": {
+   "other": {
+    "absolute": 334,
+    "stock-dead": 16,
+    "stock-live": 516
+   },
+   "switch": {
+    "absolute": 941,
+    "stock-live": 58
+   }
+  },
+  "other_footprints": 1194,
+  "other_footprints_with_any_model": 785,
+  "other_rate": 0.432,
+  "repo": "tweetydabird/lotus58",
+  "switch_footprints": 1086,
+  "switch_footprints_with_any_model": 999,
+  "switch_rate": 0.053
+ },
+ "low-ferris": {
+  "by_cause": {
+   "other": {
+    "absolute": 2,
+    "stock-live": 59
+   },
+   "switch": {}
+  },
+  "other_footprints": 69,
+  "other_footprints_with_any_model": 61,
+  "other_rate": 0.855,
+  "repo": "pierrechevalier83/ferris",
+  "switch_footprints": 34,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "lumberjack": {
+  "by_cause": {
+   "other": {
+    "absolute": 2,
+    "stock-live": 85
+   },
+   "switch": {}
+  },
+  "other_footprints": 103,
+  "other_footprints_with_any_model": 86,
+  "other_rate": 0.825,
+  "repo": "peej/lumberjack-keyboard",
+  "switch_footprints": 62,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "m0110a-qmk": {
+  "by_cause": {
+   "other": {
+    "stock-live": 98
+   },
+   "switch": {}
+  },
+  "other_footprints": 102,
+  "other_footprints_with_any_model": 98,
+  "other_rate": 0.961,
+  "repo": "kb-elmo/m0110a_usb",
+  "switch_footprints": 79,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "m0116-usb": {
+  "by_cause": {
+   "other": {
+    "stock-live": 100
+   },
+   "switch": {}
+  },
+  "other_footprints": 105,
+  "other_footprints_with_any_model": 100,
+  "other_rate": 0.952,
+  "repo": "kb-elmo/m0116_usb",
+  "switch_footprints": 81,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "m3n3van-rev2": {
+  "by_cause": {
+   "other": {
+    "kiprjmod": 1,
+    "stock-dead": 2,
+    "stock-live": 66
+   },
+   "switch": {
+    "absolute": 36
+   }
+  },
+  "other_footprints": 80,
+  "other_footprints_with_any_model": 69,
+  "other_rate": 0.838,
+  "repo": "matthewdias/m3n3van",
+  "switch_footprints": 43,
+  "switch_footprints_with_any_model": 36,
+  "switch_rate": 0.0
+ },
+ "macro3": {
+  "by_cause": {
+   "other": {
+    "stock-dead": 2
+   },
+   "switch": {}
+  },
+  "other_footprints": 4,
+  "other_footprints_with_any_model": 2,
+  "other_rate": 0.0,
+  "repo": "davidphilipbarr/macropads",
+  "switch_footprints": 6,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "macrocat": {
+  "by_cause": {
+   "other": {
+    "kiprjmod": 2,
+    "stock-live": 33
+   },
+   "switch": {
+    "kiprjmod": 16
+   }
+  },
+  "other_footprints": 39,
+  "other_footprints_with_any_model": 35,
+  "other_rate": 0.897,
+  "repo": "catmunch/macrocat",
+  "switch_footprints": 16,
+  "switch_footprints_with_any_model": 16,
+  "switch_rate": 1.0
+ },
+ "madjax-macropad": {
+  "by_cause": {
+   "other": {},
+   "switch": {}
+  },
+  "other_footprints": 43,
+  "other_footprints_with_any_model": 0,
+  "other_rate": 0.0,
+  "repo": "guidoism/madjax_macropad",
+  "switch_footprints": 16,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "masonry": {
+  "by_cause": {
+   "other": {
+    "kiprjmod": 1,
+    "stock-live": 20
+   },
+   "switch": {
+    "absolute": 32
+   }
+  },
+  "other_footprints": 74,
+  "other_footprints_with_any_model": 20,
+  "other_rate": 0.27,
+  "repo": "dcpedit/masonry",
+  "switch_footprints": 48,
+  "switch_footprints_with_any_model": 32,
+  "switch_rate": 0.0
+ },
+ "meson": {
+  "by_cause": {
+   "other": {
+    "absolute": 1,
+    "stock-dead": 3,
+    "stock-live": 24
+   },
+   "switch": {}
+  },
+  "other_footprints": 45,
+  "other_footprints_with_any_model": 28,
+  "other_rate": 0.533,
+  "repo": "PyrooL/Meson",
+  "switch_footprints": 24,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "mikeneko-65": {
+  "by_cause": {
+   "other": {
+    "stock-live": 84
+   },
+   "switch": {}
+  },
+  "other_footprints": 86,
+  "other_footprints_with_any_model": 84,
+  "other_rate": 0.977,
+  "repo": "takishim/mikeneko65",
+  "switch_footprints": 66,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "milk": {
+  "by_cause": {
+   "other": {
+    "stock-live": 2
+   },
+   "switch": {}
+  },
+  "other_footprints": 4,
+  "other_footprints_with_any_model": 2,
+  "other_rate": 0.5,
+  "repo": "spaceboards/spaceboardshardware",
+  "switch_footprints": 2,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "millipad": {
+  "by_cause": {
+   "other": {
+    "absolute": 1,
+    "stock-dead": 1,
+    "stock-live": 37
+   },
+   "switch": {}
+  },
+  "other_footprints": 46,
+  "other_footprints_with_any_model": 39,
+  "other_rate": 0.804,
+  "repo": "glozares/millipad",
+  "switch_footprints": 12,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "mini-e-li-xi-vy": {
+  "by_cause": {
+   "other": {
+    "stock-dead": 1,
+    "stock-live": 20
+   },
+   "switch": {}
+  },
+  "other_footprints": 102,
+  "other_footprints_with_any_model": 21,
+  "other_rate": 0.196,
+  "repo": "minibois/elixivy",
+  "switch_footprints": 73,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "mini-ferris": {
+  "by_cause": {
+   "other": {
+    "absolute": 2,
+    "stock-live": 65
+   },
+   "switch": {}
+  },
+  "other_footprints": 80,
+  "other_footprints_with_any_model": 67,
+  "other_rate": 0.812,
+  "repo": "pierrechevalier83/ferris",
+  "switch_footprints": 34,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "mini-ten-key-plus": {
+  "by_cause": {
+   "other": {
+    "stock-dead": 1,
+    "stock-live": 1
+   },
+   "switch": {}
+  },
+  "other_footprints": 37,
+  "other_footprints_with_any_model": 2,
+  "other_rate": 0.027,
+  "repo": "minibois/ten-key-plus",
+  "switch_footprints": 28,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "minim": {
+  "by_cause": {
+   "other": {
+    "stock-live": 66
+   },
+   "switch": {}
+  },
+  "other_footprints": 73,
+  "other_footprints_with_any_model": 66,
+  "other_rate": 0.904,
+  "repo": "matthewdias/minim",
+  "switch_footprints": 41,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "model-b": {
+  "by_cause": {
+   "other": {
+    "stock-dead": 1,
+    "stock-live": 124
+   },
+   "switch": {
+    "absolute": 82
+   }
+  },
+  "other_footprints": 156,
+  "other_footprints_with_any_model": 125,
+  "other_rate": 0.795,
+  "repo": "trojanpinata/model-b",
+  "switch_footprints": 84,
+  "switch_footprints_with_any_model": 82,
+  "switch_rate": 0.0
+ },
+ "molecule": {
+  "by_cause": {
+   "other": {
+    "absolute": 42
+   },
+   "switch": {}
+  },
+  "other_footprints": 48,
+  "other_footprints_with_any_model": 42,
+  "other_rate": 0.0,
+  "repo": "bbrfkr/keyboards",
+  "switch_footprints": 40,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "morizon-choc": {
+  "by_cause": {
+   "other": {
+    "stock-live": 67
+   },
+   "switch": {}
+  },
+  "other_footprints": 79,
+  "other_footprints_with_any_model": 67,
+  "other_rate": 0.848,
+  "repo": "skarrmann/morizon",
+  "switch_footprints": 66,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "morizon-mx": {
+  "by_cause": {
+   "other": {
+    "stock-live": 67
+   },
+   "switch": {}
+  },
+  "other_footprints": 79,
+  "other_footprints_with_any_model": 67,
+  "other_rate": 0.848,
+  "repo": "skarrmann/morizon",
+  "switch_footprints": 66,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "mx-5160": {
+  "by_cause": {
+   "other": {
+    "absolute": 9,
+    "stock-dead": 15,
+    "stock-live": 2
+   },
+   "switch": {}
+  },
+  "other_footprints": 118,
+  "other_footprints_with_any_model": 26,
+  "other_rate": 0.017,
+  "repo": "evyd13/mx-5160",
+  "switch_footprints": 98,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "mysterium": {
+  "by_cause": {
+   "other": {
+    "absolute": 3,
+    "stock-dead": 1,
+    "stock-live": 108
+   },
+   "switch": {
+    "absolute": 1,
+    "stock-dead": 94
+   }
+  },
+  "other_footprints": 132,
+  "other_footprints_with_any_model": 109,
+  "other_rate": 0.811,
+  "repo": "coseyfannitutti/mysterium",
+  "switch_footprints": 95,
+  "switch_footprints_with_any_model": 95,
+  "switch_rate": 0.0
+ },
+ "nack": {
+  "by_cause": {
+   "other": {
+    "absolute": 59,
+    "stock-live": 262
+   },
+   "switch": {
+    "absolute": 156
+   }
+  },
+  "other_footprints": 377,
+  "other_footprints_with_any_model": 321,
+  "other_rate": 0.695,
+  "repo": "farfalleflickan/nack",
+  "switch_footprints": 104,
+  "switch_footprints_with_any_model": 104,
+  "switch_rate": 0.0
+ },
+ "nafuda": {
+  "by_cause": {
+   "other": {
+    "absolute": 8
+   },
+   "switch": {}
+  },
+  "other_footprints": 28,
+  "other_footprints_with_any_model": 8,
+  "other_rate": 0.0,
+  "repo": "Salicylic-acid3/PCB_Data",
+  "switch_footprints": 7,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "neopad": {
+  "by_cause": {
+   "other": {
+    "absolute": 1,
+    "stock-dead": 2,
+    "stock-live": 10
+   },
+   "switch": {
+    "stock-live": 1
+   }
+  },
+  "other_footprints": 32,
+  "other_footprints_with_any_model": 13,
+  "other_rate": 0.312,
+  "repo": "ivndbt/neopad",
+  "switch_footprints": 5,
+  "switch_footprints_with_any_model": 1,
+  "switch_rate": 0.2
+ },
+ "noah": {
+  "by_cause": {
+   "other": {
+    "absolute": 2,
+    "stock-live": 54
+   },
+   "switch": {}
+  },
+  "other_footprints": 64,
+  "other_footprints_with_any_model": 56,
+  "other_rate": 0.844,
+  "repo": "kb-elmo/noah_avr",
+  "switch_footprints": 75,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "np12": {
+  "by_cause": {
+   "other": {
+    "absolute": 2,
+    "stock-dead": 1,
+    "stock-live": 4
+   },
+   "switch": {}
+  },
+  "other_footprints": 31,
+  "other_footprints_with_any_model": 7,
+  "other_rate": 0.129,
+  "repo": "nut1414/np12",
+  "switch_footprints": 12,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "nt210": {
+  "by_cause": {
+   "other": {
+    "absolute": 39,
+    "stock-dead": 1,
+    "stock-live": 2
+   },
+   "switch": {}
+  },
+  "other_footprints": 62,
+  "other_footprints_with_any_model": 42,
+  "other_rate": 0.032,
+  "repo": "evyd13/nt-series",
+  "switch_footprints": 28,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "nt750": {
+  "by_cause": {
+   "other": {
+    "absolute": 103,
+    "stock-dead": 1,
+    "stock-live": 3
+   },
+   "switch": {}
+  },
+  "other_footprints": 136,
+  "other_footprints_with_any_model": 107,
+  "other_rate": 0.022,
+  "repo": "evyd13/nt-series",
+  "switch_footprints": 92,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "num-discipline": {
+  "by_cause": {
+   "other": {
+    "absolute": 21,
+    "kiprjmod": 86,
+    "stock-dead": 1,
+    "stock-live": 102
+   },
+   "switch": {
+    "stock-dead": 87
+   }
+  },
+  "other_footprints": 122,
+  "other_footprints_with_any_model": 103,
+  "other_rate": 0.844,
+  "repo": "ericrlau/numdiscipline",
+  "switch_footprints": 87,
+  "switch_footprints_with_any_model": 87,
+  "switch_rate": 0.0
+ },
+ "numpad": {
+  "by_cause": {
+   "other": {
+    "kiprjmod": 1,
+    "stock-live": 40
+   },
+   "switch": {}
+  },
+  "other_footprints": 49,
+  "other_footprints_with_any_model": 41,
+  "other_rate": 0.837,
+  "repo": "kb-elmo/numpad",
+  "switch_footprints": 21,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "omega": {
+  "by_cause": {
+   "other": {
+    "stock-dead": 94,
+    "stock-live": 3
+   },
+   "switch": {}
+  },
+  "other_footprints": 113,
+  "other_footprints_with_any_model": 97,
+  "other_rate": 0.027,
+  "repo": "makenova/omega",
+  "switch_footprints": 93,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "opendeck": {
+  "by_cause": {
+   "other": {
+    "stock-dead": 1,
+    "stock-live": 86
+   },
+   "switch": {
+    "stock-dead": 32
+   }
+  },
+  "other_footprints": 121,
+  "other_footprints_with_any_model": 87,
+  "other_rate": 0.711,
+  "repo": "cmdremily/opendeck",
+  "switch_footprints": 32,
+  "switch_footprints_with_any_model": 32,
+  "switch_rate": 0.0
+ },
+ "orthocode": {
+  "by_cause": {
+   "other": {
+    "absolute": 2,
+    "stock-dead": 2,
+    "stock-live": 184
+   },
+   "switch": {}
+  },
+  "other_footprints": 290,
+  "other_footprints_with_any_model": 184,
+  "other_rate": 0.628,
+  "repo": "jrodna/orthocode",
+  "switch_footprints": 140,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "osprette": {
+  "by_cause": {
+   "other": {
+    "absolute": 4,
+    "stock-live": 35
+   },
+   "switch": {}
+  },
+  "other_footprints": 53,
+  "other_footprints_with_any_model": 37,
+  "other_rate": 0.66,
+  "repo": "smores56/osprette",
+  "switch_footprints": 34,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "pandamic": {
+  "by_cause": {
+   "other": {
+    "absolute": 3,
+    "stock-live": 64
+   },
+   "switch": {}
+  },
+  "other_footprints": 71,
+  "other_footprints_with_any_model": 66,
+  "other_rate": 0.901,
+  "repo": "swiftrax/Pandamic",
+  "switch_footprints": 92,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "paws60": {
+  "by_cause": {
+   "other": {
+    "absolute": 2,
+    "stock-dead": 3,
+    "stock-live": 180
+   },
+   "switch": {
+    "absolute": 71,
+    "stock-dead": 78
+   }
+  },
+  "other_footprints": 193,
+  "other_footprints_with_any_model": 184,
+  "other_rate": 0.927,
+  "repo": "horrortroll/keebproj",
+  "switch_footprints": 156,
+  "switch_footprints_with_any_model": 149,
+  "switch_rate": 0.0
+ },
+ "piantor": {
+  "by_cause": {
+   "other": {
+    "absolute": 4,
+    "stock-live": 4
+   },
+   "switch": {}
+  },
+  "other_footprints": 30,
+  "other_footprints_with_any_model": 8,
+  "other_rate": 0.133,
+  "repo": "beekeeb/piantor",
+  "switch_footprints": 42,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "pica40": {
+  "by_cause": {
+   "other": {
+    "absolute": 48,
+    "stock-live": 6
+   },
+   "switch": {
+    "absolute": 120
+   }
+  },
+  "other_footprints": 80,
+  "other_footprints_with_any_model": 54,
+  "other_rate": 0.075,
+  "repo": "zzeneg/pica40",
+  "switch_footprints": 40,
+  "switch_footprints_with_any_model": 40,
+  "switch_rate": 0.0
+ },
+ "pill60": {
+  "by_cause": {
+   "other": {
+    "stock-dead": 1,
+    "stock-live": 79
+   },
+   "switch": {}
+  },
+  "other_footprints": 94,
+  "other_footprints_with_any_model": 80,
+  "other_rate": 0.84,
+  "repo": "iktas/pill60",
+  "switch_footprints": 70,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "pinky3": {
+  "by_cause": {
+   "other": {
+    "absolute": 35
+   },
+   "switch": {}
+  },
+  "other_footprints": 42,
+  "other_footprints_with_any_model": 31,
+  "other_rate": 0.0,
+  "repo": "tamanishi/Pinky3",
+  "switch_footprints": 25,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "pinky4": {
+  "by_cause": {
+   "other": {
+    "absolute": 42
+   },
+   "switch": {}
+  },
+  "other_footprints": 48,
+  "other_footprints_with_any_model": 38,
+  "other_rate": 0.0,
+  "repo": "tamanishi/Pinky4",
+  "switch_footprints": 32,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "pisces": {
+  "by_cause": {
+   "other": {
+    "absolute": 20,
+    "stock-live": 2
+   },
+   "switch": {}
+  },
+  "other_footprints": 33,
+  "other_footprints_with_any_model": 22,
+  "other_rate": 0.061,
+  "repo": "knaruo/pisces",
+  "switch_footprints": 19,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "pisces-v2": {
+  "by_cause": {
+   "other": {
+    "absolute": 20,
+    "stock-live": 16
+   },
+   "switch": {}
+  },
+  "other_footprints": 44,
+  "other_footprints_with_any_model": 36,
+  "other_rate": 0.364,
+  "repo": "knaruo/pisces",
+  "switch_footprints": 19,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "pix": {
+  "by_cause": {
+   "other": {
+    "absolute": 4,
+    "stock-dead": 2,
+    "stock-live": 1
+   },
+   "switch": {
+    "absolute": 4,
+    "stock-dead": 4
+   }
+  },
+  "other_footprints": 4,
+  "other_footprints_with_any_model": 4,
+  "other_rate": 0.25,
+  "repo": "sendz/pix",
+  "switch_footprints": 4,
+  "switch_footprints_with_any_model": 4,
+  "switch_rate": 0.0
+ },
+ "plaid": {
+  "by_cause": {
+   "other": {
+    "stock-dead": 73
+   },
+   "switch": {
+    "stock-dead": 49
+   }
+  },
+  "other_footprints": 89,
+  "other_footprints_with_any_model": 73,
+  "other_rate": 0.0,
+  "repo": "hsgw/plaid",
+  "switch_footprints": 50,
+  "switch_footprints_with_any_model": 49,
+  "switch_rate": 0.0
+ },
+ "plain60-c": {
+  "by_cause": {
+   "other": {
+    "absolute": 82,
+    "stock-dead": 1,
+    "stock-live": 2
+   },
+   "switch": {}
+  },
+  "other_footprints": 100,
+  "other_footprints_with_any_model": 85,
+  "other_rate": 0.02,
+  "repo": "evyd13/plain60-c",
+  "switch_footprints": 77,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "pluckey": {
+  "by_cause": {
+   "other": {
+    "absolute": 7,
+    "stock-dead": 35,
+    "stock-live": 1
+   },
+   "switch": {}
+  },
+  "other_footprints": 50,
+  "other_footprints_with_any_model": 41,
+  "other_rate": 0.02,
+  "repo": "floookay/pluckey",
+  "switch_footprints": 41,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "pluto12": {
+  "by_cause": {
+   "other": {
+    "stock-live": 13
+   },
+   "switch": {
+    "stock-dead": 12
+   }
+  },
+  "other_footprints": 14,
+  "other_footprints_with_any_model": 13,
+  "other_rate": 0.929,
+  "repo": "psuieee/pluto12",
+  "switch_footprints": 12,
+  "switch_footprints_with_any_model": 12,
+  "switch_rate": 0.0
+ },
+ "potato65": {
+  "by_cause": {
+   "other": {
+    "absolute": 3,
+    "kiprjmod": 1,
+    "stock-live": 302
+   },
+   "switch": {
+    "kiprjmod": 66
+   }
+  },
+  "other_footprints": 319,
+  "other_footprints_with_any_model": 303,
+  "other_rate": 0.95,
+  "repo": "aeonstrife/potato65",
+  "switch_footprints": 212,
+  "switch_footprints_with_any_model": 66,
+  "switch_rate": 0.311
+ },
+ "prkl30": {
+  "by_cause": {
+   "other": {
+    "absolute": 1,
+    "stock-dead": 1,
+    "stock-live": 2
+   },
+   "switch": {}
+  },
+  "other_footprints": 55,
+  "other_footprints_with_any_model": 4,
+  "other_rate": 0.036,
+  "repo": "erkhal/prkl30",
+  "switch_footprints": 39,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "pteron56v0": {
+  "by_cause": {
+   "other": {
+    "stock-live": 56
+   },
+   "switch": {}
+  },
+  "other_footprints": 79,
+  "other_footprints_with_any_model": 56,
+  "other_rate": 0.709,
+  "repo": "kraken-jokes/pteron-pcb",
+  "switch_footprints": 56,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "qez": {
+  "by_cause": {
+   "other": {
+    "absolute": 1,
+    "stock-live": 37
+   },
+   "switch": {}
+  },
+  "other_footprints": 46,
+  "other_footprints_with_any_model": 38,
+  "other_rate": 0.804,
+  "repo": "str-dst/QEZ",
+  "switch_footprints": 36,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "quefrency-rev1": {
+  "by_cause": {
+   "other": {
+    "absolute": 2,
+    "stock-dead": 86
+   },
+   "switch": {}
+  },
+  "other_footprints": 210,
+  "other_footprints_with_any_model": 88,
+  "other_rate": 0.0,
+  "repo": "keebio/quefrency-rev1-pcb",
+  "switch_footprints": 90,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "redherring": {
+  "by_cause": {
+   "other": {
+    "absolute": 9,
+    "kiprjmod": 2,
+    "stock-dead": 6,
+    "stock-live": 347
+   },
+   "switch": {
+    "absolute": 1,
+    "kiprjmod": 246
+   }
+  },
+  "other_footprints": 387,
+  "other_footprints_with_any_model": 361,
+  "other_rate": 0.902,
+  "repo": "dcpedit/redherring",
+  "switch_footprints": 282,
+  "switch_footprints_with_any_model": 90,
+  "switch_rate": 0.319
+ },
+ "redox-rev1": {
+  "by_cause": {
+   "other": {
+    "absolute": 1,
+    "stock-dead": 2
+   },
+   "switch": {}
+  },
+  "other_footprints": 51,
+  "other_footprints_with_any_model": 3,
+  "other_rate": 0.0,
+  "repo": "mattdibi/redox-keyboard",
+  "switch_footprints": 35,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "reviung34": {
+  "by_cause": {
+   "other": {
+    "absolute": 34,
+    "stock-live": 9
+   },
+   "switch": {}
+  },
+  "other_footprints": 60,
+  "other_footprints_with_any_model": 43,
+  "other_rate": 0.15,
+  "repo": "gtips/reviung",
+  "switch_footprints": 35,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "reviung34-split": {
+  "by_cause": {
+   "other": {
+    "stock-live": 34
+   },
+   "switch": {}
+  },
+  "other_footprints": 52,
+  "other_footprints_with_any_model": 34,
+  "other_rate": 0.654,
+  "repo": "gtips/reviung",
+  "switch_footprints": 33,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "reviung41": {
+  "by_cause": {
+   "other": {
+    "absolute": 123,
+    "stock-live": 33
+   },
+   "switch": {}
+  },
+  "other_footprints": 213,
+  "other_footprints_with_any_model": 156,
+  "other_rate": 0.155,
+  "repo": "gtips/reviung",
+  "switch_footprints": 120,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "reviung46": {
+  "by_cause": {
+   "other": {
+    "absolute": 46,
+    "stock-live": 10
+   },
+   "switch": {}
+  },
+  "other_footprints": 74,
+  "other_footprints_with_any_model": 56,
+  "other_rate": 0.135,
+  "repo": "gtips/reviung",
+  "switch_footprints": 45,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "reviung5": {
+  "by_cause": {
+   "other": {
+    "absolute": 5,
+    "stock-dead": 2,
+    "stock-live": 4
+   },
+   "switch": {}
+  },
+  "other_footprints": 21,
+  "other_footprints_with_any_model": 11,
+  "other_rate": 0.19,
+  "repo": "gtips/reviung",
+  "switch_footprints": 5,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "reviung53": {
+  "by_cause": {
+   "other": {
+    "absolute": 53,
+    "stock-live": 10
+   },
+   "switch": {}
+  },
+  "other_footprints": 90,
+  "other_footprints_with_any_model": 63,
+  "other_rate": 0.111,
+  "repo": "gtips/reviung",
+  "switch_footprints": 53,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "reviung61": {
+  "by_cause": {
+   "other": {
+    "absolute": 61,
+    "stock-live": 15
+   },
+   "switch": {}
+  },
+  "other_footprints": 85,
+  "other_footprints_with_any_model": 76,
+  "other_rate": 0.176,
+  "repo": "gtips/reviung",
+  "switch_footprints": 60,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "rhymestone": {
+  "by_cause": {
+   "other": {
+    "absolute": 31,
+    "stock-live": 5
+   },
+   "switch": {}
+  },
+  "other_footprints": 68,
+  "other_footprints_with_any_model": 36,
+  "other_rate": 0.074,
+  "repo": "marksard/keyboards",
+  "switch_footprints": 20,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "romeo": {
+  "by_cause": {
+   "other": {
+    "absolute": 3,
+    "stock-dead": 1,
+    "stock-live": 64
+   },
+   "switch": {
+    "absolute": 1,
+    "stock-dead": 47
+   }
+  },
+  "other_footprints": 90,
+  "other_footprints_with_any_model": 66,
+  "other_rate": 0.711,
+  "repo": "coseyfannitutti/romeo",
+  "switch_footprints": 48,
+  "switch_footprints_with_any_model": 48,
+  "switch_rate": 0.0
+ },
+ "rosaline": {
+  "by_cause": {
+   "other": {
+    "stock-live": 76
+   },
+   "switch": {}
+  },
+  "other_footprints": 87,
+  "other_footprints_with_any_model": 76,
+  "other_rate": 0.874,
+  "repo": "peej/rosaline-keyboard",
+  "switch_footprints": 61,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "rosaline-ortho": {
+  "by_cause": {
+   "other": {
+    "stock-live": 85
+   },
+   "switch": {}
+  },
+  "other_footprints": 92,
+  "other_footprints_with_any_model": 85,
+  "other_rate": 0.924,
+  "repo": "peej/rosaline-keyboard",
+  "switch_footprints": 63,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "rp2040-bakeneko65": {
+  "by_cause": {
+   "other": {
+    "absolute": 2,
+    "stock-live": 102
+   },
+   "switch": {
+    "absolute": 1
+   }
+  },
+  "other_footprints": 105,
+  "other_footprints_with_any_model": 103,
+  "other_rate": 0.971,
+  "repo": "lendunistus/rpneko65",
+  "switch_footprints": 96,
+  "switch_footprints_with_any_model": 1,
+  "switch_rate": 0.0
+ },
+ "sango": {
+  "by_cause": {
+   "other": {
+    "absolute": 74,
+    "stock-live": 144
+   },
+   "switch": {
+    "absolute": 72
+   }
+  },
+  "other_footprints": 253,
+  "other_footprints_with_any_model": 218,
+  "other_rate": 0.569,
+  "repo": "Aidan-OS/Sango",
+  "switch_footprints": 72,
+  "switch_footprints_with_any_model": 72,
+  "switch_rate": 0.0
+ },
+ "scatter42": {
+  "by_cause": {
+   "other": {
+    "absolute": 46
+   },
+   "switch": {}
+  },
+  "other_footprints": 80,
+  "other_footprints_with_any_model": 46,
+  "other_rate": 0.0,
+  "repo": "bbrfkr/keyboards",
+  "switch_footprints": 42,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "schwann-rev0-5b": {
+  "by_cause": {
+   "other": {
+    "absolute": 11,
+    "stock-live": 59
+   },
+   "switch": {}
+  },
+  "other_footprints": 76,
+  "other_footprints_with_any_model": 70,
+  "other_rate": 0.776,
+  "repo": "theroyalsweatshirt/the_royal_projects",
+  "switch_footprints": 51,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "scotto-modules": {
+  "by_cause": {
+   "other": {
+    "absolute": 1,
+    "stock-live": 19
+   },
+   "switch": {
+    "absolute": 6
+   }
+  },
+  "other_footprints": 20,
+  "other_footprints_with_any_model": 20,
+  "other_rate": 0.95,
+  "repo": "joe-scotto/scottokeebs",
+  "switch_footprints": 6,
+  "switch_footprints_with_any_model": 6,
+  "switch_rate": 0.0
+ },
+ "sdra-kb00": {
+  "by_cause": {
+   "other": {
+    "absolute": 1,
+    "stock-live": 49
+   },
+   "switch": {
+    "absolute": 70
+   }
+  },
+  "other_footprints": 62,
+  "other_footprints_with_any_model": 50,
+  "other_rate": 0.79,
+  "repo": "drabaioli/sdrakb00",
+  "switch_footprints": 35,
+  "switch_footprints_with_any_model": 35,
+  "switch_rate": 0.0
+ },
+ "sepia-officinalis": {
+  "by_cause": {
+   "other": {},
+   "switch": {}
+  },
+  "other_footprints": 40,
+  "other_footprints_with_any_model": 0,
+  "other_rate": 0.0,
+  "repo": "tapioki/cephalopoda",
+  "switch_footprints": 17,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "sesame": {
+  "by_cause": {
+   "other": {
+    "kiprjmod": 1,
+    "stock-live": 85
+   },
+   "switch": {}
+  },
+  "other_footprints": 101,
+  "other_footprints_with_any_model": 86,
+  "other_rate": 0.851,
+  "repo": "kb-elmo/sesame",
+  "switch_footprints": 67,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "setta21": {
+  "by_cause": {
+   "other": {
+    "absolute": 22
+   },
+   "switch": {}
+  },
+  "other_footprints": 60,
+  "other_footprints_with_any_model": 22,
+  "other_rate": 0.0,
+  "repo": "Salicylic-acid3/PCB_Data",
+  "switch_footprints": 21,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "sha-choc": {
+  "by_cause": {
+   "other": {
+    "stock-live": 50
+   },
+   "switch": {}
+  },
+  "other_footprints": 61,
+  "other_footprints_with_any_model": 50,
+  "other_rate": 0.82,
+  "repo": "skarrmann/sha",
+  "switch_footprints": 50,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "sha-mx": {
+  "by_cause": {
+   "other": {
+    "stock-live": 50
+   },
+   "switch": {}
+  },
+  "other_footprints": 61,
+  "other_footprints_with_any_model": 50,
+  "other_rate": 0.82,
+  "repo": "skarrmann/sha",
+  "switch_footprints": 50,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "silakka54": {
+  "by_cause": {
+   "other": {
+    "absolute": 28,
+    "stock-live": 2
+   },
+   "switch": {
+    "absolute": 54
+   }
+  },
+  "other_footprints": 40,
+  "other_footprints_with_any_model": 30,
+  "other_rate": 0.05,
+  "repo": "squalius-cephalus/silakka54",
+  "switch_footprints": 27,
+  "switch_footprints_with_any_model": 27,
+  "switch_rate": 0.0
+ },
+ "sith-zhuyin40": {
+  "by_cause": {
+   "other": {
+    "absolute": 1,
+    "stock-dead": 58
+   },
+   "switch": {}
+  },
+  "other_footprints": 59,
+  "other_footprints_with_any_model": 59,
+  "other_rate": 0.0,
+  "repo": "sithlord121/slz40",
+  "switch_footprints": 58,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "skeleton-num-pad": {
+  "by_cause": {
+   "other": {
+    "kiprjmod": 1,
+    "stock-live": 37
+   },
+   "switch": {
+    "absolute": 15
+   }
+  },
+  "other_footprints": 56,
+  "other_footprints_with_any_model": 37,
+  "other_rate": 0.661,
+  "repo": "skeletonkbd/skeletonnumpad",
+  "switch_footprints": 15,
+  "switch_footprints_with_any_model": 15,
+  "switch_rate": 0.0
+ },
+ "skeleton68rev2": {
+  "by_cause": {
+   "other": {
+    "absolute": 68,
+    "kiprjmod": 1,
+    "stock-live": 104
+   },
+   "switch": {
+    "kiprjmod": 55
+   }
+  },
+  "other_footprints": 186,
+  "other_footprints_with_any_model": 172,
+  "other_rate": 0.559,
+  "repo": "skeletonkbd/Frost68",
+  "switch_footprints": 66,
+  "switch_footprints_with_any_model": 55,
+  "switch_rate": 0.833
+ },
+ "sl40": {
+  "by_cause": {
+   "other": {
+    "stock-dead": 51
+   },
+   "switch": {}
+  },
+  "other_footprints": 58,
+  "other_footprints_with_any_model": 51,
+  "other_rate": 0.0,
+  "repo": "worldspawn00/SL40",
+  "switch_footprints": 53,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "slime88": {
+  "by_cause": {
+   "other": {
+    "kiprjmod": 3,
+    "stock-live": 128
+   },
+   "switch": {
+    "kiprjmod": 312
+   }
+  },
+  "other_footprints": 132,
+  "other_footprints_with_any_model": 126,
+  "other_rate": 0.955,
+  "repo": "zykrah/slime88",
+  "switch_footprints": 111,
+  "switch_footprints_with_any_model": 104,
+  "switch_rate": 0.937
+ },
+ "slimorta": {
+  "by_cause": {
+   "other": {
+    "absolute": 60,
+    "stock-live": 5
+   },
+   "switch": {}
+  },
+  "other_footprints": 87,
+  "other_footprints_with_any_model": 65,
+  "other_rate": 0.057,
+  "repo": "ashijanken/slimorta",
+  "switch_footprints": 58,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "sofle-choc": {
+  "by_cause": {
+   "other": {
+    "absolute": 48,
+    "stock-dead": 1
+   },
+   "switch": {}
+  },
+  "other_footprints": 55,
+  "other_footprints_with_any_model": 45,
+  "other_rate": 0.0,
+  "repo": "josefadamcik/soflekeyboard",
+  "switch_footprints": 29,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "sofle-pico": {
+  "by_cause": {
+   "other": {
+    "absolute": 1,
+    "kiprjmod": 65,
+    "stock-live": 12
+   },
+   "switch": {
+    "kiprjmod": 58
+   }
+  },
+  "other_footprints": 95,
+  "other_footprints_with_any_model": 76,
+  "other_rate": 0.8,
+  "repo": "jellytitan/sofle-pico",
+  "switch_footprints": 29,
+  "switch_footprints_with_any_model": 29,
+  "switch_rate": 1.0
+ },
+ "sofle-v1": {
+  "by_cause": {
+   "other": {
+    "absolute": 18,
+    "stock-dead": 1
+   },
+   "switch": {}
+  },
+  "other_footprints": 58,
+  "other_footprints_with_any_model": 15,
+  "other_rate": 0.0,
+  "repo": "josefadamcik/soflekeyboard",
+  "switch_footprints": 29,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "solheim68": {
+  "by_cause": {
+   "other": {
+    "absolute": 85,
+    "stock-dead": 2
+   },
+   "switch": {}
+  },
+  "other_footprints": 94,
+  "other_footprints_with_any_model": 87,
+  "other_rate": 0.0,
+  "repo": "evyd13/solheim68",
+  "switch_footprints": 77,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "southpawpcb": {
+  "by_cause": {
+   "other": {
+    "stock-live": 2
+   },
+   "switch": {}
+  },
+  "other_footprints": 169,
+  "other_footprints_with_any_model": 2,
+  "other_rate": 0.012,
+  "repo": "kelvinhall05/southpaw75",
+  "switch_footprints": 157,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "soyuz": {
+  "by_cause": {
+   "other": {
+    "stock-dead": 20
+   },
+   "switch": {}
+  },
+  "other_footprints": 38,
+  "other_footprints_with_any_model": 20,
+  "other_rate": 0.0,
+  "repo": "ai03-2725/soyuz",
+  "switch_footprints": 20,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "spacetime": {
+  "by_cause": {
+   "other": {
+    "stock-live": 2
+   },
+   "switch": {}
+  },
+  "other_footprints": 49,
+  "other_footprints_with_any_model": 2,
+  "other_rate": 0.041,
+  "repo": "kyleterry/spacetime-keyboard",
+  "switch_footprints": 25,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "span": {
+  "by_cause": {
+   "other": {
+    "absolute": 36,
+    "kiprjmod": 8
+   },
+   "switch": {}
+  },
+  "other_footprints": 58,
+  "other_footprints_with_any_model": 42,
+  "other_rate": 0.103,
+  "repo": "idank/spankbd",
+  "switch_footprints": 38,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "speedo": {
+  "by_cause": {
+   "other": {
+    "absolute": 1,
+    "stock-live": 90
+   },
+   "switch": {
+    "stock-dead": 66
+   }
+  },
+  "other_footprints": 101,
+  "other_footprints_with_any_model": 91,
+  "other_rate": 0.891,
+  "repo": "cozykeys/speedo",
+  "switch_footprints": 66,
+  "switch_footprints_with_any_model": 66,
+  "switch_rate": 0.0
+ },
+ "spleeb": {
+  "by_cause": {
+   "other": {},
+   "switch": {}
+  },
+  "other_footprints": 37,
+  "other_footprints_with_any_model": 0,
+  "other_rate": 0.0,
+  "repo": "chrishoage/spleeb",
+  "switch_footprints": 32,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "splitreus": {
+  "by_cause": {
+   "other": {
+    "absolute": 1,
+    "stock-dead": 31,
+    "stock-live": 2
+   },
+   "switch": {}
+  },
+  "other_footprints": 40,
+  "other_footprints_with_any_model": 34,
+  "other_rate": 0.05,
+  "repo": "na-cly/splitreus62",
+  "switch_footprints": 31,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "squiggle-low-profile": {
+  "by_cause": {
+   "other": {},
+   "switch": {}
+  },
+  "other_footprints": 19,
+  "other_footprints_with_any_model": 0,
+  "other_rate": 0.0,
+  "repo": "ibnuda/squiggle",
+  "switch_footprints": 17,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "steal-this": {
+  "by_cause": {
+   "other": {
+    "absolute": 2,
+    "stock-dead": 1
+   },
+   "switch": {
+    "absolute": 34
+   }
+  },
+  "other_footprints": 5,
+  "other_footprints_with_any_model": 3,
+  "other_rate": 0.0,
+  "repo": "obosob/steal_this_keyboard",
+  "switch_footprints": 17,
+  "switch_footprints_with_any_model": 17,
+  "switch_rate": 0.0
+ },
+ "stoutgat": {
+  "by_cause": {
+   "other": {
+    "stock-dead": 2,
+    "stock-live": 94
+   },
+   "switch": {
+    "stock-dead": 78
+   }
+  },
+  "other_footprints": 110,
+  "other_footprints_with_any_model": 96,
+  "other_rate": 0.855,
+  "repo": "vattern/stoutgat",
+  "switch_footprints": 78,
+  "switch_footprints_with_any_model": 78,
+  "switch_rate": 0.0
+ },
+ "stoutgatv2": {
+  "by_cause": {
+   "other": {
+    "stock-dead": 3,
+    "stock-live": 97
+   },
+   "switch": {
+    "stock-dead": 78
+   }
+  },
+  "other_footprints": 111,
+  "other_footprints_with_any_model": 100,
+  "other_rate": 0.874,
+  "repo": "vattern/stoutgatv2",
+  "switch_footprints": 78,
+  "switch_footprints_with_any_model": 78,
+  "switch_rate": 0.0
+ },
+ "stront-choc": {
+  "by_cause": {
+   "other": {
+    "absolute": 94,
+    "stock-live": 8
+   },
+   "switch": {
+    "absolute": 76
+   }
+  },
+  "other_footprints": 124,
+  "other_footprints_with_any_model": 100,
+  "other_rate": 0.065,
+  "repo": "zzeneg/stront",
+  "switch_footprints": 38,
+  "switch_footprints_with_any_model": 38,
+  "switch_rate": 0.0
+ },
+ "stront-mx-38": {
+  "by_cause": {
+   "other": {
+    "absolute": 94,
+    "kiprjmod": 2,
+    "stock-live": 6
+   },
+   "switch": {
+    "absolute": 114
+   }
+  },
+  "other_footprints": 136,
+  "other_footprints_with_any_model": 100,
+  "other_rate": 0.059,
+  "repo": "zzeneg/stront",
+  "switch_footprints": 38,
+  "switch_footprints_with_any_model": 38,
+  "switch_rate": 0.0
+ },
+ "stront-mx-40": {
+  "by_cause": {
+   "other": {
+    "absolute": 96,
+    "kiprjmod": 2,
+    "stock-live": 6
+   },
+   "switch": {
+    "absolute": 120
+   }
+  },
+  "other_footprints": 141,
+  "other_footprints_with_any_model": 102,
+  "other_rate": 0.057,
+  "repo": "zzeneg/stront",
+  "switch_footprints": 40,
+  "switch_footprints_with_any_model": 40,
+  "switch_rate": 0.0
+ },
+ "supersplit": {
+  "by_cause": {
+   "other": {},
+   "switch": {}
+  },
+  "other_footprints": 38,
+  "other_footprints_with_any_model": 0,
+  "other_rate": 0.0,
+  "repo": "tarneaux/supersplit",
+  "switch_footprints": 33,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "sweep-bling-mx": {
+  "by_cause": {
+   "other": {
+    "absolute": 4,
+    "stock-live": 2
+   },
+   "switch": {
+    "absolute": 1
+   }
+  },
+  "other_footprints": 12,
+  "other_footprints_with_any_model": 4,
+  "other_rate": 0.167,
+  "repo": "davidphilipbarr/sweep",
+  "switch_footprints": 19,
+  "switch_footprints_with_any_model": 1,
+  "switch_rate": 0.0
+ },
+ "sweep-half-swept": {
+  "by_cause": {
+   "other": {
+    "absolute": 4,
+    "stock-live": 1
+   },
+   "switch": {
+    "absolute": 1
+   }
+  },
+  "other_footprints": 6,
+  "other_footprints_with_any_model": 3,
+  "other_rate": 0.167,
+  "repo": "davidphilipbarr/sweep",
+  "switch_footprints": 19,
+  "switch_footprints_with_any_model": 1,
+  "switch_rate": 0.0
+ },
+ "sweep-high": {
+  "by_cause": {
+   "other": {
+    "absolute": 8,
+    "stock-live": 4
+   },
+   "switch": {
+    "absolute": 2
+   }
+  },
+  "other_footprints": 18,
+  "other_footprints_with_any_model": 8,
+  "other_rate": 0.222,
+  "repo": "davidphilipbarr/sweep",
+  "switch_footprints": 37,
+  "switch_footprints_with_any_model": 2,
+  "switch_rate": 0.0
+ },
+ "sweep-high-m": {
+  "by_cause": {
+   "other": {
+    "absolute": 4
+   },
+   "switch": {
+    "absolute": 1
+   }
+  },
+  "other_footprints": 7,
+  "other_footprints_with_any_model": 2,
+  "other_rate": 0.0,
+  "repo": "davidphilipbarr/sweep",
+  "switch_footprints": 18,
+  "switch_footprints_with_any_model": 1,
+  "switch_rate": 0.0
+ },
+ "sweepbling-lp": {
+  "by_cause": {
+   "other": {
+    "absolute": 10,
+    "stock-live": 2
+   },
+   "switch": {
+    "absolute": 34
+   }
+  },
+  "other_footprints": 24,
+  "other_footprints_with_any_model": 8,
+  "other_rate": 0.083,
+  "repo": "davidphilipbarr/sweep",
+  "switch_footprints": 35,
+  "switch_footprints_with_any_model": 34,
+  "switch_rate": 0.0
+ },
+ "sweepv2": {
+  "by_cause": {
+   "other": {
+    "absolute": 8,
+    "stock-live": 2
+   },
+   "switch": {
+    "absolute": 2
+   }
+  },
+  "other_footprints": 14,
+  "other_footprints_with_any_model": 6,
+  "other_rate": 0.143,
+  "repo": "davidphilipbarr/sweep",
+  "switch_footprints": 37,
+  "switch_footprints_with_any_model": 2,
+  "switch_rate": 0.0
+ },
+ "sweeq": {
+  "by_cause": {
+   "other": {
+    "absolute": 36,
+    "kiprjmod": 2
+   },
+   "switch": {}
+  },
+  "other_footprints": 52,
+  "other_footprints_with_any_model": 38,
+  "other_rate": 0.038,
+  "repo": "idank/keyboards",
+  "switch_footprints": 36,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "sweeq-mx": {
+  "by_cause": {
+   "other": {
+    "absolute": 36,
+    "kiprjmod": 2
+   },
+   "switch": {
+    "absolute": 34
+   }
+  },
+  "other_footprints": 60,
+  "other_footprints_with_any_model": 38,
+  "other_rate": 0.033,
+  "repo": "idank/keyboards",
+  "switch_footprints": 36,
+  "switch_footprints_with_any_model": 34,
+  "switch_rate": 0.0
+ },
+ "swoop-mx": {
+  "by_cause": {
+   "other": {
+    "absolute": 20,
+    "stock-dead": 1,
+    "stock-live": 1
+   },
+   "switch": {}
+  },
+  "other_footprints": 53,
+  "other_footprints_with_any_model": 22,
+  "other_rate": 0.019,
+  "repo": "jimmerricks/swoop",
+  "switch_footprints": 18,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "tanuki-pcb3": {
+  "by_cause": {
+   "other": {
+    "stock-dead": 8
+   },
+   "switch": {}
+  },
+  "other_footprints": 69,
+  "other_footprints_with_any_model": 8,
+  "other_rate": 0.0,
+  "repo": "SethSenpai/Tanuki",
+  "switch_footprints": 42,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "tartan": {
+  "by_cause": {
+   "other": {
+    "stock-dead": 81
+   },
+   "switch": {
+    "stock-dead": 75
+   }
+  },
+  "other_footprints": 96,
+  "other_footprints_with_any_model": 81,
+  "other_rate": 0.0,
+  "repo": "hsgw/tartan",
+  "switch_footprints": 75,
+  "switch_footprints_with_any_model": 75,
+  "switch_rate": 0.0
+ },
+ "teaqueen": {
+  "by_cause": {
+   "other": {
+    "absolute": 9,
+    "stock-live": 64
+   },
+   "switch": {
+    "absolute": 64
+   }
+  },
+  "other_footprints": 81,
+  "other_footprints_with_any_model": 73,
+  "other_rate": 0.79,
+  "repo": "gregandcin/teaqueen",
+  "switch_footprints": 64,
+  "switch_footprints_with_any_model": 64,
+  "switch_rate": 0.0
+ },
+ "tenkey-plusplus": {
+  "by_cause": {
+   "other": {
+    "stock-dead": 3,
+    "stock-live": 44
+   },
+   "switch": {
+    "absolute": 34
+   }
+  },
+  "other_footprints": 59,
+  "other_footprints_with_any_model": 47,
+  "other_rate": 0.746,
+  "repo": "jonbobcar/tenkey_plusplus",
+  "switch_footprints": 20,
+  "switch_footprints_with_any_model": 17,
+  "switch_rate": 0.0
+ },
+ "tg4x": {
+  "by_cause": {
+   "other": {
+    "absolute": 1,
+    "stock-dead": 46,
+    "stock-live": 2
+   },
+   "switch": {}
+  },
+  "other_footprints": 61,
+  "other_footprints_with_any_model": 49,
+  "other_rate": 0.033,
+  "repo": "mythosmann/tg4x",
+  "switch_footprints": 68,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "th75": {
+  "by_cause": {
+   "other": {
+    "absolute": 1,
+    "stock-live": 104
+   },
+   "switch": {}
+  },
+  "other_footprints": 123,
+  "other_footprints_with_any_model": 105,
+  "other_rate": 0.846,
+  "repo": "ramonimbao/Herringbone",
+  "switch_footprints": 87,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "torn": {
+  "by_cause": {
+   "other": {
+    "absolute": 3,
+    "stock-dead": 1,
+    "stock-live": 72
+   },
+   "switch": {
+    "stock-dead": 6
+   }
+  },
+  "other_footprints": 96,
+  "other_footprints_with_any_model": 74,
+  "other_rate": 0.75,
+  "repo": "rtitmuss/torn",
+  "switch_footprints": 44,
+  "switch_footprints_with_any_model": 6,
+  "switch_rate": 0.0
+ },
+ "touhoupad-v2": {
+  "by_cause": {
+   "other": {
+    "absolute": 1,
+    "stock-live": 1
+   },
+   "switch": {}
+  },
+  "other_footprints": 5,
+  "other_footprints_with_any_model": 2,
+  "other_rate": 0.2,
+  "repo": "pimentoso/touhoupad_v2",
+  "switch_footprints": 10,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "treadstone32": {
+  "by_cause": {
+   "other": {
+    "absolute": 32,
+    "stock-live": 13
+   },
+   "switch": {}
+  },
+  "other_footprints": 53,
+  "other_footprints_with_any_model": 45,
+  "other_rate": 0.245,
+  "repo": "marksard/keyboards",
+  "switch_footprints": 32,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "tripel": {
+  "by_cause": {
+   "other": {
+    "stock-live": 1
+   },
+   "switch": {}
+  },
+  "other_footprints": 49,
+  "other_footprints_with_any_model": 1,
+  "other_rate": 0.02,
+  "repo": "peej/tripel-keyboard",
+  "switch_footprints": 41,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "twelvekey": {
+  "by_cause": {
+   "other": {
+    "absolute": 1,
+    "stock-live": 41
+   },
+   "switch": {}
+  },
+  "other_footprints": 42,
+  "other_footprints_with_any_model": 42,
+  "other_rate": 0.976,
+  "repo": "kb-elmo/twelvekey",
+  "switch_footprints": 12,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "ua62": {
+  "by_cause": {
+   "other": {
+    "stock-dead": 62
+   },
+   "switch": {}
+  },
+  "other_footprints": 66,
+  "other_footprints_with_any_model": 62,
+  "other_rate": 0.0,
+  "repo": "na-cly/UA62",
+  "switch_footprints": 62,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "un-split": {
+  "by_cause": {
+   "other": {
+    "stock-live": 116
+   },
+   "switch": {}
+  },
+  "other_footprints": 132,
+  "other_footprints_with_any_model": 116,
+  "other_rate": 0.879,
+  "repo": "swiftrax/unsplit",
+  "switch_footprints": 88,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "unicorn-f072": {
+  "by_cause": {
+   "other": {
+    "absolute": 2,
+    "stock-dead": 2,
+    "stock-live": 85
+   },
+   "switch": {
+    "absolute": 132
+   }
+  },
+  "other_footprints": 105,
+  "other_footprints_with_any_model": 89,
+  "other_rate": 0.81,
+  "repo": "yanghu/unicorne",
+  "switch_footprints": 44,
+  "switch_footprints_with_any_model": 44,
+  "switch_rate": 0.0
+ },
+ "unicorn-mx": {
+  "by_cause": {
+   "other": {
+    "absolute": 2,
+    "stock-dead": 2,
+    "stock-live": 93
+   },
+   "switch": {
+    "absolute": 132
+   }
+  },
+  "other_footprints": 113,
+  "other_footprints_with_any_model": 97,
+  "other_rate": 0.823,
+  "repo": "yanghu/unicorne",
+  "switch_footprints": 44,
+  "switch_footprints_with_any_model": 44,
+  "switch_rate": 0.0
+ },
+ "unison": {
+  "by_cause": {
+   "other": {
+    "absolute": 36,
+    "stock-dead": 6,
+    "stock-live": 125
+   },
+   "switch": {}
+  },
+  "other_footprints": 154,
+  "other_footprints_with_any_model": 149,
+  "other_rate": 0.812,
+  "repo": "jpskenn/unison",
+  "switch_footprints": 130,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "unix60pcb": {
+  "by_cause": {
+   "other": {
+    "stock-live": 2
+   },
+   "switch": {}
+  },
+  "other_footprints": 71,
+  "other_footprints_with_any_model": 2,
+  "other_rate": 0.028,
+  "repo": "mkdl/unix60",
+  "switch_footprints": 66,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "vagrant": {
+  "by_cause": {
+   "other": {
+    "stock-live": 11
+   },
+   "switch": {}
+  },
+  "other_footprints": 25,
+  "other_footprints_with_any_model": 11,
+  "other_rate": 0.44,
+  "repo": "sho-keebs/vagrant-10",
+  "switch_footprints": 10,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "varanidae": {
+  "by_cause": {
+   "other": {
+    "absolute": 1,
+    "stock-dead": 1,
+    "stock-live": 110
+   },
+   "switch": {}
+  },
+  "other_footprints": 116,
+  "other_footprints_with_any_model": 112,
+  "other_rate": 0.948,
+  "repo": "tokageitlab/varanidae",
+  "switch_footprints": 112,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "voyager60": {
+  "by_cause": {
+   "other": {
+    "absolute": 21,
+    "stock-dead": 142
+   },
+   "switch": {}
+  },
+  "other_footprints": 190,
+  "other_footprints_with_any_model": 163,
+  "other_rate": 0.0,
+  "repo": "ai03-2725/voyager60",
+  "switch_footprints": 75,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "wave": {
+  "by_cause": {
+   "other": {
+    "absolute": 1
+   },
+   "switch": {
+    "absolute": 18
+   }
+  },
+  "other_footprints": 10,
+  "other_footprints_with_any_model": 1,
+  "other_rate": 0.0,
+  "repo": "etiennecollin/wave",
+  "switch_footprints": 18,
+  "switch_footprints_with_any_model": 18,
+  "switch_rate": 0.0
+ },
+ "wired-pierce": {
+  "by_cause": {
+   "other": {
+    "absolute": 10,
+    "stock-live": 2
+   },
+   "switch": {}
+  },
+  "other_footprints": 17,
+  "other_footprints_with_any_model": 11,
+  "other_rate": 0.118,
+  "repo": "durken1/pierce",
+  "switch_footprints": 18,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "wren": {
+  "by_cause": {
+   "other": {
+    "absolute": 6,
+    "stock-dead": 6,
+    "stock-live": 21
+   },
+   "switch": {}
+  },
+  "other_footprints": 389,
+  "other_footprints_with_any_model": 33,
+  "other_rate": 0.054,
+  "repo": "oliviahanley/wren-keyboard",
+  "switch_footprints": 244,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "xenon-e": {
+  "by_cause": {
+   "other": {
+    "absolute": 41,
+    "stock-dead": 1
+   },
+   "switch": {}
+  },
+  "other_footprints": 62,
+  "other_footprints_with_any_model": 40,
+  "other_rate": 0.0,
+  "repo": "narinari/xenon-keyboard",
+  "switch_footprints": 28,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "xr63-gl": {
+  "by_cause": {
+   "other": {
+    "absolute": 72,
+    "stock-live": 3
+   },
+   "switch": {
+    "absolute": 100
+   }
+  },
+  "other_footprints": 92,
+  "other_footprints_with_any_model": 75,
+  "other_rate": 0.033,
+  "repo": "gachiham/XR63GL",
+  "switch_footprints": 63,
+  "switch_footprints_with_any_model": 50,
+  "switch_rate": 0.0
+ },
+ "yosino58": {
+  "by_cause": {
+   "other": {
+    "absolute": 47
+   },
+   "switch": {}
+  },
+  "other_footprints": 92,
+  "other_footprints_with_any_model": 43,
+  "other_rate": 0.0,
+  "repo": "sakurachari/yosino58",
+  "switch_footprints": 29,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ },
+ "yosino58-cherry": {
+  "by_cause": {
+   "other": {},
+   "switch": {
+    "absolute": 47
+   }
+  },
+  "other_footprints": 3,
+  "other_footprints_with_any_model": 0,
+  "other_rate": 0.0,
+  "repo": "sakurachari/yosino58",
+  "switch_footprints": 118,
+  "switch_footprints_with_any_model": 43,
+  "switch_rate": 0.0
+ },
+ "yosino58-chocolate": {
+  "by_cause": {
+   "other": {},
+   "switch": {
+    "absolute": 47
+   }
+  },
+  "other_footprints": 3,
+  "other_footprints_with_any_model": 0,
+  "other_rate": 0.0,
+  "repo": "sakurachari/yosino58",
+  "switch_footprints": 118,
+  "switch_footprints_with_any_model": 43,
+  "switch_rate": 0.0
+ },
+ "zero": {
+  "by_cause": {
+   "other": {
+    "stock-live": 33
+   },
+   "switch": {
+    "kiprjmod": 30
+   }
+  },
+  "other_footprints": 45,
+  "other_footprints_with_any_model": 33,
+  "other_rate": 0.733,
+  "repo": "sol/chord-zero",
+  "switch_footprints": 30,
+  "switch_footprints_with_any_model": 30,
+  "switch_rate": 1.0
+ },
+ "zodiark": {
+  "by_cause": {
+   "other": {
+    "absolute": 22,
+    "stock-dead": 1,
+    "stock-live": 35
+   },
+   "switch": {
+    "absolute": 68
+   }
+  },
+  "other_footprints": 118,
+  "other_footprints_with_any_model": 56,
+  "other_rate": 0.297,
+  "repo": "Aleblazer/Zodiark",
+  "switch_footprints": 68,
+  "switch_footprints_with_any_model": 34,
+  "switch_rate": 0.0
+ },
+ "zwerg": {
+  "by_cause": {
+   "other": {
+    "absolute": 26
+   },
+   "switch": {}
+  },
+  "other_footprints": 35,
+  "other_footprints_with_any_model": 26,
+  "other_rate": 0.0,
+  "repo": "floookay/zwerg",
+  "switch_footprints": 25,
+  "switch_footprints_with_any_model": 0,
+  "switch_rate": 0.0
+ }
+}

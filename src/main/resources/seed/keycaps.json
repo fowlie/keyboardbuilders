@@ -1,0 +1,51 @@
+[
+ {
+  "name": "MBK Choc Low Profile",
+  "slug": "mbk",
+  "stem": "choc_v1",
+  "caps": "reduced",
+  "url": "https://splitkb.com/collections/keycaps/products/mbk-choc-low-profile-keycaps"
+ },
+ {
+  "name": "Chicago Stenographer",
+  "slug": "chicago-stenographer",
+  "stem": "choc_v1",
+  "caps": "reduced",
+  "url": "https://github.com/pseudoku/PseudoMakeMeKeyCapProfiles"
+ },
+ {
+  "name": "MCC",
+  "slug": "mcc",
+  "stem": "choc_v1",
+  "caps": "reduced",
+  "url": "https://blog.keeb.io/low-profile-keycap-options-what-works-with-what/"
+ },
+ {
+  "name": "DDC",
+  "slug": "ddc",
+  "stem": "choc_v1",
+  "caps": "reduced",
+  "url": "https://blog.keeb.io/low-profile-keycap-options-what-works-with-what/"
+ },
+ {
+  "name": "Choc V1 PBT sublimated, MX spacing",
+  "slug": "choc-v1-mx-spacing",
+  "stem": "choc_v1",
+  "caps": "full",
+  "url": "https://pandakb.com/shop/parts/keycap/mx-spacing-compatible-keycaps-for-kailh-choc-v1/"
+ },
+ {
+  "name": "Tai-Hao THCS-MX",
+  "slug": "tai-hao-thcs-mx",
+  "stem": "mx_cross",
+  "caps": "reduced",
+  "url": "https://shop.beekeeb.com/products/thcs-blank-black-keycaps"
+ },
+ {
+  "name": "Tai-Hao MT165-MX",
+  "slug": "tai-hao-mt165-mx",
+  "stem": "mx_cross",
+  "caps": "reduced",
+  "url": "https://shop.beekeeb.com/products/mt165-black-blank-keycap"
+ }
+]

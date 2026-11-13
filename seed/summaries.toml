@@ -1,0 +1,1512 @@
+# seed/summaries.toml -- one sentence about each design, quoted from its own
+# README. Drafted by scripts/draft_summaries.py; keyed by SLUG, because a summary
+# is a property of the design and the design is the thing with a slug.
+#
+#   drafted    a machine proposed it, nobody has ruled -- EXCLUDED from the build
+#   confirmed  settled, use it
+#   declined   someone read it and rejected it: the README opens with something
+#              that is not a description of THIS keyboard. EXCLUDED, and the row
+#              persists -- delete it and the next re-draft proposes it again
+#
+# THE TEXT IS A QUOTATION, NOT OUR SENTENCE. It is copied verbatim from the
+# author's README and the page says so and links to it. That is what makes the row
+# cheap to check -- open `source`, read the first paragraph, compare -- and it is
+# why rewording one is a human's job and never the drafter's.
+#
+# `signal` says how it got here:
+#   definitional  it says what the keyboard IS ("The 3w6 is a low profile, split
+#                 ortholinear keyboard with 36 keys"), so a reviewer has nothing
+#                 to decide -- auto-confirmed, and overturnable like any proposal
+#   prose         real prose by the author that is not a definition. Drafted:
+#                 choosing it is a judgement, and the standing preference is that
+#                 a wrong sentence costs more than an absent one
+#   agent         an AGENT read the sentence against the design and ruled. Same
+#                 protection as `human`, deliberately weaker claim -- `signal`
+#                 records WHO vouched, which is the whole value of the column
+#   human         a PERSON ruled, and this row is copied through every re-draft
+#                 untouched -- the file is regenerated from scratch
+#
+# A DESIGN WITH NO ROW HAS NO SUMMARY, and the page says "No summary recorded"
+# rather than inventing one. 123 of the 234 have no row: 70 because their repo holds
+# several designs and one README cannot describe four keyboards, 52 because nothing
+# in their README survives the gates, and 1 because there is no README to read.
+
+[[entry]]
+slug     = "3w6"
+source   = "weteor/3w6"
+summary  = "The 3w6 is a low profile, split ortholinear keyboard with 36 keys."
+verdict  = "confirmed"
+signal   = "definitional"
+note     = ""
+
+[[entry]]
+slug     = "41-1350"
+source   = "cyril279/keyboards"
+summary  = "choc-v2 & v1 switches, MX-spaced, integrated/onboard nrf52840 controller"
+verdict  = "confirmed"
+signal   = "agent"
+note     = "read against the design and confirmed by an agent, not a person"
+
+[[entry]]
+slug     = "42"
+source   = "nglgzz/42"
+summary  = "A mechanical keyboard with 42 keys."
+verdict  = "confirmed"
+signal   = "definitional"
+note     = ""
+
+[[entry]]
+slug     = "4by3"
+source   = "eliassjogreen/4by3"
+summary  = "A 12 key mechanical keypad that can be used as a arrow-pad, function-pad, numpad or whatever else you can imagine that fits onto 12 keys."
+verdict  = "confirmed"
+signal   = "definitional"
+note     = ""
+
+[[entry]]
+slug     = "67-e"
+source   = "str-dst/67mk_E"
+summary  = "A simple \"no frills\" drop-in replacement PCB for the KBDfans 67mkII / 67lite"
+verdict  = "confirmed"
+signal   = "agent"
+note     = "a heading-tagline, same as the kb-elmo family template -- read against the design and confirmed by an agent"
+
+[[entry]]
+slug     = "8pack"
+source   = "cgarcia2097/8-pack"
+summary  = "Inspired by di0ib's Six Pack design, this keypad project is intended for me on learning how to use KiCAD by extending their design to 8 keys. Mishaps, snafus and foobars expected and incoming."
+verdict  = "confirmed"
+signal   = "agent"
+note     = "read against the design and confirmed by an agent, not a person"
+
+[[entry]]
+slug     = "abacus"
+source   = "nickolaij/Abacus_Rev2"
+summary  = "A 45% mechanical keyboard that includes an encoder volume/scroll wheel and RGB lighting."
+verdict  = "confirmed"
+signal   = "definitional"
+note     = ""
+
+[[entry]]
+slug     = "adalyn"
+source   = "marvfpv/adalyn"
+summary  = "36key QAZ-like handwired keyboard based on the great idea by somepin"
+verdict  = "confirmed"
+signal   = "agent"
+note     = "read against the design and confirmed by an agent, not a person"
+
+[[entry]]
+slug     = "adelheid"
+source   = "floookay/adelheid"
+summary  = "The Adelheid is a 75% Alice-like keyboard. It's a fork of FateNozomi's Arisu files: Arisu PCB & Arisu case"
+verdict  = "confirmed"
+signal   = "definitional"
+note     = ""
+
+[[entry]]
+slug     = "aek2-usb"
+source   = "kb-elmo/aek2_usb"
+summary  = "The PCB is built entirely with THT parts to keep a somewhat \"vintage\" look to it and it uses the fullsize 40-pin DIP package ATmega32A. The controller is placed in the exact same location as the one on the original PCB."
+verdict  = "confirmed"
+signal   = "definitional"
+note     = ""
+
+[[entry]]
+slug     = "alice"
+source   = "tyraelwastaken/equanimity"
+summary  = "There were no design goals for the project, it was simply what I wanted to see in a keyboard."
+verdict  = "declined"
+signal   = "agent"
+note     = "describes the absence of design goals, not the keyboard"
+
+[[entry]]
+slug     = "anavi-arrows"
+source   = "anavitechnology/anavi-arrows"
+summary  = "Open source programmable keypad with 4 mechanical switches and a rotary encoder."
+verdict  = "confirmed"
+signal   = "agent"
+note     = "this bolded tagline is the README's real first line; a CAPTION-gate bug in measure_summaries.py was misreading it as an image caption (fixed this session), so the extractor previously fell through to the next paragraph's more generic sentence"
+
+[[entry]]
+slug     = "anavi-macro-pad-10"
+source   = "anavitechnology/anavi-macro-pad-10"
+summary  = "Open source programmable keypad with 9 mechanical switches and a rotary encoder."
+verdict  = "confirmed"
+signal   = "agent"
+note     = "same CAPTION-gate bug as anavi-arrows -- this bolded tagline is the README's real first line"
+
+[[entry]]
+slug     = "anavi-macro-pad-12"
+source   = "anavitechnology/anavi-macro-pad-12"
+summary  = "Mini hot-swappable mechanical keyboard with 12 Cherry MX compatible switches, translucent key caps, USB-C, RP2040 microcontroller, mini OLED display, backlighting and under lighting."
+verdict  = "confirmed"
+signal   = "agent"
+note     = "same CAPTION-gate bug as anavi-arrows -- this bolded tagline is the README's real first line"
+
+[[entry]]
+slug     = "andean-condor"
+source   = "guidoism/andean-condor"
+summary  = "48 key monoblock split keyboard"
+verdict  = "confirmed"
+signal   = "agent"
+note     = "read against the design and confirmed by an agent, not a person"
+
+[[entry]]
+slug     = "arisu"
+source   = "fatenozomi/arisu-pcb"
+summary  = "アリス PCB designed using KiCad. The layout is inspired by Lyn's EM7 and TGR Alice with some modification of my own."
+verdict  = "confirmed"
+signal   = "agent"
+note     = "read against the design and confirmed by an agent, not a person"
+
+[[entry]]
+slug     = "atreyu"
+source   = "climent/atreyu"
+summary  = "It all started with a handwired Lily58fied version of the Atreis keyboard."
+verdict  = "declined"
+signal   = "agent"
+note     = "an origin story -- what it started from, not what it is"
+
+[[entry]]
+slug     = "avalanche-hotswap"
+source   = "vlkv/avalanche"
+summary  = "The Avalanche keyboard is an ergonomic split keyboard with 4x6 (or 3x6 if you break off the 'digits' row) column staggered keys, 5 thumb keys, 1 additional key for the pinky (break off-able too) and 2 additional keys for the index finger (64 keys total)."
+verdict  = "confirmed"
+signal   = "definitional"
+note     = ""
+
+[[entry]]
+slug     = "axon"
+source   = "thatfellarobin/axon"
+summary  = "Axon is a 40% custom mechanical keyboard with an emphasis on symmetrically placed through-hole components, inspired by other keyboards such as gingham and plaid. Axon runs on an ATmega328P using VUSB and QMK."
+verdict  = "confirmed"
+signal   = "agent"
+note     = "the README's first paragraph is a photo caption plus a disclaimer (both correctly excluded); this is the paragraph right after"
+
+[[entry]]
+slug     = "aya"
+source   = "dannixon/aya"
+summary  = "Another split keyboard, because the world does not have enough split keyboards. Very, very inspired by the ErgoDox, but with more keys."
+verdict  = "confirmed"
+signal   = "agent"
+note     = "read against the design and confirmed by an agent, not a person"
+
+[[entry]]
+slug     = "bakeneko-65"
+source   = "kkatano/bakeneko-65"
+summary  = "A simple 65% keyboard for DIYers. This project is a special homage to TGR x Singa UNIKORN 60 and OTD 356 Mini. See also the introduction video."
+verdict  = "confirmed"
+signal   = "definitional"
+note     = ""
+
+[[entry]]
+slug     = "banime40"
+source   = "chrischrislolo/banime40"
+summary  = "A 4x10 gasket mounted hotswap ortho keyboard that supports multiple configurations."
+verdict  = "confirmed"
+signal   = "definitional"
+note     = ""
+
+[[entry]]
+slug     = "bartlepslit"
+source   = "kyrremann/bartlesplit"
+summary  = "Bartlesplit is based on Cheapino by Tompi. The original idea was to build a Cheapino with hot swaps, but it evolved into something more!"
+verdict  = "confirmed"
+signal   = "agent"
+note     = "this repo's opening line ('Bartleby is a baby Rat Creature adopted by Fone Bone and Smiley') is the ABOUT gate's own docstring example of a namesake; this is the real description two lines down"
+
+[[entry]]
+slug     = "basketweave"
+source   = "null-ll/basketweave"
+summary  = "Through-hole Alice-style keyboard with arrow keys and a rotary encoder"
+verdict  = "confirmed"
+signal   = "agent"
+note     = "read against the design and confirmed by an agent, not a person"
+
+[[entry]]
+slug     = "blue-team-pad"
+source   = "fearherbs1/blue-team-pad"
+summary  = "An open source macropad for the cyber security analyst."
+verdict  = "confirmed"
+signal   = "definitional"
+note     = ""
+
+[[entry]]
+slug     = "bm42"
+source   = "kb-elmo/bm42"
+summary  = "A simple drop-in replacement PCB for the KPR BM43 with a more sane layout"
+verdict  = "confirmed"
+signal   = "agent"
+note     = "heading-tagline, same kb-elmo template as 67-e -- read against the design and confirmed by an agent"
+
+[[entry]]
+slug     = "bto-layout"
+source   = "bit-trade-one/ADKB96-hardware"
+summary  = "It is a standard rectangle (rectangular) base model of vertical 6 x horizontal 16 keys. Recommended for those who want to make it first, and those who want to stick to the type of key in orthodox form. Comfortable to use as a tester with various switches and key tops."
+verdict  = "confirmed"
+signal   = "agent"
+note     = "read against the design and confirmed by an agent, not a person"
+
+[[entry]]
+slug     = "buzzard"
+source   = "crehmann/buzzard"
+summary  = "Buzzard is a 40 keys ergonomic split keyboard. The layout is inspired by the Architeuthis dux with pinky, ring, index, and inner columns splayed at 15, 5, 0, -5, -5 degrees. However, it as two additional pinky keys and a modified thumb cluster."
+verdict  = "confirmed"
+signal   = "definitional"
+note     = ""
+
+[[entry]]
+slug     = "cantor"
+source   = "diepala/cantor"
+summary  = "The Cantor keyboard is a 42 key diodeless split keyboard, designed with simplicity in mind. It is inspired on the popular corne, ferris and sweep keyboards, aiming to provide a more ergonomic (stronger column stagger) corne-like layout with a simple, easy to assemble and cheap design."
+verdict  = "confirmed"
+signal   = "definitional"
+note     = ""
+
+[[entry]]
+slug     = "cantor-remix"
+source   = "nilokr/cantor-remix"
+summary  = "This is a modified version of the Cantor keyboard, designed by diepala."
+verdict  = "confirmed"
+signal   = "definitional"
+note     = ""
+
+[[entry]]
+slug     = "ccd60"
+source   = "westfoxtrot/ccd60"
+summary  = "ccd60 is a generic 60% PCB used for Cable Car Designs keyboard designs."
+verdict  = "confirmed"
+signal   = "definitional"
+note     = ""
+
+[[entry]]
+slug     = "cheapino"
+source   = "tompi/cheapino"
+summary  = "Probably one of the cheapest split keyboards you can build."
+verdict  = "confirmed"
+signal   = "agent"
+note     = "read against the design and confirmed by an agent, not a person"
+
+[[entry]]
+slug     = "choc-v"
+source   = "brickbots/chocv"
+summary  = "A 36 key choc keyboard based on the Horizon construction and a trimmed down BabyV layout!"
+verdict  = "confirmed"
+signal   = "definitional"
+note     = ""
+
+[[entry]]
+slug     = "choc-v2-env-kb65"
+source   = "Envious-Data/Env-KB65M"
+summary  = "A compact 65% design featuring ISO and ANSI layout support as well as a triple split spacebar. I designed this on a whim so its design can be considered somewhat quirky."
+verdict  = "confirmed"
+signal   = "agent"
+note     = "picked the richer '### About' paragraph over the terser tagline above it -- read against the design and confirmed by an agent"
+
+[[entry]]
+slug     = "chocofly"
+source   = "vlkv/chocofly"
+summary  = "The Chocofly is an ergonomic monosplit keyboard with 4x6 column staggered keys, 4 thumb keys and 2 additional inner keys for the index finger (60 keys total) plus one rotary encoder."
+verdict  = "confirmed"
+signal   = "definitional"
+note     = ""
+
+[[entry]]
+slug     = "chocolatebar"
+source   = "misonoworks/chocolate-bar"
+summary  = "A low-profile 50% keyboard, with less ergonomics than expected!"
+verdict  = "confirmed"
+signal   = "definitional"
+note     = ""
+
+[[entry]]
+slug     = "chouchou"
+source   = "dlip/chouchou"
+summary  = "Chouchou (Japanese for butterfly) is a minimalist unibody keyboard designed to be used with the Taipo layout, but it also can be used as a pretty nice fighting gamepad."
+verdict  = "confirmed"
+signal   = "agent"
+note     = "read against the design and confirmed by an agent, not a person"
+
+[[entry]]
+slug     = "clog"
+source   = "smores56/clog"
+summary  = "The Clog is a split 34-key keyboard with pinky clusters. It is the split version of the [Osprette][osprette], designed by me, which itself was inspired by"
+verdict  = "confirmed"
+signal   = "definitional"
+note     = ""
+
+[[entry]]
+slug     = "contra"
+source   = "ai03-2725/contra"
+summary  = "Extremely low cost ortholinear keyboard"
+verdict  = "confirmed"
+signal   = "agent"
+note     = "read against the design and confirmed by an agent, not a person"
+
+[[entry]]
+slug     = "cornia"
+source   = "vaarai/cornia"
+summary  = "The Cornia keyboard is a split keyboard featuring :"
+verdict  = "confirmed"
+signal   = "definitional"
+note     = ""
+
+[[entry]]
+slug     = "cyclops"
+source   = "westfoxtrot/cyclops_pcb"
+summary  = "Custom PCB that was designed to make a more modern layout from the ISO AEK2"
+verdict  = "confirmed"
+signal   = "agent"
+note     = "read against the design and confirmed by an agent, not a person -- unlike 'cypher' (declined below), this names what changes from the AEK2 rather than only naming itself"
+
+[[entry]]
+slug     = "cypher"
+source   = "westfoxtrot/cypher_pcb"
+summary  = "Custom PCB that was designed for the cypher custom keyboard"
+verdict  = "declined"
+signal   = "agent"
+note     = "circular: 'PCB designed for the cypher custom keyboard' names the design and describes nothing"
+
+[[entry]]
+slug     = "desire65"
+source   = "akyp/desire65-pcb"
+summary  = "Open-source 65% hotswap pcb. Could be useful for keyboard designers looking for a PCB for gasket or top-mounted boards."
+verdict  = "confirmed"
+signal   = "agent"
+note     = "read against the design and confirmed by an agent, not a person"
+
+[[entry]]
+slug     = "discipad"
+source   = "coseyfannitutti/discipad"
+summary  = "17-key numpad assembled with only through hole components, including usb type-c"
+verdict  = "confirmed"
+signal   = "agent"
+note     = "read against the design and confirmed by an agent, not a person"
+
+[[entry]]
+slug     = "discipline"
+source   = "coseyfannitutti/discipline"
+summary  = "65% keyboard assembled with only through hole components, including usb type-c"
+verdict  = "confirmed"
+signal   = "agent"
+note     = "bolded tagline, same phrasing template already confirmed for this author's 'romeo'"
+
+[[entry]]
+slug     = "dizzy40"
+source   = "kb-elmo/dizzy40"
+summary  = "A simple drop-in replacement PCB for the KPR Daisy 40% with more layout options"
+verdict  = "confirmed"
+signal   = "agent"
+note     = "heading-tagline, same kb-elmo template as 67-e -- read against the design and confirmed by an agent"
+
+[[entry]]
+slug     = "dogtag"
+source   = "takashicompany/dogtag"
+summary  = "DogTag is a compact macro pad with 9 keys. It is assembled from a PCB no larger than 100mm x 100mm. It is reversible and can be used as a split macro pad by connecting two units with a TRRS cable. Other features include a rotary encoder and MX sockets for hot-swapping of keyswitches."
+verdict  = "confirmed"
+signal   = "definitional"
+note     = ""
+
+[[entry]]
+slug     = "dolphin"
+source   = "evyd13/fin-pad"
+summary  = "Replacement PCB for Lin Dolphin Pad."
+verdict  = "confirmed"
+signal   = "agent"
+note     = "read against the design and confirmed by an agent, not a person"
+
+[[entry]]
+slug     = "dropout"
+source   = "enochchau/dropout-numpad"
+summary  = "(mechanical numpad w/ roatry encoder)"
+verdict  = "declined"
+signal   = "agent"
+note     = "a four-word parenthetical aside, with the author's typo in it"
+
+[[entry]]
+slug     = "egg58v2"
+source   = "eggsworks/egg58"
+summary  = "The egg58 is a staggered-column, split, low-profile keyboard with 58 keys and per-key RGB. The PCB is reversible (i.e. the same part is used for both hands). This repository contains its design files."
+verdict  = "confirmed"
+signal   = "definitional"
+note     = ""
+
+[[entry]]
+slug     = "elcantorhs"
+source   = "azhizhinov/elcantorhs"
+summary  = "The El Cantor HS keyboard is a 44 key diodeless split keyboard with support for hotswap sockets, designed with simplicity in mind."
+verdict  = "confirmed"
+signal   = "definitional"
+note     = ""
+
+[[entry]]
+slug     = "eliza"
+source   = "kb-elmo/eliza"
+summary  = "A seamless, gasketmounted 12u 40% alice-style ergo keyboard"
+verdict  = "confirmed"
+signal   = "agent"
+note     = "heading-tagline, same kb-elmo template as 67-e -- read against the design and confirmed by an agent"
+
+[[entry]]
+slug     = "endzone34"
+source   = "takashicompany/endzone34"
+summary  = "ミニマルな34キーのキーボードです。LEDとOLED、MXソケットに対応しています。"
+verdict  = "confirmed"
+signal   = "agent"
+note     = "\"This is a minimal 34-key keyboard. It supports LED, OLED, and MX sockets.\" -- Japanese, missed by the English-keyword ABOUT gate, same failure mode as unison"
+
+[[entry]]
+slug     = "env-kb60-mxhs"
+source   = "Envious-Data/Env-KB60F"
+summary  = "This is a simple-ish 60% design using a Raspberry Pi Pico. Its a standard 60% layout supporting ANSI and ISO."
+verdict  = "confirmed"
+signal   = "agent"
+note     = "the drafter's first paragraph ('Another Custom Mechanical Keyboard... F stands for FOREHEAD!') is the same shape as 'spleeb' -- names the keyboard, describes nothing. This is the real description, three paragraphs down under an '### About!' heading, past an image the extractor's first-paragraph reach never gets past"
+
+[[entry]]
+slug     = "env-mcro"
+source   = "Envious-Data/Env-MCRO"
+summary  = "A Raspberry Pi Pico powered Macro board, like a Streamdeck but cheaper and simpler."
+verdict  = "confirmed"
+signal   = "agent"
+note     = "the tagline right under the title -- read against the design and confirmed by an agent"
+
+[[entry]]
+slug     = "env-rgb"
+source   = "Envious-Data/Env-KB"
+summary  = "A custom mechanical keyboard inspired by the CFTKB Mysterium."
+verdict  = "confirmed"
+signal   = "definitional"
+note     = ""
+
+[[entry]]
+slug     = "ergoslab"
+source   = "tomsaleeba/ergoslab"
+summary  = "a columnar stagged keyboard that uses a combination of Cherry MX (or compatible) and Kailh choc switches to pack in a heap of thumb keys"
+verdict  = "confirmed"
+signal   = "definitional"
+note     = ""
+
+[[entry]]
+slug     = "eternal-keypad"
+source   = "duckyb/eternal-keypad"
+summary  = "Eternal Keypad is an open-source input device for gaming that can be assembled for both right and left hand mouse users."
+verdict  = "confirmed"
+signal   = "agent"
+note     = "bolded phrases within the sentence (markdown emphasis) tripped the CAPTION/structural gates; buried under a 'Scope of the project' heading past a sponsor-badge block"
+
+[[entry]]
+slug     = "fnrow"
+source   = "dinofizz/fnrow-pcb"
+summary  = "FnRow is a mechanical keyboard which features a single row of switches, in the form of a \"function row\". Each switch is configurable and can be programmed to perform as any key on a typical keyboard, or even combinations of key presses."
+verdict  = "confirmed"
+signal   = "definitional"
+note     = ""
+
+[[entry]]
+slug     = "for-science"
+source   = "peej/for-science-keyboard"
+summary  = "For Science is a 46 key ortholinear split keyboard PCB with a 3 key thumb cluster."
+verdict  = "confirmed"
+signal   = "definitional"
+note     = ""
+
+[[entry]]
+slug     = "friedrich"
+source   = "marvfpv/friedrich"
+summary  = "50% 3D printed keyboard designed to be printable on regular sized 3d printers."
+verdict  = "confirmed"
+signal   = "agent"
+note     = "read against the design and confirmed by an agent, not a person"
+
+[[entry]]
+slug     = "g35"
+source   = "kaylynb/mechllama-g35"
+summary  = "A 35 key left-handed columnar layout macropad."
+verdict  = "confirmed"
+signal   = "definitional"
+note     = ""
+
+[[entry]]
+slug     = "game-hand"
+source   = "kb-elmo/gamehand"
+summary  = "Left-hand gaming keypad with a 3D printed case"
+verdict  = "confirmed"
+signal   = "agent"
+note     = "heading-tagline, same kb-elmo template as 67-e -- the only real description in an otherwise pure license/file-links README"
+
+[[entry]]
+slug     = "glyphkbd"
+source   = "galile0-designs/glyphkbd"
+summary  = "5x13 ortholinear plus TKL nav and arrow clusters - Key layout inspired by drFaustroll's m65 as well as Stucco."
+verdict  = "confirmed"
+signal   = "agent"
+note     = "read against the design and confirmed by an agent, not a person"
+
+[[entry]]
+slug     = "gud70"
+source   = "evyd13/gud70-pcb"
+summary  = "This is a replacement PCB for the Uniqey C70. Manufacturing files are included."
+verdict  = "confirmed"
+signal   = "definitional"
+note     = ""
+
+[[entry]]
+slug     = "gummy-key"
+source   = "gumorr/gummykey"
+summary  = "a split keyboard that i made"
+verdict  = "confirmed"
+signal   = "definitional"
+note     = ""
+
+[[entry]]
+slug     = "helix"
+source   = "makotokurauchi/helix"
+summary  = "A compact split ortholinear keyboard."
+verdict  = "confirmed"
+signal   = "definitional"
+note     = ""
+
+[[entry]]
+slug     = "hotswap-rgb-dumbpad"
+source   = "imchipwood/dumbpad"
+summary  = "dumbpad is a simple macropad with support for up to two rotary encoders, designed to use QMK firmware."
+verdict  = "confirmed"
+signal   = "definitional"
+note     = ""
+
+[[entry]]
+slug     = "hub20"
+source   = "joshajohnson/hub20"
+summary  = "Hub20 is a numpad with a bunch of features you never knew you needed."
+verdict  = "confirmed"
+signal   = "definitional"
+note     = ""
+
+[[entry]]
+slug     = "index-tab"
+source   = "kyrremann/index-tab"
+summary  = "Index Tab is a 6x13 ortho keyboard. Tried to make it look like index tab that are used as dividers in drawers and ring binders. The reason for 13 in width instead of 12 is that I’m Norwegian, and neeed that added row for `æøå`."
+verdict  = "confirmed"
+signal   = "definitional"
+note     = ""
+
+[[entry]]
+slug     = "janus"
+source   = "skarrmann/janus"
+summary  = "Janus is a small 34 key split ortholinear keyboard, powered by two Seeed XIAO RP2040 with the keyboards halves connected by an ethernet cable."
+verdict  = "confirmed"
+signal   = "definitional"
+note     = ""
+
+[[entry]]
+slug     = "jp60"
+source   = "ai03-2725/jp60"
+summary  = "GH60-compatible JIS-like hotswap keyboard PCB"
+verdict  = "confirmed"
+signal   = "agent"
+note     = "read against the design and confirmed by an agent, not a person"
+
+[[entry]]
+slug     = "juliet"
+source   = "na-cly/juliet"
+summary  = "PCB Compatible with other romeo parts. Only PCB was customized. Other components still labeled Romeo where applicable."
+verdict  = "declined"
+signal   = "agent"
+note     = "about which Romeo parts it fits, not what the keyboard is"
+
+[[entry]]
+slug     = "junco"
+source   = "daneski13/junco"
+summary  = "Named after a small North American bird, Junco is a 60% Raspberry Pi Pico powered split keyboard boasting a 4x6 layout with an aggressive columnar stagger, 2-4 rotary encoders, and per-key RGB lighting."
+verdict  = "confirmed"
+signal   = "agent"
+note     = "read against the design and confirmed by an agent, not a person"
+
+[[entry]]
+slug     = "k34"
+source   = "wongjingping/k34"
+summary  = "The k34 is a unibody, column-staggered, high-profile, 3d-printed, tray-mount keyboard with 34 keys."
+verdict  = "confirmed"
+signal   = "agent"
+note     = "the README's real first paragraph opens 'This project contains the pcb designs for the k34 keyboard' (a REPO_LEVEL trigger, correctly dropped); this is the clean second sentence of the same paragraph"
+
+[[entry]]
+slug     = "kaly"
+source   = "dwctor/kaly"
+summary  = "The Kaly is a 42 key DIY keyboard for those that seek an affordable and confortable split keyboard that is easy to build for first timers!"
+verdict  = "confirmed"
+signal   = "definitional"
+note     = ""
+
+[[entry]]
+slug     = "kapl"
+source   = "keyzog/kapl"
+summary  = "The Kapl is a split ergonomic keyboard with 70 keys (7x5). Please read project wiki for details"
+verdict  = "confirmed"
+signal   = "definitional"
+note     = ""
+
+[[entry]]
+slug     = "karina"
+source   = "autumnisacutie/karina"
+summary  = "A 80-ish% Alps keyboard with an LED bar"
+verdict  = "confirmed"
+signal   = "definitional"
+note     = ""
+
+[[entry]]
+slug     = "kb58-pico"
+source   = "beanaccle/kb58_pico"
+summary  = "Split ortholinear keyboard."
+verdict  = "confirmed"
+signal   = "agent"
+note     = "three words, but a real and complete description -- read against the design and confirmed by an agent"
+
+[[entry]]
+slug     = "kbd-template"
+source   = "takashicompany/radialex"
+summary  = "Radialex(ラディアレックス)は一体型の40%のキーボードです。"
+verdict  = "confirmed"
+signal   = "agent"
+note     = "\"Radialex is an integrated/unibody 40% keyboard.\" -- Japanese, missed by the English-keyword ABOUT gate, same failure mode as unison"
+
+[[entry]]
+slug     = "kbic65"
+source   = "b-karl/KBIC65"
+summary  = "A 65% mechanical keyboard with a ProMicro controller footprint."
+verdict  = "confirmed"
+signal   = "agent"
+note     = "trimmed to the first sentence; the README's second sentence ('Repository contains KiCad PCB design files...') is a REPO_LEVEL trigger"
+
+[[entry]]
+slug     = "keaboard-rev1"
+source   = "keawade/keaboard"
+summary  = "A split ergo 4x6 keyboard designed by Keith Wade."
+verdict  = "confirmed"
+signal   = "definitional"
+note     = ""
+
+[[entry]]
+slug     = "klor"
+source   = "geigeigeist/klor"
+summary  = "KLOR is a 36-42 key column-staggered split keyboard. It supports a per-key RGB matrix, encoders, OLED displays, haptic feedback, speakers, a Pixart Paw3204 trackball, the SplitKB tenting puck, and four different layouts, through break-off parts."
+verdict  = "confirmed"
+signal   = "definitional"
+note     = ""
+
+[[entry]]
+slug     = "kobold"
+source   = "tzarc/keyboards"
+summary  = "The Kobold is an ortho 4x4 macropad, as a replacement for a bm16s with modern hardware."
+verdict  = "confirmed"
+signal   = "agent"
+note     = "tzarc/keyboards hosts three designs (Djinn, Ghoul, Kobold) under one README, but only Kobold currently has a design row citing this repo, and the quote is from the README's own '## Kobold' section naming the design exactly -- unambiguous, unlike a real shared-repo case"
+
+[[entry]]
+slug     = "koca58"
+source   = "hardware7253/koca58"
+summary  = "A Lily58 variant featuring SMT components, RJ45 interconnect and STM32F103 MCU."
+verdict  = "confirmed"
+signal   = "agent"
+note     = "clean definitional sentence; failed only because it never says the literal word 'keyboard'"
+
+[[entry]]
+slug     = "kuro65"
+source   = "0x544D/kuro65"
+summary  = "The hot-swappable ISO mechanical keyboard PCB."
+verdict  = "confirmed"
+signal   = "definitional"
+note     = ""
+
+[[entry]]
+slug     = "la-nc"
+source   = "subrezon/la_nc"
+summary  = "Inspired by keyboards like Planck, Lumberjack and Lesovoz, la_nc aims to deliver a lightly split, ortho typing experience in a similar footprint, as well as an easy build process."
+verdict  = "confirmed"
+signal   = "agent"
+note     = "read against the design and confirmed by an agent, not a person"
+
+[[entry]]
+slug     = "lagom"
+source   = "mohoyt/lagom"
+summary  = "Lagom is an easy to build 65% keyboard using only through hole components. It uses a separate microcontroller (like the Pro Micro, Elite C or something RP2040 based) to enable flexibility in firmware and connectivity and to further simplify the soldering experience (no more tricksy USB ports)."
+verdict  = "confirmed"
+signal   = "definitional"
+note     = ""
+
+[[entry]]
+slug     = "lancer-hotswap"
+source   = "subrezon/lancer"
+summary  = "The Lancer is a 36-key ortholinear keyboard with a light split and a focus on compact footprint and portability. It is a direct successor to la_nc, and is very much inspired by other keyboards like Planck, Lumberjack and Lesovoz."
+verdict  = "confirmed"
+signal   = "definitional"
+note     = ""
+
+[[entry]]
+slug     = "largelad"
+source   = "hyphen-ated/large-lad-keyboard"
+summary  = "148 key hotswap keyboard with a Standard US layout at the core."
+verdict  = "confirmed"
+signal   = "agent"
+note     = "read against the design and confirmed by an agent, not a person"
+
+[[entry]]
+slug     = "layout-jopr"
+source   = "joelproko/keyboard_layout_jopr"
+summary  = "This is my first attempt at a custom keyboard. It's inspired, among others, by The firmware is located at"
+verdict  = "confirmed"
+signal   = "definitional"
+note     = ""
+
+[[entry]]
+slug     = "lck75"
+source   = "lyso1/lck75"
+summary  = "a 75% through-hole keyboard designed by myself with inspiration from the CFTKB Discipline and Yiancar Gingham"
+verdict  = "confirmed"
+signal   = "definitional"
+note     = ""
+
+[[entry]]
+slug     = "lime"
+source   = "hellsingcoder/limekeyboard"
+summary  = "Lime is a 6×4+6 keys column-staggered split keyboard with encoder and joystick support. Based on Lily58, Corne, Helix and Sofle keyboards. This board features a reversible PCB, OLEDs, Underglow and Bluetooth support."
+verdict  = "confirmed"
+signal   = "definitional"
+note     = ""
+
+[[entry]]
+slug     = "litl"
+source   = "mohoyt/litl"
+summary  = "Litl is an easy to build 40% keyboard using only through hole components. It uses a separate microcontroller (like the Pro Micro or Elite C) to enable flexibility in connectivity and to further simplify the soldering experience (no more tricksy USB ports)."
+verdict  = "confirmed"
+signal   = "definitional"
+note     = ""
+
+[[entry]]
+slug     = "lotus58"
+source   = "tweetydabird/lotus58"
+summary  = "Lotus 58 Classic is the wired designs of the Lotus keyboard. Wireless with BLE and 2.4Ghz dongled wireless reside in other repositories."
+verdict  = "confirmed"
+signal   = "agent"
+note     = "heading-tagline; the README's actual first paragraph is a disclaimer (correctly excluded already)"
+
+[[entry]]
+slug     = "lumberjack"
+source   = "peej/lumberjack-keyboard"
+summary  = "Lumberjack is a split 5x12 ortholinear keyboard PCB using through-hole components only."
+verdict  = "confirmed"
+signal   = "definitional"
+note     = ""
+
+[[entry]]
+slug     = "m0110a-qmk"
+source   = "kb-elmo/m0110a_usb"
+summary  = "The PCB is built entirely with THT parts to keep a somewhat \"vintage\" look to it and it uses the fullsize 40-pin DIP package ATmega32A. The controller is placed in the exact same location as the one on the original PCB meaning that it can be accessed through the plate cutout under the spacebar."
+verdict  = "confirmed"
+signal   = "definitional"
+note     = ""
+
+[[entry]]
+slug     = "m0116-usb"
+source   = "kb-elmo/m0116_usb"
+summary  = "The PCB is built entirely with THT parts to keep a somewhat \"vintage\" look to it and it uses the fullsize 40-pin DIP package ATmega32A. The controller is placed in the exact same location as the one on the original PCB meaning that it can be accessed through the plate cutout under the spacebar."
+verdict  = "confirmed"
+signal   = "definitional"
+note     = ""
+
+[[entry]]
+slug     = "m3n3van-rev2"
+source   = "matthewdias/m3n3van"
+summary  = "The rev2 pcb is a return to the original idea of simply a minivan with 2x3u split space."
+verdict  = "confirmed"
+signal   = "agent"
+note     = "a bullet-point line (structurally excluded by the extractor), one of two describing rev1 and rev2 separately -- this one matches the '-rev2' slug"
+
+[[entry]]
+slug     = "macrocat"
+source   = "catmunch/macrocat"
+summary  = "A cat like macro keyboard/numpad."
+verdict  = "confirmed"
+signal   = "definitional"
+note     = ""
+
+[[entry]]
+slug     = "masonry"
+source   = "dcpedit/masonry"
+summary  = "Inspired by Bruce the Keyboard, this is a 12 column version with a less aggressive stagger."
+verdict  = "confirmed"
+signal   = "agent"
+note     = "read against the design and confirmed by an agent, not a person"
+
+[[entry]]
+slug     = "meson"
+source   = "PyrooL/Meson"
+summary  = "A split 3x14 keyboard with spacebars on a fourth row. Reversible MX//Alps/Choc support."
+verdict  = "confirmed"
+signal   = "definitional"
+note     = ""
+
+[[entry]]
+slug     = "mikeneko-65"
+source   = "takishim/mikeneko65"
+summary  = "A simple 65% keyboard for DIYers. This project was forked from kkatano's Bakeneko65."
+verdict  = "confirmed"
+signal   = "definitional"
+note     = ""
+
+[[entry]]
+slug     = "millipad"
+source   = "glozares/millipad"
+summary  = "I decided to make a custom mechanical keypad to use for myself as my favorite keyboard layout, the 65%, does not have F1 through F12."
+verdict  = "confirmed"
+signal   = "agent"
+note     = "extracted from inside a 'Hi there!' paragraph that correctly trips REPO_LEVEL as a whole; this sentence alone is clean and informative"
+
+[[entry]]
+slug     = "mini-e-li-xi-vy"
+source   = "minibois/elixivy"
+summary  = "This PCB is compatible with KBDFans' 65% low profile case/plate and Cherry MX(-like) keyswitches."
+verdict  = "confirmed"
+signal   = "agent"
+note     = "read against the design and confirmed by an agent, not a person"
+
+[[entry]]
+slug     = "mini-ten-key-plus"
+source   = "minibois/ten-key-plus"
+summary  = "the mini Ten Key Plus, a Pro Micro based numpad/macropad PCB, suitable for up to 25 MX(-like) keyswitches and a (tactile) rotary encoder."
+verdict  = "confirmed"
+signal   = "agent"
+note     = "heading line, trimmed to drop the 'Repository for' opener (a REPO_LEVEL trigger)"
+
+[[entry]]
+slug     = "minim"
+source   = "matthewdias/minim"
+summary  = "A symmetrical 50% keyboard"
+verdict  = "confirmed"
+signal   = "agent"
+note     = "four words, but a real and complete description -- read against the design and confirmed by an agent"
+
+[[entry]]
+slug     = "model-b"
+source   = "trojanpinata/model-b"
+summary  = "The Model-B is the second keyboard I've developed and aims to be the direct successor to the Model-K. I made this with the intention to develop a hotswappable keyboard which uses SMD components in order to reduce soldering overhead and learn microcontroller hardware development."
+verdict  = "confirmed"
+signal   = "definitional"
+note     = ""
+
+[[entry]]
+slug     = "mx-5160"
+source   = "evyd13/mx-5160"
+summary  = "PCB and plate files for retrofitting MX type switches in a Chicony 5160c"
+verdict  = "confirmed"
+signal   = "agent"
+note     = "read against the design and confirmed by an agent, not a person"
+
+[[entry]]
+slug     = "mysterium"
+source   = "coseyfannitutti/mysterium"
+summary  = "TKL keyboard that can be entirely assembled using only through hole components, including usb type c"
+verdict  = "confirmed"
+signal   = "agent"
+note     = "this bolded line was previously misread as an image caption by a CAPTION-gate bug in measure_summaries.py, fixed this session"
+
+[[entry]]
+slug     = "nack"
+source   = "farfalleflickan/nack"
+summary  = "nack keyboard - uses QMK A ISO-friendly, 13x4 keyboard. It has hardware support for basically all the bells and whistles that qmk can provide!"
+verdict  = "declined"
+signal   = "agent"
+note     = "a heading ran into the prose -- 'uses QMK A ISO-friendly, 13x4 keyboard' is not a sentence"
+
+[[entry]]
+slug     = "neopad"
+source   = "ivndbt/neopad"
+summary  = "Neopad is a little macropad with four switches and two rotary encoders, made by through hole components only. It's designed to use QMK firmware."
+verdict  = "confirmed"
+signal   = "definitional"
+note     = ""
+
+[[entry]]
+slug     = "noah"
+source   = "kb-elmo/noah_avr"
+summary  = "Atmega32u4 based drop-in replacement PCB for the Matrix Noah keyboard"
+verdict  = "confirmed"
+signal   = "agent"
+note     = "heading-tagline, same kb-elmo template as 67-e -- the rest of the README is pure BOM/license"
+
+[[entry]]
+slug     = "np12"
+source   = "nut1414/np12"
+summary  = "yet another 12 keys macro pad using QMK Firmware"
+verdict  = "confirmed"
+signal   = "agent"
+note     = "read against the design and confirmed by an agent, not a person"
+
+[[entry]]
+slug     = "num-discipline"
+source   = "ericrlau/numdiscipline"
+summary  = "A modified version of the great looking Discipline through hole keyboard design by coseyfannitutti to add numpad."
+verdict  = "confirmed"
+signal   = "definitional"
+note     = ""
+
+[[entry]]
+slug     = "omega"
+source   = "makenova/omega"
+summary  = "The omega is a hot swap 30%(30 or 29 keys depending on the layout you choose) inspired by the Zlant and the Alpha 28 keyboards. The omeaga4 adds a 4th with a few options to make this more than a novelty piece."
+verdict  = "confirmed"
+signal   = "agent"
+note     = "read against the design and confirmed by an agent, not a person"
+
+[[entry]]
+slug     = "opendeck"
+source   = "cmdremily/opendeck"
+summary  = "An open hardware/source 32-key (4x8) macro keypad based on QMK firmware."
+verdict  = "confirmed"
+signal   = "definitional"
+note     = ""
+
+[[entry]]
+slug     = "orthocode"
+source   = "jrodna/orthocode"
+summary  = "Custom keyboard designed by me The aim was to create a layout that would take advantage of what your thumbs can do to help with ergonomics. While also keeping compatibility with the controls of most games and allowing standard keycaps to be used."
+verdict  = "declined"
+signal   = "agent"
+note     = "same heading collision: 'designed by me The aim was to create...'"
+
+[[entry]]
+slug     = "osprette"
+source   = "smores56/osprette"
+summary  = "The keyboard is a 34 key unibody that uses any pro-micro compatible daughterboard. It comes with bluetooth support by way of battery terminals and a power switch."
+verdict  = "confirmed"
+signal   = "agent"
+note     = "trimmed -- the paragraph's first sentence ('This repo contains design files for...') is the docstring's own canonical REPO_LEVEL trigger phrase; these next two sentences are clean"
+
+[[entry]]
+slug     = "pandamic"
+source   = "swiftrax/Pandamic"
+summary  = "A 65% mechanical keyboard with a rotary encoder and numpad moved to the left (not mirrored)"
+verdict  = "confirmed"
+signal   = "definitional"
+note     = ""
+
+[[entry]]
+slug     = "paws60"
+source   = "horrortroll/keebproj"
+summary  = "The Paws60 is 63 key (60%) keyboard. It is based on Bakeneko60."
+verdict  = "confirmed"
+signal   = "agent"
+note     = "repo is a warehouse of several of the author's keyboards, but this quote is from the Paws60-specific '### About Paws60' subsection, not the collection blurb, and only Paws60 currently cites this repo"
+
+[[entry]]
+slug     = "piantor"
+source   = "beekeeb/piantor"
+summary  = "The Piantor Keyboard is a 42-key or 36-key wired, diodeless, non-flippable, low profile choc v1 (hybrid hotswap and non-hotswap/soldered-in), aggressive column staggered, programmable ergonomic mechnical split keyboard powered by Rasyberry Pi Pico or other compatible RP2040 boards."
+verdict  = "confirmed"
+signal   = "definitional"
+note     = ""
+
+[[entry]]
+slug     = "pica40"
+source   = "zzeneg/pica40"
+summary  = "Split keyboard with 40 keys using XIAO controllers."
+verdict  = "confirmed"
+signal   = "agent"
+note     = "carried forward from the 'full' slug, which an agent confirmed this same quote for before the design was renamed to 'pica40' -- the rename orphaned that row and the re-draft could not find it under the new slug"
+
+[[entry]]
+slug     = "pill60"
+source   = "iktas/pill60"
+summary  = "This is Pill 60, it offers various bottom row layout, a stepped caps, an OLED screen, and two rotary encoder, and uses Kailh Hotswap Socket, and underglow RGB LED."
+verdict  = "confirmed"
+signal   = "agent"
+note     = "read against the design and confirmed by an agent, not a person"
+
+[[entry]]
+slug     = "pinky3"
+source   = "tamanishi/Pinky3"
+summary  = "A split 3 x 7 vertically staggered keys and 4 thumb keys keyboard. An idea is inspired from crkbd, Lily58, Ergo42 and Helix."
+verdict  = "confirmed"
+signal   = "agent"
+note     = "the extractor tripped on the leading '> **Warning**' blockquote ahead of this paragraph"
+
+[[entry]]
+slug     = "pinky4"
+source   = "tamanishi/Pinky4"
+summary  = "A split 4 x 7 vertically staggered keys and 4 thumb keys keyboard. An idea is inspired from crkbd, Lily58, Ergo42 and Helix. Pinky4 is designed for PoC."
+verdict  = "confirmed"
+signal   = "agent"
+note     = "same shape as pinky3 -- leading blockquote warning tripped the extractor"
+
+[[entry]]
+slug     = "pix"
+source   = "sendz/pix"
+summary  = "A simple macropad with screen and rotary encoder"
+verdict  = "confirmed"
+signal   = "definitional"
+note     = ""
+
+[[entry]]
+slug     = "plaid"
+source   = "hsgw/plaid"
+summary  = "The 4x12 ortholinear keyboard kit made by through hole components only."
+verdict  = "confirmed"
+signal   = "definitional"
+note     = ""
+
+[[entry]]
+slug     = "plain60-c"
+source   = "evyd13/plain60-c"
+summary  = "This universal 60% PCB is designed to support as little layouts as possible without limiting usability for most users. The reason I did this is because other PCBs made for this form factor usually have so many supported layouts that it could almost qualify as swiss cheese."
+verdict  = "confirmed"
+signal   = "agent"
+note     = "read against the design and confirmed by an agent, not a person"
+
+[[entry]]
+slug     = "pluckey"
+source   = "floookay/pluckey"
+summary  = "the pluckey is an ergodox like split keyboard with more pronounced columnal stagger and a vertical space key."
+verdict  = "confirmed"
+signal   = "definitional"
+note     = ""
+
+[[entry]]
+slug     = "pluto12"
+source   = "psuieee/pluto12"
+summary  = "The pluto12 is a 4x3 macropad designed for use in the Penn State IEEE Student Chapter's 2021-22 workshop series. Designed by the 2021-22 Penn State IEEE Projects Committee."
+verdict  = "confirmed"
+signal   = "definitional"
+note     = ""
+
+[[entry]]
+slug     = "potato65"
+source   = "aeonstrife/potato65"
+summary  = "PCB, Plate and Case files for Potato65 keyboard."
+verdict  = "declined"
+signal   = "agent"
+note     = "lists which files the repo holds, not what the keyboard is"
+
+[[entry]]
+slug     = "prkl30"
+source   = "erkhal/prkl30"
+summary  = "30% Custom mechanical keyboard designed for the Finnish Mechanical Keyboard Community"
+verdict  = "confirmed"
+signal   = "agent"
+note     = "read against the design and confirmed by an agent, not a person"
+
+[[entry]]
+slug     = "pteron56v0"
+source   = "kraken-jokes/pteron-pcb"
+summary  = "This project is the evolution of the Pteron-Keyboard project, an incredible ergonomic keyboard that was handwired only."
+verdict  = "confirmed"
+signal   = "definitional"
+note     = ""
+
+[[entry]]
+slug     = "qez"
+source   = "str-dst/QEZ"
+summary  = "A seamless, gasketmounted QAZ-like 40% keyboard"
+verdict  = "confirmed"
+signal   = "agent"
+note     = "heading-tagline, same kb-elmo/str-dst template as 67-e"
+
+[[entry]]
+slug     = "quefrency-rev1"
+source   = "keebio/quefrency-rev1-pcb"
+summary  = "Quefrency Rev. 1 Keyboard PCB"
+verdict  = "declined"
+signal   = "agent"
+note     = "the design's own name and nothing else"
+
+[[entry]]
+slug     = "redherring"
+source   = "dcpedit/redherring"
+summary  = "Red Herring is a 75% ortholinear keyboard with staggered columns and a split ergonomic layout similar to an Arisu/Alice. Here you will find the KiCad 6 files for the PCB and plate, along with Illustrator files for the case and wrist rest. Keyboard features:"
+verdict  = "confirmed"
+signal   = "definitional"
+note     = ""
+
+[[entry]]
+slug     = "redox-rev1"
+source   = "mattdibi/redox-keyboard"
+summary  = "The Redox project is an open-source, QMK (Quantum Mechanical Keyboard Firmware) powered, ergonomic split mechanical keyboard. This repository will be used to share information about the project and instruction on how to use and assemble the Redox keyboard."
+verdict  = "confirmed"
+signal   = "definitional"
+note     = ""
+
+[[entry]]
+slug     = "romeo"
+source   = "coseyfannitutti/romeo"
+summary  = "Staggered 40% QMK and VIA compatible keyboard pcb assembled with only through hole components, including USB Type-C"
+verdict  = "confirmed"
+signal   = "agent"
+note     = "read against the design and confirmed by an agent, not a person"
+
+[[entry]]
+slug     = "rp2040-bakeneko65"
+source   = "lendunistus/rpneko65"
+summary  = "An open source multi-layout PCB for the Bakeneko65"
+verdict  = "confirmed"
+signal   = "agent"
+note     = "this session's CAPTION-gate fix (measure_summaries.py) also un-rejects this repo's bolded opening line ('I do not recommend actually getting this manufactured...'), which is a real disclaimer the DISCLAIMER gate's phrase list doesn't happen to match -- it now blocks this sentence instead of a caption false-positive incidentally saving it. Restored directly rather than widening DISCLAIMER's wording on spec."
+
+[[entry]]
+slug     = "sango"
+source   = "Aidan-OS/Sango"
+summary  = "A 65%ish percent column linear split keyboard."
+verdict  = "confirmed"
+signal   = "definitional"
+note     = ""
+
+[[entry]]
+slug     = "sdra-kb00"
+source   = "drabaioli/sdrakb00"
+summary  = "12 keys hot-swap macropad with rotary encoder."
+verdict  = "confirmed"
+signal   = "agent"
+note     = "read against the design and confirmed by an agent, not a person"
+
+[[entry]]
+slug     = "sesame"
+source   = "kb-elmo/sesame"
+summary  = "Alice like ergo keyboard using only THT parts"
+verdict  = "confirmed"
+signal   = "agent"
+note     = "heading-tagline, same kb-elmo template as 67-e"
+
+[[entry]]
+slug     = "silakka54"
+source   = "squalius-cephalus/silakka54"
+summary  = "Silakka54 is a RP2040 Zero based 54-key column staggered split keyboard. PCB uses hotswap sockets. Design is inspired from REVIUNG41 and Corne keyboards."
+verdict  = "confirmed"
+signal   = "definitional"
+note     = ""
+
+[[entry]]
+slug     = "sith-zhuyin40"
+source   = "sithlord121/slz40"
+summary  = "PCB and keymap files for the SLZ40, a 40s style keyboard with numbers for Zhuyin input."
+verdict  = "confirmed"
+signal   = "agent"
+note     = "read against the design and confirmed by an agent, not a person"
+
+[[entry]]
+slug     = "skeleton-num-pad"
+source   = "skeletonkbd/skeletonnumpad"
+summary  = "シンプルなNumpadです。"
+verdict  = "confirmed"
+signal   = "agent"
+note     = "\"This is a simple Numpad.\" -- thin but real, same bar as the already-confirmed \"gummy-key\""
+
+[[entry]]
+slug     = "skeleton68rev2"
+source   = "skeletonkbd/Frost68"
+summary  = "アクリル積層ケースを使った Alice 配列のキーボードです。（開発時名称: Skeleton68rev2）"
+verdict  = "confirmed"
+signal   = "agent"
+note     = "\"An Alice-layout keyboard using a laminated acrylic case (dev-time name: Skeleton68rev2).\" -- names its own dev-name and describes it; Japanese, missed by the English-keyword ABOUT gate"
+
+[[entry]]
+slug     = "slime88"
+source   = "zykrah/slime88"
+summary  = "A F13 TKL Multi-Layout Hotswap H88-Compat Type-C PCB, designed in KiCAD 6.0."
+verdict  = "confirmed"
+signal   = "definitional"
+note     = ""
+
+[[entry]]
+slug     = "slimorta"
+source   = "ashijanken/slimorta"
+summary  = "A slim and portable keyboad."
+verdict  = "confirmed"
+signal   = "agent"
+note     = "thin, quoted verbatim including the author's typo"
+
+[[entry]]
+slug     = "sofle-pico"
+source   = "jellytitan/sofle-pico"
+summary  = "Sofle is 6×4+5 keys column-staggered split keyboard with encoder support, per-key RGB, dual 128x64 OLEDs, and uses the RP2040 based Raspberry Pi Pico MCU."
+verdict  = "confirmed"
+signal   = "definitional"
+note     = ""
+
+[[entry]]
+slug     = "solheim68"
+source   = "evyd13/solheim68"
+summary  = "This PCB is a direct replacement designed for the VA68M (Mini-USB) from Varmilo. Use this PCB as you wish, the license allows commercial use. Unfortunately it was impossible to support PCB mounted stabilizers on this one."
+verdict  = "declined"
+signal   = "agent"
+note     = "opens well then turns into a licence grant and a stabiliser caveat"
+
+[[entry]]
+slug     = "southpawpcb"
+source   = "kelvinhall05/southpaw75"
+summary  = "The Southpaw75 is a budget FR4 keyboard designed to make a southpaw-style layout available to everyone with as few compromises as possible."
+verdict  = "confirmed"
+signal   = "definitional"
+note     = ""
+
+[[entry]]
+slug     = "soyuz"
+source   = "ai03-2725/soyuz"
+summary  = "A single-PCB numpad kit"
+verdict  = "confirmed"
+signal   = "agent"
+note     = "heading-tagline, same ai03 template already confirmed for 'contra'/'voyager60'"
+
+[[entry]]
+slug     = "spacetime"
+source   = "kyleterry/spacetime-keyboard"
+summary  = "The Spacetime is a ~36% split ortho-linear keyboard based on the Half n Half, ErgoDox and Helix. It has a tripple thumb cluster and an optional palm key. The palm key can be broken off and not used at all if you don't want it."
+verdict  = "confirmed"
+signal   = "definitional"
+note     = ""
+
+[[entry]]
+slug     = "span"
+source   = "idank/spankbd"
+summary  = "Span is a low profile split keyboard with 3x5 column staggered keys with 2u, 1.5u, 1u thumb clusters."
+verdict  = "confirmed"
+signal   = "definitional"
+note     = ""
+
+[[entry]]
+slug     = "speedo"
+source   = "cozykeys/speedo"
+summary  = "The Speedo is a 66-key ergonomic mechanical keyboard heavily inspired by the Atreus/Atreus62."
+verdict  = "confirmed"
+signal   = "agent"
+note     = "second sentence, after dropping the paragraph's REPO_LEVEL-triggering first sentence"
+
+[[entry]]
+slug     = "spleeb"
+source   = "chrishoage/spleeb"
+summary  = "Another split keyboard... a \"Spleeb\"."
+verdict  = "declined"
+signal   = "agent"
+note     = "'Another split keyboard... a Spleeb' -- true, and says nothing"
+
+[[entry]]
+slug     = "squiggle-low-profile"
+source   = "ibnuda/squiggle"
+summary  = "It's a keyboard family which based on my circumstances, preferences, and"
+verdict  = "declined"
+signal   = "agent"
+note     = "truncated mid-clause in the README itself: '...my circumstances, preferences, and'"
+
+[[entry]]
+slug     = "steal-this"
+source   = "obosob/steal_this_keyboard"
+summary  = "here have a keyboard, it's not much -- supports kailh choc (PG1350) switches with choc spacing, no diodes, promicro, reversable (2 pcbs makes 1 keyboard)."
+verdict  = "confirmed"
+signal   = "agent"
+note     = "read against the design and confirmed by an agent, not a person"
+
+[[entry]]
+slug     = "supersplit"
+source   = "tarneaux/supersplit"
+summary  = "I tried to make a keyboard that is easy to use and compact. For this it has an (oversized) 9-key thumbfan and a (non-oversized) 4x6 matrix."
+verdict  = "confirmed"
+signal   = "agent"
+note     = "real prose under a '## What is this?' heading"
+
+[[entry]]
+slug     = "swoop-mx"
+source   = "jimmerricks/swoop"
+summary  = "A WIP fork of David Barr's Sweep, which is itself based on the fabulous Ferris by Pierre Chevalier."
+verdict  = "confirmed"
+signal   = "agent"
+note     = "states lineage, same shape as the already-confirmed 'cantor-remix'"
+
+[[entry]]
+slug     = "tanuki-pcb3"
+source   = "SethSenpai/Tanuki"
+summary  = "The Tanuki is a 40% keyboard that uses a split spacebar design to comfortably switch between layers. The design goal for the Tanuki was to make a staggered 40% keyboard out of materials I had lying around in my workshop. This is also where it gets its name."
+verdict  = "confirmed"
+signal   = "definitional"
+note     = ""
+
+[[entry]]
+slug     = "tartan"
+source   = "hsgw/tartan"
+summary  = "60% keyboard made by through hole components only."
+verdict  = "confirmed"
+signal   = "agent"
+note     = "read against the design and confirmed by an agent, not a person"
+
+[[entry]]
+slug     = "teaqueen"
+source   = "gregandcin/teaqueen"
+summary  = "An Alice Inspired Split Keyboard"
+verdict  = "confirmed"
+signal   = "definitional"
+note     = ""
+
+[[entry]]
+slug     = "tenkey-plusplus"
+source   = "jonbobcar/tenkey_plusplus"
+summary  = "Tenkey++ is a USB-C hotswap numpad with the layout of a standard 10-key. Tenkey++ also has three rotary encoders at the top for additional functionality."
+verdict  = "confirmed"
+signal   = "agent"
+note     = "read against the design and confirmed by an agent, not a person"
+
+[[entry]]
+slug     = "tg4x"
+source   = "mythosmann/tg4x"
+summary  = "Basically an open-source, cheap 45% keyboard. You can use parts from a tg3 keyboard for maximum cheap, or use standard ansi keycaps."
+verdict  = "confirmed"
+signal   = "agent"
+note     = "under an explicit '## Summary:' heading"
+
+[[entry]]
+slug     = "th75"
+source   = "ramonimbao/Herringbone"
+summary  = "Through-hole 75% Keyboard"
+verdict  = "confirmed"
+signal   = "agent"
+note     = "heading-tagline, same kb-elmo-family template as 67-e"
+
+[[entry]]
+slug     = "torn"
+source   = "rtitmuss/torn"
+summary  = "The split keyboard kit made with through hole components. The design has been inspired by the Corne, Plaid and Discipline keyboards."
+verdict  = "confirmed"
+signal   = "definitional"
+note     = ""
+
+[[entry]]
+slug     = "touhoupad-v2"
+source   = "pimentoso/touhoupad_v2"
+summary  = "Ergonomic gamepad to play Touhou Project games. Left-hand controls shoot/slow/bomb, and right hand controls movement. The bomb button is supposed to be pressed with the left thumb."
+verdict  = "confirmed"
+signal   = "agent"
+note     = "specific, real description -- read against the design and confirmed by an agent"
+
+[[entry]]
+slug     = "tripel"
+source   = "peej/tripel-keyboard"
+summary  = "Tripel is a 15 column ortholinear keyboard PCB."
+verdict  = "confirmed"
+signal   = "definitional"
+note     = ""
+
+[[entry]]
+slug     = "twelvekey"
+source   = "kb-elmo/twelvekey"
+summary  = "Simple 12-key mechanical macropad"
+verdict  = "confirmed"
+signal   = "agent"
+note     = "heading-tagline, same kb-elmo template as 67-e"
+
+[[entry]]
+slug     = "ua62"
+source   = "na-cly/UA62"
+summary  = "A Universal PCB for the atreus62 by profet23"
+verdict  = "confirmed"
+signal   = "definitional"
+note     = ""
+
+[[entry]]
+slug     = "un-split"
+source   = "swiftrax/unsplit"
+summary  = "A Kyria layout with some of the thumb keys removed. It is non split and powered by an ATMega32u4-AU. Featuring an exposed component layout with diodes in a bank."
+verdict  = "confirmed"
+signal   = "agent"
+note     = "read against the design and confirmed by an agent, not a person"
+
+[[entry]]
+slug     = "unison"
+source   = "jpskenn/unison"
+summary  = "ユニゾン（Unison）は、GH60互換の60%ケースに収まる狭ピッチキーボードです。"
+verdict  = "confirmed"
+signal   = "agent"
+note     = "the README's actual opening sentence (\"Unison is a narrow-pitch keyboard that fits within a GH60-compatible 60% case\") -- the ABOUT gate is an English-word regex, so it missed this Japanese sentence and fell through to a keycap-compatibility aside four paragraphs down, which only passed because it happens to quote an English product name containing \"Cherry MX\""
+
+[[entry]]
+slug     = "unix60pcb"
+source   = "mkdl/unix60"
+summary  = "The Unix60 is a budget FR4 keyboard designed to make a HHKB-style layout available to everyone with as few compromises as possible."
+verdict  = "confirmed"
+signal   = "definitional"
+note     = ""
+
+[[entry]]
+slug     = "vagrant"
+source   = "sho-keebs/vagrant-10"
+summary  = "PCB for small, 10-key macropad. Compatible with MX-style and Alps switches."
+verdict  = "confirmed"
+signal   = "agent"
+note     = "read against the design and confirmed by an agent, not a person"
+
+[[entry]]
+slug     = "varanidae"
+source   = "tokageitlab/varanidae"
+summary  = "This keyboard layout may look pretty Mad and Hacky at some parts, but there are proper reasons for each of them."
+verdict  = "declined"
+signal   = "agent"
+note     = "defends the layout without describing it"
+
+[[entry]]
+slug     = "voyager60"
+source   = "ai03-2725/voyager60"
+summary  = "A versatile, modern 60% PCB"
+verdict  = "confirmed"
+signal   = "definitional"
+note     = ""
+
+[[entry]]
+slug     = "wired-pierce"
+source   = "durken1/pierce"
+summary  = "pierce 2.0 is a split modular wireless / semi-wireless 36 key column staggered keyboard. The design is inspired by Corne with more pinky stagger as well as only using 1u keycaps. It is possible to build a wireless version or a semi wireless version."
+verdict  = "confirmed"
+signal   = "definitional"
+note     = ""
+
+[[entry]]
+slug     = "wren"
+source   = "oliviahanley/wren-keyboard"
+summary  = "The Wren is a split ergonomic \"system keyboard\". It takes heavy inspiration from the Lily58, Afternoon Labs' Breeze, and SplitKB's Kyria, in addition to employing a case similar to the Corne's."
+verdict  = "confirmed"
+signal   = "definitional"
+note     = ""
+
+[[entry]]
+slug     = "xenon-e"
+source   = "narinari/xenon-keyboard"
+summary  = "Xenon is 60% columnar staggered keyboard."
+verdict  = "confirmed"
+signal   = "definitional"
+note     = ""
+
+[[entry]]
+slug     = "zero"
+source   = "sol/chord-zero"
+summary  = "CHORD ZERO is a stenographic keyboard that can be used with Plover or any other application"
+verdict  = "confirmed"
+signal   = "definitional"
+note     = ""
+
+[[entry]]
+slug     = "zwerg"
+source   = "floookay/zwerg"
+summary  = "The zwerg is a 3x6 (well technically 4x6 I guess?) split ortholinear 40% keyboard. It's heavily inspired by RGBKB.net's Sol 3 of which I own two and absolutely adore."
+verdict  = "confirmed"
+signal   = "definitional"
+note     = ""
+
+[[entry]]
+slug     = "pando"
+source   = "jyap808/pando"
+summary  = "Pando is a wired 58-key column-staggered split keyboard."
+verdict  = "confirmed"
+signal   = "definitional"
+note     = "2026-09-29. The README's first sentence, verbatim. Its second names the chip, the expander and the USB-C link, which the page's own fields carry or should."
+
+[[entry]]
+slug     = "pando58"
+source   = "jyap808/pando58"
+summary  = "Pando58 is a modern RP2040 Zero-based 58-key column staggered split keyboard."
+verdict  = "confirmed"
+signal   = "definitional"
+note     = "2026-09-29. The README's first sentence, verbatim."

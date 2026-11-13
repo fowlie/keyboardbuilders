@@ -1,0 +1,292 @@
+# seed/renames.toml -- slugs that used to name a design, and what they name now.
+#
+# Forgejo #38. Ticket 07
+# decision 8 is the ruling this file implements: **"slugs are mutable and old ones keep
+# resolving. A machine-guessed name is a first draft too, so a rename leaves a redirect
+# rather than a dead link."** That decision is resolved on the map, which is why #38's
+# alternative -- strike the claim and accept dead links -- is not on the table here: it
+# would reopen a closed ticket rather than pick the cheaper implementation.
+#
+# `build_seed.py` reads this file, checks it, and emits
+# `src/main/resources/seed/renames.json` as a flat `was -> now` map. The checks are what
+# make the file safe to hand a redirect:
+#
+#   * every `now` must name a design that CURRENTLY publishes -- a 301 to a 404 is worse
+#     than the 404, because it hides which URL was wrong
+#   * no `was` may be a live slug, or the redirect would shadow a real page
+#   * chains resolve at build time, so the emitted map is always ONE hop. Rename a design
+#     twice and both old URLs point at where it is now, not at each other.
+#
+# A REMOVAL GETS `now = false`, WHICH IS `sources.toml`'s OWN CONVENTION for "settled,
+# and the answer is nothing". `bb3edf7` stopped publishing four `joric/jorne` and
+# `idank/keyboards` fork copies, and `6440167` stopped publishing `ergl` and six
+# `8-pack` duplicate pages. Those pages were WRONG. Redirecting them somewhere would be
+# inventing a destination; a 404 says the true thing. The row still earns its place: it
+# is the difference between a slug a person has ruled on and one nobody has looked at.
+#
+# So this file is the fate of EVERY slug that no longer names a design, and
+# `scripts/check_slug_keys.py` is green only when each one has a row. It reports every
+# slug-keyed row whose slug names no design and which live slugs it resembles; it cannot
+# tell a rename from a removal, and that is exactly the ruling recorded here.
+
+[[entry]]
+was  = "3-w6"
+now  = "3w6"
+why  = "e3ec84f, 2026-08-29. The drafter read the repo directory `3w6` and slugified it to `3-w6`, splitting the name at the digit; the design is spelled 3w6. FIRST RENAME AFTER THE SITE WENT LIVE, and the one that cost `position-scan.json` its entry silently -- the silhouette fell back from the board's own geometry to the QMK layout with no error anywhere"
+
+[[entry]]
+was  = "klor1-3"
+now  = "klor"
+why  = "ebc9a2c, 2026-08-29. `PCB/klor1_3/` is a VERSIONED directory -- KLOR v1.3 -- not a name, and ticket 44's read-the-directory rule is wrong for exactly that shape. The repo's own README opens \"# KLOR SPLIT KEYBOARD\""
+
+[[entry]]
+was  = "nack-v1"
+now  = "nack"
+why  = "ebc9a2c, 2026-08-29. A MERGE rather than a rename: `nack-v1` and `nack-v2` both became `nack` when the two board revisions stopped publishing as separate designs. Both former URLs now name that keyboard, so both owe a 301 to it -- but recorded as what it is, because a merge can lose a fact where a rename cannot"
+
+[[entry]]
+was  = "nack-v2"
+now  = "nack"
+why  = "ebc9a2c, 2026-08-29. The other half of the `nack` merge above"
+
+[[entry]]
+was  = "slimorta-main"
+now  = "slimorta"
+why  = "ddeb64d, 2026-09-02. `PCB/Slimorta_main_board/` -- a repo with ONE PCB calls it the main board, so `main` names the board and not the keyboard. `c65eb25` had already stopped the drafter proposing it and said the confirmed row was a one-word edit for the owner; this is that edit, and it is the second dead URL"
+
+[[entry]]
+was  = "atreyu-pcb2-v2"
+now  = "atreyu"
+why  = "2026-09-06. A MERGE, the same shape as the `nack` pair above. `pcb/v1/atreyu-pcb2.kicad_pcb` and `pcb/v2/atreyu-pcb2.kicad_pcb` are BYTE-IDENTICAL in switch positions -- all 60 coordinates match -- so the repo's v1 and v2 are one keyboard's revisions, and Half B was publishing v2 a second time under a name read off its path. Both URLs now name that keyboard"
+
+[[entry]]
+was  = "v2-choc"
+now  = "atreyu-v2-choc"
+why  = "2026-09-06. A rename, not a merge: the Choc board was always its own row, but Half B named it off its own path -- `pcb/v2-choc/` -- and the site published a keyboard called `v2 choc` by climent with nothing on the page tying it to the Atreyu. Confirming it onto `atreyu/rev2` in seed/boards.toml moves it to Half A, where a human sets the name, which is ticket 44's rule working as written"
+
+# -- Removals. `now = false`: the page was wrong, and a 404 is the right answer. --------
+
+[[entry]]
+was  = "corne-cherry-v3"
+now  = false
+why  = "bb3edf7, 2026-08-29. `joric/jorne` is a FORK of `foostan/crkbd` and still holds its parent's board files, so Half B was minting designs from boards their repo did not author. There is no Jorne v3 to redirect to and the Corne it copied is not this design"
+
+[[entry]]
+was  = "corne-classic"
+now  = false
+why  = "bb3edf7, 2026-08-29. The same fork-copy rule"
+
+[[entry]]
+was  = "corne-light"
+now  = false
+why  = "bb3edf7, 2026-08-29. The same fork-copy rule"
+
+[[entry]]
+was  = "wl-corne-cherry"
+now  = false
+why  = "bb3edf7, 2026-08-29. The same fork-copy rule. `wl` is the wireless board directory, so the name was a directory too"
+
+[[entry]]
+was  = "ergl"
+now  = false
+why  = "6440167, 2026-09-02. It published at 50 KEYS while placing 27 footprints -- 50 is Spacetime's count, and Spacetime publishes beside it from its own board file. A different keyboard wearing its neighbour's number. There is nothing to redirect to: the design was fabricated, not renamed"
+
+[[entry]]
+was  = "8keyv4"
+now  = false
+why  = "6440167, 2026-09-02. One of SIX duplicate pages of `cgarcia2097/8-pack`, each a board revision that took `8pack/rev11` and `rev12` -- records naming the board that still publishes as `8pack`. Not redirected to `8pack` on purpose: these were separate pages for one 8-key macropad, and a 301 would assert they are the same design, which is the variant question ticket 55 has open"
+
+[[entry]]
+was  = "8keysimplev2-8-key-simple"
+now  = false
+why  = "6440167, 2026-09-02. The same 8-pack duplicate"
+
+[[entry]]
+was  = "8keysimplev5-8-key-simple"
+now  = false
+why  = "6440167, 2026-09-02. The same 8-pack duplicate"
+
+[[entry]]
+was  = "8-key-simple-no-logo"
+now  = false
+why  = "6440167, 2026-09-02. The same 8-pack duplicate"
+
+[[entry]]
+was  = "8-key-simple-noschem"
+now  = false
+why  = "6440167, 2026-09-02. The same 8-pack duplicate"
+
+[[entry]]
+was  = "8-key-simple-osu-ontario"
+now  = false
+why  = "6440167, 2026-09-02. The same 8-pack duplicate"
+
+[[entry]]
+was  = "half-swept"
+now  = "sweep-half-swept"
+why  = "2026-09-07. The name was drafted from the board path `Sweep half-swept/half-swept.kicad_pcb`, which dropped the family and left a design called \"half swept\" -- two words naming no keyboard. The author's own README is headed `# Sweep Half Swept`. See seed/names.toml, which is the file that carries the correction; this row is only the redirect it owes the live URL."
+
+[[entry]]
+was  = "sweepbling-lp"
+now  = "sweep-bling-lp"
+why  = "2026-10-01. Drafted from the file name `sweepbling-lp__pcb.kicad_pcb`; the Sweep README names it Sweep Bling LP. See seed/names.toml."
+
+[[entry]]
+was  = "sweepv2"
+now  = "sweep-2"
+why  = "2026-10-01. Drafted from the file name `sweepv2.kicad_pcb`; the Sweep README names it Sweep 2. See seed/names.toml."
+
+[[entry]]
+was  = "3x5-2-dilemma"
+now  = "dilemma-diy-v2"
+why  = "2026-10-01. Drafted from the folder `3x5_2`; the Dilemma README names it Dilemma DIY V2. See seed/names.toml."
+
+[[entry]]
+was  = "3x5-3-dilemma"
+now  = "dilemma-v2"
+why  = "2026-10-01. Drafted from the folder `3x5_3`; the Dilemma README names it Dilemma V2. See seed/names.toml."
+
+[[entry]]
+was  = "3x5-3-procyon-dilemma"
+now  = "dilemma-v3-hotswap"
+why  = "2026-10-01. Drafted from the folder `3x5_3_procyon`; the Dilemma README names it Dilemma V3 hotswap. See seed/names.toml."
+
+[[entry]]
+was  = "4x6-4-dilemma"
+now  = "dilemma-max"
+why  = "2026-10-01. Drafted from the folder `4x6_4`; the Dilemma README names it Dilemma MAX. See seed/names.toml."
+
+[[entry]]
+was  = "base-ferris"
+now  = "ferris-0-1-base"
+why  = "2026-10-01. Drafted from the folder `0.1/base`; the Ferris readme names it Ferris 0.1 Base. See seed/names.toml."
+
+[[entry]]
+was  = "low-ferris"
+now  = "ferris-0-1-low"
+why  = "2026-10-01. Drafted from the folder `0.1/low`; the Ferris readme names it Ferris 0.1 Low. See seed/names.toml."
+
+[[entry]]
+was  = "high-ferris-0-1"
+now  = "ferris-0-1-high"
+why  = "2026-10-01. Drafted from the folder `0.1/high`; the Ferris readme names it Ferris 0.1 High. See seed/names.toml."
+
+[[entry]]
+was  = "compact-ferris-0-1"
+now  = "ferris-0-1-compact"
+why  = "2026-10-01. Drafted from the folder `0.1/compact`; the Ferris readme names it Ferris 0.1 Compact. See seed/names.toml."
+
+[[entry]]
+was  = "bling-ferris"
+now  = "ferris-0-2-bling"
+why  = "2026-10-01. Drafted from the folder `0.2/bling`; the Ferris readme names it Ferris 0.2 Bling. See seed/names.toml."
+
+[[entry]]
+was  = "compact-ferris-0-2"
+now  = "ferris-0-2-compact"
+why  = "2026-10-01. Drafted from the folder `0.2/compact`; the Ferris readme names it Ferris 0.2 Compact. See seed/names.toml."
+
+[[entry]]
+was  = "high-ferris-0-2"
+now  = "ferris-0-2-high"
+why  = "2026-10-01. Drafted from the folder `0.2/high`; the Ferris readme names it Ferris 0.2 High. See seed/names.toml."
+
+[[entry]]
+was  = "mini-ferris"
+now  = "ferris-0-2-mini"
+why  = "2026-10-01. Drafted from the folder `0.2/mini`; the Ferris readme names it Ferris 0.2 Mini. See seed/names.toml."
+
+[[entry]]
+was  = "mx"
+now  = "stront-mx-38"
+why  = "2026-09-07. A switch type standing in for a keyboard's name, drafted from `pcb/mx/pcb.kicad_pcb`. See seed/names.toml."
+
+[[entry]]
+was  = "choc"
+now  = "stront-choc"
+why  = "2026-09-07. The same, from `pcb/choc/pcb.kicad_pcb`. See seed/names.toml."
+
+[[entry]]
+was  = "full"
+now  = "pica40"
+why  = "2026-09-07. A board FILE's name standing in for a keyboard's. See seed/names.toml."
+
+[[entry]]
+was  = "jorne"
+now  = "jorne-cherry-3-0"
+why  = "2026-09-11. Shipped 2026-09-10 as the bare shield name, before discovering the repo actually documents three distinct PCB revisions (Classic 2.1, Cherry 2.1, Cherry 3.0) -- this is Cherry 3.0. See seed/boards.toml."
+
+[[entry]]
+was  = "alice"
+now  = "equanimity"
+why  = "2026-09-23. 'Alice' is the drafted name, read off the board path (`Alice Keyboard.kicad_pcb`) per ticket 44's rule. But 'Alice' names the LAYOUT TYPE this board uses, not the design -- the design is Equanimity, the firmware record's own name (tyraelwastaken/equanimity), owner-corrected. See seed/boards.toml."
+
+[[entry]]
+was  = "hillside46"
+now  = "hillside-46"
+why  = "2026-09-27. Owner: names should be capitalised with a space before the number. The author's README calls it \"Hillside 46\"; the drafted name was the board file's `hillside46`. Matches the 48, which was already \"Hillside 48\" / `hillside-48`."
+
+[[entry]]
+was  = "hillside52"
+now  = "hillside-52"
+why  = "2026-09-27. The other half of the hillside46 rename above; README calls it \"Hillside 52\"."
+
+[[entry]]
+was  = "corne-cherry"
+now  = "corne-cherry-v4"
+why  = "2026-09-28, the owner's call. The design is foostan/crkbd's v4 board, the only one on main, and v4 is where the Corne changed from a Pro Micro socket to a soldered RP2040. So the version is part of what the page claims. See seed/names.toml, which carries the name; this row is the redirect the old URL, the site's most-visited Corne, is owed."
+
+[[entry]]
+was  = "corne-chocolate"
+now  = "corne-chocolate-v4"
+why  = "2026-09-28. The same rename as corne-cherry, for the same v4 board with Choc footprints."
+
+[[entry]]
+was  = "unicorn-mx"
+now  = "unicorne"
+why  = "2026-09-28. The README names the board \"Unicorne\" (uni + corne); `unicorn-mx` was drafted from its directory. See seed/names.toml."
+
+[[entry]]
+was  = "dropin-v1"
+now  = "pancake-v1"
+why  = "2026-09-29. Drafted from the PCB file name; the README calls it Pancake v1. See seed/names.toml."
+
+[[entry]]
+was  = "dropin-v2"
+now  = "pancake-v2"
+why  = "2026-09-29. Drafted from the PCB file name; the README calls it Pancake v2. See seed/names.toml."
+
+[[entry]]
+was  = "scotto-modules"
+now  = false
+why  = "2026-09-29. A KiCad template, not a keyboard -- its designer's own report. Declined in seed/board-declines.toml; there is nothing true to redirect to."
+
+[[entry]]
+was  = "alpha-pro-micro"
+now  = "alpha"
+why  = "2026-09-29. The same PyrooL/Alpha PCB published twice; Half B no longer mints a board Half A already published."
+
+[[entry]]
+was  = "chameleon-v1-0-v1-00"
+now  = "chameleon"
+why  = "2026-09-29. An older PCB revision of Chameleon, declined on the owner's call; the design lists v1.20."
+
+[[entry]]
+was  = "chameleon-v1-0-v1-01"
+now  = "chameleon"
+why  = "2026-09-29. An older PCB revision of Chameleon, declined on the owner's call; the design lists v1.20."
+
+[[entry]]
+was  = "chameleon-v1-10"
+now  = "chameleon"
+why  = "2026-09-29. An older PCB revision of Chameleon, declined on the owner's call; the design lists v1.20."
+
+[[entry]]
+was  = "chameleon-v1-11"
+now  = "chameleon"
+why  = "2026-09-29. An older PCB revision of Chameleon, declined on the owner's call; the design lists v1.20."
+
+[[entry]]
+was  = "wave-rounded"
+now  = "wave"
+why  = "2026-09-29. The same keyboard as wave -- one outline, the traces routed as arcs. Folded in; wave now reads the rounded board."

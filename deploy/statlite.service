@@ -1,0 +1,34 @@
+[Unit]
+Description=StatLite - lightweight monitoring for keyboardbuilders
+Documentation=https://github.com/fowlie/keyboardbuilders/blob/main/deploy/README.md
+After=network-online.target keyboardbuilders.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=statlite
+Group=statlite
+ExecStart=/opt/statlite/statlite --config /etc/statlite/statlite.yaml
+Restart=on-failure
+RestartSec=10s
+
+# It polls one loopback port and writes one SQLite file. Nothing else is its business.
+NoNewPrivileges=true
+PrivateTmp=true
+PrivateDevices=true
+ProtectSystem=strict
+ProtectHome=true
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+RestrictSUIDSGID=true
+RestrictNamespaces=true
+LockPersonality=true
+ReadWritePaths=/var/lib/statlite
+
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=statlite
+
+[Install]
+WantedBy=multi-user.target

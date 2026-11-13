@@ -1,0 +1,237 @@
+# seed/bodies.toml -- is this keyboard one piece or two, where the firmware
+# flag we derive it from is answering a different question. Queued by
+# scripts/draft_bodies.py; every filled row is a PERSON's ruling. Forgejo #35.
+#
+# `halves` is the count of physical pieces: 1 unibody, 2 a split, 3 or more for
+# a keyboard like `tripel`. On a `drafted` row it is 0 -- the absence of a
+# ruling, never a keyboard in zero pieces -- and the build reads confirmed rows
+# only, so the two can never be confused.
+#
+#   drafted    the queue's own row: a signal contradicts what we published,
+#              nobody has ruled, and the design publishes exactly as before
+#   confirmed  settled, and the ONLY verdict the build reads
+#
+# WE DERIVE `body` FROM QMK's `split.enabled`, WHICH MEANS "the firmware drives
+# two halves over QMK's split transport" -- a wiring question, printed as a
+# shape answer. Halves joined by an I/O expander present as one matrix and set
+# nothing, so `torn` and `wired-pierce` publish as unibody. The real signal is
+# the inter-half connector on the board, which is map ticket 52 and open.
+#
+# `note` on a drafted row is the EVIDENCE, so the ruling can be made from this
+# file alone. On a confirmed row it is the person's reasoning, and that is what
+# a later reader needs most. `signal = "human"` survives every re-draft.
+#
+# The strongest machine signal is `LAYOUT_split_RxC_T`, and it is NOT a verdict:
+# `chouchou` carries one and its README calls it "a minimalist unibody keyboard".
+# The macro names a matrix shape, and a monoblock can have one.
+
+[[entry]]
+slug    = "pando"
+name    = "Pando"
+halves  = 2
+verdict = "confirmed"
+signal  = "human"
+note    = "2026-09-29. The 3w6 mechanism again: the repo's own description reads \"58 key split keyboard. Integrated STM32G0B1KBT6, USB-C interconnect, PCA9555 IO Expander design\" -- one MCU on the left, the right half scanned through the expander, so QMK sees one matrix (`matrix.c`) and sets no split flag. Two board files, one per hand."
+
+[[entry]]
+slug    = "3w6"
+name    = "3W6"
+halves  = 2
+verdict = "confirmed"
+signal  = "human"
+note    = "its README is titled \"3w6 - split ortholinear keyboard\" and names the mechanism this whole file exists for: \"IO-expander was changed from TCA9555RTWR to TCA9555PWR\". The halves talk over an I/O expander, so QMK sees one matrix and sets no split flag. No machine signal here reaches it -- a plain LAYOUT, no handed board files -- which Forgejo #35 predicted"
+
+[[entry]]
+slug    = "bad-wings-bold"
+name    = "bad wings bold"
+halves  = 1
+verdict = "confirmed"
+signal  = "human"
+note    = "same repo/family as bw2-v2 (confirmed unibody by its own README), single continuous 36-switch board, no direct README statement of its own"
+
+[[entry]]
+slug    = "bad-wings-slim"
+name    = "bad wings slim"
+halves  = 1
+verdict = "confirmed"
+signal  = "human"
+note    = "same repo/family as bw2-v2 (confirmed unibody by its own README), single continuous 36-switch board, no direct README statement of its own"
+
+[[entry]]
+slug    = "bartlepslit"
+name    = "bartlepslit"
+halves  = 2
+verdict = "confirmed"
+signal  = "human"
+note    = "the repo is kyrremann/bartlesplit and its README reports \"the diodes on the right split needed to be flipped\" -- a right half exists. Note the board file places all 42: a split PCB panelised with both halves on one outline, which is why switch count cannot argue the other way"
+
+[[entry]]
+slug    = "bw2-v2"
+name    = "bw2 v2"
+halves  = 1
+verdict = "confirmed"
+signal  = "human"
+note    = "its own v2/README.md: \"36 key unibody split\" -- the author's phrase for one piece carrying a split layout, the andean-condor shape"
+
+[[entry]]
+slug    = "cheapino"
+name    = "Cheapino"
+halves  = 2
+verdict = "confirmed"
+signal  = "human"
+note    = "the author's README calls it \"one of the cheapest split keyboards you can build\" and then states the exact mechanism this file exists for: \"The pcb is reversible, connected using rj45, and utilizes a japanese duplex matrix, so only one mcu is needed.\" One MCU over a duplex matrix is one matrix to QMK, so `split.enabled` is unset and we published `unibody`. The board corroborates it -- `pcb/cheapino.kicad_pcb` places 18 of the design's 36 switches and two `Connector_RJ:RJ45_Ninigi_GE`. Backlog #64's acceptance case, and the first ruling on a design whose firmware record is not upstream. NOT RECORDED, and the README states both: the PCB is REVERSIBLE (this file carries only `halves`, and `reversible` publishes Unknown for 103 of 106 splits) and the link is RJ45 (outside ticket 52's lexicon, which reads jacks -- so `link` reads `no_wired_link`, the same honest silence the 3w6 gets for its USB-C, and the same case backlog #63 is about)"
+
+[[entry]]
+slug    = "choc-v"
+name    = "choc V"
+halves  = 1
+verdict = "confirmed"
+signal  = "human"
+note    = "author: 'monoblocks are just easier to manage on a desk' in the paragraph describing this board; Horizon's 'three gerbers' are stacked protective layers, not halves"
+
+[[entry]]
+slug    = "chouchou"
+name    = "chouchou"
+halves  = 1
+verdict = "confirmed"
+signal  = "human"
+note    = "its README: \"Chouchou (Japanese for butterfly) is a minimalist unibody keyboard designed to be used with the Taipo layout\". Carries LAYOUT_split_2x4_2, which is the measurement that stops that macro being a rule"
+
+[[entry]]
+slug    = "k34"
+name    = "k34"
+halves  = 1
+verdict = "confirmed"
+signal  = "human"
+note    = "its README: \"The k34 is a unibody, column-staggered, high-profile, 3d-printed, tray-mount keyboard with 34 keys\""
+
+[[entry]]
+slug    = "reviung34-split"
+name    = "reviung34 split"
+halves  = 2
+verdict = "confirmed"
+signal  = "human"
+note    = "It ships TWO HANDED BOARD FILES -- `reviung34-split-L.kicad_pcb` (18 switches) and `-R` (15) -- and its own name is `reviung34-split`. QMK/ZMK set no split flag because the ZMK shield it borrows is `reviung34`, the UNIBODY reviung34, and this is the split derivative. Measured 2026-09-03: 7 designs in the corpus ship a handed pair of board files, 6 already publish as split, and this is the only one that did not -- so the signal is 100% precise over the corpus and finds exactly this. Ruled by the agent under the owner's standing AFK authorisation"
+
+[[entry]]
+slug    = "torn"
+name    = "torn"
+halves  = 2
+verdict = "confirmed"
+signal  = "human"
+note    = "its README calls it \"The split keyboard kit\" and it ships torn_left.kicad_pcb beside torn_right.kicad_pcb -- the one repo in the corpus where the board files are handed"
+
+[[entry]]
+slug    = "unicorn-f072"
+name    = "unicorn f072"
+halves  = 1
+verdict = "confirmed"
+signal  = "human"
+note    = "its README: \"I initially thought about building a split keyboard, however ... I missed the simplicity of a one-piece board\""
+
+[[entry]]
+slug    = "unicorn-mx"
+name    = "unicorn mx"
+halves  = 1
+verdict = "confirmed"
+signal  = "human"
+note    = "its README: \"I initially thought about building a split keyboard, however ... I missed the simplicity of a one-piece board\" -- same repo and same statement as unicorn-f072"
+
+[[entry]]
+slug    = "wired-pierce"
+name    = "wired pierce"
+halves  = 2
+verdict = "confirmed"
+signal  = "human"
+note    = "its README: \"pierce 2.0 is a split modular wireless / semi-wireless 36 key column staggered keyboard\", and its board places 18 switches against a declared 36 -- one hand, which is proof rather than evidence"
+
+[[entry]]
+slug    = "squiggle-minimalist"
+name    = "Squiggle Minimalist"
+halves  = 2
+verdict = "confirmed"
+signal  = "human"
+note    = "2026-09-26. Its firmware is one matrix on one Pro Micro (squiggle_minimalist, MATRIX_COLS 10, no split flag), so QMK alone would print it as one piece. It is two: the README's Minimalist photo shows two halves, the section says '\"Amphenol 10 wire\" cable', and the board is one panel with a column of breakaway holes between the hands and a shrouded header on each side of the break."
+
+# pierrechevalier83/ferris, 2026-09-28: split, and only the wrong record said so.
+
+[[entry]]
+slug    = "base-ferris"
+name    = "base ferris"
+halves  = 2
+reversible = false
+verdict = "confirmed"
+signal  = "human"
+note    = "2026-09-28. QMK's own keyboards/ferris/readme.md: \"A split 34 keys column staggered keyboard\". Ferris 0.1 (ATmega32U4) and 0.2 (STM32F072) both scan the far half through an MCP23017 over I2C (keyboards/ferris/0_1/matrix.c and 0_2/matrix.c, CUSTOM_MATRIX), so their records set no split flag -- the 3w6 mechanism. It had published as split only because `ferris/sweep` also attached here, and that is the Pro Micro Sweep, which `agreeing_with_board` now keeps off a board with its own chip. NOT REVERSIBLE, the owner's ruling 2026-10-01 and the board's own layout: in the design's .kicad_pcb the left half places the chip and the USB-C receptacle, the right half the MCP23017 IO expander, 17 switches each, so the two halves are two different PCBs."
+
+[[entry]]
+slug    = "bling-ferris"
+name    = "bling ferris"
+halves  = 2
+reversible = false
+verdict = "confirmed"
+signal  = "human"
+note    = "2026-09-28. QMK's own keyboards/ferris/readme.md: \"A split 34 keys column staggered keyboard\". Ferris 0.1 (ATmega32U4) and 0.2 (STM32F072) both scan the far half through an MCP23017 over I2C (keyboards/ferris/0_1/matrix.c and 0_2/matrix.c, CUSTOM_MATRIX), so their records set no split flag -- the 3w6 mechanism. It had published as split only because `ferris/sweep` also attached here, and that is the Pro Micro Sweep, which `agreeing_with_board` now keeps off a board with its own chip. NOT REVERSIBLE, the owner's ruling 2026-10-01 and the board's own layout: in the design's .kicad_pcb the left half places the chip and the USB-C receptacle, the right half the MCP23017 IO expander, 17 switches each, so the two halves are two different PCBs."
+
+[[entry]]
+slug    = "compact-ferris-0-1"
+name    = "compact ferris 0.1"
+halves  = 2
+reversible = false
+verdict = "confirmed"
+signal  = "human"
+note    = "2026-09-28. QMK's own keyboards/ferris/readme.md: \"A split 34 keys column staggered keyboard\". Ferris 0.1 (ATmega32U4) and 0.2 (STM32F072) both scan the far half through an MCP23017 over I2C (keyboards/ferris/0_1/matrix.c and 0_2/matrix.c, CUSTOM_MATRIX), so their records set no split flag -- the 3w6 mechanism. It had published as split only because `ferris/sweep` also attached here, and that is the Pro Micro Sweep, which `agreeing_with_board` now keeps off a board with its own chip. NOT REVERSIBLE, the owner's ruling 2026-10-01 and the board's own layout: in the design's .kicad_pcb the left half places the chip and the USB-C receptacle, the right half the MCP23017 IO expander, 17 switches each, so the two halves are two different PCBs."
+
+[[entry]]
+slug    = "compact-ferris-0-2"
+name    = "compact ferris 0.2"
+halves  = 2
+reversible = false
+verdict = "confirmed"
+signal  = "human"
+note    = "2026-09-28. QMK's own keyboards/ferris/readme.md: \"A split 34 keys column staggered keyboard\". Ferris 0.1 (ATmega32U4) and 0.2 (STM32F072) both scan the far half through an MCP23017 over I2C (keyboards/ferris/0_1/matrix.c and 0_2/matrix.c, CUSTOM_MATRIX), so their records set no split flag -- the 3w6 mechanism. It had published as split only because `ferris/sweep` also attached here, and that is the Pro Micro Sweep, which `agreeing_with_board` now keeps off a board with its own chip. NOT REVERSIBLE, the owner's ruling 2026-10-01 and the board's own layout: in the design's .kicad_pcb the left half places the chip and the USB-C receptacle, the right half the MCP23017 IO expander, 17 switches each, so the two halves are two different PCBs."
+
+[[entry]]
+slug    = "high-ferris-0-1"
+name    = "high ferris 0.1"
+halves  = 2
+reversible = false
+verdict = "confirmed"
+signal  = "human"
+note    = "2026-09-28. QMK's own keyboards/ferris/readme.md: \"A split 34 keys column staggered keyboard\". Ferris 0.1 (ATmega32U4) and 0.2 (STM32F072) both scan the far half through an MCP23017 over I2C (keyboards/ferris/0_1/matrix.c and 0_2/matrix.c, CUSTOM_MATRIX), so their records set no split flag -- the 3w6 mechanism. It had published as split only because `ferris/sweep` also attached here, and that is the Pro Micro Sweep, which `agreeing_with_board` now keeps off a board with its own chip. NOT REVERSIBLE, the owner's ruling 2026-10-01 and the board's own layout: in the design's .kicad_pcb the left half places the chip and the USB-C receptacle, the right half the MCP23017 IO expander, 17 switches each, so the two halves are two different PCBs."
+
+[[entry]]
+slug    = "high-ferris-0-2"
+name    = "high ferris 0.2"
+halves  = 2
+reversible = false
+verdict = "confirmed"
+signal  = "human"
+note    = "2026-09-28. QMK's own keyboards/ferris/readme.md: \"A split 34 keys column staggered keyboard\". Ferris 0.1 (ATmega32U4) and 0.2 (STM32F072) both scan the far half through an MCP23017 over I2C (keyboards/ferris/0_1/matrix.c and 0_2/matrix.c, CUSTOM_MATRIX), so their records set no split flag -- the 3w6 mechanism. It had published as split only because `ferris/sweep` also attached here, and that is the Pro Micro Sweep, which `agreeing_with_board` now keeps off a board with its own chip. NOT REVERSIBLE, the owner's ruling 2026-10-01 and the board's own layout: in the design's .kicad_pcb the left half places the chip and the USB-C receptacle, the right half the MCP23017 IO expander, 17 switches each, so the two halves are two different PCBs."
+
+[[entry]]
+slug    = "low-ferris"
+name    = "low ferris"
+halves  = 2
+reversible = false
+verdict = "confirmed"
+signal  = "human"
+note    = "2026-09-28. QMK's own keyboards/ferris/readme.md: \"A split 34 keys column staggered keyboard\". Ferris 0.1 (ATmega32U4) and 0.2 (STM32F072) both scan the far half through an MCP23017 over I2C (keyboards/ferris/0_1/matrix.c and 0_2/matrix.c, CUSTOM_MATRIX), so their records set no split flag -- the 3w6 mechanism. It had published as split only because `ferris/sweep` also attached here, and that is the Pro Micro Sweep, which `agreeing_with_board` now keeps off a board with its own chip. NOT REVERSIBLE, the owner's ruling 2026-10-01 and the board's own layout: in the design's .kicad_pcb the left half places the chip and the USB-C receptacle, the right half the MCP23017 IO expander, 17 switches each, so the two halves are two different PCBs."
+
+[[entry]]
+slug    = "mini-ferris"
+name    = "mini ferris"
+halves  = 2
+reversible = false
+verdict = "confirmed"
+signal  = "human"
+note    = "2026-09-28. QMK's own keyboards/ferris/readme.md: \"A split 34 keys column staggered keyboard\". Ferris 0.1 (ATmega32U4) and 0.2 (STM32F072) both scan the far half through an MCP23017 over I2C (keyboards/ferris/0_1/matrix.c and 0_2/matrix.c, CUSTOM_MATRIX), so their records set no split flag -- the 3w6 mechanism. It had published as split only because `ferris/sweep` also attached here, and that is the Pro Micro Sweep, which `agreeing_with_board` now keeps off a board with its own chip. NOT REVERSIBLE, the owner's ruling 2026-10-01 and the board's own layout: in the design's .kicad_pcb the left half places the chip and the USB-C receptacle, the right half the MCP23017 IO expander, 17 switches each, so the two halves are two different PCBs."
+
+[[entry]]
+slug    = "architeuthis-dux"
+name    = "architeuthis dux"
+halves  = 2
+reversible = true
+verdict = "confirmed"
+signal  = "human"
+note    = "2026-10-02, owner-prompted by a build photo (r/ErgoMechKeyboards r7hrhr) showing one nice!nano face up and the other face down. The board file says the same: `Architeuthis dux/architeuthis_dux.kicad_pcb` is ONE HAND, 17 key positions (the design's 34 is 17 x 2), and the folder holds no other board, so one PCB makes both halves. Each position carries Kailh socket pads on BOTH copper faces (34 smd pads on F.Cu, 34 on B.Cu) plus a plated solder footprint; the Pro Micro footprint is a plain 24-hole one, which serves the flipped half with the controller mounted face-down; the TRRS footprint is `TRRS-PJ-320A-dual`."

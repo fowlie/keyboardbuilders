@@ -1,0 +1,149 @@
+# Push to main, and the site is running that commit. Backlog #71.
+#
+# BUILT ON GITHUB'S RUNNERS, NEVER ON THE SERVER. The VPS has 3.8 GB and already hosts the
+# site, Forgejo, Postgres and Caddy; a Gradle and Kotlin build wants ~1.5 GB, so building
+# there risks OOM-killing the site to deploy the site. The server only ever pulls an image
+# and restarts a container. (Before the move to GitHub this ran on a runner on the owner's
+# machine. A self-hosted runner on a public repo would run strangers' code there.)
+name: deploy
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+# One deploy at a time; a second push waits rather than racing the first to the server.
+concurrency:
+  group: deploy
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+  packages: write
+
+jobs:
+  ship:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 24
+      - uses: gradle/actions/setup-gradle@v4
+
+      # THE ARTEFACT IS BUILT FROM THE COMMIT BEING DEPLOYED, which is the entire point of
+      # this file. Twice on 2026-09-07 a jar built minutes earlier went out missing the
+      # last two commits, because building and shipping were separate acts by hand with
+      # nothing tying them together. Here staleness is not unlikely, it is unrepresentable.
+      - name: Build the jar
+        run: ./gradlew --no-daemon bootJar
+
+      # The suite is what caught a splice that had silently dropped the licence projection,
+      # and a stale silhouettes.json, both on the day this was written. A deploy that skips
+      # it is a deploy that can ship either.
+      - name: Test
+        run: ./gradlew --no-daemon test
+
+      - name: Assemble the image context
+        run: |
+          cp build/libs/keyboardbuilders-*-SNAPSHOT.jar deploy/keyboardbuilders.jar
+          echo "TAG=${GITHUB_SHA::7}" >> "$GITHUB_ENV"
+          echo "IMAGE=ghcr.io/fowlie/keyboardbuilders" >> "$GITHUB_ENV"
+
+      # TAGGED BY COMMIT, NEVER `latest`. A tag that moves cannot be rolled back to;
+      # `docker compose up` on a previous sha is the rollback. The source label links the
+      # package to this repo, so it takes the repo's visibility: public, and the server
+      # pulls it without logging in.
+      - name: Build and push the image
+        env:
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          echo "$TOKEN" | docker login ghcr.io -u "$GITHUB_ACTOR" --password-stdin
+          docker build -f deploy/Dockerfile \
+            --label "org.opencontainers.image.source=https://github.com/${GITHUB_REPOSITORY}" \
+            -t "$IMAGE:$TAG" deploy/
+          # Docker Hub, where the base image comes from, has returned 500s mid-deploy before.
+          for i in 1 2 3; do docker push "$IMAGE:$TAG" && break; sleep 5; [ $i = 3 ] && exit 1; done
+
+      # THE SERVER PULLS; NOTHING IS COPIED TO IT. The key below is restricted to a single
+      # forced command on the host (deploy/ship.sh, see deploy/README.md), so what this step
+      # can do is "deploy the named tag" and not "run anything as me".
+      - name: Deploy
+        env:
+          KEY: ${{ secrets.VPS_SSH_KEY }}
+          HOST: ${{ secrets.VPS_HOST }}
+          PORT: ${{ secrets.VPS_SSH_PORT }}
+        run: |
+          install -m 600 /dev/stdin "$RUNNER_TEMP/key" <<< "$KEY"
+          # The port is a secret like the host, and required: this box's sshd is not on 22.
+          ssh -i "$RUNNER_TEMP/key" -o StrictHostKeyChecking=accept-new \
+              -p "$PORT" "$HOST" "$IMAGE:$TAG"
+
+      # VERIFY THE RENDER, NOT THE PROCESS -- deploy/README.md's trap 2 fails at the first
+      # render, so `active (running)` proves nothing. Counting silhouettes proves a jte
+      # template ran, the database answered and the import populated it.
+      #
+      # These checks lived in a human's memory and were re-typed by hand at every deploy
+      # today. Here they either pass or the job is red.
+      - name: Verify
+        env:
+          HOST: ${{ secrets.VPS_HOST }}
+        run: |
+          for i in $(seq 1 30); do
+            code=$(curl -s -o /dev/null -w '%{http_code}' https://keyboardbuilders.net/designs || true)
+            [ "$code" = "200" ] && break
+            sleep 5
+          done
+          silhouettes=$(curl -s https://keyboardbuilders.net/designs | grep -c silhouette)
+          echo "silhouettes on /designs: $silhouettes"
+          # Page.DEFAULT_SIZE rows, one silhouette each. Read as "more than a handful"
+          # rather than pinned to 50: deploy/README.md records that hard-coding this number
+          # turned a healthy deploy into a bug hunt once already, when the page size moved.
+          [ "$silhouettes" -gt 10 ] || { echo "no rows rendered"; exit 1; }
+          # THE SLUG IS NOT NAMED HERE ANY MORE. This line used to fetch `cheapino`, and a
+          # design name in this file is a deploy that goes red when the corpus is
+          # CORRECTED -- four designs were renamed off their board file paths on
+          # 2026-09-07. The sitemap is the app's own statement of which designs exist, so
+          # it picks the subject rather than a human remembering one.
+          #
+          # `set +o pipefail` INSIDE THE SUBSHELL, or this step goes red for no real
+          # reason. This runner's `run:` steps use `bash -eo pipefail`, and `head -1`
+          # closes its end of the pipe the moment it has its one line -- `grep -oE` is
+          # still writing the other ~230 matches into that closed pipe and dies of
+          # SIGPIPE, exit 141, which pipefail then reports as THIS pipeline's exit
+          # status even though `sed` (the actual last command) never saw a problem.
+          # Reproduced against production and confirmed the fix changes nothing about
+          # the extracted slug, only whether an upstream process dying of the READER'S
+          # OWN CHOICE to stop early is treated as a failure.
+          slug=$(
+            set +o pipefail
+            curl -fsS https://keyboardbuilders.net/sitemap.xml \
+              | grep -oE '/designs/[a-z0-9-]+</loc>' | head -1 \
+              | sed -e 's|/designs/||' -e 's|</loc>||'
+          )
+          [ -n "$slug" ] || { echo "no design slug in the sitemap"; exit 1; }
+          # The libharfbuzz trap: every card 500s while every page renders fine, so nothing
+          # looks broken until a crawler fetches an image.
+          #
+          # AND THE TIME IS THE OTHER HALF -- backlog #74, though NOT for the reason that
+          # ticket first gave. Java2D needs a fontconfig cache to draw a card, and building
+          # one from nothing cost 4.98 s at the cutover. It lives in `.cache/fontconfig`,
+          # keyed by content, on the bind mount -- so it is built once and survives every
+          # restart. Measured 2026-09-08: a card renders in ~0.5 s on a fresh container even
+          # when the JDK's own hostname-keyed cache is absent. This threshold therefore
+          # guards the case where that DIRECTORY is lost -- a wiped volume, a new box, a
+          # base-image change that moves the path -- which is the only way the five seconds
+          # comes back. 3 s sits well above the 0.5 s measured and well below it.
+          card=$(curl -fsS -o /dev/null -w '%{time_total}' \
+                 "https://keyboardbuilders.net/designs/$slug/og.png")
+          echo "og.png for $slug: ${card}s"
+          awk -v t="$card" 'BEGIN { exit !(t < 3) }' \
+            || { echo "card took ${card}s -- cold cache, check compose.yml's hostname"; exit 1; }
+          # The actuator must stay unreachable from outside -- 404 through the proxy.
+          code=$(curl -s -o /dev/null -w '%{http_code}' https://keyboardbuilders.net/actuator/health)
+          [ "$code" = "404" ] || { echo "actuator reachable: $code"; exit 1; }
+          # The other vhosts share this box and Caddy's config is one file; a change here
+          # has taken forgejo down before.
+          for h in forgejo.keyboardbuilders.net; do
+            curl -fsS -o /dev/null "https://$h/" || { echo "$h is down"; exit 1; }
+          done

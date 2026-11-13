@@ -1,0 +1,62 @@
+@import net.keyboardbuilders.keyboardbuilders.web.FitTier
+@param tier: FitTier
+@param struck: Boolean
+
+<%-- One tier of /parts/dev-board/:slug. Its own template because the three tiers differ
+     in exactly two things -- the heading above them and whether the rows are struck
+     through -- and three copies of this markup is how they start drifting apart.
+
+     NO BACKTICKS: this file is included from a template wrapped in a Kotlin raw string,
+     and a backtick anywhere closes the content block with an error pointing at the wrong
+     line. See devBoard.kte's own note.
+
+     The row markup is designs/index.kte's result row. Copied rather than shared, on
+     purpose and temporarily -- index.kte's li carries a MEASURED
+     content-visibility/contain-intrinsic-size pairing (OffscreenRowsTest, Forgejo #13),
+     so hoisting one shared row template wants its own change with that test in front of
+     it. Keep the two in step until then. --%>
+
+<ul class="results@if(struck) ruled-out@endif">
+    @for(item in tier.shown)
+        <li>
+            <a class="result-card" href="/designs/${item.row.slug}">
+            <div class="thumb">$unsafe{item.row.silhouette}</div>
+            <div class="row-text">
+            <p class="name-line">
+                <span class="name">${item.row.name}</span>
+                @if(item.row.stars != null)
+                    <span class="stars" title="GitHub stars">${item.row.stars}&#9733;</span>
+                @endif
+                @if(item.row.hearts != null)
+                    <span class="stars hearts" title="Hearts">${item.row.hearts}&#9829;</span>
+                @endif
+            </p>
+            <p class="facts">
+                @for(chip in item.row.shape)
+                    <span>${chip}</span>
+                @endfor
+            </p>
+            <p class="facts">
+                @for(chip in item.row.electronics)
+                    <span>${chip}</span>
+                @endfor
+            </p>
+            <%-- Null only on the rows whose fit needs no explanation. Everywhere else
+                 this is the recorded fact that put the row in its tier, and it is the
+                 half of the row a reader acts on. --%>
+            @if(item.note != null)
+                <p class="fit-note">${item.note}</p>
+            @endif
+            </div>
+            </a>
+        </li>
+    @endfor
+</ul>
+<%-- STATES THE REMAINDER RATHER THAN HIDING IT. A capped list that says nothing about
+     its cap is a truncated list pretending to be whole, which is the same class of
+     wrong-but-plausible the rest of this site is built to avoid. The count above the
+     list is the tier's real total; this line reconciles the two so a reader who counts
+     the rows is not left thinking one of the numbers is a bug. --%>
+@if(tier.hidden > 0)
+    <p class="fit-more">and ${tier.hidden} more, not drawn here</p>
+@endif

@@ -1,0 +1,84 @@
+[Unit]
+Description=keyboardbuilders.net
+Documentation=https://github.com/fowlie/keyboardbuilders/blob/main/deploy/README.md
+# `network-online` rather than `network`: `network.target` is reached before an address
+# is actually assigned, which is a boot-time-only flake and therefore the worst kind.
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=keyboardbuilders
+Group=keyboardbuilders
+
+# The one thing that must be absolute. See application-prod.properties: a relative
+# datasource path under systemd resolves against `/`, and the failure is a site serving
+# zero designs with a 200 rather than an error.
+Environment=KB_DATABASE=/var/lib/keyboardbuilders/app.db
+Environment=KB_PORT=8080
+# The address to LISTEN on -- see application-prod.properties.
+#
+# 172.17.0.1, THE DOCKER BRIDGE GATEWAY, AND NOT LOOPBACK. Caddy runs as a CONTAINER on
+# this box and proxies to `host.docker.internal:8080`, which resolves to the gateway. A
+# service bound to 127.0.0.1 is invisible to it and every page 502s.
+#
+# This file said 127.0.0.1 until 2026-08-30 and production had been hand-edited to the
+# gateway, so the two disagreed and the repo held the broken value. Installing this file
+# over the server's copy took the site down, which is exactly the failure a
+# hand-edited-only-in-production setting guarantees eventually. The repo is now the truth.
+Environment=KB_ADDRESS=172.17.0.1
+Environment=SPRING_PROFILES_ACTIVE=prod
+
+# The analytics origin. `/count` and `/count.js` are appended. UNSET LOADS NO SCRIPT AT
+# ALL, which is why it is not a constant: tests, local dev and anyone running this from
+# source get a site with zero JavaScript, and only the deployed instance counts anything.
+Environment=KEYBOARDBUILDERS_ANALYTICS=https://keyboardbuilders.goatcounter.com
+# The SCRIPT comes from a different host than the hits do -- hosted GoatCounter 404s
+# /count.js on the per-site subdomain. The default is gc.zgo.at; set this only to move
+# back to a self-hosted instance, which serves both from one origin.
+#Environment=KEYBOARDBUILDERS_ANALYTICS_SCRIPT=https://goatcounter.keyboardbuilders.net/count.js
+
+# -XX:MaxRAMPercentage, NOT -Xmx. The VPS can be resized without anyone remembering to
+# edit this file, and a fixed heap on a shrunk box is an OOM kill at 3am. 75% leaves room
+# for the JVM's own non-heap footprint and the page cache SQLite reads through.
+Environment=JAVA_OPTS=-XX:MaxRAMPercentage=75
+
+WorkingDirectory=/opt/keyboardbuilders
+ExecStart=/usr/bin/java $JAVA_OPTS -jar /opt/keyboardbuilders/keyboardbuilders.jar
+
+Restart=on-failure
+RestartSec=5s
+# Give up after 5 failures in 60s rather than restart-looping forever: a crash loop that
+# never stops looks like a slow site instead of a broken one, and hides the cause.
+StartLimitBurst=5
+StartLimitIntervalSec=60
+
+# The app drains in-flight requests itself (server.shutdown=graceful); this is the outer
+# bound before systemd stops waiting and kills it.
+TimeoutStopSec=30s
+
+# -- Hardening. Each of these is a thing this process has no business doing. -----------
+NoNewPrivileges=true
+PrivateTmp=true
+PrivateDevices=true
+ProtectSystem=strict
+ProtectHome=true
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+RestrictSUIDSGID=true
+RestrictNamespaces=true
+LockPersonality=true
+# ProtectSystem=strict makes the whole filesystem read-only, so the ONE writable path has
+# to be named. That is the point: if the database ever moves, this line must move with it,
+# which is a great deal better than a service that can write anywhere.
+ReadWritePaths=/var/lib/keyboardbuilders
+
+# Journald is the log destination; the app logs one line per import and Spring's own
+# startup. No file rotation to configure because there is no file.
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=keyboardbuilders
+
+[Install]
+WantedBy=multi-user.target

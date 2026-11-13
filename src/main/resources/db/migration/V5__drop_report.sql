@@ -1,0 +1,15 @@
+-- The reader-report feature is gone; this removes the table it left behind.
+--
+-- V3 IS STILL IN THIS DIRECTORY AND MUST STAY, which is the whole reason this file
+-- exists rather than a deletion. Production applied V3 on 2026-09-18, so its
+-- `flyway_schema_history` names that version permanently. Flyway validates applied
+-- migrations against the ones it can resolve locally and refuses to start when one it has
+-- recorded has vanished -- so deleting V3__report.sql would not remove a feature, it would
+-- take the site down on the next boot with "detected applied migration not resolved
+-- locally". An applied migration is history: it is added to, never edited or removed.
+--
+-- IF EXISTS because this has to be correct from both directions. Production has the table
+-- (V3 applied, V4 never shipped); a database built from scratch runs V3 and then this, and
+-- creating a table in order to drop it two migrations later is the small, honest cost of
+-- the rule above.
+DROP TABLE IF EXISTS report;

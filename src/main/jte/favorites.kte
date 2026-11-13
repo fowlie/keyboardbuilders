@@ -1,0 +1,71 @@
+@import net.keyboardbuilders.keyboardbuilders.web.Head
+@import net.keyboardbuilders.keyboardbuilders.web.SiteUrl
+@param head: Head
+@param site: SiteUrl
+@param cards: List<net.keyboardbuilders.keyboardbuilders.web.DesignCard> = listOf()
+@param asked: Boolean = false
+@param renamed: Map<String, String> = mapOf()
+
+<%-- A visitor's shortlist (FavouritesController). NO BACKTICKS in this file: one closes
+     the raw string the page is written in. --%>
+@template.layout(head = head, site = site, wide = true, content = @`
+    <h1>My favorites</h1>
+    @if(cards.isEmpty())
+        <p class="favorites-empty">
+            Nothing hearted yet. Press the &#9825; on any design to keep it here.
+            Your hearts stay in this browser; nobody else sees which ones you picked.
+        </p>
+    @else
+        <p class="favorites-note">Kept in this browser.</p>
+        <%-- results-col, because the card grid is scoped to it: without the wrapper the
+             cards were plain full-width blocks. --%>
+        <div class="results-col">
+            <ul class="results">
+                @for(card in cards)
+                    <li>@template.designs.card(card = card, cls = "result-card", full = true)</li>
+                @endfor
+            </ul>
+        </div>
+    @endif
+    @for(entry in renamed.entries)
+        <span class="renamed" hidden data-from="${entry.key}" data-to="${entry.value}"></span>
+    @endfor
+`)
+
+<%-- A favorite saved under a slug that has since been renamed: put the new slug in this
+     browser's list, so the heart button on the renamed page shows it hearted. Handed over
+     as attributes rather than written into the script, where jte would JS-escape them. --%>
+@if(!renamed.isEmpty())
+<script>
+    (function () {
+        var renamed = {};
+        document.querySelectorAll("span.renamed").forEach(function (el) {
+            renamed[el.getAttribute("data-from")] = el.getAttribute("data-to");
+        });
+        try {
+            var list = JSON.parse(localStorage.getItem("kb-hearts") || "[]");
+            if (!Array.isArray(list)) return;
+            var seen = {};
+            list = list.map(function (s) { return renamed[s] || s; })
+                .filter(function (s) { if (seen[s]) return false; seen[s] = true; return true; });
+            localStorage.setItem("kb-hearts", JSON.stringify(list));
+        } catch (e) {}
+    })();
+</script>
+@endif
+
+<%-- Bare /favourites becomes /favourites?d=... from localStorage, once, so the server
+     renders the cards. A page that already has a list leaves the address alone: it may be
+     someone else's shared list. --%>
+@if(!asked)
+<script>
+    (function () {
+        var slugs = [];
+        try { slugs = JSON.parse(localStorage.getItem("kb-hearts") || "[]"); } catch (e) {}
+        if (!Array.isArray(slugs) || slugs.length === 0) return;
+        location.replace("/favorites?" + slugs.map(function (s) {
+            return "d=" + encodeURIComponent(s);
+        }).join("&"));
+    })();
+</script>
+@endif

@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Keyboard Builders">
+  <title>Keyboard Builders</title>
+  <!--
+    THE MARK: four keys stepped into a column stagger. The pinky column sits lowest, the
+    middle finger reaches furthest, the index comes back down. That profile is what
+    separates every board in this catalogue from the one on an office desk, and it is
+    true of split and unibody alike.
+
+    THE GEOMETRY IS DUPLICATED in layout.kte, which draws the same four rects inline so
+    the header mark can inherit currentColor; an img element could not. MarkTest asserts
+    the two copies agree, so an edit that misses one fails a test rather than shipping a
+    header and a tab icon that disagree.
+
+    TWO COLOURS: grey keys, and a terracotta top key (the middle finger's, the third
+    rect). The dark scheme uses the header mark's exact pair from app.css, since the
+    header bar is dark too; MarkTest holds the two in step. A light tab is white, where
+    that grey washes out, so the light scheme takes darker shades of the same two.
+
+    An SVG favicon may carry its own media query, so this one follows the reader's theme
+    the way the site does.
+
+    (No double hyphens below: this is XML, and a hyphen pair ends a comment.)
+  -->
+  <style>
+    rect { fill: #55545b; }
+    rect:nth-of-type(3) { fill: #a8513a; }
+    @media (prefers-color-scheme: dark) {
+      rect { fill: #a9a8ae; }
+      rect:nth-of-type(3) { fill: #c0705a; }
+    }
+  </style>
+  <rect x="1.4" y="18.4" width="6.4" height="6.4" rx="1.5"/>
+  <rect x="9.1" y="13" width="6.4" height="6.4" rx="1.5"/>
+  <rect x="16.8" y="7.2" width="6.4" height="6.4" rx="1.5"/>
+  <rect x="24.5" y="11.2" width="6.4" height="6.4" rx="1.5"/>
+</svg>

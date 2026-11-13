@@ -1,0 +1,156 @@
+# seed/firmwares.toml -- what each keyboard firmware runs on, and whether it does wireless.
+#
+# NEW 2026-09-10, on the owner's ruling that a firmware must be a modelled thing rather
+# than a name hardcoded in a rule: *"plan for firmware which does not support wireless
+# chips *today*, might do so tomorrow. so no 'ZMK' hardcoding here, a firmware class is
+# needed with a wireless field stating the support."*
+#
+# It replaces `FirmwareBar`, the two-member enum in `ControllerFit.kt` that carried the
+# same two rules in code, and it subsumes `build_controllers.py`'s `IMPOSSIBLE` literal,
+# which was a THIRD copy of them. One place, with citations.
+#
+# ---------------------------------------------------------------------------------------
+# TWO MCU LISTS, NOT ONE. This is the whole design and it is not a convenience.
+# ---------------------------------------------------------------------------------------
+#
+# `mcu_families_supported` is a POSITIVE list: silence in it means Unknown, never
+# impossible. `mcu_families_excluded` is the only place a NEGATIVE claim lives, one row
+# per sourced impossibility.
+#
+# Collapsing these into a single "supports" list -- the obvious shape -- would make
+# silence PROHIBITIVE, and this project has already paid for that once. From
+# docs/research/controller-catalogue.md §3.4: reading QMK's support off its
+# `development_board` enum "put a false sentence on 16 live pages" (2026-09-04). The live
+# guard against it recurring is `ControllerFitTest`'s case that **SAMD21 + QMK is
+# `SocketOnly`, never `RuledOut`** -- SAMD21 appears nowhere in QMK's supported list, and
+# absent-from-a-list is absence of evidence. If `supported` were read as exhaustive, that
+# assertion fails and the regression is back in a new shape.
+#
+# ZMK's own hardware page makes the same point about itself, verbatim: its list covers
+# "including but **not limited to** Nordic nRF52, Raspberry Pi RP2040/RP2350, most ST
+# STM32 MCUs, and Microchip SAMD21". A firmware project saying "not limited to" about its
+# own list is the strongest possible argument against treating one as closed.
+#
+# `wireless` is `yes` / `no` / `unknown`, STATED and never omitted -- same discipline as
+# `mcu_family` in `controllers.toml`. A missing key must be a build error, because a
+# guessed `false` does not blank a page: it quietly moves designs out of `wireless`.
+#
+# FAMILY LEVEL, matching `McuFamily`, because every rule below is stated at family level
+# by its own source. `avr8` `rp2040` `nrf52` `stm32` `samd21`.
+#
+# ---------------------------------------------------------------------------------------
+# EVERY QUOTE HERE WAS RE-FETCHED FROM ITS SOURCE ON 2026-09-10, not copied from the
+# research doc -- and that caught two errors worth the ten minutes:
+#
+#   1. The research doc's §3.4 table attributed a sentence to ZMK's FAQ that IS NOT IN IT
+#      ("ZMK doesn't support boards with AVR 8-bit processors, such as the ATmega32U4,
+#      because..."). §3.3 of the same document had the real nine-word answer. The drift
+#      had already been copied into `ControllerFit.kt` labelled "verbatim". Both fixed.
+#   2. A summary of KMK's microcontrollers page reported "ItsyBitsy M4 Express -- Chip:
+#      SAMD21". The page names no chip for that board at all. Had that gone in, this file
+#      would assert KMK/SAMD21 support on a fabricated attribution -- which is the
+#      yal-tools failure product.md §0 cites, committed by us.
+#
+# The lesson is the file's own convention: cite the raw source, not a document that cites
+# it. `controller-catalogue.md` remains the reasoning record; this file carries the rows.
+# ---------------------------------------------------------------------------------------
+
+[[entry]]
+family = "qmk"
+name   = "QMK"
+# The two MCU lists are from docs/compatible_microcontrollers.md
+# (https://raw.githubusercontent.com/qmk/qmk_firmware/master/docs/compatible_microcontrollers.md).
+# `wireless` and `source` are from docs/features/wireless.md -- see the note above `wireless`.
+#
+# "QMK runs on any USB-capable AVR or ARM microcontroller with enough flash space -
+# generally 32kB+ for AVR, and 64kB+ for ARM." The ARM half is then scoped: "You can also
+# use any ARM chip with USB that ChibiOS supports."
+#
+# Of the five families this build models, the page names three. WB32, AT32, Kinetis and
+# GD32 are also listed and are not modelled -- their absence here is the model's, not
+# QMK's.
+mcu_families_supported = ["avr8", "rp2040", "stm32"]
+# nRF52 is the one hard exclusion, and the reason is the ChibiOS scope rather than mere
+# absence: an nRF52840 IS a USB-capable ARM, so the general rule alone would admit it, but
+# the ARM rule is explicitly "any ARM chip with USB that **ChibiOS** supports" and no
+# nRF52 appears. Verified 2026-09-10 by grepping the whole page: **zero** matches for
+# nrf, nordic or bluetooth -- a firmware with no BLE stack anywhere in its
+# supported-hardware documentation.
+#
+# SAMD21 IS DELIBERATELY NOT HERE. It is equally absent from the page (zero matches for
+# samd), but absent is not excluded -- see the header. It stays Unknown, which is what
+# keeps `Seeeduino XIAO` out of the rule-out tier.
+mcu_families_excluded  = ["nrf52"]
+# `yes` since 2026-09-25 (backlog #99), `no` before -- and the `no` answered the wrong
+# question. It was read off the chip page above, which says which chips QMK RUNS ON and
+# never whether QMK can DRIVE A RADIO; "no Bluetooth on that page" is silence, not a
+# denial. QMK's own wireless page answers it, re-fetched 2026-09-25, verbatim:
+# "Currently Bluetooth support is limited to AVR based chips", with two drivers
+# (`rn42` over UART, `bluefruit_le` over SPI), and "The Feather 32u4 Bluefruit LE is
+# supported as it's an AVR mcu connected via SPI to the Nordic BLE chip".
+#
+# Family level, which is how `zmk = yes` is read: "can this firmware do wireless at all".
+# Whether a given BOARD has a radio is the board's fact in controllers.toml, and
+# `connectivityFor` needs both. Inert for every design on the day it changed -- no
+# catalogued wireless board listed `qmk` -- measured by diffing all 328 designs'
+# connectivity and what-fits page before and after: 0 changed.
+wireless = "yes"
+source   = "https://raw.githubusercontent.com/qmk/qmk_firmware/master/docs/features/wireless.md"
+
+[[entry]]
+family = "zmk"
+name   = "ZMK"
+# zmk.dev/docs/hardware, verbatim: "including but not limited to Nordic nRF52, Raspberry
+# Pi RP2040/RP2350, most ST STM32 MCUs, and Microchip SAMD21."
+mcu_families_supported = ["nrf52", "rp2040", "stm32", "samd21"]
+# ZMK's FAQ, under the heading "Does ZMK compile for AVR?", verbatim and in full:
+# "Sorry, Zephyr™ only supports 32-bit and 64-bit platforms."
+mcu_families_excluded  = ["avr8"]
+wireless = "yes"
+source   = "https://raw.githubusercontent.com/zmkfirmware/zmk/main/docs/docs/faq.md"
+
+[[entry]]
+family = "kmk"
+name   = "KMK"
+# KMK's "Officially supported microcontrollers" page names four boards. Two are nRF52840
+# ("nice!nano", "Adafruit ItsyBitsy nRF52840 Express") and one is a bare "RP2040" heading.
+#
+# The fourth is "ItsyBitsy M4 Express" and THE PAGE NAMES NO CHIP FOR IT, which is why
+# `samd21` is absent below. A summariser reported it as SAMD21; the raw page does not.
+# (The real part is an SAMD51, which would not be `samd21` either.) CircuitPython does run
+# on SAMD21 and KMK's own history is full of it, so this is very likely an omission rather
+# than a limit -- but "likely" is not a source, and Unknown costs nothing here: no design
+# in the corpus ships KMK today.
+mcu_families_supported = ["nrf52", "rp2040"]
+# EMPTY, and that is the sourced answer. KMK states a CAPABILITY rule rather than a chip
+# list -- "What you'll need to have at minimum: CircuitPython, 256KB of flash storage, HID
+# over USB and/or Bluetooth" -- plus "most CircuitPython devices are great for hand wired
+# keyboards". An open rule excludes nothing by name.
+#
+# AVR ARGUABLY FAILS THAT RULE BY ARITHMETIC (an ATmega32U4 has 32 kB against a stated
+# 256 kB minimum, and CircuitPython does not target 8-bit AVR). That is a derivation from
+# a threshold, not a statement, so it stays in this comment rather than in the list above.
+# The distinction matters: `excluded` is what the site will TELL A READER is impossible.
+mcu_families_excluded  = []
+# "Both USB HID and Bluetooth support" -- stated of nice!nano and of the ItsyBitsy
+# nRF52840 -- and the general rule: "KMK relies on CircuitPython's ability to use
+# Bluetooth Low Energy with any given controller."
+wireless = "yes"
+source   = "https://raw.githubusercontent.com/KMKfw/kmk_firmware/main/docs/en/Officially_Supported_Microcontrollers.md"
+
+[[entry]]
+family = "bluemicro"
+name   = "BlueMicro"
+# The one family that appears on a catalogue board and on no design: `BlueMicro840 v1`
+# carries it, nothing in the corpus ships it. So every field here is inert today, and
+# `unknown` is the honest state rather than a shape-filling guess.
+#
+# NO PRIMARY SOURCE READ. The name and the board's nRF52840 both suggest BLE, and
+# suggestion is not provenance -- this is precisely the field where a plausible guess
+# would be indistinguishable from a checked fact. `Maybe.FirmwareWirelessUnknown` exists
+# in `Wireless.kt` so that this row reaches a reader as "we do not know" rather than as a
+# silent "no". Filed as a follow-up; a reader is never shown a claim from this row.
+mcu_families_supported = ["nrf52"]
+mcu_families_excluded  = []
+wireless = "unknown"
+source   = "https://bluemicro.jpconstantineau.com"

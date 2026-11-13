@@ -1,0 +1,98 @@
+@import net.keyboardbuilders.keyboardbuilders.web.Head
+@import net.keyboardbuilders.keyboardbuilders.web.SiteUrl
+@param head: Head
+@param site: SiteUrl
+
+<%--
+    Editing: plain HTML paragraphs. NO BACKTICKS anywhere in this file -- one closes the
+    raw string this page is written in, and jte then reports the error on the wrong line.
+--%>
+@template.layout(head = head, site = site, content = @`
+    <article class="about">
+        <figure class="about-portrait">
+            <img src="/fowlie.webp" width="400" height="400"
+                 alt="A cartoon of fowlie holding a soldering iron and a keyboard PCB">
+            <%-- The badge's empty speech bubble, filled in. Positioned over the
+                 bubble in the picture, so it moves with it at every width. --%>
+            <figcaption class="about-bubble">Found your next build yet?</figcaption>
+        </figure>
+
+        <h1>Why this exists</h1>
+
+        <p>
+            Keyboard Builders is a searchable catalog of open-source keyboard designs,
+            so you can find one that fits you and actually build it.
+        </p>
+
+        <p>
+            I built my first keyboard in 2022 and
+            <a href="https://fowlie.github.io/2022/08/15/my-first-keyboard-build" rel="noopener" target="_blank">blogged about it here</a>.
+            What fascinated me most on the way down the rabbit hole was how much
+            creativity there is among keyboard designers. But it was also frustrating: I
+            spent ages finding the right design for me, only to find its parts were out
+            of stock. (Keeping track of stock is on my list, but the site can't do that
+            yet.)
+        </p>
+
+        <h2>How it works</h2>
+
+        <p>
+            A good structure isn't enough on its own. It needs data too, and there are
+            a ton of designs out there, with new ones every week, so collecting it had to
+            be automated. A set of scripts reads the facts straight out of each design's
+            hardware and firmware sources. From those I fill the database, draw
+            the layout silhouettes and render the PCBs. It all runs on a Hetzner server
+            in Finland.
+        </p>
+
+        <p>
+            My hope is to grow this into the biggest catalog of open-source keyboards
+            out there, so builders can find designs that fit their own needs. I also aim
+            to build a "configure this design" page where the system will validate each
+            part against the design's own hardware.
+        </p>
+
+        <p>
+            None of this would exist without the designers who share their work for
+            free. Every design here links back to its author and its repository, and
+            I'm grateful to every one of them.
+        </p>
+
+        <h2>How accurate is it?</h2>
+
+        <p>
+            Every fact on a design page is read from the design's own files: its PCB,
+            its firmware and its README. Nothing is guessed. When the scripts can't find
+            something, the page says "not recorded" rather than filling in a likely
+            answer. The scripts still get things wrong sometimes, for example by pairing
+            a board with another board's firmware, and I fix those by hand as they're
+            found.
+        </p>
+
+        <p>
+            Found a mistake, or a design that's missing? Write to me at
+            <a href="mailto:hello@keyboardbuilders.net?subject=keyboardbuilders">hello@keyboardbuilders.net</a>.
+            Every correction makes the catalog better for the next builder.
+        </p>
+
+        <h2 id="privacy">Privacy</h2>
+
+        <p>
+            No tracking cookies. Designers who sign in with GitHub get a session cookie,
+            and if they unpublish a design we keep their GitHub username with it. Your favorites, and your choice on the
+            <a href="/settings">Settings</a> page, are kept in your browser. The visitor
+            counter (<a href="https://www.goatcounter.com" rel="noopener" target="_blank">GoatCounter</a>)
+            stores nothing on your device.
+        </p>
+
+        <h2>Supporting the site</h2>
+
+        <p>
+            I work on this in the evenings, often late into the night, and the server
+            and storage cost money.
+            If you want to support my work and help pay the server bill, you can
+            <a href="https://ko-fi.com/keyboardbuilders" rel="noopener" target="_blank">buy me a beer</a>,
+            or simply share the site with your friends.
+        </p>
+    </article>
+`)

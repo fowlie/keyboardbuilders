@@ -1,0 +1,106 @@
+# The app as a container. Backlog #71, replacing deploy/keyboardbuilders.service.
+#
+# Lives at /home/fowlie/keyboardbuilders/compose.yml on the VPS, beside the runner's and
+# caddy's own. `docker compose pull && docker compose up -d` is the whole deploy, and the
+# rollback is the same two commands with a different tag in .env.
+#
+# WHAT DID NOT CHANGE, DELIBERATELY: the published address, the database path, the
+# management port and every environment value are exactly what the systemd unit set. This
+# swaps the process supervisor, not the deployment. Caddy's config is untouched -- it
+# still proxies to the docker bridge gateway on 8080 -- because a change that also
+# rewrites the proxy is two changes and only one of them can be blamed when it breaks.
+services:
+  keyboardbuilders:
+    image: ${KB_IMAGE:?set KB_IMAGE in .env, e.g. ghcr.io/fowlie/keyboardbuilders:abc1234}
+    container_name: keyboardbuilders
+    restart: unless-stopped
+
+    # A FIXED HOSTNAME, AND IT IS A PERFORMANCE FIX RATHER THAN COSMETICS. Backlog #74.
+    #
+    # Java2D builds a fontconfig cache the first time a share card is drawn -- cold that
+    # render costs ~5 s, warm ~0.3 s -- and the JDK names the cache after the HOSTNAME:
+    #
+    #   .java/fonts/25.0.4/fcinfo-1-96154ae10645-Ubuntu-24.04-en-US.properties
+    #                                ^^^^^^^^^^^^ the container's random id
+    #
+    # Without this line every container invents a new hostname, so it writes a cache under
+    # a name that can never recur. Measured 2026-09-08: TEN orphaned cache files, one per
+    # start since the cutover. The cache was not missing, it was being abandoned.
+    #
+    # WHAT THIS DOES NOT FIX, because the first version of this comment claimed it did: the
+    # ~5 s cold render. With the hostname pinned and no matching cache file present -- the
+    # true cold case -- a card took 0.496 s, and 0.461 s once the cache existed. The five
+    # seconds at the cutover belonged to `.cache/fontconfig`, which is keyed by CONTENT
+    # rather than hostname and has survived on this mount since 2026-08-30. So this line is
+    # housekeeping worth having, not a latency fix. Backlog #74 has the numbers.
+    #
+    # This works because HOME is /var/lib/keyboardbuilders (set by the Dockerfile's
+    # useradd), which is the bind mount, so the cache outlives the container. Baking one
+    # into the image cannot work: `docker build` offers no way to set the hostname, so a
+    # build-time cache would carry the BUILDER's name and be ignored here. The JDK version
+    # is a directory component, so a base-image bump re-pays the 5 s once, by design.
+    hostname: keyboardbuilders
+
+    # THE PUBLISHED ADDRESS IS THE SECURITY BOUNDARY, and it is why the app is told to
+    # bind 0.0.0.0 below. `0.0.0.0` inside a container is the CONTAINER's namespace, not
+    # the host's; what the internet can reach is decided entirely by these two lines.
+    #
+    # 172.17.0.1 for the app: Caddy is a container and reaches the host over the bridge
+    # gateway, never over host loopback -- the first deploy failed exactly there.
+    # 127.0.0.1 for the actuator: StatLite is a HOST process polling loopback, and
+    # `show-details=always` makes that port a real information leak if it goes wider.
+    # This is the same split application-prod.properties argues for, enforced by docker
+    # instead of by the JVM.
+    ports:
+      - "172.17.0.1:8080:8080"
+      - "127.0.0.1:9091:9091"
+
+    # A BIND MOUNT, NOT A NAMED VOLUME, so `backup.sh` keeps working untouched: it reads
+    # /var/lib/keyboardbuilders/app.db on the host and knows nothing about docker. The
+    # container runs as uid 987, the same service account that owns this directory today,
+    # so ownership does not change under it either.
+    volumes:
+      - /var/lib/keyboardbuilders:/var/lib/keyboardbuilders
+
+    # SIGN IN WITH GITHUB (#116): KB_GITHUB_CLIENT_ID and KB_GITHUB_CLIENT_SECRET, in their
+    # own file beside this one (chmod 600), NOT in .env -- ship.sh rewrites .env whole on
+    # every deploy and would drop them. Optional, so a deploy before the OAuth app exists
+    # still starts: the site works and only "sign in" fails, at GitHub's end.
+    env_file:
+      - path: github.env
+        required: false
+
+    environment:
+      KB_DATABASE: /var/lib/keyboardbuilders/app.db
+      KB_PORT: "8080"
+      # 0.0.0.0 is safe here and ONLY here -- see the ports block above. Under systemd
+      # this was 172.17.0.1, because there the JVM's bind was the boundary.
+      KB_ADDRESS: "0.0.0.0"
+      KB_MANAGEMENT_PORT: "9091"
+      KB_MANAGEMENT_ADDRESS: "0.0.0.0"
+      SPRING_PROFILES_ACTIVE: prod
+      KEYBOARDBUILDERS_ANALYTICS: https://keyboardbuilders.goatcounter.com
+
+    # RAISED FROM 768m TO 1280m ON EVIDENCE, 2026-09-07. 768m was picked by eye and it
+    # cost 6x on the hot path: the import took **10.5 s** in the container against 1.7 s
+    # under systemd, because `MaxRAMPercentage=75` of 768m is a 576 MB heap and the JVM's
+    # non-heap then pushes the container to its ceiling, so the import GC-thrashes. The
+    # systemd unit's own journal recorded a 536 MB peak with no limit at all, which is the
+    # number 768m should have been checked against and was not.
+    #
+    # A limit is still right -- an app that leaks should be OOM-killed alone rather than
+    # taking Forgejo, Postgres and Caddy with it -- and the box has ~2.3 GB available with
+    # this container running, so 1280m keeps a real margin on both sides.
+    mem_limit: 1280m
+
+    # WHETHER A TEMPLATE RENDERED, never whether a port answered -- deploy/README.md's
+    # trap 2 is a failure at first render that a liveness check sails past. `/designs`
+    # exercises jte, the database and the seed import in one request.
+    healthcheck:
+      test: ["CMD-SHELL", "curl -fsS http://127.0.0.1:8080/designs | grep -q silhouette"]
+      interval: 30s
+      timeout: 10s
+      # The import runs on every boot and takes ~2 s, but a cold JVM on a loaded box is
+      # slower; start_period keeps a slow boot from counting as a failure.
+      start_period: 90s
+      retries: 3

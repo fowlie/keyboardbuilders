@@ -1,0 +1,73 @@
+# seed/wiring.toml -- key wiring for designs whose firmware sets CUSTOM_MATRIX, where
+# QMK's declarative `matrix_pins`/`diode_direction` keys are never filled in even
+# though a real matrix exists underneath. `scripts/qmk_metadata.wiring()` correctly
+# returns nothing for these -- they are not a matrix missing a field, they are a
+# different reading of the same two facts, sitting in hand-written C instead of JSON --
+# and this file is where that harder reading gets recorded once a person has done it.
+#
+# Queued by grepping the local QMK tree for `CUSTOM_MATRIX` among the repos this
+# corpus's own designs cite (`scripts/build_seed.py`'s own firmware refs), narrowed
+# to designs `qmk_metadata.wiring()` could not resolve. 4 of this corpus's 325
+# designs, found 2026-09-10.
+#
+#   drafted    the queue's own row: a CUSTOM_MATRIX design with unresolved wiring,
+#              evidence gathered (which files exist) but nobody has read the scan
+#              code yet. `rows`/`cols`/`diodes` are all null.
+#   confirmed  a person read the actual matrix_scan_custom() and can state both the
+#              logical matrix shape and which way the diodes point. The ONLY verdict
+#              the build reads.
+#
+# `note` on a drafted row is what a confirmer needs to start (which C files exist,
+# the raw CUSTOM_MATRIX line). On a confirmed row it is the reasoning: which
+# variables were read, and how they fix the direction -- checkable against the
+# repo without re-deriving it.
+
+[[entry]]
+slug    = "lagom"
+name    = "lagom"
+rows    = 5
+cols    = 16
+diodes  = "col_to_row"
+verdict = "confirmed"
+signal  = "human"
+note    = "mohoyt/lagom, firmware/lagom (mirrored at sthlmkb/lagom in qmk_firmware). config.h declares MATRIX_ROWS 5, MATRIX_COLS 16, MATRIX_MUX_COLS 4 -- 16 logical columns addressed through a 4-line decoder (MATRIX_COL_MUX_PINS), not one GPIO per column, which is why matrix_pins was never declarable in the ordinary way. matrix.c's matrix_scan_custom() sets col_pins (the 4 decoder-select lines) as outputs and row_pins as inputs with an internal pull-up (gpio_set_pin_input_high), then for each column calls select_col() and reads every row, treating a LOW row as pressed. Rows idling high and being pulled low through the switch when the addressed column is driven low is exactly QMK's own col2row topology (column is the driven/output side, row is the sensed/input side) -- the decoder is just how the column's output is generated, not a different topology. rows/cols record the LOGICAL matrix shape (5x16, matching MATRIX_ROWS/MATRIX_COLS) rather than the 4 physical column pins, matching how a declarative matrix_pins.cols array would have been read for an ordinary board."
+
+[[entry]]
+slug    = "3w6"
+name    = "3W6"
+rows    = 0
+cols    = 0
+diodes  = ""
+verdict = "drafted"
+signal  = "human"
+note    = "3w6/rev1 in qmk_firmware sets CUSTOM_MATRIX = lite and carries its own matrix.c. Not read yet."
+
+[[entry]]
+slug    = "torn"
+name    = "torn"
+rows    = 0
+cols    = 0
+diodes  = ""
+verdict = "drafted"
+signal  = "human"
+note    = "torn in qmk_firmware sets CUSTOM_MATRIX = lite and carries matrix.c plus mcp23018.c (an I/O-expander driver -- the same mechanism seed/bodies.toml already found joins torn's two halves into one matrix, so this custom scan likely spans both halves at once). Not read yet."
+
+[[entry]]
+slug    = "wired-pierce"
+name    = "wired-pierce"
+rows    = 0
+cols    = 0
+diodes  = ""
+verdict = "drafted"
+signal  = "human"
+note    = "pierce in qmk_firmware sets CUSTOM_MATRIX = lite and carries its own matrix.c. Not read yet."
+
+[[entry]]
+slug    = "pando"
+name    = "Pando"
+rows    = 5
+cols    = 12
+diodes  = "col_to_row"
+verdict = "confirmed"
+signal  = "human"
+note    = "2026-09-29. jyap808/pando, firmware/keyboards/jyap808/pando: rules.mk sets CUSTOM_MATRIX = lite, because the right half is scanned through a PCA9555 over I2C. config.h declares MATRIX_ROWS 5 and MATRIX_COLS 12 -- six columns a side (MATRIX_COLS_PER_SIDE), the left on STM32 GPIOs, the right on the expander's PORT0, mirrored into matrix cols 6-11. matrix_scan_custom() drives each ROW low (gpio_write_pin_low(left_rows[r]) on the left, ~right_rows[r] on PORT1 of the expander) and reads every COLUMN, which idles high (gpio_set_pin_input_high), a LOW column being pressed. Rows driven, columns sensed is QMK's COL2ROW, and keyboard.json declares \"diode_direction\": \"COL2ROW\" in agreement."

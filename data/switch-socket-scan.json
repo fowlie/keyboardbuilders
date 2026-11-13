@@ -1,0 +1,603 @@
+{
+ "3w6": [],
+ "3x3macropad": [
+  "hotswap"
+ ],
+ "41-1350": [],
+ "41-1353-r41l2": [],
+ "42": [],
+ "45": [],
+ "4by3": [],
+ "67-e": [],
+ "8pack": [],
+ "abacus": [],
+ "adalyn": [],
+ "adelheid": [],
+ "aek2-usb": [],
+ "ajisai74": [],
+ "alpha": [],
+ "anavi-arrows": [
+  "hotswap"
+ ],
+ "anavi-macro-pad-10": [
+  "hotswap"
+ ],
+ "anavi-macro-pad-12": [
+  "hotswap"
+ ],
+ "andean-condor": [],
+ "architeuthis-dux": [],
+ "arisu": [],
+ "atom47-rev5": [],
+ "atom47-rev5-c": [],
+ "atreus62": [],
+ "atreyu": [
+  "hotswap"
+ ],
+ "atreyu-v2-choc": [
+  "hotswap"
+ ],
+ "avalanche-hotswap": [
+  "hotswap"
+ ],
+ "axon": [],
+ "aya": [],
+ "bad-wings-bold": [
+  "hotswap"
+ ],
+ "bad-wings-slim": [],
+ "badge": [],
+ "bakeneko-65": [],
+ "banime40": [
+  "hotswap"
+ ],
+ "barracuda": [
+  "hotswap"
+ ],
+ "bartlepslit": [
+  "hotswap"
+ ],
+ "basketweave": [],
+ "bevi": [],
+ "bfo-9000": [],
+ "blue-team-pad": [],
+ "bm42": [],
+ "bto-layout": [],
+ "budgy-rev1-chergo": [],
+ "budgy-rev2-chergo": [],
+ "buzzard": [
+  "hotswap"
+ ],
+ "bw2-v2": [],
+ "cantor": [],
+ "cantor-remix": [],
+ "ccd60": [],
+ "chameleon": [
+  "hotswap"
+ ],
+ "cheapino": [
+  "hotswap"
+ ],
+ "choc-ergo-travel": [],
+ "choc-led-ergo-travel": [],
+ "choc-rgb-ergo-travel": [],
+ "choc-v": [],
+ "choc-v2-env-kb65": [],
+ "chocofly": [
+  "hotswap"
+ ],
+ "chocolatebar": [],
+ "chouchou": [],
+ "clog": [
+  "hotswap"
+ ],
+ "contender": [
+  "hotswap"
+ ],
+ "contra": [],
+ "corne-cherry-v4": [
+  "hotswap"
+ ],
+ "corne-chocolate-v4": [
+  "hotswap"
+ ],
+ "cornia": [
+  "hotswap"
+ ],
+ "cradio": [],
+ "cradio-ble": [],
+ "cradio-f": [],
+ "cradio-mb": [],
+ "cradio-pg1232": [],
+ "cradio-z": [],
+ "cradio-z-lp": [],
+ "cradio10": [],
+ "craftwalk": [
+  "hotswap"
+ ],
+ "crowboard-rev1-choc": [],
+ "crowboard-rev1-mx": [],
+ "crowboard-rev1-mx-kailh-hotswap": [
+  "hotswap"
+ ],
+ "crowboard-rev2-mx": [],
+ "crowboard-rev2-with-pimoroni": [],
+ "cyclops": [],
+ "cypher": [],
+ "desire65": [
+  "hotswap"
+ ],
+ "dilemma-diy-v2": [],
+ "dilemma-max": [],
+ "dilemma-v2": [],
+ "dilemma-v3-hotswap": [
+  "hotswap"
+ ],
+ "discipad": [],
+ "discipline": [],
+ "dizzy40": [],
+ "dk60": [],
+ "dm9records-ergoinu": [],
+ "dogtag": [
+  "hotswap"
+ ],
+ "dolphin": [],
+ "draculad": [],
+ "drink-me-usb-c": [],
+ "drink-me-usb-micro": [],
+ "drink-me-usb-mini": [],
+ "dropout": [],
+ "egg58v2": [
+  "hotswap"
+ ],
+ "elcantorhs": [
+  "hotswap"
+ ],
+ "elephant42": [
+  "hotswap"
+ ],
+ "eliza": [],
+ "endzone34": [
+  "hotswap"
+ ],
+ "env-kb60-mxhs": [
+  "hotswap"
+ ],
+ "env-mcro": [],
+ "env-rgb": [
+  "hotswap"
+ ],
+ "equanimity": [
+  "hotswap"
+ ],
+ "ergo33": [
+  "hotswap"
+ ],
+ "ergodash": [],
+ "ergoslab": [
+  "hotswap"
+ ],
+ "eternal-keypad": [],
+ "euisopcb": [],
+ "ferris-0-1-base": [],
+ "ferris-0-1-compact": [],
+ "ferris-0-1-high": [],
+ "ferris-0-1-low": [],
+ "ferris-0-2-bling": [],
+ "ferris-0-2-compact": [],
+ "ferris-0-2-high": [],
+ "ferris-0-2-mini": [],
+ "fnrow": [],
+ "for-science": [],
+ "fourier": [],
+ "framework-rev0": [
+  "hotswap"
+ ],
+ "frankie-macropad": [],
+ "friedrich": [],
+ "frooastboard-nano": [],
+ "fruity60": [],
+ "g35": [],
+ "game-hand": [],
+ "gh80-1800": [],
+ "gh80-3700": [],
+ "glyphkbd": [
+  "hotswap"
+ ],
+ "grooveboard-atmel-au": [],
+ "grooveboard-atmel-mu": [],
+ "grooveboard-choc-atmel-au": [
+  "hotswap"
+ ],
+ "grooveboard-choc-atmel-mu": [
+  "hotswap"
+ ],
+ "grooveboard-choc-rp": [
+  "hotswap"
+ ],
+ "grooveboard-mx-atmel-au": [
+  "hotswap"
+ ],
+ "grooveboard-mx-atmel-mu": [
+  "hotswap"
+ ],
+ "grooveboard-mx-rp": [
+  "hotswap"
+ ],
+ "grooveboard-rp": [],
+ "gud70": [],
+ "guide68-assemble": [],
+ "gummy-key": [
+  "hotswap"
+ ],
+ "helix": [],
+ "hem": [],
+ "hillside-46": [
+  "hotswap"
+ ],
+ "hillside-48": [],
+ "hillside-52": [
+  "hotswap"
+ ],
+ "hnah40-atmega328p-v1": [],
+ "horizon-choc": [],
+ "horizon-mx": [],
+ "hotswap-rgb-dumbpad": [
+  "hotswap"
+ ],
+ "hub20": [],
+ "index-tab": [
+  "hotswap"
+ ],
+ "isometria-75-iso": [],
+ "janus": [],
+ "jiran-cherry": [],
+ "jiran-classic": [
+  "millmax"
+ ],
+ "jiran-hotswap": [
+  "hotswap"
+ ],
+ "jorne-cherry-2-1": [
+  "hotswap"
+ ],
+ "jorne-cherry-3-0": [
+  "hotswap"
+ ],
+ "jorne-classic-2-1": [],
+ "jp60": [
+  "hotswap"
+ ],
+ "juliet": [],
+ "junco": [
+  "hotswap"
+ ],
+ "k34": [
+  "hotswap"
+ ],
+ "kaly": [],
+ "kapl": [],
+ "karina": [],
+ "karn": [],
+ "karn-2": [],
+ "karn-3": [],
+ "kb58-pico": [],
+ "kbd-template": [
+  "hotswap"
+ ],
+ "kbic65": [],
+ "keaboard-rev1": [
+  "hotswap"
+ ],
+ "keyboar-layout": [],
+ "kintsugi": [
+  "hotswap"
+ ],
+ "klor": [],
+ "kobold": [
+  "hotswap"
+ ],
+ "koca58": [
+  "hotswap"
+ ],
+ "kuro65": [
+  "hotswap"
+ ],
+ "la-nc": [
+  "hotswap"
+ ],
+ "lagom": [],
+ "lancer-hotswap": [
+  "hotswap"
+ ],
+ "largelad": [
+  "hotswap"
+ ],
+ "layout-jopr": [],
+ "lck75": [],
+ "lily58": [],
+ "lily58-lite-rev3": [],
+ "lily58-pro": [
+  "hotswap"
+ ],
+ "lime": [
+  "hotswap"
+ ],
+ "litl": [],
+ "lotus58": [
+  "hotswap"
+ ],
+ "lumberjack": [],
+ "m0110a-qmk": [],
+ "m0116-usb": [],
+ "m3n3van-rev2": [],
+ "macro3": [],
+ "macrocat": [
+  "hotswap"
+ ],
+ "madjax-macropad": [],
+ "masonry": [
+  "hotswap"
+ ],
+ "meson": [],
+ "mikeneko-65": [
+  "hotswap"
+ ],
+ "milk": [],
+ "millipad": [
+  "hotswap"
+ ],
+ "mini-e-li-xi-vy": [],
+ "mini-ten-key-plus": [],
+ "minim": [],
+ "model-b": [
+  "hotswap"
+ ],
+ "molecule": [
+  "hotswap"
+ ],
+ "morizon-choc": [],
+ "morizon-mx": [],
+ "mx-5160": [],
+ "mysterium": [],
+ "nack": [
+  "hotswap"
+ ],
+ "nafuda": [
+  "hotswap"
+ ],
+ "neopad": [],
+ "noah": [],
+ "np12": [
+  "hotswap"
+ ],
+ "nt210": [],
+ "nt750": [],
+ "num-discipline": [],
+ "numpad": [],
+ "omega": [
+  "hotswap"
+ ],
+ "opendeck": [],
+ "orthocode": [],
+ "osprette": [
+  "hotswap"
+ ],
+ "pancake-v1": [],
+ "pancake-v2": [],
+ "pandamic": [],
+ "pando": [
+  "hotswap"
+ ],
+ "pando58": [],
+ "paws60": [
+  "hotswap"
+ ],
+ "piantor": [
+  "hotswap"
+ ],
+ "pica40": [
+  "hotswap"
+ ],
+ "pill60": [
+  "hotswap"
+ ],
+ "pinky3": [
+  "hotswap"
+ ],
+ "pinky4": [
+  "hotswap"
+ ],
+ "pisces": [
+  "hotswap"
+ ],
+ "pisces-v2": [
+  "hotswap"
+ ],
+ "pix": [],
+ "plaid": [],
+ "plain60-c": [],
+ "pluckey": [],
+ "pluto12": [],
+ "potato65": [
+  "hotswap"
+ ],
+ "prkl30": [],
+ "pteron56v0": [],
+ "punk75": [],
+ "qez": [],
+ "quefrency-rev1": [],
+ "redherring": [
+  "hotswap"
+ ],
+ "redox-rev1": [],
+ "reviung34": [],
+ "reviung34-split": [
+  "hotswap"
+ ],
+ "reviung41": [
+  "hotswap"
+ ],
+ "reviung46": [
+  "hotswap"
+ ],
+ "reviung5": [],
+ "reviung53": [
+  "hotswap"
+ ],
+ "reviung61": [],
+ "rhymestone": [
+  "hotswap"
+ ],
+ "romac": [],
+ "romeo": [],
+ "rosaline": [],
+ "rosaline-ortho": [],
+ "sango": [
+  "hotswap"
+ ],
+ "scatter42": [
+  "hotswap"
+ ],
+ "schwann-rev0-5b": [],
+ "sdra-kb00": [
+  "hotswap"
+ ],
+ "sepia-officinalis": [
+  "hotswap"
+ ],
+ "sesame": [],
+ "setta21": [
+  "hotswap"
+ ],
+ "sha-choc": [],
+ "sha-mx": [],
+ "silakka54": [
+  "hotswap"
+ ],
+ "sith-zhuyin40": [],
+ "skeleton-num-pad": [
+  "hotswap"
+ ],
+ "skeleton68rev2": [
+  "hotswap"
+ ],
+ "sl40": [],
+ "slime88": [],
+ "slimorta": [
+  "hotswap"
+ ],
+ "sofle-choc": [
+  "hotswap"
+ ],
+ "sofle-pico": [
+  "hotswap"
+ ],
+ "sofle-v1": [
+  "hotswap"
+ ],
+ "solheim68": [],
+ "southpawpcb": [],
+ "soyuz": [],
+ "spacetime": [],
+ "span": [
+  "hotswap"
+ ],
+ "speedo": [],
+ "spleeb": [],
+ "splitreus": [],
+ "squiggle-36": [],
+ "squiggle-goldberg": [],
+ "squiggle-low-profile": [],
+ "squiggle-minimalist": [],
+ "squiggle-standard": [],
+ "steal-this": [],
+ "stoutgat": [],
+ "stoutgatv2": [],
+ "stront-choc": [
+  "hotswap"
+ ],
+ "stront-mx-38": [
+  "hotswap"
+ ],
+ "stront-mx-40": [
+  "hotswap"
+ ],
+ "supersplit": [],
+ "sweep-2": [
+  "millmax"
+ ],
+ "sweep-bling-lp": [
+  "hotswap"
+ ],
+ "sweep-bling-mx": [
+  "hotswap"
+ ],
+ "sweep-half-swept": [],
+ "sweep-high": [],
+ "sweep-high-m": [],
+ "sweeq": [
+  "hotswap"
+ ],
+ "sweeq-mx": [
+  "hotswap"
+ ],
+ "swoop-mx": [],
+ "tanuki-pcb3": [],
+ "tartan": [],
+ "teaqueen": [
+  "hotswap"
+ ],
+ "tenkey-plusplus": [
+  "hotswap"
+ ],
+ "tg4x": [],
+ "th75": [],
+ "torn": [
+  "hotswap"
+ ],
+ "touhoupad-v2": [],
+ "treadstone32": [
+  "hotswap"
+ ],
+ "tripel": [],
+ "twelvekey": [],
+ "ua62": [],
+ "un-split": [],
+ "unicorn-f072": [
+  "hotswap"
+ ],
+ "unicorne": [
+  "hotswap"
+ ],
+ "unison": [],
+ "unix60pcb": [],
+ "vagrant": [],
+ "varanidae": [],
+ "voyager60": [],
+ "wave": [
+  "hotswap",
+  "millmax"
+ ],
+ "wired-pierce": [],
+ "wren": [],
+ "xenon-e": [
+  "hotswap"
+ ],
+ "xr63-gl": [
+  "hotswap"
+ ],
+ "yiancardesigns-gingham": [],
+ "yosino58": [],
+ "yosino58-cherry": [
+  "hotswap"
+ ],
+ "yosino58-chocolate": [
+  "hotswap"
+ ],
+ "zero": [],
+ "zodiark": [
+  "hotswap"
+ ],
+ "zwerg": []
+}

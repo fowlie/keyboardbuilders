@@ -1,0 +1,51 @@
+@import net.keyboardbuilders.keyboardbuilders.web.DesignCard
+@param card: DesignCard
+@param cls: String
+@param full: Boolean = false
+@param reason: String? = null
+@param href: String? = null
+@param rel: String? = null
+<%-- ONE CARD, TWO SURFACES: the home page's daily strip ("strip-card") and the /designs
+     grid ("result-card"), which box it differently -- the strip's box is the link, the
+     grid's is its li, whose measured size OffscreenRowsTest holds. `full` adds the
+     electronics line and the completeness chip the index has always shown.
+
+     No photo means the drawing fills the photo's place at the catalogue's own scale, so
+     every card has one shape and sizes still compare.
+
+     `reason` is "boards like this"'s one addition, ux.md 3.6: a related card must say why
+     it is there. `href` and `rel` are the compare chooser's: the same card, leading to
+     the pair instead of the design. --%>
+<a class="${cls} card" href="${href ?: "/designs/" + card.row.slug}" rel="${rel}">
+    @if(card.photo != null)
+        <span class="card-photo">
+            <img src="${card.photo}" alt="${card.row.name}@if(card.rendered), PCB render@else, built@endif" loading="lazy">
+            <%-- The owner's favourite detail: the board's own drawing, small, over its
+                 photo. Fit to its chip on purpose -- a label, not a size comparison. --%>
+            @if(card.drawn)<span class="card-badge">$unsafe{card.row.silhouette}</span>@endif
+            @if(card.row.stars != null || card.row.hearts != null)<span class="card-stars">@if(card.row.stars != null)<span title="GitHub stars">&#9733; ${card.row.stars}</span>@endif@if(card.row.stars != null && card.row.hearts != null) &middot; @endif@if(card.row.hearts != null)<span class="card-hearts" title="Hearts">&#9829; ${card.row.hearts}</span>@endif</span>@endif
+        </span>
+    @else
+        <span class="card-photo no-photo">
+            <span class="card-drawn">$unsafe{card.row.silhouette}</span>
+            @if(card.row.stars != null || card.row.hearts != null)<span class="card-stars">@if(card.row.stars != null)<span title="GitHub stars">&#9733; ${card.row.stars}</span>@endif@if(card.row.stars != null && card.row.hearts != null) &middot; @endif@if(card.row.hearts != null)<span class="card-hearts" title="Hearts">&#9829; ${card.row.hearts}</span>@endif</span>@endif
+        </span>
+    @endif
+    <span class="card-text">
+        <span class="card-title">
+            <span class="name">${card.row.name}</span>
+            @if(card.by != null)<span class="card-by">by ${card.by}</span>@endif
+        </span>
+        <span class="facts">
+            @for(chip in card.row.shape)<span>${chip}</span>@endfor
+        </span>
+        @if(full)
+            <span class="facts">
+                @for(chip in card.row.electronics)<span>${chip}</span>@endfor
+            </span>
+            <%-- Backlog #46: ux.md 2.3's meta line, the percentage only. --%>
+            <span class="facts completeness-chip"><span>${card.row.completeness}% complete</span></span>
+        @endif
+        @if(reason != null)<span class="related-reason">${reason}</span>@endif
+    </span>
+</a>

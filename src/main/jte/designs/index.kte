@@ -1,0 +1,191 @@
+@import net.keyboardbuilders.keyboardbuilders.web.AppliedFilter
+@import net.keyboardbuilders.keyboardbuilders.web.Head
+@import net.keyboardbuilders.keyboardbuilders.web.SiteUrl
+@import net.keyboardbuilders.keyboardbuilders.web.DesignRow
+@import net.keyboardbuilders.keyboardbuilders.web.Page
+@import net.keyboardbuilders.keyboardbuilders.web.RailGroup
+@import net.keyboardbuilders.keyboardbuilders.web.Relaxed
+@import net.keyboardbuilders.keyboardbuilders.domain.ShorthandQuery
+@import net.keyboardbuilders.keyboardbuilders.domain.ShorthandReading
+@param rows: List<DesignRow>
+@param cards: List<net.keyboardbuilders.keyboardbuilders.web.DesignCard> = listOf()
+@param total: Int
+@param page: Page
+@param applied: List<AppliedFilter> = listOf()
+@param relaxations: List<Relaxed> = listOf()
+@param rail: List<RailGroup> = listOf()
+@param q: String = ""
+@param shorthand: ShorthandQuery? = null
+@param shorthandReading: ShorthandReading? = null
+@param carry: Map<String, String> = mapOf()
+@param pageQuery: String = ""
+@param head: Head
+@param site: SiteUrl
+
+@template.layout(head = head, site = site, wide = true, content = @`
+    <h1>Keyboard Designs</h1>
+
+    <%-- A PLAIN GET FORM. It works with scripting off, bookmarks correctly, and needs
+         no framework -- the Ctrl/Cmd+K shortcut at the foot of this file is an
+         enhancement on top, never the way in. Forgejo #25.
+
+         The applied facets ride along as hidden inputs because a GET form REPLACES the
+         whole query string: without these, searching from a filtered page silently
+         clears every filter the reader had set and returns more results than before. --%>
+    <form class="find" method="get" action="/designs" role="search">
+        @for(entry in carry.entries)
+            <input type="hidden" name="${entry.key}" value="${entry.value}">
+        @endfor
+        <input type="search" id="q" name="q" value="${q}"
+               placeholder="Search by name" aria-label="Search designs by name"
+               autocomplete="off" spellcheck="false">
+        <button type="submit">Search</button>
+    </form>
+
+    @if(shorthand != null && shorthandReading != null)
+        <%-- ux.md 2.2: "the interpretation line is always shown when a non-free-text
+             grammar matched" -- so a misparse is obvious at a glance rather than after
+             scrolling confusing results. States the ONE reading actually searched
+             (ShorthandSearch.kt's ShorthandReading) -- an earlier cut showed both
+             split and unibody counts while only ever searching a plain OR of both
+             numbers with no body check, which is exactly what let keypads and small
+             unibody boards leak into a split search. No flip link and no "search as
+             text instead" escape hatch yet -- narrower first cut, not forgotten. --%>
+        <p class="interpretation">
+            Read as a layout: <strong>${shorthand.asTyped}</strong> &rarr;
+            ${shorthandReading.keys} keys, ${shorthandReading.body}
+        </p>
+    @endif
+
+    <div class="search">
+    @if(!rail.isEmpty())
+        <%-- BELOW THE TWO-COLUMN BREAKPOINT THE RAIL COMES FIRST AND IS ~1,540px TALL,
+             so a phone reader scrolls roughly four screenfuls of filters before the
+             first keyboard. This collapses it behind one control and puts the results
+             above it. A checkbox and a label rather than <details>, because a <details>
+             cannot be forced open by CSS on the desktop side reliably -- and rather
+             than script, because v0.5 loads none at all and this must work without it.
+             The toggle is CSS-only, so it does not survive a filter click; that is the
+             right trade on a phone, where applying a filter means you want the results. --%>
+        <input class="rail-toggle" id="rail-toggle" type="checkbox">
+        <label class="rail-open" for="rail-toggle">
+            <svg class="chev" width="12" height="12" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                 stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+            <span>Filters</span>
+            @if(!applied.isEmpty())<span class="n">${applied.size}</span>@endif
+        </label>
+        <aside class="rail" aria-label="Filters">
+            @for(group in rail)
+                @template.designs.facetGroup(group = group)
+            @endfor
+        </aside>
+    @endif
+    <div class="results-col">
+    <p class="count">${total} design@if(total != 1)s@endif@if(page.count > 1),
+        showing ${page.first}&ndash;${page.last}@endif</p>
+
+    @if(!applied.isEmpty())
+        <p class="chips">
+            <%-- THE X IS A PLAIN LINK, and chip.without has existed since the chips did:
+                 link() builds it, FilteringTest asserts a band survives in it, and until
+                 now nothing rendered it. Removing one filter meant Clear all and starting
+                 over.
+
+                 An anchor, not a button: it is the no-JS path, it works with middle click,
+                 and it is the same URL grammar as the rest of this page. The LABEL is not
+                 a link, so clicking a chip to read it cannot throw the filter away.
+
+                 NO BACKTICKS IN HERE. This template is one big content block delimited by
+                 them, so a backtick even inside a comment closes it, and the error names a
+                 line far away. Same note is on designs/show.kte. --%>
+            @for(chip in applied)
+                <span class="chip">
+                    <span class="chip-label">${chip.label}</span>
+                    <a class="chip-drop" href="${chip.without}"
+                       aria-label="Remove filter: ${chip.label}" title="Remove this filter">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+                             stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                             aria-hidden="true"><path d="M6 6 L18 18 M18 6 L6 18"/></svg>
+                    </a>
+                </span>
+            @endfor
+            <a class="clear" href="/designs">Clear all</a>
+        </p>
+    @endif
+
+    @if(rows.isEmpty() && !relaxations.isEmpty())
+        <%-- ux.md 2.6 Risk 1: no results is a MAIN PATH, not an error. Measured on this
+             corpus, 38% of two-filter combinations land here, so the page answers "what
+             should I drop" rather than leaving the reader to guess. Each offer carries
+             the count it would give, because an offer whose size you cannot see is a
+             guess wearing a button. --%>
+        <div class="recover">
+            <p><strong>No design matches all of those.</strong> Dropping one filter would find:</p>
+            <ul>
+                @for(offer in relaxations)
+                    <li><a href="${offer.href}">without <em>${offer.label}</em></a>
+                        — ${offer.count} design@if(offer.count != 1)s@endif</li>
+                @endfor
+            </ul>
+        </div>
+    @elseif(rows.isEmpty())
+        <p class="empty">Nothing here yet.</p>
+    @else
+        <ul class="results">
+            @for(card in cards)
+                <%-- THE WHOLE CARD IS ONE LINK, not just the name -- owner-reported, and
+                     matching the home page's shop window, which was already built this
+                     way. The card's own box still lives on the li element, and the CSS
+                     :has() selector carries the hover state up to it without moving that
+                     box -- the li's content-visibility/contain-intrinsic-size pairing is a
+                     MEASURED value (OffscreenRowsTest, Forgejo #13), re-measured
+                     2026-09-26 when the rows became photo cards.
+
+                     Ticket 54's stars ride on the card's photo corner: the list is sorted
+                     by that number, so drawing it is what makes the order explicable. --%>
+                <li>@template.designs.card(card = card, cls = "result-card", full = true)</li>
+            @endfor
+        </ul>
+
+        @if(page.count > 1)
+            <%-- ux.md §2.7: "Sort / paginate — boosted links / plain <a href>". These are
+                 the plain half, and they are the whole thing until htmx lands. rel=prev
+                 and rel=next are what a browser and a reader-mode both look for. --%>
+            <%-- Backlog #9. pageQuery is the current filter/search, unpaginated, so a
+                 pager link carries it forward -- unfiltered it is empty and this is the
+                 bare /designs?page=N it always was. --%>
+            <nav class="pages" aria-label="Pages of results">
+                @if(page.hasPrevious)
+                    <a rel="prev" href="/designs?${if (pageQuery.isEmpty()) "" else pageQuery + "&"}page=${page.number - 1}">&larr; Previous</a>
+                @else
+                    <span class="spent">&larr; Previous</span>
+                @endif
+                <span class="where">Page ${page.number} of ${page.count}</span>
+                @if(page.hasNext)
+                    <a rel="next" href="/designs?${if (pageQuery.isEmpty()) "" else pageQuery + "&"}page=${page.number + 1}">Next &rarr;</a>
+                @else
+                    <span class="spent">Next &rarr;</span>
+                @endif
+            </nav>
+        @endif
+    @endif
+    </div>
+    </div>
+`)
+
+<%-- THE FIRST SCRIPT THIS SITE LOADS, and it is deliberately the only thing that needs
+     one. Everything above works without it: the form is a plain GET and the rail is
+     CSS. The zero-script rule was never an end in itself -- it exists so the page works
+     with scripting off -- so a shortcut that only makes an existing control faster to
+     reach keeps that guarantee exactly. Forgejo #25. --%>
+<script>
+    document.addEventListener("keydown", function (e) {
+        if (!(e.metaKey || e.ctrlKey) || e.key.toLowerCase() !== "k") return;
+        var box = document.getElementById("q");
+        if (!box) return;
+        e.preventDefault();
+        box.focus();
+        box.select();
+    });
+</script>

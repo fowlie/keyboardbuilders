@@ -1,0 +1,26 @@
+@import net.keyboardbuilders.keyboardbuilders.web.Head
+@import net.keyboardbuilders.keyboardbuilders.web.LearnTopic
+@import net.keyboardbuilders.keyboardbuilders.web.SiteUrl
+@param topics: List<LearnTopic>
+@param head: Head
+@param site: SiteUrl
+
+<%-- /learn: every topic, in the catalog's own order (LearnTopic), each with the sentence
+     its search snippet uses. NO BACKTICKS IN THIS FILE -- one closes the raw string the
+     page is written in, and jte then reports the error on the wrong line. --%>
+@template.layout(head = head, site = site, content = @`
+    <article class="learn">
+        <h1>Learn</h1>
+        <p>
+            Short explainers for the terms you run into when picking a keyboard to build.
+        </p>
+        <ul class="learn-topics">
+            @for(topic in topics)
+                <li>
+                    <a href="/learn/${topic.slug}">${topic.title}</a>
+                    <p>${topic.description}</p>
+                </li>
+            @endfor
+        </ul>
+    </article>
+`)

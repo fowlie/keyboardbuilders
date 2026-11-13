@@ -1,0 +1,7269 @@
+{
+ "Envious-Data/Env-KB60F\tKiCad Files/MainPCB_MX_HS/Env-KB60MXHS.kicad_pcb": {
+  "bom": "Gerbers/BOM.csv",
+  "column": "value",
+  "parts": [
+   {
+    "designator": "5.1K1, 5.1K2",
+    "footprint": "0805",
+    "part": "5.1K 0805 Resistor"
+   },
+   {
+    "designator": "D_1, D_10, D_11, D_12, D_13, D_14, D_15, D_16, D_17, D_18, D_19, D_2, D_20, D_21, D_22, D_23, D_24, D_25, D_26, D_27, D_28, D_29, D_3, D_30, D_31, D_32, D_33, D_34, D_35, D_36, D_37, D_38, D_39, D_4, D_40, D_41, D_42, D_43, D_44, D_45, D_46, D_47, D_48, D_49, D_5, D_50, D_51, D_52, D_53, D_54, D_55, D_56, D_57, D_58, D_59, D_590, D_591, D_6, D_60, D_61, D_62, D_63, D_7, D_8, D_9",
+    "footprint": "SOD-123+D_DO-35_SOD27_P7.62mm_Horizontal",
+    "part": "LL4148"
+   },
+   {
+    "designator": "D_64",
+    "footprint": "D_SOD-123",
+    "part": "1n5817W"
+   },
+   {
+    "designator": "H1, H10, H11, H2, H3, H4, H6, H9",
+    "footprint": "MountingHole_2.2mm_M2-MODIFIED",
+    "part": "SMTSO2035CTJ"
+   },
+   {
+    "designator": "J1",
+    "footprint": "PinSocket_1x04_P2.54mm_Vertical",
+    "part": "Conn_01x04"
+   },
+   {
+    "designator": "K_1, K_10, K_11, K_12, K_13, K_14, K_15, K_16, K_17, K_18, K_19, K_2, K_20, K_21, K_22, K_23, K_24, K_25, K_26, K_27, K_28, K_29, K_3, K_30, K_31, K_32, K_33, K_34, K_35, K_36, K_37, K_38, K_39, K_4, K_40, K_41, K_42, K_43, K_44, K_45, K_46, K_47, K_48, K_49, K_5, K_50, K_51, K_52, K_53, K_54, K_55, K_56, K_57, K_58, K_59, K_6, K_60, K_61, K_62, K_63, K_64, K_65, K_7, K_8, K_9",
+    "footprint": "MXOnly-1U-Hotswap-Modified",
+    "part": "CPG151101S11"
+   },
+   {
+    "designator": "SW1",
+    "footprint": "Panasonic_EVQPUL_EVQPUC",
+    "part": "EVQPUL"
+   },
+   {
+    "designator": "U1",
+    "footprint": "RPi_Pico_SMD_TH_MODIFIED",
+    "part": "Pico"
+   },
+   {
+    "designator": "USB1",
+    "footprint": "USB_C_TYPE-C-31-M-14",
+    "part": "TYPE-C-31-M-14"
+   }
+  ]
+ },
+ "ai03-2725/duet-switch-tester\tDuet-MainPCB/Duet-Switch-Tester.kicad_pcb": {
+  "bom": "Duet-MainPCB/Duet-Switch-Tester_bom_.csv",
+  "column": "part",
+  "parts": [
+   {
+    "designator": "C1 C2",
+    "footprint": "C_0402_1005Metric",
+    "part": "C_Small"
+   },
+   {
+    "designator": "C3 C4 C5 C8 C9 C10 C11 C12 C13 C14",
+    "footprint": "C_0402_1005Metric",
+    "part": "C_Small"
+   },
+   {
+    "designator": "C6 C15 C16 C17",
+    "footprint": "C_0402_1005Metric",
+    "part": "C_Small"
+   },
+   {
+    "designator": "C7",
+    "footprint": "C_0603_1608Metric",
+    "part": "C_Small"
+   },
+   {
+    "designator": "D1 D2 D3 D4 D5 D6 D7 D8 D9 D10 D11 D12 D13 D14 D15 D16 D17 D18 D19 D20 D21 D22 D23 D24 D25 D26 D27 D28 D29 D30 D31 D32 D33 D34 D35 D36 D37 D38 D39 D40 D41 D42 D43 D44 D45 D46 D47 D48 D49 D50 D51 D52 D53 D54 D55 D56 D57 D58 D59 D60 D61 D62 D63 D64 D65 D66 D67 D68 D69 D70 D71 D72 D73 D74 D75 D76 D77 D78 D79 D80 D81 D82 D83 D84 D85 D86 D87 D88 D89 D90 D91 D92 D93 D94 D95 D96 D97 D98 D99 D100 D101 D102 D103 D104 D105 D106 D107 D108",
+    "footprint": "D_SOD-123-MinimalPrint",
+    "part": "1N4148W"
+   },
+   {
+    "designator": "D109",
+    "footprint": "D_SOD-123",
+    "part": "D_Schottky_Small"
+   },
+   {
+    "designator": "F1",
+    "footprint": "Fuse_1206_3216Metric",
+    "part": "Polyfuse_Small"
+   },
+   {
+    "designator": "K1 K2 K3 K4 K5 K6 K7 K8 K9 K10 K11 K12 K13 K14 K15 K16 K17 K18 K19 K20 K21 K22 K23 K24 K25 K26 K27 K28 K29 K30 K31 K32 K33 K34 K35 K36 K37 K38 K39 K40 K41 K42 K43 K44 K45 K46 K47 K48 K49 K50 K51 K52 K53 K54 K55 K56 K57 K58 K59 K60 K61 K62 K63 K64 K65 K66 K67 K68 K69 K70 K71 K72 K73 K74 K75 K76 K77 K78 K79 K80 K81 K82 K83 K84 K85 K86 K87 K88 K89 K90 K91 K92 K93 K94 K95 K96 K97 K98 K99 K100 K101 K102 K103 K104 K105 K106 K107 K108",
+    "footprint": "MX-Hotswap-1U",
+    "part": "SW_Push"
+   },
+   {
+    "designator": "R5 R6",
+    "footprint": "R_0402_1005Metric",
+    "part": "R_Small"
+   },
+   {
+    "designator": "R1 R3 R4",
+    "footprint": "R_0402_1005Metric",
+    "part": "R_Small"
+   },
+   {
+    "designator": "R9 R10",
+    "footprint": "R_0603_1608Metric",
+    "part": "R_Small"
+   },
+   {
+    "designator": "R7 R8",
+    "footprint": "R_0603_1608Metric",
+    "part": "R_Small"
+   },
+   {
+    "designator": "R2",
+    "footprint": "R_0402_1005Metric",
+    "part": "R_Small"
+   },
+   {
+    "designator": "SW1 SW2",
+    "footprint": "SW_SPST_TL3342",
+    "part": "SW_Push"
+   },
+   {
+    "designator": "U4",
+    "footprint": "SOT-23",
+    "part": "MCP1700-3002E_SOT23"
+   },
+   {
+    "designator": "U2",
+    "footprint": "SOT143B",
+    "part": "PRTR5V0U2X"
+   },
+   {
+    "designator": "U3",
+    "footprint": "RP2040-QFN-56",
+    "part": "RP2040"
+   },
+   {
+    "designator": "U1",
+    "footprint": "USON-8-1.5mm",
+    "part": "W25Q32JVSS"
+   },
+   {
+    "designator": "USB1",
+    "footprint": "HRO-TYPE-C-31-M-12-Assembly",
+    "part": "HRO-TYPE-C-31-M-12"
+   },
+   {
+    "designator": "Y1",
+    "footprint": "Crystal_SMD_3225-4Pin_3.2x2.5mm",
+    "part": "Crystal_GND24"
+   }
+  ]
+ },
+ "ai03-2725/jp60\tJP60.kicad_pcb": {
+  "bom": "JP60_bom_.csv",
+  "column": "part",
+  "parts": [
+   {
+    "designator": "C1 C2 C3",
+    "footprint": "C_0603_1608Metric",
+    "part": "C_Small"
+   },
+   {
+    "designator": "C4",
+    "footprint": "C_0603_1608Metric",
+    "part": "C_Small"
+   },
+   {
+    "designator": "C7",
+    "footprint": "C_0603_1608Metric",
+    "part": "C_Small"
+   },
+   {
+    "designator": "C5 C6",
+    "footprint": "C_0603_1608Metric",
+    "part": "C_Small"
+   },
+   {
+    "designator": "D32",
+    "footprint": "D_SOD-123",
+    "part": "D_TVS"
+   },
+   {
+    "designator": "D1 D2 D3 D4 D5 D6 D7 D8 D9 D10 D11 D12 D13 D14 D15 D16 D17 D18 D19 D20 D21 D22 D23 D24 D25 D26 D27 D28 D29 D30 D31 D33 D34 D35 D36 D38 D39 D40 D41 D42 D44 D45 D46 D47 D49 D50 D51 D52 D54 D55 D56 D57 D59 D60 D61 D62 D63 D65 D66 D67 D70 D71 D72 D74",
+    "footprint": "D_SOD-123",
+    "part": "D_Small"
+   },
+   {
+    "designator": "F1",
+    "footprint": "Fuse_1206_3216Metric",
+    "part": "Polyfuse_Small"
+   },
+   {
+    "designator": "K_CAPS1",
+    "footprint": "MXOnly-1.75U-Hotswap",
+    "part": "Kailh-Hotswap-Socket"
+   },
+   {
+    "designator": "K_#0_1 K_#1 K_#2 K_#3 K_#4 K_#5 K_#6 K_#7 K_#8 K_#9 K_'1 K_,1 K_-1 K_.1 K_/1 K_;1 K_=1 K_A1 K_B1 K_C1 K_D1 K_E1 K_ESC1 K_F1 K_G1 K_H1 K_I1 K_J1 K_K1 K_L1 K_LALT1 K_LGUI1 K_M1 K_N1 K_O1 K_P1 K_Q1 K_R1 K_RALT1 K_RGUI1 K_S1 K_SBSPC1 K_SBSPC2 K_SPC2 K_SRSFT1 K_T1 K_U1 K_V1 K_W1 K_X1 K_Y1 K_Z1 K_[1 K_\\1 K_]1",
+    "footprint": "MXOnly-1U-Hotswap",
+    "part": "Kailh-Hotswap-Socket"
+   },
+   {
+    "designator": "K_ENTER1",
+    "footprint": "MXOnly-ISO-ROTATED-Hotswap",
+    "part": "Kailh-Hotswap-Socket"
+   },
+   {
+    "designator": "K_LCTRL1 K_NFER1 K_RCTRL1 K_XFER1",
+    "footprint": "MXOnly-1.25U-Hotswap",
+    "part": "Kailh-Hotswap-Socket"
+   },
+   {
+    "designator": "K_LSFT1",
+    "footprint": "MXOnly-2.25U-Hotswap",
+    "part": "Kailh-Hotswap-Socket"
+   },
+   {
+    "designator": "K_SPC1",
+    "footprint": "MXOnly-6U-Centered-Hotswap-ReversedStabilizers",
+    "part": "Kailh-Hotswap-Socket"
+   },
+   {
+    "designator": "K_SRSFT2",
+    "footprint": "MXOnly-1.75U-Hotswap",
+    "part": "Kailh-Hotswap-Socket"
+   },
+   {
+    "designator": "K_TAB1",
+    "footprint": "MXOnly-1.5U-Hotswap",
+    "part": "Kailh-Hotswap-Socket"
+   },
+   {
+    "designator": "L1",
+    "footprint": "L_1206_3216Metric",
+    "part": "L_Core_Ferrite_Small"
+   },
+   {
+    "designator": "R5",
+    "footprint": "R_0603_1608Metric",
+    "part": "R_Small"
+   },
+   {
+    "designator": "R4",
+    "footprint": "R_0603_1608Metric",
+    "part": "R_Small"
+   },
+   {
+    "designator": "R1 R3",
+    "footprint": "R_0603_1608Metric",
+    "part": "R_Small"
+   },
+   {
+    "designator": "R2 R6",
+    "footprint": "R_0603_1608Metric",
+    "part": "R_Small"
+   },
+   {
+    "designator": "SW1",
+    "footprint": "SW_SPST_TL3342",
+    "part": "SW_Push"
+   },
+   {
+    "designator": "U1",
+    "footprint": "QFN-44-1EP_7x7mm_P0.5mm_EP5.2x5.2mm",
+    "part": "ATmega32U4-MU"
+   },
+   {
+    "designator": "U2",
+    "footprint": "SOT143B",
+    "part": "PRTR5V0U2X"
+   },
+   {
+    "designator": "USB1",
+    "footprint": "HRO-TYPE-C-31-M-12-Assembly",
+    "part": "HRO-TYPE-C-31-M-12"
+   },
+   {
+    "designator": "Y1",
+    "footprint": "Crystal_SMD_3225-4Pin_3.2x2.5mm",
+    "part": "Crystal_GND24_Small"
+   }
+  ]
+ },
+ "ai03-2725/orbit\tOrbit-Choc-PCB/Orbit.kicad_pcb": {
+  "bom": "Orbit-Choc-PCB/Orbit_bom_.csv",
+  "column": "part",
+  "parts": [
+   {
+    "designator": "C4 C5 C6 C11 C12 C13",
+    "footprint": "C_0603",
+    "part": "C_Small"
+   },
+   {
+    "designator": "C7 C14",
+    "footprint": "C_0603",
+    "part": "C_Small"
+   },
+   {
+    "designator": "C3 C10",
+    "footprint": "C_0603",
+    "part": "C_Small"
+   },
+   {
+    "designator": "C1 C2 C8 C9",
+    "footprint": "C_0603",
+    "part": "C_Small"
+   },
+   {
+    "designator": "D1 D2 D3 D4 D5 D6 D7 D8 D9 D10 D11 D12 D13 D14 D15 D16 D17 D18 D19 D20 D21 D22 D23 D24 D25 D26 D27 D28 D29 D30 D31 D32 D33 D34 D36 D37 D38 D39 D40 D41 D42 D43 D44 D45 D46 D47 D48 D49 D50 D51 D52 D53 D54 D55 D56 D57 D58 D59 D60 D61 D62 D63 D64 D65 D66 D67 D68 D69",
+    "footprint": "D_SOD-123",
+    "part": "D_Small"
+   },
+   {
+    "designator": "D75 D76",
+    "footprint": "D_SOD-123",
+    "part": "D_Schottky_Small"
+   },
+   {
+    "designator": "F1 F2",
+    "footprint": "Fuse_SMD1206_Reflow",
+    "part": "Polyfuse_Small"
+   },
+   {
+    "designator": "J1 J11",
+    "footprint": "PJ-3200B-4A",
+    "part": "Conn_01x04"
+   },
+   {
+    "designator": "Q1 Q2",
+    "footprint": "SOT-23",
+    "part": "2N7002"
+   },
+   {
+    "designator": "R25 R67 R87 R88",
+    "footprint": "R_0805",
+    "part": "R_Small"
+   },
+   {
+    "designator": "R33 R40 R81 R82 R89 R90 R91 R92",
+    "footprint": "R_0805",
+    "part": "R_Small"
+   },
+   {
+    "designator": "R41 R42 R83 R84",
+    "footprint": "R_0805",
+    "part": "R_Small"
+   },
+   {
+    "designator": "R9 R10",
+    "footprint": "R_0805",
+    "part": "R_Small"
+   },
+   {
+    "designator": "R2 R3 R4 R5 R6 R7 R8 R11 R12 R13 R14 R15 R16 R17 R18 R19 R20 R21 R22 R23 R24 R26 R27 R28 R29 R30 R31 R32 R34 R35 R36 R37 R38 R39 R46 R47 R48 R49 R50 R51 R52 R53 R54 R55 R56 R57 R58 R59 R60 R61 R62 R63 R64 R65 R66 R68 R69 R70 R71 R72 R73 R74 R75 R76 R77 R78 R79 R80",
+    "footprint": "R_0805",
+    "part": "R_Small"
+   },
+   {
+    "designator": "R43 R44 R85 R86",
+    "footprint": "R_0805",
+    "part": "R_Small"
+   },
+   {
+    "designator": "SW1 SW2",
+    "footprint": "SKQGADE010",
+    "part": "SW_Push"
+   },
+   {
+    "designator": "U1 U3",
+    "footprint": "QFN-44-1EP_7x7mm_Pitch0.5mm",
+    "part": "ATmega32U4-MU"
+   },
+   {
+    "designator": "U2 U4",
+    "footprint": "SOT143B",
+    "part": "PRTR5V0U2X"
+   },
+   {
+    "designator": "USB1 USB2",
+    "footprint": "HRO-TYPE-C-31-M-12-Assembly",
+    "part": "HRO-TYPE-C-31-M-12"
+   },
+   {
+    "designator": "Y1 Y2",
+    "footprint": "Crystal_SMD_3225-4pin_3.2x2.5mm",
+    "part": "Crystal_GND24_Small"
+   }
+  ]
+ },
+ "ai03-2725/orbit\tOrbit-PCB/Orbit.kicad_pcb": {
+  "bom": "Orbit-PCB/Orbit_bom_.csv",
+  "column": "part",
+  "parts": [
+   {
+    "designator": "C4 C5 C6 C11 C12 C13",
+    "footprint": "C_0603",
+    "part": "C_Small"
+   },
+   {
+    "designator": "C7 C14",
+    "footprint": "C_0603",
+    "part": "C_Small"
+   },
+   {
+    "designator": "C3 C10",
+    "footprint": "C_0603",
+    "part": "C_Small"
+   },
+   {
+    "designator": "C1 C2 C8 C9",
+    "footprint": "C_0603",
+    "part": "C_Small"
+   },
+   {
+    "designator": "D1 D2 D3 D4 D5 D6 D7 D8 D9 D10 D11 D12 D13 D14 D15 D16 D17 D18 D19 D20 D21 D22 D23 D24 D25 D26 D27 D28 D29 D30 D31 D32 D33 D34 D36 D37 D38 D39 D40 D41 D42 D43 D44 D45 D46 D47 D48 D49 D50 D51 D52 D53 D54 D55 D56 D57 D58 D59 D60 D61 D62 D63 D64 D65 D66 D67 D68 D69",
+    "footprint": "D_SOD-123",
+    "part": "D_Small"
+   },
+   {
+    "designator": "D75 D76",
+    "footprint": "D_SOD-123",
+    "part": "D_Schottky_Small"
+   },
+   {
+    "designator": "F1 F2",
+    "footprint": "Fuse_SMD1206_Reflow",
+    "part": "Polyfuse_Small"
+   },
+   {
+    "designator": "J1 J11",
+    "footprint": "PJ-3200B-4A",
+    "part": "Conn_01x04"
+   },
+   {
+    "designator": "Q1 Q2",
+    "footprint": "SOT-23",
+    "part": "2N7002"
+   },
+   {
+    "designator": "R25 R67 R87 R88",
+    "footprint": "R_0805",
+    "part": "R_Small"
+   },
+   {
+    "designator": "R33 R40 R81 R82 R89 R90 R91 R92",
+    "footprint": "R_0805",
+    "part": "R_Small"
+   },
+   {
+    "designator": "R41 R42 R83 R84",
+    "footprint": "R_0805",
+    "part": "R_Small"
+   },
+   {
+    "designator": "R9 R10",
+    "footprint": "R_0805",
+    "part": "R_Small"
+   },
+   {
+    "designator": "R2 R3 R4 R5 R6 R7 R8 R11 R12 R13 R14 R15 R16 R17 R18 R19 R20 R21 R22 R23 R24 R26 R27 R28 R29 R30 R31 R32 R34 R35 R36 R37 R38 R39 R46 R47 R48 R49 R50 R51 R52 R53 R54 R55 R56 R57 R58 R59 R60 R61 R62 R63 R64 R65 R66 R68 R69 R70 R71 R72 R73 R74 R75 R76 R77 R78 R79 R80",
+    "footprint": "R_0805",
+    "part": "R_Small"
+   },
+   {
+    "designator": "R43 R44 R85 R86",
+    "footprint": "R_0805",
+    "part": "R_Small"
+   },
+   {
+    "designator": "SW1 SW2",
+    "footprint": "SKQGADE010",
+    "part": "SW_Push"
+   },
+   {
+    "designator": "U1 U3",
+    "footprint": "QFN-44-1EP_7x7mm_Pitch0.5mm",
+    "part": "ATmega32U4-MU"
+   },
+   {
+    "designator": "U2 U4",
+    "footprint": "SOT143B",
+    "part": "PRTR5V0U2X"
+   },
+   {
+    "designator": "USB1 USB2",
+    "footprint": "HRO-TYPE-C-31-M-12-Assembly",
+    "part": "HRO-TYPE-C-31-M-12"
+   },
+   {
+    "designator": "Y1 Y2",
+    "footprint": "Crystal_SMD_3225-4pin_3.2x2.5mm",
+    "part": "Crystal_GND24_Small"
+   }
+  ]
+ },
+ "ai03-2725/orbit\tOrbitX-PCB/Orbit.kicad_pcb": {
+  "bom": "OrbitX-PCB/Orbit_bom_.csv",
+  "column": "part",
+  "parts": [
+   {
+    "designator": "C4 C5 C6 C11 C12 C13 C15 C16",
+    "footprint": "C_0603_1608Metric",
+    "part": "C_Small"
+   },
+   {
+    "designator": "C7 C14",
+    "footprint": "C_0603_1608Metric",
+    "part": "C_Small"
+   },
+   {
+    "designator": "C3 C10",
+    "footprint": "C_0603_1608Metric",
+    "part": "C_Small"
+   },
+   {
+    "designator": "C1 C2 C8 C9",
+    "footprint": "C_0603_1608Metric",
+    "part": "C_Small"
+   },
+   {
+    "designator": "D1 D2 D3 D4 D5 D6 D7 D8 D9 D10 D11 D12 D13 D14 D15 D16 D17 D18 D19 D20 D21 D22 D23 D24 D25 D26 D27 D28 D29 D30 D31 D32 D33 D34 D35 D36 D37 D38 D39 D40 D41 D42 D43 D44 D45 D46 D47 D48",
+    "footprint": "D_SOD-123",
+    "part": "D_Small"
+   },
+   {
+    "designator": "D75 D76",
+    "footprint": "D_SOD-123",
+    "part": "D_Schottky_Small"
+   },
+   {
+    "designator": "F1 F2",
+    "footprint": "Fuse_1206_3216Metric",
+    "part": "Polyfuse_Small"
+   },
+   {
+    "designator": "J1 J11",
+    "footprint": "PJ-3200B-4A",
+    "part": "Conn_01x04"
+   },
+   {
+    "designator": "R25 R67 R87 R88",
+    "footprint": "R_0603_1608Metric",
+    "part": "R_Small"
+   },
+   {
+    "designator": "R41 R42 R83 R84",
+    "footprint": "R_0603_1608Metric",
+    "part": "R_Small"
+   },
+   {
+    "designator": "R9 R10",
+    "footprint": "R_0603_1608Metric",
+    "part": "R_Small"
+   },
+   {
+    "designator": "R43 R44 R85 R86",
+    "footprint": "R_0603_1608Metric",
+    "part": "R_Small"
+   },
+   {
+    "designator": "SW1 SW2",
+    "footprint": "SKQGADE010",
+    "part": "SW_Push"
+   },
+   {
+    "designator": "U1 U3",
+    "footprint": "TQFP-44_10x10mm_P0.8mm",
+    "part": "ATmega32U4-AU"
+   },
+   {
+    "designator": "U2 U4",
+    "footprint": "SOT143B",
+    "part": "PRTR5V0U2X"
+   },
+   {
+    "designator": "USB1 USB2",
+    "footprint": "HRO-TYPE-C-31-M-12-Assembly",
+    "part": "HRO-TYPE-C-31-M-12"
+   },
+   {
+    "designator": "Y1 Y2",
+    "footprint": "Crystal_SMD_3225-4Pin_3.2x2.5mm",
+    "part": "Crystal_GND24_Small"
+   }
+  ]
+ },
+ "ai03-2725/voyager60\tVoyager60.kicad_pcb": {
+  "bom": "Voyager60_bom_.csv",
+  "column": "part",
+  "parts": [
+   {
+    "designator": "C1 C3 C4 C5 C9 C10 C11 C12 C13 C14 C15 C16 C17 C18 C19 C20 C21",
+    "footprint": "C_0603",
+    "part": "C_Small"
+   },
+   {
+    "designator": "C2",
+    "footprint": "C_0603",
+    "part": "C_Small"
+   },
+   {
+    "designator": "C6",
+    "footprint": "C_0603",
+    "part": "C_Small"
+   },
+   {
+    "designator": "C7 C8",
+    "footprint": "C_0603",
+    "part": "C_Small"
+   },
+   {
+    "designator": "D1 D2 D3 D4 D5 D6 D7 D8 D9 D10 D11 D12 D13 D14 D16 D17 D18 D19 D20 D21 D22 D23 D24 D25 D26 D27 D28 D29 D30 D31 D32 D33 D34 D35 D36 D37 D38 D39 D40 D41 D42 D43 D44 D45 D46 D47 D48 D49 D50 D51 D52 D53 D54 D55 D56 D57 D58 D59 D60 D61 D62 D63 D64 D65 D67 D68",
+    "footprint": "D_SOD-123",
+    "part": "D_Small"
+   },
+   {
+    "designator": "F1",
+    "footprint": "Fuse_SMD1206_Reflow",
+    "part": "Polyfuse_Small"
+   },
+   {
+    "designator": "Q1",
+    "footprint": "SOT-23",
+    "part": "2N7002"
+   },
+   {
+    "designator": "R70",
+    "footprint": "R_0805",
+    "part": "R_Small"
+   },
+   {
+    "designator": "R1 R2 R3 R4 R5 R6 R7 R8 R9 R10 R11 R12 R13 R14 R16 R17 R18 R19 R20 R21 R22 R23 R24 R25 R26 R27 R28 R29 R30 R31 R32 R33 R34 R35 R36 R37 R38 R39 R40 R41 R42 R43 R44 R45 R46 R47 R48 R49 R50 R51 R52 R53 R54 R55 R56 R57 R58 R59 R60 R61 R62 R63 R64 R65 R69 R71 R72 R75",
+    "footprint": "R_0805",
+    "part": "R_Small"
+   },
+   {
+    "designator": "R67 R68",
+    "footprint": "R_0805",
+    "part": "R_Small"
+   },
+   {
+    "designator": "R73 R74",
+    "footprint": "R_0805",
+    "part": "R_Small"
+   },
+   {
+    "designator": "RGB1 RGB2 RGB3 RGB4 RGB5 RGB6 RGB7 RGB8 RGB9 RGB10 RGB11 RGB12 RGB13 RGB14",
+    "footprint": "WS2812B",
+    "part": "WS2812B"
+   },
+   {
+    "designator": "SW1",
+    "footprint": "SKQG-1155865",
+    "part": "SW_Push"
+   },
+   {
+    "designator": "U1",
+    "footprint": "QFN-44-1EP_7x7mm_Pitch0.5mm",
+    "part": "ATmega32U4-MU-MCU_Microchip_ATmega"
+   },
+   {
+    "designator": "U2",
+    "footprint": "SOT143B",
+    "part": "PRTR5V0U2X"
+   },
+   {
+    "designator": "USB1",
+    "footprint": "HRO-TYPE-C-31-M-12-Assembly",
+    "part": "HRO-TYPE-C-31-M-12"
+   },
+   {
+    "designator": "Y1",
+    "footprint": "Crystal_SMD_3225-4pin_3.2x2.5mm",
+    "part": "Crystal_GND24"
+   }
+  ]
+ },
+ "autumnisacutie/karina\tKiCad-PCB/keyboard.kicad_pcb": {
+  "bom": "KiCad-PCB/manufacturing files/jungfrau/bom.csv",
+  "column": "comment",
+  "parts": [
+   {
+    "designator": "C11,C5,C6,C7,C8",
+    "footprint": "Capacitor_SMD:C_0805_2012Metric",
+    "part": "1uF"
+   },
+   {
+    "designator": "C3,C2,C1,C4,C12,C13,C14,C15,C16,C17,C18,C19,C20,C23,C24,C22,C25,C26,C21,C32,C31,C30,C33,C34,C35,C36,C37,C38,C39,C40,C41,C42,C29,C28,C27,C48,C47,C46,C49,C50,C51,C52,C53,C54,C45,C44,C43,C55,C56,C57",
+    "footprint": "Capacitor_SMD:C_0805_2012Metric",
+    "part": "104"
+   },
+   {
+    "designator": "C9,C10",
+    "footprint": "Capacitor_SMD:C_0805_2012Metric",
+    "part": "22pF"
+   },
+   {
+    "designator": "D2,D3,D4,D5,D6,D7,D8,D9,D10,D11,D12,D13,D14,D15,D16,D17,D18,D19,D20,D21,D22,D23,D24,D25,D26,D27,D28,D29,D30,D31,D32,D33,D34,D35,D36,D37,D38,D39,D40,D41,D42,D43,D44,D45,D46,D47,D50,D51,D52,D53,D54,D55,D56,D57,D58,D59,D60,D61,D62,D63,D1,D48,D49,D64,D79,D80,D81,D82,D75,D76,D77,D78,D71,D72,D73,D74,D69,D70,D83,D84,D85,D86,D87,D88,D90,D65,D66,D67,D68,D89",
+    "footprint": "Diode_SMD:D_SOD-123",
+    "part": "SOD-123"
+   },
+   {
+    "designator": "J1",
+    "footprint": "Connector_JST:JST_SH_SM04B-SRSS-TB_1x04-1MP_P1.00mm_Horizontal",
+    "part": "Conn_01x04_Female"
+   },
+   {
+    "designator": "LED6,LED5,LED4,LED7,LED8,LED9,LED10,LED11,LED12,LED13,LED14,LED15,LED16,LED3,LED17,LED2,LED18,LED19,LED1,LED25,LED24,LED23,LED26,LED27,LED28,LED29,LED30,LED31,LED32,LED33,LED34,LED35,LED22,LED21,LED20,LED41,LED40,LED39,LED42,LED43,LED44,LED45,LED46,LED47,LED38,LED37,LED36,LED48,LED49,LED50",
+    "footprint": "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm",
+    "part": "WS2812B"
+   },
+   {
+    "designator": "MX2,MX3,MX4,MX5,MX7,MX8,MX9,MX10,MX11,MX12,MX13,MX14,MX15,MX16,MX17,MX19,MX20,MX21,MX24,MX25,MX26,MX27,MX28,MX29,MX30,MX31,MX32,MX33,MX35,MX36,MX37,MX39,MX40,MX41,MX42,MX43,MX44,MX45,MX46,MX47,MX51,MX52,MX53,MX63,MX48,MX49,MX64,MX80,MX81,MX82,MX83,MX76,MX77,MX78,MX79,MX72,MX73,MX74,MX75,MX70,MX71,MX84,MX91,MX88,MX95,MX97,MX98,MX99,MX100,MX102,MX101,MACRO1,MACRO2,MACRO3,MACRO4,MACRO5",
+    "footprint": "MX_Alps_Hybrid:MX-1U-NoLED",
+    "part": "MX-NoLED"
+   },
+   {
+    "designator": "MX22,MX54,MX85",
+    "footprint": "MX_Alps_Hybrid:MX-2U-NoLED",
+    "part": "MX-NoLED"
+   },
+   {
+    "designator": "MX23,MX94",
+    "footprint": "MX_Alps_Hybrid:MX-1.75U-NoLED",
+    "part": "MX-NoLED"
+   },
+   {
+    "designator": "MX34,MX38",
+    "footprint": "MX_Alps_Hybrid:MX-2.25U-NoLED",
+    "part": "MX-NoLED"
+   },
+   {
+    "designator": "MX50",
+    "footprint": "MX_Alps_Hybrid:MX-2.75U-NoLED",
+    "part": "MX-NoLED"
+   },
+   {
+    "designator": "MX55,MX56,MX57,MX59,MX60,MX61,MX1,MX65,MX96",
+    "footprint": "MX_Alps_Hybrid:MX-1.25U-NoLED",
+    "part": "MX-NoLED"
+   },
+   {
+    "designator": "MX58",
+    "footprint": "MX_Alps_Hybrid:MX-6.25U-ReversedStabilizers-NoLED",
+    "part": "MX-NoLED"
+   },
+   {
+    "designator": "MX6,MX18,MX90,MX92,MX87,MX89",
+    "footprint": "MX_Alps_Hybrid:MX-1.5U-NoLED",
+    "part": "MX-NoLED"
+   },
+   {
+    "designator": "MX62",
+    "footprint": "MX_Alps_Hybrid:MX-2U-ReversedStabilizers-NoLED",
+    "part": "MX-NoLED"
+   },
+   {
+    "designator": "MX86",
+    "footprint": "MX_Alps_Hybrid:MX-7U-ReversedStabilizers-NoLED",
+    "part": "MX-NoLED"
+   },
+   {
+    "designator": "MX93",
+    "footprint": "MX_Alps_Hybrid:MX-ISO",
+    "part": "MX-NoLED"
+   },
+   {
+    "designator": "R1",
+    "footprint": "Resistor_SMD:R_0805_2012Metric",
+    "part": "500ohm"
+   },
+   {
+    "designator": "R5,R4",
+    "footprint": "Resistor_SMD:R_0805_2012Metric",
+    "part": "10K"
+   },
+   {
+    "designator": "SW1",
+    "footprint": "random-keyboard-parts:SKQG-1155865",
+    "part": "SW_Push"
+   },
+   {
+    "designator": "U1",
+    "footprint": "Package_QFP:TQFP-44_10x10mm_P0.8mm",
+    "part": "ATmega32U4-AU"
+   },
+   {
+    "designator": "Y1",
+    "footprint": "Crystal:Crystal_SMD_3225-4Pin_3.2x2.5mm",
+    "part": "Crystal_GND24_Small"
+   }
+  ]
+ },
+ "bleroy/3d-junkyard\tAtari130MX/DecentXE-plate.kicad_pcb": {
+  "bom": "Atari130MX/Fabrication/DecentXE-BOM.csv",
+  "column": "value",
+  "parts": [
+   {
+    "designator": "D1",
+    "footprint": "0603",
+    "part": "LED"
+   },
+   {
+    "designator": "D100, D101, D102, D103, D104, D105, D106, D107, D108, D109, D110, D111, D112, D113, D114, D115, D116, D117, D118, D119, D120, D121, D122, D123, D124, D125, D126, D127, D128, D2, D68, D69, D70, D71, D72, D73, D74, D75, D76, D77, D78, D79, D80, D81, D82, D83, D84, D85, D86, D87, D88, D89, D90, D91, D92, D93, D94, D95, D96, D97, D98, D99",
+    "footprint": "D_SOD-123",
+    "part": "1N4148W"
+   },
+   {
+    "designator": "J2",
+    "footprint": "Molex_200528-0260_1x26-1MP_P1.00mm_Horizontal",
+    "part": "Conn_01x26"
+   },
+   {
+    "designator": "R1, R10, R11, R12, R13, R14, R15, R16, R17, R18, R19, R2, R20, R21, R22, R23, R24, R25, R26, R27, R28, R29, R3, R30, R31, R32, R33, R34, R35, R36, R37, R38, R39, R4, R40, R41, R42, R43, R44, R45, R46, R47, R48, R49, R5, R50, R51, R52, R53, R54, R55, R56, R57, R58, R59, R6, R60, R61, R62, R63, R64, R65, R66, R67, R68, R7, R8, R9",
+    "footprint": "0603",
+    "part": "R"
+   },
+   {
+    "designator": "SW0, SW1, SW2, SW3, SW4, SW5, SW6, SW7, SW8, SW9, SWA1, SWB1, SWBrk1, SWC1, SWComma1, SWD1, SWDash1, SWDel1, SWE1, SWEqual1, SWEsc1, SWF1, SWG1, SWGT1, SWH1, SWI1, SWInv1, SWJ1, SWK1, SWL1, SWLT1, SWM1, SWN1, SWO1, SWP1, SWPeriod1, SWPlus1, SWQ1, SWR1, SWS1, SWSemi1, SWSlash1, SWStar1, SWT1, SWU1, SWV1, SWW1, SWX1, SWY1, SWZ1",
+    "footprint": "MX-1-00U-LED",
+    "part": "SW_Push_45deg"
+   },
+   {
+    "designator": "SWBrk2, SWCps1, SWCtl1",
+    "footprint": "MX-1-25U-LED",
+    "part": "SW_Push_45deg"
+   },
+   {
+    "designator": "SWCtlCaps1, SWRightSft1",
+    "footprint": "MX-1-75U-LED",
+    "part": "SW_Push_45deg"
+   },
+   {
+    "designator": "SWFn1, SWFn2, SWFn3, SWFn4, SWHlp1, SWOption1, SWReset1, SWSelect1, SWStart1",
+    "footprint": "MX-1-50U-Atari-Fn-LED",
+    "part": "SW_Push_45deg"
+   },
+   {
+    "designator": "SWLeftSft1",
+    "footprint": "MX-2-25U-LED",
+    "part": "SW_Push_45deg"
+   },
+   {
+    "designator": "SWRet1, SWTab1",
+    "footprint": "MX-1-50U-LED",
+    "part": "SW_Push_45deg"
+   },
+   {
+    "designator": "SWSpc1",
+    "footprint": "MX-6-25U-LED",
+    "part": "SW_Push_45deg"
+   },
+   {
+    "designator": "RV1",
+    "footprint": "Potentiometer_Bourns_TC33X_Vertical",
+    "part": "R_Potentiometer"
+   }
+  ]
+ },
+ "bleroy/3d-junkyard\tDecenTKL/Keyboard/DecentUSB.kicad_pcb": {
+  "bom": "DecenTKL/Keyboard/production/DecenTKL-bom.csv",
+  "column": "value",
+  "parts": [
+   {
+    "designator": "C1, C10, C11, C12, C13, C14, C15, C16, C17, C18, C19, C2, C20, C21, C22, C23, C24, C25, C26, C27, C28, C29, C3, C30, C31, C32, C33, C34, C35, C36, C37, C38, C39, C4, C40, C41, C42, C43, C44, C45, C46, C47, C48, C49, C5, C50, C51, C52, C53, C54, C55, C56, C57, C58, C59, C6, C60, C61, C62, C63, C64, C65, C66, C67, C68, C69, C7, C70, C71, C72, C73, C74, C75, C76, C77, C78, C79, C8, C80, C81, C82, C9",
+    "footprint": "0603",
+    "part": "104"
+   },
+   {
+    "designator": "D1, D101, D103, D105, D107, D109, D11, D111, D113, D115, D117, D119, D121, D123, D125, D127, D129, D13, D131, D133, D135, D137, D139, D141, D143, D145, D147, D149, D15, D151, D153, D155, D157, D159, D161, D163, D17, D19, D21, D23, D25, D27, D29, D3, D31, D33, D35, D37, D39, D41, D43, D45, D47, D49, D5, D51, D53, D55, D57, D59, D61, D63, D65, D67, D69, D7, D71, D73, D75, D77, D79, D81, D83, D85, D87, D89, D9, D91, D93, D95, D97, D99",
+    "footprint": "D_SOD-123",
+    "part": "1N4148W"
+   },
+   {
+    "designator": "D10, D100, D102, D104, D106, D108, D110, D112, D114, D116, D118, D12, D120, D122, D124, D126, D128, D130, D132, D134, D136, D138, D14, D140, D142, D144, D146, D148, D150, D152, D154, D156, D158, D16, D160, D162, D164, D18, D2, D20, D22, D24, D26, D28, D30, D32, D34, D36, D38, D4, D40, D42, D44, D46, D48, D50, D52, D54, D56, D58, D6, D60, D62, D64, D66, D68, D70, D72, D74, D76, D78, D8, D80, D82, D84, D86, D88, D90, D92, D94, D96, D98",
+    "footprint": "SK6809-EC15",
+    "part": "SK6805"
+   },
+   {
+    "designator": "J1",
+    "footprint": "PinSocket_2x12_P2.54mm_Vertical",
+    "part": "Conn_01x24_Pin"
+   },
+   {
+    "designator": "R1, R2",
+    "footprint": "0603",
+    "part": "200\u03a9"
+   },
+   {
+    "designator": "SW1",
+    "footprint": "GT-EVA01AA-L1",
+    "part": "RotaryEncoder_Switch"
+   },
+   {
+    "designator": "SW10, SW11, SW12, SW13, SW14, SW15, SW17, SW18, SW19, SW2, SW20, SW21, SW22, SW23, SW24, SW25, SW26, SW27, SW28, SW29, SW3, SW30, SW31, SW32, SW33, SW34, SW37, SW38, SW39, SW40, SW41, SW42, SW43, SW44, SW45, SW46, SW47, SW5, SW50, SW51, SW52, SW53, SW54, SW55, SW56, SW57, SW58, SW59, SW6, SW61, SW62, SW63, SW64, SW7, SW8, SW9",
+    "footprint": "Kailh_socket_MX_1-00U",
+    "part": "SW_Push"
+   },
+   {
+    "designator": "SW16",
+    "footprint": "Kailh_socket_MX_2-00U",
+    "part": "SW_Push"
+   },
+   {
+    "designator": "SW35, SW4",
+    "footprint": "Kailh_socket_MX_1-50U",
+    "part": "SW_Push"
+   },
+   {
+    "designator": "SW36",
+    "footprint": "Kailh_socket_MX_1-75U",
+    "part": "SW_Push"
+   },
+   {
+    "designator": "SW48, SW49",
+    "footprint": "Kailh_socket_MX_2-25U",
+    "part": "SW_Push"
+   },
+   {
+    "designator": "SW60",
+    "footprint": "Kailh_socket_MX_2-75U",
+    "part": "SW_Push"
+   },
+   {
+    "designator": "SW65, SW66, SW67, SW69, SW70, SW71, SW72",
+    "footprint": "Kailh_socket_MX_1-25U",
+    "part": "SW_Push"
+   },
+   {
+    "designator": "SW68",
+    "footprint": "Kailh_socket_MX_6-25U",
+    "part": "SW_Push"
+   },
+   {
+    "designator": "SW73, SW74, SW75, SW76, SW77, SW78, SW79, SW80, SW81, SW82, SW83",
+    "footprint": "Kailh_socket_Choc_1-50U-XE",
+    "part": "SW_Push"
+   },
+   {
+    "designator": "U1",
+    "footprint": "RaspberryPi_Pico_W_SMD",
+    "part": "RaspberryPi_Pico"
+   },
+   {
+    "designator": "U2",
+    "footprint": "SSD1306",
+    "part": "~"
+   }
+  ]
+ },
+ "bleroy/3d-junkyard\tDecenTKL/NumPad/DecentNumPad.kicad_pcb": {
+  "bom": "DecenTKL/NumPad/production/bom.csv",
+  "column": "value",
+  "parts": [
+   {
+    "designator": "C1, C10, C11, C12, C13, C14, C15, C16, C17, C18, C19, C2, C22, C23, C24, C25, C26, C27, C28, C29, C3, C30, C33, C36, C37, C38, C4, C40, C5, C6, C7, C8, C9",
+    "footprint": "0603",
+    "part": "100nF"
+   },
+   {
+    "designator": "C20, C21, C39, C42",
+    "footprint": "0603",
+    "part": "10uF"
+   },
+   {
+    "designator": "C31, C32, C43",
+    "footprint": "0603",
+    "part": "1uF"
+   },
+   {
+    "designator": "C34, C35",
+    "footprint": "0603",
+    "part": "15pF"
+   },
+   {
+    "designator": "C41",
+    "footprint": "CP_Elec_10x10.5",
+    "part": "220uF"
+   },
+   {
+    "designator": "D1, D11, D13, D15, D17, D19, D21, D23, D25, D27, D29, D3, D31, D33, D35, D37, D5, D7, D9",
+    "footprint": "D_SOD-123",
+    "part": "1N4148W"
+   },
+   {
+    "designator": "D10, D12, D14, D16, D18, D2, D20, D22, D24, D26, D28, D30, D32, D34, D36, D38, D39, D4, D40, D41, D6, D8",
+    "footprint": "SK6812 MINI-EA",
+    "part": "SK6812MINI"
+   },
+   {
+    "designator": "F1",
+    "footprint": "1206",
+    "part": "100mA"
+   },
+   {
+    "designator": "J5",
+    "footprint": "USB_C_Receptacle_HCTL_HC-TYPE-C-16P-01A",
+    "part": "USB_C_Receptacle_USB2.0_16P"
+   },
+   {
+    "designator": "R1, R2",
+    "footprint": "0603",
+    "part": "27R"
+   },
+   {
+    "designator": "R4, R5",
+    "footprint": "0603",
+    "part": "1k"
+   },
+   {
+    "designator": "R6, R7",
+    "footprint": "0603",
+    "part": "5k1"
+   },
+   {
+    "designator": "SW1",
+    "footprint": "SW_Push_1P1T_XKB_TS-1177A-C",
+    "part": "BOOTSEL"
+   },
+   {
+    "designator": "SW10, SW11, SW12, SW13, SW14, SW15, SW16, SW18, SW20, SW4, SW5, SW6, SW7, SW9",
+    "footprint": "Kailh_socket_MX_1-00U",
+    "part": "MX"
+   },
+   {
+    "designator": "SW17, SW8",
+    "footprint": "Kailh_socket_MX_2-00U_V",
+    "part": "2UvMX"
+   },
+   {
+    "designator": "SW19",
+    "footprint": "Kailh_socket_MX_2-00U",
+    "part": "2UMX"
+   },
+   {
+    "designator": "SW2, SW3",
+    "footprint": "Kailh_socket_Choc_1-50U-XE",
+    "part": "Choc"
+   },
+   {
+    "designator": "U1",
+    "footprint": "SOT-223-3_TabPin2",
+    "part": "NCP1117-3.3_SOT223"
+   },
+   {
+    "designator": "U2",
+    "footprint": "SOIC-8_5.23x5.23mm_P1.27mm",
+    "part": "W25Q128JVS"
+   },
+   {
+    "designator": "U3",
+    "footprint": "QFN-56-1EP_7x7mm_P0.4mm_EP3.2x3.2mm",
+    "part": "RP2040"
+   },
+   {
+    "designator": "U4",
+    "footprint": "QSOP-16_3.9x4.9mm_P0.635mm",
+    "part": "CH334R"
+   },
+   {
+    "designator": "U5",
+    "footprint": "TSOT-23",
+    "part": "CH213"
+   },
+   {
+    "designator": "Y1",
+    "footprint": "Oscillator_SMD_Abracon_ASE-4Pin_3.2x2.5mm",
+    "part": "ABM8-272-T3"
+   }
+  ]
+ },
+ "bleroy/3d-junkyard\tDecent400/Keyboard/Decent400-internal.kicad_pcb": {
+  "bom": "Decent400/Keyboard/production/bom.csv",
+  "column": "value",
+  "parts": [
+   {
+    "designator": "D1, D10, D11, D12, D13, D14, D15, D16, D17, D18, D19, D2, D20, D21, D22, D23, D24, D25, D26, D27, D28, D29, D3, D30, D31, D32, D33, D34, D35, D36, D37, D38, D39, D4, D40, D41, D42, D43, D44, D45, D46, D47, D48, D49, D5, D50, D51, D52, D53, D54, D55, D56, D6, D7, D8, D9",
+    "footprint": "D_SOD-123",
+    "part": "1N4148W"
+   },
+   {
+    "designator": "R1, R10, R11, R12, R13, R14, R15, R16, R17, R18, R19, R2, R20, R21, R22, R23, R24, R25, R26, R27, R28, R29, R30, R31, R32, R33, R34, R35, R36, R37, R38, R39, R4, R40, R41, R42, R43, R44, R45, R46, R47, R48, R49, R5, R50, R51, R52, R53, R54, R55, R56, R57, R58, R6, R61, R62, R63, R64, R7, R8, R9",
+    "footprint": "0402",
+    "part": "100"
+   },
+   {
+    "designator": "RV1",
+    "footprint": "Potentiometer_Bourns_TC33X_Vertical",
+    "part": "R_Potentiometer"
+   },
+   {
+    "designator": "SW0, SW1, SW2, SW3, SW4, SW5, SW6, SW7, SW8, SW9, SWA1, SWB1, SWBRK1, SWC1, SWCOMMA1, SWCPS1, SWD1, SWDASH1, SWDEL1, SWE1, SWEQUAL1, SWESC1, SWF1, SWG1, SWGT1, SWH1, SWI1, SWINV1, SWJ1, SWK1, SWL1, SWLT1, SWM1, SWN1, SWO1, SWOPTION1, SWP1, SWPERIOD1, SWPLUS1, SWQ1, SWR1, SWRESET1, SWS1, SWSELECT1, SWSEMI1, SWSLASH1, SWSTAR1, SWSTART1, SWT1, SWU1, SWV1, SWW1, SWX1, SWY1, SWZ1",
+    "footprint": "Choc-1-00U-LED",
+    "part": "SW_LED"
+   },
+   {
+    "designator": "SWCTL1, SWTAB1",
+    "footprint": "Choc-1-50U-LED",
+    "part": "SW_LED"
+   },
+   {
+    "designator": "SWLEFTSFT1",
+    "footprint": "Choc-2-00U-LED",
+    "part": "SW_LED"
+   },
+   {
+    "designator": "SWRET1, SWRIGHTSFT1",
+    "footprint": "Choc-1-25U-LED",
+    "part": "SW_LED"
+   },
+   {
+    "designator": "SWSPC1",
+    "footprint": "Choc-6-25U-LED",
+    "part": "SW_LED"
+   }
+  ]
+ },
+ "bleroy/3d-junkyard\tDecent400/Plate/Decent400-plate.kicad_pcb": {
+  "bom": "Decent400/Plate/production/bom.csv",
+  "column": "value",
+  "parts": [
+   {
+    "designator": "SW0",
+    "footprint": "MX-1-00U-Hole-no-silk",
+    "part": "0"
+   },
+   {
+    "designator": "SW1",
+    "footprint": "MX-1-00U-Hole-no-silk",
+    "part": "1"
+   },
+   {
+    "designator": "SW2",
+    "footprint": "MX-1-00U-Hole-no-silk",
+    "part": "2"
+   },
+   {
+    "designator": "SW3",
+    "footprint": "MX-1-00U-Hole-no-silk",
+    "part": "3"
+   },
+   {
+    "designator": "SW4",
+    "footprint": "MX-1-00U-Hole-no-silk",
+    "part": "4"
+   },
+   {
+    "designator": "SW5",
+    "footprint": "MX-1-00U-Hole-no-silk",
+    "part": "5"
+   },
+   {
+    "designator": "SW6",
+    "footprint": "MX-1-00U-Hole-no-silk",
+    "part": "6"
+   },
+   {
+    "designator": "SW7",
+    "footprint": "MX-1-00U-Hole-no-silk",
+    "part": "7"
+   },
+   {
+    "designator": "SW8",
+    "footprint": "MX-1-00U-Hole-no-silk",
+    "part": "8"
+   },
+   {
+    "designator": "SW9",
+    "footprint": "MX-1-00U-Hole-no-silk",
+    "part": "9"
+   },
+   {
+    "designator": "SWA1",
+    "footprint": "MX-1-00U-Hole-no-silk",
+    "part": "A"
+   },
+   {
+    "designator": "SWB1",
+    "footprint": "MX-1-00U-Hole-no-silk",
+    "part": "B"
+   },
+   {
+    "designator": "SWBRK1",
+    "footprint": "MX-1-25U-Hole-no-silk",
+    "part": "Break"
+   },
+   {
+    "designator": "SWC1",
+    "footprint": "MX-1-00U-Hole-no-silk",
+    "part": "C"
+   },
+   {
+    "designator": "SWCOMMA1",
+    "footprint": "MX-1-00U-Hole-no-silk",
+    "part": "Comma"
+   },
+   {
+    "designator": "SWCPS1",
+    "footprint": "MX-1-00U-Hole-no-silk",
+    "part": "Caps"
+   },
+   {
+    "designator": "SWCTL1",
+    "footprint": "MX-1-25U-Hole-no-silk",
+    "part": "Control"
+   },
+   {
+    "designator": "SWD1",
+    "footprint": "MX-1-00U-Hole-no-silk",
+    "part": "D"
+   },
+   {
+    "designator": "SWDASH1",
+    "footprint": "MX-1-00U-Hole-no-silk",
+    "part": "Dash"
+   },
+   {
+    "designator": "SWDEL1",
+    "footprint": "MX-1-75U-Hole",
+    "part": "Del"
+   },
+   {
+    "designator": "SWE1",
+    "footprint": "MX-1-00U-Hole-no-silk",
+    "part": "E"
+   },
+   {
+    "designator": "SWEQUAL1",
+    "footprint": "MX-1-00U-Hole-no-silk",
+    "part": "Equal"
+   },
+   {
+    "designator": "SWESC1",
+    "footprint": "MX-1-00U-Hole-no-silk",
+    "part": "Esc"
+   },
+   {
+    "designator": "SWF1",
+    "footprint": "MX-1-00U-Hole-no-silk",
+    "part": "F"
+   },
+   {
+    "designator": "SWG1",
+    "footprint": "MX-1-00U-Hole-no-silk",
+    "part": "G"
+   },
+   {
+    "designator": "SWGT1",
+    "footprint": "MX-1-00U-Hole-no-silk",
+    "part": "GreaterThan"
+   },
+   {
+    "designator": "SWH1",
+    "footprint": "MX-1-00U-Hole-no-silk",
+    "part": "H"
+   },
+   {
+    "designator": "SWI1",
+    "footprint": "MX-1-00U-Hole-no-silk",
+    "part": "I"
+   },
+   {
+    "designator": "SWINV1",
+    "footprint": "MX-1-00U-Hole-no-silk",
+    "part": "Atari"
+   },
+   {
+    "designator": "SWJ1",
+    "footprint": "MX-1-00U-Hole-no-silk",
+    "part": "J"
+   },
+   {
+    "designator": "SWK1",
+    "footprint": "MX-1-00U-Hole-no-silk",
+    "part": "K"
+   },
+   {
+    "designator": "SWL1",
+    "footprint": "MX-1-00U-Hole-no-silk",
+    "part": "L"
+   },
+   {
+    "designator": "SWLT1",
+    "footprint": "MX-1-00U-Hole-no-silk",
+    "part": "LessThan"
+   },
+   {
+    "designator": "SWM1",
+    "footprint": "MX-1-00U-Hole-no-silk",
+    "part": "M"
+   },
+   {
+    "designator": "SWN1",
+    "footprint": "MX-1-00U-Hole-no-silk",
+    "part": "N"
+   },
+   {
+    "designator": "SWO1",
+    "footprint": "MX-1-00U-Hole-no-silk",
+    "part": "O"
+   },
+   {
+    "designator": "SWP1",
+    "footprint": "MX-1-00U-Hole-no-silk",
+    "part": "P"
+   },
+   {
+    "designator": "SWPERIOD1",
+    "footprint": "MX-1-00U-Hole-no-silk",
+    "part": "Period"
+   },
+   {
+    "designator": "SWPLUS1",
+    "footprint": "MX-1-00U-Hole-no-silk",
+    "part": "Plus"
+   },
+   {
+    "designator": "SWQ1",
+    "footprint": "MX-1-00U-Hole-no-silk",
+    "part": "Q"
+   },
+   {
+    "designator": "SWR1",
+    "footprint": "MX-1-00U-Hole-no-silk",
+    "part": "R"
+   },
+   {
+    "designator": "SWRET1",
+    "footprint": "MX-1-25U-Hole-no-silk",
+    "part": "Return"
+   },
+   {
+    "designator": "SWS1",
+    "footprint": "MX-1-00U-Hole-no-silk",
+    "part": "S"
+   },
+   {
+    "designator": "SWSEMI1",
+    "footprint": "MX-1-00U-Hole-no-silk",
+    "part": "Semicolon"
+   },
+   {
+    "designator": "SWSLASH1",
+    "footprint": "MX-1-00U-Hole-no-silk",
+    "part": "Slash"
+   },
+   {
+    "designator": "SWSTAR1",
+    "footprint": "MX-1-00U-Hole-no-silk",
+    "part": "Star"
+   },
+   {
+    "designator": "SWT1",
+    "footprint": "MX-1-00U-Hole-no-silk",
+    "part": "T"
+   },
+   {
+    "designator": "SWTAB1",
+    "footprint": "MX-1-25U-Hole-no-silk",
+    "part": "Tab"
+   },
+   {
+    "designator": "SWU1",
+    "footprint": "MX-1-00U-Hole-no-silk",
+    "part": "U"
+   },
+   {
+    "designator": "SWV1",
+    "footprint": "MX-1-00U-Hole-no-silk",
+    "part": "V"
+   },
+   {
+    "designator": "SWW1",
+    "footprint": "MX-1-00U-Hole-no-silk",
+    "part": "W"
+   },
+   {
+    "designator": "SWX1",
+    "footprint": "MX-1-00U-Hole-no-silk",
+    "part": "X"
+   },
+   {
+    "designator": "SWY1",
+    "footprint": "MX-1-00U-Hole-no-silk",
+    "part": "Y"
+   },
+   {
+    "designator": "SWZ1",
+    "footprint": "MX-1-00U-Hole-no-silk",
+    "part": "Z"
+   }
+  ]
+ },
+ "bleroy/3d-junkyard\tDecent60/NavNumPad-plate/NavNumPad-plate.kicad_pcb": {
+  "bom": "Decent60/NavNumPad-plate/production/bom.csv",
+  "column": "value",
+  "parts": [
+   {
+    "designator": "SW10, SW11, SW12, SW13, SW14, SW15, SW16, SW18, SW2, SW20, SW22, SW23, SW24, SW25, SW26, SW27, SW3, SW30, SW31, SW32, SW33, SW34, SW4, SW5, SW6, SW7, SW9",
+    "footprint": "MX-1-00U-Hole",
+    "part": "MX"
+   },
+   {
+    "designator": "SW17, SW8",
+    "footprint": "MX-2-00U-Hole",
+    "part": "2UvMX"
+   },
+   {
+    "designator": "SW19",
+    "footprint": "MX-2-00U-Hole",
+    "part": "2UMX"
+   }
+  ]
+ },
+ "bleroy/3d-junkyard\tDecent60/NavNumPad/DecentNumPad.kicad_pcb": {
+  "bom": "Decent60/NavNumPad/production/bom.csv",
+  "column": "value",
+  "parts": [
+   {
+    "designator": "C1, C10, C11, C12, C13, C14, C15, C16, C17, C18, C19, C2, C23, C25, C26, C28, C3, C30, C31, C32, C33, C34, C35, C36, C37, C38, C4, C41, C45, C46, C47, C48, C49, C5, C50, C53, C54, C55, C56, C57, C6, C7, C8, C9",
+    "footprint": "0402",
+    "part": "100nF"
+   },
+   {
+    "designator": "C20, C24, C40, C43",
+    "footprint": "0402",
+    "part": "10uF"
+   },
+   {
+    "designator": "C21, C22",
+    "footprint": "0402",
+    "part": "15pF"
+   },
+   {
+    "designator": "C27, C29, C39",
+    "footprint": "0402",
+    "part": "1uF"
+   },
+   {
+    "designator": "C42",
+    "footprint": "CP_Elec_6.3x5.4",
+    "part": "220uF"
+   },
+   {
+    "designator": "D1, D11, D13, D15, D17, D19, D21, D23, D25, D27, D29, D3, D31, D33, D35, D37, D42, D44, D46, D48, D5, D50, D52, D54, D56, D58, D60, D62, D64, D66, D68, D7, D9",
+    "footprint": "D_SOD-123",
+    "part": "1N4148W"
+   },
+   {
+    "designator": "D10, D12, D14, D16, D18, D2, D20, D22, D24, D26, D28, D30, D32, D34, D36, D38, D39, D4, D40, D41, D45, D47, D49, D51, D53, D55, D6, D61, D63, D65, D67, D69, D8",
+    "footprint": "LED_SK6812MINI-E_3.2x2.8mm_P1.5mm_ReverseMount",
+    "part": "SK6812MINI"
+   },
+   {
+    "designator": "F1",
+    "footprint": "1206",
+    "part": "100mA"
+   },
+   {
+    "designator": "J6",
+    "footprint": "USB_C_Receptacle_HCTL_HC-TYPE-C-16P-01A",
+    "part": "USB_C_Receptacle_USB2.0_16P"
+   },
+   {
+    "designator": "R2, R5",
+    "footprint": "0402",
+    "part": "1k"
+   },
+   {
+    "designator": "R3, R4",
+    "footprint": "0402",
+    "part": "27R"
+   },
+   {
+    "designator": "R6, R7",
+    "footprint": "0402",
+    "part": "5k1"
+   },
+   {
+    "designator": "SW1",
+    "footprint": "SW-SMD_L3.9-W3.0-P4.45",
+    "part": "BOOTSEL"
+   },
+   {
+    "designator": "SW10, SW11, SW12, SW13, SW14, SW15, SW16, SW18, SW2, SW20, SW22, SW23, SW24, SW25, SW26, SW27, SW3, SW30, SW31, SW32, SW33, SW34, SW4, SW5, SW6, SW7, SW9",
+    "footprint": "Kailh_socket_MX_1-00U",
+    "part": "MX"
+   },
+   {
+    "designator": "SW17, SW8",
+    "footprint": "Kailh_socket_MX_2-00U_V",
+    "part": "2UvMX"
+   },
+   {
+    "designator": "SW19",
+    "footprint": "Kailh_socket_MX_2-00U",
+    "part": "2UMX"
+   },
+   {
+    "designator": "SW35",
+    "footprint": "SW-SMD_L3.9-W3.0-P4.45",
+    "part": "RESET"
+   },
+   {
+    "designator": "U1",
+    "footprint": "SOIC-8_5.3x5.3mm_P1.27mm",
+    "part": "W25Q128JVS"
+   },
+   {
+    "designator": "U2",
+    "footprint": "SOT-223-3_TabPin2",
+    "part": "NCP1117-3.3_SOT223"
+   },
+   {
+    "designator": "U3",
+    "footprint": "QFN-56-1EP_7x7mm_P0.4mm_EP3.2x3.2mm",
+    "part": "RP2040"
+   },
+   {
+    "designator": "U4",
+    "footprint": "QSOP-16_3.9x4.9mm_P0.635mm",
+    "part": "CH334R"
+   },
+   {
+    "designator": "U5",
+    "footprint": "TSOT-23",
+    "part": "CH213"
+   },
+   {
+    "designator": "Y1",
+    "footprint": "Oscillator_SMD_Abracon_ASE-4Pin_3.2x2.5mm",
+    "part": "ABM8-272-T3"
+   }
+  ]
+ },
+ "bleroy/3d-junkyard\tDecent60/keyboard/MegaXE-keyboard.kicad_pcb": {
+  "bom": "Decent60/keyboard/production/bom.csv",
+  "column": "value",
+  "parts": [
+   {
+    "designator": "C10, C100, C101, C102, C103, C104, C105, C106, C107, C108, C109, C11, C110, C111, C112, C113, C114, C115, C116, C117, C118, C119, C12, C120, C121, C123, C124, C125, C126, C127, C128, C129, C13, C130, C131, C132, C133, C134, C135, C136, C137, C138, C139, C140, C141, C142, C143, C144, C145, C146, C147, C148, C149, C150, C151, C152, C153, C154, C155, C4, C42, C6, C7, C75, C76, C77, C78, C79, C8, C80, C81, C82, C83, C84, C85, C86, C87, C88, C89, C9, C90, C91, C92, C93, C94, C95, C96, C97, C98, C99",
+    "footprint": "0402",
+    "part": "100nF"
+   },
+   {
+    "designator": "C14, C5",
+    "footprint": "0402",
+    "part": "1uF"
+   },
+   {
+    "designator": "C24, C25",
+    "footprint": "0402",
+    "part": "15pF"
+   },
+   {
+    "designator": "C27, C28, C43",
+    "footprint": "0402",
+    "part": "10uF"
+   },
+   {
+    "designator": "D101, D103, D105, D107, D109, D111, D113, D115, D119, D121, D123, D125, D127, D128, D129, D130, D131, D132, D133, D134, D135, D137, D139, D141, D143, D145, D147, D148, D17, D18, D19, D20, D21, D22, D23, D24, D25, D26, D27, D28, D29, D30, D31, D47, D49, D51, D53, D55, D57, D59, D61, D63, D65, D67, D69, D71, D73, D75, D77, D79, D81, D83, D85, D87, D89, D91, D93, D95, D97, D99",
+    "footprint": "D_SOD-123",
+    "part": "1N4148W"
+   },
+   {
+    "designator": "D149, D150, D151, D152, D153, D154, D155, D156, D157, D158, D159, D160, D161, D162, D163, D164, D165, D166, D167, D168, D169, D170, D171, D172, D173, D174, D175, D176, D177, D178, D179, D180, D181, D182, D183, D184, D185, D186, D187, D188, D189, D190, D191, D192, D193, D194, D195, D197, D198, D199, D200, D201, D202, D203, D204, D205, D206, D207, D208, D209, D210, D211, D212, D213, D214, D215, D216, D217, D218, D219, D220, D221, D222, D223, D224, D225, D226, D227, D228, D229",
+    "footprint": "LED_SK6812MINI-E_3.2x2.8mm_P1.5mm_ReverseMount",
+    "part": "SK6812MINI"
+   },
+   {
+    "designator": "J5",
+    "footprint": "USB_C_Receptacle_C2765186",
+    "part": "USB_C_Receptacle_USB2.0_16P"
+   },
+   {
+    "designator": "R26, R28",
+    "footprint": "0402",
+    "part": "27"
+   },
+   {
+    "designator": "R30, R31, R32",
+    "footprint": "0402",
+    "part": "1k"
+   },
+   {
+    "designator": "R6, R7",
+    "footprint": "0402",
+    "part": "5k1"
+   },
+   {
+    "designator": "SW10, SW11, SW12, SW13, SW14, SW15, SW16, SW17, SW19, SW20, SW21, SW22, SW23, SW24, SW25, SW26, SW27, SW28, SW29, SW30, SW31, SW32, SW33, SW34, SW35, SW36, SW37, SW38, SW39, SW40, SW41, SW42, SW43, SW44, SW45, SW46, SW47, SW48, SW49, SW50, SW51, SW52, SW53, SW54, SW55, SW56, SW57, SW58, SW59, SW61, SW64, SW65, SW66, SW67, SW68, SW70, SW71, SW72, SW73, SW74, SW76, SW77, SW78, SW79, SW80",
+    "footprint": "Kailh_socket_MX_1-00U",
+    "part": "MX"
+   },
+   {
+    "designator": "SW18",
+    "footprint": "Kailh_socket_MX_6-25U",
+    "part": "MX"
+   },
+   {
+    "designator": "SW2",
+    "footprint": "TactileSwitch",
+    "part": "SW_BOOT_SELECT"
+   },
+   {
+    "designator": "SW3",
+    "footprint": "TactileSwitch",
+    "part": "SW_RESET"
+   },
+   {
+    "designator": "SW62, SW63, SW69, SW75",
+    "footprint": "Kailh_socket_MX_2-00U",
+    "part": "MX"
+   },
+   {
+    "designator": "U4",
+    "footprint": "SOT-223-3_TabPin2",
+    "part": "NCP1117-3.3"
+   },
+   {
+    "designator": "U7",
+    "footprint": "QFN-56-1EP_7x7mm_P0.4mm_EP3.2x3.2mm",
+    "part": "RP2040"
+   },
+   {
+    "designator": "U9",
+    "footprint": "SOIC-8_5.3x5.3mm_P1.27mm",
+    "part": "W25Q128JVS"
+   },
+   {
+    "designator": "X1",
+    "footprint": "Crystal_SMD_Abracon_ABM8AIG-4Pin_3.2x2.5mm",
+    "part": "12MHz"
+   }
+  ]
+ },
+ "bleroy/3d-junkyard\tDecent800/Keyboard/Decent800.kicad_pcb": {
+  "bom": "Decent800/Keyboard/production/Decent800_Rev_3M-bom.csv",
+  "column": "value",
+  "parts": [
+   {
+    "designator": "D1, D10, D12, D13, D14, D15, D16, D17, D18, D19, D2, D20, D21, D22, D24, D25, D26, D27, D28, D29, D3, D30, D31, D32, D33, D34, D35, D36, D37, D38, D39, D41, D42, D43, D44, D45, D46, D47, D48, D49, D5, D50, D51, D52, D53, D54, D55, D56, D57, D58, D59, D6, D60, D62, D7, D8",
+    "footprint": "D_SOD-123",
+    "part": "1N4148W"
+   },
+   {
+    "designator": "R10, R11, R12, R14, R15, R16, R17, R18, R19, R2, R20, R21, R22, R23, R24, R25, R26, R27, R28, R29, R3, R30, R31, R32, R33, R34, R35, R36, R37, R38, R39, R4, R40, R42, R43, R44, R45, R46, R47, R48, R49, R5, R50, R51, R52, R53, R54, R55, R57, R6, R60, R61, R62, R64, R7, R8, R9",
+    "footprint": "0603",
+    "part": "100"
+   },
+   {
+    "designator": "RV1",
+    "footprint": "Potentiometer_Bourns_TC33X_Vertical",
+    "part": "R_Potentiometer"
+   },
+   {
+    "designator": "SW0, SW1, SW2, SW3, SW4, SW5, SW6, SW7, SW8, SW9, SWA1, SWB1, SWC1, SWCOMMA1, SWCPS1, SWD1, SWDASH1, SWE1, SWEQUAL1, SWESC1, SWF1, SWG1, SWGT1, SWH1, SWI1, SWJ1, SWK1, SWL1, SWLT1, SWM1, SWN1, SWO1, SWP1, SWPERIOD1, SWPLUS1, SWQ1, SWR1, SWS1, SWSEMI1, SWSTAR1, SWT1, SWU1, SWV1, SWW1, SWX1, SWY1, SWZ1",
+    "footprint": "1U-LED",
+    "part": "blue"
+   },
+   {
+    "designator": "SWATARI2, SWBRK2, SWSLASH1",
+    "footprint": "1-25U-LED",
+    "part": "blue"
+   },
+   {
+    "designator": "SWCTL1, SWRET1, SWTAB1",
+    "footprint": "1-50U-LED",
+    "part": "blue"
+   },
+   {
+    "designator": "SWDEL2, SWLEFTSFT1",
+    "footprint": "2-00U-LED",
+    "part": "blue"
+   },
+   {
+    "designator": "SWRIGHTSFT1",
+    "footprint": "2-25U-LED",
+    "part": "blue"
+   },
+   {
+    "designator": "SWSPC1",
+    "footprint": "6-25U-LED",
+    "part": "blue"
+   }
+  ]
+ },
+ "bleroy/3d-junkyard\tDecentUSB/DecentUSB2350/DecentUSB2350.kicad_pcb": {
+  "bom": "DecentUSB/DecentUSB2350/production/bom.csv",
+  "column": "value",
+  "parts": [
+   {
+    "designator": "C1, C10, C11, C12, C13, C14, C15, C19, C24, C27, C29, C32, C34, C35, C36, C37, C41, C42, C6, C8, C9",
+    "footprint": "0402",
+    "part": "100nF"
+   },
+   {
+    "designator": "C16, C20, C25, C26, C28, C30, C33, C7",
+    "footprint": "0402",
+    "part": "1uF"
+   },
+   {
+    "designator": "C17, C18",
+    "footprint": "0402",
+    "part": "15pF"
+   },
+   {
+    "designator": "C2, C3, C38, C39, C4, C40, C5",
+    "footprint": "0402",
+    "part": "10uF"
+   },
+   {
+    "designator": "C23",
+    "footprint": "0402",
+    "part": "1nF"
+   },
+   {
+    "designator": "D1",
+    "footprint": "Nexperia_CFP3_SOD-123W",
+    "part": "MBR120VLSFT1G"
+   },
+   {
+    "designator": "D2",
+    "footprint": "WS2812C",
+    "part": "WS2812B"
+   },
+   {
+    "designator": "F1",
+    "footprint": "1206",
+    "part": "100mA"
+   },
+   {
+    "designator": "J1",
+    "footprint": "USB_Micro-B",
+    "part": "USB_B_Micro"
+   },
+   {
+    "designator": "J10",
+    "footprint": "JST_SH_BM03B-SRSS-TB_1x03-1MP_P1.00mm_Vertical",
+    "part": "SM03B-SRSS-TB"
+   },
+   {
+    "designator": "J8",
+    "footprint": "JST_SH_BM03B-SRSS-TB_1x03-1MP_P1.00mm_Vertical",
+    "part": "Conn_01x03"
+   },
+   {
+    "designator": "L10, L11, L12, L13, L14, L15, L2, L3, L4, L5, L6, L7, L8, L9",
+    "footprint": "0603",
+    "part": "10uH"
+   },
+   {
+    "designator": "L16",
+    "footprint": "0805",
+    "part": "22uH"
+   },
+   {
+    "designator": "Q1",
+    "footprint": "SOT-23",
+    "part": "2N7000"
+   },
+   {
+    "designator": "Q2",
+    "footprint": "SOT-23",
+    "part": "DMG2305UX"
+   },
+   {
+    "designator": "R1, R37, R38, R39, R40, R7, R8",
+    "footprint": "0402",
+    "part": "1k"
+   },
+   {
+    "designator": "R11, R12, R13, R36",
+    "footprint": "0402",
+    "part": "10k"
+   },
+   {
+    "designator": "R14, R15, R16, R17, R18, R19, R20, R35, R6",
+    "footprint": "0402",
+    "part": "100"
+   },
+   {
+    "designator": "R2, R3, R4, R5",
+    "footprint": "0805",
+    "part": "27"
+   },
+   {
+    "designator": "R21, R24, R25, R26",
+    "footprint": "0402",
+    "part": "470"
+   },
+   {
+    "designator": "R22, R23, R27, R28, R29, R30, R31, R32, R33, R34",
+    "footprint": "0402",
+    "part": "220"
+   },
+   {
+    "designator": "SW1, SW2, SW3, SW4",
+    "footprint": "Tactile_Switch_Basic_XKB_TS-1187A",
+    "part": "SW_TACTILE"
+   },
+   {
+    "designator": "U1",
+    "footprint": "ESP32-WROOM-32D",
+    "part": "ESP32-WROOM-32E"
+   },
+   {
+    "designator": "U10, U7, U8, U9",
+    "footprint": "TSSOP-24_4.4x7.8mm_P0.65mm",
+    "part": "SN74LVC8T245"
+   },
+   {
+    "designator": "U2",
+    "footprint": "QSOP-16_3.9x4.9mm_P0.635mm",
+    "part": "CH334R"
+   },
+   {
+    "designator": "U3",
+    "footprint": "SOT-223-3_TabPin2",
+    "part": "NCP1117-3.3"
+   },
+   {
+    "designator": "U4",
+    "footprint": "QFN-56-1EP_7x7mm_P0.4mm_EP3.2x3.2mm",
+    "part": "RP2040"
+   },
+   {
+    "designator": "U5",
+    "footprint": "SOIC-8_5.23x5.23mm_P1.27mm",
+    "part": "W25Q128JVS"
+   },
+   {
+    "designator": "X1",
+    "footprint": "Crystal_SMD_Abracon_ABM8AIG-4Pin_3.2x2.5mm",
+    "part": "12MHz"
+   }
+  ]
+ },
+ "bleroy/3d-junkyard\tMacropad/KeyChain/KeyChain.kicad_pcb": {
+  "bom": "Macropad/KeyChain/production/bom.csv",
+  "column": "value",
+  "parts": [
+   {
+    "designator": "C1, C10, C11, C12, C13, C15, C2, C3, C4, C42, C6, C7, C8, C9",
+    "footprint": "0402",
+    "part": "100nF"
+   },
+   {
+    "designator": "C14, C5",
+    "footprint": "0402",
+    "part": "1uF"
+   },
+   {
+    "designator": "C24, C25",
+    "footprint": "0402",
+    "part": "15pF"
+   },
+   {
+    "designator": "C27, C28, C43",
+    "footprint": "0402",
+    "part": "10uF"
+   },
+   {
+    "designator": "D2, D5, D7, D9",
+    "footprint": "LED_SK6812MINI-E_3.2x2.8mm_P1.5mm_ReverseMount",
+    "part": "SK6812"
+   },
+   {
+    "designator": "J5",
+    "footprint": "USB_C_Receptacle_C2765186",
+    "part": "USB_C_Receptacle_USB2.0_16P"
+   },
+   {
+    "designator": "R26, R28",
+    "footprint": "0402",
+    "part": "27"
+   },
+   {
+    "designator": "R30, R31, R32",
+    "footprint": "0402",
+    "part": "1k"
+   },
+   {
+    "designator": "R6, R7",
+    "footprint": "0402",
+    "part": "5k1"
+   },
+   {
+    "designator": "SW2, SW3",
+    "footprint": "TactileSwitch",
+    "part": "SW_TACTILE"
+   },
+   {
+    "designator": "U4",
+    "footprint": "SOT-223-3_TabPin2",
+    "part": "NCP1117-3.3"
+   },
+   {
+    "designator": "U7",
+    "footprint": "QFN-56-1EP_7x7mm_P0.4mm_EP3.2x3.2mm",
+    "part": "RP2040"
+   },
+   {
+    "designator": "U9",
+    "footprint": "SOIC-8_5.3x5.3mm_P1.27mm",
+    "part": "W25Q128JVS"
+   },
+   {
+    "designator": "X1",
+    "footprint": "Crystal_SMD_Abracon_ABM8AIG-4Pin_3.2x2.5mm",
+    "part": "12MHz"
+   }
+  ]
+ },
+ "daneski13/junco\tPCB/Junco.kicad_pcb": {
+  "bom": "Ordering from JLC/JUNCO v1.1 BOM JLC.csv",
+  "column": "comment",
+  "parts": [
+   {
+    "designator": "SW59,SW58,SW29,SW28,SW24,SW50,SW20,SW32,SW3,SW51,SW37,SW17,SW38,SW31,SW52,SW56,SW27,SW40,SW6,SW46,SW25,SW43,SW14,SW13,SW4,SW16,SW5,SW36,SW21,SW55,SW48,SW18,SW45,SW54,SW39,SW47,SW12,SW26,SW34,SW23,SW10,SW15,SW35,SW57,SW8,SW22,SW44,SW42,SW9,SW41,SW53,SW33,SW11,SW1,SW7,SW2",
+    "footprint": "SW_MX_HS_1u",
+    "part": "SW_Push"
+   },
+   {
+    "designator": "SW19,SW49",
+    "footprint": "SW_MX_Hotswap_Rotary_Switch",
+    "part": "SW_MX_Hotswap_Rotary_Switch"
+   },
+   {
+    "designator": "SK68XX_Mini74,SK68XX_Mini73,SK68XX_Mini72,SK68XX_Mini71,SK68XX_Mini70,SK68XX_Mini69,SK68XX_Mini68,SK68XX_Mini67,SK68XX_Mini66,SK68XX_Mini65,SK68XX_Mini63,SK68XX_Mini62,SK68XX_Mini61,SK68XX_Mini60,SK68XX_Mini59,SK68XX_Mini58,SK68XX_Mini57,SK68XX_Mini56,SK68XX_Mini55,SK68XX_Mini54,SK68XX_Mini53,SK68XX_Mini52,SK68XX_Mini51,SK68XX_Mini50,SK68XX_Mini49,SK68XX_Mini48,SK68XX_Mini47,SK68XX_Mini46,SK68XX_Mini37,SK68XX_Mini36,SK68XX_Mini35,SK68XX_Mini34,SK68XX_Mini33,SK68XX_Mini32,SK68XX_Mini31,SK68XX_Mini30,SK68XX_Mini29,SK68XX_Mini28,SK68XX_Mini26,SK68XX_Mini25,SK68XX_Mini24,SK68XX_Mini23,SK68XX_Mini22,SK68XX_Mini21,SK68XX_Mini20,SK68XX_Mini19,SK68XX_Mini18,SK68XX_Mini17,SK68XX_Mini16,SK68XX_Mini15,SK68XX_Mini14,SK68XX_Mini13,SK68XX_Mini12,SK68XX_Mini11,SK68XX_Mini10,SK68XX_Mini9,SK68XX_Mini39,SK68XX_Mini41,SK68XX_Mini40,SK68XX_Mini1,SK68XX_Mini38,SK68XX_Mini7,SK68XX_Mini42,SK68XX_Mini3,SK68XX_Mini6,SK68XX_Mini45,SK68XX_Mini44,SK68XX_Mini4,SK68XX_Mini5,SK68XX_Mini43,SK68XX_Mini2,SK68XX_Mini8,SK68XX_Mini27,SK68XX_Mini64",
+    "footprint": "SK68XXMini",
+    "part": "SK6803MINI-E"
+   },
+   {
+    "designator": "U2,U4",
+    "footprint": "SN74AHCT1G125",
+    "part": "SN74AHCT1G125"
+   },
+   {
+    "designator": "D40,D6,D28,D58,D26,D51,D52,D8,D12,D42,D30,D29,D43,D21,D53,D31,D11,D47,D41,D45,D39,D35,D24,D44,D9,D5,D36,D61,D20,D3,D50,D38,D62,D27,D16,D18,D22,D54,D2,D46,D48,D57,D17,D37,D60,D59,D7,D23,D19,D55,D15,D32,D14,D25,D49,D33,D34,D1,D4,D10,D13,D56",
+    "footprint": "D_SOD-123_DO-35_Hybrid_DoubleSided_V2",
+    "part": "D"
+   }
+  ]
+ },
+ "dcpedit/masonry\tpcb/pcb.kicad_pcb": {
+  "bom": "pcb/production/pcb_2024-03-17_16-26-22/bom.csv",
+  "column": "value",
+  "parts": [
+   {
+    "designator": "C1, C4, C5, C6, C7, C8",
+    "footprint": "0402",
+    "part": "100nF"
+   },
+   {
+    "designator": "C10, C3, C9",
+    "footprint": "0402",
+    "part": "1uF"
+   },
+   {
+    "designator": "C2",
+    "footprint": "0402",
+    "part": "4.7uF"
+   },
+   {
+    "designator": "D1, D10, D11, D12, D13, D14, D15, D16, D17, D18, D19, D2, D20, D21, D22, D23, D24, D25, D26, D27, D28, D29, D3, D30, D31, D32, D33, D34, D35, D36, D37, D38, D39, D4, D40, D41, D42, D43, D44, D5, D6, D7, D8, D9",
+    "footprint": "D_SOD123",
+    "part": "1n4148"
+   },
+   {
+    "designator": "F1",
+    "footprint": "1206",
+    "part": "500mA"
+   },
+   {
+    "designator": "J1",
+    "footprint": "USB_C_Receptacle_HRO_TYPE-C-31-M-12",
+    "part": "USB_C_Receptacle_USB2.0"
+   },
+   {
+    "designator": "MX00, MX25, MX45, MX60",
+    "footprint": "MXOnly-1.75U-Hotswap-Vertical",
+    "part": "~"
+   },
+   {
+    "designator": "MX01, MX02, MX03, MX24, MX42, MX43, MX44, MX61",
+    "footprint": "MXOnly-1.25U-Hotswap-Vertical",
+    "part": "~"
+   },
+   {
+    "designator": "MX04, MX10, MX11, MX12, MX13, MX14, MX15, MX21, MX22, MX23, MX31, MX32, MX33, MX34, MX41, MX50, MX51, MX52, MX53, MX54, MX55, MX62, MX63, MX64, MX71, MX72, MX73, MX74",
+    "footprint": "MXOnly-1U-Hotswap",
+    "part": "~"
+   },
+   {
+    "designator": "MX05, MX20, MX40, MX65",
+    "footprint": "MXOnly-1.5U-Hotswap-Vertical",
+    "part": "~"
+   },
+   {
+    "designator": "MX21.2",
+    "footprint": "MXOnly-2U-Hotswap-ReversedVerticalStabilizers",
+    "part": "~"
+   },
+   {
+    "designator": "MX33.2, MX72.2",
+    "footprint": "MXOnly-2U-Hotswap",
+    "part": "~"
+   },
+   {
+    "designator": "MX64.2",
+    "footprint": "MXOnly-2U-Hotswap-VerticalStabilizers",
+    "part": "~"
+   },
+   {
+    "designator": "R1",
+    "footprint": "0402",
+    "part": "10k"
+   },
+   {
+    "designator": "R2, R3",
+    "footprint": "0402",
+    "part": "5k1"
+   },
+   {
+    "designator": "SW1, SW2",
+    "footprint": "SW_SPST_SKQG_WithoutStem",
+    "part": "RST"
+   },
+   {
+    "designator": "U1",
+    "footprint": "SOT-23-6",
+    "part": "USBLC6-2SC6"
+   },
+   {
+    "designator": "U2",
+    "footprint": "LQFP-48_7x7mm_P0.5mm",
+    "part": "STM32F072C8Tx"
+   },
+   {
+    "designator": "U3",
+    "footprint": "SOT-23",
+    "part": "XC6206PxxxMR-Regulator_Linear"
+   }
+  ]
+ },
+ "dnlnm/cloak-xt-stm32\tcloak-xt.kicad_pcb": {
+  "bom": "jlcpcb/production_files/BOM-cloak-xt.csv",
+  "column": "comment",
+  "parts": [
+   {
+    "designator": "Q1,Q2",
+    "footprint": "SOT-23",
+    "part": "Q_PMOS_GSD"
+   },
+   {
+    "designator": "C11,C12,C13,C14,C15,C16,C17,C18,C19,C20,C21,C8",
+    "footprint": "C_0402_1005Metric",
+    "part": "100nF"
+   },
+   {
+    "designator": "R1,R2",
+    "footprint": "R_0603_1608Metric",
+    "part": "10k"
+   },
+   {
+    "designator": "R5",
+    "footprint": "R_0402_1005Metric",
+    "part": "4.7k"
+   },
+   {
+    "designator": "R3,R4",
+    "footprint": "R_0402_1005Metric",
+    "part": "5.1k"
+   },
+   {
+    "designator": "J1",
+    "footprint": "JST_SH_SM04B-SRSS-TB_1x04-1MP_P1.00mm_Horizontal",
+    "part": "JST"
+   },
+   {
+    "designator": "C1,C10,C2,C3,C4,C5,C6,C7,C9",
+    "footprint": "C_0402_1005Metric",
+    "part": "100nF"
+   },
+   {
+    "designator": "BOOT1,RST1",
+    "footprint": "SW_SPST_TL3342",
+    "part": "SW_SPST"
+   },
+   {
+    "designator": "LED1,LED10,LED11,LED12,LED2,LED3,LED4,LED5,LED6,LED7,LED8,LED9",
+    "footprint": "LED_MX_6028R-ROT",
+    "part": "MX_SK6812MINI-E"
+   },
+   {
+    "designator": "U3",
+    "footprint": "SOT-23",
+    "part": "XC6206PxxxMR-Regulator_Linear"
+   },
+   {
+    "designator": "D1,D10,D11,D12,D13,D14,D15,D16,D17,D18,D19,D2,D20,D21,D22,D23,D24,D25,D26,D27,D28,D29,D3,D31,D32,D33,D34,D35,D36,D37,D38,D39,D4,D40,D41,D42,D43,D45,D46,D47,D48,D49,D5,D50,D51,D52,D53,D54,D55,D56,D57,D58,D59,D6,D60,D62,D63,D64,D65,D67,D68,D69,D7,D8,D9",
+    "footprint": "D_SOD-123",
+    "part": "D_Small"
+   },
+   {
+    "designator": "U1",
+    "footprint": "LQFP-48_7x7mm_P0.5mm",
+    "part": "STM32F072CBT6"
+   }
+  ]
+ },
+ "evyd13/gh80-series\tGH80-3003_jlc/gh80-3003/gh80-3003.kicad_pcb": {
+  "bom": "GH80-3003_jlc/gh80-3003/jlc_fab/smt/gh80-3003_jlc_bom_jlc.csv",
+  "column": "comment",
+  "parts": [
+   {
+    "designator": "C1,C2,C3,C4",
+    "footprint": "C_0805_2012Metric",
+    "part": "0.1u"
+   },
+   {
+    "designator": "C5",
+    "footprint": "C_0805_2012Metric",
+    "part": "4.7u"
+   },
+   {
+    "designator": "C6",
+    "footprint": "C_0805_2012Metric",
+    "part": "1u"
+   },
+   {
+    "designator": "C7,C8",
+    "footprint": "C_0603_1608Metric",
+    "part": "22p"
+   },
+   {
+    "designator": "D1,D2,D3,D4,D5,D6,D7,D8,D9,D10,D11,D12,D13,D14,D15,D16,D17,D18,D19,D20,D21,D22,D23,D24,D25,D26,D27,D28,D29,D30,D31,D32,D33,D34,D35,D36,D37,D38,D39,D40,D41,D42,D43,D44,D45,D46,D47,D48,D49,D50,D51,D52,D53,D54,D55,D56,D57,D58,D59,D60,D61,D62,D63,D64,D65,D66,D67,D68,D69,D70,D71,D72,D73,D74,D75,D76,D77,D78,D79,D80,D81,D82,D83,D84,D85,D86,D87,D88,D89,D90,D91,D92,D93,D94,D95,D96,D97,D98,D99,D100,D101,D102,D103,D104,D105,D106,D107,D108,D109,D110,D111,D112,D113,D114",
+    "footprint": "D_SOD-123",
+    "part": "1N4148"
+   },
+   {
+    "designator": "F1",
+    "footprint": "Fuse_1206_3216Metric",
+    "part": "Fuse"
+   },
+   {
+    "designator": "R1,R2",
+    "footprint": "R_0805_2012Metric",
+    "part": "22"
+   },
+   {
+    "designator": "R3,R4,R6",
+    "footprint": "R_0805_2012Metric",
+    "part": "1k"
+   },
+   {
+    "designator": "R5,R7",
+    "footprint": "R_0805_2012Metric",
+    "part": "10k"
+   },
+   {
+    "designator": "U1",
+    "footprint": "TQFP-44_10x10mm_P0.8mm",
+    "part": "ATmega32U4"
+   },
+   {
+    "designator": "U2",
+    "footprint": "SOT-23-6",
+    "part": "SRV05-4"
+   },
+   {
+    "designator": "Y1",
+    "footprint": "Crystal_SMD_3225-4Pin_3.2x2.5mm",
+    "part": "Crystal_GND24_Small"
+   }
+  ]
+ },
+ "fearherbs1/blue-team-pad\tPCB/BlueTeamPad/BlueTeamPad.kicad_pcb": {
+  "bom": "PCB/BlueTeamPad/jlcpcb/assembly/BOM-BlueTeamPad.csv",
+  "column": "comment",
+  "parts": [
+   {
+    "designator": "R5,R6",
+    "footprint": "R_0402_1005Metric",
+    "part": "1k"
+   },
+   {
+    "designator": "C11,C12,C13,C14,C15,C16,C17,C5,C7,C8",
+    "footprint": "C_0402_1005Metric",
+    "part": "100nF"
+   },
+   {
+    "designator": "C9",
+    "footprint": "C_0402_1005Metric",
+    "part": "10uF"
+   },
+   {
+    "designator": "C3,C4",
+    "footprint": "C_0402_1005Metric",
+    "part": "22pF"
+   },
+   {
+    "designator": "J1",
+    "footprint": "USB_C_Receptacle_HRO_TYPE-C-31-M-12",
+    "part": "USB_C"
+   },
+   {
+    "designator": "U1",
+    "footprint": "RP2040-QFN-56",
+    "part": "RP2040"
+   },
+   {
+    "designator": "R1,R2",
+    "footprint": "R_0603_1608Metric",
+    "part": "27R"
+   },
+   {
+    "designator": "R7",
+    "footprint": "R_0402_1005Metric",
+    "part": "10k"
+   },
+   {
+    "designator": "R3,R4",
+    "footprint": "R_0402_1005Metric",
+    "part": "5.1k"
+   },
+   {
+    "designator": "C1,C10,C2,C6",
+    "footprint": "C_0402_1005Metric",
+    "part": "1uF"
+   },
+   {
+    "designator": "U4",
+    "footprint": "SOT-23",
+    "part": "XC6206"
+   },
+   {
+    "designator": "F1",
+    "footprint": "Fuse_1206_3216Metric",
+    "part": "500mA"
+   },
+   {
+    "designator": "D1,D10,D11,D12,D13,D14,D15,D16,D17,D18,D19,D2,D20,D21,D22,D3,D4,D5,D6,D7,D8,D9",
+    "footprint": "D_SOD-123",
+    "part": "D_Small"
+   },
+   {
+    "designator": "U2",
+    "footprint": "SOT-23-6-routable",
+    "part": "SRV05-4"
+   },
+   {
+    "designator": "Y1",
+    "footprint": "Crystal_SMD_3225-4Pin_3.2x2.5mm",
+    "part": "12MHz"
+   },
+   {
+    "designator": "U3",
+    "footprint": "SOIC-8_5.23x5.23mm_P1.27mm",
+    "part": "W25Q128JVS"
+   },
+   {
+    "designator": "H2",
+    "footprint": "MountingHole_2.2mm_M2_Pad",
+    "part": "MountingHole_Pad"
+   },
+   {
+    "designator": "OL1",
+    "footprint": "OLED_v2",
+    "part": "OLED"
+   },
+   {
+    "designator": "H1",
+    "footprint": "MountingHole_2.2mm_M2_Pad",
+    "part": "MountingHole_Pad"
+   },
+   {
+    "designator": "SW3",
+    "footprint": "ROT_Alps_EC11E-Switch",
+    "part": "RotaryEncoder_Switch"
+   },
+   {
+    "designator": "H3",
+    "footprint": "MountingHole_2.2mm_M2_Pad",
+    "part": "MountingHole_Pad"
+   },
+   {
+    "designator": "H4",
+    "footprint": "MountingHole_2.2mm_M2_Pad",
+    "part": "MountingHole_Pad"
+   },
+   {
+    "designator": "SW2",
+    "footprint": "ROT_Alps_EC11E-Switch",
+    "part": "RotaryEncoder_Switch"
+   },
+   {
+    "designator": "SW20",
+    "footprint": "SW_MX_HS_1u",
+    "part": "MX_SW_HS"
+   },
+   {
+    "designator": "SW5",
+    "footprint": "SW_MX_HS_1u",
+    "part": "MX_SW_HS"
+   },
+   {
+    "designator": "SW1",
+    "footprint": "PinSocket_1x02_P2.54mm_Vertical",
+    "part": "Boot"
+   },
+   {
+    "designator": "SW6",
+    "footprint": "SW_MX_HS_1u",
+    "part": "MX_SW_HS"
+   },
+   {
+    "designator": "SW21",
+    "footprint": "SW_MX_HS_1u",
+    "part": "MX_SW_HS"
+   },
+   {
+    "designator": "SW22",
+    "footprint": "SW_MX_HS_1u",
+    "part": "MX_SW_HS"
+   },
+   {
+    "designator": "SW13",
+    "footprint": "SW_MX_HS_1u",
+    "part": "MX_SW_HS"
+   },
+   {
+    "designator": "SW18",
+    "footprint": "SW_MX_HS_1u",
+    "part": "MX_SW_HS"
+   },
+   {
+    "designator": "SW16",
+    "footprint": "SW_MX_HS_1u",
+    "part": "MX_SW_HS"
+   },
+   {
+    "designator": "SW11",
+    "footprint": "SW_MX_HS_1u",
+    "part": "MX_SW_HS"
+   },
+   {
+    "designator": "SW12",
+    "footprint": "SW_MX_HS_1u",
+    "part": "MX_SW_HS"
+   },
+   {
+    "designator": "SW9",
+    "footprint": "SW_MX_HS_1u",
+    "part": "MX_SW_HS"
+   },
+   {
+    "designator": "SW10",
+    "footprint": "SW_MX_HS_1u",
+    "part": "MX_SW_HS"
+   },
+   {
+    "designator": "SW7",
+    "footprint": "SW_MX_HS_1u",
+    "part": "MX_SW_HS"
+   },
+   {
+    "designator": "SW15",
+    "footprint": "SW_MX_HS_1u",
+    "part": "MX_SW_HS"
+   },
+   {
+    "designator": "SW4",
+    "footprint": "SW_MX_HS_1u",
+    "part": "MX_SW_HS"
+   },
+   {
+    "designator": "SW8",
+    "footprint": "SW_MX_HS_1u",
+    "part": "MX_SW_HS"
+   },
+   {
+    "designator": "SW23",
+    "footprint": "SW_MX_HS_1u",
+    "part": "MX_SW_HS"
+   },
+   {
+    "designator": "SW19",
+    "footprint": "SW_MX_HS_1u",
+    "part": "MX_SW_HS"
+   },
+   {
+    "designator": "SW14",
+    "footprint": "SW_MX_HS_1u",
+    "part": "MX_SW_HS"
+   },
+   {
+    "designator": "SW17",
+    "footprint": "SW_MX_HS_1u",
+    "part": "MX_SW_HS"
+   }
+  ]
+ },
+ "floookay/zwerg\tpcb/zwerg.kicad_pcb": {
+  "bom": "pcb/production/bom.csv",
+  "column": "value",
+  "parts": [
+   {
+    "designator": "D1, D10, D11, D12, D13, D14, D15, D16, D17, D18, D19, D2, D20, D21, D22, D23, D24, D25, D3, D4, D5, D6, D7, D8, D9",
+    "footprint": "D3_TH_SMD",
+    "part": "D_45deg"
+   },
+   {
+    "designator": "J1",
+    "footprint": "CON_MJ-4PP-9_Reversible",
+    "part": "AudioJack4"
+   },
+   {
+    "designator": "MX1, MX10, MX11, MX12, MX13, MX14, MX15, MX16, MX17, MX18, MX19, MX2, MX20, MX21, MX22, MX23, MX24, MX25, MX3, MX4, MX5, MX6, MX7, MX8, MX9",
+    "footprint": "SW_MX_Reversible_1u",
+    "part": "MX_SW_HS"
+   }
+  ]
+ },
+ "foostan/crkbd\tpcbs/corne-cherry/hotswap/corne-cherry.kicad_pcb": {
+  "bom": "pcbs/corne-cherry/hotswap/jlcpcb/production_files/BOM-corne-cherry.csv",
+  "column": "comment",
+  "parts": [
+   {
+    "designator": "U4,rU4",
+    "footprint": "SOIC-8_5.23x5.23mm_P1.27mm",
+    "part": "W25Q128JVSIQ"
+   },
+   {
+    "designator": "R3,R6,rR3,rR6",
+    "footprint": "R_0402_1005Metric",
+    "part": "1k"
+   },
+   {
+    "designator": "J2,rJ2",
+    "footprint": "PJ-398A-5A_PJ-399B-6A",
+    "part": "TRS"
+   },
+   {
+    "designator": "U3,rU3",
+    "footprint": "USON-10_2.5x1.0mm_P0.5mm",
+    "part": "TPD4E05U06DQAR"
+   },
+   {
+    "designator": "ZD1,rZD1",
+    "footprint": "D_SOD-523",
+    "part": "RB521S30T1G"
+   },
+   {
+    "designator": "U2,rU2",
+    "footprint": "SOT-223-3_TabPin2",
+    "part": "NCP1117LPST33T3G"
+   },
+   {
+    "designator": "C10,C12,C13,C14,C15,C3,C4,C7,C9,rC10,rC12,rC13,rC14,rC15,rC3,rC4,rC7,rC9",
+    "footprint": "C_0402_1005Metric",
+    "part": "100n"
+   },
+   {
+    "designator": "C11,C6,rC11,rC6",
+    "footprint": "C_0402_1005Metric",
+    "part": "10u"
+   },
+   {
+    "designator": "C1,C2,rC1,rC2",
+    "footprint": "C_0402_1005Metric",
+    "part": "27p"
+   },
+   {
+    "designator": "U1,rU1",
+    "footprint": "QFN-56-1EP_7x7mm_P0.4mm_EP3.2x3.2mm",
+    "part": "RP2040"
+   },
+   {
+    "designator": "D1,rD1",
+    "footprint": "D_SOD-523",
+    "part": "1N4148WT"
+   },
+   {
+    "designator": "R7,R9,rR7,rR9",
+    "footprint": "R_0402_1005Metric",
+    "part": "10k"
+   },
+   {
+    "designator": "R1,R2,rR1,rR2",
+    "footprint": "R_0402_1005Metric",
+    "part": "5.1k"
+   },
+   {
+    "designator": "R8,rR8",
+    "footprint": "R_0402_1005Metric",
+    "part": "5.6k"
+   },
+   {
+    "designator": "J1,rJ1",
+    "footprint": "TYPE-C-31-M-13C",
+    "part": "TYPE-C-31-M-13C"
+   },
+   {
+    "designator": "R4,R5,rR4,rR5",
+    "footprint": "R_0402_1005Metric",
+    "part": "27"
+   },
+   {
+    "designator": "SMDSW1,SMDSW2,rSMDSW1,rSMDSW2",
+    "footprint": "TS-1088R-02026",
+    "part": "TS-1088R-02026"
+   },
+   {
+    "designator": "EXLED1,EXLED2,LED1,LED10,LED11,LED12,LED13,LED14,LED15,LED16,LED17,LED18,LED19,LED2,LED20,LED21,LED3,LED4,LED5,LED6,LED7,LED8,LED9,rEXLED1,rEXLED2,rLED1,rLED10,rLED11,rLED12,rLED13,rLED14,rLED15,rLED16,rLED17,rLED18,rLED19,rLED2,rLED20,rLED21,rLED3,rLED4,rLED5,rLED6,rLED7,rLED8,rLED9",
+    "footprint": "YS-SK6812MINI-E",
+    "part": "YS-SK6812MINI-E"
+   },
+   {
+    "designator": "EXSW1,EXSW2,SW1,SW10,SW11,SW12,SW13,SW14,SW15,SW16,SW17,SW18,SW19,SW2,SW20,SW21,SW3,SW4,SW5,SW6,SW7,SW8,SW9,rEXSW1,rEXSW2,rSW1,rSW10,rSW11,rSW12,rSW13,rSW14,rSW15,rSW16,rSW17,rSW18,rSW19,rSW2,rSW20,rSW21,rSW3,rSW4,rSW5,rSW6,rSW7,rSW8,rSW9",
+    "footprint": "keyswitch_cherrymx_hotswap_1u_rotary_encoder_ec12",
+    "part": "RotaryEncoder_Switch"
+   },
+   {
+    "designator": "C16,C5,C8,rC16,rC5,rC8",
+    "footprint": "C_0402_1005Metric",
+    "part": "1u"
+   },
+   {
+    "designator": "Y1,rY1",
+    "footprint": "Crystal_SMD_3225-4Pin_3.2x2.5mm",
+    "part": "12MHz 18pF"
+   }
+  ]
+ },
+ "foostan/crkbd\tpcbs/corne-chocolate/hotswap/corne-chocolate.kicad_pcb": {
+  "bom": "pcbs/corne-chocolate/hotswap/jlcpcb/production_files/BOM-corne-chocolate.csv",
+  "column": "comment",
+  "parts": [
+   {
+    "designator": "U4,rU4",
+    "footprint": "SOIC-8_5.23x5.23mm_P1.27mm",
+    "part": "W25Q128JVSIQ"
+   },
+   {
+    "designator": "R3,R6,rR3,rR6",
+    "footprint": "R_0402_1005Metric",
+    "part": "1k"
+   },
+   {
+    "designator": "J2,rJ2",
+    "footprint": "PJ-398A-5A_PJ-399B-6A",
+    "part": "TRS"
+   },
+   {
+    "designator": "U3,rU3",
+    "footprint": "USON-10_2.5x1.0mm_P0.5mm",
+    "part": "TPD4E05U06DQAR"
+   },
+   {
+    "designator": "ZD1,rZD1",
+    "footprint": "D_SOD-523",
+    "part": "RB521S30T1G"
+   },
+   {
+    "designator": "U2,rU2",
+    "footprint": "SOT-223-3_TabPin2",
+    "part": "NCP1117LPST33T3G"
+   },
+   {
+    "designator": "C10,C12,C13,C14,C15,C3,C4,C7,C9,rC10,rC12,rC13,rC14,rC15,rC3,rC4,rC7,rC9",
+    "footprint": "C_0402_1005Metric",
+    "part": "100n"
+   },
+   {
+    "designator": "C11,C6,rC11,rC6",
+    "footprint": "C_0402_1005Metric",
+    "part": "10u"
+   },
+   {
+    "designator": "C1,C2,rC1,rC2",
+    "footprint": "C_0402_1005Metric",
+    "part": "27p"
+   },
+   {
+    "designator": "U1,rU1",
+    "footprint": "QFN-56-1EP_7x7mm_P0.4mm_EP3.2x3.2mm",
+    "part": "RP2040"
+   },
+   {
+    "designator": "D1,rD1",
+    "footprint": "D_SOD-523",
+    "part": "1N4148WT"
+   },
+   {
+    "designator": "R7,R9,rR7,rR9",
+    "footprint": "R_0402_1005Metric",
+    "part": "10k"
+   },
+   {
+    "designator": "R1,R2,rR1,rR2",
+    "footprint": "R_0402_1005Metric",
+    "part": "5.1k"
+   },
+   {
+    "designator": "R8,rR8",
+    "footprint": "R_0402_1005Metric",
+    "part": "5.6k"
+   },
+   {
+    "designator": "J1,rJ1",
+    "footprint": "TYPE-C-31-M-13C",
+    "part": "TYPE-C-31-M-13C"
+   },
+   {
+    "designator": "R4,R5,rR4,rR5",
+    "footprint": "R_0402_1005Metric",
+    "part": "27"
+   },
+   {
+    "designator": "SMDSW1,SMDSW2,rSMDSW1,rSMDSW2",
+    "footprint": "TS-1088R-02026",
+    "part": "TS-1088R-02026"
+   },
+   {
+    "designator": "EXLED1,EXLED2,LED1,LED10,LED11,LED12,LED13,LED14,LED15,LED16,LED17,LED18,LED19,LED2,LED20,LED21,LED3,LED4,LED5,LED6,LED7,LED8,LED9,rEXLED1,rEXLED2,rLED1,rLED10,rLED11,rLED12,rLED13,rLED14,rLED15,rLED16,rLED17,rLED18,rLED19,rLED2,rLED20,rLED21,rLED3,rLED4,rLED5,rLED6,rLED7,rLED8,rLED9",
+    "footprint": "YS-SK6812MINI-E",
+    "part": "YS-SK6812MINI-E"
+   },
+   {
+    "designator": "C16,C5,C8,rC16,rC5,rC8",
+    "footprint": "C_0402_1005Metric",
+    "part": "1u"
+   },
+   {
+    "designator": "EXSW1,EXSW2,SW1,SW10,SW11,SW12,SW13,SW14,SW15,SW16,SW17,SW18,SW19,SW2,SW20,SW21,SW3,SW4,SW5,SW6,SW7,SW8,SW9,rEXSW1,rEXSW2,rSW1,rSW10,rSW11,rSW12,rSW13,rSW14,rSW15,rSW16,rSW17,rSW18,rSW19,rSW2,rSW20,rSW21,rSW3,rSW4,rSW5,rSW6,rSW7,rSW8,rSW9",
+    "footprint": "keyswitch_choc12_hotswap_1u_rotary_encoder_ec12",
+    "part": "RotaryEncoder_Switch"
+   },
+   {
+    "designator": "Y1,rY1",
+    "footprint": "Crystal_SMD_3225-4Pin_3.2x2.5mm",
+    "part": "12MHz 18pF"
+   }
+  ]
+ },
+ "glozares/millipad\tmillipad/millipad.kicad_pcb": {
+  "bom": "VER0-5/millipad_bom.csv",
+  "column": "value",
+  "parts": [
+   {
+    "designator": "Brd1",
+    "footprint": "SSD1306:128x64OLED",
+    "part": "SSD1306"
+   },
+   {
+    "designator": "C1 C2 C3",
+    "footprint": "Capacitor_SMD:C_0805_2012Metric",
+    "part": "0.1uF"
+   },
+   {
+    "designator": "C4 C5",
+    "footprint": "Capacitor_SMD:C_0805_2012Metric",
+    "part": "22pF"
+   },
+   {
+    "designator": "C6",
+    "footprint": "Capacitor_SMD:C_0805_2012Metric",
+    "part": "10uF"
+   },
+   {
+    "designator": "C7",
+    "footprint": "Capacitor_SMD:C_0805_2012Metric",
+    "part": "C_Small"
+   },
+   {
+    "designator": "C8 C9",
+    "footprint": "Capacitor_SMD:C_0805_2012Metric",
+    "part": "100nF"
+   },
+   {
+    "designator": "D1 D2 D3 D4 D5 D6 D7 D8 D9 D10 D11 D12 D13 D14 D15",
+    "footprint": "Diode_SMD:D_SOD-123",
+    "part": "D_Small"
+   },
+   {
+    "designator": "F1",
+    "footprint": "Fuse:Fuse_1206_3216Metric",
+    "part": "500mA"
+   },
+   {
+    "designator": "H1 H2 H3 H4",
+    "footprint": "MountingHole:MountingHole_2.7mm_M2.5",
+    "part": "MountingHole"
+   },
+   {
+    "designator": "J1",
+    "footprint": "Connector_PinSocket_1.00mm:PinSocket_2x03_P1.00mm_Vertical_SMD",
+    "part": "6P6C"
+   },
+   {
+    "designator": "MX1 MX2 MX3 MX4 MX5 MX6 MX7 MX8 MX9 MX10 MX11 MX12",
+    "footprint": "MX_Only:MXOnly-1U-Hotswap",
+    "part": "MX-NoLED"
+   },
+   {
+    "designator": "R1 R2",
+    "footprint": "Resistor_SMD:R_0805_2012Metric",
+    "part": "22"
+   },
+   {
+    "designator": "R3 R4",
+    "footprint": "Resistor_SMD:R_0805_2012Metric",
+    "part": "10k"
+   },
+   {
+    "designator": "R5 R6",
+    "footprint": "Resistor_SMD:R_0805_2012Metric",
+    "part": "5.1k"
+   },
+   {
+    "designator": "SW1 SW3 SW4",
+    "footprint": "random-keyboard-parts:SKQG-1155865",
+    "part": "SW_Push"
+   },
+   {
+    "designator": "SW2",
+    "footprint": "Keebio-Parts:RotaryEncoder_Alps_EC11E-Switch_Vertical_H20mm",
+    "part": "Rotary_Encoder_Switch"
+   },
+   {
+    "designator": "U1",
+    "footprint": "Package_QFP:TQFP-44_10x10mm_P0.8mm",
+    "part": "ATmega32U4-AU"
+   },
+   {
+    "designator": "U2",
+    "footprint": "prtr5v:PRTR5V0U2X",
+    "part": "PRTR5V0U2X"
+   },
+   {
+    "designator": "USB1",
+    "footprint": "Type-C:HRO-TYPE-C-31-M-12-HandSoldering",
+    "part": "HRO-TYPE-C-31-M-12"
+   },
+   {
+    "designator": "Y1",
+    "footprint": "Crystal:Crystal_SMD_3225-4Pin_3.2x2.5mm",
+    "part": "16MHz"
+   }
+  ]
+ },
+ "hazels-garage/bad-wings\tpocket/source/bad_wings_pocket.kicad_pcb": {
+  "bom": "pocket/BOM-bad_wings_pocket.csv",
+  "column": "comment",
+  "parts": [
+   {
+    "designator": "SW1,SW10,SW11,SW12,SW13,SW14,SW15,SW16,SW17,SW18,SW19,SW2,SW20,SW21,SW22,SW23,SW24,SW25,SW26,SW27,SW28,SW29,SW3,SW30,SW31,SW32,SW33,SW34,SW35,SW36,SW4,SW5,SW6,SW7,SW8,SW9",
+    "footprint": "POCKET-SWITCH",
+    "part": "SW_Push_45deg"
+   }
+  ]
+ },
+ "hazels-garage/bad-wings\tpocket2/source/bw2.kicad_pcb": {
+  "bom": "pocket2/source/jlcpcb/production_files/BOM-bw2.csv",
+  "column": "comment",
+  "parts": [
+   {
+    "designator": "U1",
+    "footprint": "rp2040-zero-facedown-swapped-5v-gnd",
+    "part": "RP2040-Zero"
+   },
+   {
+    "designator": "SW36",
+    "footprint": "Silent Square Micro Switch",
+    "part": "[7,4]"
+   },
+   {
+    "designator": "SW35",
+    "footprint": "Silent Square Micro Switch",
+    "part": "[7,3]"
+   },
+   {
+    "designator": "SW34",
+    "footprint": "Silent Square Micro Switch",
+    "part": "[7,2]"
+   },
+   {
+    "designator": "SW33",
+    "footprint": "Silent Square Micro Switch",
+    "part": "[3,4]"
+   },
+   {
+    "designator": "SW32",
+    "footprint": "Silent Square Micro Switch",
+    "part": "[3,3]"
+   },
+   {
+    "designator": "SW31",
+    "footprint": "Silent Square Micro Switch",
+    "part": "[3,2]"
+   },
+   {
+    "designator": "SW30",
+    "footprint": "Silent Square Micro Switch",
+    "part": "[4,4]"
+   },
+   {
+    "designator": "SW29",
+    "footprint": "Silent Square Micro Switch",
+    "part": "[5,4]"
+   },
+   {
+    "designator": "SW28",
+    "footprint": "Silent Square Micro Switch",
+    "part": "[6,4]"
+   },
+   {
+    "designator": "SW27",
+    "footprint": "Silent Square Micro Switch",
+    "part": "[4,3]"
+   },
+   {
+    "designator": "SW26",
+    "footprint": "Silent Square Micro Switch",
+    "part": "[5,3]"
+   },
+   {
+    "designator": "SW25",
+    "footprint": "Silent Square Micro Switch",
+    "part": "[6,3]"
+   },
+   {
+    "designator": "SW24",
+    "footprint": "Silent Square Micro Switch",
+    "part": "[4,2]"
+   },
+   {
+    "designator": "SW23",
+    "footprint": "Silent Square Micro Switch",
+    "part": "[5,2]"
+   },
+   {
+    "designator": "SW22",
+    "footprint": "Silent Square Micro Switch",
+    "part": "[6,2]"
+   },
+   {
+    "designator": "SW21",
+    "footprint": "Silent Square Micro Switch",
+    "part": "[4,1]"
+   },
+   {
+    "designator": "SW20",
+    "footprint": "Silent Square Micro Switch",
+    "part": "[5,1]"
+   },
+   {
+    "designator": "SW19",
+    "footprint": "Silent Square Micro Switch",
+    "part": "[6,1]"
+   },
+   {
+    "designator": "SW18",
+    "footprint": "Silent Square Micro Switch",
+    "part": "[4,0]"
+   },
+   {
+    "designator": "SW17",
+    "footprint": "Silent Square Micro Switch",
+    "part": "[5,0]"
+   },
+   {
+    "designator": "SW16",
+    "footprint": "Silent Square Micro Switch",
+    "part": "[6,0]"
+   },
+   {
+    "designator": "SW15",
+    "footprint": "Silent Square Micro Switch",
+    "part": "[0,4]"
+   },
+   {
+    "designator": "SW14",
+    "footprint": "Silent Square Micro Switch",
+    "part": "[1,4]"
+   },
+   {
+    "designator": "SW13",
+    "footprint": "Silent Square Micro Switch",
+    "part": "[2,4]"
+   },
+   {
+    "designator": "SW12",
+    "footprint": "Silent Square Micro Switch",
+    "part": "[0,3]"
+   },
+   {
+    "designator": "SW11",
+    "footprint": "Silent Square Micro Switch",
+    "part": "[1,3]"
+   },
+   {
+    "designator": "SW10",
+    "footprint": "Silent Square Micro Switch",
+    "part": "[2,3]"
+   },
+   {
+    "designator": "SW9",
+    "footprint": "Silent Square Micro Switch",
+    "part": "[0,2]"
+   },
+   {
+    "designator": "SW8",
+    "footprint": "Silent Square Micro Switch",
+    "part": "[1,2]"
+   },
+   {
+    "designator": "SW7",
+    "footprint": "Silent Square Micro Switch",
+    "part": "[2,2]"
+   },
+   {
+    "designator": "SW6",
+    "footprint": "Silent Square Micro Switch",
+    "part": "[0,1]"
+   },
+   {
+    "designator": "SW5",
+    "footprint": "Silent Square Micro Switch",
+    "part": "[1,2]"
+   },
+   {
+    "designator": "SW4",
+    "footprint": "Silent Square Micro Switch",
+    "part": "[2,1]"
+   },
+   {
+    "designator": "SW3",
+    "footprint": "Silent Square Micro Switch",
+    "part": "[0,0]"
+   },
+   {
+    "designator": "SW2",
+    "footprint": "Silent Square Micro Switch",
+    "part": "[1,0]"
+   },
+   {
+    "designator": "SW1",
+    "footprint": "Silent Square Micro Switch",
+    "part": "[2,0]"
+   },
+   {
+    "designator": "D36",
+    "footprint": "D_SOD-123",
+    "part": "1N4148W"
+   },
+   {
+    "designator": "D35",
+    "footprint": "D_SOD-123",
+    "part": "1N4148W"
+   },
+   {
+    "designator": "D34",
+    "footprint": "D_SOD-123",
+    "part": "1N4148W"
+   },
+   {
+    "designator": "D33",
+    "footprint": "D_SOD-123",
+    "part": "1N4148W"
+   },
+   {
+    "designator": "D32",
+    "footprint": "D_SOD-123",
+    "part": "1N4148W"
+   },
+   {
+    "designator": "D31",
+    "footprint": "D_SOD-123",
+    "part": "1N4148W"
+   },
+   {
+    "designator": "D30",
+    "footprint": "D_SOD-123",
+    "part": "1N4148W"
+   },
+   {
+    "designator": "D29",
+    "footprint": "D_SOD-123",
+    "part": "1N4148W"
+   },
+   {
+    "designator": "D28",
+    "footprint": "D_SOD-123",
+    "part": "1N4148W"
+   },
+   {
+    "designator": "D27",
+    "footprint": "D_SOD-123",
+    "part": "1N4148W"
+   },
+   {
+    "designator": "D26",
+    "footprint": "D_SOD-123",
+    "part": "1N4148W"
+   },
+   {
+    "designator": "D25",
+    "footprint": "D_SOD-123",
+    "part": "1N4148W"
+   },
+   {
+    "designator": "D24",
+    "footprint": "D_SOD-123",
+    "part": "1N4148W"
+   },
+   {
+    "designator": "D23",
+    "footprint": "D_SOD-123",
+    "part": "1N4148W"
+   },
+   {
+    "designator": "D22",
+    "footprint": "D_SOD-123",
+    "part": "1N4148W"
+   },
+   {
+    "designator": "D21",
+    "footprint": "D_SOD-123",
+    "part": "1N4148W"
+   },
+   {
+    "designator": "D20",
+    "footprint": "D_SOD-123",
+    "part": "1N4148W"
+   },
+   {
+    "designator": "D19",
+    "footprint": "D_SOD-123",
+    "part": "1N4148W"
+   },
+   {
+    "designator": "D18",
+    "footprint": "D_SOD-123",
+    "part": "1N4148W"
+   },
+   {
+    "designator": "D17",
+    "footprint": "D_SOD-123",
+    "part": "1N4148W"
+   },
+   {
+    "designator": "D16",
+    "footprint": "D_SOD-123",
+    "part": "1N4148W"
+   },
+   {
+    "designator": "D15",
+    "footprint": "D_SOD-123",
+    "part": "1N4148W"
+   },
+   {
+    "designator": "D14",
+    "footprint": "D_SOD-123",
+    "part": "1N4148W"
+   },
+   {
+    "designator": "D13",
+    "footprint": "D_SOD-123",
+    "part": "1N4148W"
+   },
+   {
+    "designator": "D12",
+    "footprint": "D_SOD-123",
+    "part": "1N4148W"
+   },
+   {
+    "designator": "D11",
+    "footprint": "D_SOD-123",
+    "part": "1N4148W"
+   },
+   {
+    "designator": "D10",
+    "footprint": "D_SOD-123",
+    "part": "1N4148W"
+   },
+   {
+    "designator": "D9",
+    "footprint": "D_SOD-123",
+    "part": "1N4148W"
+   },
+   {
+    "designator": "D8",
+    "footprint": "D_SOD-123",
+    "part": "1N4148W"
+   },
+   {
+    "designator": "D7",
+    "footprint": "D_SOD-123",
+    "part": "1N4148W"
+   },
+   {
+    "designator": "D6",
+    "footprint": "D_SOD-123",
+    "part": "1N4148W"
+   },
+   {
+    "designator": "D5",
+    "footprint": "D_SOD-123",
+    "part": "1N4148W"
+   },
+   {
+    "designator": "D4",
+    "footprint": "D_SOD-123",
+    "part": "1N4148W"
+   },
+   {
+    "designator": "D3",
+    "footprint": "D_SOD-123",
+    "part": "1N4148W"
+   },
+   {
+    "designator": "D2",
+    "footprint": "D_SOD-123",
+    "part": "1N4148W"
+   },
+   {
+    "designator": "D1",
+    "footprint": "D_SOD-123",
+    "part": "1N4148W"
+   }
+  ]
+ },
+ "hazels-garage/bad-wings\tv2/source/bw2.kicad_pcb": {
+  "bom": "v2/source/jlcpcb/production_files/BOM-bw2.csv",
+  "column": "comment",
+  "parts": [
+   {
+    "designator": "BOOT1",
+    "footprint": "SW_SPST_TL3342",
+    "part": "DFU"
+   },
+   {
+    "designator": "C10",
+    "footprint": "C_0402_1005Metric",
+    "part": "4.7n"
+   },
+   {
+    "designator": "C8",
+    "footprint": "C_0603_1608Metric",
+    "part": "10uF"
+   },
+   {
+    "designator": "J1",
+    "footprint": "Molex-216990_GCT-USB45xx_HRO-TYPE-C-31-M-13x",
+    "part": "USB_C"
+   },
+   {
+    "designator": "R3,R4",
+    "footprint": "R_0603_1608Metric",
+    "part": "27R"
+   },
+   {
+    "designator": "R5",
+    "footprint": "R_0402_1005Metric",
+    "part": "10k"
+   },
+   {
+    "designator": "R1,R2",
+    "footprint": "R_0402_1005Metric",
+    "part": "5.1k"
+   },
+   {
+    "designator": "R6",
+    "footprint": "R_0402_1005Metric",
+    "part": "1M"
+   },
+   {
+    "designator": "J2",
+    "footprint": "FPC-SMD_FPC05012-09200-.5mm-rev",
+    "part": "CIRQUE"
+   },
+   {
+    "designator": "H1,H2,H3,H4,H5,H6,H7,H8",
+    "footprint": "MountingHole_M2_Pad_NonPTH_TopOnly",
+    "part": "MountingHole"
+   },
+   {
+    "designator": "C3,C4,C5,C6,C7,C9",
+    "footprint": "C_0402_1005Metric",
+    "part": "100nF"
+   },
+   {
+    "designator": "C1,C2",
+    "footprint": "C_0402_1005Metric",
+    "part": "1uF"
+   },
+   {
+    "designator": "U3",
+    "footprint": "SOT-23",
+    "part": "XC6206"
+   },
+   {
+    "designator": "F1",
+    "footprint": "Fuse_1206_3216Metric",
+    "part": "500mA"
+   },
+   {
+    "designator": "D1,D10,D11,D12,D13,D14,D15,D16,D17,D18,D19,D2,D20,D21,D22,D23,D24,D25,D26,D27,D28,D29,D3,D30,D31,D32,D33,D34,D35,D36,D4,D5,D6,D7,D8,D9",
+    "footprint": "D_SOD-123",
+    "part": "1N4148W"
+   },
+   {
+    "designator": "U1",
+    "footprint": "LQFP-48_7x7mm_P0.5mm",
+    "part": "STM32F072CBT6"
+   },
+   {
+    "designator": "U2",
+    "footprint": "SOT-23-6-routable",
+    "part": "SRV05-4"
+   }
+  ]
+ },
+ "hsgw/plaid\tpcb/plaid.kicad_pcb": {
+  "bom": "doc/plaid_BOM.csv",
+  "column": "value",
+  "parts": [
+   {
+    "designator": "C1, C2",
+    "footprint": null,
+    "part": "22p"
+   },
+   {
+    "designator": "C3",
+    "footprint": null,
+    "part": "4.7u"
+   },
+   {
+    "designator": "C4, C5",
+    "footprint": null,
+    "part": "100n"
+   },
+   {
+    "designator": "D1-48",
+    "footprint": null,
+    "part": "1N4148"
+   },
+   {
+    "designator": "D49, D50",
+    "footprint": null,
+    "part": "3.6V Schottky diode"
+   },
+   {
+    "designator": "F1",
+    "footprint": null,
+    "part": "100mA"
+   },
+   {
+    "designator": "J1",
+    "footprint": null,
+    "part": "USB MINI-B"
+   },
+   {
+    "designator": "J2",
+    "footprint": null,
+    "part": "02x03"
+   },
+   {
+    "designator": "LED1",
+    "footprint": null,
+    "part": "RED"
+   },
+   {
+    "designator": "LED2",
+    "footprint": null,
+    "part": "GREEN"
+   },
+   {
+    "designator": "R1, R7, R8",
+    "footprint": null,
+    "part": "1.5k"
+   },
+   {
+    "designator": "R2, R3",
+    "footprint": null,
+    "part": "75R"
+   },
+   {
+    "designator": "R4",
+    "footprint": null,
+    "part": "10k"
+   },
+   {
+    "designator": "SW50",
+    "footprint": null,
+    "part": "RESET"
+   },
+   {
+    "designator": "SW51",
+    "footprint": null,
+    "part": "BOOT"
+   },
+   {
+    "designator": "U1",
+    "footprint": null,
+    "part": "ATMEGA328P"
+   },
+   {
+    "designator": "IC Socket",
+    "footprint": null,
+    "part": "28pin IC Socket"
+   },
+   {
+    "designator": "Y1",
+    "footprint": null,
+    "part": "16MHz"
+   },
+   {
+    "designator": "Screw",
+    "footprint": null,
+    "part": "M2 8mm"
+   },
+   {
+    "designator": "Nut",
+    "footprint": null,
+    "part": "M2"
+   },
+   {
+    "designator": "Spacer",
+    "footprint": null,
+    "part": "M2 10mm"
+   },
+   {
+    "designator": "PCB",
+    "footprint": null,
+    "part": "MAIN PCB"
+   },
+   {
+    "designator": "PCB",
+    "footprint": null,
+    "part": "BOTTOM PCB"
+   }
+  ]
+ },
+ "ianklug/grooveboard\tgrooveboard-atmel-au/grooveboard-atmel-au.kicad_pcb": {
+  "bom": "grooveboard-atmel-au/grooveboard-atmel-au-bom.csv",
+  "column": "comment",
+  "parts": [
+   {
+    "designator": "C1",
+    "footprint": "402",
+    "part": "4.7nF"
+   },
+   {
+    "designator": "C2",
+    "footprint": "402",
+    "part": "1uF"
+   },
+   {
+    "designator": "C3, C4, C5",
+    "footprint": "402",
+    "part": "100nF"
+   },
+   {
+    "designator": "C6",
+    "footprint": "402",
+    "part": "10uF"
+   },
+   {
+    "designator": "C7, C8",
+    "footprint": "402",
+    "part": "22pF"
+   },
+   {
+    "designator": "R1",
+    "footprint": "402",
+    "part": "1M"
+   },
+   {
+    "designator": "R2, R3",
+    "footprint": "402",
+    "part": "5.1k"
+   },
+   {
+    "designator": "R4, R5",
+    "footprint": "402",
+    "part": "22"
+   },
+   {
+    "designator": "R6, R7",
+    "footprint": "402",
+    "part": "10k"
+   },
+   {
+    "designator": "F1",
+    "footprint": "805",
+    "part": "500mA"
+   },
+   {
+    "designator": "U1",
+    "footprint": "TQFP-44_10.0x10.0x0.8P",
+    "part": "ATmega32U4-AU"
+   },
+   {
+    "designator": "X1",
+    "footprint": "SMD-3225_4P",
+    "part": "16MHz"
+   },
+   {
+    "designator": "SW1",
+    "footprint": "SMD-SW-4_5.1x5.1x1.5",
+    "part": "TS-1187A-B-A-B"
+   }
+  ]
+ },
+ "ianklug/grooveboard\tgrooveboard-atmel-mu/grooveboard-atmel-mu.kicad_pcb": {
+  "bom": "grooveboard-atmel-mu/grooveboard-atmel-mu-bom.csv",
+  "column": "comment",
+  "parts": [
+   {
+    "designator": "C1",
+    "footprint": "402",
+    "part": "4.7nF"
+   },
+   {
+    "designator": "C2",
+    "footprint": "402",
+    "part": "1uF"
+   },
+   {
+    "designator": "C3, C4, C5",
+    "footprint": "402",
+    "part": "100nF"
+   },
+   {
+    "designator": "C6",
+    "footprint": "402",
+    "part": "10uF"
+   },
+   {
+    "designator": "C7, C8",
+    "footprint": "402",
+    "part": "22pF"
+   },
+   {
+    "designator": "R1",
+    "footprint": "402",
+    "part": "1M"
+   },
+   {
+    "designator": "R2, R3",
+    "footprint": "402",
+    "part": "5.1k"
+   },
+   {
+    "designator": "R4, R5",
+    "footprint": "402",
+    "part": "22"
+   },
+   {
+    "designator": "R6, R7",
+    "footprint": "402",
+    "part": "10k"
+   },
+   {
+    "designator": "F1",
+    "footprint": "805",
+    "part": "500mA"
+   },
+   {
+    "designator": "U1",
+    "footprint": "QFN-44_EP_7.0x7.0x0.5P",
+    "part": "ATmega32U4-MU"
+   },
+   {
+    "designator": "X1",
+    "footprint": "SMD-3225_4P",
+    "part": "16MHz"
+   },
+   {
+    "designator": "SW1",
+    "footprint": "SMD-SW-4_5.1x5.1x1.5",
+    "part": "TS-1187A-B-A-B"
+   }
+  ]
+ },
+ "ianklug/grooveboard\tgrooveboard-choc-atmel-au/grooveboard-choc-atmel-au.kicad_pcb": {
+  "bom": "grooveboard-choc-atmel-au/grooveboard-choc-atmel-au-bom.csv",
+  "column": "comment",
+  "parts": [
+   {
+    "designator": "C1",
+    "footprint": "402",
+    "part": "4.7nF"
+   },
+   {
+    "designator": "C2",
+    "footprint": "402",
+    "part": "1uF"
+   },
+   {
+    "designator": "C3, C4, C5",
+    "footprint": "402",
+    "part": "100nF"
+   },
+   {
+    "designator": "C6",
+    "footprint": "402",
+    "part": "10uF"
+   },
+   {
+    "designator": "C7, C8",
+    "footprint": "402",
+    "part": "22pF"
+   },
+   {
+    "designator": "R1",
+    "footprint": "402",
+    "part": "1M"
+   },
+   {
+    "designator": "R2, R3",
+    "footprint": "402",
+    "part": "5.1k"
+   },
+   {
+    "designator": "R4, R5",
+    "footprint": "402",
+    "part": "22"
+   },
+   {
+    "designator": "R6, R7",
+    "footprint": "402",
+    "part": "10k"
+   },
+   {
+    "designator": "F1",
+    "footprint": "805",
+    "part": "500mA"
+   },
+   {
+    "designator": "U1",
+    "footprint": "TQFP-44_10.0x10.0x0.8P",
+    "part": "ATmega32U4-AU"
+   },
+   {
+    "designator": "X1",
+    "footprint": "SMD-3225_4P",
+    "part": "16MHz"
+   },
+   {
+    "designator": "SW1",
+    "footprint": "SMD-SW-4_5.1x5.1x1.5",
+    "part": "TS-1187A-B-A-B"
+   }
+  ]
+ },
+ "ianklug/grooveboard\tgrooveboard-choc-atmel-mu/grooveboard-choc-atmel-mu.kicad_pcb": {
+  "bom": "grooveboard-choc-atmel-mu/grooveboard-choc-atmel-mu-bom.csv",
+  "column": "comment",
+  "parts": [
+   {
+    "designator": "C1",
+    "footprint": "402",
+    "part": "4.7nF"
+   },
+   {
+    "designator": "C2",
+    "footprint": "402",
+    "part": "1uF"
+   },
+   {
+    "designator": "C3, C4, C5",
+    "footprint": "402",
+    "part": "100nF"
+   },
+   {
+    "designator": "C6",
+    "footprint": "402",
+    "part": "10uF"
+   },
+   {
+    "designator": "C7, C8",
+    "footprint": "402",
+    "part": "22pF"
+   },
+   {
+    "designator": "R1",
+    "footprint": "402",
+    "part": "1M"
+   },
+   {
+    "designator": "R2, R3",
+    "footprint": "402",
+    "part": "5.1k"
+   },
+   {
+    "designator": "R4, R5",
+    "footprint": "402",
+    "part": "22"
+   },
+   {
+    "designator": "R6, R7",
+    "footprint": "402",
+    "part": "10k"
+   },
+   {
+    "designator": "F1",
+    "footprint": "805",
+    "part": "500mA"
+   },
+   {
+    "designator": "U1",
+    "footprint": "QFN-44_EP_7.0x7.0x0.5P",
+    "part": "ATmega32U4-MU"
+   },
+   {
+    "designator": "X1",
+    "footprint": "SMD-3225_4P",
+    "part": "16MHz"
+   },
+   {
+    "designator": "SW1",
+    "footprint": "SMD-SW-4_5.1x5.1x1.5",
+    "part": "TS-1187A-B-A-B"
+   }
+  ]
+ },
+ "ianklug/grooveboard\tgrooveboard-choc-rp/grooveboard-choc-rp.kicad_pcb": {
+  "bom": "grooveboard-choc-rp/grooveboard-choc-rp-bom.csv",
+  "column": "comment",
+  "parts": [
+   {
+    "designator": "C1, C2",
+    "footprint": "402",
+    "part": "10uF"
+   },
+   {
+    "designator": "C3, C8, C9, C10, C11, C12, C13, C14, C15, C16",
+    "footprint": "402",
+    "part": "100nF"
+   },
+   {
+    "designator": "C4, C5",
+    "footprint": "402",
+    "part": "1uF"
+   },
+   {
+    "designator": "C6, C7",
+    "footprint": "402",
+    "part": "10pF"
+   },
+   {
+    "designator": "D1",
+    "footprint": "SOD-323",
+    "part": "Schottky"
+   },
+   {
+    "designator": "F1",
+    "footprint": "805",
+    "part": "500mA"
+   },
+   {
+    "designator": "R7",
+    "footprint": "402",
+    "part": "10k"
+   },
+   {
+    "designator": "R2, R3",
+    "footprint": "402",
+    "part": "5.1k"
+   },
+   {
+    "designator": "R4, R5",
+    "footprint": "402",
+    "part": "22"
+   },
+   {
+    "designator": "R6, R8",
+    "footprint": "402",
+    "part": "1k"
+   },
+   {
+    "designator": "SW1, SW2",
+    "footprint": "SMD",
+    "part": "TS-1187A-B-A-B"
+   },
+   {
+    "designator": "U1",
+    "footprint": "QFN-56(7x7)",
+    "part": "RP2040"
+   },
+   {
+    "designator": "U2",
+    "footprint": "WSON-8_5x6mm",
+    "part": "W25Q128JV"
+   },
+   {
+    "designator": "U3",
+    "footprint": "SOT-25",
+    "part": "3.3V"
+   },
+   {
+    "designator": "Y1",
+    "footprint": "SMD3225-4P",
+    "part": "12MHz"
+   }
+  ]
+ },
+ "ianklug/grooveboard\tgrooveboard-mx-atmel-au/grooveboard-mx-atmel-au.kicad_pcb": {
+  "bom": "grooveboard-mx-atmel-au/grooveboard-mx-atmel-au-bom.csv",
+  "column": "comment",
+  "parts": [
+   {
+    "designator": "C1",
+    "footprint": "402",
+    "part": "4.7nF"
+   },
+   {
+    "designator": "C2",
+    "footprint": "402",
+    "part": "1uF"
+   },
+   {
+    "designator": "C3, C4, C5",
+    "footprint": "402",
+    "part": "100nF"
+   },
+   {
+    "designator": "C6",
+    "footprint": "402",
+    "part": "10uF"
+   },
+   {
+    "designator": "C7, C8",
+    "footprint": "402",
+    "part": "22pF"
+   },
+   {
+    "designator": "R1",
+    "footprint": "402",
+    "part": "1M"
+   },
+   {
+    "designator": "R2, R3",
+    "footprint": "402",
+    "part": "5.1k"
+   },
+   {
+    "designator": "R4, R5",
+    "footprint": "402",
+    "part": "22"
+   },
+   {
+    "designator": "R6, R7",
+    "footprint": "402",
+    "part": "10k"
+   },
+   {
+    "designator": "F1",
+    "footprint": "805",
+    "part": "500mA"
+   },
+   {
+    "designator": "U1",
+    "footprint": "TQFP-44_10.0x10.0x0.8P",
+    "part": "ATmega32U4-AU"
+   },
+   {
+    "designator": "X1",
+    "footprint": "SMD-3225_4P",
+    "part": "16MHz"
+   },
+   {
+    "designator": "SW1",
+    "footprint": "SMD-SW-4_5.1x5.1x1.5",
+    "part": "TS-1187A-B-A-B"
+   }
+  ]
+ },
+ "ianklug/grooveboard\tgrooveboard-mx-atmel-mu/grooveboard-mx-atmel-mu.kicad_pcb": {
+  "bom": "grooveboard-mx-atmel-mu/grooveboard-mx-atmel-mu-bom.csv",
+  "column": "comment",
+  "parts": [
+   {
+    "designator": "C1",
+    "footprint": "402",
+    "part": "4.7nF"
+   },
+   {
+    "designator": "C2",
+    "footprint": "402",
+    "part": "1uF"
+   },
+   {
+    "designator": "C3, C4, C5",
+    "footprint": "402",
+    "part": "100nF"
+   },
+   {
+    "designator": "C6",
+    "footprint": "402",
+    "part": "10uF"
+   },
+   {
+    "designator": "C7, C8",
+    "footprint": "402",
+    "part": "22pF"
+   },
+   {
+    "designator": "R1",
+    "footprint": "402",
+    "part": "1M"
+   },
+   {
+    "designator": "R2, R3",
+    "footprint": "402",
+    "part": "5.1k"
+   },
+   {
+    "designator": "R4, R5",
+    "footprint": "402",
+    "part": "22"
+   },
+   {
+    "designator": "R6, R7",
+    "footprint": "402",
+    "part": "10k"
+   },
+   {
+    "designator": "F1",
+    "footprint": "805",
+    "part": "500mA"
+   },
+   {
+    "designator": "U1",
+    "footprint": "QFN-44_EP_7.0x7.0x0.5P",
+    "part": "ATmega32U4-MU"
+   },
+   {
+    "designator": "X1",
+    "footprint": "SMD-3225_4P",
+    "part": "16MHz"
+   },
+   {
+    "designator": "SW1",
+    "footprint": "SMD-SW-4_5.1x5.1x1.5",
+    "part": "TS-1187A-B-A-B"
+   }
+  ]
+ },
+ "ianklug/grooveboard\tgrooveboard-mx-rp/grooveboard-mx-rp.kicad_pcb": {
+  "bom": "grooveboard-mx-rp/grooveboard-mx-rp-bom.csv",
+  "column": "comment",
+  "parts": [
+   {
+    "designator": "C1, C2",
+    "footprint": "402",
+    "part": "10uF"
+   },
+   {
+    "designator": "C3, C8, C9, C10, C11, C12, C13, C14, C15, C16",
+    "footprint": "402",
+    "part": "100nF"
+   },
+   {
+    "designator": "C4, C5",
+    "footprint": "402",
+    "part": "1uF"
+   },
+   {
+    "designator": "C6, C7",
+    "footprint": "402",
+    "part": "10pF"
+   },
+   {
+    "designator": "D1",
+    "footprint": "SOD-323",
+    "part": "Schottky"
+   },
+   {
+    "designator": "F1",
+    "footprint": "805",
+    "part": "500mA"
+   },
+   {
+    "designator": "R7",
+    "footprint": "402",
+    "part": "10k"
+   },
+   {
+    "designator": "R2, R3",
+    "footprint": "402",
+    "part": "5.1k"
+   },
+   {
+    "designator": "R4, R5",
+    "footprint": "402",
+    "part": "22"
+   },
+   {
+    "designator": "R6, R8",
+    "footprint": "402",
+    "part": "1k"
+   },
+   {
+    "designator": "SW1, SW2",
+    "footprint": "SMD",
+    "part": "TS-1187A-B-A-B"
+   },
+   {
+    "designator": "U1",
+    "footprint": "QFN-56(7x7)",
+    "part": "RP2040"
+   },
+   {
+    "designator": "U2",
+    "footprint": "WSON-8_5x6mm",
+    "part": "W25Q128JV"
+   },
+   {
+    "designator": "U3",
+    "footprint": "SOT-25",
+    "part": "3.3V"
+   },
+   {
+    "designator": "Y1",
+    "footprint": "SMD3225-4P",
+    "part": "12MHz"
+   }
+  ]
+ },
+ "ianklug/grooveboard\tgrooveboard-rp/grooveboard-rp.kicad_pcb": {
+  "bom": "grooveboard-rp/grooveboard-rp-bom.csv",
+  "column": "comment",
+  "parts": [
+   {
+    "designator": "C1, C2",
+    "footprint": "402",
+    "part": "10uF"
+   },
+   {
+    "designator": "C3, C8, C9, C10, C11, C12, C13, C14, C15, C16",
+    "footprint": "402",
+    "part": "100nF"
+   },
+   {
+    "designator": "C4, C5",
+    "footprint": "402",
+    "part": "1uF"
+   },
+   {
+    "designator": "C6, C7",
+    "footprint": "402",
+    "part": "10pF"
+   },
+   {
+    "designator": "D1",
+    "footprint": "SOD-323",
+    "part": "Schottky"
+   },
+   {
+    "designator": "F1",
+    "footprint": "805",
+    "part": "500mA"
+   },
+   {
+    "designator": "R7",
+    "footprint": "402",
+    "part": "10k"
+   },
+   {
+    "designator": "R2, R3",
+    "footprint": "402",
+    "part": "5.1k"
+   },
+   {
+    "designator": "R4, R5",
+    "footprint": "402",
+    "part": "22"
+   },
+   {
+    "designator": "R6, R8",
+    "footprint": "402",
+    "part": "1k"
+   },
+   {
+    "designator": "SW1, SW2",
+    "footprint": "SMD",
+    "part": "TS-1187A-B-A-B"
+   },
+   {
+    "designator": "U1",
+    "footprint": "QFN-56(7x7)",
+    "part": "RP2040"
+   },
+   {
+    "designator": "U2",
+    "footprint": "WSON-8_5x6mm",
+    "part": "W25Q128JV"
+   },
+   {
+    "designator": "U3",
+    "footprint": "SOT-25",
+    "part": "3.3V"
+   },
+   {
+    "designator": "Y1",
+    "footprint": "SMD3225-4P",
+    "part": "12MHz"
+   }
+  ]
+ },
+ "jmdaly/co60\tco60.kicad_pcb": {
+  "bom": "co60_BOM_.csv",
+  "column": "mpn",
+  "parts": [
+   {
+    "designator": "Q1",
+    "footprint": "SOT-23-3",
+    "part": "FMMT493TA"
+   }
+  ]
+ },
+ "joe-scotto/scottokeebs\tScottoPad/PCB/ScottoPad.kicad_pcb": {
+  "bom": "ScottoPad/PCB/production/bom.csv",
+  "column": "value",
+  "parts": [
+   {
+    "designator": "C0, C1, C2, C3, C4, C5, R0, R1, R2",
+    "footprint": "TestPoint",
+    "part": "TestPoint"
+   },
+   {
+    "designator": "D1, D10, D11, D12, D13, D14, D15, D16, D17, D18, D2, D3, D4, D5, D6, D7, D8, D9",
+    "footprint": "Diode_SOD-123",
+    "part": "Diode"
+   },
+   {
+    "designator": "S1, S10, S11, S12, S13, S14, S15, S16, S17, S18, S2, S3, S4, S5, S6, S7, S8, S9",
+    "footprint": "MX_Solder_1.00u",
+    "part": "Keyswitch"
+   }
+  ]
+ },
+ "jpskenn/jones\tPCB/Jones.kicad_pcb": {
+  "bom": "PCB/Gerbers/BOM_CPL/Jones_BOM.csv",
+  "column": "comment",
+  "parts": [
+   {
+    "designator": "C1",
+    "footprint": "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder",
+    "part": "10uF"
+   },
+   {
+    "designator": "C2,C3",
+    "footprint": "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder",
+    "part": "22pF"
+   },
+   {
+    "designator": "C4,C5,C7",
+    "footprint": "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder",
+    "part": "0.1uF"
+   },
+   {
+    "designator": "C6",
+    "footprint": "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder",
+    "part": "1uF"
+   },
+   {
+    "designator": "D10",
+    "footprint": "Package_TO_SOT_SMD:SOT-143",
+    "part": "PRTR5V0U2X"
+   },
+   {
+    "designator": "D0,D1,D2,D3,D4,D5,D6,D7,D8,D9,D11,D12,D13,D14,D15,D16,D17,D18,D19,D21,D22,D23,D24,D25,D26,D27,D28,D29,D30,D31,D32,D33,D34,D35,D36,D37,D38,D39,D40,D41,D42,D43,D44,D45,D46,D47,D48,D49,D50,D51,D52,D53,D56,D57,D59,D61,D62,D63,D64,D65,D67,D68,D69,D71,D73,D74,D75,D78,D79,D83,D84,D85,D87,D89,D91,D92,D93,D94,D95,D96,D97,D98",
+    "footprint": "Diode_SMD:D_SOD-123",
+    "part": "D"
+   },
+   {
+    "designator": "EXT_P0,EXT_DP0,EXT_P1,EXT_DP1,EXT_P2,EXT_DP2,EXT_P3,EXT_DP3,EXT_P4,EXT_DP4,EXT_P5,EXT_DP5,EXT_P6,EXT_DP6,EXT_P7,EXT_DP7,EXT_P8,EXT_DP8,EXT_P9,EXT_DP9",
+    "footprint": "TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm",
+    "part": "Conn_01x01"
+   },
+   {
+    "designator": "F1",
+    "footprint": "Fuse:Fuse_1206_3216Metric_Pad1.42x1.75mm_HandSolder",
+    "part": "500mA"
+   },
+   {
+    "designator": "H1,H2,H3,H4,H5",
+    "footprint": "MountingHole:MountingHole_2.2mm_M2",
+    "part": "MountingHole"
+   },
+   {
+    "designator": "J1",
+    "footprint": "Connector_USB:USB_C_Receptacle_GCT_USB4085",
+    "part": "USB_C_Receptacle_USB2.0"
+   },
+   {
+    "designator": "J2",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical",
+    "part": "Conn_01x03"
+   },
+   {
+    "designator": "J3",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical",
+    "part": "Conn_01x02"
+   },
+   {
+    "designator": "J5",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical",
+    "part": "Conn_02x03_Odd_Even"
+   },
+   {
+    "designator": "JP1",
+    "footprint": "Jumper:SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm",
+    "part": "SolderJumper_2_Open"
+   },
+   {
+    "designator": "JP_LED1,JP_LED2",
+    "footprint": "Jumper:SolderJumper-3_P1.3mm_Open_Pad1.0x1.5mm_NumberLabels",
+    "part": "SolderJumper_3_Open"
+   },
+   {
+    "designator": "LED1,LED2,LED3,LED4",
+    "footprint": "locallib:LED_SK6812MINI_PLCC4_3.5x3.5mm_P1.75mm_TriangleMark",
+    "part": "SK6812MINI"
+   },
+   {
+    "designator": "LED_STRIP1",
+    "footprint": "locallib:LED_Strip",
+    "part": "Conn_01x03"
+   },
+   {
+    "designator": "LOGO1",
+    "footprint": "locallib:Jones_logo_B_R_60x98.2",
+    "part": "#Jones_kbd v.1 (042)"
+   },
+   {
+    "designator": "LS1",
+    "footprint": "Buzzer_Beeper:Buzzer_Murata_PKMCS0909E4000-R1",
+    "part": "Speaker"
+   },
+   {
+    "designator": "R1,R2",
+    "footprint": "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder",
+    "part": "5.1k"
+   },
+   {
+    "designator": "R3,R4",
+    "footprint": "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder",
+    "part": "22"
+   },
+   {
+    "designator": "R5,R6",
+    "footprint": "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder",
+    "part": "10k"
+   },
+   {
+    "designator": "R7",
+    "footprint": "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder",
+    "part": "1k"
+   },
+   {
+    "designator": "R8,R9",
+    "footprint": "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder",
+    "part": "4.7k"
+   },
+   {
+    "designator": "Reserve_PF0,Reserve_AUDIO1,Reserve_AUDIO2,Reserve_PB5,Reserve_PD5,Reserve_PF6,Reserve_PC7,Reserve_PF7",
+    "footprint": "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm",
+    "part": "Conn_01x01"
+   },
+   {
+    "designator": "ResetSW1",
+    "footprint": "Button_Switch_SMD:SW_SPST_TL3342",
+    "part": "5.2x5.2mm"
+   },
+   {
+    "designator": "SW_0,SW_1,SW_\\1,SW_`1,SW_-1,SW_Q1,SW_W1,SW_E1,SW_R1,SW_T1,SW_A1,SW_S1,SW_D1,SW_F1,SW_G1,SW_Z1,SW_X1,SW_C1,SW_V1,SW_B1,SW_=1,SW_UP1,SW_M1,SW_J1,SW_U1,SW_N1,SW_[1,SW_'1,SW_P1,SW_>1,SW_L1,SW_I1,SW_K1,SW_<1,SW_O1,SW_]1,SW_RIGHT1,SW_DOWN1,SW_;1,SW_Center1,SW_Y1,SW_LEFT1,SW_H1,SW_ESC1,SW_2,SW_B2,SW_]2,SW_[2,SW_'2,SW_3,SW_;3,SW_4,SW_5,SW_6,SW_7,SW_8,SW_9,SW_LWIN1u1,SW_Fn1u1,SW_LSFT1u1,SW_CAPS1u1,SW_CenterR1u1,SW_narrowCTL1u1,SW_narrow1u1,SW_CenterL1u1,SW_LSFT1u2,SW_L2-1u1",
+    "footprint": "MX_Alps_Hybrid:MXOnly-1U-Hotswap-guide",
+    "part": "SW_Push"
+   },
+   {
+    "designator": "SW_;2",
+    "footprint": "MX_Alps_Hybrid:MXOnly-1U-NoLED",
+    "part": "SW_Push"
+   },
+   {
+    "designator": "SW_BS1.5u2,SW_ENT1.5u2",
+    "footprint": "MX_Alps_Hybrid:MXOnly-1.5U-Hotswap-guide-Rotate",
+    "part": "SW_Push"
+   },
+   {
+    "designator": "SW_BS2u1",
+    "footprint": "MX_Alps_Hybrid:MXOnly-2U-Hotswap-guide",
+    "part": "SW_Push"
+   },
+   {
+    "designator": "SW_CTL1.5u1,SW_ENT1.5u1,SW_BS1.5u1,SW_RALT1.5u1,SW_TAB1.5u1,SW_LALT1.5u/MHEN1u1",
+    "footprint": "MX_Alps_Hybrid:MXOnly-1.5U-Hotswap-guide",
+    "part": "SW_Push"
+   },
+   {
+    "designator": "SW_ENT2.25u1",
+    "footprint": "MX_Alps_Hybrid:MXOnly-2.25U-Hotswap-LeftRotate-guide",
+    "part": "SW_Push"
+   },
+   {
+    "designator": "SW_LSFT1.75u1",
+    "footprint": "MX_Alps_Hybrid:MXOnly-1.75U-Hotswap-guide",
+    "part": "SW_Push"
+   },
+   {
+    "designator": "SW_LSFT2u1,SW_LSPC2u1,SW_RSPC2u1,SW_CSPC2u1",
+    "footprint": "MX_Alps_Hybrid:MXOnly-2U-Hotswap-ReversedStabilizers-guide",
+    "part": "SW_Push"
+   },
+   {
+    "designator": "SW_LSPC2.25u1",
+    "footprint": "MX_Alps_Hybrid:MXOnly-2.25U-Hotswap-guide",
+    "part": "SW_Push"
+   },
+   {
+    "designator": "SW_RE1,SW_RE2",
+    "footprint": "locallib:RotaryEncoder_Alps_EC11K-Switch_Vertical_H20mm",
+    "part": "Rotary_Encoder_Switch"
+   },
+   {
+    "designator": "SW_narrowRALT1.25u1,SW_ROPT1.25u1,SW_RALT1.25u1,SW_LALT1.25u1,SW_CTL1.25u1,SW_LWIN1.25u1,SW_BS1.25u1,SW_ENT1.25u1",
+    "footprint": "MX_Alps_Hybrid:MXOnly-1.25U-Hotswap-guide",
+    "part": "SW_Push"
+   },
+   {
+    "designator": "SW_narrowRWIN1.25u1,SW_BS1.25u2,SW_ENT1.25u2",
+    "footprint": "MX_Alps_Hybrid:MXOnly-1.25U-Hotswap-guide-Rotate",
+    "part": "SW_Push"
+   },
+   {
+    "designator": "U1",
+    "footprint": "Housings_DFN_QFN:QFN-44-1EP_7x7mm_Pitch0.5mm",
+    "part": "ATmega32U4-MU"
+   },
+   {
+    "designator": "U2",
+    "footprint": "Package_SO:SO-8_3.9x4.9mm_P1.27mm",
+    "part": "24LC64"
+   },
+   {
+    "designator": "Y1",
+    "footprint": "Crystal:Crystal_SMD_3225-4Pin_3.2x2.5mm_HandSoldering",
+    "part": "16MHz"
+   }
+  ]
+ },
+ "jpuerto96/v4n4g0rth0n\tV4N4G0RTH0N.kicad_pcb": {
+  "bom": "Production Files/BOM/V4N4G0RTH0N.csv",
+  "column": "comment",
+  "parts": [
+   {
+    "designator": "MX1,MX2,MX3,MX4,MX5,MX7,MX8,MX9,MX10,MX11,MX12,MX13,MX14,MX15,MX16,MX17,MX18,MX19,MX20,MX21,MX22,MX23,MX24,MX25,MX26,MX27,MX28,MX29,MX30,MX31,MX32,MX33,MX34,MX35,MX36,MX37,MX38,MX39,MX41,MX42,MX43,MX44,MX45,MX48,MX49,MX40,MX50,MX6",
+    "footprint": "MX-1U-NoLED",
+    "part": "MX-NoLED"
+   },
+   {
+    "designator": "RV1",
+    "footprint": "Potentiometer_Bourns_PTA3043_Single_Slide",
+    "part": "R_Potentiometer"
+   },
+   {
+    "designator": "R10",
+    "footprint": "R_0805_2012Metric",
+    "part": "1M"
+   },
+   {
+    "designator": "R3,R4",
+    "footprint": "R_0805_2012Metric",
+    "part": "10k"
+   },
+   {
+    "designator": "C8",
+    "footprint": "C_0805_2012Metric",
+    "part": "4.7n"
+   },
+   {
+    "designator": "MX46,MX47",
+    "footprint": "MX-3U-ReversedStabilizers-NoLED",
+    "part": "MX-NoLED"
+   },
+   {
+    "designator": "F1",
+    "footprint": "Fuse_0805_2012Metric",
+    "part": "500mA"
+   },
+   {
+    "designator": "D54,D50,D49,D48,D47,D46,D45,D44,D43,D42,D41,D40,D39,D38,D37,D36,D35,D34,D33,D32,D31,D30,D29,D28,D27,D26,D25,D24,D23,D22,D21,D20,D19,D18,D17,D16,D15,D14,D13,D12,D11,D10,D9,D8,D7,D6,D5,D4,D3,D2,D1",
+    "footprint": "D_SOD-123",
+    "part": "SOD-123"
+   },
+   {
+    "designator": "U2",
+    "footprint": "SOT-23-6",
+    "part": "SRV05-4"
+   },
+   {
+    "designator": "Y1",
+    "footprint": "Crystal_SMD_3225-4Pin_3.2x2.5mm",
+    "part": "16MHz"
+   },
+   {
+    "designator": "USB1",
+    "footprint": "HRO-TYPE-C-31-M-12",
+    "part": "HRO-TYPE-C-31-M-12"
+   },
+   {
+    "designator": "U1",
+    "footprint": "TQFP-44_10x10mm_P0.8mm",
+    "part": "ATmega32U4-A"
+   },
+   {
+    "designator": "R9,R8",
+    "footprint": "R_0805_2012Metric",
+    "part": "5.1K"
+   },
+   {
+    "designator": "R7,R6,R5",
+    "footprint": "R_0805_2012Metric",
+    "part": "330"
+   },
+   {
+    "designator": "R2,R1",
+    "footprint": "R_0805_2012Metric",
+    "part": "22"
+   },
+   {
+    "designator": "D53,D52,D51",
+    "footprint": "LED_D3.0mm",
+    "part": "LED"
+   },
+   {
+    "designator": "C7",
+    "footprint": "C_0805_2012Metric",
+    "part": "10uF"
+   },
+   {
+    "designator": "C6,C2,C1",
+    "footprint": "C_0805_2012Metric",
+    "part": "0.1uF"
+   },
+   {
+    "designator": "C5,C4",
+    "footprint": "C_0805_2012Metric",
+    "part": "22pF"
+   },
+   {
+    "designator": "C3",
+    "footprint": "C_0805_2012Metric",
+    "part": "1uF"
+   }
+  ]
+ },
+ "kb-elmo/bm42\tpcb/bm42.kicad_pcb": {
+  "bom": "pcb/fab/bm42_bom_jlc.csv",
+  "column": "comment",
+  "parts": [
+   {
+    "designator": "C1",
+    "footprint": "C_0805_2012Metric",
+    "part": "10uF"
+   },
+   {
+    "designator": "C2,C3",
+    "footprint": "C_0805_2012Metric",
+    "part": "0.1uF"
+   },
+   {
+    "designator": "C4,C5",
+    "footprint": "C_0805_2012Metric",
+    "part": "22pF"
+   },
+   {
+    "designator": "C6",
+    "footprint": "C_0805_2012Metric",
+    "part": "1uF"
+   },
+   {
+    "designator": "D1,D2,D3,D4,D5,D6,D8,D9,D10,D11,D12,D14,D15,D16,D17,D18,D19,D20,D22,D23,D24,D25",
+    "footprint": "D_SOT-23_ANK_norm",
+    "part": "D_Small"
+   },
+   {
+    "designator": "F1",
+    "footprint": "Fuse_1206_3216Metric",
+    "part": "Polyfuse_Small"
+   },
+   {
+    "designator": "R1,R2",
+    "footprint": "R_0805_2012Metric",
+    "part": "5.1k"
+   },
+   {
+    "designator": "R3,R4",
+    "footprint": "R_0805_2012Metric",
+    "part": "22"
+   },
+   {
+    "designator": "R5,R6",
+    "footprint": "R_0805_2012Metric",
+    "part": "10k"
+   },
+   {
+    "designator": "U1",
+    "footprint": "TQFP-32_7x7mm_P0.8mm",
+    "part": "ATmega32U2-A"
+   },
+   {
+    "designator": "U2",
+    "footprint": "SOT-23-6",
+    "part": "SRV05-4"
+   },
+   {
+    "designator": "USB1",
+    "footprint": "USB_C_Receptacle_HRO_TYPE-C-31-M-12",
+    "part": "USB_C_Receptacle_USB2.0"
+   },
+   {
+    "designator": "X1",
+    "footprint": "Crystal_SMD_3225-4Pin_3.2x2.5mm",
+    "part": "Crystal_GND24_Small"
+   }
+  ]
+ },
+ "kb-elmo/dizzy40\tpcb/dizzy40.kicad_pcb": {
+  "bom": "pcb/fab/dizzy40_bom_jlc.csv",
+  "column": "comment",
+  "parts": [
+   {
+    "designator": "C1",
+    "footprint": "C_0805_2012Metric",
+    "part": "10uF"
+   },
+   {
+    "designator": "C2,C3",
+    "footprint": "C_0805_2012Metric",
+    "part": "0.1uF"
+   },
+   {
+    "designator": "C4,C5",
+    "footprint": "C_0805_2012Metric",
+    "part": "22pF"
+   },
+   {
+    "designator": "C6",
+    "footprint": "C_0805_2012Metric",
+    "part": "1uF"
+   },
+   {
+    "designator": "D1,D2,D3,D4,D5,D6,D8,D9,D10,D11,D12,D14,D15,D16,D17,D18,D19,D20,D22,D23,D24,D25",
+    "footprint": "D_SOT-23_ANK_norm",
+    "part": "D_Small"
+   },
+   {
+    "designator": "F1",
+    "footprint": "Fuse_1206_3216Metric",
+    "part": "Polyfuse_Small"
+   },
+   {
+    "designator": "R1,R2",
+    "footprint": "R_0805_2012Metric",
+    "part": "5.1k"
+   },
+   {
+    "designator": "R3,R4",
+    "footprint": "R_0805_2012Metric",
+    "part": "22"
+   },
+   {
+    "designator": "R5,R6",
+    "footprint": "R_0805_2012Metric",
+    "part": "10k"
+   },
+   {
+    "designator": "RGB1,RGB2,RGB3,RGB4,RGB5,RGB6,RGB7,RGB8",
+    "footprint": "WS2812-2020",
+    "part": "WS2812B"
+   },
+   {
+    "designator": "U1",
+    "footprint": "TQFP-32_7x7mm_P0.8mm",
+    "part": "ATmega32U2-A"
+   },
+   {
+    "designator": "U2",
+    "footprint": "SOT-23-6",
+    "part": "SRV05-4"
+   },
+   {
+    "designator": "USB1",
+    "footprint": "USB_C_Receptacle_HRO_TYPE-C-31-M-12",
+    "part": "USB_C_Receptacle_USB2.0"
+   },
+   {
+    "designator": "X1",
+    "footprint": "Crystal_SMD_3225-4Pin_3.2x2.5mm",
+    "part": "Crystal_GND24_Small"
+   }
+  ]
+ },
+ "kb-elmo/eliza\tpcb/Eliza.kicad_pcb": {
+  "bom": "pcb/fab/Eliza_bom_jlc.csv",
+  "column": "comment",
+  "parts": [
+   {
+    "designator": "C1",
+    "footprint": "C_0805_2012Metric",
+    "part": "10uF"
+   },
+   {
+    "designator": "C2,C3",
+    "footprint": "C_0805_2012Metric",
+    "part": "0.1uF"
+   },
+   {
+    "designator": "C4,C5",
+    "footprint": "C_0805_2012Metric",
+    "part": "22pF"
+   },
+   {
+    "designator": "C6",
+    "footprint": "C_0805_2012Metric",
+    "part": "1uF"
+   },
+   {
+    "designator": "D1,D2,D3,D4,D5,D6,D7,D8,D9,D10,D11,D12,D13,D14,D15,D16,D17,D18,D19,D20,D21",
+    "footprint": "D_SOT-23_ANK_norm",
+    "part": "D_Small"
+   },
+   {
+    "designator": "F1",
+    "footprint": "Fuse_1206_3216Metric",
+    "part": "Polyfuse_Small"
+   },
+   {
+    "designator": "R1,R2",
+    "footprint": "R_0805_2012Metric",
+    "part": "5.1k"
+   },
+   {
+    "designator": "R3,R4",
+    "footprint": "R_0805_2012Metric",
+    "part": "22"
+   },
+   {
+    "designator": "R5,R6",
+    "footprint": "R_0805_2012Metric",
+    "part": "10k"
+   },
+   {
+    "designator": "U1",
+    "footprint": "TQFP-32_7x7mm_P0.8mm",
+    "part": "ATmega32U2-A"
+   },
+   {
+    "designator": "U2",
+    "footprint": "SOT-23-6",
+    "part": "SRV05-4"
+   },
+   {
+    "designator": "USB1",
+    "footprint": "USB_C_Receptacle_HRO_TYPE-C-31-M-12",
+    "part": "USB_C_Receptacle_USB2.0"
+   },
+   {
+    "designator": "X1",
+    "footprint": "Crystal_SMD_3225-4Pin_3.2x2.5mm",
+    "part": "Crystal_GND24_Small"
+   }
+  ]
+ },
+ "kb-elmo/gamehand\tpcb/GameHand.kicad_pcb": {
+  "bom": "pcb/fab/GameHand_bom_jlc.csv",
+  "column": "comment",
+  "parts": [
+   {
+    "designator": "C1",
+    "footprint": "C_0805_2012Metric",
+    "part": "10uF"
+   },
+   {
+    "designator": "C2,C3",
+    "footprint": "C_0805_2012Metric",
+    "part": "0.1uF"
+   },
+   {
+    "designator": "C7",
+    "footprint": "C_0805_2012Metric",
+    "part": "1uF"
+   },
+   {
+    "designator": "C8,C9",
+    "footprint": "C_0805_2012Metric",
+    "part": "22pF"
+   },
+   {
+    "designator": "D1,D2,D3,D4,D5,D6,D14,D15,D16,D17,D18,D19,D27,D28,D29,D30,D31,D32,D40,D41,D42,D43,D44,D53,D54,D58,D55",
+    "footprint": "D_SOD-123",
+    "part": "D_Small"
+   },
+   {
+    "designator": "F1",
+    "footprint": "Fuse_1206_3216Metric",
+    "part": "Polyfuse_Small"
+   },
+   {
+    "designator": "R1,R2",
+    "footprint": "R_0805_2012Metric",
+    "part": "22r"
+   },
+   {
+    "designator": "R3,R4",
+    "footprint": "R_0805_2012Metric",
+    "part": "10k"
+   },
+   {
+    "designator": "R5,R6",
+    "footprint": "R_0805_2012Metric",
+    "part": "5.1k"
+   },
+   {
+    "designator": "RESET",
+    "footprint": "SW_SPST_TL3342",
+    "part": "SW_Push"
+   },
+   {
+    "designator": "U2",
+    "footprint": "SOT-23-6",
+    "part": "SRV05-4"
+   },
+   {
+    "designator": "X1",
+    "footprint": "Crystal_SMD_3225-4Pin_3.2x2.5mm",
+    "part": "Crystal_GND24_Small"
+   }
+  ]
+ },
+ "kb-elmo/twelvekey\tpcb/twelvekey.kicad_pcb": {
+  "bom": "pcb/fab/bom.csv",
+  "column": "value",
+  "parts": [
+   {
+    "designator": "BOOT, RESET",
+    "footprint": "SKQG-1155865",
+    "part": "SW_Push"
+   },
+   {
+    "designator": "C1",
+    "footprint": "0805",
+    "part": "10uF"
+   },
+   {
+    "designator": "C2, C3",
+    "footprint": "0805",
+    "part": "0.1uF"
+   },
+   {
+    "designator": "C7, C8",
+    "footprint": "0805",
+    "part": "22pF"
+   },
+   {
+    "designator": "D1, D2, D3, D4, D5, D6",
+    "footprint": "D_SOT-23_ANK",
+    "part": "D_Small"
+   },
+   {
+    "designator": "D7, D8",
+    "footprint": "D_SOD-123",
+    "part": "D_Zener_Small"
+   },
+   {
+    "designator": "F1",
+    "footprint": "1206",
+    "part": "Polyfuse_Small"
+   },
+   {
+    "designator": "J1",
+    "footprint": "PinHeader_1x06_P1.27mm_Vertical",
+    "part": "Conn_01x06"
+   },
+   {
+    "designator": "MX1, MX10, MX11, MX12, MX2, MX3, MX4, MX5, MX6, MX7, MX8, MX9",
+    "footprint": "MXOnly-1U",
+    "part": "MX-LED"
+   },
+   {
+    "designator": "Q1",
+    "footprint": "SOT-23",
+    "part": "AO3401A"
+   },
+   {
+    "designator": "R1, R10, R11, R12, R13, R14, R15, R16, R17, R18, R3, R4",
+    "footprint": "0805",
+    "part": "1k"
+   },
+   {
+    "designator": "R19",
+    "footprint": "0805",
+    "part": "100R"
+   },
+   {
+    "designator": "R2, R20",
+    "footprint": "0805",
+    "part": "10k"
+   },
+   {
+    "designator": "R5, R6",
+    "footprint": "0805",
+    "part": "5.1k"
+   },
+   {
+    "designator": "R7, R8",
+    "footprint": "0805",
+    "part": "68R"
+   },
+   {
+    "designator": "R9",
+    "footprint": "0805",
+    "part": "1.5K"
+   },
+   {
+    "designator": "U1",
+    "footprint": "TQFP-32_7x7mm_P0.8mm",
+    "part": "ATmega328P-A"
+   },
+   {
+    "designator": "U2",
+    "footprint": "SOT-23-6",
+    "part": "SRV05-4"
+   },
+   {
+    "designator": "USB1",
+    "footprint": "USB_C_Receptacle_HRO_TYPE-C-31-M-12",
+    "part": "USB_C_Receptacle_USB2.0"
+   },
+   {
+    "designator": "X1",
+    "footprint": "Crystal_SMD_3225-4Pin_3.2x2.5mm",
+    "part": "Crystal_GND24_Small"
+   }
+  ]
+ },
+ "keebio/bfo9000-pcb\tbfo9000.kicad_pcb": {
+  "bom": "pcba/bom.csv",
+  "column": "value",
+  "parts": [
+   {
+    "designator": "D_A1, D_A2, D_A3, D_A4, D_A5, D_A6, D_A7, D_A8, D_A9, D_B1, D_B2, D_B3, D_B4, D_B5, D_B6, D_B7, D_B8, D_B9, D_C1, D_C2, D_C3, D_C4, D_C5, D_C6, D_C7, D_C8, D_C9, D_D1, D_D2, D_D3, D_D4, D_D5, D_D6, D_D7, D_D8, D_D9, D_E1, D_E2, D_E3, D_E4, D_E5, D_E6, D_E7, D_E8, D_E9, D_F1, D_F2, D_F3, D_F4, D_F5, D_F6, D_F7, D_F8, D_F9",
+    "footprint": "Diode-Hybrid-Back",
+    "part": "D"
+   },
+   {
+    "designator": "R1, R2",
+    "footprint": "R_0603",
+    "part": "4.7k"
+   },
+   {
+    "designator": "SW_RESET1",
+    "footprint": "SW_SPST_TL3342",
+    "part": "Reset"
+   },
+   {
+    "designator": "USB1, USB2",
+    "footprint": "HRO-TYPE-C-31-M-12-Assembly",
+    "part": "HRO-TYPE-C-31-M-12"
+   }
+  ]
+ },
+ "kkatano/bakeneko-65\tpcb/bakeneko-65-pcb.kicad_pcb": {
+  "bom": "production/pcb/bakeneko-65-pcb-v3-jlcpcb-bom.csv",
+  "column": "comment",
+  "parts": [
+   {
+    "designator": "C1 C2 C3",
+    "footprint": "Capacitor_SMD:C_0805_2012Metric",
+    "part": "0.1u"
+   },
+   {
+    "designator": "C4",
+    "footprint": "Capacitor_SMD:C_0805_2012Metric",
+    "part": "10u"
+   },
+   {
+    "designator": "C5 C6",
+    "footprint": "Capacitor_SMD:C_0805_2012Metric",
+    "part": "22p"
+   },
+   {
+    "designator": "C7",
+    "footprint": "Capacitor_SMD:C_0805_2012Metric",
+    "part": "1u"
+   },
+   {
+    "designator": "D68 D67 D66 D65 D64 D63 D62 D61 D60 D59 D58 D57 D56 D55 D54 D53 D52 D51 D50 D49 D48 D47 D46 D45 D44 D43 D42 D41 D40 D39 D38 D37 D36 D35 D34 D33 D32 D31 D30 D29 D28 D27 D26 D25 D24 D23 D22 D21 D20 D19 D18 D17 D16 D15 D14 D13 D12 D11 D10 D9 D8 D7 D6 D5 D4 D3 D2 D1",
+    "footprint": "Diode_SMD:D_SOD-123",
+    "part": "1N4148"
+   },
+   {
+    "designator": "F1",
+    "footprint": "Fuse:Fuse_1206_3216Metric",
+    "part": "500mA"
+   },
+   {
+    "designator": "J1",
+    "footprint": "Connector_JST:JST_SH_SM04B-SRSS-TB_1x04-1MP_P1.00mm_Horizontal",
+    "part": "JST SH 4-pin"
+   },
+   {
+    "designator": "R1 R4",
+    "footprint": "Resistor_SMD:R_0805_2012Metric",
+    "part": "10k"
+   },
+   {
+    "designator": "R2 R3",
+    "footprint": "Resistor_SMD:R_0805_2012Metric",
+    "part": "22"
+   },
+   {
+    "designator": "SW1",
+    "footprint": "Button_Switch_SMD:SW_SPST_TL3342",
+    "part": "Reset"
+   },
+   {
+    "designator": "U1",
+    "footprint": "Package_TO_SOT_SMD:SOT-23-6",
+    "part": "SRV05-4"
+   },
+   {
+    "designator": "U2",
+    "footprint": "Package_QFP:TQFP-44_10x10mm_P0.8mm",
+    "part": "ATmega32U4-AU"
+   },
+   {
+    "designator": "Y1",
+    "footprint": "Crystal:Crystal_SMD_3225-4Pin_3.2x2.5mm",
+    "part": "16MHz"
+   }
+  ]
+ },
+ "knaruo/pisces\tpcb/v2/pisces.kicad_pcb": {
+  "bom": "pcb/v2/jlcpcb/production_files/BOM-pisces.csv",
+  "column": "comment",
+  "parts": [
+   {
+    "designator": "C3,C6",
+    "footprint": "C_0402_1005Metric",
+    "part": "0.1u"
+   },
+   {
+    "designator": "C1,C2",
+    "footprint": "C_0402_1005Metric",
+    "part": "22p"
+   },
+   {
+    "designator": "C5",
+    "footprint": "C_0603_1608Metric",
+    "part": "1u"
+   },
+   {
+    "designator": "C4",
+    "footprint": "C_0805_2012Metric",
+    "part": "10u"
+   },
+   {
+    "designator": "J1",
+    "footprint": "USB_C_Receptacle_XKB_U262-16XN-4BVC11",
+    "part": "USB_C"
+   },
+   {
+    "designator": "R1,R2",
+    "footprint": "R_0603_1608Metric",
+    "part": "5.1k"
+   },
+   {
+    "designator": "R3,R4",
+    "footprint": "R_0603_1608Metric",
+    "part": "10k"
+   },
+   {
+    "designator": "R5,R6",
+    "footprint": "R_0402_1005Metric",
+    "part": "5.1k"
+   },
+   {
+    "designator": "Y1",
+    "footprint": "Crystal_SMD_SeikoEpson_FA238-4Pin_3.2x2.5mm",
+    "part": "Crystal_GND24_Small"
+   },
+   {
+    "designator": "F1",
+    "footprint": "RESC1206X70N",
+    "part": "Polyfuse_Small"
+   }
+  ]
+ },
+ "lendunistus/rpneko65\tpcb/rp2040-bakeneko65.kicad_pcb": {
+  "bom": "pcb/jlcpcb/production_files/BOM-rp2040-bakeneko65.csv",
+  "column": "comment",
+  "parts": [
+   {
+    "designator": "R3,R4,R5",
+    "footprint": "R_0402_1005Metric",
+    "part": "1k"
+   },
+   {
+    "designator": "F1",
+    "footprint": "Fuse_1206_3216Metric",
+    "part": "500mA"
+   },
+   {
+    "designator": "C2,C3",
+    "footprint": "C_0402_1005Metric",
+    "part": "22pF"
+   },
+   {
+    "designator": "J1",
+    "footprint": "JST_SH_SM04B-SRSS-TB_1x04-1MP_P1.00mm_Horizontal",
+    "part": "SM04B-SRSS-TB"
+   },
+   {
+    "designator": "U1",
+    "footprint": "QFN-56-1EP_7x7mm_P0.4mm_EP3.2x3.2mm",
+    "part": "RP2040"
+   },
+   {
+    "designator": "C9",
+    "footprint": "C_0402_1005Metric",
+    "part": "4.7uF"
+   },
+   {
+    "designator": "R1,R2",
+    "footprint": "R_0603_1608Metric",
+    "part": "27"
+   },
+   {
+    "designator": "C1,C11,C12,C13,C14,C15,C16,C17,C18,C7,C8",
+    "footprint": "C_0402_1005Metric",
+    "part": "100nF"
+   },
+   {
+    "designator": "SW85",
+    "footprint": "SW_SPST_SKQG_WithStem",
+    "part": "SW_Push"
+   },
+   {
+    "designator": "LED1",
+    "footprint": "LED_MX_6028R",
+    "part": "SK6812 Mini-E"
+   },
+   {
+    "designator": "C10,C4,C5,C6",
+    "footprint": "C_0402_1005Metric",
+    "part": "1uF"
+   },
+   {
+    "designator": "U3",
+    "footprint": "SOT-23",
+    "part": "XC6206PxxxMR"
+   },
+   {
+    "designator": "D1,D10,D11,D12,D13,D14,D15,D16,D18,D19,D2,D20,D21,D22,D23,D24,D25,D26,D27,D28,D29,D3,D30,D31,D33,D35,D36,D37,D38,D39,D4,D40,D41,D42,D43,D44,D45,D46,D47,D49,D5,D51,D52,D53,D54,D55,D56,D57,D58,D59,D6,D60,D61,D62,D63,D64,D65,D66,D68,D7,D70,D72,D74,D77,D79,D8,D80,D82,D83,D84,D9",
+    "footprint": "D_SOD-123",
+    "part": "1N4148"
+   },
+   {
+    "designator": "U4",
+    "footprint": "SOT-23-6-routable",
+    "part": "SRV05"
+   },
+   {
+    "designator": "Y1",
+    "footprint": "Crystal_SMD_3225-4Pin_3.2x2.5mm",
+    "part": "12MHz"
+   },
+   {
+    "designator": "U2",
+    "footprint": "SOIC-8_5.23x5.23mm_P1.27mm",
+    "part": "W25Q128JVS"
+   }
+  ]
+ },
+ "makenova/omega\tomega_hotswap/omega.kicad_pcb": {
+  "bom": "omega_hotswap/assembly/omega-BOM.csv",
+  "column": "value",
+  "parts": [
+   {
+    "designator": "SW1,",
+    "footprint": ":SMD-SW-4_5.1x5.1x1.5",
+    "part": "SW_Push"
+   }
+  ]
+ },
+ "manoshu/baredev\tkicad/rev2b/BareDevRev2.kicad_pcb": {
+  "bom": "kicad/rev2b/jlcpcb/assembly/BOM-BareDevRev2.csv",
+  "column": "comment",
+  "parts": [
+   {
+    "designator": "FB401",
+    "footprint": "L_0805_2012Metric",
+    "part": "GZ2012D601TF"
+   },
+   {
+    "designator": "U1",
+    "footprint": "TSSOP-8_4.4x3mm_P0.65mm",
+    "part": "BL24C256A-SFRC"
+   },
+   {
+    "designator": "R201,R202",
+    "footprint": "R_0805_2012Metric",
+    "part": "100k"
+   },
+   {
+    "designator": "Q1",
+    "footprint": "SOT-23",
+    "part": "AO3401A"
+   },
+   {
+    "designator": "C203,C7",
+    "footprint": "C_0402_1005Metric",
+    "part": "10n"
+   },
+   {
+    "designator": "C1,C10,C2,C3,C302,C4",
+    "footprint": "C_0402_1005Metric",
+    "part": "100n"
+   },
+   {
+    "designator": "C301",
+    "footprint": "C_0402_1005Metric",
+    "part": "10u"
+   },
+   {
+    "designator": "J401",
+    "footprint": "USB_C_Receptacle_Hroparts_TYPE-C-31-M-12",
+    "part": "TYPE-C-31-M12"
+   },
+   {
+    "designator": "R308,R6",
+    "footprint": "R_0805_2012Metric",
+    "part": "10k"
+   },
+   {
+    "designator": "R101,R102,R103,R104,R105,R106,R107,R108,R109,R110,R111,R112,R113,R114,R115,R116,R117,R118,R119,R120,R121,R122,R123,R124,R125,R126,R127,R128,R129,R130,R131,R132,R133,R134,R135,R136,R137,R138,R139,R140,R141,R142,R143,R144,R145,R146,R147,R148,R149,R150,R151,R152,R153,R154,R155,R156,R157,R158,R159,R160,R161,R162,R163,R164,R165,R166,R167,R168,R169,R170,R171,R172,R173,R174,R175,R176,R177",
+    "footprint": "R_0805_2012Metric",
+    "part": "2k"
+   },
+   {
+    "designator": "R7",
+    "footprint": "R_0805_2012Metric",
+    "part": "470"
+   },
+   {
+    "designator": "U201",
+    "footprint": "SOT-23-5",
+    "part": "SGM2007-3.3XN5/TR"
+   },
+   {
+    "designator": "C11",
+    "footprint": "C_0402_1005Metric",
+    "part": "4.7u"
+   },
+   {
+    "designator": "R304,R305,R306",
+    "footprint": "R_0402_1005Metric",
+    "part": "100R"
+   },
+   {
+    "designator": "R303,R307",
+    "footprint": "R_0402_1005Metric",
+    "part": "10k"
+   },
+   {
+    "designator": "R301",
+    "footprint": "R_0402_1005Metric",
+    "part": "330k"
+   },
+   {
+    "designator": "R1,R2",
+    "footprint": "R_0402_1005Metric",
+    "part": "4.7k"
+   },
+   {
+    "designator": "R401,R402",
+    "footprint": "R_0402_1005Metric",
+    "part": "5.1k"
+   },
+   {
+    "designator": "R302",
+    "footprint": "R_0402_1005Metric",
+    "part": "1M"
+   },
+   {
+    "designator": "U3",
+    "footprint": "SOT-23-6",
+    "part": "USBLC6-2SC6"
+   },
+   {
+    "designator": "C201,C202",
+    "footprint": "C_0805_2012Metric",
+    "part": "1u"
+   },
+   {
+    "designator": "Y1",
+    "footprint": "Crystal_SMD_3225-4Pin_3.2x2.5mm",
+    "part": "7325-0800A2010-00"
+   },
+   {
+    "designator": "C8,C9",
+    "footprint": "C_0402_1005Metric",
+    "part": "16p"
+   },
+   {
+    "designator": "C6",
+    "footprint": "C_0402_1005Metric",
+    "part": "1u"
+   },
+   {
+    "designator": "U2",
+    "footprint": "STM_UFQFPN-48_LQFP-48-1EP_7x7mm_P0.5mm_HandSoldering_ThermalReliefs",
+    "part": "JOKER MCU"
+   },
+   {
+    "designator": "F201",
+    "footprint": "Fuse_1206_3216Metric",
+    "part": "nSMD100-16V"
+   },
+   {
+    "designator": "C5",
+    "footprint": "CP_EIA-3216-10_Kemet-I_Pad1.58x1.35mm_HandSolder",
+    "part": "10u"
+   },
+   {
+    "designator": "D301,D_101,D_102,D_103,D_104,D_105,D_106,D_107,D_108,D_109,D_110,D_111,D_112,D_113,D_114,D_115,D_116,D_117,D_118,D_119,D_120,D_121,D_122,D_123,D_124,D_125,D_126,D_127,D_128,D_129,D_130,D_131,D_132,D_133,D_134,D_135,D_136,D_137,D_138,D_139,D_140,D_141,D_142,D_143,D_144,D_145,D_146,D_147,D_148,D_149,D_150,D_151,D_152,D_153,D_154,D_155,D_156,D_157,D_158,D_159,D_160,D_161,D_162,D_163,D_164,D_165,D_166,D_167,D_168,D_169,D_170,D_171,D_172,D_173,D_174,D_175,D_176,D_177",
+    "footprint": "D_SOD-123",
+    "part": "1N4148W"
+   },
+   {
+    "designator": "Q301,Q302",
+    "footprint": "SOT-23",
+    "part": "2N7002"
+   },
+   {
+    "designator": "D201",
+    "footprint": "D_SOD-123",
+    "part": "B5819W-SL"
+   },
+   {
+    "designator": "SW301",
+    "footprint": "K2-1187SQ-A4SW-06",
+    "part": "K2-1187SQ-A4SW-06"
+   }
+  ]
+ },
+ "matthewdias/m3n3van\trev1/m3n3van.kicad_pcb": {
+  "bom": "rev1/Production/m3n3van-bom.csv",
+  "column": "value",
+  "parts": [
+   {
+    "designator": "C3,",
+    "footprint": "0805",
+    "part": "1uF"
+   },
+   {
+    "designator": "C6, C5, C4, C7, C8,",
+    "footprint": "0805",
+    "part": "0.1uF"
+   },
+   {
+    "designator": "C9,",
+    "footprint": "0805",
+    "part": "10uF"
+   },
+   {
+    "designator": "F1,",
+    "footprint": "1206",
+    "part": "500mA"
+   },
+   {
+    "designator": "R3, R2,",
+    "footprint": "0805",
+    "part": "22"
+   },
+   {
+    "designator": "R4, R5,",
+    "footprint": "0805",
+    "part": "5.1k"
+   },
+   {
+    "designator": "R6, R1,",
+    "footprint": "0805",
+    "part": "10k"
+   }
+  ]
+ },
+ "matthewdias/minim\tPCB/minim.kicad_pcb": {
+  "bom": "PCB/Production/bom.csv",
+  "column": "value",
+  "parts": [
+   {
+    "designator": "C2, C1,",
+    "footprint": "0805",
+    "part": "22pF"
+   },
+   {
+    "designator": "C7, C6, C3, C4, C5,",
+    "footprint": "0805",
+    "part": "0.1uF"
+   },
+   {
+    "designator": "C8,",
+    "footprint": "0805",
+    "part": "10uF"
+   },
+   {
+    "designator": "C9,",
+    "footprint": "0805",
+    "part": "1uF"
+   },
+   {
+    "designator": "F1,",
+    "footprint": "1206",
+    "part": "500mA"
+   },
+   {
+    "designator": "R3, R2,",
+    "footprint": "0805",
+    "part": "22"
+   },
+   {
+    "designator": "R4, R1,",
+    "footprint": "0805",
+    "part": "10k"
+   },
+   {
+    "designator": "R5, R6,",
+    "footprint": "0805",
+    "part": "5.1k"
+   },
+   {
+    "designator": "U1,",
+    "footprint": "44-TQFP (10x10)",
+    "part": "AVR"
+   },
+   {
+    "designator": "Y1,",
+    "footprint": "3225",
+    "part": "16MHz"
+   }
+  ]
+ },
+ "misonoworks/chocolate-bar\tv2_kicad/chocolatebar.kicad_pcb": {
+  "bom": "v2_kicad/manufacturing files/wa/chocolatebar-bom-full.csv",
+  "column": "comment",
+  "parts": [
+   {
+    "designator": "C1,C2,C3,C4,C12,C13,C14,C15,C16,C17,C18,C19",
+    "footprint": "Capacitor_SMD:C_0805_2012Metric",
+    "part": "104"
+   },
+   {
+    "designator": "C11,C5,C6,C7,C8",
+    "footprint": "Capacitor_SMD:C_0805_2012Metric",
+    "part": "1uF"
+   },
+   {
+    "designator": "C9,C10",
+    "footprint": "Capacitor_SMD:C_0805_2012Metric",
+    "part": "22pF"
+   },
+   {
+    "designator": "D1,D2,D3,D4,D5,D6,D7,D8,D9,D10,D11,D12,D13,D14,D15,D16,D17,D18,D19,D20,D21,D22,D23,D24,D25,D26,D27,D28,D29,D42,D43,D44,D45,D46,D47,D48,D49,D50,D51,D52,D30,D31,D32,D33,D34,D35,D36,D37,D38,D39,D40,D41,D54,D53,D55",
+    "footprint": "Diode_SMD:D_SOD-123",
+    "part": "D_Small"
+   },
+   {
+    "designator": "D56,D57,D58,D59,D60,D61,D62,D63,D64,D65,D66,D67",
+    "footprint": "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm",
+    "part": "WS2812B"
+   },
+   {
+    "designator": "F1",
+    "footprint": "Fuse:Fuse_1206_3216Metric",
+    "part": "Polyfuse_Small"
+   },
+   {
+    "designator": "R3,R2",
+    "footprint": "Resistor_SMD:R_0805_2012Metric",
+    "part": "22"
+   },
+   {
+    "designator": "R5,R4",
+    "footprint": "Resistor_SMD:R_0805_2012Metric",
+    "part": "10K"
+   },
+   {
+    "designator": "R6,R7",
+    "footprint": "Resistor_SMD:R_0805_2012Metric",
+    "part": "5.1k"
+   },
+   {
+    "designator": "SW1",
+    "footprint": "random-keyboard-parts:SKQG-1155865",
+    "part": "SW_Push"
+   },
+   {
+    "designator": "U1",
+    "footprint": "Package_QFP:TQFP-44_10x10mm_P0.8mm",
+    "part": "ATmega32U4-AU"
+   },
+   {
+    "designator": "USB1",
+    "footprint": "Type-C:HRO-TYPE-C-31-M-12-HandSoldering",
+    "part": "HRO-TYPE-C-31-M-12"
+   },
+   {
+    "designator": "Y1",
+    "footprint": "Crystal:Crystal_SMD_3225-4Pin_3.2x2.5mm",
+    "part": "Crystal_GND24_Small"
+   }
+  ]
+ },
+ "ryanchomistek/lefty\tlefty.kicad_pcb": {
+  "bom": "production/bom.csv",
+  "column": "value",
+  "parts": [
+   {
+    "designator": "D1, D10, D11, D12, D13, D14, D15, D16, D17, D18, D19, D2, D20, D21, D22, D23, D24, D25, D26, D27, D28, D29, D3, D30, D31, D32, D33, D34, D35, D36, D37, D38, D39, D4, D40, D41, D42, D43, D44, D45, D46, D47, D48, D49, D5, D50, D51, D52, D53, D54, D55, D58, D59, D6, D60, D61, D62, D63, D64, D65, D66, D67, D68, D69, D7, D70, D71, D72, D73, D74, D77, D78, D79, D8, D80, D81, D82, D83, D84, D85, D86, D87, D88, D9",
+    "footprint": "Diode_DO-35",
+    "part": "Diode"
+   },
+   {
+    "designator": "S1, S10, S11, S12, S13, S14, S15, S16, S17, S19, S2, S20, S21, S22, S25, S26, S27, S28, S29, S3, S30, S31, S32, S33, S34, S35, S36, S38, S39, S4, S40, S41, S43, S44, S45, S46, S47, S48, S49, S5, S50, S51, S52, S53, S55, S58, S59, S6, S60, S63, S64, S65, S66, S67, S68, S69, S7, S70, S71, S72, S74, S78, S8, S83, S84, S85, S86, S87, S88, S9",
+    "footprint": "MX_PCB_1.00u",
+    "part": "Keyswitch"
+   },
+   {
+    "designator": "S18, S77",
+    "footprint": "MX_PCB_2.00u",
+    "part": "Keyswitch"
+   },
+   {
+    "designator": "S23, S61",
+    "footprint": "MX_PCB_2.00u_90deg",
+    "part": "Keyswitch"
+   },
+   {
+    "designator": "S24, S37",
+    "footprint": "MX_PCB_1.50u",
+    "part": "Keyswitch"
+   },
+   {
+    "designator": "S42, S73",
+    "footprint": "MX_PCB_1.75u",
+    "part": "Keyswitch"
+   },
+   {
+    "designator": "S54, S62",
+    "footprint": "MX_PCB_2.25u",
+    "part": "Keyswitch"
+   },
+   {
+    "designator": "S56, S57, S75, S91",
+    "footprint": "STAB_MX_2u",
+    "part": "MX_stab"
+   },
+   {
+    "designator": "S76, S90",
+    "footprint": "STAB_MX_P_2.25u",
+    "part": "MX_stab"
+   },
+   {
+    "designator": "S79, S80, S81",
+    "footprint": "MX_PCB_1.25u",
+    "part": "Keyswitch"
+   },
+   {
+    "designator": "S82",
+    "footprint": "MX_PCB_6.25u",
+    "part": "Keyswitch"
+   },
+   {
+    "designator": "S89",
+    "footprint": "STAB_MX_P_6.25u",
+    "part": "MX_stab"
+   },
+   {
+    "designator": "U3",
+    "footprint": "Raspberry_Pi_Pico",
+    "part": "Raspberry_Pi_Pico"
+   }
+  ]
+ },
+ "satorusaka/15k-macropad\tSource/15k-macropad/15k-macropad.kicad_pcb": {
+  "bom": "Source/15k-macropad/jlcpcb/assembly/BOM-15k-macropad.csv",
+  "column": "comment",
+  "parts": [
+   {
+    "designator": "D1,D10,D11,D12,D13,D14,D15,D2,D3,D4,D5,D6,D7,D8,D9",
+    "footprint": "D_SOD-123",
+    "part": "D_Small"
+   },
+   {
+    "designator": "C1,C10,C11,C12,C13,C14,C15,C2,C3,C4,C5,C6,C7,C8,C9",
+    "footprint": "C_0603_1608Metric",
+    "part": "0.1uF"
+   }
+  ]
+ },
+ "skeletonkbd/Frost68\tPCB/Skeleton68rev2.kicad_pcb": {
+  "bom": "PCB/jlcpcb/production_files/BOM-Skeleton68rev2.csv",
+  "column": "comment",
+  "parts": [
+   {
+    "designator": "R1,R2,R7",
+    "footprint": "R_0402_1005Metric",
+    "part": "1k"
+   },
+   {
+    "designator": "U1",
+    "footprint": "SOIC-8_5.23x5.23mm_P1.27mm",
+    "part": "W25Q128JVS"
+   },
+   {
+    "designator": "C1,C10,C11,C12,C13,C14,C15,C5,C6,C9",
+    "footprint": "C_0402_1005Metric",
+    "part": "100nF"
+   },
+   {
+    "designator": "C7",
+    "footprint": "C_0402_1005Metric",
+    "part": "10uF"
+   },
+   {
+    "designator": "C2,C3",
+    "footprint": "C_0402_1005Metric",
+    "part": "22pF"
+   },
+   {
+    "designator": "J1",
+    "footprint": "USB_C_Receptacle_HRO_TYPE-C-31-M-12",
+    "part": "USB_C_Receptacle_USB2.0"
+   },
+   {
+    "designator": "U3",
+    "footprint": "QFN-56-1EP_7x7mm_P0.4mm_EP3.2x3.2mm",
+    "part": "RP2040"
+   },
+   {
+    "designator": "R5,R6",
+    "footprint": "R_0603_1608Metric",
+    "part": "27"
+   },
+   {
+    "designator": "R8,R9",
+    "footprint": "R_0603_1608Metric",
+    "part": "10k"
+   },
+   {
+    "designator": "R3,R4",
+    "footprint": "R_0402_1005Metric",
+    "part": "5k1"
+   },
+   {
+    "designator": "SW1,SW10,SW11,SW12,SW13,SW14,SW15,SW16,SW17,SW18,SW19,SW2,SW20,SW21,SW22,SW23,SW24,SW25,SW26,SW27,SW28,SW29,SW3,SW30,SW31,SW32,SW33,SW34,SW35,SW36,SW37,SW38,SW39,SW4,SW40,SW41,SW42,SW43,SW44,SW45,SW46,SW47,SW48,SW49,SW5,SW50,SW51,SW52,SW53,SW54,SW55,SW56,SW57,SW58,SW59,SW6,SW60,SW61,SW62,SW63,SW64,SW65,SW66,SW67,SW68,SW7,SW8,SW9",
+    "footprint": "MX-Hotswap-1U",
+    "part": "SW_Push"
+   },
+   {
+    "designator": "U2",
+    "footprint": "SOT-23-6",
+    "part": "USBLC6-2SC6"
+   },
+   {
+    "designator": "TS1,TS2",
+    "footprint": "SW_SPST_SKQG_WithStem",
+    "part": "SW_Push"
+   },
+   {
+    "designator": "Q1",
+    "footprint": "SOT-23",
+    "part": "BSS138"
+   },
+   {
+    "designator": "LED1,LED10,LED11,LED12,LED13,LED14,LED15,LED16,LED17,LED18,LED19,LED2,LED20,LED21,LED22,LED23,LED24,LED25,LED26,LED27,LED28,LED29,LED3,LED30,LED31,LED32,LED33,LED34,LED35,LED36,LED37,LED38,LED39,LED4,LED40,LED41,LED42,LED43,LED44,LED45,LED46,LED47,LED48,LED49,LED5,LED50,LED51,LED52,LED53,LED54,LED55,LED56,LED57,LED58,LED59,LED6,LED60,LED61,LED62,LED63,LED64,LED65,LED66,LED67,LED68,LED7,LED8,LED9",
+    "footprint": "SK6812-MINI-E",
+    "part": "SK6812mini-e"
+   },
+   {
+    "designator": "C16,C17,C4,C8",
+    "footprint": "C_0402_1005Metric",
+    "part": "1uF"
+   },
+   {
+    "designator": "U4",
+    "footprint": "SOT-23",
+    "part": "XC6206PxxxMR"
+   },
+   {
+    "designator": "F1",
+    "footprint": "Fuse_1206_3216Metric",
+    "part": "500mA"
+   },
+   {
+    "designator": "D1,D10,D11,D12,D13,D14,D15,D16,D17,D18,D19,D2,D20,D21,D22,D23,D24,D25,D26,D27,D28,D29,D3,D30,D31,D32,D33,D34,D35,D36,D37,D38,D39,D4,D40,D41,D42,D43,D44,D45,D46,D47,D48,D49,D5,D50,D51,D52,D53,D54,D55,D56,D57,D58,D59,D6,D60,D61,D62,D63,D64,D65,D66,D67,D68,D7,D8,D9",
+    "footprint": "D_SOD-123",
+    "part": "1N4148W"
+   },
+   {
+    "designator": "Y1",
+    "footprint": "Crystal_SMD_3225-4Pin_3.2x2.5mm",
+    "part": "12MHz"
+   }
+  ]
+ },
+ "str-dst/67mk_E\tpcb/67_E.kicad_pcb": {
+  "bom": "pcb/fab/67_E_bom_jlc.csv",
+  "column": "comment",
+  "parts": [
+   {
+    "designator": "C1",
+    "footprint": "C_0805_2012Metric",
+    "part": "10uF"
+   },
+   {
+    "designator": "C2,C3,C4,C5",
+    "footprint": "C_0805_2012Metric",
+    "part": "0.1uF"
+   },
+   {
+    "designator": "C7",
+    "footprint": "C_0805_2012Metric",
+    "part": "1uF"
+   },
+   {
+    "designator": "C8,C9",
+    "footprint": "C_0805_2012Metric",
+    "part": "22pF"
+   },
+   {
+    "designator": "D2,D3,D4,D5,D6,D7,D9,D10,D11,D12,D13,D14,D15,D24,D25,D26,D27,D28,D29,D30,D32,D33,D35,D8,D36,D1,D19,D20,D21,D22,D23,D18,D17,D31,D34",
+    "footprint": "D_SOT-23_ANK",
+    "part": "D_Small"
+   },
+   {
+    "designator": "F1",
+    "footprint": "Fuse_1206_3216Metric",
+    "part": "Polyfuse_Small"
+   },
+   {
+    "designator": "R1,R2",
+    "footprint": "R_0805_2012Metric",
+    "part": "5.1k"
+   },
+   {
+    "designator": "R3,R4",
+    "footprint": "R_0805_2012Metric",
+    "part": "22"
+   },
+   {
+    "designator": "R5,R6",
+    "footprint": "R_0805_2012Metric",
+    "part": "10k"
+   },
+   {
+    "designator": "R7",
+    "footprint": "R_0805_2012Metric",
+    "part": "1.5k"
+   },
+   {
+    "designator": "RESET",
+    "footprint": "SW_SPST_TL3342",
+    "part": "SW_Push"
+   },
+   {
+    "designator": "U1",
+    "footprint": "TQFP-44_10x10mm_P0.8mm",
+    "part": "ATmega32U4-AU"
+   },
+   {
+    "designator": "U2",
+    "footprint": "SOT-23-6",
+    "part": "SRV05-4"
+   },
+   {
+    "designator": "USB1",
+    "footprint": "USB_C_Receptacle_HRO_TYPE-C-31-M-12",
+    "part": "USB_C_Receptacle_USB2.0"
+   },
+   {
+    "designator": "X1",
+    "footprint": "Crystal_SMD_3225-4Pin_3.2x2.5mm",
+    "part": "Crystal_GND24_Small"
+   }
+  ]
+ },
+ "str-dst/QEZ\tpcb/qez.kicad_pcb": {
+  "bom": "pcb/fab/qez_bom_jlc.csv",
+  "column": "comment",
+  "parts": [
+   {
+    "designator": "C1",
+    "footprint": "C_0805_2012Metric",
+    "part": "10uF"
+   },
+   {
+    "designator": "C2,C3",
+    "footprint": "C_0805_2012Metric",
+    "part": "0.1uF"
+   },
+   {
+    "designator": "C5",
+    "footprint": "C_0805_2012Metric",
+    "part": "1uF"
+   },
+   {
+    "designator": "C6,C7",
+    "footprint": "C_0805_2012Metric",
+    "part": "22pF"
+   },
+   {
+    "designator": "D1,D5,D4,D3,D2,D6,D10,D9,D8,D7,D11,D15,D14,D13,D12,D19,D18,D16,D17",
+    "footprint": "D_SOT-23_ANK",
+    "part": "D_Small"
+   },
+   {
+    "designator": "F1",
+    "footprint": "Fuse_1206_3216Metric",
+    "part": "Polyfuse_Small"
+   },
+   {
+    "designator": "R1,R2",
+    "footprint": "R_0805_2012Metric",
+    "part": "5.1k"
+   },
+   {
+    "designator": "R3,R4",
+    "footprint": "R_0805_2012Metric",
+    "part": "22"
+   },
+   {
+    "designator": "R5,R6",
+    "footprint": "R_0805_2012Metric",
+    "part": "10k"
+   },
+   {
+    "designator": "R7",
+    "footprint": "R_0805_2012Metric",
+    "part": "1.5k"
+   },
+   {
+    "designator": "RESET",
+    "footprint": "SW_SPST_TL3342",
+    "part": "SW_Push"
+   },
+   {
+    "designator": "U1",
+    "footprint": "TQFP-32_7x7mm_P0.8mm",
+    "part": "ATmega32U2-AU"
+   },
+   {
+    "designator": "U2",
+    "footprint": "SOT-23-6",
+    "part": "SRV05-4"
+   },
+   {
+    "designator": "USB1",
+    "footprint": "USB_C_Receptacle_HRO_TYPE-C-31-M-12",
+    "part": "USB_C_Receptacle_USB2.0"
+   },
+   {
+    "designator": "X1",
+    "footprint": "Crystal_SMD_3225-4Pin_3.2x2.5mm",
+    "part": "Crystal_GND24_Small"
+   }
+  ]
+ },
+ "takishim/mikeneko65\tpcb/kicad/mikeneko-65-pcb.kicad_pcb": {
+  "bom": "pcb/mikeneko-65-pcb-bom.csv",
+  "column": "comment",
+  "parts": [
+   {
+    "designator": "C1 C2 C3",
+    "footprint": "Capacitor_SMD:C_0805_2012Metric",
+    "part": "0.1u"
+   },
+   {
+    "designator": "C4",
+    "footprint": "Capacitor_SMD:C_0805_2012Metric",
+    "part": "10u"
+   },
+   {
+    "designator": "C5 C6",
+    "footprint": "Capacitor_SMD:C_0805_2012Metric",
+    "part": "22p"
+   },
+   {
+    "designator": "C7",
+    "footprint": "Capacitor_SMD:C_0805_2012Metric",
+    "part": "1u"
+   },
+   {
+    "designator": "D1 D2 D3 D4 D5 D6 D7 D8 D9 D10 D11 D12 D13 D14 D15 D16 D17 D18 D19 D20 D21 D22 D23 D24 D25 D26 D27 D28 D29 D30 D31 D32 D33 D34 D35 D36 D37 D38 D39 D40 D41 D42 D43 D44 D45 D46 D47 D48 D49 D50 D51 D52 D53 D54 D55 D56 D57 D58 D59 D60 D61 D62 D63 D64 D65 D66 D67",
+    "footprint": "Diode_SMD:D_SOD-123",
+    "part": "1N4148"
+   },
+   {
+    "designator": "F1",
+    "footprint": "Fuse:Fuse_1206_3216Metric",
+    "part": "500mA"
+   },
+   {
+    "designator": "J1",
+    "footprint": "Connector_JST:JST_SH_SM04B-SRSS-TB_1x04-1MP_P1.00mm_Horizontal",
+    "part": "JST SH 4-pin"
+   },
+   {
+    "designator": "MX1 MX2 MX3 MX4 MX5 MX6 MX7 MX8 MX9 MX10 MX11 MX12 MX13 MX15 MX17 MX18 MX19 MX20 MX21 MX22 MX23 MX24 MX25 MX26 MX27 MX28 MX30 MX32 MX33 MX34 MX35 MX36 MX37 MX38 MX39 MX40 MX41 MX42 MX44 MX46 MX47 MX48 MX49 MX50 MX51 MX52 MX53 MX54 MX55 MX57 MX58 MX65 MX66 MX67",
+    "footprint": "MX_Only:MXOnly-1U-Hotswap",
+    "part": "1u"
+   },
+   {
+    "designator": "MX14",
+    "footprint": "MX_Only:MXOnly-2U-Hotswap",
+    "part": "2u"
+   },
+   {
+    "designator": "MX16 MX29",
+    "footprint": "MX_Only:MXOnly-1.5U-Hotswap",
+    "part": "1.5u"
+   },
+   {
+    "designator": "MX31 MX56",
+    "footprint": "MX_Only:MXOnly-1.75U-Hotswap",
+    "part": "1.75u"
+   },
+   {
+    "designator": "MX43 MX45",
+    "footprint": "MX_Only:MXOnly-2.25U-Hotswap",
+    "part": "2.25u"
+   },
+   {
+    "designator": "MX59 MX60 MX61 MX63 MX64",
+    "footprint": "MX_Only:MXOnly-1.25U-Hotswap",
+    "part": "1.25u"
+   },
+   {
+    "designator": "MX62",
+    "footprint": "MX_Only:MXOnly-6.25U-Hotswap-ReversedStabilizers",
+    "part": "6.25u"
+   },
+   {
+    "designator": "R1 R4",
+    "footprint": "Resistor_SMD:R_0805_2012Metric",
+    "part": "10k"
+   },
+   {
+    "designator": "R2 R3",
+    "footprint": "Resistor_SMD:R_0805_2012Metric",
+    "part": "22"
+   },
+   {
+    "designator": "SW1",
+    "footprint": "Button_Switch_SMD:SW_SPST_TL3342",
+    "part": "Reset"
+   },
+   {
+    "designator": "U1",
+    "footprint": "Package_TO_SOT_SMD:SOT-23-6",
+    "part": "SRV05-4"
+   },
+   {
+    "designator": "U2",
+    "footprint": "Package_DFN_QFN:QFN-44-1EP_7x7mm_P0.5mm_EP5.2x5.2mm",
+    "part": "ATmega32U4-MUR"
+   },
+   {
+    "designator": "Y1",
+    "footprint": "Crystal:Crystal_SMD_3225-4Pin_3.2x2.5mm",
+    "part": "16MHz"
+   }
+  ]
+ },
+ "trojanpinata/model-b\tpcb/panel/panel.kicad_pcb": {
+  "bom": "pcb/panel/production/bom3.csv",
+  "column": "value",
+  "parts": [
+   {
+    "designator": "C1, C10, C12, C13, C14, C15, C16, C17, C4, C8, C9",
+    "footprint": "0402",
+    "part": "0.1uF"
+   },
+   {
+    "designator": "C11, C18",
+    "footprint": "0402",
+    "part": "2.2uF"
+   },
+   {
+    "designator": "C2, C3",
+    "footprint": "0402",
+    "part": "22pF"
+   },
+   {
+    "designator": "C5, C6",
+    "footprint": "0402",
+    "part": "10uF"
+   },
+   {
+    "designator": "C7",
+    "footprint": "0402",
+    "part": "1uF"
+   },
+   {
+    "designator": "D1, D10, D11, D12, D13, D14, D15, D16, D17, D18, D19, D2, D20, D21, D22, D23, D24, D25, D26, D27, D28, D29, D3, D30, D31, D32, D33, D34, D35, D36, D37, D38, D39, D4, D40, D41, D42, D43, D44, D45, D46, D47, D48, D49, D5, D50, D51, D52, D53, D55, D56, D57, D58, D59, D6, D60, D61, D62, D63, D64, D65, D66, D67, D68, D69, D7, D70, D71, D72, D73, D74, D75, D76, D77, D78, D79, D8, D80, D81, D82, D83, D84, D9",
+    "footprint": "D_SOD-123",
+    "part": "D"
+   },
+   {
+    "designator": "D54",
+    "footprint": "D_SOD-123",
+    "part": "1N4002W"
+   },
+   {
+    "designator": "F1",
+    "footprint": "0805",
+    "part": "0805L050WR"
+   },
+   {
+    "designator": "FB1",
+    "footprint": "0402",
+    "part": "FB"
+   },
+   {
+    "designator": "R1, R2, R4, R6, R7",
+    "footprint": "0402",
+    "part": "10k"
+   },
+   {
+    "designator": "R10, R9",
+    "footprint": "0402",
+    "part": "5.1k"
+   },
+   {
+    "designator": "R11",
+    "footprint": "0402",
+    "part": "100k"
+   },
+   {
+    "designator": "R13",
+    "footprint": "0402",
+    "part": "200"
+   },
+   {
+    "designator": "R14",
+    "footprint": "0402",
+    "part": "1"
+   },
+   {
+    "designator": "R15, R16",
+    "footprint": "0402",
+    "part": "27"
+   },
+   {
+    "designator": "R3, R5",
+    "footprint": "0402",
+    "part": "1k"
+   },
+   {
+    "designator": "R8",
+    "footprint": "0402",
+    "part": "5.6k"
+   },
+   {
+    "designator": "S1",
+    "footprint": "SW_EVQ-P7A01P",
+    "part": "BOOT_SEL"
+   },
+   {
+    "designator": "S2",
+    "footprint": "SW_EVQ-P7A01P",
+    "part": "RESET"
+   },
+   {
+    "designator": "U1",
+    "footprint": "SON-8-1EP_3x2mm_P0.5mm_EP1.4x1.6mm",
+    "part": "W25Q16JVUXIQ"
+   },
+   {
+    "designator": "U2",
+    "footprint": "SOT-23-5",
+    "part": "TLV75533PDBVR"
+   },
+   {
+    "designator": "U3",
+    "footprint": "RP2040-QFN-56",
+    "part": "RP2040"
+   },
+   {
+    "designator": "USB1",
+    "footprint": "HRO-TYPE-C-31-M-12",
+    "part": "HRO-TYPE-C-31-M-12"
+   },
+   {
+    "designator": "Y1",
+    "footprint": "Crystal_SMD_3225-4Pin_3.2x2.5mm",
+    "part": "12MHz"
+   }
+  ]
+ },
+ "tzarc/djinn\tKobold/R1/Kobold.kicad_pcb": {
+  "bom": "Kobold/R1/jlcpcb/production_files/BOM-Kobold.csv",
+  "column": "comment",
+  "parts": [
+   {
+    "designator": "R10,R13",
+    "footprint": "R_0402_1005Metric",
+    "part": "1k"
+   },
+   {
+    "designator": "U3",
+    "footprint": "WDFN-6_L2.0-W2.0-P0.65-BL-EP-1",
+    "part": "AP2552FDC-7"
+   },
+   {
+    "designator": "C1,C10,C11,C12,C13,C14,C15,C16,C17,C18,C19,C2,C20,C21,C22,C23,C24,C25,C26,C27,C3",
+    "footprint": "C_0402_1005Metric",
+    "part": "100n"
+   },
+   {
+    "designator": "J1",
+    "footprint": "USB_C_Receptacle_HRO_TYPE-C-31-M-12",
+    "part": "TYPE-C-31-M-12"
+   },
+   {
+    "designator": "U5",
+    "footprint": "SOT-23-5_L3.0-W1.7-P0.95-LS2.8-BR",
+    "part": "INA180A4"
+   },
+   {
+    "designator": "D18",
+    "footprint": "D_SOD-323",
+    "part": "1N4148"
+   },
+   {
+    "designator": "R2,R4,R5,R9",
+    "footprint": "R_0603_1608Metric",
+    "part": "75k"
+   },
+   {
+    "designator": "C4,C5,C6,C7,C8,C9",
+    "footprint": "C_0402_1005Metric",
+    "part": "4.7u"
+   },
+   {
+    "designator": "R1,R11,R12,R6,R7,R8",
+    "footprint": "R_0402_1005Metric",
+    "part": "10k"
+   },
+   {
+    "designator": "U1,U11,U13,U15,U16,U2,U9",
+    "footprint": "SOT-553-5_L1.6-W1.2-P0.50-LS1.6-BL",
+    "part": "SN74LVC1G14DRL"
+   },
+   {
+    "designator": "U10,U12,U14",
+    "footprint": "SOT-553-5_L1.6-W1.2-P0.50-LS1.6-BL",
+    "part": "SN74AHC1G08DRL"
+   },
+   {
+    "designator": "D1,D10,D11,D12,D13,D14,D15,D16,D2,D3,D4,D5,D6,D7,D8,D9",
+    "footprint": "LED_choc_6028R",
+    "part": "RGB"
+   },
+   {
+    "designator": "U7",
+    "footprint": "QFN-48-1EP_7x7mm_P0.5mm_EP5.6x5.6mm",
+    "part": "STM32G431CBU6"
+   },
+   {
+    "designator": "U4",
+    "footprint": "SOT-23-3",
+    "part": "XC6206PxxxMR"
+   },
+   {
+    "designator": "D17",
+    "footprint": "D_SOD-882",
+    "part": "H5VL10B"
+   },
+   {
+    "designator": "U6",
+    "footprint": "DFN2510-10_L2.5-W1.0-P0.50-BL",
+    "part": "H5VU25U"
+   },
+   {
+    "designator": "SW17,SW18,SW19",
+    "footprint": "SW-SMD_4P-L3.0-W2.6-P1.80-LS3.4-TL",
+    "part": "BOOT0"
+   },
+   {
+    "designator": "R3",
+    "footprint": "R_1206_3216Metric",
+    "part": "0.05R"
+   },
+   {
+    "designator": "U8",
+    "footprint": "SOIC-8_5.3x5.3mm_P1.27mm",
+    "part": "W25Q128JVSIQ"
+   },
+   {
+    "designator": "SW14",
+    "footprint": "SW_choc_v1_HS_CPG135001S30_1u",
+    "part": "Push"
+   },
+   {
+    "designator": "SW11",
+    "footprint": "SW_choc_v1_HS_CPG135001S30_1u",
+    "part": "Push"
+   },
+   {
+    "designator": "SW13",
+    "footprint": "SW_choc_v1_HS_CPG135001S30_1u",
+    "part": "Push"
+   },
+   {
+    "designator": "SW5",
+    "footprint": "SW_choc_v1_HS_CPG135001S30_1u",
+    "part": "Push"
+   },
+   {
+    "designator": "SW10",
+    "footprint": "SW_choc_v1_HS_CPG135001S30_1u",
+    "part": "Push"
+   },
+   {
+    "designator": "SW16",
+    "footprint": "SW_choc_v1_HS_CPG135001S30_1u",
+    "part": "Push"
+   },
+   {
+    "designator": "SW6",
+    "footprint": "SW_choc_v1_HS_CPG135001S30_1u",
+    "part": "Push"
+   },
+   {
+    "designator": "SW7",
+    "footprint": "SW_choc_v1_HS_CPG135001S30_1u",
+    "part": "Push"
+   },
+   {
+    "designator": "SW12",
+    "footprint": "SW_choc_v1_HS_CPG135001S30_1u",
+    "part": "Push"
+   },
+   {
+    "designator": "SW2",
+    "footprint": "SW_choc_v1_HS_CPG135001S30_1u",
+    "part": "Push"
+   },
+   {
+    "designator": "SW8",
+    "footprint": "SW_choc_v1_HS_CPG135001S30_1u",
+    "part": "Push"
+   },
+   {
+    "designator": "SW4",
+    "footprint": "SW_choc_v1_HS_CPG135001S30_1u",
+    "part": "Push"
+   },
+   {
+    "designator": "SW15",
+    "footprint": "SW_choc_v1_HS_CPG135001S30_1u",
+    "part": "Push"
+   },
+   {
+    "designator": "SW9",
+    "footprint": "SW_choc_v1_HS_CPG135001S30_1u",
+    "part": "Push"
+   },
+   {
+    "designator": "SW3",
+    "footprint": "SW_choc_v1_HS_CPG135001S30_1u",
+    "part": "Push"
+   },
+   {
+    "designator": "SW1",
+    "footprint": "SW_choc_v1_HS_CPG135001S30_1u",
+    "part": "Push"
+   }
+  ]
+ },
+ "tzarc/keyboards\tKobold/R1/Kobold.kicad_pcb": {
+  "bom": "Kobold/R1/jlcpcb/production_files/BOM-Kobold.csv",
+  "column": "comment",
+  "parts": [
+   {
+    "designator": "R10,R13",
+    "footprint": "R_0402_1005Metric",
+    "part": "1k"
+   },
+   {
+    "designator": "U3",
+    "footprint": "WDFN-6_L2.0-W2.0-P0.65-BL-EP-1",
+    "part": "AP2552FDC-7"
+   },
+   {
+    "designator": "C1,C10,C11,C12,C13,C14,C15,C16,C17,C18,C19,C2,C20,C21,C22,C23,C24,C25,C26,C27,C3",
+    "footprint": "C_0402_1005Metric",
+    "part": "100n"
+   },
+   {
+    "designator": "J1",
+    "footprint": "USB_C_Receptacle_HRO_TYPE-C-31-M-12",
+    "part": "TYPE-C-31-M-12"
+   },
+   {
+    "designator": "U5",
+    "footprint": "SOT-23-5_L3.0-W1.7-P0.95-LS2.8-BR",
+    "part": "INA180A4"
+   },
+   {
+    "designator": "D18",
+    "footprint": "D_SOD-323",
+    "part": "1N4148"
+   },
+   {
+    "designator": "R2,R4,R5,R9",
+    "footprint": "R_0603_1608Metric",
+    "part": "75k"
+   },
+   {
+    "designator": "C4,C5,C6,C7,C8,C9",
+    "footprint": "C_0402_1005Metric",
+    "part": "4.7u"
+   },
+   {
+    "designator": "R1,R11,R12,R6,R7,R8",
+    "footprint": "R_0402_1005Metric",
+    "part": "10k"
+   },
+   {
+    "designator": "U1,U11,U13,U15,U16,U2,U9",
+    "footprint": "SOT-553-5_L1.6-W1.2-P0.50-LS1.6-BL",
+    "part": "SN74LVC1G14DRL"
+   },
+   {
+    "designator": "U10,U12,U14",
+    "footprint": "SOT-553-5_L1.6-W1.2-P0.50-LS1.6-BL",
+    "part": "SN74AHC1G08DRL"
+   },
+   {
+    "designator": "D1,D10,D11,D12,D13,D14,D15,D16,D2,D3,D4,D5,D6,D7,D8,D9",
+    "footprint": "LED_choc_6028R",
+    "part": "RGB"
+   },
+   {
+    "designator": "U7",
+    "footprint": "QFN-48-1EP_7x7mm_P0.5mm_EP5.6x5.6mm",
+    "part": "STM32G431CBU6"
+   },
+   {
+    "designator": "U4",
+    "footprint": "SOT-23-3",
+    "part": "XC6206PxxxMR"
+   },
+   {
+    "designator": "D17",
+    "footprint": "D_SOD-882",
+    "part": "H5VL10B"
+   },
+   {
+    "designator": "U6",
+    "footprint": "DFN2510-10_L2.5-W1.0-P0.50-BL",
+    "part": "H5VU25U"
+   },
+   {
+    "designator": "SW17,SW18,SW19",
+    "footprint": "SW-SMD_4P-L3.0-W2.6-P1.80-LS3.4-TL",
+    "part": "BOOT0"
+   },
+   {
+    "designator": "R3",
+    "footprint": "R_1206_3216Metric",
+    "part": "0.05R"
+   },
+   {
+    "designator": "U8",
+    "footprint": "SOIC-8_5.3x5.3mm_P1.27mm",
+    "part": "W25Q128JVSIQ"
+   },
+   {
+    "designator": "SW14",
+    "footprint": "SW_choc_v1_HS_CPG135001S30_1u",
+    "part": "Push"
+   },
+   {
+    "designator": "SW11",
+    "footprint": "SW_choc_v1_HS_CPG135001S30_1u",
+    "part": "Push"
+   },
+   {
+    "designator": "SW13",
+    "footprint": "SW_choc_v1_HS_CPG135001S30_1u",
+    "part": "Push"
+   },
+   {
+    "designator": "SW5",
+    "footprint": "SW_choc_v1_HS_CPG135001S30_1u",
+    "part": "Push"
+   },
+   {
+    "designator": "SW10",
+    "footprint": "SW_choc_v1_HS_CPG135001S30_1u",
+    "part": "Push"
+   },
+   {
+    "designator": "SW16",
+    "footprint": "SW_choc_v1_HS_CPG135001S30_1u",
+    "part": "Push"
+   },
+   {
+    "designator": "SW6",
+    "footprint": "SW_choc_v1_HS_CPG135001S30_1u",
+    "part": "Push"
+   },
+   {
+    "designator": "SW7",
+    "footprint": "SW_choc_v1_HS_CPG135001S30_1u",
+    "part": "Push"
+   },
+   {
+    "designator": "SW12",
+    "footprint": "SW_choc_v1_HS_CPG135001S30_1u",
+    "part": "Push"
+   },
+   {
+    "designator": "SW2",
+    "footprint": "SW_choc_v1_HS_CPG135001S30_1u",
+    "part": "Push"
+   },
+   {
+    "designator": "SW8",
+    "footprint": "SW_choc_v1_HS_CPG135001S30_1u",
+    "part": "Push"
+   },
+   {
+    "designator": "SW4",
+    "footprint": "SW_choc_v1_HS_CPG135001S30_1u",
+    "part": "Push"
+   },
+   {
+    "designator": "SW15",
+    "footprint": "SW_choc_v1_HS_CPG135001S30_1u",
+    "part": "Push"
+   },
+   {
+    "designator": "SW9",
+    "footprint": "SW_choc_v1_HS_CPG135001S30_1u",
+    "part": "Push"
+   },
+   {
+    "designator": "SW3",
+    "footprint": "SW_choc_v1_HS_CPG135001S30_1u",
+    "part": "Push"
+   },
+   {
+    "designator": "SW1",
+    "footprint": "SW_choc_v1_HS_CPG135001S30_1u",
+    "part": "Push"
+   }
+  ]
+ },
+ "westfoxtrot/cyclops_pcb\tcyclops.kicad_pcb": {
+  "bom": "cyclops_bom_.csv",
+  "column": "part",
+  "parts": [
+   {
+    "designator": "C1 C2 C3 C4",
+    "footprint": "C_0805_2012Metric_Pad1.15x1.40mm_HandSolder",
+    "part": "C_Small"
+   },
+   {
+    "designator": "C8",
+    "footprint": "C_0805_2012Metric_Pad1.15x1.40mm_HandSolder",
+    "part": "C_Small"
+   },
+   {
+    "designator": "C6 C7",
+    "footprint": "C_0805_2012Metric_Pad1.15x1.40mm_HandSolder",
+    "part": "C_Small"
+   },
+   {
+    "designator": "C5",
+    "footprint": "C_0805_2012Metric_Pad1.15x1.40mm_HandSolder",
+    "part": "C_Small"
+   },
+   {
+    "designator": "D1 D2 D3 D4 D5 D6 D7 D8 D9 D10 D11 D12 D13 D14 D15 D16 D17 D18 D19 D20 D21 D22 D23 D24 D25 D26 D27 D28 D29 D30 D31 D32 D33 D34 D35 D36 D37 D38 D39 D40 D41 D42 D43 D44 D45 D46 D47 D48 D49 D50 D51 D52 D53 D54 D55 D56 D57 D58 D59 D60 D61 D62 D63 D64 D65 D66 D67",
+    "footprint": "D_0805_2012Metric_Pad1.15x1.40mm_HandSolder",
+    "part": "D"
+   },
+   {
+    "designator": "J1",
+    "footprint": "U-M-M5DD-W-1",
+    "part": "USB_mini_micro_B-keyboard_parts"
+   },
+   {
+    "designator": "R3 R4",
+    "footprint": "R_0805_HandSoldering",
+    "part": "R_Small"
+   },
+   {
+    "designator": "R1 R2",
+    "footprint": "R_0805_HandSoldering",
+    "part": "R"
+   },
+   {
+    "designator": "SW1",
+    "footprint": "SW_SPST_EVPBF",
+    "part": "SW_Push-switches"
+   },
+   {
+    "designator": "U1",
+    "footprint": "TQFP-44_10x10mm_P0.8mm",
+    "part": "ATMEGA32U4-keyboard_parts"
+   },
+   {
+    "designator": "X1",
+    "footprint": "Crystal_SMD_3225-4Pin_3.2x2.5mm",
+    "part": "Crystal_GND24_Small-Device"
+   }
+  ]
+ },
+ "westfoxtrot/cypher_pcb\tcypher.kicad_pcb": {
+  "bom": "bom_jlc.csv",
+  "column": "comment",
+  "parts": [
+   {
+    "designator": "C2",
+    "footprint": "C_0603_1608Metric",
+    "part": "10nf"
+   },
+   {
+    "designator": "C5 C6 C7 C8 C9 C10 C11",
+    "footprint": "C_0603_1608Metric",
+    "part": "100nF"
+   },
+   {
+    "designator": "C1 C4",
+    "footprint": "C_0603_1608Metric",
+    "part": "4.7uF"
+   },
+   {
+    "designator": "C3",
+    "footprint": "C_0603_1608Metric",
+    "part": "10uf"
+   },
+   {
+    "designator": "D4 D5 D6 D7 D8 D9 D10 D11 D12 D13 D14 D15 D16 D17 D18 D19 D20 D21 D22 D23 D24 D25 D26 D27 D28 D29 D30 D31 D32 D33 D34 D35 D36 D37 D38 D39 D40 D41 D42 D43 D44 D45 D46 D47 D48 D49 D50 D51 D52 D53 D54 D55 D56 D57 D58 D59 D60 D61 D62 D63 D64 D65 D66 D67 D68 D69 D70 D71 D72 D73 D74 D75 D76 D77 D78 D79 D80 D81 D82 D83 D84 D85 D86 D87 D88 D89 D90 D92 D93 D94 D95 D96",
+    "footprint": "D_SOD-123",
+    "part": "1N4148"
+   },
+   {
+    "designator": "D91",
+    "footprint": "D_SOD-123",
+    "part": "BAT54T1G"
+   },
+   {
+    "designator": "D1 D2 D3",
+    "footprint": "WS2812-2020",
+    "part": "WS2812B"
+   },
+   {
+    "designator": "F1",
+    "footprint": "Fuse_1206_3216Metric",
+    "part": "ASMD1206-050"
+   },
+   {
+    "designator": "L1",
+    "footprint": "L_1206_3216Metric",
+    "part": "MLB3216-600P4A"
+   },
+   {
+    "designator": "Q1",
+    "footprint": "SOT-23",
+    "part": "BC850"
+   },
+   {
+    "designator": "Q2",
+    "footprint": "SOT-23",
+    "part": "MMBT3904"
+   },
+   {
+    "designator": "R3 R4 R6 R7 R9 R10 R11 R12 R13 R14 R15 R16 R17 R18 R19 R20 R21 R22 R23 R24 R25 R26 R27 R29 R30 R31 R32 R33 R34 R35 R36 R37 R38 R39 R40 R41 R42 R43 R44 R45 R46 R47 R48 R49 R50 R51 R52 R53 R54 R55 R56 R57 R58 R59 R60 R61 R62 R63 R64 R65 R66 R67 R68 R69 R70 R71 R72 R73 R74 R75 R76 R77 R78 R79 R80 R81 R82 R83 R84 R85 R86 R87 R88 R89 R90 R91 R92 R93 R94 R95 R97 R99",
+    "footprint": "R_0603_1608Metric",
+    "part": "470"
+   },
+   {
+    "designator": "R1 R5",
+    "footprint": "R_0603_1608Metric",
+    "part": "1.5k"
+   },
+   {
+    "designator": "R28 R96",
+    "footprint": "R_0603_1608Metric",
+    "part": "5.1K"
+   },
+   {
+    "designator": "R8",
+    "footprint": "R_0603_1608Metric",
+    "part": "10k"
+   },
+   {
+    "designator": "R2",
+    "footprint": "R_0603_1608Metric",
+    "part": "30k"
+   },
+   {
+    "designator": "SP1",
+    "footprint": "SGP1610N2",
+    "part": "UCLAMP0571P.TNT"
+   },
+   {
+    "designator": "U3",
+    "footprint": "TSOT-23-5",
+    "part": "LD3985G33R_TSOT23"
+   },
+   {
+    "designator": "U1",
+    "footprint": "LQFP-48_7x7mm_P0.5mm",
+    "part": "STM32F072CBTx"
+   },
+   {
+    "designator": "U4",
+    "footprint": "SOT-23-6",
+    "part": "TXS0101DBV"
+   },
+   {
+    "designator": "U2",
+    "footprint": "SOT-666",
+    "part": "USBLC6-2P6"
+   },
+   {
+    "designator": "USB1",
+    "footprint": "HRO-TYPE-C-31-M-12",
+    "part": "HRO-TYPE-C-31-M-12"
+   }
+  ]
+ },
+ "zykrah/fuyu\tfuyu.kicad_pcb": {
+  "bom": "jlcpcb/assembly/BOM-fuyu.csv",
+  "column": "comment",
+  "parts": [
+   {
+    "designator": "R4,R5",
+    "footprint": "R_0402_1005Metric",
+    "part": "1k"
+   },
+   {
+    "designator": "C10,C11,C12,C17,C18,C19,C2,C20,C21,C22,C23,C24,C25,C26,C27,C28,C29,C3,C30,C31,C32,C33,C34,C35,C36,C37,C38,C39,C40,C41,C42,C43,C44,C45,C46,C47,C48,C49,C50,C51,C52,C53,C54,C55,C56,C57,C58,C6,C7,C8,C9",
+    "footprint": "C_0402_1005Metric",
+    "part": "100nF"
+   },
+   {
+    "designator": "C4",
+    "footprint": "C_0402_1005Metric",
+    "part": "10uF"
+   },
+   {
+    "designator": "C15,C16",
+    "footprint": "C_0402_1005Metric",
+    "part": "22pF"
+   },
+   {
+    "designator": "U2",
+    "footprint": "RP2040-QFN-56",
+    "part": "RP2040"
+   },
+   {
+    "designator": "R2,R3",
+    "footprint": "R_0603_1608Metric",
+    "part": "27R"
+   },
+   {
+    "designator": "R1",
+    "footprint": "R_0402_1005Metric",
+    "part": "10k"
+   },
+   {
+    "designator": "R6,R7",
+    "footprint": "R_0402_1005Metric",
+    "part": "5.1k"
+   },
+   {
+    "designator": "C1,C13,C14,C5",
+    "footprint": "C_0402_1005Metric",
+    "part": "1uF"
+   },
+   {
+    "designator": "U1",
+    "footprint": "SOT-23",
+    "part": "XC6206"
+   },
+   {
+    "designator": "F1",
+    "footprint": "Fuse_1206_3216Metric",
+    "part": "500mA"
+   },
+   {
+    "designator": "U5",
+    "footprint": "SOT-23-5",
+    "part": "74AHCT1G125"
+   },
+   {
+    "designator": "D1,D10,D11,D12,D13,D14,D15,D16,D17,D18,D19,D2,D20,D21,D22,D23,D24,D25,D26,D27,D28,D29,D3,D30,D31,D32,D33,D34,D35,D36,D37,D38,D39,D4,D40,D41,D42,D43,D44,D45,D46,D47,D48,D49,D5,D50,D51,D52,D53,D54,D55,D56,D57,D58,D59,D6,D60,D61,D62,D63,D64,D65,D66,D67,D68,D69,D7,D70,D71,D72,D73,D74,D75,D76,D77,D78,D79,D8,D80,D81,D82,D83,D84,D85,D86,D87,D88,D89,D9,D90,D91,D92,D93,D94,D95",
+    "footprint": "D_SOD-123",
+    "part": "D"
+   },
+   {
+    "designator": "U3",
+    "footprint": "SOT-23-6-routable",
+    "part": "SRV05-4"
+   },
+   {
+    "designator": "Y1",
+    "footprint": "Crystal_SMD_3225-4Pin_3.2x2.5mm",
+    "part": "12MHz"
+   },
+   {
+    "designator": "D100,D101,D102,D103,D104,D105,D106,D107,D108,D109,D110,D111,D112,D113,D114,D115,D116,D117,D118,D119,D120,D121,D122,D123,D124,D125,D126,D127,D128,D129,D130,D131,D132,D133",
+    "footprint": "LED_WS2812_2020",
+    "part": "WS2812_2020"
+   },
+   {
+    "designator": "U4",
+    "footprint": "SOIC-8_5.23x5.23mm_P1.27mm",
+    "part": "W25Q128JVS"
+   },
+   {
+    "designator": "LED3",
+    "footprint": "LED_6028R",
+    "part": "SK6812MINI-E"
+   },
+   {
+    "designator": "SW97",
+    "footprint": "SW_MX_1u",
+    "part": "?"
+   },
+   {
+    "designator": "SW66",
+    "footprint": "SW_MX_1u",
+    "part": "?"
+   },
+   {
+    "designator": "SW104",
+    "footprint": "SW_MX_1.5u",
+    "part": "?"
+   },
+   {
+    "designator": "SW87",
+    "footprint": "SW_MX_1u",
+    "part": "?"
+   },
+   {
+    "designator": "SW28",
+    "footprint": "SW_MX_1u",
+    "part": "?"
+   },
+   {
+    "designator": "SW41",
+    "footprint": "SW_MX_1u",
+    "part": "?"
+   },
+   {
+    "designator": "SW2",
+    "footprint": "SW_MX_1u",
+    "part": "?"
+   },
+   {
+    "designator": "SW10",
+    "footprint": "SW_MX_1u",
+    "part": "?"
+   },
+   {
+    "designator": "SW27",
+    "footprint": "SW_MX_1u",
+    "part": "?"
+   },
+   {
+    "designator": "SW34",
+    "footprint": "SW_MX_1u",
+    "part": "?"
+   },
+   {
+    "designator": "SW35",
+    "footprint": "SW_MX_1u",
+    "part": "?"
+   },
+   {
+    "designator": "SW11",
+    "footprint": "SW_MX_1u",
+    "part": "?"
+   },
+   {
+    "designator": "SW58",
+    "footprint": "SW_MX_1u",
+    "part": "?"
+   },
+   {
+    "designator": "SW73",
+    "footprint": "SW_MX_1u",
+    "part": "?"
+   },
+   {
+    "designator": "SW8",
+    "footprint": "SW_MX_1u",
+    "part": "?"
+   },
+   {
+    "designator": "SW68",
+    "footprint": "SW_MX_1u",
+    "part": "?"
+   },
+   {
+    "designator": "SW88",
+    "footprint": "SW_MX_1u",
+    "part": "?"
+   },
+   {
+    "designator": "SW47",
+    "footprint": "SW_MX_1u",
+    "part": "?"
+   },
+   {
+    "designator": "SW39",
+    "footprint": "SW_MX_1u",
+    "part": "?"
+   },
+   {
+    "designator": "SW16",
+    "footprint": "SW_MX_1u",
+    "part": "?"
+   },
+   {
+    "designator": "SW6",
+    "footprint": "SW_MX_1u",
+    "part": "?"
+   },
+   {
+    "designator": "SW25",
+    "footprint": "SW_MX_1u",
+    "part": "?"
+   },
+   {
+    "designator": "SW29",
+    "footprint": "SW_MX_1u",
+    "part": "?"
+   },
+   {
+    "designator": "SW99",
+    "footprint": "SW_MX_1.25u",
+    "part": "?"
+   },
+   {
+    "designator": "SW13",
+    "footprint": "SW_MX_1u",
+    "part": "?"
+   },
+   {
+    "designator": "SW63",
+    "footprint": "SW_MX_1u",
+    "part": "?"
+   },
+   {
+    "designator": "S3",
+    "footprint": "STAB_MX_2.25u",
+    "part": "ANSI_ENTER"
+   },
+   {
+    "designator": "SW101",
+    "footprint": "SW_MX_1.25u",
+    "part": "?"
+   },
+   {
+    "designator": "LED4",
+    "footprint": "LED_6028R",
+    "part": "SK6812MINI-E"
+   },
+   {
+    "designator": "SW23",
+    "footprint": "SW_MX_1u",
+    "part": "?"
+   },
+   {
+    "designator": "SW89",
+    "footprint": "SW_MX_1u",
+    "part": "?"
+   },
+   {
+    "designator": "SW94",
+    "footprint": "SW_MX_1u",
+    "part": "?"
+   },
+   {
+    "designator": "SW76",
+    "footprint": "SW_MX_1u",
+    "part": "?"
+   },
+   {
+    "designator": "SW51",
+    "footprint": "SW_MX_1u",
+    "part": "?"
+   },
+   {
+    "designator": "SW59",
+    "footprint": "SW_MX_1u",
+    "part": "?"
+   },
+   {
+    "designator": "SW36",
+    "footprint": "SW_MX_1.5u",
+    "part": "?"
+   },
+   {
+    "designator": "SW60",
+    "footprint": "SW_MX_1u",
+    "part": "?"
+   },
+   {
+    "designator": "SW72",
+    "footprint": "SW_MX_1.25u",
+    "part": "?"
+   },
+   {
+    "designator": "S6",
+    "footprint": "STAB_MX_6.25u",
+    "part": "6.25U_SPACE"
+   },
+   {
+    "designator": "SW33",
+    "footprint": "SW_MX_1u",
+    "part": "?"
+   },
+   {
+    "designator": "SW30",
+    "footprint": "SW_MX_1u",
+    "part": "?"
+   },
+   {
+    "designator": "SW42",
+    "footprint": "SW_MX_1u",
+    "part": "?"
+   },
+   {
+    "designator": "SW4",
+    "footprint": "SW_MX_1u",
+    "part": "?"
+   },
+   {
+    "designator": "SW69",
+    "footprint": "SW_MX_1u",
+    "part": "?"
+   },
+   {
+    "designator": "SW98",
+    "footprint": "SW_MX_1u",
+    "part": "?"
+   },
+   {
+    "designator": "SW74",
+    "footprint": "SW_MX_1u",
+    "part": "?"
+   },
+   {
+    "designator": "SW82",
+    "footprint": "SW_MX_1u",
+    "part": "?"
+   },
+   {
+    "designator": "SW100",
+    "footprint": "SW_MX_1.5u",
+    "part": "?"
+   },
+   {
+    "designator": "SW48",
+    "footprint": "SW_MX_1u",
+    "part": "?"
+   },
+   {
+    "designator": "SW91",
+    "footprint": "SW_MX_1.25u",
+    "part": "?"
+   },
+   {
+    "designator": "SW56",
+    "footprint": "SW_MX_1u",
+    "part": "?"
+   },
+   {
+    "designator": "SW75",
+    "footprint": "SW_MX_1u",
+    "part": "?"
+   },
+   {
+    "designator": "SW31",
+    "footprint": "SW_MX_1u",
+    "part": "?"
+   },
+   {
+    "designator": "SW80",
+    "footprint": "SW_MX_1u",
+    "part": "?"
+   },
+   {
+    "designator": "SW54",
+    "footprint": "SW_MX_1.75u_stp",
+    "part": "?"
+   },
+   {
+    "designator": "SW64",
+    "footprint": "SW_MX_1u",
+    "part": "?"
+   },
+   {
+    "designator": "SW21",
+    "footprint": "SW_MX_1u",
+    "part": "?"
+   },
+   {
+    "designator": "S1",
+    "footprint": "STAB_MX_2u",
+    "part": "BACKSPACE"
+   },
+   {
+    "designator": "SW3",
+    "footprint": "SW_MX_1u",
+    "part": "?"
+   },
+   {
+    "designator": "SW84",
+    "footprint": "SW_MX_1u",
+    "part": "?"
+   },
+   {
+    "designator": "LED5",
+    "footprint": "LED_6028R",
+    "part": "SK6812MINI-E"
+   },
+   {
+    "designator": "SW44",
+    "footprint": "SW_MX_1u",
+    "part": "?"
+   },
+   {
+    "designator": "SW78",
+    "footprint": "SW_MX_1u",
+    "part": "?"
+   },
+   {
+    "designator": "SW15",
+    "footprint": "SW_MX_1u",
+    "part": "?"
+   },
+   {
+    "designator": "SW106",
+    "footprint": "SW_MX_1u",
+    "part": "?"
+   },
+   {
+    "designator": "LED7",
+    "footprint": "LED_6028R",
+    "part": "SK6812MINI-E"
+   },
+   {
+    "designator": "SW57",
+    "footprint": "SW_MX_1u",
+    "part": "?"
+   },
+   {
+    "designator": "SW79",
+    "footprint": "SW_MX_1u",
+    "part": "?"
+   },
+   {
+    "designator": "SW46",
+    "footprint": "SW_MX_1u",
+    "part": "?"
+   },
+   {
+    "designator": "SW24",
+    "footprint": "SW_MX_1u",
+    "part": "?"
+   },
+   {
+    "designator": "SW43",
+    "footprint": "SW_MX_1u",
+    "part": "?"
+   },
+   {
+    "designator": "SW12",
+    "footprint": "SW_MX_1u",
+    "part": "?"
+   },
+   {
+    "designator": "SW77",
+    "footprint": "SW_MX_1u",
+    "part": "?"
+   },
+   {
+    "designator": "SW83",
+    "footprint": "SW_MX_1u",
+    "part": "?"
+   },
+   {
+    "designator": "SW61",
+    "footprint": "SW_MX_1u",
+    "part": "?"
+   },
+   {
+    "designator": "SW50",
+    "footprint": "SW_MX_1u",
+    "part": "?"
+   },
+   {
+    "designator": "SW45",
+    "footprint": "SW_MX_1u",
+    "part": "?"
+   },
+   {
+    "designator": "SW22",
+    "footprint": "SW_MX_1u",
+    "part": "?"
+   },
+   {
+    "designator": "SW103",
+    "footprint": "SW_MX_1.25u",
+    "part": "?"
+   },
+   {
+    "designator": "SW53",
+    "footprint": "SW_MX_1u",
+    "part": "?"
+   },
+   {
+    "designator": "SW37",
+    "footprint": "SW_MX_1u",
+    "part": "?"
+   },
+   {
+    "designator": "SW20",
+    "footprint": "SW_MX_1u",
+    "part": "?"
+   },
+   {
+    "designator": "SW14",
+    "footprint": "SW_MX_1u",
+    "part": "?"
+   },
+   {
+    "designator": "LED1",
+    "footprint": "LED_6028R",
+    "part": "SK6812MINI-E"
+   },
+   {
+    "designator": "SW81",
+    "footprint": "SW_MX_1u",
+    "part": "?"
+   },
+   {
+    "designator": "S5",
+    "footprint": "STAB_MX_2.75u",
+    "part": "RSHIFT"
+   },
+   {
+    "designator": "SW7",
+    "footprint": "SW_MX_1u",
+    "part": "?"
+   },
+   {
+    "designator": "SW70",
+    "footprint": "SW_MX_1u",
+    "part": "?"
+   },
+   {
+    "designator": "SW18",
+    "footprint": "SW_MX_1u",
+    "part": "?"
+   },
+   {
+    "designator": "SW5",
+    "footprint": "SW_MX_1u",
+    "part": "?"
+   },
+   {
+    "designator": "SW49",
+    "footprint": "SW_MX_1.5u",
+    "part": "?"
+   },
+   {
+    "designator": "SW1",
+    "footprint": "SW_MX_1u",
+    "part": "?"
+   },
+   {
+    "designator": "SW62",
+    "footprint": "SW_MX_1u",
+    "part": "?"
+   },
+   {
+    "designator": "SW9",
+    "footprint": "SW_MX_1u",
+    "part": "?"
+   },
+   {
+    "designator": "SW67",
+    "footprint": "SW_MX_1u",
+    "part": "?"
+   },
+   {
+    "designator": "J1",
+    "footprint": "USB_C_Receptacle_HRO_TYPE-C-31-M-12",
+    "part": "USB_C"
+   },
+   {
+    "designator": "SW71",
+    "footprint": "SW_MX_1u",
+    "part": "?"
+   },
+   {
+    "designator": "SW32",
+    "footprint": "SW_MX_1u",
+    "part": "?"
+   },
+   {
+    "designator": "SW95",
+    "footprint": "SW_MX_1.25u",
+    "part": "?"
+   },
+   {
+    "designator": "SW105",
+    "footprint": "SW_MX_1.25u",
+    "part": "?"
+   },
+   {
+    "designator": "SW65",
+    "footprint": "SW_MX_1u",
+    "part": "?"
+   },
+   {
+    "designator": "SW90",
+    "footprint": "SW_MX_1u",
+    "part": "?"
+   },
+   {
+    "designator": "SW55",
+    "footprint": "SW_MX_1.75u",
+    "part": "?"
+   },
+   {
+    "designator": "S2",
+    "footprint": "STAB_MX_ISO_FLIPPED",
+    "part": "ISO_ENTER"
+   },
+   {
+    "designator": "SW85",
+    "footprint": "SW_MX_1.75u",
+    "part": "?"
+   },
+   {
+    "designator": "SW38",
+    "footprint": "SW_MX_1u",
+    "part": "?"
+   },
+   {
+    "designator": "SW92",
+    "footprint": "SW_MX_1.5u",
+    "part": "?"
+   },
+   {
+    "designator": "SW19",
+    "footprint": "SW_MX_1u",
+    "part": "?"
+   },
+   {
+    "designator": "SW17",
+    "footprint": "SW_MX_1u",
+    "part": "?"
+   },
+   {
+    "designator": "SW93",
+    "footprint": "SW_MX_1.25u",
+    "part": "?"
+   },
+   {
+    "designator": "SW102",
+    "footprint": "SW_MX_1u",
+    "part": "?"
+   },
+   {
+    "designator": "SW96",
+    "footprint": "SW_MX_1.5u",
+    "part": "?"
+   },
+   {
+    "designator": "LED2",
+    "footprint": "LED_6028R",
+    "part": "SK6812MINI-E"
+   },
+   {
+    "designator": "SW52",
+    "footprint": "SW_MX_1u",
+    "part": "?"
+   },
+   {
+    "designator": "SW26",
+    "footprint": "SW_MX_1u",
+    "part": "?"
+   },
+   {
+    "designator": "SW40",
+    "footprint": "SW_MX_1u",
+    "part": "?"
+   },
+   {
+    "designator": "LED6",
+    "footprint": "LED_6028R",
+    "part": "SK6812MINI-E"
+   },
+   {
+    "designator": "SW86",
+    "footprint": "SW_MX_1u",
+    "part": "?"
+   },
+   {
+    "designator": "S4",
+    "footprint": "STAB_MX_2.25u",
+    "part": "LSHIFT"
+   },
+   {
+    "designator": "S7",
+    "footprint": "STAB_MX_7u",
+    "part": "7U_SPACE"
+   },
+   {
+    "designator": "SW108",
+    "footprint": "SW_MX_1u",
+    "part": "?"
+   },
+   {
+    "designator": "SW107",
+    "footprint": "SW_MX_1u",
+    "part": "?"
+   }
+  ]
+ },
+ "zykrah/slime88\tslime88.kicad_pcb": {
+  "bom": "manufacturing/assembly/ISO/ISO_BOM-slime88.csv",
+  "column": "comment",
+  "parts": [
+   {
+    "designator": "R4,R5",
+    "footprint": "R_0402_1005Metric",
+    "part": "1k"
+   },
+   {
+    "designator": "J3",
+    "footprint": "JST_SH_SM04B-SRSS-TB_1x04-1MP_P1.00mm_Horizontal",
+    "part": "JST-SH-4P"
+   },
+   {
+    "designator": "C10,C11,C12,C17,C2,C3,C6,C7,C8,C9",
+    "footprint": "C_0402_1005Metric",
+    "part": "100nF"
+   },
+   {
+    "designator": "C4",
+    "footprint": "C_0402_1005Metric",
+    "part": "10uF"
+   },
+   {
+    "designator": "C15,C16",
+    "footprint": "C_0402_1005Metric",
+    "part": "22pF"
+   },
+   {
+    "designator": "J1",
+    "footprint": "USB_C_Receptacle_HRO_TYPE-C-31-M-12",
+    "part": "USB_C"
+   },
+   {
+    "designator": "U2",
+    "footprint": "RP2040-QFN-56",
+    "part": "RP2040"
+   },
+   {
+    "designator": "R2,R3",
+    "footprint": "R_0603_1608Metric",
+    "part": "27R"
+   },
+   {
+    "designator": "R1",
+    "footprint": "R_0402_1005Metric",
+    "part": "10k"
+   },
+   {
+    "designator": "R6,R7",
+    "footprint": "R_0402_1005Metric",
+    "part": "5.1k"
+   },
+   {
+    "designator": "SW1,SW10,SW100,SW101,SW102,SW103,SW104,SW11,SW12,SW13,SW14,SW15,SW16,SW17,SW18,SW19,SW2,SW20,SW21,SW22,SW23,SW24,SW25,SW26,SW27,SW28,SW29,SW3,SW30,SW31,SW32,SW33,SW34,SW35,SW36,SW37,SW38,SW39,SW4,SW40,SW41,SW42,SW43,SW44,SW45,SW46,SW47,SW48,SW49,SW5,SW51,SW52,SW53,SW54,SW55,SW56,SW57,SW58,SW59,SW6,SW60,SW61,SW62,SW63,SW64,SW65,SW66,SW67,SW68,SW7,SW70,SW71,SW72,SW73,SW74,SW75,SW76,SW77,SW78,SW79,SW8,SW80,SW81,SW82,SW83,SW84,SW85,SW86,SW87,SW88,SW89,SW9,SW90,SW91,SW92,SW93,SW94,SW95,SW96,SW97,SW98,SW99",
+    "footprint": "SW_MX_HS_1u",
+    "part": "?"
+   },
+   {
+    "designator": "C1,C13,C14,C5",
+    "footprint": "C_0402_1005Metric",
+    "part": "1uF"
+   },
+   {
+    "designator": "U1",
+    "footprint": "SOT-23",
+    "part": "XC6206"
+   },
+   {
+    "designator": "F1",
+    "footprint": "Fuse_1206_3216Metric",
+    "part": "500mA"
+   },
+   {
+    "designator": "D1,D10,D11,D12,D13,D14,D15,D16,D17,D18,D19,D2,D20,D21,D22,D23,D24,D25,D26,D27,D28,D29,D3,D30,D31,D32,D33,D34,D35,D36,D37,D38,D39,D4,D40,D41,D42,D43,D44,D45,D46,D47,D48,D49,D5,D50,D51,D52,D53,D54,D55,D56,D57,D58,D59,D6,D60,D61,D62,D63,D64,D65,D66,D67,D68,D69,D7,D70,D71,D72,D73,D74,D75,D76,D77,D78,D79,D8,D80,D81,D82,D83,D84,D85,D86,D87,D88,D89,D9,D90,D91",
+    "footprint": "D_SOD-123",
+    "part": "D"
+   },
+   {
+    "designator": "U3",
+    "footprint": "SOT-23-6-routable",
+    "part": "SRV05-4"
+   },
+   {
+    "designator": "Y1",
+    "footprint": "Crystal_SMD_3225-4Pin_3.2x2.5mm",
+    "part": "12MHz"
+   },
+   {
+    "designator": "U4",
+    "footprint": "SOIC-8_5.23x5.23mm_P1.27mm",
+    "part": "W25Q128JVS"
+   }
+  ]
+ }
+}

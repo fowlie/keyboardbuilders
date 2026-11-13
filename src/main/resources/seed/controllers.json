@@ -1,0 +1,519 @@
+[
+ {
+  "name": "Pro Micro (ATmega32U4)",
+  "slug": "pro-micro",
+  "footprint": "pro_micro",
+  "usb": [
+   "micro_b",
+   "usb_c"
+  ],
+  "wireless": false,
+  "mcu_family": "avr8",
+  "firmware": [
+   "qmk"
+  ],
+  "url": "https://www.sparkfun.com/products/12640"
+ },
+ {
+  "name": "nice!nano v2",
+  "slug": "nice-nano-v2",
+  "footprint": "pro_micro",
+  "usb": [
+   "usb_c"
+  ],
+  "wireless": true,
+  "mcu_family": "nrf52",
+  "firmware": [
+   "zmk",
+   "kmk"
+  ],
+  "url": "https://nicekeyboards.com/nice-nano"
+ },
+ {
+  "name": "nice!nano v1",
+  "slug": "nice-nano-v1",
+  "footprint": "pro_micro",
+  "usb": [
+   "usb_c"
+  ],
+  "wireless": true,
+  "mcu_family": "nrf52",
+  "firmware": [
+   "zmk",
+   "kmk"
+  ],
+  "url": "https://nicekeyboards.com/nice-nano"
+ },
+ {
+  "name": "nRFMicro (nRF52840, rev 1.1-1.4)",
+  "slug": "nrfmicro-nrf52840",
+  "footprint": "pro_micro",
+  "usb": [
+   "usb_c",
+   "micro_b"
+  ],
+  "wireless": true,
+  "mcu_family": "nrf52",
+  "firmware": [
+   "zmk"
+  ],
+  "url": "https://github.com/joric/nrfmicro/wiki/Pinout"
+ },
+ {
+  "name": "nRFMicro (nRF52833)",
+  "slug": "nrfmicro-nrf52833",
+  "footprint": "pro_micro",
+  "usb": [
+   "usb_c"
+  ],
+  "wireless": true,
+  "mcu_family": "nrf52",
+  "firmware": [
+   "zmk"
+  ],
+  "url": "https://github.com/zmkfirmware/zmk/blob/main/app/boards/joric/nrfmicro/nrfmicro_nrf52833.zmk.yml"
+ },
+ {
+  "name": "Puchi-BLE V1",
+  "slug": "puchi-ble-v1",
+  "footprint": "pro_micro",
+  "usb": [
+   "usb_c"
+  ],
+  "wireless": true,
+  "mcu_family": "nrf52",
+  "firmware": [
+   "zmk"
+  ],
+  "url": "https://github.com/zmkfirmware/zmk/blob/main/app/boards/keycapsss/puchi_ble/puchi_ble.zmk.yml"
+ },
+ {
+  "name": "Mikoto",
+  "slug": "mikoto",
+  "footprint": "pro_micro",
+  "usb": [
+   "usb_c"
+  ],
+  "wireless": true,
+  "mcu_family": "nrf52",
+  "firmware": [
+   "zmk"
+  ],
+  "url": "https://github.com/zmkfirmware/zmk/blob/main/app/boards/zhiayang/mikoto/mikoto.zmk.yml"
+ },
+ {
+  "name": "BlueMicro840 v1",
+  "slug": "bluemicro840-v1",
+  "footprint": "pro_micro",
+  "usb": [
+   "usb_c"
+  ],
+  "wireless": true,
+  "mcu_family": "nrf52",
+  "firmware": [
+   "zmk",
+   "bluemicro"
+  ],
+  "url": "https://bluemicro.jpconstantineau.com"
+ },
+ {
+  "name": "Elite-Pi",
+  "slug": "elite-pi",
+  "footprint": "pro_micro",
+  "usb": [
+   "usb_c"
+  ],
+  "wireless": false,
+  "mcu_family": "rp2040",
+  "firmware": [
+   "qmk",
+   "kmk"
+  ],
+  "url": "https://github.com/keebio/keebio-docs/blob/master/docs/elite-pi-guide.md"
+ },
+ {
+  "name": "Liatris",
+  "slug": "liatris",
+  "footprint": "pro_micro",
+  "usb": [
+   "usb_c"
+  ],
+  "wireless": false,
+  "mcu_family": "rp2040",
+  "firmware": [
+   "qmk"
+  ],
+  "url": "https://docs.splitkb.com/product-guides/liatris/pinout"
+ },
+ {
+  "name": "0xCB Helios",
+  "slug": "0xcb-helios",
+  "footprint": "pro_micro",
+  "usb": [
+   "usb_c"
+  ],
+  "wireless": false,
+  "mcu_family": "rp2040",
+  "firmware": [
+   "qmk"
+  ],
+  "url": "https://github.com/0xCB-dev/0xCB-Helios"
+ },
+ {
+  "name": "Blok",
+  "slug": "blok",
+  "footprint": "pro_micro",
+  "usb": [
+   "usb_c"
+  ],
+  "wireless": false,
+  "mcu_family": "rp2040",
+  "firmware": [
+   "qmk",
+   "zmk"
+  ],
+  "url": "https://github.com/zmkfirmware/zmk/blob/main/app/boards/boardsource/blok/boardsource_blok.zmk.yml"
+ },
+ {
+  "name": "SparkFun Pro Micro RP2040",
+  "slug": "sparkfun-pro-micro-rp2040",
+  "footprint": "pro_micro",
+  "usb": [
+   "usb_c"
+  ],
+  "wireless": false,
+  "mcu_family": "rp2040",
+  "firmware": [
+   "qmk",
+   "zmk"
+  ],
+  "url": "https://github.com/zephyrproject-rtos/zephyr/blob/main/boards/sparkfun/pro_micro_rp2040/sparkfun_pro_micro_connector.dtsi"
+ },
+ {
+  "name": "Adafruit KB2040",
+  "slug": "adafruit-kb2040",
+  "footprint": "pro_micro",
+  "usb": [
+   "usb_c"
+  ],
+  "wireless": false,
+  "mcu_family": "rp2040",
+  "firmware": [
+   "qmk",
+   "zmk"
+  ],
+  "url": "https://github.com/zmkfirmware/zmk/blob/main/app/boards/adafruit/kb2040/adafruit_kb2040.zmk.yml"
+ },
+ {
+  "name": "Bit-C PRO",
+  "slug": "bit-c-pro",
+  "footprint": "pro_micro",
+  "usb": [
+   "usb_c"
+  ],
+  "wireless": false,
+  "mcu_family": "rp2040",
+  "firmware": [
+   "qmk"
+  ],
+  "url": "https://github.com/qmk/qmk_firmware/blob/master/platforms/chibios/converters/promicro_to_bit_c_pro/_pin_defs.h"
+ },
+ {
+  "name": "Stemcell",
+  "slug": "stemcell",
+  "footprint": "pro_micro",
+  "usb": [
+   "usb_c"
+  ],
+  "wireless": false,
+  "mcu_family": "stm32",
+  "firmware": [
+   "qmk"
+  ]
+ },
+ {
+  "name": "RP2040-CE",
+  "slug": "rp2040-ce",
+  "footprint": "pro_micro",
+  "wireless": false,
+  "mcu_family": "rp2040",
+  "firmware": [
+   "qmk"
+  ],
+  "url": "https://github.com/qmk/qmk_firmware/blob/master/platforms/chibios/converters/elite_c_to_rp2040_ce/_pin_defs.h"
+ },
+ {
+  "name": "Michi",
+  "slug": "michi",
+  "footprint": "pro_micro",
+  "usb": [
+   "usb_c"
+  ],
+  "wireless": false,
+  "mcu_family": "unknown",
+  "firmware": [
+   "qmk"
+  ]
+ },
+ {
+  "name": "Imera",
+  "slug": "imera",
+  "footprint": "pro_micro",
+  "wireless": false,
+  "mcu_family": "unknown",
+  "firmware": [
+   "qmk"
+  ]
+ },
+ {
+  "name": "Svlinky",
+  "slug": "svlinky",
+  "footprint": "pro_micro",
+  "usb": [
+   "usb_c"
+  ],
+  "wireless": false,
+  "mcu_family": "unknown",
+  "firmware": [
+   "qmk"
+  ]
+ },
+ {
+  "name": "Bonsai C4",
+  "slug": "bonsai-c4",
+  "footprint": "pro_micro",
+  "usb": [
+   "usb_c"
+  ],
+  "wireless": false,
+  "mcu_family": "unknown",
+  "firmware": [
+   "qmk"
+  ]
+ },
+ {
+  "name": "Bonsai C3",
+  "slug": "bonsai-c3",
+  "footprint": "pro_micro",
+  "usb": [
+   "usb_c"
+  ],
+  "wireless": false,
+  "mcu_family": "unknown",
+  "firmware": [
+   "qmk"
+  ]
+ },
+ {
+  "name": "Sea-Picro EXT",
+  "slug": "sea-picro-ext",
+  "footprint": "pro_micro",
+  "usb": [
+   "usb_c"
+  ],
+  "wireless": false,
+  "mcu_family": "rp2040",
+  "firmware": [
+   "qmk"
+  ],
+  "url": "https://github.com/joshajohnson/sea-picro"
+ },
+ {
+  "name": "Sea-Picro RST",
+  "slug": "sea-picro-rst",
+  "footprint": "pro_micro",
+  "usb": [
+   "usb_c"
+  ],
+  "wireless": false,
+  "mcu_family": "rp2040",
+  "firmware": [
+   "qmk"
+  ],
+  "url": "https://github.com/joshajohnson/sea-picro"
+ },
+ {
+  "name": "Splinky (0xB2)",
+  "slug": "splinky-0xb2",
+  "footprint": "pro_micro",
+  "usb": [
+   "usb_c"
+  ],
+  "wireless": false,
+  "mcu_family": "rp2040",
+  "firmware": [
+   "qmk"
+  ],
+  "url": "https://github.com/Bastardkb/Splinky"
+ },
+ {
+  "name": "RP Micro",
+  "slug": "rp-micro",
+  "footprint": "pro_micro",
+  "usb": [
+   "usb_c"
+  ],
+  "wireless": false,
+  "mcu_family": "rp2040",
+  "firmware": [
+   "qmk"
+  ],
+  "url": "https://github.com/siderakb/rp-micro"
+ },
+ {
+  "name": "QMK Proton C",
+  "slug": "qmk-proton-c",
+  "footprint": "pro_micro",
+  "usb": [
+   "usb_c"
+  ],
+  "wireless": false,
+  "mcu_family": "stm32",
+  "firmware": [
+   "qmk",
+   "zmk"
+  ],
+  "url": "https://github.com/zmkfirmware/zmk/blob/main/app/boards/qmk/proton_c/proton_c.zmk.yml"
+ },
+ {
+  "name": "Seeed XIAO nRF52840 (XIAO BLE)",
+  "slug": "seeed-xiao-ble",
+  "footprint": "seeed_xiao",
+  "usb": [
+   "usb_c"
+  ],
+  "wireless": true,
+  "mcu_family": "nrf52",
+  "firmware": [
+   "zmk"
+  ],
+  "url": "https://github.com/zmkfirmware/zmk/blob/main/app/boards/seeed/xiao_ble/xiao_ble.zmk.yml"
+ },
+ {
+  "name": "Seeed XIAO RP2040",
+  "slug": "seeed-xiao-rp2040",
+  "footprint": "seeed_xiao",
+  "usb": [
+   "usb_c"
+  ],
+  "wireless": false,
+  "mcu_family": "rp2040",
+  "firmware": [
+   "qmk",
+   "zmk"
+  ],
+  "url": "https://github.com/zmkfirmware/zmk/blob/main/app/boards/seeed/xiao_rp2040/xiao_rp2040.zmk.yml"
+ },
+ {
+  "name": "Seeeduino XIAO",
+  "slug": "seeeduino-xiao",
+  "footprint": "seeed_xiao",
+  "usb": [
+   "usb_c"
+  ],
+  "wireless": false,
+  "mcu_family": "samd21",
+  "firmware": [
+   "zmk"
+  ],
+  "url": "https://github.com/zmkfirmware/zmk/blob/main/app/boards/seeed/seeeduino_xiao/seeeduino_xiao.zmk.yml"
+ },
+ {
+  "name": "Adafruit QT Py RP2040",
+  "slug": "adafruit-qt-py-rp2040",
+  "footprint": "seeed_xiao",
+  "usb": [
+   "usb_c"
+  ],
+  "wireless": false,
+  "mcu_family": "rp2040",
+  "firmware": [
+   "qmk",
+   "zmk"
+  ],
+  "url": "https://github.com/zmkfirmware/zmk/blob/main/app/boards/adafruit/qt_py_rp2040/adafruit_qt_py_rp2040.zmk.yml"
+ },
+ {
+  "name": "Raspberry Pi Pico",
+  "slug": "raspberry-pi-pico",
+  "footprint": "rpi_pico",
+  "usb": [
+   "micro_b"
+  ],
+  "wireless": false,
+  "mcu_family": "rp2040",
+  "firmware": [
+   "qmk",
+   "zmk"
+  ],
+  "url": "https://github.com/zmkfirmware/zmk/blob/main/app/boards/raspberrypi/rpi_pico/rpi_pico.zmk.yml"
+ },
+ {
+  "name": "RP2040-Zero",
+  "slug": "rp2040-zero",
+  "footprint": "rp2040_zero",
+  "usb": [
+   "usb_c"
+  ],
+  "wireless": false,
+  "mcu_family": "rp2040",
+  "firmware": [
+   "qmk",
+   "kmk"
+  ],
+  "url": "https://www.waveshare.com/wiki/RP2040-Zero"
+ },
+ {
+  "name": "MechWild PillBug",
+  "slug": "mechwild-pillbug",
+  "footprint": "black_pill",
+  "usb": [
+   "usb_c"
+  ],
+  "wireless": true,
+  "mcu_family": "nrf52",
+  "firmware": [
+   "zmk"
+  ],
+  "url": "https://github.com/zmkfirmware/zmk/blob/main/app/boards/mechwild/pillbug/pillbug.zmk.yml"
+ },
+ {
+  "name": "WeAct BlackPill (F401/F411)",
+  "slug": "weact-blackpill",
+  "footprint": "black_pill",
+  "usb": [
+   "usb_c"
+  ],
+  "wireless": false,
+  "mcu_family": "stm32",
+  "firmware": [
+   "qmk",
+   "zmk"
+  ],
+  "url": "https://github.com/zmkfirmware/zmk/tree/main/app/boards/weact"
+ },
+ {
+  "name": "Bluepill (STM32F103)",
+  "slug": "bluepill",
+  "footprint": "blue_pill",
+  "wireless": false,
+  "mcu_family": "stm32",
+  "firmware": [
+   "qmk"
+  ]
+ },
+ {
+  "name": "Adafruit Feather 32u4 Bluefruit LE",
+  "slug": "feather-32u4-bluefruit-le",
+  "footprint": "feather",
+  "usb": [
+   "micro_b"
+  ],
+  "wireless": true,
+  "mcu_family": "avr8",
+  "firmware": [
+   "qmk"
+  ],
+  "url": "https://www.adafruit.com/product/2829"
+ }
+]

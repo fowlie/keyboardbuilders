@@ -1,0 +1,133 @@
+# seed/layout_names.toml -- the author's own word for one physical arrangement, where
+# nothing machine-reads it. Backlog #23 (named layouts).
+#
+# ZMK's own `display-name` covers most of what this project has (see
+# scripts/measure_layout_names.py, layout-names-scan.json) -- this file is only for the
+# rest: a name that lives in README prose or an image, never in a shield's own metadata.
+# KLOR is the case that opened the ticket -- its README names four snap-off outcomes
+# (polydactyl / konrad / yubitsume / saegewerk) with no machine-readable label anywhere,
+# and matching which name goes with which key count needs a person looking at the
+# README's own layout diagram.
+#
+# NO drafted/confirmed queue, unlike seed/bodies.toml: that file overrules an existing
+# machine signal, so it needs a place to record the conflict pending a ruling. This file
+# adds a fact nothing else states at all, so an empty file is simply "nobody has looked
+# yet" and every row here is already someone's confirmed reading.
+#
+# `keys` is which of the design's own recorded layouts this name belongs to -- the join
+# is by count, same as the ZMK path, because that is the only field both sides state.
+#
+#   [[entry]]
+#   slug = "klor"
+#   keys = 36
+#   name = "Polydactyl"
+#
+# `breakoff = true` (added 2026-09-25) lets a row ADD a layout the board cannot show,
+# because break-off parts leave the full switch count on the PCB. Only below the largest
+# layout the design already carries; build_seed.py refuses anything else.
+#
+# `drops` says which keys the break-off removes, so build_silhouettes.py can draw it from
+# the board's own positions rather than from a guess. Per hand, two words so far:
+#   outer_column  the column nearest the hand's outside edge (keys within 0.5u of it)
+#   outer_thumb   the hand's lowest key, the far end of a thumb arc
+# The drawing must come out at exactly `keys`, or the build stops.
+#
+# Populate by reading the design's own README image, never guessed.
+
+# KLOR, 2026-09-25. Read from docs/images/klor-layouts.svg at geigeigeist/klor@main, the
+# README's own "LAYOUTS" drawing: one half per name, keycaps counted twice. By eye, and
+# again from the file, where each keycap is one 51-unit <rect> inside a <g> named for
+# its layout: 21, 20, 19, 18 per half. Doubled, the ends match the README's first line,
+# "KLOR is a 36-42 key column-staggered split keyboard". Polydactyl and Konrad keep the
+# outer pinky column, Yubitsume and Saegewerk drop it; Polydactyl and Yubitsume keep
+# the fourth thumb key.
+[[entry]]
+slug = "klor"
+keys = 42
+name = "Polydactyl"
+
+[[entry]]
+slug = "klor"
+keys = 40
+name = "Konrad"
+breakoff = true
+drops = ["outer_thumb"]
+
+[[entry]]
+slug = "klor"
+keys = 38
+name = "Yubitsume"
+breakoff = true
+drops = ["outer_column"]
+
+[[entry]]
+slug = "klor"
+keys = 36
+name = "Saegewerk"
+breakoff = true
+drops = ["outer_column", "outer_thumb"]
+
+# Hillside 46, 48 and 52, 2026-09-27. mmccoyd/hillside@main's family README gives each
+# board a "Trimmed Layout" in its differences table -- 46: 3x5+0+5 (40), 48: 3x5+1+5
+# (42), 52: 3x5+2+5 (44) -- and every board README says "break-off outer pinkie
+# columns". No author name beyond the table's own heading, so the name is that heading.
+# The 52 loses one bottom-row key per hand along with the column: it sits under the
+# pinky column, and outer_column measures across the column's tilt so the splay doesn't
+# leave it behind.
+[[entry]]
+slug = "hillside-46"
+keys = 40
+name = "Trimmed"
+breakoff = true
+drops = ["outer_column"]
+
+[[entry]]
+slug = "hillside-48"
+keys = 42
+name = "Trimmed"
+breakoff = true
+drops = ["outer_column"]
+
+[[entry]]
+slug = "hillside-52"
+keys = 44
+name = "Trimmed"
+breakoff = true
+drops = ["outer_column"]
+
+# Corne v4, 2026-09-28. The author's own word, from docs/firmware/rev4/firmware_en.md at
+# foostan/crkbd@main: "standard (3x6)" beside "mini (3x5)", for the same v4.0.0 and
+# v4.1.0 boards. "6 Column" came from ZMK's `corne` shield, which is the Pro Micro
+# v1-v3 board and no longer attaches to these (build_seed.py's `agreeing_with_board`).
+# Mini IS a snap-off, raised by the owner 2026-09-28. The board's Edge.Cuts carry a
+# 0.8 mm slot at x = +/-119.06 on both boards, the exact midpoint between the outer
+# pinky column (+/-128.59) and the next (+/-109.54). It runs from y -15.7 to 39.5 in
+# five segments, and the 2 mm and 8 mm gaps between them are the bridges. (The
+# `Breakaway_Tabs` footprints are not the cut, which is why reading only them first
+# said otherwise.) Snapping it drops one 3-key column per hand: 42 - 6 = 36, QMK's
+# `rev4_*/mini` count. The 40- and 46-key `_ex2` layouts are not added: 46 is above
+# the 42 the board scan reads (its four switch-or-encoder footprints are excluded as
+# encoders), and break-off rows may only go below the largest layout.
+[[entry]]
+slug = "corne-cherry-v4"
+keys = 42
+name = "Standard"
+
+[[entry]]
+slug = "corne-cherry-v4"
+keys = 36
+name = "Mini"
+breakoff = true
+drops = ["outer_column"]
+
+[[entry]]
+slug = "corne-chocolate-v4"
+keys = 42
+name = "Standard"
+
+[[entry]]
+slug = "corne-chocolate-v4"
+keys = 36
+name = "Mini"
+breakoff = true
+drops = ["outer_column"]

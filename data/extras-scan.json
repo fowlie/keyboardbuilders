@@ -1,0 +1,610 @@
+{
+ "3w6": [
+  "trackball"
+ ],
+ "3x3macropad": [
+  "encoder"
+ ],
+ "41-1350": [],
+ "41-1353-r41l2": [],
+ "42": [],
+ "45": [],
+ "4by3": [],
+ "67-e": [],
+ "8pack": [],
+ "abacus": [
+  "encoder"
+ ],
+ "adalyn": [],
+ "adelheid": [],
+ "aek2-usb": [],
+ "ajisai74": [],
+ "alpha": [],
+ "anavi-arrows": [
+  "encoder"
+ ],
+ "anavi-macro-pad-10": [
+  "encoder"
+ ],
+ "anavi-macro-pad-12": [],
+ "andean-condor": [],
+ "architeuthis-dux": [],
+ "arisu": [],
+ "atom47-rev5": [],
+ "atom47-rev5-c": [],
+ "atreus62": [],
+ "atreyu": [
+  "encoder"
+ ],
+ "atreyu-v2-choc": [
+  "encoder"
+ ],
+ "avalanche-hotswap": [
+  "encoder",
+  "display"
+ ],
+ "axon": [],
+ "aya": [],
+ "bad-wings-bold": [
+  "trackpad"
+ ],
+ "bad-wings-slim": [
+  "trackpad"
+ ],
+ "badge": [],
+ "bakeneko-65": [],
+ "banime40": [
+  "encoder"
+ ],
+ "barracuda": [],
+ "bartlepslit": [],
+ "basketweave": [
+  "encoder"
+ ],
+ "bevi": [],
+ "bfo-9000": [],
+ "blue-team-pad": [
+  "encoder",
+  "display"
+ ],
+ "bm42": [],
+ "bto-layout": [],
+ "budgy-rev1-chergo": [],
+ "budgy-rev2-chergo": [],
+ "buzzard": [
+  "display",
+  "haptic"
+ ],
+ "bw2-v2": [
+  "trackpad"
+ ],
+ "cantor": [],
+ "cantor-remix": [],
+ "ccd60": [],
+ "chameleon": [
+  "encoder"
+ ],
+ "cheapino": [
+  "encoder"
+ ],
+ "choc-ergo-travel": [],
+ "choc-led-ergo-travel": [],
+ "choc-rgb-ergo-travel": [],
+ "choc-v": [],
+ "choc-v2-env-kb65": [],
+ "chocofly": [
+  "encoder"
+ ],
+ "chocolatebar": [],
+ "chouchou": [],
+ "clog": [],
+ "contender": [],
+ "contra": [],
+ "corne-cherry-v4": [
+  "encoder",
+  "display"
+ ],
+ "corne-chocolate-v4": [
+  "encoder",
+  "display"
+ ],
+ "cornia": [
+  "display"
+ ],
+ "cradio": [],
+ "cradio-ble": [],
+ "cradio-f": [],
+ "cradio-mb": [],
+ "cradio-pg1232": [],
+ "cradio-z": [],
+ "cradio-z-lp": [],
+ "cradio10": [],
+ "craftwalk": [],
+ "crowboard-rev1-choc": [],
+ "crowboard-rev1-mx": [],
+ "crowboard-rev1-mx-kailh-hotswap": [],
+ "crowboard-rev2-mx": [
+  "encoder"
+ ],
+ "crowboard-rev2-with-pimoroni": [
+  "encoder"
+ ],
+ "cyclops": [],
+ "cypher": [],
+ "desire65": [],
+ "dilemma-diy-v2": [
+  "trackpad"
+ ],
+ "dilemma-max": [
+  "encoder",
+  "trackpad"
+ ],
+ "dilemma-v2": [
+  "encoder",
+  "trackpad"
+ ],
+ "dilemma-v3-hotswap": [
+  "encoder",
+  "trackpad"
+ ],
+ "discipad": [],
+ "discipline": [],
+ "dizzy40": [],
+ "dk60": [],
+ "dm9records-ergoinu": [],
+ "dogtag": [
+  "encoder"
+ ],
+ "dolphin": [],
+ "draculad": [
+  "encoder"
+ ],
+ "drink-me-usb-c": [],
+ "drink-me-usb-micro": [],
+ "drink-me-usb-mini": [],
+ "dropout": [
+  "encoder"
+ ],
+ "egg58v2": [],
+ "elcantorhs": [],
+ "elephant42": [
+  "display"
+ ],
+ "eliza": [],
+ "endzone34": [
+  "display"
+ ],
+ "env-kb60-mxhs": [],
+ "env-mcro": [
+  "encoder"
+ ],
+ "env-rgb": [],
+ "equanimity": [
+  "encoder"
+ ],
+ "ergo33": [
+  "encoder"
+ ],
+ "ergodash": [],
+ "ergoslab": [
+  "display"
+ ],
+ "eternal-keypad": [],
+ "euisopcb": [],
+ "ferris-0-1-base": [],
+ "ferris-0-1-compact": [],
+ "ferris-0-1-high": [],
+ "ferris-0-1-low": [],
+ "ferris-0-2-bling": [],
+ "ferris-0-2-compact": [],
+ "ferris-0-2-high": [],
+ "ferris-0-2-mini": [],
+ "fnrow": [],
+ "for-science": [],
+ "fourier": [],
+ "framework-rev0": [
+  "encoder"
+ ],
+ "frankie-macropad": [
+  "encoder"
+ ],
+ "friedrich": [],
+ "frooastboard-nano": [],
+ "fruity60": [],
+ "g35": [
+  "display",
+  "speaker"
+ ],
+ "game-hand": [],
+ "gh80-1800": [],
+ "gh80-3700": [
+  "encoder"
+ ],
+ "glyphkbd": [],
+ "grooveboard-atmel-au": [],
+ "grooveboard-atmel-mu": [],
+ "grooveboard-choc-atmel-au": [],
+ "grooveboard-choc-atmel-mu": [],
+ "grooveboard-choc-rp": [],
+ "grooveboard-mx-atmel-au": [],
+ "grooveboard-mx-atmel-mu": [],
+ "grooveboard-mx-rp": [],
+ "grooveboard-rp": [],
+ "gud70": [],
+ "guide68-assemble": [],
+ "gummy-key": [],
+ "helix": [],
+ "hem": [],
+ "hillside-46": [
+  "encoder",
+  "haptic"
+ ],
+ "hillside-48": [
+  "encoder",
+  "trackball",
+  "haptic"
+ ],
+ "hillside-52": [
+  "encoder",
+  "haptic"
+ ],
+ "hnah40-atmega328p-v1": [],
+ "horizon-choc": [],
+ "horizon-mx": [],
+ "hotswap-rgb-dumbpad": [
+  "encoder"
+ ],
+ "hub20": [
+  "encoder"
+ ],
+ "index-tab": [],
+ "isometria-75-iso": [
+  "encoder"
+ ],
+ "janus": [],
+ "jiran-cherry": [],
+ "jiran-classic": [],
+ "jiran-hotswap": [],
+ "jorne-cherry-2-1": [
+  "display"
+ ],
+ "jorne-cherry-3-0": [
+  "display"
+ ],
+ "jorne-classic-2-1": [
+  "display"
+ ],
+ "jp60": [],
+ "juliet": [],
+ "junco": [
+  "encoder"
+ ],
+ "k34": [],
+ "kaly": [],
+ "kapl": [
+  "encoder"
+ ],
+ "karina": [],
+ "karn": [],
+ "karn-2": [],
+ "karn-3": [],
+ "kb58-pico": [],
+ "kbd-template": [],
+ "kbic65": [],
+ "keaboard-rev1": [],
+ "keyboar-layout": [],
+ "kintsugi": [
+  "encoder"
+ ],
+ "klor": [
+  "encoder",
+  "display",
+  "speaker",
+  "haptic",
+  "trackball"
+ ],
+ "kobold": [],
+ "koca58": [],
+ "kuro65": [],
+ "la-nc": [
+  "display"
+ ],
+ "lagom": [
+  "encoder"
+ ],
+ "lancer-hotswap": [],
+ "largelad": [],
+ "layout-jopr": [],
+ "lck75": [
+  "encoder",
+  "display"
+ ],
+ "lily58": [],
+ "lily58-lite-rev3": [
+  "display"
+ ],
+ "lily58-pro": [
+  "display"
+ ],
+ "lime": [
+  "encoder",
+  "display"
+ ],
+ "litl": [
+  "encoder"
+ ],
+ "lotus58": [
+  "encoder",
+  "display"
+ ],
+ "lumberjack": [],
+ "m0110a-qmk": [],
+ "m0116-usb": [],
+ "m3n3van-rev2": [
+  "encoder"
+ ],
+ "macro3": [
+  "encoder"
+ ],
+ "macrocat": [
+  "encoder",
+  "display"
+ ],
+ "madjax-macropad": [
+  "encoder"
+ ],
+ "masonry": [],
+ "meson": [],
+ "mikeneko-65": [],
+ "milk": [],
+ "millipad": [
+  "encoder"
+ ],
+ "mini-e-li-xi-vy": [
+  "encoder"
+ ],
+ "mini-ten-key-plus": [
+  "encoder"
+ ],
+ "minim": [],
+ "model-b": [
+  "encoder"
+ ],
+ "molecule": [
+  "trackball"
+ ],
+ "morizon-choc": [],
+ "morizon-mx": [],
+ "mx-5160": [],
+ "mysterium": [],
+ "nack": [],
+ "nafuda": [],
+ "neopad": [
+  "encoder"
+ ],
+ "noah": [],
+ "np12": [
+  "encoder"
+ ],
+ "nt210": [],
+ "nt750": [],
+ "num-discipline": [],
+ "numpad": [],
+ "omega": [],
+ "opendeck": [],
+ "orthocode": [
+  "encoder"
+ ],
+ "osprette": [],
+ "pancake-v1": [],
+ "pancake-v2": [],
+ "pandamic": [
+  "encoder"
+ ],
+ "pando": [],
+ "pando58": [],
+ "paws60": [],
+ "piantor": [],
+ "pica40": [
+  "encoder"
+ ],
+ "pill60": [
+  "encoder"
+ ],
+ "pinky3": [],
+ "pinky4": [],
+ "pisces": [],
+ "pisces-v2": [],
+ "pix": [
+  "encoder",
+  "display"
+ ],
+ "plaid": [],
+ "plain60-c": [
+  "speaker"
+ ],
+ "pluckey": [
+  "encoder"
+ ],
+ "pluto12": [],
+ "potato65": [],
+ "prkl30": [
+  "encoder"
+ ],
+ "pteron56v0": [],
+ "punk75": [
+  "encoder"
+ ],
+ "qez": [],
+ "quefrency-rev1": [],
+ "redherring": [
+  "encoder",
+  "display"
+ ],
+ "redox-rev1": [],
+ "reviung34": [],
+ "reviung34-split": [],
+ "reviung41": [],
+ "reviung46": [],
+ "reviung5": [
+  "encoder"
+ ],
+ "reviung53": [],
+ "reviung61": [],
+ "rhymestone": [
+  "display"
+ ],
+ "romac": [],
+ "romeo": [],
+ "rosaline": [],
+ "rosaline-ortho": [],
+ "sango": [],
+ "scatter42": [],
+ "schwann-rev0-5b": [],
+ "sdra-kb00": [
+  "encoder"
+ ],
+ "sepia-officinalis": [],
+ "sesame": [],
+ "setta21": [
+  "display"
+ ],
+ "sha-choc": [],
+ "sha-mx": [],
+ "silakka54": [],
+ "sith-zhuyin40": [],
+ "skeleton-num-pad": [],
+ "skeleton68rev2": [],
+ "sl40": [],
+ "slime88": [],
+ "slimorta": [],
+ "sofle-choc": [
+  "encoder",
+  "display"
+ ],
+ "sofle-pico": [
+  "encoder",
+  "display",
+  "trackpad"
+ ],
+ "sofle-v1": [
+  "encoder",
+  "display"
+ ],
+ "solheim68": [],
+ "southpawpcb": [],
+ "soyuz": [],
+ "spacetime": [],
+ "span": [
+  "display"
+ ],
+ "speedo": [],
+ "spleeb": [
+  "encoder",
+  "trackpad"
+ ],
+ "splitreus": [],
+ "squiggle-36": [],
+ "squiggle-goldberg": [],
+ "squiggle-low-profile": [],
+ "squiggle-minimalist": [],
+ "squiggle-standard": [],
+ "steal-this": [],
+ "stoutgat": [
+  "encoder"
+ ],
+ "stoutgatv2": [
+  "encoder"
+ ],
+ "stront-choc": [
+  "encoder",
+  "display",
+  "trackpad"
+ ],
+ "stront-mx-38": [
+  "encoder",
+  "display",
+  "trackpad"
+ ],
+ "stront-mx-40": [
+  "encoder",
+  "display",
+  "trackpad"
+ ],
+ "supersplit": [],
+ "sweep-2": [],
+ "sweep-bling-lp": [],
+ "sweep-bling-mx": [],
+ "sweep-half-swept": [],
+ "sweep-high": [],
+ "sweep-high-m": [],
+ "sweeq": [],
+ "sweeq-mx": [],
+ "swoop-mx": [
+  "encoder",
+  "display"
+ ],
+ "tanuki-pcb3": [],
+ "tartan": [],
+ "teaqueen": [],
+ "tenkey-plusplus": [
+  "encoder"
+ ],
+ "tg4x": [],
+ "th75": [],
+ "torn": [
+  "encoder",
+  "display"
+ ],
+ "touhoupad-v2": [],
+ "treadstone32": [],
+ "tripel": [],
+ "twelvekey": [],
+ "ua62": [],
+ "un-split": [],
+ "unicorn-f072": [
+  "encoder",
+  "display",
+  "speaker"
+ ],
+ "unicorne": [
+  "encoder",
+  "display",
+  "speaker"
+ ],
+ "unison": [
+  "encoder",
+  "speaker"
+ ],
+ "unix60pcb": [],
+ "vagrant": [],
+ "varanidae": [
+  "encoder"
+ ],
+ "voyager60": [],
+ "wave": [],
+ "wired-pierce": [],
+ "wren": [
+  "encoder"
+ ],
+ "xenon-e": [
+  "encoder"
+ ],
+ "xr63-gl": [],
+ "yiancardesigns-gingham": [],
+ "yosino58": [
+  "display"
+ ],
+ "yosino58-cherry": [
+  "display"
+ ],
+ "yosino58-chocolate": [
+  "display"
+ ],
+ "zero": [],
+ "zodiark": [
+  "encoder",
+  "display"
+ ],
+ "zwerg": []
+}

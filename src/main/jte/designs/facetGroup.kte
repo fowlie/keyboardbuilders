@@ -1,0 +1,57 @@
+@import net.keyboardbuilders.keyboardbuilders.web.RailGroup
+@import net.keyboardbuilders.keyboardbuilders.web.RailOption
+@param group: RailGroup
+
+<%-- One facet group. A TYPED template call, never a runtime string: jte precompiles to
+     classes, so this @param is checked by the Kotlin compiler and a caller passing the
+     wrong shape fails the build rather than the request. That is the entire reason jte
+     was chosen over Thymeleaf, so concatenating HTML anywhere here throws the choice
+     away. contract.md §3.
+
+     Attribute values use jte's SMART ATTRIBUTES -- a null value omits the attribute --
+     because @if in an attribute name is refused outright, and the refusal is right: it
+     is how a template ends up building markup by string.
+
+     `<details>` rather than script, since v0.5 loads none. Which groups open is
+     `FacetRail.kt`'s decision, never this template's. --%>
+<details class="rail-acc" open="${group.openByDefault}">
+<summary>${group.heading}</summary>
+<fieldset class="facet">
+    <ul>
+        @for(option in group.known)
+            @template.designs.facetOption(option = option)
+        @endfor
+    </ul>
+
+    <%-- THE STATED REMAINDER. contract.md 3: a truncated value list says so. This group
+         shows a curated front row, so whatever it left out is named here with its count
+         and linked -- the only place on the site those values are reachable without
+         hand-typing a URL.
+
+         LINKS, NOT CHECKBOXES, and deliberately: a checkbox says "this is one of the
+         questions we expect you to ask", a link says "this exists and here it is".
+         Backlog 41 measured that a six-design value does not earn a checkbox; it never
+         said the value should be unreachable. --%>
+    @if(!group.more.isEmpty())
+        <p class="facet-more">
+            + ${group.more.size} more:
+            @for(option in group.more)
+                <a href="${option.href}">${option.label}</a> <span class="n">${option.count}</span>
+            @endfor
+        </p>
+    @endif
+
+    <%-- Bound to a local because Kotlin will not smart-cast a nullable public property
+         from another module, and the generated template IS another module. --%>
+    !{val unrecorded = group.unrecorded}
+    @if(unrecorded != null)
+        <%-- THE DIVIDER IS THE DESIGN. Above it, facts about the keyboard; below it,
+             facts about our database. Conflating them is how a catalogue teaches people
+             that a gap in its own coverage is a property of the world. --%>
+        <hr class="divider">
+        <ul>
+            @template.designs.facetOption(option = unrecorded)
+        </ul>
+    @endif
+</fieldset>
+</details>

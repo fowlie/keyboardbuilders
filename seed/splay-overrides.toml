@@ -1,0 +1,97 @@
+# seed/splay-overrides.toml -- designs the owner reviewed and `measure_splay.py` got
+# wrong, corrected by hand.
+#
+# `has_splay` (scripts/build_silhouettes.py) is fitted against 21 designs the owner
+# ruled on by eye, not derived from first principles -- its own docstring says so. Owner
+# review of the first corpus-wide run (2026-09-23, one day after the facet shipped in
+# 948549a) found eleven more it got wrong, none of the 21 it was fitted against. This
+# file is their correction, in the same shape as `seed/board-declines.toml`: a keyed
+# override a script reads and applies last, not a guess at a better general rule that
+# would move verdicts for the rest of the corpus without anyone having looked at them.
+#
+# Two distinct causes, both mis-shapes of the same "drop the lowest three keys as the
+# thumb cluster" rule, which is a fixed constant rather than a measurement of where a
+# board's thumb cluster actually ends:
+#
+#   * A thumb cluster deeper than three keys leaves rotated keys behind that the column
+#     test then counts as a fanned column. Owner: "I think most of the false positives
+#     here is that they have some angled keys, but they're part of a thumb cluster or
+#     something like it." Eight of the ten below (redox rev1, reviung41, sesame, arisu,
+#     elephant42, speedo, skeleton68rev2, supersplit, teaqueen, aya, g35).
+#   * `equanimity` is a different shape entirely: real, repeatable geometry, not
+#     measurement noise -- one block of columns near its hand's own centre sits at a
+#     uniform rotation against the rest, not a graduated fan of individually-angled
+#     columns the way a genuinely splayed hand's are. Owner: "seems they have a splay
+#     where the leftmost outer two columns are widened out at the bottom, which is a
+#     very peculiar and strange type of splay which I've never seen before, and I'd be
+#     resistant to call it splay." Not corrected because the measurement is wrong, but
+#     because the owner does not consider this shape "splay" in the sense the facet asks
+#     about.
+#
+# KEYED BY SLUG, the design-level key `measure_splay.py` itself verdicts against -- a
+# board-set key (`board-declines.toml`'s shape) would not fit, since splay is one verdict
+# per design, combined across every board file that design offers.
+#
+# Every row's `splay = false` here, because every correction so far runs the same
+# direction; the field is still named for the value rather than fixed as a decline, in
+# case a future correction runs the other way.
+
+[[entry]]
+slug  = "redox-rev1"
+splay = false
+note  = "Owner-corrected 2026-09-23: an angled key beyond the assumed three-key thumb cluster, not a fanned column."
+
+[[entry]]
+slug  = "reviung41"
+splay = false
+note  = "Owner-corrected 2026-09-23: an angled key beyond the assumed three-key thumb cluster, not a fanned column."
+
+[[entry]]
+slug  = "sesame"
+splay = false
+note  = "Owner-corrected 2026-09-23: an angled key beyond the assumed three-key thumb cluster, not a fanned column. Already ruled row-staggered rather than splayed once, in c07e745; the thumb-cluster leak is a second, separate way this same design tripped the detector."
+
+[[entry]]
+slug  = "arisu"
+splay = false
+note  = "Owner-corrected 2026-09-23: an angled key beyond the assumed three-key thumb cluster, not a fanned column. Arisu was designed as the non-splayed alternative to the Alice layout -- the owner's correction matches what the design is for."
+
+[[entry]]
+slug  = "elephant42"
+splay = false
+note  = "Owner-corrected 2026-09-23: an angled key beyond the assumed three-key thumb cluster, not a fanned column."
+
+[[entry]]
+slug  = "speedo"
+splay = false
+note  = "Owner-corrected 2026-09-23: an angled key beyond the assumed three-key thumb cluster, not a fanned column."
+
+[[entry]]
+slug  = "skeleton68rev2"
+splay = false
+note  = "Owner-corrected 2026-09-23: an angled key beyond the assumed three-key thumb cluster, not a fanned column."
+
+[[entry]]
+slug  = "supersplit"
+splay = false
+note  = "Owner-corrected 2026-09-23: an angled key beyond the assumed three-key thumb cluster, not a fanned column."
+
+[[entry]]
+slug  = "teaqueen"
+splay = false
+note  = "Owner-corrected 2026-09-23: an angled key beyond the assumed three-key thumb cluster, not a fanned column. Already ruled row-staggered rather than splayed once, in c07e745; the thumb-cluster leak is a second, separate way this same design tripped the detector."
+
+[[entry]]
+slug  = "equanimity"
+splay = false
+note  = "Owner-corrected 2026-09-23, renamed from `alice` the same day (seed/renames.toml): a block of columns near the hand's own centre sits at a uniform rotation against the rest of the hand -- real, repeatable geometry, not measurement noise. Owner: \"seems they have a splay where the leftmost outer two columns are widened out at the bottom, which is a very peculiar and strange type of splay which I've never seen before, and I'd be resistant to call it splay.\" 'Alice' names the layout type this shape belongs to, not this design."
+
+[[entry]]
+slug  = "aya"
+splay = false
+note  = "Owner-corrected 2026-09-23: an angled key beyond the assumed three-key thumb cluster, not a fanned column."
+
+[[entry]]
+slug  = "g35"
+splay = false
+note  = "Owner-corrected 2026-09-23: an angled key beyond the assumed three-key thumb cluster, not a fanned column."

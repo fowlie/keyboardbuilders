@@ -1,0 +1,11 @@
+[Unit]
+Description=Run the intake bot's nightly refresh
+
+[Timer]
+OnCalendar=*-*-* 03:30 Europe/Oslo
+RandomizedDelaySec=15min
+# A run missed while the box was down happens at the next boot instead.
+Persistent=true
+
+[Install]
+WantedBy=timers.target

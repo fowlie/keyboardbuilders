@@ -1,0 +1,10233 @@
+{
+ "0x544D/kuro65\tkusabimaru/kuro65.kicad_pcb": {
+  "bbox": [
+   -0.0,
+   0.0,
+   302.0,
+   93.5
+  ],
+  "boxes": [
+   [
+    -0.0,
+    0.0,
+    302.0,
+    93.5
+   ]
+  ],
+  "height_mm": 93.5,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 302.0
+ },
+ "Aidan-OS/Sango\tPCB/Sango/Sango.kicad_pcb": {
+  "bbox": [
+   76.73,
+   184.0,
+   380.0,
+   303.0
+  ],
+  "boxes": [
+   [
+    76.73,
+    184.0,
+    380.0,
+    303.0
+   ]
+  ],
+  "height_mm": 119.0,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 303.27
+ },
+ "Aleblazer/Zodiark\tZodiarkSplit/Bottom Plate.kicad_pcb": {
+  "bbox": [
+   28.5,
+   47.5,
+   188.161,
+   176.661
+  ],
+  "boxes": [
+   [
+    28.5,
+    47.5,
+    188.161,
+    176.661
+   ]
+  ],
+  "height_mm": 129.16,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 159.66
+ },
+ "Aleblazer/Zodiark\tZodiarkSplit/Top Plate.kicad_pcb": {
+  "bbox": [
+   28.5,
+   47.5,
+   188.161,
+   176.661
+  ],
+  "boxes": [
+   [
+    28.5,
+    47.5,
+    188.161,
+    176.661
+   ]
+  ],
+  "height_mm": 129.16,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 159.66
+ },
+ "Aleblazer/Zodiark\tZodiarkSplit/ZodiarkSplit.kicad_pcb": {
+  "bbox": [
+   28.5,
+   47.5,
+   188.161,
+   176.661
+  ],
+  "boxes": [
+   [
+    28.5,
+    47.5,
+    188.161,
+    176.661
+   ]
+  ],
+  "height_mm": 129.16,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 159.66
+ },
+ "Bastardkb/Dilemma\t3x5_2/dilemma.kicad_pcb": {
+  "bbox": [
+   106.02,
+   23.645,
+   240.03,
+   118.763
+  ],
+  "boxes": [
+   [
+    106.02,
+    23.645,
+    240.03,
+    118.763
+   ]
+  ],
+  "height_mm": 95.12,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 134.01
+ },
+ "Bastardkb/Dilemma\t3x5_3/dilemma.kicad_pcb": {
+  "bbox": [
+   112.331,
+   18.701,
+   246.472,
+   234.3
+  ],
+  "boxes": [
+   [
+    112.331,
+    18.701,
+    246.472,
+    234.3
+   ]
+  ],
+  "height_mm": 215.6,
+  "layers": 4,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 134.14
+ },
+ "Bastardkb/Dilemma\t3x5_3_procyon/dilemma.kicad_pcb": {
+  "bbox": [
+   112.331,
+   18.701,
+   246.472,
+   234.3
+  ],
+  "boxes": [
+   [
+    112.331,
+    18.701,
+    246.472,
+    234.3
+   ]
+  ],
+  "height_mm": 215.6,
+  "layers": 4,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 134.14
+ },
+ "Bastardkb/Dilemma\t4x6_4/dilemma.kicad_pcb": {
+  "bbox": [
+   76.75,
+   -8.6,
+   257.54,
+   291.7
+  ],
+  "boxes": [
+   [
+    76.75,
+    -8.6,
+    257.54,
+    291.7
+   ]
+  ],
+  "height_mm": 300.3,
+  "layers": 4,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 180.79
+ },
+ "Dbroqua/DK60\tDK60/Kicad/DK60.kicad_pcb": {
+  "bbox": [
+   66.6,
+   99.5,
+   351.7,
+   193.8
+  ],
+  "boxes": [
+   [
+    66.6,
+    99.5,
+    351.7,
+    193.8
+   ]
+  ],
+  "height_mm": 94.3,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 285.1
+ },
+ "Envious-Data/Env-KB\tKiCad Files/MainPCB_RGB-HS/ENV_KB_RGB.kicad_pcb": {
+  "bbox": [
+   36.767,
+   59.65,
+   383.767,
+   215.785
+  ],
+  "boxes": [
+   [
+    36.767,
+    59.65,
+    383.767,
+    215.785
+   ]
+  ],
+  "height_mm": 156.13,
+  "layers": 4,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 347.0
+ },
+ "Envious-Data/Env-KB60F\tKiCad Files/Backplate/KB60F-Backplate.kicad_pcb": {
+  "bbox": [
+   77.0,
+   33.0,
+   360.0,
+   159.5
+  ],
+  "boxes": [
+   [
+    77.0,
+    33.0,
+    360.0,
+    159.5
+   ]
+  ],
+  "height_mm": 126.5,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 283.0
+ },
+ "Envious-Data/Env-KB60F\tKiCad Files/MainPCB_MX_HS/Env-KB60MXHS.kicad_pcb": {
+  "bbox": [
+   77.0,
+   33.0,
+   360.0,
+   159.5
+  ],
+  "boxes": [
+   [
+    77.0,
+    33.0,
+    360.0,
+    159.5
+   ]
+  ],
+  "height_mm": 126.5,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 283.0
+ },
+ "Envious-Data/Env-KB60F\tKiCad Files/Switchplate/KB60F-Switchplate.kicad_pcb": {
+  "bbox": [
+   76.525,
+   62.525,
+   360.8,
+   159.8
+  ],
+  "boxes": [
+   [
+    76.525,
+    62.525,
+    360.8,
+    159.8
+   ]
+  ],
+  "height_mm": 97.28,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 55,
+  "width_mm": 284.28
+ },
+ "Envious-Data/Env-KB65M\tMainPCB-ChocV2/EnvKB65.kicad_pcb": {
+  "bbox": [
+   64.5,
+   97.65,
+   385.3,
+   196.95
+  ],
+  "boxes": [
+   [
+    64.5,
+    97.65,
+    385.3,
+    196.95
+   ]
+  ],
+  "height_mm": 99.3,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 320.8
+ },
+ "Envious-Data/Env-MCRO\tMainPCB_MX/EnvMCRO.kicad_pcb": {
+  "bbox": [
+   63.4,
+   38.8,
+   173.0,
+   108.5
+  ],
+  "boxes": [
+   [
+    63.4,
+    38.8,
+    173.0,
+    108.5
+   ]
+  ],
+  "height_mm": 69.7,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 109.6
+ },
+ "Envious-Data/Env-MCRO\tMainPCB_ULP/EnvMCRO.kicad_pcb": {
+  "bbox": [
+   63.4,
+   38.8,
+   173.0,
+   108.5
+  ],
+  "boxes": [
+   [
+    63.4,
+    38.8,
+    173.0,
+    108.5
+   ]
+  ],
+  "height_mm": 69.7,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 109.6
+ },
+ "Frooastside/Frooastboard\tFrooastboard Nano/KiCad Project/Frooastboard Nano.kicad_pcb": {
+  "bbox": [
+   65.087,
+   38.1,
+   115.888,
+   97.631
+  ],
+  "boxes": [
+   [
+    65.087,
+    38.1,
+    115.888,
+    97.631
+   ]
+  ],
+  "height_mm": 59.53,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 50.8
+ },
+ "PyrooL/Alpha\tPCB_kicad/alpha_pro_micro.kicad_pcb": {
+  "bbox": [
+   65.484,
+   98.822,
+   258.366,
+   158.353
+  ],
+  "boxes": [
+   [
+    65.484,
+    98.822,
+    258.366,
+    158.353
+   ]
+  ],
+  "height_mm": 59.53,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 192.88
+ },
+ "PyrooL/Meson\tPCB/meson.kicad_pcb": {
+  "bbox": [
+   123.825,
+   45.72,
+   258.445,
+   124.46
+  ],
+  "boxes": [
+   [
+    123.825,
+    45.72,
+    258.445,
+    124.46
+   ]
+  ],
+  "height_mm": 78.74,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 134.62
+ },
+ "Salicylic-acid3/PCB_Data\tAJisai74/BM_L/AJ_BM_L.kicad_pcb": {
+  "bbox": [
+   37.6,
+   31.625,
+   176.225,
+   133.35
+  ],
+  "boxes": [
+   [
+    37.6,
+    31.625,
+    176.225,
+    133.35
+   ]
+  ],
+  "height_mm": 101.72,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 138.62
+ },
+ "Salicylic-acid3/PCB_Data\tAJisai74/BM_R/AJ_BM_R.kicad_pcb": {
+  "bbox": [
+   152.4,
+   31.6,
+   343.4,
+   133.35
+  ],
+  "boxes": [
+   [
+    152.4,
+    31.6,
+    343.4,
+    133.35
+   ]
+  ],
+  "height_mm": 101.75,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 191.0
+ },
+ "Salicylic-acid3/PCB_Data\tAJisai74/Mid_L/AJ_Mid_L.kicad_pcb": {
+  "bbox": [
+   37.6,
+   14.575,
+   176.225,
+   133.35
+  ],
+  "boxes": [
+   [
+    37.6,
+    14.575,
+    176.225,
+    133.35
+   ]
+  ],
+  "height_mm": 118.77,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 138.62
+ },
+ "Salicylic-acid3/PCB_Data\tAJisai74/Mid_R/AJ_Mid_R.kicad_pcb": {
+  "bbox": [
+   152.4,
+   14.625,
+   343.4,
+   133.35
+  ],
+  "boxes": [
+   [
+    152.4,
+    14.625,
+    343.4,
+    133.35
+   ]
+  ],
+  "height_mm": 118.72,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 191.0
+ },
+ "Salicylic-acid3/PCB_Data\tGuide68/Assemble_L/Guide68_Assemble_L.kicad_pcb": {
+  "bbox": [
+   38.1,
+   38.1,
+   169.45,
+   131.35
+  ],
+  "boxes": [
+   [
+    38.1,
+    38.1,
+    169.45,
+    131.35
+   ]
+  ],
+  "height_mm": 93.25,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 131.35
+ },
+ "Salicylic-acid3/PCB_Data\tGuide68/Assemble_R/Guide68_Assemble_R.kicad_pcb": {
+  "bbox": [
+   154.4,
+   38.1,
+   323.85,
+   131.35
+  ],
+  "boxes": [
+   [
+    154.4,
+    38.1,
+    323.85,
+    131.35
+   ]
+  ],
+  "height_mm": 93.25,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 169.45
+ },
+ "Salicylic-acid3/PCB_Data\tNafuda/v1/Kicad/Assemble/Nafuda.kicad_pcb": {
+  "bbox": [
+   100.0,
+   100.0,
+   191.0,
+   155.0
+  ],
+  "boxes": [
+   [
+    100.0,
+    100.0,
+    191.0,
+    155.0
+   ]
+  ],
+  "height_mm": 55.0,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 91.0
+ },
+ "Salicylic-acid3/PCB_Data\tSetta21/v1/Kicad/Assemble/Setta21.kicad_pcb": {
+  "bbox": [
+   63.0,
+   58.0,
+   190.0,
+   130.0
+  ],
+  "boxes": [
+   [
+    63.0,
+    58.0,
+    190.0,
+    130.0
+   ]
+  ],
+  "height_mm": 72.0,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 127.0
+ },
+ "SethSenpai/Tanuki\tPcb/Kicad files/tanuki_pcb3.kicad_pcb": {
+  "bbox": [
+   30.5,
+   20.5,
+   254.5,
+   92.5
+  ],
+  "boxes": [
+   [
+    30.5,
+    20.5,
+    254.5,
+    92.5
+   ]
+  ],
+  "height_mm": 72.0,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 224.0
+ },
+ "TuckTuckFloof/EUISO-pcb\tEUISOpcb.kicad_pcb": {
+  "bbox": [
+   7.112,
+   54.864,
+   288.163,
+   131.064
+  ],
+  "boxes": [
+   [
+    7.112,
+    54.864,
+    288.163,
+    131.064
+   ]
+  ],
+  "height_mm": 76.2,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 281.05
+ },
+ "TweetyDaBird/Fat-Chameleon\tPCB/v1.20/Chameleon.kicad_pcb": {
+  "bbox": [
+   33.905,
+   46.055,
+   259.905,
+   138.105
+  ],
+  "boxes": [
+   [
+    33.905,
+    46.055,
+    259.905,
+    138.105
+   ]
+  ],
+  "height_mm": 92.05,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 226.0
+ },
+ "adpenrose/kintsugi_keeb\tkintsugi.kicad_pcb": {
+  "bbox": [
+   46.038,
+   23.812,
+   354.013,
+   119.062
+  ],
+  "boxes": [
+   [
+    46.038,
+    23.812,
+    354.013,
+    119.062
+   ]
+  ],
+  "height_mm": 95.25,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 307.98
+ },
+ "aeonstrife/potato65\thotswap pcb/potato-65-hotswap.kicad_pcb": {
+  "bbox": [
+   50.006,
+   33.659,
+   354.806,
+   137.319
+  ],
+  "boxes": [
+   [
+    50.006,
+    33.659,
+    354.806,
+    137.319
+   ]
+  ],
+  "height_mm": 103.66,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 304.8
+ },
+ "aeonstrife/potato65\tsolder pcb mount/potato-65-solderable-platemount.kicad_pcb": {
+  "bbox": [
+   50.006,
+   33.659,
+   354.806,
+   142.397
+  ],
+  "boxes": [
+   [
+    50.006,
+    33.659,
+    354.806,
+    142.397
+   ]
+  ],
+  "height_mm": 108.74,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 304.8
+ },
+ "aeonstrife/potato65\tsolder pcb/potato-65-solderable.kicad_pcb": {
+  "bbox": [
+   50.006,
+   33.659,
+   354.806,
+   137.319
+  ],
+  "boxes": [
+   [
+    50.006,
+    33.659,
+    354.806,
+    137.319
+   ]
+  ],
+  "height_mm": 103.66,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 304.8
+ },
+ "ai03-2725/contra\tContra.kicad_pcb": {
+  "bbox": [
+   27.384,
+   28.575,
+   258.366,
+   104.775
+  ],
+  "boxes": [
+   [
+    27.384,
+    28.575,
+    258.366,
+    104.775
+   ]
+  ],
+  "height_mm": 76.2,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 230.98
+ },
+ "ai03-2725/jp60\tJP60.kicad_pcb": {
+  "bbox": [
+   124.994,
+   172.069,
+   409.994,
+   267.169
+  ],
+  "boxes": [
+   [
+    124.994,
+    172.069,
+    409.994,
+    267.169
+   ]
+  ],
+  "height_mm": 95.1,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 285.0
+ },
+ "ai03-2725/soyuz\tSoyuz.kicad_pcb": {
+  "bbox": [
+   -64.511,
+   22.1,
+   200.914,
+   133.35
+  ],
+  "boxes": [
+   [
+    -64.511,
+    22.1,
+    200.914,
+    133.35
+   ]
+  ],
+  "height_mm": 111.25,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 14,
+  "width_mm": 265.43
+ },
+ "ai03-2725/voyager60\tVoyager60.kicad_pcb": {
+  "bbox": [
+   22.6,
+   22.05,
+   307.6,
+   117.15
+  ],
+  "boxes": [
+   [
+    22.6,
+    22.05,
+    307.6,
+    117.15
+   ]
+  ],
+  "height_mm": 95.1,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 285.0
+ },
+ "akyp/desire65-pcb\tkicad8/desire65.kicad_pcb": {
+  "bbox": [
+   16.573,
+   37.719,
+   320.04,
+   131.255
+  ],
+  "boxes": [
+   [
+    16.573,
+    37.719,
+    320.04,
+    131.255
+   ]
+  ],
+  "height_mm": 93.54,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 303.47
+ },
+ "anavitechnology/anavi-arrows\tanavi-arrows.kicad_pcb": {
+  "bbox": [
+   82.042,
+   58.928,
+   162.052,
+   122.174
+  ],
+  "boxes": [
+   [
+    82.042,
+    58.928,
+    162.052,
+    122.174
+   ]
+  ],
+  "height_mm": 63.25,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 80.01
+ },
+ "anavitechnology/anavi-macro-pad-10\tanavi-macro-pad-10.kicad_pcb": {
+  "bbox": [
+   90.0,
+   58.0,
+   163.0,
+   149.0
+  ],
+  "boxes": [
+   [
+    90.0,
+    58.0,
+    163.0,
+    149.0
+   ]
+  ],
+  "height_mm": 91.0,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 73.0
+ },
+ "anavitechnology/anavi-macro-pad-12\tanavi-macro-pad-12.kicad_pcb": {
+  "bbox": [
+   47.997,
+   26.492,
+   120.997,
+   143.25
+  ],
+  "boxes": [
+   [
+    47.997,
+    26.492,
+    120.997,
+    143.25
+   ]
+  ],
+  "height_mm": 116.76,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 73.0
+ },
+ "ashijanken/slimorta\tPCB/Slimorta_main_board/Slimorta_main_board.kicad_pcb": {
+  "bbox": [
+   28.575,
+   40.481,
+   257.175,
+   157.163
+  ],
+  "boxes": [
+   [
+    28.575,
+    40.481,
+    257.175,
+    157.163
+   ]
+  ],
+  "height_mm": 116.68,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 228.6
+ },
+ "ashijanken/slimorta\tPCB/Slimorta_switch_plate/Slimorta_switch_plate.kicad_pcb": {
+  "bbox": [
+   28.575,
+   61.912,
+   257.175,
+   157.163
+  ],
+  "boxes": [
+   [
+    28.575,
+    61.912,
+    257.175,
+    157.163
+   ]
+  ],
+  "height_mm": 95.25,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 228.6
+ },
+ "autumnisacutie/karina\tKiCad-PCB/keyboard.kicad_pcb": {
+  "bbox": [
+   -111.919,
+   -66.675,
+   296.069,
+   45.244
+  ],
+  "boxes": [
+   [
+    -111.919,
+    -66.675,
+    296.069,
+    45.244
+   ]
+  ],
+  "height_mm": 111.92,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 407.99
+ },
+ "autumnisacutie/karina\tKiCad-Plate/plate.kicad_pcb": {
+  "bbox": [
+   -75.794,
+   7.718,
+   358.069,
+   150.9
+  ],
+  "boxes": [
+   [
+    -75.794,
+    7.718,
+    358.069,
+    150.9
+   ]
+  ],
+  "height_mm": 143.18,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 68,
+  "width_mm": 433.86
+ },
+ "azhizhinov/elcantorhs\tELCANTORHS.kicad_pcb": {
+  "bbox": [
+   64.0,
+   43.4,
+   217.679,
+   147.244
+  ],
+  "boxes": [
+   [
+    64.0,
+    43.4,
+    217.679,
+    147.244
+   ]
+  ],
+  "height_mm": 103.84,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 153.68
+ },
+ "b-karl/KBIC65\tkicad/pcb/kbic65.kicad_pcb": {
+  "bbox": [
+   46.585,
+   35.719,
+   359.86,
+   167.338
+  ],
+  "boxes": [
+   [
+    46.585,
+    35.719,
+    359.86,
+    167.338
+   ]
+  ],
+  "height_mm": 131.62,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 313.27
+ },
+ "b-karl/KBIC65\tkicad/plate/kbic65-plate.kicad_pcb": {
+  "bbox": [
+   14.287,
+   -120.65,
+   328.613,
+   -11.906
+  ],
+  "boxes": [
+   [
+    14.287,
+    -120.65,
+    328.613,
+    -11.906
+   ]
+  ],
+  "height_mm": 108.74,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 59,
+  "width_mm": 314.32
+ },
+ "bbrfkr/keyboards\tmolecule/molecule.kicad_pcb": {
+  "bbox": [
+   77.572,
+   87.603,
+   353.743,
+   213.982
+  ],
+  "boxes": [
+   [
+    77.572,
+    87.603,
+    353.743,
+    213.982
+   ]
+  ],
+  "height_mm": 126.38,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 276.17
+ },
+ "bbrfkr/keyboards\tscatter42/scatter42.kicad_pcb": {
+  "bbox": [
+   18.618,
+   15.888,
+   278.6,
+   123.457
+  ],
+  "boxes": [
+   [
+    18.618,
+    15.888,
+    278.6,
+    123.457
+   ]
+  ],
+  "height_mm": 107.57,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 259.98
+ },
+ "beanaccle/kb58_pico\tpcb/kb58_pico.kicad_pcb": {
+  "bbox": [
+   24.0,
+   39.0,
+   273.65,
+   134.25
+  ],
+  "boxes": [
+   [
+    24.0,
+    39.0,
+    273.65,
+    134.25
+   ]
+  ],
+  "height_mm": 95.25,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 249.65
+ },
+ "beekeeb/piantor\tpcb/left/keyboard_pcb.kicad_pcb": {
+  "bbox": [
+   64.0,
+   43.4,
+   202.8,
+   133.314
+  ],
+  "boxes": [
+   [
+    64.0,
+    43.4,
+    202.8,
+    133.314
+   ]
+  ],
+  "height_mm": 89.91,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 138.8
+ },
+ "beekeeb/piantor\tpcb/right/keyboard_pcb.kicad_pcb": {
+  "bbox": [
+   66.44,
+   43.4,
+   205.24,
+   133.314
+  ],
+  "boxes": [
+   [
+    66.44,
+    43.4,
+    205.24,
+    133.314
+   ]
+  ],
+  "height_mm": 89.91,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 138.8
+ },
+ "bit-trade-one/ADKB96-hardware\tADKB96-PCB/BTO_Layout.kicad_pcb": {
+  "bbox": [
+   60.25,
+   85.9,
+   370.8,
+   200.0
+  ],
+  "boxes": [
+   [
+    60.25,
+    85.9,
+    370.8,
+    200.0
+   ]
+  ],
+  "height_mm": 114.1,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 310.55
+ },
+ "brickbots/chocv\tkicad/chocV/chocV.kicad_pcb": {
+  "bbox": [
+   3.8,
+   18.4,
+   216.3,
+   97.118
+  ],
+  "boxes": [
+   [
+    3.8,
+    18.4,
+    216.3,
+    97.118
+   ]
+  ],
+  "height_mm": 78.72,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 212.5
+ },
+ "catmunch/macrocat\tpcb/macrocat.kicad_pcb": {
+  "bbox": [
+   86.411,
+   58.928,
+   165.151,
+   156.21
+  ],
+  "boxes": [
+   [
+    86.411,
+    58.928,
+    165.151,
+    156.21
+   ]
+  ],
+  "height_mm": 97.28,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 78.74
+ },
+ "cgarcia2097/8-pack\tkeypad/8keysimplev3/8pack.kicad_pcb": {
+  "bbox": [
+   120.0,
+   68.0,
+   193.0,
+   106.0
+  ],
+  "boxes": [
+   [
+    120.0,
+    68.0,
+    193.0,
+    106.0
+   ]
+  ],
+  "height_mm": 38.0,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 73.0
+ },
+ "chrischrislolo/banime40\tpcb/banime40/banime40.kicad_pcb": {
+  "bbox": [
+   42.862,
+   48.419,
+   233.363,
+   124.619
+  ],
+  "boxes": [
+   [
+    42.862,
+    48.419,
+    233.363,
+    124.619
+   ]
+  ],
+  "height_mm": 76.2,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 190.5
+ },
+ "chrishoage/spleeb\tspleeb/pcbs/plate.kicad_pcb": {
+  "bbox": [
+   59.942,
+   32.222,
+   235.058,
+   153.052
+  ],
+  "boxes": [
+   [
+    59.942,
+    32.222,
+    235.058,
+    153.052
+   ]
+  ],
+  "height_mm": 120.83,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 29,
+  "width_mm": 175.12
+ },
+ "chrishoage/spleeb\tspleeb/pcbs/spleeb.kicad_pcb": {
+  "bbox": [
+   -9.525,
+   -80.963,
+   153.525,
+   30.986
+  ],
+  "boxes": [
+   [
+    -9.525,
+    -80.963,
+    153.525,
+    30.986
+   ]
+  ],
+  "height_mm": 111.95,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 163.05
+ },
+ "climent/atreyu\tpcb/v1/atreyu-pcb2.kicad_pcb": {
+  "bbox": [
+   57.514,
+   33.053,
+   367.244,
+   178.392
+  ],
+  "boxes": [
+   [
+    57.514,
+    33.053,
+    367.244,
+    178.392
+   ]
+  ],
+  "height_mm": 145.34,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 309.73
+ },
+ "climent/atreyu\tpcb/v2-choc/v2-choc.kicad_pcb": {
+  "bbox": [
+   74.672,
+   45.632,
+   373.941,
+   184.4
+  ],
+  "boxes": [
+   [
+    74.672,
+    45.632,
+    373.941,
+    184.4
+   ]
+  ],
+  "height_mm": 138.77,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 299.27
+ },
+ "climent/atreyu\tpcb/v2/atreyu-pcb2.kicad_pcb": {
+  "bbox": [
+   57.514,
+   33.053,
+   367.244,
+   178.392
+  ],
+  "boxes": [
+   [
+    57.514,
+    33.053,
+    367.244,
+    178.392
+   ]
+  ],
+  "height_mm": 145.34,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 309.73
+ },
+ "cmdremily/opendeck\thardware/OpenDeck32/opendeck.kicad_pcb": {
+  "bbox": [
+   24.13,
+   24.13,
+   185.42,
+   130.81
+  ],
+  "boxes": [
+   [
+    24.13,
+    24.13,
+    185.42,
+    130.81
+   ]
+  ],
+  "height_mm": 106.68,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 161.29
+ },
+ "coseyfannitutti/discipad\tdiscipad-pcb.kicad_pcb": {
+  "bbox": [
+   105.67,
+   15.102,
+   181.997,
+   137.902
+  ],
+  "boxes": [
+   [
+    105.67,
+    15.102,
+    181.997,
+    137.902
+   ]
+  ],
+  "height_mm": 122.8,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 76.33
+ },
+ "coseyfannitutti/discipline\tdiscipline-pcb.kicad_pcb": {
+  "bbox": [
+   53.766,
+   57.695,
+   358.66,
+   180.502
+  ],
+  "boxes": [
+   [
+    53.766,
+    57.695,
+    358.66,
+    180.502
+   ]
+  ],
+  "height_mm": 122.81,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 304.89
+ },
+ "coseyfannitutti/discipline\tplate/discipline-pcb.kicad_pcb": {
+  "bbox": [
+   53.34,
+   91.323,
+   359.091,
+   187.523
+  ],
+  "boxes": [
+   [
+    53.34,
+    91.323,
+    359.091,
+    187.523
+   ]
+  ],
+  "height_mm": 96.2,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 56,
+  "width_mm": 305.75
+ },
+ "coseyfannitutti/mysterium\tmysterium-pcb.kicad_pcb": {
+  "bbox": [
+   37.147,
+   55.313,
+   384.81,
+   201.93
+  ],
+  "boxes": [
+   [
+    37.147,
+    55.313,
+    384.81,
+    201.93
+   ]
+  ],
+  "height_mm": 146.62,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 347.66
+ },
+ "coseyfannitutti/romeo\tromeo-pcb.kicad_pcb": {
+  "bbox": [
+   23.654,
+   43.199,
+   271.304,
+   142.401
+  ],
+  "boxes": [
+   [
+    23.654,
+    43.199,
+    271.304,
+    142.401
+   ]
+  ],
+  "height_mm": 99.2,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 247.65
+ },
+ "cozykeys/speedo\tpcb/speedo.kicad_pcb": {
+  "bbox": [
+   19.156,
+   21.792,
+   326.788,
+   140.605
+  ],
+  "boxes": [
+   [
+    19.156,
+    21.792,
+    326.788,
+    140.605
+   ]
+  ],
+  "height_mm": 118.81,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 307.63
+ },
+ "crehmann/buzzard\tCase/BottomPlate/BottomPlate.kicad_pcb": {
+  "bbox": [
+   62.648,
+   28.852,
+   219.59,
+   129.768
+  ],
+  "boxes": [
+   [
+    62.648,
+    28.852,
+    219.59,
+    129.768
+   ]
+  ],
+  "height_mm": 100.92,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 156.94
+ },
+ "crehmann/buzzard\tCase/TopPlate/TopPlate.kicad_pcb": {
+  "bbox": [
+   77.54,
+   45.168,
+   234.481,
+   146.084
+  ],
+  "boxes": [
+   [
+    77.54,
+    45.168,
+    234.481,
+    146.084
+   ]
+  ],
+  "height_mm": 100.92,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 10,
+  "width_mm": 156.94
+ },
+ "crehmann/buzzard\tPCB/Buzzard/Buzzard.kicad_pcb": {
+  "bbox": [
+   77.775,
+   37.313,
+   227.766,
+   131.134
+  ],
+  "boxes": [
+   [
+    77.775,
+    37.313,
+    227.766,
+    131.134
+   ]
+  ],
+  "height_mm": 93.82,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 149.99
+ },
+ "cyril279/keyboards\trevlp/41_1350/41_1350_pcb/41_1350_pcb.kicad_pcb": {
+  "bbox": [
+   30.009,
+   37.683,
+   268.707,
+   133.013
+  ],
+  "boxes": [
+   [
+    30.009,
+    37.683,
+    268.707,
+    133.013
+   ]
+  ],
+  "height_mm": 95.33,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 238.7
+ },
+ "cyril279/keyboards\trevlp/41_1353/41_1353_pcb/r41l2.kicad_pcb": {
+  "bbox": [
+   20.283,
+   -17.918,
+   271.632,
+   85.81
+  ],
+  "boxes": [
+   [
+    20.283,
+    -17.918,
+    271.632,
+    85.81
+   ]
+  ],
+  "height_mm": 103.73,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 251.35
+ },
+ "daneski13/junco\tPCB/Junco.kicad_pcb": {
+  "bbox": [
+   24.765,
+   24.765,
+   321.372,
+   155.222
+  ],
+  "boxes": [
+   [
+    24.765,
+    24.765,
+    321.372,
+    155.222
+   ]
+  ],
+  "height_mm": 130.46,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 296.61
+ },
+ "dannixon/aya\thardware/aya.kicad_pcb": {
+  "bbox": [
+   -212.0,
+   -19.918,
+   212.0,
+   106.905
+  ],
+  "boxes": [
+   [
+    -212.0,
+    -19.918,
+    -24.712,
+    106.905
+   ],
+   [
+    24.712,
+    -19.918,
+    212.0,
+    106.905
+   ]
+  ],
+  "height_mm": 126.82,
+  "layers": 2,
+  "pieces": 2,
+  "switch_cutouts": 0,
+  "width_mm": 424.0
+ },
+ "davidphilipbarr/36keys\t34Keys/Cradio (mindbend)/cradio-mb.kicad_pcb": {
+  "bbox": [
+   34.977,
+   15.93,
+   143.72,
+   101.06
+  ],
+  "boxes": [
+   [
+    34.977,
+    15.93,
+    143.72,
+    101.06
+   ]
+  ],
+  "height_mm": 85.13,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 108.74
+ },
+ "davidphilipbarr/36keys\t34Keys/Cradio 10/cradio10.kicad_pcb": {
+  "bbox": [
+   35.02,
+   16.48,
+   135.08,
+   100.081
+  ],
+  "boxes": [
+   [
+    35.02,
+    16.48,
+    135.08,
+    100.081
+   ]
+  ],
+  "height_mm": 83.6,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 100.06
+ },
+ "davidphilipbarr/36keys\t34Keys/Cradio BLE/cradio-ble.kicad_pcb": {
+  "bbox": [
+   34.96,
+   16.504,
+   143.728,
+   101.06
+  ],
+  "boxes": [
+   [
+    34.96,
+    16.504,
+    143.728,
+    101.06
+   ]
+  ],
+  "height_mm": 84.56,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 108.77
+ },
+ "davidphilipbarr/36keys\t34Keys/Cradio F/cradio-f.kicad_pcb": {
+  "bbox": [
+   34.96,
+   16.5,
+   143.72,
+   101.06
+  ],
+  "boxes": [
+   [
+    34.96,
+    16.5,
+    143.72,
+    101.06
+   ]
+  ],
+  "height_mm": 84.56,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 108.76
+ },
+ "davidphilipbarr/36keys\t34Keys/Cradio S/cradio.kicad_pcb": {
+  "bbox": [
+   35.06,
+   16.51,
+   144.781,
+   99.021
+  ],
+  "boxes": [
+   [
+    35.06,
+    16.51,
+    144.781,
+    99.021
+   ]
+  ],
+  "height_mm": 82.51,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 109.72
+ },
+ "davidphilipbarr/36keys\t34Keys/Cradio-Z lp/cradio-z.kicad_pcb": {
+  "bbox": [
+   30.906,
+   16.257,
+   145.26,
+   99.14
+  ],
+  "boxes": [
+   [
+    30.906,
+    16.257,
+    145.26,
+    99.14
+   ]
+  ],
+  "height_mm": 82.88,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 114.35
+ },
+ "davidphilipbarr/36keys\t34Keys/Cradio-Z/cradio-z.kicad_pcb": {
+  "bbox": [
+   30.98,
+   16.475,
+   143.728,
+   99.06
+  ],
+  "boxes": [
+   [
+    30.98,
+    16.475,
+    143.728,
+    99.06
+   ]
+  ],
+  "height_mm": 82.59,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 112.75
+ },
+ "davidphilipbarr/36keys\t34Keys/Cradio-pg1232/cradio-pg1232.kicad_pcb": {
+  "bbox": [
+   34.96,
+   16.5,
+   143.728,
+   101.06
+  ],
+  "boxes": [
+   [
+    34.96,
+    16.5,
+    143.728,
+    101.06
+   ]
+  ],
+  "height_mm": 84.56,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 108.77
+ },
+ "davidphilipbarr/36keys\t34Keys/Cradio/cradio.kicad_pcb": {
+  "bbox": [
+   34.96,
+   16.5,
+   143.728,
+   101.06
+  ],
+  "boxes": [
+   [
+    34.96,
+    16.5,
+    143.728,
+    101.06
+   ]
+  ],
+  "height_mm": 84.56,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 108.77
+ },
+ "davidphilipbarr/macropads\tmacro3/macro3.kicad_pcb": {
+  "bbox": [
+   28.591,
+   60.3,
+   124.21,
+   100.96
+  ],
+  "boxes": [
+   [
+    28.591,
+    60.3,
+    124.21,
+    100.96
+   ]
+  ],
+  "height_mm": 40.66,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 95.62
+ },
+ "davidphilipbarr/sweep\tSweep Bling LP/pcb/sweepbling-lp__pcb.kicad_pcb": {
+  "bbox": [
+   21.78,
+   21.503,
+   238.7,
+   108.367
+  ],
+  "boxes": [
+   [
+    21.78,
+    21.503,
+    238.7,
+    108.367
+   ]
+  ],
+  "height_mm": 86.86,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 216.92
+ },
+ "davidphilipbarr/sweep\tSweep Bling MX/pcb/sweep-bling-mx__pcb.kicad_pcb": {
+  "bbox": [
+   35.458,
+   49.464,
+   148.924,
+   144.615
+  ],
+  "boxes": [
+   [
+    35.458,
+    49.464,
+    148.924,
+    144.615
+   ]
+  ],
+  "height_mm": 95.15,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 113.47
+ },
+ "davidphilipbarr/sweep\tSweep High M/sweep-high.kicad_pcb": {
+  "bbox": [
+   35.458,
+   49.464,
+   148.95,
+   144.615
+  ],
+  "boxes": [
+   [
+    35.458,
+    49.464,
+    148.95,
+    144.615
+   ]
+  ],
+  "height_mm": 95.15,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 113.49
+ },
+ "davidphilipbarr/sweep\tSweep High/sweep-high.kicad_pcb": {
+  "bbox": [
+   35.458,
+   49.464,
+   265.0,
+   144.615
+  ],
+  "boxes": [
+   [
+    35.458,
+    49.464,
+    265.0,
+    144.615
+   ]
+  ],
+  "height_mm": 95.15,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 229.54
+ },
+ "davidphilipbarr/sweep\tSweep half-swept/half-swept.kicad_pcb": {
+  "bbox": [
+   18.69,
+   18.201,
+   127.647,
+   105.065
+  ],
+  "boxes": [
+   [
+    18.69,
+    18.201,
+    127.647,
+    105.065
+   ]
+  ],
+  "height_mm": 86.86,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 108.96
+ },
+ "davidphilipbarr/sweep\tSweep v2.2/sweepv2.kicad_pcb": {
+  "bbox": [
+   21.78,
+   21.503,
+   238.7,
+   108.367
+  ],
+  "boxes": [
+   [
+    21.78,
+    21.503,
+    238.7,
+    108.367
+   ]
+  ],
+  "height_mm": 86.86,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 216.92
+ },
+ "dcpedit/masonry\tpcb/pcb.kicad_pcb": {
+  "bbox": [
+   47.625,
+   34.879,
+   276.225,
+   121.398
+  ],
+  "boxes": [
+   [
+    47.625,
+    34.879,
+    276.225,
+    121.398
+   ]
+  ],
+  "height_mm": 86.52,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 228.6
+ },
+ "dcpedit/redherring\tpcb-hotswap/redherring.kicad_pcb": {
+  "bbox": [
+   26.872,
+   58.627,
+   391.235,
+   225.877
+  ],
+  "boxes": [
+   [
+    26.872,
+    58.627,
+    391.235,
+    225.877
+   ]
+  ],
+  "height_mm": 167.25,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 364.36
+ },
+ "dcpedit/redherring\tpcb/redherring.kicad_pcb": {
+  "bbox": [
+   6.35,
+   214.5,
+   370.713,
+   381.75
+  ],
+  "boxes": [
+   [
+    6.35,
+    214.5,
+    370.713,
+    381.75
+   ]
+  ],
+  "height_mm": 167.25,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 364.36
+ },
+ "dcpedit/redherring\tsolenoid/redherring.kicad_pcb": {
+  "bbox": [
+   6.35,
+   214.5,
+   370.713,
+   381.75
+  ],
+  "boxes": [
+   [
+    6.35,
+    214.5,
+    370.713,
+    381.75
+   ]
+  ],
+  "height_mm": 167.25,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 364.36
+ },
+ "diepala/cantor\tCantor_Classic/keyboard_pcb-rounded.kicad_pcb": {
+  "bbox": [
+   64.0,
+   43.4,
+   202.8,
+   133.314
+  ],
+  "boxes": [
+   [
+    64.0,
+    43.4,
+    202.8,
+    133.314
+   ]
+  ],
+  "height_mm": 89.91,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 138.8
+ },
+ "diepala/cantor\tCantor_Classic/keyboard_pcb.kicad_pcb": {
+  "bbox": [
+   64.0,
+   43.4,
+   202.8,
+   133.314
+  ],
+  "boxes": [
+   [
+    64.0,
+    43.4,
+    202.8,
+    133.314
+   ]
+  ],
+  "height_mm": 89.91,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 138.8
+ },
+ "dinofizz/fnrow-pcb\tfnrow/fnrow.kicad_pcb": {
+  "bbox": [
+   45.339,
+   126.365,
+   373.952,
+   164.465
+  ],
+  "boxes": [
+   [
+    45.339,
+    126.365,
+    373.952,
+    164.465
+   ]
+  ],
+  "height_mm": 38.1,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 328.61
+ },
+ "dlip/chouchou\tkicad/chouchou.kicad_pcb": {
+  "bbox": [
+   46.345,
+   40.039,
+   256.885,
+   154.443
+  ],
+  "boxes": [
+   [
+    46.345,
+    40.039,
+    256.885,
+    154.443
+   ]
+  ],
+  "height_mm": 114.4,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 210.54
+ },
+ "doesntfazer/CrowBoard\tCrowboard-Kicad-rev1 - MX - Kailh-hotswap/crowboard.kicad_pcb": {
+  "bbox": [
+   23.45,
+   30.025,
+   275.3,
+   148.8
+  ],
+  "boxes": [
+   [
+    23.45,
+    30.025,
+    275.3,
+    148.8
+   ]
+  ],
+  "height_mm": 118.78,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 251.85
+ },
+ "doesntfazer/CrowBoard\tCrowboard-Kicad-rev1 - MX/crowboard.kicad_pcb": {
+  "bbox": [
+   23.45,
+   30.025,
+   275.3,
+   148.8
+  ],
+  "boxes": [
+   [
+    23.45,
+    30.025,
+    275.3,
+    148.8
+   ]
+  ],
+  "height_mm": 118.78,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 251.85
+ },
+ "doesntfazer/CrowBoard\tCrowboard-Kicad-rev1 - choc/crowboard.kicad_pcb": {
+  "bbox": [
+   23.45,
+   30.025,
+   275.3,
+   148.8
+  ],
+  "boxes": [
+   [
+    23.45,
+    30.025,
+    275.3,
+    148.8
+   ]
+  ],
+  "height_mm": 118.78,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 251.85
+ },
+ "doesntfazer/CrowBoard\tCrowboard-Kicad-rev2 - With Pimoroni/crowboard.kicad_pcb": {
+  "bbox": [
+   23.45,
+   30.025,
+   275.3,
+   148.8
+  ],
+  "boxes": [
+   [
+    23.45,
+    30.025,
+    275.3,
+    148.8
+   ]
+  ],
+  "height_mm": 118.78,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 251.85
+ },
+ "doesntfazer/CrowBoard\tCrowboard-Kicad-rev2 MX/crowboard.kicad_pcb": {
+  "bbox": [
+   23.45,
+   30.025,
+   275.3,
+   148.8
+  ],
+  "boxes": [
+   [
+    23.45,
+    30.025,
+    275.3,
+    148.8
+   ]
+  ],
+  "height_mm": 118.78,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 251.85
+ },
+ "drabaioli/sdrakb00\tKiCad_PCB/SdraKb00.kicad_pcb": {
+  "bbox": [
+   57.023,
+   57.658,
+   233.203,
+   141.097
+  ],
+  "boxes": [
+   [
+    57.023,
+    57.658,
+    233.203,
+    141.097
+   ]
+  ],
+  "height_mm": 83.44,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 12,
+  "width_mm": 176.18
+ },
+ "duckyb/eternal-keypad\tbottom-plate-kicad/eternal-keypad-bottom.kicad_pcb": {
+  "bbox": [
+   47.625,
+   39.688,
+   217.488,
+   134.938
+  ],
+  "boxes": [
+   [
+    47.625,
+    39.688,
+    217.488,
+    134.938
+   ]
+  ],
+  "height_mm": 95.25,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 169.86
+ },
+ "duckyb/eternal-keypad\tpcb-kicad/eternal-keypad.kicad_pcb": {
+  "bbox": [
+   47.625,
+   39.688,
+   217.488,
+   134.938
+  ],
+  "boxes": [
+   [
+    47.625,
+    39.688,
+    217.488,
+    134.938
+   ]
+  ],
+  "height_mm": 95.25,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 169.86
+ },
+ "duckyb/eternal-keypad\tswitch-plate-kicad/eternal-keypad-plate.kicad_pcb": {
+  "bbox": [
+   53.975,
+   39.688,
+   217.488,
+   134.938
+  ],
+  "boxes": [
+   [
+    53.975,
+    39.688,
+    217.488,
+    134.938
+   ]
+  ],
+  "height_mm": 95.25,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 36,
+  "width_mm": 163.51
+ },
+ "durken1/pierce\tpcb/wired/pierce.kicad_pcb": {
+  "bbox": [
+   95.557,
+   39.311,
+   210.204,
+   130.628
+  ],
+  "boxes": [
+   [
+    95.557,
+    39.311,
+    210.204,
+    130.628
+   ]
+  ],
+  "height_mm": 91.32,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 114.65
+ },
+ "dwctor/kaly\tKalyPCB/KalyPCB.kicad_pcb": {
+  "bbox": [
+   13.0,
+   13.24,
+   148.58,
+   113.029
+  ],
+  "boxes": [
+   [
+    13.0,
+    13.24,
+    148.58,
+    113.029
+   ]
+  ],
+  "height_mm": 99.79,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 135.58
+ },
+ "dwctor/kaly\tKalyPCB/Steps/EdgesKalyPcb.kicad_pcb": {
+  "bbox": [
+   13.0,
+   13.24,
+   148.58,
+   113.029
+  ],
+  "boxes": [
+   [
+    13.0,
+    13.24,
+    148.58,
+    113.029
+   ]
+  ],
+  "height_mm": 99.79,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 135.58
+ },
+ "dwctor/kaly\tKalyPCB/Steps/ErgogenKalyPcb.kicad_pcb": {
+  "bbox": [
+   15.756,
+   14.826,
+   151.336,
+   114.615
+  ],
+  "boxes": [
+   [
+    15.756,
+    14.826,
+    151.336,
+    114.615
+   ]
+  ],
+  "height_mm": 99.79,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 135.58
+ },
+ "dwctor/kaly\tKalyPCB/Steps/MascotEvolution.kicad_pcb": {
+  "bbox": [
+   13.0,
+   13.24,
+   148.58,
+   113.029
+  ],
+  "boxes": [
+   [
+    13.0,
+    13.24,
+    148.58,
+    113.029
+   ]
+  ],
+  "height_mm": 99.79,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 135.58
+ },
+ "ebastler/isometria-75\tisometria-75-pcb-iso/isometria-75-pcb-iso.kicad_pcb": {
+  "bbox": [
+   -9.247,
+   -9.186,
+   299.003,
+   113.814
+  ],
+  "boxes": [
+   [
+    -9.247,
+    -9.186,
+    299.003,
+    113.814
+   ]
+  ],
+  "height_mm": 123.0,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 308.25
+ },
+ "eggsworks/egg58\tegg58bt/egg58v2.kicad_pcb": {
+  "bbox": [
+   107.95,
+   36.75,
+   249.0,
+   163.83
+  ],
+  "boxes": [
+   [
+    107.95,
+    36.75,
+    249.0,
+    163.83
+   ]
+  ],
+  "height_mm": 127.08,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 141.05
+ },
+ "eggsworks/egg58\tegg58v2/egg58v2.kicad_pcb": {
+  "bbox": [
+   107.95,
+   36.75,
+   249.0,
+   163.83
+  ],
+  "boxes": [
+   [
+    107.95,
+    36.75,
+    249.0,
+    163.83
+   ]
+  ],
+  "height_mm": 127.08,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 141.05
+ },
+ "eliassjogreen/4by3\tpcb/4by3.kicad_pcb": {
+  "bbox": [
+   135.731,
+   38.1,
+   216.694,
+   100.013
+  ],
+  "boxes": [
+   [
+    135.731,
+    38.1,
+    216.694,
+    100.013
+   ]
+  ],
+  "height_mm": 61.91,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 80.96
+ },
+ "enochchau/dropout-numpad\tpcb/dropout.kicad_pcb": {
+  "bbox": [
+   107.627,
+   42.78,
+   182.777,
+   136.98
+  ],
+  "boxes": [
+   [
+    107.627,
+    42.78,
+    182.777,
+    136.98
+   ]
+  ],
+  "height_mm": 94.2,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 75.15
+ },
+ "enochchau/dropout-numpad\tplate/plate.kicad_pcb": {
+  "bbox": [
+   166.007,
+   59.148,
+   241.156,
+   153.348
+  ],
+  "boxes": [
+   [
+    166.007,
+    59.148,
+    241.156,
+    153.348
+   ]
+  ],
+  "height_mm": 94.2,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 16,
+  "width_mm": 75.15
+ },
+ "eric-wood/macro-pad\tmacropad.kicad_pcb": {
+  "bbox": [
+   118.925,
+   55.525,
+   198.525,
+   116.625
+  ],
+  "boxes": [
+   [
+    118.925,
+    55.525,
+    198.525,
+    116.625
+   ]
+  ],
+  "height_mm": 61.1,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 79.6
+ },
+ "ericrlau/numdiscipline\tNumDiscipline-pcb.kicad_pcb": {
+  "bbox": [
+   53.766,
+   57.695,
+   425.335,
+   185.261
+  ],
+  "boxes": [
+   [
+    53.766,
+    57.695,
+    425.335,
+    185.261
+   ]
+  ],
+  "height_mm": 127.57,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 371.57
+ },
+ "erkhal/prkl30\tPRKL30.kicad_pcb": {
+  "bbox": [
+   52.38,
+   52.07,
+   307.23,
+   114.3
+  ],
+  "boxes": [
+   [
+    52.38,
+    52.07,
+    307.23,
+    114.3
+   ]
+  ],
+  "height_mm": 62.23,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 254.85
+ },
+ "etiennecollin/wave\tpcbs/main/rounded/wave_pcb-rounded.kicad_pcb": {
+  "bbox": [
+   31.0,
+   22.5,
+   146.5,
+   117.5
+  ],
+  "boxes": [
+   [
+    31.0,
+    22.5,
+    146.5,
+    117.5
+   ]
+  ],
+  "height_mm": 95.0,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 115.5
+ },
+ "evyd13/atom47\tpcb-files/rev5-c/atom47-rev5-c.kicad_pcb": {
+  "bbox": [
+   2.675,
+   0.975,
+   244.875,
+   74.075
+  ],
+  "boxes": [
+   [
+    2.675,
+    0.975,
+    244.875,
+    74.075
+   ]
+  ],
+  "height_mm": 73.1,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 242.2
+ },
+ "evyd13/atom47\tpcb-files/rev5/atom47-rev5.kicad_pcb": {
+  "bbox": [
+   2.675,
+   1.975,
+   244.875,
+   74.075
+  ],
+  "boxes": [
+   [
+    2.675,
+    1.975,
+    244.875,
+    74.075
+   ]
+  ],
+  "height_mm": 72.1,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 242.2
+ },
+ "evyd13/fin-pad\tdolphin.kicad_pcb": {
+  "bbox": [
+   1.0,
+   -6.5,
+   75.2,
+   118.062
+  ],
+  "boxes": [
+   [
+    1.0,
+    -6.5,
+    75.2,
+    118.062
+   ]
+  ],
+  "height_mm": 124.56,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 74.2
+ },
+ "evyd13/gh80-series\tGH80-1800/PCB/gh80-1800.kicad_pcb": {
+  "bbox": [
+   -4.167,
+   -10.12,
+   376.833,
+   138.113
+  ],
+  "boxes": [
+   [
+    -4.167,
+    -10.12,
+    376.833,
+    138.113
+   ]
+  ],
+  "height_mm": 148.23,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 381.0
+ },
+ "evyd13/gh80-series\tGH80-3700/PCB/gh80-3700.kicad_pcb": {
+  "bbox": [
+   -45.925,
+   -40.5,
+   45.925,
+   108.6
+  ],
+  "boxes": [
+   [
+    -45.925,
+    -40.5,
+    45.925,
+    108.6
+   ]
+  ],
+  "height_mm": 149.1,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 91.85
+ },
+ "evyd13/gud70-pcb\tpcb-files/gud70.kicad_pcb": {
+  "bbox": [
+   0.325,
+   1.325,
+   326.525,
+   93.925
+  ],
+  "boxes": [
+   [
+    0.325,
+    1.325,
+    326.525,
+    93.925
+   ]
+  ],
+  "height_mm": 92.6,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 326.2
+ },
+ "evyd13/mx-5160\tmx-5160/mx-5160.kicad_pcb": {
+  "bbox": [
+   -0.0,
+   -41.975,
+   419.1,
+   95.25
+  ],
+  "boxes": [
+   [
+    -0.0,
+    -41.975,
+    419.1,
+    95.25
+   ]
+  ],
+  "height_mm": 137.23,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 419.1
+ },
+ "evyd13/nt-series\tnt-210/nt210.kicad_pcb": {
+  "bbox": [
+   -0.475,
+   0.025,
+   76.675,
+   123.125
+  ],
+  "boxes": [
+   [
+    -0.475,
+    0.025,
+    76.675,
+    123.125
+   ]
+  ],
+  "height_mm": 123.1,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 77.15
+ },
+ "evyd13/nt-series\tnt-750/nt750.kicad_pcb": {
+  "bbox": [
+   0.0,
+   0.0,
+   347.913,
+   123.2
+  ],
+  "boxes": [
+   [
+    0.0,
+    0.0,
+    347.913,
+    123.2
+   ]
+  ],
+  "height_mm": 123.2,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 347.91
+ },
+ "evyd13/plain60-c\tplain60-c.kicad_pcb": {
+  "bbox": [
+   0.525,
+   0.525,
+   285.225,
+   94.725
+  ],
+  "boxes": [
+   [
+    0.525,
+    0.525,
+    285.225,
+    94.725
+   ]
+  ],
+  "height_mm": 94.2,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 284.7
+ },
+ "evyd13/solheim68\tsolheim68.kicad_pcb": {
+  "bbox": [
+   2.977,
+   -1.786,
+   325.934,
+   92.274
+  ],
+  "boxes": [
+   [
+    2.977,
+    -1.786,
+    325.934,
+    92.274
+   ]
+  ],
+  "height_mm": 94.06,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 322.96
+ },
+ "farfalleflickan/nack\tnack_v1/hardware/nack.kicad_pcb": {
+  "bbox": [
+   20.29,
+   23.22,
+   267.95,
+   107.2
+  ],
+  "boxes": [
+   [
+    20.29,
+    23.22,
+    267.95,
+    107.2
+   ]
+  ],
+  "height_mm": 83.98,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 247.66
+ },
+ "farfalleflickan/nack\tnack_v2/hardware/nack.kicad_pcb": {
+  "bbox": [
+   20.3,
+   31.635,
+   267.95,
+   107.2
+  ],
+  "boxes": [
+   [
+    20.3,
+    31.635,
+    267.95,
+    107.2
+   ]
+  ],
+  "height_mm": 75.56,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 247.65
+ },
+ "fatenozomi/arisu-pcb\tarisu.kicad_pcb": {
+  "bbox": [
+   25.413,
+   24.433,
+   364.5,
+   143.125
+  ],
+  "boxes": [
+   [
+    25.413,
+    24.433,
+    364.5,
+    143.125
+   ]
+  ],
+  "height_mm": 118.69,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 339.09
+ },
+ "fearherbs1/blue-team-pad\tPCB/BlueTeamPad/BlueTeamPad.kicad_pcb": {
+  "bbox": [
+   51.594,
+   52.387,
+   154.781,
+   159.544
+  ],
+  "boxes": [
+   [
+    51.594,
+    52.387,
+    154.781,
+    159.544
+   ]
+  ],
+  "height_mm": 107.16,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 103.19
+ },
+ "fharding1/pdxkbc-badge\tbadge/badge.kicad_pcb": {
+  "bbox": [
+   110.49,
+   25.4,
+   149.86,
+   95.25
+  ],
+  "boxes": [
+   [
+    110.49,
+    25.4,
+    149.86,
+    95.25
+   ]
+  ],
+  "height_mm": 69.85,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 39.37
+ },
+ "floookay/adelheid\tpcb/adelheid.kicad_pcb": {
+  "bbox": [
+   25.413,
+   24.433,
+   364.5,
+   167.625
+  ],
+  "boxes": [
+   [
+    25.413,
+    24.433,
+    364.5,
+    167.625
+   ]
+  ],
+  "height_mm": 143.19,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 339.09
+ },
+ "floookay/pluckey\tpcb/pcb.kicad_pcb": {
+  "bbox": [
+   24.305,
+   60.037,
+   187.886,
+   176.951
+  ],
+  "boxes": [
+   [
+    24.305,
+    60.037,
+    187.886,
+    176.951
+   ]
+  ],
+  "height_mm": 116.91,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 163.58
+ },
+ "floookay/zwerg\tpcb/zwerg.kicad_pcb": {
+  "bbox": [
+   77.102,
+   50.037,
+   221.299,
+   156.772
+  ],
+  "boxes": [
+   [
+    77.102,
+    50.037,
+    221.299,
+    156.772
+   ]
+  ],
+  "height_mm": 106.74,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 144.2
+ },
+ "foostan/crkbd\tpcbs/corne-cherry/hotswap/corne-cherry.kicad_pcb": {
+  "bbox": [
+   -138.613,
+   -31.312,
+   138.613,
+   76.18
+  ],
+  "boxes": [
+   [
+    -138.613,
+    -31.312,
+    138.613,
+    76.18
+   ]
+  ],
+  "height_mm": 107.49,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 277.23
+ },
+ "foostan/crkbd\tpcbs/corne-chocolate/hotswap/corne-chocolate.kicad_pcb": {
+  "bbox": [
+   -138.613,
+   -31.312,
+   138.613,
+   76.18
+  ],
+  "boxes": [
+   [
+    -138.613,
+    -31.312,
+    138.613,
+    76.18
+   ]
+  ],
+  "height_mm": 107.49,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 277.23
+ },
+ "gachiham/XR63GL\tXR63GL.kicad_pcb": {
+  "bbox": [
+   19.275,
+   17.25,
+   323.625,
+   116.05
+  ],
+  "boxes": [
+   [
+    19.275,
+    17.25,
+    323.625,
+    116.05
+   ]
+  ],
+  "height_mm": 98.8,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 304.35
+ },
+ "galile0-designs/glyphkbd\tv2/PCB/glyph-rounded.kicad_pcb": {
+  "bbox": [
+   57.342,
+   38.292,
+   371.282,
+   133.157
+  ],
+  "boxes": [
+   [
+    57.342,
+    38.292,
+    371.282,
+    133.157
+   ]
+  ],
+  "height_mm": 94.86,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 313.94
+ },
+ "galile0-designs/glyphkbd\tv2/PCB/glyph.kicad_pcb": {
+  "bbox": [
+   57.342,
+   38.292,
+   371.282,
+   133.157
+  ],
+  "boxes": [
+   [
+    57.342,
+    38.292,
+    371.282,
+    133.157
+   ]
+  ],
+  "height_mm": 94.86,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 313.94
+ },
+ "geigeigeist/klor\tPCB/klor1_3/klor1_3.kicad_pcb": {
+  "bbox": [
+   70.899,
+   49.196,
+   230.873,
+   167.383
+  ],
+  "boxes": [
+   [
+    70.899,
+    49.196,
+    230.873,
+    167.383
+   ]
+  ],
+  "height_mm": 118.19,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 159.97
+ },
+ "glozares/millipad\tmillipad/millipad.kicad_pcb": {
+  "bbox": [
+   70.644,
+   34.925,
+   202.406,
+   111.125
+  ],
+  "boxes": [
+   [
+    70.644,
+    34.925,
+    202.406,
+    111.125
+   ]
+  ],
+  "height_mm": 76.2,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 131.76
+ },
+ "gregandcin/teaqueen\tkeyboard.kicad_pcb": {
+  "bbox": [
+   36.5,
+   67.175,
+   391.5,
+   217.275
+  ],
+  "boxes": [
+   [
+    36.5,
+    67.175,
+    391.5,
+    217.275
+   ]
+  ],
+  "height_mm": 150.1,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 355.0
+ },
+ "gtips/reviung\treviung34/pcb/reviung34.kicad_pcb": {
+  "bbox": [
+   30.763,
+   30.517,
+   245.088,
+   137.59
+  ],
+  "boxes": [
+   [
+    30.763,
+    30.517,
+    245.088,
+    137.59
+   ]
+  ],
+  "height_mm": 107.07,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 214.33
+ },
+ "gtips/reviung\treviung34split/reviung34-split-L/reviung34-split-L.kicad_pcb": {
+  "bbox": [
+   50.002,
+   49.939,
+   150.002,
+   149.94
+  ],
+  "boxes": [
+   [
+    50.002,
+    49.939,
+    150.002,
+    149.94
+   ]
+  ],
+  "height_mm": 100.0,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 100.0
+ },
+ "gtips/reviung\treviung34split/reviung34-split-R/reviung34-split-R.kicad_pcb": {
+  "bbox": [
+   50.01,
+   49.981,
+   150.01,
+   149.981
+  ],
+  "boxes": [
+   [
+    50.01,
+    49.981,
+    150.01,
+    149.981
+   ]
+  ],
+  "height_mm": 100.0,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 100.0
+ },
+ "gtips/reviung\treviung41/pcb/ver1.2/reviung41.kicad_pcb": {
+  "bbox": [
+   17.987,
+   50.095,
+   271.328,
+   157.168
+  ],
+  "boxes": [
+   [
+    17.987,
+    50.095,
+    271.328,
+    157.168
+   ]
+  ],
+  "height_mm": 107.07,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 253.34
+ },
+ "gtips/reviung\treviung41/pcb/ver1.3/reviung41.kicad_pcb": {
+  "bbox": [
+   17.987,
+   50.095,
+   271.328,
+   157.168
+  ],
+  "boxes": [
+   [
+    17.987,
+    50.095,
+    271.328,
+    157.168
+   ]
+  ],
+  "height_mm": 107.07,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 253.34
+ },
+ "gtips/reviung\treviung41/pcb/ver1.4/reviung41.kicad_pcb": {
+  "bbox": [
+   17.987,
+   50.095,
+   271.328,
+   157.168
+  ],
+  "boxes": [
+   [
+    17.987,
+    50.095,
+    271.328,
+    157.168
+   ]
+  ],
+  "height_mm": 107.07,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 253.34
+ },
+ "gtips/reviung\treviung46/pcb/reviung46_ver1_1/reviung46/reviung46.kicad_pcb": {
+  "bbox": [
+   20.295,
+   20.295,
+   305.795,
+   115.295
+  ],
+  "boxes": [
+   [
+    20.295,
+    20.295,
+    305.795,
+    115.295
+   ]
+  ],
+  "height_mm": 95.0,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 285.5
+ },
+ "gtips/reviung\treviung5/pcb/ver1.0/reviung5.kicad_pcb": {
+  "bbox": [
+   30.014,
+   30.235,
+   129.697,
+   81.205
+  ],
+  "boxes": [
+   [
+    30.014,
+    30.235,
+    129.697,
+    81.205
+   ]
+  ],
+  "height_mm": 50.97,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 99.68
+ },
+ "gtips/reviung\treviung53/pcb/main-pcb/reviung53-ver1.0/reviung53.kicad_pcb": {
+  "bbox": [
+   22.79,
+   22.81,
+   284.84,
+   137.223
+  ],
+  "boxes": [
+   [
+    22.79,
+    22.81,
+    284.84,
+    137.223
+   ]
+  ],
+  "height_mm": 114.41,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 262.05
+ },
+ "gtips/reviung\treviung61/pcb/reviung61.kicad_pcb": {
+  "bbox": [
+   20.02,
+   20.02,
+   305.52,
+   115.02
+  ],
+  "boxes": [
+   [
+    20.02,
+    20.02,
+    305.52,
+    115.02
+   ]
+  ],
+  "height_mm": 95.0,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 285.5
+ },
+ "guidoism/andean-condor\tandean-condor.kicad_pcb": {
+  "bbox": [
+   49.753,
+   54.285,
+   341.548,
+   183.304
+  ],
+  "boxes": [
+   [
+    49.753,
+    54.285,
+    341.548,
+    183.304
+   ]
+  ],
+  "height_mm": 129.02,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 291.79
+ },
+ "guidoism/andean-condor\tcenterplate.kicad_pcb": {
+  "bbox": [
+   63.333,
+   48.677,
+   123.519,
+   132.777
+  ],
+  "boxes": [
+   [
+    63.333,
+    48.677,
+    123.519,
+    132.777
+   ]
+  ],
+  "height_mm": 84.1,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 60.19
+ },
+ "guidoism/madjax_macropad\tkicad/macropad.kicad_pcb": {
+  "bbox": [
+   80.512,
+   32.964,
+   156.996,
+   131.976
+  ],
+  "boxes": [
+   [
+    80.512,
+    32.964,
+    156.996,
+    131.976
+   ]
+  ],
+  "height_mm": 99.01,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 76.48
+ },
+ "gumorr/gummykey\tpcbs/left/GummyKey_Left.kicad_pcb": {
+  "bbox": [
+   73.819,
+   42.862,
+   216.694,
+   152.428
+  ],
+  "boxes": [
+   [
+    73.819,
+    42.862,
+    216.694,
+    152.428
+   ]
+  ],
+  "height_mm": 109.57,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 142.88
+ },
+ "gumorr/gummykey\tpcbs/right/GummyKey_Right.kicad_pcb": {
+  "bbox": [
+   74.019,
+   42.862,
+   216.894,
+   152.428
+  ],
+  "boxes": [
+   [
+    74.019,
+    42.862,
+    216.894,
+    152.428
+   ]
+  ],
+  "height_mm": 109.57,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 142.88
+ },
+ "hardware7253/koca58\tPCB/Koca58.kicad_pcb": {
+  "bbox": [
+   59.94,
+   79.0,
+   350.0,
+   210.0
+  ],
+  "boxes": [
+   [
+    59.94,
+    79.0,
+    350.0,
+    210.0
+   ]
+  ],
+  "height_mm": 131.0,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 290.06
+ },
+ "hardware7253/koca58\tPlate/Plate.kicad_pcb": {
+  "bbox": [
+   80.543,
+   46.443,
+   223.065,
+   152.774
+  ],
+  "boxes": [
+   [
+    80.543,
+    46.443,
+    223.065,
+    152.774
+   ]
+  ],
+  "height_mm": 106.33,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 28,
+  "width_mm": 142.52
+ },
+ "hazels-garage/bad-wings\tbold/source/bad_wings_bold.kicad_pcb": {
+  "bbox": [
+   -13.184,
+   -55.951,
+   265.83,
+   50.209
+  ],
+  "boxes": [
+   [
+    -13.184,
+    -55.951,
+    265.83,
+    50.209
+   ]
+  ],
+  "height_mm": 106.16,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 279.01
+ },
+ "hazels-garage/bad-wings\tslim/source/bad_wings_slim.kicad_pcb": {
+  "bbox": [
+   -9.781,
+   -58.279,
+   205.189,
+   37.911
+  ],
+  "boxes": [
+   [
+    -9.781,
+    -58.279,
+    205.189,
+    37.911
+   ]
+  ],
+  "height_mm": 96.19,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 214.97
+ },
+ "hazels-garage/bad-wings\tv2/source/bw2.kicad_pcb": {
+  "bbox": [
+   122.241,
+   102.709,
+   352.043,
+   205.395
+  ],
+  "boxes": [
+   [
+    122.241,
+    102.709,
+    352.043,
+    205.395
+   ]
+  ],
+  "height_mm": 102.69,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 229.8
+ },
+ "hellsingcoder/limekeyboard\tkicad/LimeKeyboard.kicad_pcb": {
+  "bbox": [
+   80.074,
+   42.779,
+   214.718,
+   152.702
+  ],
+  "boxes": [
+   [
+    80.074,
+    42.779,
+    214.718,
+    152.702
+   ]
+  ],
+  "height_mm": 109.92,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 134.64
+ },
+ "horrortroll/keebproj\tpaws60/pcb/rev1/paws-60-pcb.kicad_pcb": {
+  "bbox": [
+   -0.0,
+   -0.0,
+   284.699,
+   94.2
+  ],
+  "boxes": [
+   [
+    -0.0,
+    -0.0,
+    284.699,
+    94.2
+   ]
+  ],
+  "height_mm": 94.2,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 284.7
+ },
+ "hsgw/plaid\tpcb/plaid.kicad_pcb": {
+  "bbox": [
+   50.0,
+   50.0,
+   278.0,
+   148.0
+  ],
+  "boxes": [
+   [
+    50.0,
+    50.0,
+    278.0,
+    148.0
+   ]
+  ],
+  "height_mm": 98.0,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 228.0
+ },
+ "hsgw/tartan\tpcb/tartan.kicad_pcb": {
+  "bbox": [
+   30.0,
+   30.0,
+   315.0,
+   147.0
+  ],
+  "boxes": [
+   [
+    30.0,
+    30.0,
+    315.0,
+    147.0
+   ]
+  ],
+  "height_mm": 117.0,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 285.0
+ },
+ "hyphen-ated/large-lad-keyboard\tlargelad.kicad_pcb": {
+  "bbox": [
+   67.514,
+   110.364,
+   557.986,
+   254.508
+  ],
+  "boxes": [
+   [
+    67.514,
+    110.364,
+    557.986,
+    254.508
+   ]
+  ],
+  "height_mm": 144.14,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 490.47
+ },
+ "hyphen-ated/large-lad-keyboard\tplate/large-lad-plate/large-lad-plate.kicad_pcb": {
+  "bbox": [
+   48.944,
+   77.3,
+   543.482,
+   244.176
+  ],
+  "boxes": [
+   [
+    48.944,
+    77.3,
+    543.482,
+    244.176
+   ]
+  ],
+  "height_mm": 166.88,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 140,
+  "width_mm": 494.54
+ },
+ "ianklug/grooveboard\tgrooveboard-atmel-au/grooveboard-atmel-au.kicad_pcb": {
+  "bbox": [
+   39.632,
+   22.86,
+   157.737,
+   45.72
+  ],
+  "boxes": [
+   [
+    39.632,
+    22.86,
+    157.737,
+    45.72
+   ]
+  ],
+  "height_mm": 22.86,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 118.1
+ },
+ "ianklug/grooveboard\tgrooveboard-atmel-mu/grooveboard-atmel-mu.kicad_pcb": {
+  "bbox": [
+   39.632,
+   22.86,
+   157.737,
+   45.72
+  ],
+  "boxes": [
+   [
+    39.632,
+    22.86,
+    157.737,
+    45.72
+   ]
+  ],
+  "height_mm": 22.86,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 118.1
+ },
+ "ianklug/grooveboard\tgrooveboard-choc-atmel-au/grooveboard-choc-atmel-au.kicad_pcb": {
+  "bbox": [
+   39.632,
+   22.86,
+   157.737,
+   45.72
+  ],
+  "boxes": [
+   [
+    39.632,
+    22.86,
+    157.737,
+    45.72
+   ]
+  ],
+  "height_mm": 22.86,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 118.1
+ },
+ "ianklug/grooveboard\tgrooveboard-choc-atmel-mu/grooveboard-choc-atmel-mu.kicad_pcb": {
+  "bbox": [
+   39.632,
+   22.86,
+   157.737,
+   45.72
+  ],
+  "boxes": [
+   [
+    39.632,
+    22.86,
+    157.737,
+    45.72
+   ]
+  ],
+  "height_mm": 22.86,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 118.1
+ },
+ "ianklug/grooveboard\tgrooveboard-choc-rp/grooveboard-choc-rp.kicad_pcb": {
+  "bbox": [
+   20.0,
+   20.0,
+   140.0,
+   45.0
+  ],
+  "boxes": [
+   [
+    20.0,
+    20.0,
+    140.0,
+    45.0
+   ]
+  ],
+  "height_mm": 25.0,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 120.0
+ },
+ "ianklug/grooveboard\tgrooveboard-mx-atmel-au/grooveboard-mx-atmel-au.kicad_pcb": {
+  "bbox": [
+   39.632,
+   22.86,
+   157.737,
+   45.72
+  ],
+  "boxes": [
+   [
+    39.632,
+    22.86,
+    157.737,
+    45.72
+   ]
+  ],
+  "height_mm": 22.86,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 118.1
+ },
+ "ianklug/grooveboard\tgrooveboard-mx-atmel-mu/grooveboard-mx-atmel-mu.kicad_pcb": {
+  "bbox": [
+   39.632,
+   22.86,
+   157.737,
+   45.72
+  ],
+  "boxes": [
+   [
+    39.632,
+    22.86,
+    157.737,
+    45.72
+   ]
+  ],
+  "height_mm": 22.86,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 118.1
+ },
+ "ianklug/grooveboard\tgrooveboard-mx-rp/grooveboard-mx-rp.kicad_pcb": {
+  "bbox": [
+   20.0,
+   20.0,
+   140.0,
+   45.0
+  ],
+  "boxes": [
+   [
+    20.0,
+    20.0,
+    140.0,
+    45.0
+   ]
+  ],
+  "height_mm": 25.0,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 120.0
+ },
+ "ianklug/grooveboard\tgrooveboard-rp/grooveboard-rp.kicad_pcb": {
+  "bbox": [
+   20.0,
+   20.0,
+   140.0,
+   45.0
+  ],
+  "boxes": [
+   [
+    20.0,
+    20.0,
+    140.0,
+    45.0
+   ]
+  ],
+  "height_mm": 25.0,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 120.0
+ },
+ "ibnuda/squiggle\t36/squiggle-36.kicad_pcb": {
+  "bbox": [
+   19.989,
+   10.954,
+   136.0,
+   126.247
+  ],
+  "boxes": [
+   [
+    19.989,
+    10.954,
+    136.0,
+    126.247
+   ]
+  ],
+  "height_mm": 115.29,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 116.01
+ },
+ "ibnuda/squiggle\tgoldberg/squiggle-goldberg.kicad_pcb": {
+  "bbox": [
+   19.989,
+   10.954,
+   136.0,
+   126.247
+  ],
+  "boxes": [
+   [
+    19.989,
+    10.954,
+    136.0,
+    126.247
+   ]
+  ],
+  "height_mm": 115.29,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 116.01
+ },
+ "ibnuda/squiggle\tlopro/squiggle-lopro.kicad_pcb": {
+  "bbox": [
+   24.326,
+   16.954,
+   136.0,
+   125.166
+  ],
+  "boxes": [
+   [
+    24.326,
+    16.954,
+    136.0,
+    125.166
+   ]
+  ],
+  "height_mm": 108.21,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 111.67
+ },
+ "ibnuda/squiggle\tminimalist/squiggle-minimalist.kicad_pcb": {
+  "bbox": [
+   19.989,
+   10.954,
+   256.061,
+   126.247
+  ],
+  "boxes": [
+   [
+    19.989,
+    10.954,
+    256.061,
+    126.247
+   ]
+  ],
+  "height_mm": 115.29,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 236.07
+ },
+ "ibnuda/squiggle\tstandard/squiggle-standard.kicad_pcb": {
+  "bbox": [
+   19.989,
+   10.954,
+   136.0,
+   126.247
+  ],
+  "boxes": [
+   [
+    19.989,
+    10.954,
+    136.0,
+    126.247
+   ]
+  ],
+  "height_mm": 115.29,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 116.01
+ },
+ "idank/keyboards\tsweeq mx/sweeq mx.kicad_pcb": {
+  "bbox": [
+   -191.403,
+   -62.983,
+   -6.385,
+   50.914
+  ],
+  "boxes": [
+   [
+    -191.403,
+    -62.983,
+    -96.252,
+    50.483
+   ],
+   [
+    -101.536,
+    -62.552,
+    -6.385,
+    50.914
+   ]
+  ],
+  "height_mm": 113.9,
+  "layers": 2,
+  "pieces": 2,
+  "switch_cutouts": 0,
+  "width_mm": 185.02
+ },
+ "idank/keyboards\tsweeq/sweeq.kicad_pcb": {
+  "bbox": [
+   54.7,
+   42.778,
+   270.866,
+   129.653
+  ],
+  "boxes": [
+   [
+    163.632,
+    42.778,
+    270.866,
+    129.642
+   ],
+   [
+    54.7,
+    42.789,
+    161.934,
+    129.653
+   ]
+  ],
+  "height_mm": 86.87,
+  "layers": 2,
+  "pieces": 2,
+  "switch_cutouts": 13,
+  "width_mm": 216.17
+ },
+ "idank/spankbd\tpcb/span.kicad_pcb": {
+  "bbox": [
+   15.609,
+   37.344,
+   247.564,
+   132.653
+  ],
+  "boxes": [
+   [
+    135.929,
+    37.406,
+    247.564,
+    132.653
+   ],
+   [
+    15.609,
+    37.344,
+    127.243,
+    132.591
+   ]
+  ],
+  "height_mm": 95.31,
+  "layers": 2,
+  "pieces": 2,
+  "switch_cutouts": 0,
+  "width_mm": 231.95
+ },
+ "idank/spankbd\tplate/span.kicad_pcb": {
+  "bbox": [
+   135.929,
+   37.406,
+   247.564,
+   132.653
+  ],
+  "boxes": [
+   [
+    135.929,
+    37.406,
+    247.564,
+    132.653
+   ]
+  ],
+  "height_mm": 95.25,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 16,
+  "width_mm": 111.63
+ },
+ "iktas/pill60\tPill60.kicad_pcb": {
+  "bbox": [
+   53.58,
+   61.508,
+   346.28,
+   184.708
+  ],
+  "boxes": [
+   [
+    53.58,
+    61.508,
+    346.28,
+    184.708
+   ]
+  ],
+  "height_mm": 123.2,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 292.7
+ },
+ "illness072/elephant42\tpcb/elephant42.kicad_pcb": {
+  "bbox": [
+   12.142,
+   11.968,
+   151.966,
+   213.008
+  ],
+  "boxes": [
+   [
+    12.142,
+    11.968,
+    151.966,
+    213.008
+   ]
+  ],
+  "height_mm": 201.04,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 139.82
+ },
+ "imchipwood/dumbpad\thotswap_rgb/dumbpad.kicad_pcb": {
+  "bbox": [
+   100.001,
+   65.754,
+   197.001,
+   144.254
+  ],
+  "boxes": [
+   [
+    100.001,
+    65.754,
+    197.001,
+    144.254
+   ]
+  ],
+  "height_mm": 78.5,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 97.0
+ },
+ "ivndbt/neopad\tNeopad.kicad_pcb": {
+  "bbox": [
+   41.275,
+   50.8,
+   140.494,
+   139.065
+  ],
+  "boxes": [
+   [
+    41.275,
+    50.8,
+    140.494,
+    139.065
+   ]
+  ],
+  "height_mm": 88.27,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 99.22
+ },
+ "jellytitan/sofle-pico\tSofle_Pico/PCB/Sofle_Pico.kicad_pcb": {
+  "bbox": [
+   81.403,
+   33.975,
+   226.825,
+   150.274
+  ],
+  "boxes": [
+   [
+    81.403,
+    33.975,
+    226.825,
+    150.274
+   ]
+  ],
+  "height_mm": 116.3,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 145.42
+ },
+ "jimmerricks/swoop\tpcbs/swoop-mx/swoop-mx.kicad_pcb": {
+  "bbox": [
+   62.257,
+   59.837,
+   176.287,
+   157.628
+  ],
+  "boxes": [
+   [
+    62.257,
+    59.837,
+    176.287,
+    157.628
+   ]
+  ],
+  "height_mm": 97.79,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 114.03
+ },
+ "jimmerricks/swoop\tplates/swoop-mx/swoop-mx-base-plate/swoop-mx-plate-base-plate.kicad_pcb": {
+  "bbox": [
+   62.257,
+   59.837,
+   176.287,
+   157.628
+  ],
+  "boxes": [
+   [
+    62.257,
+    59.837,
+    176.287,
+    157.628
+   ]
+  ],
+  "height_mm": 97.79,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 114.03
+ },
+ "jimmerricks/swoop\tplates/swoop-mx/swoop-mx-cover/swoop-mx-plate-cover.kicad_pcb": {
+  "bbox": [
+   157.506,
+   85.983,
+   176.287,
+   140.764
+  ],
+  "boxes": [
+   [
+    157.506,
+    85.983,
+    176.287,
+    140.764
+   ]
+  ],
+  "height_mm": 54.78,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 18.78
+ },
+ "jimmerricks/swoop\tplates/swoop-mx/swoop-mx-switch-plate/swoop-mx-plate-switch-plate.kicad_pcb": {
+  "bbox": [
+   62.257,
+   59.837,
+   170.477,
+   157.628
+  ],
+  "boxes": [
+   [
+    62.257,
+    59.837,
+    170.477,
+    157.628
+   ]
+  ],
+  "height_mm": 97.79,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 16,
+  "width_mm": 108.22
+ },
+ "joelproko/keyboard_layout_jopr\tkeyboard_layout_jopr.kicad_pcb": {
+  "bbox": [
+   15.875,
+   15.875,
+   444.5,
+   138.906
+  ],
+  "boxes": [
+   [
+    15.875,
+    15.875,
+    444.5,
+    138.906
+   ]
+  ],
+  "height_mm": 123.03,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 428.62
+ },
+ "jonbobcar/tenkey_plusplus\tkicad/tenkey_plusplus.kicad_pcb": {
+  "bbox": [
+   71.497,
+   46.59,
+   148.967,
+   164.7
+  ],
+  "boxes": [
+   [
+    71.497,
+    46.59,
+    148.967,
+    164.7
+   ]
+  ],
+  "height_mm": 118.11,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 77.47
+ },
+ "joric/jorne\tcorne-cherry/pcb/corne-cherry.kicad_pcb": {
+  "bbox": [
+   41.95,
+   61.0,
+   194.75,
+   152.398
+  ],
+  "boxes": [
+   [
+    41.95,
+    61.0,
+    194.75,
+    152.398
+   ]
+  ],
+  "height_mm": 91.4,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 152.8
+ },
+ "joric/jorne\tcorne-cherry/pcb_v3/corne-cherry.kicad_pcb": {
+  "bbox": [
+   -7.81,
+   11.933,
+   304.705,
+   117.638
+  ],
+  "boxes": [
+   [
+    -7.81,
+    11.933,
+    304.705,
+    117.638
+   ]
+  ],
+  "height_mm": 105.71,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 312.51
+ },
+ "joric/jorne\tcorne-classic/pcb/corne-classic.kicad_pcb": {
+  "bbox": [
+   41.949,
+   61.0,
+   194.75,
+   153.185
+  ],
+  "boxes": [
+   [
+    41.949,
+    61.0,
+    194.75,
+    153.185
+   ]
+  ],
+  "height_mm": 92.18,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 152.8
+ },
+ "josefadamcik/soflekeyboard\tSofle_Choc/PCB/SofleKeyboard.kicad_pcb": {
+  "bbox": [
+   82.1,
+   35.0,
+   225.47,
+   146.75
+  ],
+  "boxes": [
+   [
+    82.1,
+    35.0,
+    225.47,
+    146.75
+   ]
+  ],
+  "height_mm": 111.75,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 143.37
+ },
+ "josefadamcik/soflekeyboard\tSofle_v1/PCB/SofleKeyboard.kicad_pcb": {
+  "bbox": [
+   88.274,
+   37.325,
+   225.47,
+   146.572
+  ],
+  "boxes": [
+   [
+    88.274,
+    37.325,
+    225.47,
+    146.572
+   ]
+  ],
+  "height_mm": 109.25,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 137.2
+ },
+ "joshajohnson/hub20\thardware/0.1/Hub20.kicad_pcb": {
+  "bbox": [
+   98.95,
+   35.85,
+   183.2,
+   154.1
+  ],
+  "boxes": [
+   [
+    98.95,
+    35.85,
+    183.2,
+    154.1
+   ]
+  ],
+  "height_mm": 118.25,
+  "layers": 4,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 84.25
+ },
+ "joshajohnson/hub20\thardware/0.2/Hub20.kicad_pcb": {
+  "bbox": [
+   96.7,
+   32.587,
+   185.7,
+   156.613
+  ],
+  "boxes": [
+   [
+    96.7,
+    32.587,
+    185.7,
+    156.613
+   ]
+  ],
+  "height_mm": 124.03,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 89.0
+ },
+ "joshajohnson/hub20\thardware/1.0.1/Hub20.kicad_pcb": {
+  "bbox": [
+   96.7,
+   32.587,
+   185.7,
+   156.613
+  ],
+  "boxes": [
+   [
+    96.7,
+    32.587,
+    185.7,
+    156.613
+   ]
+  ],
+  "height_mm": 124.03,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 89.0
+ },
+ "joshajohnson/hub20\thardware/1.0/Hub20.kicad_pcb": {
+  "bbox": [
+   96.7,
+   32.587,
+   185.7,
+   156.613
+  ],
+  "boxes": [
+   [
+    96.7,
+    32.587,
+    185.7,
+    156.613
+   ]
+  ],
+  "height_mm": 124.03,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 89.0
+ },
+ "jpconstantineau/ergotravel\tPCB_Choc/ErgoTravel.kicad_pcb": {
+  "bbox": [
+   74.93,
+   46.355,
+   212.875,
+   139.019
+  ],
+  "boxes": [
+   [
+    74.93,
+    46.355,
+    212.875,
+    139.019
+   ]
+  ],
+  "height_mm": 92.66,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 137.94
+ },
+ "jpconstantineau/ergotravel\tPCB_Choc_LED/ErgoTravel.kicad_pcb": {
+  "bbox": [
+   74.93,
+   46.355,
+   212.875,
+   139.019
+  ],
+  "boxes": [
+   [
+    74.93,
+    46.355,
+    212.875,
+    139.019
+   ]
+  ],
+  "height_mm": 92.66,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 137.94
+ },
+ "jpconstantineau/ergotravel\tPCB_Choc_RGB/ErgoTravel.kicad_pcb": {
+  "bbox": [
+   74.93,
+   46.355,
+   212.875,
+   139.019
+  ],
+  "boxes": [
+   [
+    74.93,
+    46.355,
+    212.875,
+    139.019
+   ]
+  ],
+  "height_mm": 92.66,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 137.94
+ },
+ "jpskenn/unison\tPCB/Unison.kicad_pcb": {
+  "bbox": [
+   15.2,
+   16.7,
+   300.2,
+   111.8
+  ],
+  "boxes": [
+   [
+    15.2,
+    16.7,
+    300.2,
+    111.8
+   ]
+  ],
+  "height_mm": 95.1,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 285.0
+ },
+ "jpskenn/unison\tPlate_Bottom/Bottom_Plate_for_Jones_and_Unison.kicad_pcb": {
+  "bbox": [
+   32.35,
+   22.55,
+   317.35,
+   117.15
+  ],
+  "boxes": [
+   [
+    32.35,
+    22.55,
+    317.35,
+    117.15
+   ]
+  ],
+  "height_mm": 94.6,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 285.0
+ },
+ "jpskenn/unison\tPlate_Mid/Unison_Plate_Mid.kicad_pcb": {
+  "bbox": [
+   18.1,
+   30.85,
+   303.1,
+   125.95
+  ],
+  "boxes": [
+   [
+    18.1,
+    30.85,
+    303.1,
+    125.95
+   ]
+  ],
+  "height_mm": 95.1,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 285.0
+ },
+ "jpskenn/unison\tPlate_Mid_OP-1/Unison_Plate_Mid.kicad_pcb": {
+  "bbox": [
+   17.05,
+   16.6,
+   302.05,
+   45.1
+  ],
+  "boxes": [
+   [
+    17.05,
+    16.6,
+    302.05,
+    45.1
+   ]
+  ],
+  "height_mm": 28.5,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 285.0
+ },
+ "jrodna/orthocode\torthoCode.kicad_pcb": {
+  "bbox": [
+   25.0,
+   35.0,
+   390.0,
+   195.0
+  ],
+  "boxes": [
+   [
+    25.0,
+    35.0,
+    390.0,
+    195.0
+   ]
+  ],
+  "height_mm": 160.0,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 365.0
+ },
+ "jrodna/orthocode\torthoCodeCase.kicad_pcb": {
+  "bbox": [
+   25.0,
+   35.0,
+   390.0,
+   195.0
+  ],
+  "boxes": [
+   [
+    25.0,
+    35.0,
+    390.0,
+    195.0
+   ]
+  ],
+  "height_mm": 160.0,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 365.0
+ },
+ "jyap808/pando\tkicad/left/pando_left.kicad_pcb": {
+  "bbox": [
+   135.762,
+   91.975,
+   279.834,
+   213.436
+  ],
+  "boxes": [
+   [
+    135.762,
+    91.975,
+    279.834,
+    213.436
+   ]
+  ],
+  "height_mm": 121.46,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 144.07
+ },
+ "jyap808/pando\tkicad/plate/pando_plate.kicad_pcb": {
+  "bbox": [
+   59.472,
+   91.975,
+   203.544,
+   213.436
+  ],
+  "boxes": [
+   [
+    59.472,
+    91.975,
+    203.544,
+    213.436
+   ]
+  ],
+  "height_mm": 121.46,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 27,
+  "width_mm": 144.07
+ },
+ "jyap808/pando\tkicad/right/pando_right.kicad_pcb": {
+  "bbox": [
+   141.456,
+   91.975,
+   285.528,
+   213.436
+  ],
+  "boxes": [
+   [
+    141.456,
+    91.975,
+    285.528,
+    213.436
+   ]
+  ],
+  "height_mm": 121.46,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 144.07
+ },
+ "jyap808/pando58\tergogen/output/pcbs/pando58_left.kicad_pcb": {
+  "bbox": [
+   59.475,
+   101.975,
+   203.544,
+   223.436
+  ],
+  "boxes": [
+   [
+    59.475,
+    101.975,
+    203.544,
+    223.436
+   ]
+  ],
+  "height_mm": 121.46,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 144.07
+ },
+ "jyap808/pando58\tergogen/output/pcbs/pando58_plate.kicad_pcb": {
+  "bbox": [
+   59.475,
+   101.975,
+   203.544,
+   223.436
+  ],
+  "boxes": [
+   [
+    59.475,
+    101.975,
+    203.544,
+    223.436
+   ]
+  ],
+  "height_mm": 121.46,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 27,
+  "width_mm": 144.07
+ },
+ "jyap808/pando58\tergogen/output/pcbs/pando58_right.kicad_pcb": {
+  "bbox": [
+   221.706,
+   101.975,
+   365.775,
+   223.436
+  ],
+  "boxes": [
+   [
+    221.706,
+    101.975,
+    365.775,
+    223.436
+   ]
+  ],
+  "height_mm": 121.46,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 144.07
+ },
+ "kata0510/lily58\tLite_Rev3/Lily58_Lite_Rev3.kicad_pcb": {
+  "bbox": [
+   104.35,
+   50.9,
+   322.85,
+   210.4
+  ],
+  "boxes": [
+   [
+    104.35,
+    50.9,
+    322.85,
+    210.4
+   ]
+  ],
+  "height_mm": 159.5,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 218.5
+ },
+ "kata0510/lily58\tPro/PCB/Lily58_Pro.kicad_pcb": {
+  "bbox": [
+   82.938,
+   37.087,
+   225.46,
+   143.414
+  ],
+  "boxes": [
+   [
+    82.938,
+    37.087,
+    225.46,
+    143.414
+   ]
+  ],
+  "height_mm": 106.33,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 142.52
+ },
+ "kata0510/lily58\tpcb/Lily58.kicad_pcb": {
+  "bbox": [
+   82.938,
+   37.087,
+   225.46,
+   143.414
+  ],
+  "boxes": [
+   [
+    82.938,
+    37.087,
+    225.46,
+    143.414
+   ]
+  ],
+  "height_mm": 106.33,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 142.52
+ },
+ "kaylynb/mechllama-g35\tPCB/G35.kicad_pcb": {
+  "bbox": [
+   77.27,
+   36.286,
+   217.604,
+   155.434
+  ],
+  "boxes": [
+   [
+    77.27,
+    36.286,
+    217.604,
+    155.434
+   ]
+  ],
+  "height_mm": 119.15,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 140.33
+ },
+ "kb-elmo/aek2_usb\taek2_usb.kicad_pcb": {
+  "bbox": [
+   83.82,
+   109.347,
+   522.859,
+   250.952
+  ],
+  "boxes": [
+   [
+    83.82,
+    109.347,
+    522.859,
+    250.952
+   ]
+  ],
+  "height_mm": 141.61,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 439.04
+ },
+ "kb-elmo/bm42\tpcb/bm42.kicad_pcb": {
+  "bbox": [
+   33.653,
+   58.151,
+   261.653,
+   136.152
+  ],
+  "boxes": [
+   [
+    33.653,
+    58.151,
+    261.653,
+    136.152
+   ]
+  ],
+  "height_mm": 78.0,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 228.0
+ },
+ "kb-elmo/dizzy40\tpcb/dizzy40.kicad_pcb": {
+  "bbox": [
+   33.15,
+   57.435,
+   262.15,
+   137.435
+  ],
+  "boxes": [
+   [
+    33.15,
+    57.435,
+    262.15,
+    137.435
+   ]
+  ],
+  "height_mm": 80.0,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 229.0
+ },
+ "kb-elmo/eliza\tpcb/Eliza.kicad_pcb": {
+  "bbox": [
+   20.472,
+   62.21,
+   279.503,
+   150.469
+  ],
+  "boxes": [
+   [
+    20.472,
+    62.21,
+    279.503,
+    150.469
+   ]
+  ],
+  "height_mm": 88.26,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 259.03
+ },
+ "kb-elmo/gamehand\tpcb/GameHand.kicad_pcb": {
+  "bbox": [
+   90.989,
+   31.166,
+   234.681,
+   142.47
+  ],
+  "boxes": [
+   [
+    90.989,
+    31.166,
+    234.681,
+    142.47
+   ]
+  ],
+  "height_mm": 111.3,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 143.69
+ },
+ "kb-elmo/m0110a_usb\tm0110a_qmk.kicad_pcb": {
+  "bbox": [
+   19.558,
+   54.229,
+   399.542,
+   192.151
+  ],
+  "boxes": [
+   [
+    19.558,
+    54.229,
+    399.542,
+    192.151
+   ]
+  ],
+  "height_mm": 137.92,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 379.98
+ },
+ "kb-elmo/m0116_usb\tm0116_usb.kicad_pcb": {
+  "bbox": [
+   24.638,
+   72.39,
+   396.748,
+   186.182
+  ],
+  "boxes": [
+   [
+    24.638,
+    72.39,
+    396.748,
+    186.182
+   ]
+  ],
+  "height_mm": 113.79,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 3,
+  "width_mm": 372.11
+ },
+ "kb-elmo/noah_avr\tnoah.kicad_pcb": {
+  "bbox": [
+   64.211,
+   80.175,
+   365.735,
+   179.083
+  ],
+  "boxes": [
+   [
+    64.211,
+    80.175,
+    365.735,
+    179.083
+   ]
+  ],
+  "height_mm": 98.91,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 301.52
+ },
+ "kb-elmo/numpad\textras/backplate.kicad_pcb": {
+  "bbox": [
+   80.264,
+   43.18,
+   179.578,
+   159.004
+  ],
+  "boxes": [
+   [
+    80.264,
+    43.18,
+    179.578,
+    159.004
+   ]
+  ],
+  "height_mm": 115.82,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 99.31
+ },
+ "kb-elmo/numpad\textras/switchplate.kicad_pcb": {
+  "bbox": [
+   50.922,
+   44.948,
+   130.424,
+   160.772
+  ],
+  "boxes": [
+   [
+    50.922,
+    44.948,
+    130.424,
+    160.772
+   ]
+  ],
+  "height_mm": 115.82,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 18,
+  "width_mm": 79.5
+ },
+ "kb-elmo/numpad\tnumpad.kicad_pcb": {
+  "bbox": [
+   80.264,
+   43.18,
+   179.578,
+   159.004
+  ],
+  "boxes": [
+   [
+    80.264,
+    43.18,
+    179.578,
+    159.004
+   ]
+  ],
+  "height_mm": 115.82,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 99.31
+ },
+ "kb-elmo/sesame\textras/backplate.kicad_pcb": {
+  "bbox": [
+   40.64,
+   65.532,
+   385.064,
+   196.463
+  ],
+  "boxes": [
+   [
+    40.64,
+    65.532,
+    385.064,
+    196.463
+   ]
+  ],
+  "height_mm": 130.93,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 344.42
+ },
+ "kb-elmo/sesame\textras/switchplate.kicad_pcb": {
+  "bbox": [
+   40.64,
+   75.184,
+   385.064,
+   196.463
+  ],
+  "boxes": [
+   [
+    40.64,
+    75.184,
+    385.064,
+    196.463
+   ]
+  ],
+  "height_mm": 121.28,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 22,
+  "width_mm": 344.42
+ },
+ "kb-elmo/sesame\tsesame.kicad_pcb": {
+  "bbox": [
+   40.64,
+   65.532,
+   385.064,
+   196.463
+  ],
+  "boxes": [
+   [
+    40.64,
+    65.532,
+    385.064,
+    196.463
+   ]
+  ],
+  "height_mm": 130.93,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 344.42
+ },
+ "kb-elmo/twelvekey\tpcb/twelvekey.kicad_pcb": {
+  "bbox": [
+   87.782,
+   39.04,
+   162.966,
+   101.676
+  ],
+  "boxes": [
+   [
+    87.782,
+    39.04,
+    162.966,
+    101.676
+   ]
+  ],
+  "height_mm": 62.64,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 75.18
+ },
+ "keawade/keaboard\tCase/BottomPlate/BottomPlate.kicad_pcb": {
+  "bbox": [
+   41.783,
+   41.402,
+   183.642,
+   135.124
+  ],
+  "boxes": [
+   [
+    41.783,
+    41.402,
+    183.642,
+    135.124
+   ]
+  ],
+  "height_mm": 93.72,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 141.86
+ },
+ "keawade/keaboard\tCase/TopPlate/TopPlate.kicad_pcb": {
+  "bbox": [
+   30.607,
+   30.48,
+   172.466,
+   124.202
+  ],
+  "boxes": [
+   [
+    30.607,
+    30.48,
+    172.466,
+    124.202
+   ]
+  ],
+  "height_mm": 93.72,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 22,
+  "width_mm": 141.86
+ },
+ "keawade/keaboard\tPCB/keaboard_rev1/keaboard_rev1.kicad_pcb": {
+  "bbox": [
+   29.845,
+   57.19,
+   171.704,
+   150.912
+  ],
+  "boxes": [
+   [
+    29.845,
+    57.19,
+    171.704,
+    150.912
+   ]
+  ],
+  "height_mm": 93.72,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 141.86
+ },
+ "keebio/bfo9000-pcb\tbfo9000.kicad_pcb": {
+  "bbox": [
+   47.625,
+   42.565,
+   219.075,
+   159.544
+  ],
+  "boxes": [
+   [
+    47.625,
+    42.565,
+    219.075,
+    159.544
+   ]
+  ],
+  "height_mm": 116.98,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 171.45
+ },
+ "keebio/fourier\tfourier/fourier-left/fourier-left.kicad_pcb": {
+  "bbox": [
+   16.669,
+   9.525,
+   141.089,
+   89.892
+  ],
+  "boxes": [
+   [
+    16.669,
+    9.525,
+    141.089,
+    89.892
+   ]
+  ],
+  "height_mm": 80.37,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 124.42
+ },
+ "keebio/fourier\tfourier/fourier-right/fourier-right.kicad_pcb": {
+  "bbox": [
+   26.789,
+   17.859,
+   155.972,
+   98.226
+  ],
+  "boxes": [
+   [
+    26.789,
+    17.859,
+    155.972,
+    98.226
+   ]
+  ],
+  "height_mm": 80.37,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 129.18
+ },
+ "keebio/quefrency-rev1-pcb\tquefrency-right-65/quefrency-right-65.kicad_pcb": {
+  "bbox": [
+   16.669,
+   17.859,
+   195.262,
+   117.276
+  ],
+  "boxes": [
+   [
+    16.669,
+    17.859,
+    195.262,
+    117.276
+   ]
+  ],
+  "height_mm": 99.42,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 178.59
+ },
+ "keebio/quefrency-rev1-pcb\tspectrogram-left/quefrency-left-macro.kicad_pcb": {
+  "bbox": [
+   35.719,
+   17.859,
+   216.694,
+   117.277
+  ],
+  "boxes": [
+   [
+    35.719,
+    17.859,
+    216.694,
+    117.277
+   ]
+  ],
+  "height_mm": 99.42,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 180.97
+ },
+ "kelvinhall05/southpaw75\tISO PCB/southpawpcb.kicad_pcb": {
+  "bbox": [
+   13.838,
+   -25.019,
+   376.738,
+   78.531
+  ],
+  "boxes": [
+   [
+    13.838,
+    -25.019,
+    376.738,
+    78.531
+   ]
+  ],
+  "height_mm": 103.55,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 362.9
+ },
+ "kelvinhall05/southpaw75\tPCB/southpawpcb.kicad_pcb": {
+  "bbox": [
+   13.838,
+   -25.019,
+   376.738,
+   78.531
+  ],
+  "boxes": [
+   [
+    13.838,
+    -25.019,
+    376.738,
+    78.531
+   ]
+  ],
+  "height_mm": 103.55,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 362.9
+ },
+ "keyzog/kapl\tpcb/Kapl.kicad_pcb": {
+  "bbox": [
+   65.024,
+   33.799,
+   206.484,
+   149.797
+  ],
+  "boxes": [
+   [
+    65.024,
+    33.799,
+    206.484,
+    149.797
+   ]
+  ],
+  "height_mm": 116.0,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 141.46
+ },
+ "kkatano/bakeneko-65\tpcb/bakeneko-65-pcb.kicad_pcb": {
+  "bbox": [
+   0.0,
+   0.0,
+   303.75,
+   94.2
+  ],
+  "boxes": [
+   [
+    0.0,
+    0.0,
+    303.75,
+    94.2
+   ]
+  ],
+  "height_mm": 94.2,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 303.75
+ },
+ "kkatano/bakeneko-65\tplate/fr4/bakeneko-65-fr4-plate.kicad_pcb": {
+  "bbox": [
+   -3.938,
+   20.025,
+   300.863,
+   115.275
+  ],
+  "boxes": [
+   [
+    -3.938,
+    20.025,
+    300.863,
+    115.275
+   ]
+  ],
+  "height_mm": 95.25,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 58,
+  "width_mm": 304.8
+ },
+ "knaruo/barracuda\tpcb/barracuda/barracuda.kicad_pcb": {
+  "bbox": [
+   39.37,
+   39.37,
+   308.356,
+   99.06
+  ],
+  "boxes": [
+   [
+    39.37,
+    39.37,
+    308.356,
+    99.06
+   ]
+  ],
+  "height_mm": 59.69,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 268.99
+ },
+ "knaruo/pisces\tpcb/pisces/pisces.kicad_pcb": {
+  "bbox": [
+   38.1,
+   34.29,
+   193.04,
+   100.33
+  ],
+  "boxes": [
+   [
+    38.1,
+    34.29,
+    193.04,
+    100.33
+   ]
+  ],
+  "height_mm": 66.04,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 154.94
+ },
+ "knaruo/pisces\tpcb/v2/pisces.kicad_pcb": {
+  "bbox": [
+   46.121,
+   30.607,
+   183.916,
+   90.678
+  ],
+  "boxes": [
+   [
+    46.121,
+    30.607,
+    183.916,
+    90.678
+   ]
+  ],
+  "height_mm": 60.07,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 137.8
+ },
+ "kraken-jokes/pteron-pcb\tKiCAD and GERBER/OLD versions/Pteron56v0.kicad_pcb": {
+  "bbox": [
+   9.349,
+   26.572,
+   303.091,
+   180.548
+  ],
+  "boxes": [
+   [
+    9.349,
+    26.572,
+    303.091,
+    180.548
+   ]
+  ],
+  "height_mm": 153.98,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 293.74
+ },
+ "kulmajaba/tunks-keyboard\tergo33/ergo33.kicad_pcb": {
+  "bbox": [
+   23.812,
+   18.761,
+   197.662,
+   135.849
+  ],
+  "boxes": [
+   [
+    23.812,
+    18.761,
+    197.662,
+    135.849
+   ]
+  ],
+  "height_mm": 117.09,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 173.85
+ },
+ "kyleterry/spacetime-keyboard\tspacetime.kicad_pcb": {
+  "bbox": [
+   67.0,
+   27.0,
+   225.0,
+   141.821
+  ],
+  "boxes": [
+   [
+    67.0,
+    27.0,
+    225.0,
+    141.821
+   ]
+  ],
+  "height_mm": 114.82,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 158.0
+ },
+ "kyrremann/bartlesplit\tbartlepslit.kicad_pcb": {
+  "bbox": [
+   26.561,
+   20.192,
+   363.22,
+   139.822
+  ],
+  "boxes": [
+   [
+    26.561,
+    20.192,
+    363.22,
+    139.822
+   ]
+  ],
+  "height_mm": 119.63,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 336.66
+ },
+ "kyrremann/index-tab\tkicad/index-tab.kicad_pcb": {
+  "bbox": [
+   25.0,
+   25.0,
+   279.0,
+   165.0
+  ],
+  "boxes": [
+   [
+    25.0,
+    25.0,
+    279.0,
+    165.0
+   ]
+  ],
+  "height_mm": 140.0,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 254.0
+ },
+ "ladniy/jiran\tjiran-cherry/jiran-cherry.kicad_pcb": {
+  "bbox": [
+   77.16,
+   30.108,
+   229.51,
+   134.833
+  ],
+  "boxes": [
+   [
+    77.16,
+    30.108,
+    229.51,
+    134.833
+   ]
+  ],
+  "height_mm": 104.73,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 152.35
+ },
+ "ladniy/jiran\tjiran-classic/jiran-classic.kicad_pcb": {
+  "bbox": [
+   77.16,
+   30.108,
+   229.51,
+   134.833
+  ],
+  "boxes": [
+   [
+    77.16,
+    30.108,
+    229.51,
+    134.833
+   ]
+  ],
+  "height_mm": 104.73,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 152.35
+ },
+ "ladniy/jiran\tjiran-hotswap/jiran-hotswap.kicad_pcb": {
+  "bbox": [
+   77.16,
+   30.108,
+   229.51,
+   134.833
+  ],
+  "boxes": [
+   [
+    77.16,
+    30.108,
+    229.51,
+    134.833
+   ]
+  ],
+  "height_mm": 104.73,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 152.35
+ },
+ "lendunistus/rpneko65\tpcb/rp2040-bakeneko65.kicad_pcb": {
+  "bbox": [
+   59.648,
+   83.561,
+   363.398,
+   177.761
+  ],
+  "boxes": [
+   [
+    59.648,
+    83.561,
+    363.398,
+    177.761
+   ]
+  ],
+  "height_mm": 94.2,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 303.75
+ },
+ "lendunistus/rpneko65\tplate/kicad-fr4-plate/rpneko65-fr4-plate.kicad_pcb": {
+  "bbox": [
+   54.977,
+   94.966,
+   359.778,
+   190.216
+  ],
+  "boxes": [
+   [
+    54.977,
+    94.966,
+    359.778,
+    190.216
+   ]
+  ],
+  "height_mm": 95.25,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 56,
+  "width_mm": 304.8
+ },
+ "lendunistus/rpneko65\tplate/kicad-plate/rp2040-bakeneko65.kicad_pcb": {
+  "bbox": [
+   59.648,
+   83.561,
+   363.398,
+   177.761
+  ],
+  "boxes": [
+   [
+    59.648,
+    83.561,
+    363.398,
+    177.761
+   ]
+  ],
+  "height_mm": 94.2,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 79,
+  "width_mm": 303.75
+ },
+ "lighteningab/45keyboard_v1\t45_keyboard/45_keyboard.kicad_pcb": {
+  "bbox": [
+   61.119,
+   55.562,
+   346.869,
+   132.556
+  ],
+  "boxes": [
+   [
+    61.119,
+    55.562,
+    346.869,
+    132.556
+   ]
+  ],
+  "height_mm": 76.99,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 285.75
+ },
+ "lyso1/lck75\tLCK75gerbers&parts/LCK75.kicad_pcb": {
+  "bbox": [
+   -12.826,
+   -2.845,
+   304.449,
+   151.93
+  ],
+  "boxes": [
+   [
+    -12.826,
+    -2.845,
+    304.449,
+    151.93
+   ]
+  ],
+  "height_mm": 154.77,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 317.28
+ },
+ "lyso1/lck75\tLCK75gerbers&parts/LCK75PLATE/lckplate.kicad_pcb": {
+  "bbox": [
+   -6.48,
+   16.61,
+   310.795,
+   141.909
+  ],
+  "boxes": [
+   [
+    -6.48,
+    16.61,
+    310.795,
+    141.909
+   ]
+  ],
+  "height_mm": 125.3,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 74,
+  "width_mm": 317.28
+ },
+ "makenova/omega\tomega_hotswap/omega.kicad_pcb": {
+  "bbox": [
+   55.245,
+   39.624,
+   256.032,
+   98.552
+  ],
+  "boxes": [
+   [
+    55.245,
+    39.624,
+    256.032,
+    98.552
+   ]
+  ],
+  "height_mm": 58.93,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 200.79
+ },
+ "makenova/omega\tomega_soldered/omega_4_solder.kicad_pcb": {
+  "bbox": [
+   48.775,
+   54.225,
+   253.575,
+   132.225
+  ],
+  "boxes": [
+   [
+    48.775,
+    54.225,
+    253.575,
+    132.225
+   ]
+  ],
+  "height_mm": 78.0,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 204.8
+ },
+ "makenova/omega\tomega_soldered/omega_solder.kicad_pcb": {
+  "bbox": [
+   55.245,
+   39.624,
+   256.032,
+   98.552
+  ],
+  "boxes": [
+   [
+    55.245,
+    39.624,
+    256.032,
+    98.552
+   ]
+  ],
+  "height_mm": 58.93,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 200.79
+ },
+ "makotokurauchi/helix\tPCB/beta/helix.kicad_pcb": {
+  "bbox": [
+   83.0,
+   44.0,
+   215.0,
+   138.0
+  ],
+  "boxes": [
+   [
+    83.0,
+    44.0,
+    215.0,
+    138.0
+   ]
+  ],
+  "height_mm": 94.0,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 132.0
+ },
+ "marksard/keyboards\trhymestone/pcb/rev1.0/Rhymestone.kicad_pcb": {
+  "bbox": [
+   76.2,
+   38.1,
+   171.455,
+   133.351
+  ],
+  "boxes": [
+   [
+    76.2,
+    38.1,
+    171.455,
+    133.351
+   ]
+  ],
+  "height_mm": 95.25,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 95.26
+ },
+ "marksard/keyboards\ttreadstone32/pcb/rev1.1/Treadstone32.kicad_pcb": {
+  "bbox": [
+   101.135,
+   57.532,
+   299.977,
+   133.284
+  ],
+  "boxes": [
+   [
+    101.135,
+    57.532,
+    299.977,
+    133.284
+   ]
+  ],
+  "height_mm": 75.75,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 198.84
+ },
+ "marvfpv/adalyn\tPCB/Adalyn.kicad_pcb": {
+  "bbox": [
+   35.386,
+   43.931,
+   253.108,
+   129.275
+  ],
+  "boxes": [
+   [
+    35.386,
+    43.931,
+    253.108,
+    129.275
+   ]
+  ],
+  "height_mm": 85.34,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 217.72
+ },
+ "marvfpv/friedrich\tPCB/FriedrichPCB.kicad_pcb": {
+  "bbox": [
+   25.365,
+   47.692,
+   272.018,
+   141.919
+  ],
+  "boxes": [
+   [
+    25.365,
+    47.692,
+    272.018,
+    141.919
+   ]
+  ],
+  "height_mm": 94.23,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 246.65
+ },
+ "mattdibi/redox-keyboard\tredox/pcb/rev1.0/kicad_files/redox_rev1.kicad_pcb": {
+  "bbox": [
+   79.502,
+   48.768,
+   241.681,
+   175.26
+  ],
+  "boxes": [
+   [
+    79.502,
+    48.768,
+    241.681,
+    175.26
+   ]
+  ],
+  "height_mm": 126.49,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 162.18
+ },
+ "matthewdias/m3n3van\trev2/m3n3van.kicad_pcb": {
+  "bbox": [
+   189.178,
+   175.683,
+   431.536,
+   251.354
+  ],
+  "boxes": [
+   [
+    189.178,
+    175.683,
+    431.536,
+    251.354
+   ]
+  ],
+  "height_mm": 75.67,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 242.36
+ },
+ "matthewdias/minim\tPCB/minim.kicad_pcb": {
+  "bbox": [
+   0.0,
+   -3.556,
+   276.225,
+   76.2
+  ],
+  "boxes": [
+   [
+    0.0,
+    -3.556,
+    276.225,
+    76.2
+   ]
+  ],
+  "height_mm": 79.76,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 276.23
+ },
+ "minibois/elixivy\tmini-eLiXiVy.kicad_pcb": {
+  "bbox": [
+   13.995,
+   15.97,
+   316.205,
+   109.442
+  ],
+  "boxes": [
+   [
+    13.995,
+    15.97,
+    316.205,
+    109.442
+   ]
+  ],
+  "height_mm": 93.47,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 302.21
+ },
+ "minibois/ten-key-plus\tmini-ten-key-plus.kicad_pcb": {
+  "bbox": [
+   30.956,
+   14.287,
+   126.206,
+   109.537
+  ],
+  "boxes": [
+   [
+    30.956,
+    14.287,
+    126.206,
+    109.537
+   ]
+  ],
+  "height_mm": 95.25,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 95.25
+ },
+ "misonoworks/chocolate-bar\tv2_kicad/chocolatebar.kicad_pcb": {
+  "bbox": [
+   23.0,
+   8.52,
+   324.3,
+   97.98
+  ],
+  "boxes": [
+   [
+    23.0,
+    8.52,
+    324.3,
+    97.98
+   ]
+  ],
+  "height_mm": 89.46,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 301.3
+ },
+ "misonoworks/chocolate-bar\tv2_plate_kicad/chocolatebarplate.kicad_pcb": {
+  "bbox": [
+   -20.301,
+   45.976,
+   298.699,
+   152.276
+  ],
+  "boxes": [
+   [
+    -20.301,
+    45.976,
+    298.699,
+    152.276
+   ]
+  ],
+  "height_mm": 106.3,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 319.0
+ },
+ "mkdl/unix60\tPCB/unix60pcb.kicad_pcb": {
+  "bbox": [
+   11.906,
+   2.381,
+   297.656,
+   109.538
+  ],
+  "boxes": [
+   [
+    11.906,
+    2.381,
+    297.656,
+    109.538
+   ]
+  ],
+  "height_mm": 107.16,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 285.75
+ },
+ "mkdl/unix60\tPlate/unix60plate.kicad_pcb": {
+  "bbox": [
+   -2.381,
+   35.719,
+   302.419,
+   150.019
+  ],
+  "boxes": [
+   [
+    -2.381,
+    35.719,
+    302.419,
+    150.019
+   ]
+  ],
+  "height_mm": 114.3,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 52,
+  "width_mm": 304.8
+ },
+ "mmccoyd/hillside\thillside46/hillside46.kicad_pcb": {
+  "bbox": [
+   74.076,
+   40.689,
+   216.566,
+   140.563
+  ],
+  "boxes": [
+   [
+    74.076,
+    40.689,
+    216.566,
+    140.563
+   ]
+  ],
+  "height_mm": 99.87,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 142.49
+ },
+ "mmccoyd/hillside\thillside48/hillside.kicad_pcb": {
+  "bbox": [
+   87.25,
+   54.75,
+   224.075,
+   153.364
+  ],
+  "boxes": [
+   [
+    87.25,
+    54.75,
+    224.075,
+    153.364
+   ]
+  ],
+  "height_mm": 98.61,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 136.83
+ },
+ "mmccoyd/hillside\thillside52/hillside52.kicad_pcb": {
+  "bbox": [
+   80.109,
+   51.733,
+   222.603,
+   151.606
+  ],
+  "boxes": [
+   [
+    80.109,
+    51.733,
+    222.603,
+    151.606
+   ]
+  ],
+  "height_mm": 99.87,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 142.49
+ },
+ "mohoyt/lagom\tPCB/lagom.kicad_pcb": {
+  "bbox": [
+   52.525,
+   35.812,
+   358.125,
+   157.575
+  ],
+  "boxes": [
+   [
+    52.525,
+    35.812,
+    358.125,
+    157.575
+   ]
+  ],
+  "height_mm": 121.76,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 305.6
+ },
+ "mohoyt/lagom\tPCB/lagom_plate/lagom_plate.kicad_pcb": {
+  "bbox": [
+   45.362,
+   42.975,
+   365.288,
+   171.9
+  ],
+  "boxes": [
+   [
+    45.362,
+    42.975,
+    365.288,
+    171.9
+   ]
+  ],
+  "height_mm": 128.93,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 60,
+  "width_mm": 319.93
+ },
+ "mohoyt/litl\tPCB/litl.kicad_pcb": {
+  "bbox": [
+   23.875,
+   24.375,
+   272.175,
+   124.15
+  ],
+  "boxes": [
+   [
+    23.875,
+    24.375,
+    272.175,
+    124.15
+   ]
+  ],
+  "height_mm": 99.78,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 248.3
+ },
+ "mohoyt/litl\tPCB/litl_base_plate/litl_base_plate.kicad_pcb": {
+  "bbox": [
+   19.1,
+   16.712,
+   281.725,
+   124.15
+  ],
+  "boxes": [
+   [
+    19.1,
+    16.712,
+    281.725,
+    124.15
+   ]
+  ],
+  "height_mm": 107.44,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 262.63
+ },
+ "mohoyt/litl\tPCB/litl_plate/litl_plate.kicad_pcb": {
+  "bbox": [
+   19.225,
+   66.85,
+   281.85,
+   150.412
+  ],
+  "boxes": [
+   [
+    19.225,
+    66.85,
+    281.85,
+    150.412
+   ]
+  ],
+  "height_mm": 83.56,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 36,
+  "width_mm": 262.63
+ },
+ "mythosmann/tg4x\tKiCad/TG4x.kicad_pcb": {
+  "bbox": [
+   13.97,
+   13.97,
+   256.921,
+   86.665
+  ],
+  "boxes": [
+   [
+    13.97,
+    13.97,
+    256.921,
+    86.665
+   ]
+  ],
+  "height_mm": 72.69,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 242.95
+ },
+ "na-cly/UA62\tpcb/UA62.kicad_pcb": {
+  "bbox": [
+   13.293,
+   41.231,
+   283.251,
+   154.26
+  ],
+  "boxes": [
+   [
+    13.293,
+    41.231,
+    283.251,
+    154.26
+   ]
+  ],
+  "height_mm": 113.03,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 269.96
+ },
+ "na-cly/juliet\tjuliet-pcb.kicad_pcb": {
+  "bbox": [
+   23.654,
+   43.199,
+   271.304,
+   142.401
+  ],
+  "boxes": [
+   [
+    23.654,
+    43.199,
+    271.304,
+    142.401
+   ]
+  ],
+  "height_mm": 99.2,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 247.65
+ },
+ "na-cly/splitreus62\tsplitreus.kicad_pcb": {
+  "bbox": [
+   -7.75,
+   -15.0,
+   124.75,
+   86.0
+  ],
+  "boxes": [
+   [
+    -7.75,
+    -15.0,
+    124.75,
+    86.0
+   ]
+  ],
+  "height_mm": 101.0,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 132.5
+ },
+ "narinari/xenon-keyboard\txenon-e/bottom-plate/bottom-plate.kicad_pcb": {
+  "bbox": [
+   146.714,
+   21.675,
+   252.214,
+   155.383
+  ],
+  "boxes": [
+   [
+    146.714,
+    21.675,
+    252.214,
+    155.383
+   ]
+  ],
+  "height_mm": 133.71,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 105.5
+ },
+ "narinari/xenon-keyboard\txenon-e/top-plate/top-plate.kicad_pcb": {
+  "bbox": [
+   183.338,
+   24.642,
+   270.27,
+   157.307
+  ],
+  "boxes": [
+   [
+    183.338,
+    24.642,
+    270.27,
+    157.307
+   ]
+  ],
+  "height_mm": 132.66,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 22,
+  "width_mm": 86.93
+ },
+ "narinari/xenon-keyboard\txenon-e/xenon-e.kicad_pcb": {
+  "bbox": [
+   82.331,
+   33.007,
+   216.039,
+   138.507
+  ],
+  "boxes": [
+   [
+    82.331,
+    33.007,
+    216.039,
+    138.507
+   ]
+  ],
+  "height_mm": 105.5,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 133.71
+ },
+ "narinari/xenon-keyboard\txenon-e/xenon-e_plate_tiled.kicad_pcb": {
+  "bbox": [
+   62.864,
+   22.275,
+   259.132,
+   155.983
+  ],
+  "boxes": [
+   [
+    62.864,
+    22.275,
+    168.364,
+    155.983
+   ],
+   [
+    172.296,
+    22.437,
+    259.132,
+    154.36
+   ]
+  ],
+  "height_mm": 133.71,
+  "layers": 2,
+  "pieces": 2,
+  "switch_cutouts": 23,
+  "width_mm": 196.27
+ },
+ "ncwhale/keyboard_design\tSplite-Keyboard-v2/Keyboar-layout.kicad_pcb": {
+  "bbox": [
+   17.0,
+   17.0,
+   207.645,
+   169.545
+  ],
+  "boxes": [
+   [
+    17.0,
+    17.0,
+    207.645,
+    169.545
+   ]
+  ],
+  "height_mm": 152.54,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 190.65
+ },
+ "nglgzz/42\tpcb/kicad/pcb.kicad_pcb": {
+  "bbox": [
+   9.601,
+   53.445,
+   312.601,
+   156.445
+  ],
+  "boxes": [
+   [
+    9.601,
+    53.445,
+    312.601,
+    156.445
+   ]
+  ],
+  "height_mm": 103.0,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 303.0
+ },
+ "nickolaij/Abacus_Rev2\tAbacusPCB/AbacusPCB.kicad_pcb": {
+  "bbox": [
+   84.138,
+   108.744,
+   349.25,
+   184.944
+  ],
+  "boxes": [
+   [
+    84.138,
+    108.744,
+    349.25,
+    184.944
+   ]
+  ],
+  "height_mm": 76.2,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 265.11
+ },
+ "nilokr/cantor-remix\tpcb/keyboard_pcb.kicad_pcb": {
+  "bbox": [
+   81.9,
+   43.4,
+   202.8,
+   133.314
+  ],
+  "boxes": [
+   [
+    81.9,
+    43.4,
+    202.8,
+    133.314
+   ]
+  ],
+  "height_mm": 89.91,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 120.9
+ },
+ "null-ll/basketweave\tbasketweave/basketweave.kicad_pcb": {
+  "bbox": [
+   25.4,
+   80.169,
+   396.875,
+   225.425
+  ],
+  "boxes": [
+   [
+    25.4,
+    80.169,
+    396.875,
+    225.425
+   ]
+  ],
+  "height_mm": 145.26,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 371.48
+ },
+ "null-ll/basketweave\tbasketweave_plate/basketweave_plate.kicad_pcb": {
+  "bbox": [
+   23.019,
+   40.481,
+   394.494,
+   159.544
+  ],
+  "boxes": [
+   [
+    23.019,
+    40.481,
+    394.494,
+    159.544
+   ]
+  ],
+  "height_mm": 119.06,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 27,
+  "width_mm": 371.47
+ },
+ "nut1414/np12\tnp12.kicad_pcb": {
+  "bbox": [
+   89.0,
+   29.0,
+   167.0,
+   110.0
+  ],
+  "boxes": [
+   [
+    89.0,
+    29.0,
+    167.0,
+    110.0
+   ]
+  ],
+  "height_mm": 81.0,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 78.0
+ },
+ "obosob/steal_this_keyboard\tsteal_this_keyboard.kicad_pcb": {
+  "bbox": [
+   27.0,
+   59.5,
+   135.0,
+   133.875
+  ],
+  "boxes": [
+   [
+    27.0,
+    59.5,
+    135.0,
+    133.875
+   ]
+  ],
+  "height_mm": 74.38,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 108.0
+ },
+ "oliviahanley/wren-keyboard\tPCBs/legacy/wren-nav/wren-nav.kicad_pcb": {
+  "bbox": [
+   56.35,
+   18.256,
+   265.011,
+   131.096
+  ],
+  "boxes": [
+   [
+    56.35,
+    18.256,
+    265.011,
+    131.096
+   ]
+  ],
+  "height_mm": 112.84,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 208.66
+ },
+ "oliviahanley/wren-keyboard\tPCBs/legacy/wren-numpad/wren-numpad.kicad_pcb": {
+  "bbox": [
+   37.358,
+   18.256,
+   265.011,
+   131.096
+  ],
+  "boxes": [
+   [
+    37.358,
+    18.256,
+    265.011,
+    131.096
+   ]
+  ],
+  "height_mm": 112.84,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 227.65
+ },
+ "oliviahanley/wren-keyboard\tPCBs/legacy/wren-plain/wren-plain.kicad_pcb": {
+  "bbox": [
+   115.881,
+   18.256,
+   265.011,
+   131.096
+  ],
+  "boxes": [
+   [
+    115.881,
+    18.256,
+    265.011,
+    131.096
+   ]
+  ],
+  "height_mm": 112.84,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 149.13
+ },
+ "oliviahanley/wren-keyboard\tPCBs/wren-universal-lemo-left/wren-universal.kicad_pcb": {
+  "bbox": [
+   39.263,
+   44.799,
+   269.488,
+   157.639
+  ],
+  "boxes": [
+   [
+    39.263,
+    44.799,
+    269.488,
+    157.639
+   ]
+  ],
+  "height_mm": 112.84,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 230.23
+ },
+ "oliviahanley/wren-keyboard\tPCBs/wren-universal-lemo-right/wren-universal.kicad_pcb": {
+  "bbox": [
+   39.263,
+   44.799,
+   269.488,
+   157.639
+  ],
+  "boxes": [
+   [
+    39.263,
+    44.799,
+    269.488,
+    157.639
+   ]
+  ],
+  "height_mm": 112.84,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 230.23
+ },
+ "oliviahanley/wren-keyboard\tPCBs/wren-universal/wren-universal.kicad_pcb": {
+  "bbox": [
+   39.263,
+   44.799,
+   266.916,
+   157.639
+  ],
+  "boxes": [
+   [
+    39.263,
+    44.799,
+    266.916,
+    157.639
+   ]
+  ],
+  "height_mm": 112.84,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 227.65
+ },
+ "omkbd/ergodash\tPCB/Rev.1.1/ergodash.kicad_pcb": {
+  "bbox": [
+   78.232,
+   37.084,
+   228.118,
+   164.516
+  ],
+  "boxes": [
+   [
+    78.232,
+    37.084,
+    228.118,
+    164.516
+   ]
+  ],
+  "height_mm": 127.43,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 149.89
+ },
+ "omkbd/ergodash\tPCB/Rev.1/ergodash.kicad_pcb": {
+  "bbox": [
+   78.232,
+   37.084,
+   228.118,
+   164.516
+  ],
+  "boxes": [
+   [
+    78.232,
+    37.084,
+    228.118,
+    164.516
+   ]
+  ],
+  "height_mm": 127.43,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 149.89
+ },
+ "omkbd/ergodash\tPCB/Rev1.2/ergodash.kicad_pcb": {
+  "bbox": [
+   78.232,
+   37.084,
+   228.118,
+   164.516
+  ],
+  "boxes": [
+   [
+    78.232,
+    37.084,
+    228.118,
+    164.516
+   ]
+  ],
+  "height_mm": 127.43,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 149.89
+ },
+ "omkbd/ergodash\tmini/PCB/ergodash.kicad_pcb": {
+  "bbox": [
+   78.232,
+   56.134,
+   228.118,
+   164.516
+  ],
+  "boxes": [
+   [
+    78.232,
+    56.134,
+    228.118,
+    164.516
+   ]
+  ],
+  "height_mm": 108.38,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 149.89
+ },
+ "peej/for-science-keyboard\tfor-science.kicad_pcb": {
+  "bbox": [
+   81.0,
+   46.0,
+   173.0,
+   138.0
+  ],
+  "boxes": [
+   [
+    81.0,
+    46.0,
+    173.0,
+    138.0
+   ]
+  ],
+  "height_mm": 92.0,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 92.0
+ },
+ "peej/for-science-keyboard\tplate.kicad_pcb": {
+  "bbox": [
+   79.5,
+   44.5,
+   174.5,
+   139.5
+  ],
+  "boxes": [
+   [
+    79.5,
+    44.5,
+    174.5,
+    139.5
+   ]
+  ],
+  "height_mm": 95.0,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 23,
+  "width_mm": 95.0
+ },
+ "peej/lumberjack-keyboard\tlumberjack.kicad_pcb": {
+  "bbox": [
+   10.05,
+   55.288,
+   294.75,
+   149.5
+  ],
+  "boxes": [
+   [
+    10.05,
+    55.288,
+    294.75,
+    149.5
+   ]
+  ],
+  "height_mm": 94.21,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 284.7
+ },
+ "peej/lumberjack-keyboard\tplates/alps/lumberjack-alps-full.kicad_pcb": {
+  "bbox": [
+   -10.716,
+   39.767,
+   275.035,
+   135.017
+  ],
+  "boxes": [
+   [
+    -10.716,
+    39.767,
+    275.035,
+    135.017
+   ]
+  ],
+  "height_mm": 95.25,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 285.75
+ },
+ "peej/lumberjack-keyboard\tplates/alps/lumberjack-alps.kicad_pcb": {
+  "bbox": [
+   102.394,
+   50.006,
+   216.694,
+   145.256
+  ],
+  "boxes": [
+   [
+    102.394,
+    50.006,
+    216.694,
+    145.256
+   ]
+  ],
+  "height_mm": 95.25,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 114.3
+ },
+ "peej/lumberjack-keyboard\tplates/brutal60/brutal60-full.kicad_pcb": {
+  "bbox": [
+   -10.733,
+   34.2,
+   275.043,
+   140.65
+  ],
+  "boxes": [
+   [
+    -10.733,
+    34.2,
+    275.043,
+    140.65
+   ]
+  ],
+  "height_mm": 106.45,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 56,
+  "width_mm": 285.78
+ },
+ "peej/lumberjack-keyboard\tplates/brutal60/brutal60-split.kicad_pcb": {
+  "bbox": [
+   -10.733,
+   34.2,
+   103.602,
+   140.65
+  ],
+  "boxes": [
+   [
+    -10.733,
+    34.2,
+    103.602,
+    140.65
+   ]
+  ],
+  "height_mm": 106.45,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 28,
+  "width_mm": 114.34
+ },
+ "peej/lumberjack-keyboard\tplates/frog-mini/frog-mini.kicad_pcb": {
+  "bbox": [
+   -7.723,
+   41.742,
+   277.995,
+   149.942
+  ],
+  "boxes": [
+   [
+    -7.723,
+    41.742,
+    277.995,
+    149.942
+   ]
+  ],
+  "height_mm": 108.2,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 52,
+  "width_mm": 285.72
+ },
+ "peej/lumberjack-keyboard\tplates/mx/lumberjack-full.kicad_pcb": {
+  "bbox": [
+   -10.716,
+   39.767,
+   275.036,
+   135.017
+  ],
+  "boxes": [
+   [
+    -10.716,
+    39.767,
+    275.036,
+    135.017
+   ]
+  ],
+  "height_mm": 95.25,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 52,
+  "width_mm": 285.75
+ },
+ "peej/lumberjack-keyboard\tplates/mx/lumberjack-split.kicad_pcb": {
+  "bbox": [
+   102.394,
+   50.006,
+   216.694,
+   145.256
+  ],
+  "boxes": [
+   [
+    102.394,
+    50.006,
+    216.694,
+    145.256
+   ]
+  ],
+  "height_mm": 95.25,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 26,
+  "width_mm": 114.3
+ },
+ "peej/lumberjack-keyboard\tplates/polaris/polaris.kicad_pcb": {
+  "bbox": [
+   -11.666,
+   35.292,
+   276.034,
+   139.492
+  ],
+  "boxes": [
+   [
+    -11.666,
+    35.292,
+    276.034,
+    139.492
+   ]
+  ],
+  "height_mm": 104.2,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 56,
+  "width_mm": 287.7
+ },
+ "peej/rosaline-keyboard\trosaline-ortho.kicad_pcb": {
+  "bbox": [
+   9.9,
+   54.769,
+   295.275,
+   149.681
+  ],
+  "boxes": [
+   [
+    9.9,
+    54.769,
+    295.275,
+    149.681
+   ]
+  ],
+  "height_mm": 94.91,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 285.38
+ },
+ "peej/rosaline-keyboard\trosaline.kicad_pcb": {
+  "bbox": [
+   9.9,
+   54.769,
+   295.275,
+   149.681
+  ],
+  "boxes": [
+   [
+    9.9,
+    54.769,
+    295.275,
+    149.681
+   ]
+  ],
+  "height_mm": 94.91,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 285.38
+ },
+ "peej/tripel-keyboard\ttripel.kicad_pcb": {
+  "bbox": [
+   111.875,
+   38.188,
+   206.875,
+   133.188
+  ],
+  "boxes": [
+   [
+    111.875,
+    38.188,
+    206.875,
+    133.188
+   ]
+  ],
+  "height_mm": 95.0,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 95.0
+ },
+ "pierrechevalier83/ferris\t0.1/base/ferris.kicad_pcb": {
+  "bbox": [
+   13.49,
+   13.496,
+   238.47,
+   108.647
+  ],
+  "boxes": [
+   [
+    13.49,
+    13.496,
+    122.02,
+    108.647
+   ],
+   [
+    129.94,
+    13.496,
+    238.47,
+    108.647
+   ]
+  ],
+  "height_mm": 95.15,
+  "layers": 2,
+  "pieces": 2,
+  "switch_cutouts": 0,
+  "width_mm": 224.98
+ },
+ "pierrechevalier83/ferris\t0.1/compact/ferris.kicad_pcb": {
+  "bbox": [
+   13.65,
+   13.176,
+   222.35,
+   99.905
+  ],
+  "boxes": [
+   [
+    13.65,
+    13.176,
+    222.35,
+    99.905
+   ]
+  ],
+  "height_mm": 86.73,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 208.7
+ },
+ "pierrechevalier83/ferris\t0.1/high/ferris.kicad_pcb": {
+  "bbox": [
+   14.49,
+   14.496,
+   233.57,
+   109.657
+  ],
+  "boxes": [
+   [
+    14.49,
+    14.496,
+    233.57,
+    109.657
+   ]
+  ],
+  "height_mm": 95.16,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 219.08
+ },
+ "pierrechevalier83/ferris\t0.1/low/ferris.kicad_pcb": {
+  "bbox": [
+   13.49,
+   13.496,
+   238.47,
+   108.647
+  ],
+  "boxes": [
+   [
+    13.49,
+    13.496,
+    122.02,
+    108.647
+   ],
+   [
+    129.94,
+    13.496,
+    238.47,
+    108.647
+   ]
+  ],
+  "height_mm": 95.15,
+  "layers": 2,
+  "pieces": 2,
+  "switch_cutouts": 0,
+  "width_mm": 224.98
+ },
+ "pierrechevalier83/ferris\t0.2/bling/ferris.kicad_pcb": {
+  "bbox": [
+   13.608,
+   10.128,
+   222.392,
+   99.905
+  ],
+  "boxes": [
+   [
+    13.608,
+    10.128,
+    222.392,
+    99.905
+   ]
+  ],
+  "height_mm": 89.78,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 208.78
+ },
+ "pierrechevalier83/ferris\t0.2/compact/ferris.kicad_pcb": {
+  "bbox": [
+   13.608,
+   13.128,
+   222.392,
+   99.905
+  ],
+  "boxes": [
+   [
+    13.608,
+    13.128,
+    222.392,
+    99.905
+   ]
+  ],
+  "height_mm": 86.78,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 208.78
+ },
+ "pierrechevalier83/ferris\t0.2/high/ferris.kicad_pcb": {
+  "bbox": [
+   14.49,
+   14.496,
+   233.57,
+   109.657
+  ],
+  "boxes": [
+   [
+    14.49,
+    14.496,
+    233.57,
+    109.657
+   ]
+  ],
+  "height_mm": 95.16,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 219.08
+ },
+ "pierrechevalier83/ferris\t0.2/mini/ferris.kicad_pcb": {
+  "bbox": [
+   13.608,
+   13.128,
+   222.392,
+   99.905
+  ],
+  "boxes": [
+   [
+    13.608,
+    13.128,
+    222.392,
+    99.905
+   ]
+  ],
+  "height_mm": 86.78,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 208.78
+ },
+ "pimentoso/touhoupad_v2\tkicad/project.kicad_pcb": {
+  "bbox": [
+   69.897,
+   46.831,
+   227.003,
+   119.062
+  ],
+  "boxes": [
+   [
+    69.897,
+    46.831,
+    227.003,
+    119.062
+   ]
+  ],
+  "height_mm": 72.23,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 157.11
+ },
+ "psuieee/pluto12\tpluto12/pluto12.kicad_pcb": {
+  "bbox": [
+   105.41,
+   60.96,
+   190.5,
+   127.0
+  ],
+  "boxes": [
+   [
+    105.41,
+    60.96,
+    190.5,
+    127.0
+   ]
+  ],
+  "height_mm": 66.04,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 85.09
+ },
+ "ramonimbao/Herringbone\tTH75.kicad_pcb": {
+  "bbox": [
+   -9.525,
+   -28.972,
+   304.8,
+   114.3
+  ],
+  "boxes": [
+   [
+    -9.525,
+    -28.972,
+    304.8,
+    114.3
+   ]
+  ],
+  "height_mm": 143.27,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 314.32
+ },
+ "rarepotato8de/3x3macropad\tPCB-Files/Bottom-Plate/Bottom-Plate.kicad_pcb": {
+  "bbox": [
+   107.95,
+   58.737,
+   176.213,
+   127.0
+  ],
+  "boxes": [
+   [
+    107.95,
+    58.737,
+    176.213,
+    127.0
+   ]
+  ],
+  "height_mm": 68.26,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 68.26
+ },
+ "rarepotato8de/3x3macropad\tPCB-Files/PCB/PCB.kicad_pcb": {
+  "bbox": [
+   105.41,
+   44.45,
+   173.673,
+   112.713
+  ],
+  "boxes": [
+   [
+    105.41,
+    44.45,
+    173.673,
+    112.713
+   ]
+  ],
+  "height_mm": 68.26,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 68.26
+ },
+ "rarepotato8de/3x3macropad\tPCB-Files/Switch-Plate/Switch-Plate.kicad_pcb": {
+  "bbox": [
+   104.203,
+   62.135,
+   172.466,
+   130.397
+  ],
+  "boxes": [
+   [
+    104.203,
+    62.135,
+    172.466,
+    130.397
+   ]
+  ],
+  "height_mm": 68.26,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 7,
+  "width_mm": 68.26
+ },
+ "robcmills/karn-keyboard\tpcbs/karn-2/karn-2.kicad_pcb": {
+  "bbox": [
+   48.75,
+   30.75,
+   187.99,
+   128.727
+  ],
+  "boxes": [
+   [
+    48.75,
+    30.75,
+    187.99,
+    128.727
+   ]
+  ],
+  "height_mm": 97.98,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 139.24
+ },
+ "robcmills/karn-keyboard\tpcbs/karn-3/karn-3.kicad_pcb": {
+  "bbox": [
+   48.75,
+   30.75,
+   187.99,
+   128.727
+  ],
+  "boxes": [
+   [
+    48.75,
+    30.75,
+    187.99,
+    128.727
+   ]
+  ],
+  "height_mm": 97.98,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 139.24
+ },
+ "robcmills/karn-keyboard\tpcbs/karn-left/karn-left.kicad_pcb": {
+  "bbox": [
+   48.75,
+   30.75,
+   187.99,
+   128.727
+  ],
+  "boxes": [
+   [
+    48.75,
+    30.75,
+    187.99,
+    128.727
+   ]
+  ],
+  "height_mm": 97.98,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 139.24
+ },
+ "robcmills/karn-keyboard\tpcbs/karn-right/karn-right.kicad_pcb": {
+  "bbox": [
+   53.995,
+   30.75,
+   193.25,
+   128.727
+  ],
+  "boxes": [
+   [
+    53.995,
+    30.75,
+    193.25,
+    128.727
+   ]
+  ],
+  "height_mm": 97.98,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 139.26
+ },
+ "rtitmuss/torn\tcase/PCB Case/plate/torn_plate.kicad_pcb": {
+  "bbox": [
+   50.069,
+   63.434,
+   188.346,
+   165.895
+  ],
+  "boxes": [
+   [
+    50.069,
+    63.434,
+    188.346,
+    165.895
+   ]
+  ],
+  "height_mm": 102.46,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 138.28
+ },
+ "rtitmuss/torn\ttorn_left/torn_left.kicad_pcb": {
+  "bbox": [
+   50.196,
+   50.253,
+   190.911,
+   165.895
+  ],
+  "boxes": [
+   [
+    50.196,
+    50.253,
+    190.911,
+    165.895
+   ]
+  ],
+  "height_mm": 115.64,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 140.72
+ },
+ "rtitmuss/torn\ttorn_right/torn_right.kicad_pcb": {
+  "bbox": [
+   50.138,
+   50.38,
+   190.849,
+   165.816
+  ],
+  "boxes": [
+   [
+    50.138,
+    50.38,
+    190.849,
+    165.816
+   ]
+  ],
+  "height_mm": 115.44,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 140.71
+ },
+ "sakurachari/yosino58\tcherry/yosino58_cherry.kicad_pcb": {
+  "bbox": [
+   40.059,
+   22.413,
+   197.81,
+   157.67
+  ],
+  "boxes": [
+   [
+    40.059,
+    22.413,
+    197.81,
+    157.67
+   ]
+  ],
+  "height_mm": 135.26,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 157.75
+ },
+ "sakurachari/yosino58\tchocolate/yosino58_chocolate.kicad_pcb": {
+  "bbox": [
+   40.059,
+   22.413,
+   197.81,
+   157.67
+  ],
+  "boxes": [
+   [
+    40.059,
+    22.413,
+    197.81,
+    157.67
+   ]
+  ],
+  "height_mm": 135.26,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 157.75
+ },
+ "sakurachari/yosino58\tpcb/yosino58.kicad_pcb": {
+  "bbox": [
+   40.054,
+   22.413,
+   196.88,
+   157.395
+  ],
+  "boxes": [
+   [
+    40.054,
+    22.413,
+    196.88,
+    157.395
+   ]
+  ],
+  "height_mm": 134.98,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 156.83
+ },
+ "sendyyeah/bevi\tbevi.kicad_pcb": {
+  "bbox": [
+   19.781,
+   25.406,
+   381.094,
+   123.0
+  ],
+  "boxes": [
+   [
+    19.781,
+    25.406,
+    381.094,
+    123.0
+   ]
+  ],
+  "height_mm": 97.59,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 361.31
+ },
+ "sendz/pix\tpix.kicad_pcb": {
+  "bbox": [
+   64.031,
+   37.5,
+   172.406,
+   56.906
+  ],
+  "boxes": [
+   [
+    64.031,
+    37.5,
+    172.406,
+    56.906
+   ]
+  ],
+  "height_mm": 19.41,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 108.38
+ },
+ "sho-keebs/vagrant-10\tpcb/vagrant.kicad_pcb": {
+  "bbox": [
+   56.261,
+   30.48,
+   228.6,
+   120.65
+  ],
+  "boxes": [
+   [
+    56.261,
+    30.48,
+    228.6,
+    120.65
+   ]
+  ],
+  "height_mm": 90.17,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 172.34
+ },
+ "sithlord121/slz40\tPCB-files/PCB/SithZhuyin40.kicad_pcb": {
+  "bbox": [
+   32.544,
+   45.244,
+   280.194,
+   140.494
+  ],
+  "boxes": [
+   [
+    32.544,
+    45.244,
+    280.194,
+    140.494
+   ]
+  ],
+  "height_mm": 95.25,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 247.65
+ },
+ "sithlord121/slz40\tPCB-files/Plate/SithZhuyin40.kicad_pcb": {
+  "bbox": [
+   32.544,
+   45.244,
+   280.194,
+   146.05
+  ],
+  "boxes": [
+   [
+    32.544,
+    45.244,
+    280.194,
+    146.05
+   ]
+  ],
+  "height_mm": 100.81,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 58,
+  "width_mm": 247.65
+ },
+ "skarrmann/horizon\tkicad/choc/horizon-choc.kicad_pcb": {
+  "bbox": [
+   22.0,
+   71.0,
+   274.0,
+   139.0
+  ],
+  "boxes": [
+   [
+    22.0,
+    71.0,
+    274.0,
+    139.0
+   ]
+  ],
+  "height_mm": 68.0,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 252.0
+ },
+ "skarrmann/horizon\tkicad/mx/horizon-mx.kicad_pcb": {
+  "bbox": [
+   15.0,
+   67.0,
+   281.0,
+   143.0
+  ],
+  "boxes": [
+   [
+    15.0,
+    67.0,
+    281.0,
+    143.0
+   ]
+  ],
+  "height_mm": 76.0,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 266.0
+ },
+ "skarrmann/janus\tkicad/mx/janus.kicad_pcb": {
+  "bbox": [
+   101.0,
+   48.0,
+   196.0,
+   143.0
+  ],
+  "boxes": [
+   [
+    101.0,
+    48.0,
+    196.0,
+    143.0
+   ]
+  ],
+  "height_mm": 95.0,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 95.0
+ },
+ "skarrmann/morizon\tkicad/choc/morizon-choc.kicad_pcb": {
+  "bbox": [
+   22.0,
+   62.0,
+   274.0,
+   147.0
+  ],
+  "boxes": [
+   [
+    22.0,
+    62.0,
+    274.0,
+    147.0
+   ]
+  ],
+  "height_mm": 85.0,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 252.0
+ },
+ "skarrmann/morizon\tkicad/mx/morizon-mx.kicad_pcb": {
+  "bbox": [
+   15.0,
+   57.0,
+   281.0,
+   152.0
+  ],
+  "boxes": [
+   [
+    15.0,
+    57.0,
+    281.0,
+    152.0
+   ]
+  ],
+  "height_mm": 95.0,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 266.0
+ },
+ "skarrmann/sha\tkicad/choc/sha-choc.kicad_pcb": {
+  "bbox": [
+   22.5,
+   55.5,
+   274.5,
+   123.5
+  ],
+  "boxes": [
+   [
+    22.5,
+    55.5,
+    274.5,
+    123.5
+   ]
+  ],
+  "height_mm": 68.0,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 252.0
+ },
+ "skarrmann/sha\tkicad/mx/sha-mx.kicad_pcb": {
+  "bbox": [
+   15.5,
+   55.5,
+   281.5,
+   131.5
+  ],
+  "boxes": [
+   [
+    15.5,
+    55.5,
+    281.5,
+    131.5
+   ]
+  ],
+  "height_mm": 76.0,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 266.0
+ },
+ "skeletonkbd/Frost68\tPCB/Skeleton68rev2.kicad_pcb": {
+  "bbox": [
+   11.953,
+   14.138,
+   365.05,
+   139.06
+  ],
+  "boxes": [
+   [
+    11.953,
+    14.138,
+    365.05,
+    139.06
+   ]
+  ],
+  "height_mm": 124.92,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 353.1
+ },
+ "skeletonkbd/Frost68\tSwitchPlate/Skeleton68rev2_SwitchPlate.kicad_pcb": {
+  "bbox": [
+   111.126,
+   2.523,
+   447.952,
+   115.741
+  ],
+  "boxes": [
+   [
+    111.126,
+    2.523,
+    447.952,
+    115.741
+   ]
+  ],
+  "height_mm": 113.22,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 29,
+  "width_mm": 336.83
+ },
+ "skeletonkbd/skeletonnumpad\tSkeletonNumPad.kicad_pcb": {
+  "bbox": [
+   93.345,
+   30.48,
+   173.355,
+   135.255
+  ],
+  "boxes": [
+   [
+    93.345,
+    30.48,
+    173.355,
+    135.255
+   ]
+  ],
+  "height_mm": 104.78,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 80.01
+ },
+ "skeletonkbd/skeletonnumpad\tplate/plate.kicad_pcb": {
+  "bbox": [
+   0.127,
+   0.123,
+   80.137,
+   99.183
+  ],
+  "boxes": [
+   [
+    0.127,
+    0.123,
+    80.137,
+    99.183
+   ]
+  ],
+  "height_mm": 99.06,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 17,
+  "width_mm": 80.01
+ },
+ "smores56/clog\tpcb/clog.kicad_pcb": {
+  "bbox": [
+   76.0,
+   56.0,
+   204.0,
+   134.0
+  ],
+  "boxes": [
+   [
+    76.0,
+    56.0,
+    204.0,
+    134.0
+   ]
+  ],
+  "height_mm": 78.0,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 128.0
+ },
+ "smores56/osprette\tpcb/osprette.kicad_pcb": {
+  "bbox": [
+   15.34,
+   50.809,
+   282.137,
+   154.477
+  ],
+  "boxes": [
+   [
+    15.34,
+    50.809,
+    282.137,
+    154.477
+   ]
+  ],
+  "height_mm": 103.67,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 266.8
+ },
+ "sol/chord-zero\tzero.kicad_pcb": {
+  "bbox": [
+   -133.0,
+   -0.0,
+   133.0,
+   76.0
+  ],
+  "boxes": [
+   [
+    -133.0,
+    -0.0,
+    133.0,
+    76.0
+   ]
+  ],
+  "height_mm": 76.0,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 266.0
+ },
+ "sotoba/contender\tcontender.kicad_pcb": {
+  "bbox": [
+   22.606,
+   19.558,
+   127.889,
+   150.495
+  ],
+  "boxes": [
+   [
+    22.606,
+    19.558,
+    127.889,
+    150.495
+   ]
+  ],
+  "height_mm": 130.94,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 105.28
+ },
+ "sotoba/contender\tplate/contender_plate.kicad_pcb": {
+  "bbox": [
+   41.91,
+   32.067,
+   147.193,
+   163.005
+  ],
+  "boxes": [
+   [
+    41.91,
+    32.067,
+    147.193,
+    163.005
+   ]
+  ],
+  "height_mm": 130.94,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 25,
+  "width_mm": 105.28
+ },
+ "sotoba/craftwalk\tcraftwalk.kicad_pcb": {
+  "bbox": [
+   54.814,
+   29.591,
+   192.1,
+   128.486
+  ],
+  "boxes": [
+   [
+    54.814,
+    29.591,
+    192.1,
+    128.486
+   ]
+  ],
+  "height_mm": 98.9,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 137.29
+ },
+ "sotoba/craftwalk\tplates/craftwalk-top-plate.kicad_pcb": {
+  "bbox": [
+   52.807,
+   47.95,
+   190.094,
+   146.845
+  ],
+  "boxes": [
+   [
+    52.807,
+    47.95,
+    190.094,
+    146.845
+   ]
+  ],
+  "height_mm": 98.9,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 10,
+  "width_mm": 137.29
+ },
+ "spaceboards/spaceboardshardware\tKeyboards/2% Milk/kicad/milk.kicad_pcb": {
+  "bbox": [
+   220.0,
+   50.0,
+   240.0,
+   88.0
+  ],
+  "boxes": [
+   [
+    220.0,
+    50.0,
+    240.0,
+    88.0
+   ]
+  ],
+  "height_mm": 38.0,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 20.0
+ },
+ "spaceboards/spaceboardshardware\tKeyboards/Pancake/V1/kicad/dropin.kicad_pcb": {
+  "bbox": [
+   22.352,
+   134.62,
+   256.286,
+   223.774
+  ],
+  "boxes": [
+   [
+    22.352,
+    134.62,
+    256.286,
+    223.774
+   ]
+  ],
+  "height_mm": 89.15,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 233.93
+ },
+ "spaceboards/spaceboardshardware\tKeyboards/Pancake/V2/kicad/dropin.kicad_pcb": {
+  "bbox": [
+   20.565,
+   15.53,
+   254.565,
+   83.53
+  ],
+  "boxes": [
+   [
+    20.565,
+    15.53,
+    254.565,
+    83.53
+   ]
+  ],
+  "height_mm": 68.0,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 234.0
+ },
+ "squalius-cephalus/silakka54\tkicad/silakka54.kicad_pcb": {
+  "bbox": [
+   28.575,
+   25.003,
+   166.688,
+   139.303
+  ],
+  "boxes": [
+   [
+    28.575,
+    25.003,
+    166.688,
+    139.303
+   ]
+  ],
+  "height_mm": 114.3,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 138.11
+ },
+ "stevennguyen/framework\trev0/framework.kicad_pcb": {
+  "bbox": [
+   309.562,
+   -130.588,
+   547.688,
+   244.887
+  ],
+  "boxes": [
+   [
+    309.562,
+    -130.588,
+    547.688,
+    244.887
+   ]
+  ],
+  "height_mm": 375.48,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 57,
+  "width_mm": 238.12
+ },
+ "str-dst/67mk_E\tpcb/67_E.kicad_pcb": {
+  "bbox": [
+   58.731,
+   74.581,
+   361.944,
+   172.212
+  ],
+  "boxes": [
+   [
+    58.731,
+    74.581,
+    361.944,
+    172.212
+   ]
+  ],
+  "height_mm": 97.63,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 303.21
+ },
+ "str-dst/QEZ\tpcb/qez.kicad_pcb": {
+  "bbox": [
+   58.458,
+   53.848,
+   252.73,
+   132.842
+  ],
+  "boxes": [
+   [
+    58.458,
+    53.848,
+    252.73,
+    132.842
+   ]
+  ],
+  "height_mm": 78.99,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 194.27
+ },
+ "subrezon/la_nc\tbottom-plate/la_nc-bottom-plate.kicad_pcb": {
+  "bbox": [
+   39.688,
+   39.687,
+   268.288,
+   115.888
+  ],
+  "boxes": [
+   [
+    39.688,
+    39.687,
+    268.288,
+    115.888
+   ]
+  ],
+  "height_mm": 76.2,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 228.6
+ },
+ "subrezon/la_nc\tfr4-plate/la_nc-plate.kicad_pcb": {
+  "bbox": [
+   39.688,
+   31.75,
+   268.288,
+   107.95
+  ],
+  "boxes": [
+   [
+    39.688,
+    31.75,
+    268.288,
+    107.95
+   ]
+  ],
+  "height_mm": 76.2,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 42,
+  "width_mm": 228.6
+ },
+ "subrezon/la_nc\tpcb/la_nc.kicad_pcb": {
+  "bbox": [
+   31.75,
+   31.75,
+   260.35,
+   107.95
+  ],
+  "boxes": [
+   [
+    31.75,
+    31.75,
+    260.35,
+    107.95
+   ]
+  ],
+  "height_mm": 76.2,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 228.6
+ },
+ "subrezon/lancer\tbottom-plate/lancer-bottom-plate.kicad_pcb": {
+  "bbox": [
+   27.94,
+   28.575,
+   237.49,
+   104.775
+  ],
+  "boxes": [
+   [
+    27.94,
+    28.575,
+    237.49,
+    104.775
+   ]
+  ],
+  "height_mm": 76.2,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 209.55
+ },
+ "subrezon/lancer\tpcb-hotswap/lancer-hotswap.kicad_pcb": {
+  "bbox": [
+   20.955,
+   20.955,
+   230.505,
+   97.155
+  ],
+  "boxes": [
+   [
+    20.955,
+    20.955,
+    230.505,
+    97.155
+   ]
+  ],
+  "height_mm": 76.2,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 209.55
+ },
+ "subrezon/lancer\ttop-plate/lancer-top-plate.kicad_pcb": {
+  "bbox": [
+   40.005,
+   41.275,
+   249.555,
+   117.475
+  ],
+  "boxes": [
+   [
+    40.005,
+    41.275,
+    249.555,
+    117.475
+   ]
+  ],
+  "height_mm": 76.2,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 36,
+  "width_mm": 209.55
+ },
+ "swiftrax/Pandamic\tPCB/Pandamic/Pandamic.kicad_pcb": {
+  "bbox": [
+   10.113,
+   -4.11,
+   405.4,
+   102.394
+  ],
+  "boxes": [
+   [
+    10.113,
+    -4.11,
+    405.4,
+    102.394
+   ]
+  ],
+  "height_mm": 106.5,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 395.29
+ },
+ "swiftrax/unsplit\tHardware/FullGroundPlane/UnSplit.kicad_pcb": {
+  "bbox": [
+   13.494,
+   7.144,
+   337.344,
+   102.26
+  ],
+  "boxes": [
+   [
+    13.494,
+    7.144,
+    337.344,
+    102.26
+   ]
+  ],
+  "height_mm": 95.12,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 323.85
+ },
+ "swiftrax/unsplit\tHardware/MCUGNDPlane/UnSplit.kicad_pcb": {
+  "bbox": [
+   13.494,
+   7.144,
+   337.344,
+   102.26
+  ],
+  "boxes": [
+   [
+    13.494,
+    7.144,
+    337.344,
+    102.26
+   ]
+  ],
+  "height_mm": 95.12,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 323.85
+ },
+ "takashicompany/dogtag\tkicad/dogtag.kicad_pcb": {
+  "bbox": [
+   -10.997,
+   -11.003,
+   88.053,
+   87.633
+  ],
+  "boxes": [
+   [
+    -10.997,
+    -11.003,
+    88.053,
+    87.633
+   ]
+  ],
+  "height_mm": 98.64,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 8,
+  "width_mm": 99.05
+ },
+ "takashicompany/endzone34\tkicad/endzone34.kicad_pcb": {
+  "bbox": [
+   -9.174,
+   -4.851,
+   218.732,
+   84.946
+  ],
+  "boxes": [
+   [
+    -9.174,
+    -4.851,
+    218.732,
+    84.946
+   ]
+  ],
+  "height_mm": 89.8,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 227.91
+ },
+ "takashicompany/radialex\tkicad/kbd-template.kicad_pcb": {
+  "bbox": [
+   -7.624,
+   -8.557,
+   269.554,
+   87.336
+  ],
+  "boxes": [
+   [
+    -7.624,
+    -8.557,
+    269.554,
+    87.336
+   ]
+  ],
+  "height_mm": 95.89,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 277.18
+ },
+ "takishim/mikeneko65\tpcb/kicad/mikeneko-65-pcb.kicad_pcb": {
+  "bbox": [
+   0.0,
+   0.0,
+   303.75,
+   94.2
+  ],
+  "boxes": [
+   [
+    0.0,
+    0.0,
+    303.75,
+    94.2
+   ]
+  ],
+  "height_mm": 94.2,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 303.75
+ },
+ "takishim/mikeneko65\tplate/kicad/mikeneko-65-plate.kicad_pcb": {
+  "bbox": [
+   -4.152,
+   22.448,
+   300.65,
+   117.725
+  ],
+  "boxes": [
+   [
+    -4.152,
+    22.448,
+    300.65,
+    117.725
+   ]
+  ],
+  "height_mm": 95.28,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 67,
+  "width_mm": 304.8
+ },
+ "tamanishi/Pinky3\tbottom-plate-dxf/Pinky3-bottom-plate-dxf.kicad_pcb": {
+  "bbox": [
+   40.994,
+   54.3,
+   178.006,
+   155.221
+  ],
+  "boxes": [
+   [
+    40.994,
+    54.3,
+    178.006,
+    155.221
+   ]
+  ],
+  "height_mm": 100.92,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 137.01
+ },
+ "tamanishi/Pinky3\tbottom-plate/Pinky3-bottom-plate.kicad_pcb": {
+  "bbox": [
+   40.994,
+   54.3,
+   178.006,
+   155.221
+  ],
+  "boxes": [
+   [
+    40.994,
+    54.3,
+    178.006,
+    155.221
+   ]
+  ],
+  "height_mm": 100.92,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 137.01
+ },
+ "tamanishi/Pinky3\tcover-plate/Pinky3-cover-plate.kicad_pcb": {
+  "bbox": [
+   42.1,
+   54.9,
+   139.595,
+   153.45
+  ],
+  "boxes": [
+   [
+    101.175,
+    54.9,
+    139.595,
+    74.0
+   ],
+   [
+    101.175,
+    75.575,
+    139.595,
+    94.675
+   ],
+   [
+    110.875,
+    96.6,
+    129.975,
+    153.4
+   ],
+   [
+    88.425,
+    96.65,
+    107.525,
+    153.45
+   ],
+   [
+    65.325,
+    96.525,
+    84.425,
+    153.325
+   ],
+   [
+    42.375,
+    96.625,
+    61.475,
+    153.425
+   ],
+   [
+    42.25,
+    75.55,
+    99.05,
+    94.65
+   ],
+   [
+    42.1,
+    54.9,
+    98.9,
+    74.0
+   ]
+  ],
+  "height_mm": 98.55,
+  "layers": 2,
+  "pieces": 8,
+  "switch_cutouts": 0,
+  "width_mm": 97.5
+ },
+ "tamanishi/Pinky3\tpcb/Pinky3.kicad_pcb": {
+  "bbox": [
+   40.994,
+   54.3,
+   178.006,
+   155.221
+  ],
+  "boxes": [
+   [
+    40.994,
+    54.3,
+    178.006,
+    155.221
+   ]
+  ],
+  "height_mm": 100.92,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 137.01
+ },
+ "tamanishi/Pinky3\ttop-plate&cover-plate/Pinky3-top-plate.kicad_pcb": {
+  "bbox": [
+   40.994,
+   54.3,
+   176.7,
+   141.2
+  ],
+  "boxes": [
+   [
+    40.994,
+    54.3,
+    176.7,
+    141.2
+   ]
+  ],
+  "height_mm": 86.9,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 20,
+  "width_mm": 135.71
+ },
+ "tamanishi/Pinky3\ttop-plate-only-dxf/Pinky3-top-plate-dxf.kicad_pcb": {
+  "bbox": [
+   41.0,
+   54.3,
+   176.7,
+   132.194
+  ],
+  "boxes": [
+   [
+    41.0,
+    54.3,
+    176.7,
+    132.194
+   ]
+  ],
+  "height_mm": 77.89,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 20,
+  "width_mm": 135.7
+ },
+ "tamanishi/Pinky3\ttop-plate-only/Pinky3-top-plate.kicad_pcb": {
+  "bbox": [
+   41.0,
+   54.3,
+   176.7,
+   132.194
+  ],
+  "boxes": [
+   [
+    41.0,
+    54.3,
+    176.7,
+    132.194
+   ]
+  ],
+  "height_mm": 77.89,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 20,
+  "width_mm": 135.7
+ },
+ "tamanishi/Pinky4\tbottom-plate/Pinky4-bottom-plate.kicad_pcb": {
+  "bbox": [
+   40.994,
+   35.2,
+   179.962,
+   155.221
+  ],
+  "boxes": [
+   [
+    40.994,
+    35.2,
+    179.962,
+    155.221
+   ]
+  ],
+  "height_mm": 120.02,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 138.97
+ },
+ "tamanishi/Pinky4\tpcb/Pinky4.kicad_pcb": {
+  "bbox": [
+   40.994,
+   35.2,
+   179.962,
+   155.221
+  ],
+  "boxes": [
+   [
+    40.994,
+    35.2,
+    179.962,
+    155.221
+   ]
+  ],
+  "height_mm": 120.02,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 138.97
+ },
+ "tamanishi/Pinky4\ttop-plate/Pinky4-top-plate.kicad_pcb": {
+  "bbox": [
+   40.994,
+   35.2,
+   176.528,
+   132.194
+  ],
+  "boxes": [
+   [
+    40.994,
+    35.2,
+    176.528,
+    132.194
+   ]
+  ],
+  "height_mm": 96.99,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 27,
+  "width_mm": 135.53
+ },
+ "tapioki/cephalopoda\tArchiteuthis dux/architeuthis_dux.kicad_pcb": {
+  "bbox": [
+   -6.17,
+   -70.319,
+   123.693,
+   25.253
+  ],
+  "boxes": [
+   [
+    -6.17,
+    -70.319,
+    123.693,
+    25.253
+   ]
+  ],
+  "height_mm": 95.57,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 129.86
+ },
+ "tapioki/cephalopoda\tSepia officinalis/sepia_officinalis.kicad_pcb": {
+  "bbox": [
+   29.57,
+   22.392,
+   150.747,
+   127.094
+  ],
+  "boxes": [
+   [
+    29.57,
+    22.392,
+    150.747,
+    127.094
+   ]
+  ],
+  "height_mm": 104.7,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 121.18
+ },
+ "tarneaux/supersplit\toutput/pcbs/board.kicad_pcb": {
+  "bbox": [
+   8.64,
+   -85.88,
+   192.284,
+   52.068
+  ],
+  "boxes": [
+   [
+    8.64,
+    -85.88,
+    192.284,
+    52.068
+   ]
+  ],
+  "height_mm": 137.95,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 183.64
+ },
+ "thatfellarobin/axon\taxon_pcb/axon_pcb.kicad_pcb": {
+  "bbox": [
+   -9.0,
+   -33.02,
+   218.55,
+   66.15
+  ],
+  "boxes": [
+   [
+    -9.0,
+    -33.02,
+    218.55,
+    66.15
+   ]
+  ],
+  "height_mm": 99.17,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 227.55
+ },
+ "the-royal/the_royal_open-source-projects\t02 - PCBs/Schwann_PCB/PCB Documentation/Schwann_Rev0.5b.kicad_pcb": {
+  "bbox": [
+   34.783,
+   70.502,
+   263.383,
+   147.321
+  ],
+  "boxes": [
+   [
+    34.783,
+    70.502,
+    263.383,
+    147.321
+   ]
+  ],
+  "height_mm": 76.82,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 228.6
+ },
+ "theroyalsweatshirt/the_royal_projects\t02 - PCBs/Schwann_PCB/PCB Documentation/Schwann_Rev0.5b.kicad_pcb": {
+  "bbox": [
+   34.783,
+   70.502,
+   263.383,
+   147.321
+  ],
+  "boxes": [
+   [
+    34.783,
+    70.502,
+    263.383,
+    147.321
+   ]
+  ],
+  "height_mm": 76.82,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 228.6
+ },
+ "tokageitlab/varanidae\tpcb/kicad/Varanidae.kicad_pcb": {
+  "bbox": [
+   17.118,
+   88.968,
+   402.881,
+   208.032
+  ],
+  "boxes": [
+   [
+    17.118,
+    88.968,
+    402.881,
+    208.032
+   ]
+  ],
+  "height_mm": 119.06,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 385.76
+ },
+ "tompi/cheapino\tpcb/cheapino.kicad_pcb": {
+  "bbox": [
+   60.096,
+   45.766,
+   192.63,
+   140.843
+  ],
+  "boxes": [
+   [
+    60.096,
+    45.766,
+    192.63,
+    140.843
+   ]
+  ],
+  "height_mm": 95.08,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 132.53
+ },
+ "tompi/cheapino\tplates/pcb-bottom/pcb-bottom.kicad_pcb": {
+  "bbox": [
+   60.096,
+   45.766,
+   192.63,
+   140.843
+  ],
+  "boxes": [
+   [
+    60.096,
+    45.766,
+    192.63,
+    140.843
+   ]
+  ],
+  "height_mm": 95.08,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 132.53
+ },
+ "tompi/cheapino\tplates/pcb-top/pcb-top.kicad_pcb": {
+  "bbox": [
+   60.096,
+   45.766,
+   192.63,
+   140.843
+  ],
+  "boxes": [
+   [
+    60.096,
+    45.766,
+    192.63,
+    140.843
+   ]
+  ],
+  "height_mm": 95.08,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 16,
+  "width_mm": 132.53
+ },
+ "tomsaleeba/ergoslab\tpcb/ergoslab.kicad_pcb": {
+  "bbox": [
+   72.45,
+   44.2,
+   186.94,
+   145.43
+  ],
+  "boxes": [
+   [
+    72.45,
+    44.2,
+    186.94,
+    145.43
+   ]
+  ],
+  "height_mm": 101.23,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 114.49
+ },
+ "trojanpinata/model-b\tcase/switchplate/swplate.kicad_pcb": {
+  "bbox": [
+   34.955,
+   37.833,
+   374.956,
+   168.833
+  ],
+  "boxes": [
+   [
+    34.955,
+    37.833,
+    374.956,
+    168.833
+   ]
+  ],
+  "height_mm": 131.0,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 78,
+  "width_mm": 340.0
+ },
+ "trojanpinata/model-b\tcase/top_plate/top_plate/top_plate.kicad_pcb": {
+  "bbox": [
+   29.533,
+   33.592,
+   369.534,
+   164.592
+  ],
+  "boxes": [
+   [
+    29.533,
+    33.592,
+    369.534,
+    164.592
+   ]
+  ],
+  "height_mm": 131.0,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 340.0
+ },
+ "trojanpinata/model-b\tpcb/model-b/model-b.kicad_pcb": {
+  "bbox": [
+   33.545,
+   31.609,
+   373.545,
+   162.609
+  ],
+  "boxes": [
+   [
+    33.545,
+    31.609,
+    373.545,
+    162.609
+   ]
+  ],
+  "height_mm": 131.0,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 340.0
+ },
+ "tweetydabird/lotus58\tLotus 58 TRRS/v1.11/Lotus58_Glow_111.kicad_pcb": {
+  "bbox": [
+   80.645,
+   35.687,
+   219.705,
+   143.414
+  ],
+  "boxes": [
+   [
+    80.645,
+    35.687,
+    219.705,
+    143.414
+   ]
+  ],
+  "height_mm": 107.73,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 139.06
+ },
+ "tweetydabird/lotus58\tLotus 58 TRRS/v1.23/Lotus58_Glow_123.kicad_pcb": {
+  "bbox": [
+   80.645,
+   35.687,
+   219.705,
+   143.414
+  ],
+  "boxes": [
+   [
+    80.645,
+    35.687,
+    219.705,
+    143.414
+   ]
+  ],
+  "height_mm": 107.73,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 139.06
+ },
+ "tweetydabird/lotus58\tLotus 58 TRRS/v1.24/Lotus58_Glow_124.kicad_pcb": {
+  "bbox": [
+   80.645,
+   35.687,
+   219.705,
+   143.414
+  ],
+  "boxes": [
+   [
+    80.645,
+    35.687,
+    219.705,
+    143.414
+   ]
+  ],
+  "height_mm": 107.73,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 139.06
+ },
+ "tweetydabird/lotus58\tLotus 58 TRRS/v1.25/Lotus58_Glow_125.kicad_pcb": {
+  "bbox": [
+   80.645,
+   35.687,
+   219.705,
+   143.414
+  ],
+  "boxes": [
+   [
+    80.645,
+    35.687,
+    219.705,
+    143.414
+   ]
+  ],
+  "height_mm": 107.73,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 139.06
+ },
+ "tweetydabird/lotus58\tLotus 58 TRRS/v1.26/Lotus58_Glow_126.kicad_pcb": {
+  "bbox": [
+   80.645,
+   35.687,
+   219.705,
+   143.414
+  ],
+  "boxes": [
+   [
+    80.645,
+    35.687,
+    219.705,
+    143.414
+   ]
+  ],
+  "height_mm": 107.73,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 139.06
+ },
+ "tweetydabird/lotus58\tLotus 58 TRRS/v1.27/Lotus58_Glow_127.kicad_pcb": {
+  "bbox": [
+   80.645,
+   35.687,
+   219.705,
+   143.414
+  ],
+  "boxes": [
+   [
+    80.645,
+    35.687,
+    219.705,
+    143.414
+   ]
+  ],
+  "height_mm": 107.73,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 139.06
+ },
+ "tweetydabird/lotus58\tLotus 58 TRRS/v1.28/Lotus58_Glow_128.kicad_pcb": {
+  "bbox": [
+   80.645,
+   35.687,
+   219.705,
+   143.414
+  ],
+  "boxes": [
+   [
+    80.645,
+    35.687,
+    219.705,
+    143.414
+   ]
+  ],
+  "height_mm": 107.73,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 139.06
+ },
+ "tweetydabird/lotus58\tLotus 58 TRRS/v1.29/Lotus58_Glow_129.kicad_pcb": {
+  "bbox": [
+   80.645,
+   35.687,
+   219.705,
+   143.414
+  ],
+  "boxes": [
+   [
+    80.645,
+    35.687,
+    219.705,
+    143.414
+   ]
+  ],
+  "height_mm": 107.73,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 139.06
+ },
+ "tweetydabird/lotus58\tLotus 58 TRRS/v1.30/Lotus58_Glow_130.kicad_pcb": {
+  "bbox": [
+   80.645,
+   35.687,
+   219.705,
+   143.414
+  ],
+  "boxes": [
+   [
+    80.645,
+    35.687,
+    219.705,
+    143.414
+   ]
+  ],
+  "height_mm": 107.73,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 139.06
+ },
+ "tweetydabird/lotus58\tLotus 58 USB-C/v1.30/Lotus58_Glow_130.kicad_pcb": {
+  "bbox": [
+   80.645,
+   35.687,
+   219.705,
+   143.414
+  ],
+  "boxes": [
+   [
+    80.645,
+    35.687,
+    219.705,
+    143.414
+   ]
+  ],
+  "height_mm": 107.73,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 139.06
+ },
+ "tweetydabird/lotus58\tLotus 58 USB-C/v1.31/Lotus58_Glow_131.kicad_pcb": {
+  "bbox": [
+   80.645,
+   35.687,
+   219.705,
+   143.414
+  ],
+  "boxes": [
+   [
+    80.645,
+    35.687,
+    219.705,
+    143.414
+   ]
+  ],
+  "height_mm": 107.73,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 139.06
+ },
+ "tweetydabird/lotus58\tLotus 58 USB-C/v1.32/Lotus58_Glow_132.kicad_pcb": {
+  "bbox": [
+   80.645,
+   35.687,
+   219.705,
+   143.414
+  ],
+  "boxes": [
+   [
+    80.645,
+    35.687,
+    219.705,
+    143.414
+   ]
+  ],
+  "height_mm": 107.73,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 139.06
+ },
+ "tweetydabird/lotus58\tLotus 58 USB-C/v1.33/Lotus58_Glow_133.kicad_pcb": {
+  "bbox": [
+   80.645,
+   35.687,
+   219.705,
+   143.414
+  ],
+  "boxes": [
+   [
+    80.645,
+    35.687,
+    219.705,
+    143.414
+   ]
+  ],
+  "height_mm": 107.73,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 139.06
+ },
+ "tweetydabird/lotus58\tLotus 58 USB-C/v1.40/Lotus58_Glow_140.kicad_pcb": {
+  "bbox": [
+   80.645,
+   35.687,
+   219.705,
+   143.414
+  ],
+  "boxes": [
+   [
+    80.645,
+    35.687,
+    219.705,
+    143.414
+   ]
+  ],
+  "height_mm": 107.73,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 139.06
+ },
+ "tweetydabird/lotus58\tLotus 58 USB-C/v1.41/Lotus58_Glow_141.kicad_pcb": {
+  "bbox": [
+   80.645,
+   35.687,
+   219.705,
+   143.414
+  ],
+  "boxes": [
+   [
+    80.645,
+    35.687,
+    219.705,
+    143.414
+   ]
+  ],
+  "height_mm": 107.73,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 139.06
+ },
+ "tweetydabird/lotus58\tLotus 58 USB-C/v1.42/Lotus58_Glow_142.kicad_pcb": {
+  "bbox": [
+   80.645,
+   35.687,
+   219.705,
+   143.414
+  ],
+  "boxes": [
+   [
+    80.645,
+    35.687,
+    219.705,
+    143.414
+   ]
+  ],
+  "height_mm": 107.73,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 139.06
+ },
+ "tweetydabird/lotus58\tLotus 58 USB-C/v1.50/Lotus58_Glow_150.kicad_pcb": {
+  "bbox": [
+   80.645,
+   35.687,
+   219.705,
+   143.414
+  ],
+  "boxes": [
+   [
+    80.645,
+    35.687,
+    219.705,
+    143.414
+   ]
+  ],
+  "height_mm": 107.73,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 139.06
+ },
+ "tweetydabird/lotus58\tLotus 58 USB-C/v1.51/Lotus58_Glow_151.kicad_pcb": {
+  "bbox": [
+   80.645,
+   35.687,
+   219.705,
+   143.414
+  ],
+  "boxes": [
+   [
+    80.645,
+    35.687,
+    219.705,
+    143.414
+   ]
+  ],
+  "height_mm": 107.73,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 139.06
+ },
+ "tyraelwastaken/equanimity\tKicad Files/Alice Keyboard.kicad_pcb": {
+  "bbox": [
+   26.989,
+   67.53,
+   393.888,
+   184.528
+  ],
+  "boxes": [
+   [
+    26.989,
+    67.53,
+    393.888,
+    184.528
+   ]
+  ],
+  "height_mm": 117.0,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 366.9
+ },
+ "tzarc/keyboards\tKobold/R1/Kobold.kicad_pcb": {
+  "bbox": [
+   122.97,
+   44.89,
+   198.975,
+   120.0
+  ],
+  "boxes": [
+   [
+    122.97,
+    44.89,
+    198.975,
+    120.0
+   ]
+  ],
+  "height_mm": 75.11,
+  "layers": 4,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 76.01
+ },
+ "vaarai/cornia\tPCB/cornia.kicad_pcb": {
+  "bbox": [
+   18.669,
+   21.6,
+   177.934,
+   126.204
+  ],
+  "boxes": [
+   [
+    18.669,
+    21.6,
+    177.934,
+    126.204
+   ]
+  ],
+  "height_mm": 104.6,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 159.27
+ },
+ "vattern/stoutgat\tstoutgat-pcb.kicad_pcb": {
+  "bbox": [
+   53.766,
+   57.695,
+   358.66,
+   180.502
+  ],
+  "boxes": [
+   [
+    53.766,
+    57.695,
+    358.66,
+    180.502
+   ]
+  ],
+  "height_mm": 122.81,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 304.89
+ },
+ "vattern/stoutgatv2\tstoutgatv2.kicad_pcb": {
+  "bbox": [
+   47.574,
+   85.369,
+   393.294,
+   184.836
+  ],
+  "boxes": [
+   [
+    47.574,
+    85.369,
+    393.294,
+    184.836
+   ]
+  ],
+  "height_mm": 99.47,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 345.72
+ },
+ "vlkv/avalanche\tpcb/avalanche-hotswap.kicad_pcb": {
+  "bbox": [
+   60.73,
+   26.421,
+   240.385,
+   149.171
+  ],
+  "boxes": [
+   [
+    60.73,
+    26.421,
+    240.385,
+    149.171
+   ]
+  ],
+  "height_mm": 122.75,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 179.66
+ },
+ "vlkv/avalanche\tplate_bottom/plate_bottom.kicad_pcb": {
+  "bbox": [
+   61.32,
+   25.416,
+   240.975,
+   148.167
+  ],
+  "boxes": [
+   [
+    61.32,
+    25.416,
+    240.975,
+    148.167
+   ]
+  ],
+  "height_mm": 122.75,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 179.66
+ },
+ "vlkv/avalanche\tplate_top/plate_top.kicad_pcb": {
+  "bbox": [
+   51.53,
+   29.986,
+   231.185,
+   152.737
+  ],
+  "boxes": [
+   [
+    51.53,
+    29.986,
+    231.185,
+    152.737
+   ]
+  ],
+  "height_mm": 122.75,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 179.66
+ },
+ "vlkv/chocofly\tpcb/chocofly.kicad_pcb": {
+  "bbox": [
+   -152.001,
+   -111.811,
+   152.001,
+   21.691
+  ],
+  "boxes": [
+   [
+    -152.001,
+    -111.811,
+    152.001,
+    21.691
+   ]
+  ],
+  "height_mm": 133.5,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 304.0
+ },
+ "vlkv/chocofly\tpcb/chocofly_fz.kicad_pcb": {
+  "bbox": [
+   -152.001,
+   -111.811,
+   152.001,
+   21.691
+  ],
+  "boxes": [
+   [
+    -152.001,
+    -111.811,
+    152.001,
+    21.691
+   ]
+  ],
+  "height_mm": 133.5,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 304.0
+ },
+ "vlkv/chocofly\tpcb/chocofly_roundtracks_filledzones.kicad_pcb": {
+  "bbox": [
+   -152.001,
+   -111.811,
+   152.001,
+   21.691
+  ],
+  "boxes": [
+   [
+    -152.001,
+    -111.811,
+    152.001,
+    21.691
+   ]
+  ],
+  "height_mm": 133.5,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 304.0
+ },
+ "vuhopkep/pcb\tHnah40-Atmega328p/PCB_V1/PCB/PCB.kicad_pcb": {
+  "bbox": [
+   -9.524,
+   -9.524,
+   219.076,
+   66.676
+  ],
+  "boxes": [
+   [
+    -9.524,
+    -9.524,
+    219.076,
+    66.676
+   ]
+  ],
+  "height_mm": 76.2,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 228.6
+ },
+ "westfoxtrot/ccd60\tccd60.kicad_pcb": {
+  "bbox": [
+   379.793,
+   232.471,
+   664.781,
+   328.29
+  ],
+  "boxes": [
+   [
+    379.793,
+    232.471,
+    664.781,
+    328.29
+   ]
+  ],
+  "height_mm": 95.82,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 284.99
+ },
+ "westfoxtrot/cyclops_pcb\tcyclops.kicad_pcb": {
+  "bbox": [
+   69.15,
+   97.89,
+   380.51,
+   191.37
+  ],
+  "boxes": [
+   [
+    69.15,
+    97.89,
+    380.51,
+    191.37
+   ]
+  ],
+  "height_mm": 93.48,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 311.36
+ },
+ "westfoxtrot/cypher_pcb\tcypher.kicad_pcb": {
+  "bbox": [
+   25.717,
+   101.365,
+   395.867,
+   207.382
+  ],
+  "boxes": [
+   [
+    25.717,
+    101.365,
+    395.867,
+    207.382
+   ]
+  ],
+  "height_mm": 106.02,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 370.15
+ },
+ "weteor/3w6\tpcb/3w6/3W6.kicad_pcb": {
+  "bbox": [
+   42.341,
+   18.521,
+   285.516,
+   124.521
+  ],
+  "boxes": [
+   [
+    42.341,
+    18.521,
+    285.516,
+    124.521
+   ]
+  ],
+  "height_mm": 106.0,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 243.18
+ },
+ "weteor/3w6\tpcb/3w6/3W6_Plate.kicad_pcb": {
+  "bbox": [
+   42.382,
+   18.6,
+   285.557,
+   124.6
+  ],
+  "boxes": [
+   [
+    42.382,
+    18.6,
+    285.557,
+    124.6
+   ]
+  ],
+  "height_mm": 106.0,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 32,
+  "width_mm": 243.18
+ },
+ "wongjingping/k34\tk34/k34.kicad_pcb": {
+  "bbox": [
+   12.67,
+   23.848,
+   266.451,
+   142.748
+  ],
+  "boxes": [
+   [
+    12.67,
+    23.848,
+    266.451,
+    142.748
+   ]
+  ],
+  "height_mm": 118.9,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 253.78
+ },
+ "worldspawn00/SL40\tSL40.kicad_pcb": {
+  "bbox": [
+   14.287,
+   53.181,
+   280.988,
+   129.381
+  ],
+  "boxes": [
+   [
+    14.287,
+    53.181,
+    280.988,
+    129.381
+   ]
+  ],
+  "height_mm": 76.2,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 266.7
+ },
+ "yanfali/fruity60\tfruity60/fruity60.kicad_pcb": {
+  "layers": 2,
+  "unknown": "no outline drawn on Edge.Cuts"
+ },
+ "yanghu/unicorne\tunicorn-mx/unicorn-f072/unicorn.kicad_pcb": {
+  "bbox": [
+   19.893,
+   26.435,
+   288.1,
+   136.894
+  ],
+  "boxes": [
+   [
+    19.893,
+    26.435,
+    288.1,
+    136.894
+   ]
+  ],
+  "height_mm": 110.46,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 268.21
+ },
+ "yanghu/unicorne\tunicorn-mx/unicorn/unicorn.kicad_pcb": {
+  "bbox": [
+   19.893,
+   26.435,
+   288.1,
+   136.894
+  ],
+  "boxes": [
+   [
+    19.893,
+    26.435,
+    288.1,
+    136.894
+   ]
+  ],
+  "height_mm": 110.46,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 268.21
+ },
+ "zykrah/slime88\tslime88.kicad_pcb": {
+  "bbox": [
+   39.215,
+   50.277,
+   383.878,
+   173.84
+  ],
+  "boxes": [
+   [
+    39.215,
+    50.277,
+    383.878,
+    173.84
+   ]
+  ],
+  "height_mm": 123.56,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 344.66
+ },
+ "zzeneg/pica40\tpcb/full.kicad_pcb": {
+  "bbox": [
+   63.649,
+   62.5,
+   345.351,
+   158.201
+  ],
+  "boxes": [
+   [
+    63.649,
+    62.5,
+    345.351,
+    158.201
+   ]
+  ],
+  "height_mm": 95.7,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 281.7
+ },
+ "zzeneg/stront\tpcb/choc/pcb.kicad_pcb": {
+  "bbox": [
+   18.497,
+   72.003,
+   339.503,
+   156.633
+  ],
+  "boxes": [
+   [
+    18.497,
+    72.003,
+    339.503,
+    156.633
+   ]
+  ],
+  "height_mm": 84.63,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 321.01
+ },
+ "zzeneg/stront\tpcb/mx/pcb.kicad_pcb": {
+  "bbox": [
+   18.5,
+   64.5,
+   339.5,
+   156.816
+  ],
+  "boxes": [
+   [
+    18.5,
+    64.5,
+    339.5,
+    156.816
+   ]
+  ],
+  "height_mm": 92.32,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 321.0
+ },
+ "zzeneg/stront\tpcb/mx40/pcb.kicad_pcb": {
+  "bbox": [
+   18.5,
+   64.5,
+   339.5,
+   156.815
+  ],
+  "boxes": [
+   [
+    18.5,
+    64.5,
+    339.5,
+    156.815
+   ]
+  ],
+  "height_mm": 92.32,
+  "layers": 2,
+  "pieces": 1,
+  "switch_cutouts": 0,
+  "width_mm": 321.0
+ }
+}

@@ -1,0 +1,14 @@
+[Unit]
+Description=Daily backup of the keyboardbuilders database
+
+[Timer]
+OnCalendar=daily
+# The VPS is not on at 00:00 sharp for anyone's benefit, and an exact time means every
+# timer on the box fires at once.
+RandomizedDelaySec=30m
+# A backup missed because the box was off should run at next boot, not be skipped. This
+# is the whole difference between a backup schedule and a backup habit.
+Persistent=true
+
+[Install]
+WantedBy=timers.target

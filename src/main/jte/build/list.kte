@@ -1,0 +1,120 @@
+@import net.keyboardbuilders.keyboardbuilders.web.BuildListPage
+@import net.keyboardbuilders.keyboardbuilders.web.Head
+@import net.keyboardbuilders.keyboardbuilders.web.SiteUrl
+@param page: BuildListPage
+@param head: Head
+@param site: SiteUrl
+
+@template.layout(head = head, site = site, content = @`
+    <p class="crumb"><a href="/designs/${page.slug}">&larr; ${page.name}</a></p>
+
+    <h1>${page.name} &mdash; parts to buy</h1>
+    <p class="summary unrecorded">${page.pricing}</p>
+    @for(note in page.notes)
+        <p class="summary unrecorded">${note}</p>
+    @endfor
+
+    <%-- #113: what the design needs (rows) against each way to get it (columns), the need
+         pinned left as on the compare pages. A part's name in a cell opens the row's offers;
+         an offer's name picks it, and the shop is a separate link to a new tab. --%>
+    <div class="compare-scroll" tabindex="0" aria-label="Parts by way of buying them, scrolls sideways">
+        <table class="compare build-grid">
+            <thead>
+                <tr>
+                    <td class="corner"></td>
+                    @for(h in page.grid.heads)
+                        !{val headUrl = h.url}
+                        !{val headPrice = h.price}
+                        <th scope="col">
+                            @if(headUrl != null)<a class="external" href="${headUrl}" rel="nofollow noopener" target="_blank" title="Opens in a new tab">${h.name}<svg class="ext" viewBox="0 0 24 24" width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6"/><path d="M20 4 10 14"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>@else${h.name}@endif
+                            @if(headPrice != null)<span class="sub">${headPrice}</span>@endif
+                        </th>
+                    @endfor
+                </tr>
+            </thead>
+            @for(row in page.grid.rows)
+                <tbody id="${row.id}">
+                    <tr>
+                        <th scope="row">
+                            <strong>${row.label}</strong>
+                            <span class="sub ${row.whatCss}">${row.what}</span>
+                            !{val own = row.own}
+                            @if(own != null)<a class="own" href="${own.href}">${own.text}</a>@endif
+                        </th>
+                        @for(c in row.cells)
+                            !{val cellSub = c.sub}
+                            !{val cellHref = c.href}
+                            <td class="${c.css}">
+                                @if(cellHref != null)
+                                    <a class="part" href="${cellHref}">${c.text}</a>
+                                    @if(cellSub != null)<span class="sub">${cellSub}</span>@endif
+                                @elseif(c.picker)
+                                    <details class="pick">
+                                        <summary><span class="part">${c.text}</span>@if(cellSub != null)<span class="sub">${cellSub}</span>@endif</summary>
+                                        <ul class="offers">
+                                            @for(o in row.offers)
+                                                !{val pickHref = o.pick}
+                                                <li class="${o.css}">@if(pickHref != null)<a href="${pickHref}">${o.name}</a>@else${o.mark}${o.name}@endif
+                                                    <span class="sub">${o.detail} &middot; <a class="external" href="${o.url}" rel="nofollow noopener" target="_blank" title="Opens in a new tab">shop page<svg class="ext" viewBox="0 0 24 24" width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6"/><path d="M20 4 10 14"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></span></li>
+                                            @endfor
+                                        </ul>
+                                    </details>
+                                @else
+                                    ${c.text}
+                                    @if(cellSub != null)<span class="sub">${cellSub}</span>@endif
+                                @endif
+                            </td>
+                        @endfor
+                    </tr>
+                </tbody>
+            @endfor
+            <tfoot>
+                <tr class="total">
+                    <th scope="row"><strong>Total</strong></th>
+                    @for(f in page.grid.foots)
+                        !{val gaps = f.gaps}
+                        <td>
+                            <strong>${f.total}</strong>
+                            @if(gaps != null)<span class="sub">${gaps}</span>@endif
+                            @for(line in f.shipping)<span class="sub">${line}</span>@endfor
+                        </td>
+                    @endfor
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    <p class="summary unrecorded">${page.notPriced}</p>
+
+    @if(page.kits.isEmpty())
+        <p class="summary unrecorded">No kit based on this design on our list yet.</p>
+    @else
+        <h2>The kits</h2>
+    @endif
+    @for(kit in page.kits)
+        <h3 class="spec-section"><a class="external" href="${kit.url}" rel="nofollow noopener" target="_blank" title="Opens in a new tab">${kit.name}<svg class="ext" viewBox="0 0 24 24" width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6"/><path d="M20 4 10 14"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></h3>
+        <p>Based on <a href="/designs/${kit.basedOnSlug}">${kit.basedOnName}</a>, ${kit.licence}.</p>
+        !{val offersSummary = kit.offersSummary}
+        @if(offersSummary != null)
+            <details>
+                <summary>${offersSummary}</summary>
+                <ul class="fit-list">
+                    @for(o in kit.offers)
+                        <li class="${o.css}">${o.mark}<a class="external" href="${o.url}" rel="nofollow noopener" target="_blank" title="Opens in a new tab">${o.name}<svg class="ext" viewBox="0 0 24 24" width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6"/><path d="M20 4 10 14"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a> &mdash; ${o.detail}</li>
+                    @endfor
+                </ul>
+            </details>
+        @endif
+        <details>
+            <summary>${kit.contentsIntro}</summary>
+            <ul class="fit-list">
+                @for(item in kit.contents)
+                    <li>${item}</li>
+                @endfor
+            </ul>
+        </details>
+        !{val kitNotPriced = kit.notPriced}
+        @if(kitNotPriced != null)
+            <p class="summary unrecorded">${kitNotPriced}</p>
+        @endif
+    @endfor
+`)

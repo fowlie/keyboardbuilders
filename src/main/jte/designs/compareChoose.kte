@@ -1,0 +1,51 @@
+@import net.keyboardbuilders.keyboardbuilders.web.CompareChooser
+@import net.keyboardbuilders.keyboardbuilders.web.Head
+@import net.keyboardbuilders.keyboardbuilders.web.SiteUrl
+@param chooser: CompareChooser
+@param head: Head
+@param site: SiteUrl
+
+@template.layout(head = head, site = site, content = @`
+    <p class="crumb"><a href="/designs/${chooser.a.slug}">&larr; ${chooser.a.name}</a></p>
+
+    <h1>Compare ${chooser.a.name} with&hellip;</h1>
+
+    @if(chooser.sameTwice)
+        <p class="summary">That is the same board twice. Pick a different one.</p>
+    @endif
+
+    <%-- A plain GET form, so choosing works without scripting and the result is a URL
+         (ux.md 1.1). The first board rides along hidden, the same way index.kte carries its facets. --%>
+    <form class="find" method="get" action="/designs/compare" role="search">
+        <input type="hidden" name="a" value="${chooser.a.slug}">
+        @if(chooser.a.keys != null)
+            <input type="hidden" name="al" value="${chooser.a.keys}">
+        @endif
+        <input type="search" name="q" value="${chooser.q}"
+               placeholder="Board name" aria-label="Name of the board to compare with"
+               autocomplete="off" spellcheck="false" autofocus>
+        <button type="submit">Find</button>
+    </form>
+
+    @if(chooser.q.isEmpty())
+        <h2 class="strip-head related-head">Boards like this</h2>
+    @else
+        <h2 class="strip-head">Names matching &ldquo;${chooser.q}&rdquo;</h2>
+    @endif
+
+    @if(chooser.candidates.isEmpty())
+        @if(chooser.q.isEmpty())
+            <p class="summary unrecorded">Nothing shares enough with ${chooser.a.name} to suggest. Search by name above.</p>
+        @else
+            <p class="summary unrecorded">No board&rsquo;s name matches &ldquo;${chooser.q}&rdquo;.</p>
+        @endif
+    @else
+        <%-- The same card as "Boards like this" on the design page, leading here instead
+             of to the design, so a reader already knows how to read it. --%>
+        <ul class="strip">
+            @for(item in chooser.candidates)
+                <li>@template.designs.card(card = item.card, cls = "strip-card", reason = item.reason, href = item.href, rel = "nofollow")</li>
+            @endfor
+        </ul>
+    @endif
+`)

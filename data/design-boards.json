@@ -1,0 +1,2164 @@
+{
+ "3w6": {
+  "paths": [
+   "pcb/3w6/3W6.kicad_pcb"
+  ],
+  "repo": "weteor/3w6"
+ },
+ "3x3macropad": {
+  "paths": [
+   "PCB-Files/PCB/PCB.kicad_pcb"
+  ],
+  "repo": "rarepotato8de/3x3macropad"
+ },
+ "41-1350": {
+  "paths": [
+   "revlp/41_1350/41_1350_pcb/41_1350_pcb.kicad_pcb"
+  ],
+  "repo": "cyril279/keyboards"
+ },
+ "41-1353-r41l2": {
+  "paths": [
+   "revlp/41_1353/41_1353_pcb/r41l2.kicad_pcb"
+  ],
+  "repo": "cyril279/keyboards"
+ },
+ "42": {
+  "paths": [
+   "pcb/kicad/pcb.kicad_pcb"
+  ],
+  "repo": "nglgzz/42"
+ },
+ "45": {
+  "paths": [
+   "45_keyboard/45_keyboard.kicad_pcb"
+  ],
+  "repo": "lighteningab/45keyboard_v1"
+ },
+ "4by3": {
+  "paths": [
+   "pcb/4by3.kicad_pcb"
+  ],
+  "repo": "eliassjogreen/4by3"
+ },
+ "67-e": {
+  "paths": [
+   "pcb/67_E.kicad_pcb"
+  ],
+  "repo": "str-dst/67mk_E"
+ },
+ "8pack": {
+  "paths": [
+   "keypad/8keysimplev3/8pack.kicad_pcb"
+  ],
+  "repo": "cgarcia2097/8-pack"
+ },
+ "abacus": {
+  "paths": [
+   "AbacusPCB/AbacusPCB.kicad_pcb"
+  ],
+  "repo": "nickolaij/Abacus_Rev2"
+ },
+ "adalyn": {
+  "paths": [
+   "PCB/Adalyn.kicad_pcb"
+  ],
+  "repo": "marvfpv/adalyn"
+ },
+ "adelheid": {
+  "paths": [
+   "pcb/adelheid.kicad_pcb"
+  ],
+  "repo": "floookay/adelheid"
+ },
+ "aek2-usb": {
+  "paths": [
+   "aek2_usb.kicad_pcb"
+  ],
+  "repo": "kb-elmo/aek2_usb"
+ },
+ "ajisai74": {
+  "paths": [
+   "AJisai74/BM_L/AJ_BM_L.kicad_pcb",
+   "AJisai74/BM_R/AJ_BM_R.kicad_pcb",
+   "AJisai74/Mid_L/AJ_Mid_L.kicad_pcb",
+   "AJisai74/Mid_R/AJ_Mid_R.kicad_pcb"
+  ],
+  "repo": "Salicylic-acid3/PCB_Data"
+ },
+ "alpha": {
+  "paths": [
+   "PCB_kicad/alpha_pro_micro.kicad_pcb"
+  ],
+  "repo": "PyrooL/Alpha"
+ },
+ "anavi-arrows": {
+  "paths": [
+   "anavi-arrows.kicad_pcb"
+  ],
+  "repo": "anavitechnology/anavi-arrows"
+ },
+ "anavi-macro-pad-10": {
+  "paths": [
+   "anavi-macro-pad-10.kicad_pcb"
+  ],
+  "repo": "anavitechnology/anavi-macro-pad-10"
+ },
+ "anavi-macro-pad-12": {
+  "paths": [
+   "anavi-macro-pad-12.kicad_pcb"
+  ],
+  "repo": "anavitechnology/anavi-macro-pad-12"
+ },
+ "andean-condor": {
+  "paths": [
+   "andean-condor.kicad_pcb"
+  ],
+  "repo": "guidoism/andean-condor"
+ },
+ "architeuthis-dux": {
+  "paths": [
+   "Architeuthis dux/architeuthis_dux.kicad_pcb"
+  ],
+  "repo": "tapioki/cephalopoda"
+ },
+ "arisu": {
+  "paths": [
+   "arisu.kicad_pcb"
+  ],
+  "repo": "fatenozomi/arisu-pcb"
+ },
+ "atom47-rev5": {
+  "paths": [
+   "pcb-files/rev5/atom47-rev5.kicad_pcb"
+  ],
+  "repo": "evyd13/atom47"
+ },
+ "atom47-rev5-c": {
+  "paths": [
+   "pcb-files/rev5-c/atom47-rev5-c.kicad_pcb"
+  ],
+  "repo": "evyd13/atom47"
+ },
+ "atreus62": {
+  "paths": [
+   "pcb/Atreus62.kicad_pcb"
+  ],
+  "repo": "profet23/atreus62"
+ },
+ "atreyu": {
+  "paths": [
+   "pcb/v1/atreyu-pcb2.kicad_pcb",
+   "pcb/v2/atreyu-pcb2.kicad_pcb"
+  ],
+  "repo": "climent/atreyu"
+ },
+ "atreyu-v2-choc": {
+  "paths": [
+   "pcb/v2-choc/v2-choc.kicad_pcb"
+  ],
+  "repo": "climent/atreyu"
+ },
+ "avalanche-hotswap": {
+  "paths": [
+   "pcb/avalanche-hotswap.kicad_pcb"
+  ],
+  "repo": "vlkv/avalanche"
+ },
+ "axon": {
+  "paths": [
+   "axon_pcb/axon_pcb.kicad_pcb"
+  ],
+  "repo": "thatfellarobin/axon"
+ },
+ "aya": {
+  "paths": [
+   "hardware/aya.kicad_pcb"
+  ],
+  "repo": "dannixon/aya"
+ },
+ "bad-wings-bold": {
+  "paths": [
+   "bold/source/bad_wings_bold.kicad_pcb"
+  ],
+  "repo": "hazels-garage/bad-wings"
+ },
+ "bad-wings-slim": {
+  "paths": [
+   "slim/source/bad_wings_slim.kicad_pcb"
+  ],
+  "repo": "hazels-garage/bad-wings"
+ },
+ "badge": {
+  "paths": [
+   "badge/badge.kicad_pcb"
+  ],
+  "repo": "fharding1/pdxkbc-badge"
+ },
+ "bakeneko-65": {
+  "paths": [
+   "pcb/bakeneko-65-pcb.kicad_pcb"
+  ],
+  "repo": "kkatano/bakeneko-65"
+ },
+ "banime40": {
+  "paths": [
+   "pcb/banime40/banime40.kicad_pcb"
+  ],
+  "repo": "chrischrislolo/banime40"
+ },
+ "barracuda": {
+  "paths": [
+   "pcb/barracuda/barracuda.kicad_pcb"
+  ],
+  "repo": "knaruo/barracuda"
+ },
+ "bartlepslit": {
+  "paths": [
+   "bartlepslit.kicad_pcb"
+  ],
+  "repo": "kyrremann/bartlesplit"
+ },
+ "basketweave": {
+  "paths": [
+   "basketweave/basketweave.kicad_pcb"
+  ],
+  "repo": "null-ll/basketweave"
+ },
+ "bevi": {
+  "paths": [
+   "bevi.kicad_pcb"
+  ],
+  "repo": "sendyyeah/bevi"
+ },
+ "bfo-9000": {
+  "paths": [
+   "bfo9000.kicad_pcb"
+  ],
+  "repo": "keebio/bfo9000-pcb"
+ },
+ "blue-team-pad": {
+  "paths": [
+   "PCB/BlueTeamPad/BlueTeamPad.kicad_pcb"
+  ],
+  "repo": "fearherbs1/blue-team-pad"
+ },
+ "bm42": {
+  "paths": [
+   "pcb/bm42.kicad_pcb"
+  ],
+  "repo": "kb-elmo/bm42"
+ },
+ "bto-layout": {
+  "paths": [
+   "ADKB96-PCB/BTO_Layout.kicad_pcb"
+  ],
+  "repo": "bit-trade-one/ADKB96-hardware"
+ },
+ "budgy-rev1-chergo": {
+  "paths": [
+   "Budgy-rev1/Chergo.kicad_pcb"
+  ],
+  "repo": "doesntfazer/Budgy"
+ },
+ "budgy-rev2-chergo": {
+  "paths": [
+   "Budgy-rev2/Chergo.kicad_pcb"
+  ],
+  "repo": "doesntfazer/Budgy"
+ },
+ "buzzard": {
+  "paths": [
+   "PCB/Buzzard/Buzzard.kicad_pcb"
+  ],
+  "repo": "crehmann/buzzard"
+ },
+ "bw2-v2": {
+  "paths": [
+   "v2/source/bw2.kicad_pcb"
+  ],
+  "repo": "hazels-garage/bad-wings"
+ },
+ "cantor": {
+  "paths": [
+   "Cantor_Classic/keyboard_pcb-rounded.kicad_pcb",
+   "Cantor_Classic/keyboard_pcb.kicad_pcb"
+  ],
+  "repo": "diepala/cantor"
+ },
+ "cantor-remix": {
+  "paths": [
+   "pcb/keyboard_pcb.kicad_pcb"
+  ],
+  "repo": "nilokr/cantor-remix"
+ },
+ "ccd60": {
+  "paths": [
+   "ccd60.kicad_pcb"
+  ],
+  "repo": "westfoxtrot/ccd60"
+ },
+ "chameleon": {
+  "paths": [
+   "PCB/v1.20/Chameleon.kicad_pcb"
+  ],
+  "repo": "TweetyDaBird/Fat-Chameleon"
+ },
+ "cheapino": {
+  "paths": [
+   "pcb/cheapino.kicad_pcb"
+  ],
+  "repo": "tompi/cheapino"
+ },
+ "choc-ergo-travel": {
+  "paths": [
+   "PCB_Choc/ErgoTravel.kicad_pcb"
+  ],
+  "repo": "jpconstantineau/ergotravel"
+ },
+ "choc-led-ergo-travel": {
+  "paths": [
+   "PCB_Choc_LED/ErgoTravel.kicad_pcb"
+  ],
+  "repo": "jpconstantineau/ergotravel"
+ },
+ "choc-rgb-ergo-travel": {
+  "paths": [
+   "PCB_Choc_RGB/ErgoTravel.kicad_pcb"
+  ],
+  "repo": "jpconstantineau/ergotravel"
+ },
+ "choc-v": {
+  "paths": [
+   "kicad/chocV/chocV.kicad_pcb"
+  ],
+  "repo": "brickbots/chocv"
+ },
+ "choc-v2-env-kb65": {
+  "paths": [
+   "MainPCB-ChocV2/EnvKB65.kicad_pcb"
+  ],
+  "repo": "Envious-Data/Env-KB65M"
+ },
+ "chocofly": {
+  "paths": [
+   "pcb/chocofly.kicad_pcb",
+   "pcb/chocofly_fz.kicad_pcb",
+   "pcb/chocofly_roundtracks_filledzones.kicad_pcb"
+  ],
+  "repo": "vlkv/chocofly"
+ },
+ "chocolatebar": {
+  "paths": [
+   "v2_kicad/chocolatebar.kicad_pcb"
+  ],
+  "repo": "misonoworks/chocolate-bar"
+ },
+ "chouchou": {
+  "paths": [
+   "kicad/chouchou.kicad_pcb"
+  ],
+  "repo": "dlip/chouchou"
+ },
+ "clog": {
+  "paths": [
+   "pcb/clog.kicad_pcb"
+  ],
+  "repo": "smores56/clog"
+ },
+ "contender": {
+  "paths": [
+   "contender.kicad_pcb"
+  ],
+  "repo": "sotoba/contender"
+ },
+ "contra": {
+  "paths": [
+   "Contra.kicad_pcb"
+  ],
+  "repo": "ai03-2725/contra"
+ },
+ "corne-cherry-v4": {
+  "paths": [
+   "pcbs/corne-cherry/hotswap/corne-cherry.kicad_pcb"
+  ],
+  "repo": "foostan/crkbd"
+ },
+ "corne-chocolate-v4": {
+  "paths": [
+   "pcbs/corne-chocolate/hotswap/corne-chocolate.kicad_pcb"
+  ],
+  "repo": "foostan/crkbd"
+ },
+ "cornia": {
+  "paths": [
+   "PCB/cornia.kicad_pcb"
+  ],
+  "repo": "vaarai/cornia"
+ },
+ "cradio": {
+  "paths": [
+   "34Keys/Cradio S/cradio.kicad_pcb",
+   "34Keys/Cradio/cradio.kicad_pcb"
+  ],
+  "repo": "davidphilipbarr/36keys"
+ },
+ "cradio-ble": {
+  "paths": [
+   "34Keys/Cradio BLE/cradio-ble.kicad_pcb"
+  ],
+  "repo": "davidphilipbarr/36keys"
+ },
+ "cradio-f": {
+  "paths": [
+   "34Keys/Cradio F/cradio-f.kicad_pcb"
+  ],
+  "repo": "davidphilipbarr/36keys"
+ },
+ "cradio-mb": {
+  "paths": [
+   "34Keys/Cradio (mindbend)/cradio-mb.kicad_pcb"
+  ],
+  "repo": "davidphilipbarr/36keys"
+ },
+ "cradio-pg1232": {
+  "paths": [
+   "34Keys/Cradio-pg1232/cradio-pg1232.kicad_pcb"
+  ],
+  "repo": "davidphilipbarr/36keys"
+ },
+ "cradio-z": {
+  "paths": [
+   "34Keys/Cradio-Z/cradio-z.kicad_pcb"
+  ],
+  "repo": "davidphilipbarr/36keys"
+ },
+ "cradio-z-lp": {
+  "paths": [
+   "34Keys/Cradio-Z lp/cradio-z.kicad_pcb"
+  ],
+  "repo": "davidphilipbarr/36keys"
+ },
+ "cradio10": {
+  "paths": [
+   "34Keys/Cradio 10/cradio10.kicad_pcb"
+  ],
+  "repo": "davidphilipbarr/36keys"
+ },
+ "craftwalk": {
+  "paths": [
+   "craftwalk.kicad_pcb"
+  ],
+  "repo": "sotoba/craftwalk"
+ },
+ "crowboard-rev1-choc": {
+  "paths": [
+   "Crowboard-Kicad-rev1 - choc/crowboard.kicad_pcb"
+  ],
+  "repo": "doesntfazer/CrowBoard"
+ },
+ "crowboard-rev1-mx": {
+  "paths": [
+   "Crowboard-Kicad-rev1 - MX/crowboard.kicad_pcb"
+  ],
+  "repo": "doesntfazer/CrowBoard"
+ },
+ "crowboard-rev1-mx-kailh-hotswap": {
+  "paths": [
+   "Crowboard-Kicad-rev1 - MX - Kailh-hotswap/crowboard.kicad_pcb"
+  ],
+  "repo": "doesntfazer/CrowBoard"
+ },
+ "crowboard-rev2-mx": {
+  "paths": [
+   "Crowboard-Kicad-rev2 MX/crowboard.kicad_pcb"
+  ],
+  "repo": "doesntfazer/CrowBoard"
+ },
+ "crowboard-rev2-with-pimoroni": {
+  "paths": [
+   "Crowboard-Kicad-rev2 - With Pimoroni/crowboard.kicad_pcb"
+  ],
+  "repo": "doesntfazer/CrowBoard"
+ },
+ "cyclops": {
+  "paths": [
+   "cyclops.kicad_pcb"
+  ],
+  "repo": "westfoxtrot/cyclops_pcb"
+ },
+ "cypher": {
+  "paths": [
+   "cypher.kicad_pcb"
+  ],
+  "repo": "westfoxtrot/cypher_pcb"
+ },
+ "desire65": {
+  "paths": [
+   "kicad8/desire65.kicad_pcb"
+  ],
+  "repo": "akyp/desire65-pcb"
+ },
+ "dilemma-diy-v2": {
+  "paths": [
+   "3x5_2/dilemma.kicad_pcb"
+  ],
+  "repo": "Bastardkb/Dilemma"
+ },
+ "dilemma-max": {
+  "paths": [
+   "4x6_4/dilemma.kicad_pcb"
+  ],
+  "repo": "Bastardkb/Dilemma"
+ },
+ "dilemma-v2": {
+  "paths": [
+   "3x5_3/dilemma.kicad_pcb"
+  ],
+  "repo": "Bastardkb/Dilemma"
+ },
+ "dilemma-v3-hotswap": {
+  "paths": [
+   "3x5_3_procyon/dilemma.kicad_pcb"
+  ],
+  "repo": "Bastardkb/Dilemma"
+ },
+ "discipad": {
+  "paths": [
+   "discipad-pcb.kicad_pcb"
+  ],
+  "repo": "coseyfannitutti/discipad"
+ },
+ "discipline": {
+  "paths": [
+   "discipline-pcb.kicad_pcb"
+  ],
+  "repo": "coseyfannitutti/discipline"
+ },
+ "dizzy40": {
+  "paths": [
+   "pcb/dizzy40.kicad_pcb"
+  ],
+  "repo": "kb-elmo/dizzy40"
+ },
+ "dk60": {
+  "paths": [
+   "DK60/Kicad/DK60.kicad_pcb"
+  ],
+  "repo": "Dbroqua/DK60"
+ },
+ "dm9records-ergoinu": {
+  "paths": [
+   "pcb/inu_main.kicad_pcb"
+  ],
+  "repo": "hsgw/ergoinu"
+ },
+ "dogtag": {
+  "paths": [
+   "kicad/dogtag.kicad_pcb"
+  ],
+  "repo": "takashicompany/dogtag"
+ },
+ "dolphin": {
+  "paths": [
+   "dolphin.kicad_pcb"
+  ],
+  "repo": "evyd13/fin-pad"
+ },
+ "draculad": {
+  "paths": [
+   "kicad/split_3x.kicad_pcb",
+   "kicad/split_3x_bottom.kicad_pcb",
+   "kicad/split_3x_bottom_svg.kicad_pcb",
+   "kicad/split_3x_cover.kicad_pcb",
+   "kicad/split_3x_plate.kicad_pcb",
+   "kicad/split_3x_plate_bigger_encoder_gerber.kicad_pcb",
+   "kicad/split_3x_plate_gerber.kicad_pcb"
+  ],
+  "repo": "MangoIV/dracuLad"
+ },
+ "drink-me-usb-c": {
+  "paths": [
+   "kicad/drink-me-usb-c/drink-me.kicad_pcb"
+  ],
+  "repo": "yatara-cc/drink-me"
+ },
+ "drink-me-usb-micro": {
+  "paths": [
+   "kicad/drink-me-usb-micro/drink-me.kicad_pcb"
+  ],
+  "repo": "yatara-cc/drink-me"
+ },
+ "drink-me-usb-mini": {
+  "paths": [
+   "kicad/drink-me-usb-mini/drink-me.kicad_pcb"
+  ],
+  "repo": "yatara-cc/drink-me"
+ },
+ "dropout": {
+  "paths": [
+   "pcb/dropout.kicad_pcb"
+  ],
+  "repo": "enochchau/dropout-numpad"
+ },
+ "egg58v2": {
+  "paths": [
+   "egg58bt/egg58v2.kicad_pcb",
+   "egg58v2/egg58v2.kicad_pcb"
+  ],
+  "repo": "eggsworks/egg58"
+ },
+ "elcantorhs": {
+  "paths": [
+   "ELCANTORHS.kicad_pcb"
+  ],
+  "repo": "azhizhinov/elcantorhs"
+ },
+ "elephant42": {
+  "paths": [
+   "pcb/elephant42.kicad_pcb"
+  ],
+  "repo": "illness072/elephant42"
+ },
+ "eliza": {
+  "paths": [
+   "pcb/Eliza.kicad_pcb"
+  ],
+  "repo": "kb-elmo/eliza"
+ },
+ "endzone34": {
+  "paths": [
+   "kicad/endzone34.kicad_pcb"
+  ],
+  "repo": "takashicompany/endzone34"
+ },
+ "env-kb60-mxhs": {
+  "paths": [
+   "KiCad Files/MainPCB_MX_HS/Env-KB60MXHS.kicad_pcb"
+  ],
+  "repo": "Envious-Data/Env-KB60F"
+ },
+ "env-mcro": {
+  "paths": [
+   "MainPCB_MX/EnvMCRO.kicad_pcb",
+   "MainPCB_ULP/EnvMCRO.kicad_pcb"
+  ],
+  "repo": "Envious-Data/Env-MCRO"
+ },
+ "env-rgb": {
+  "paths": [
+   "KiCad Files/MainPCB_RGB-HS/ENV_KB_RGB.kicad_pcb"
+  ],
+  "repo": "Envious-Data/Env-KB"
+ },
+ "equanimity": {
+  "paths": [
+   "Kicad Files/Alice Keyboard.kicad_pcb"
+  ],
+  "repo": "tyraelwastaken/equanimity"
+ },
+ "ergo33": {
+  "paths": [
+   "ergo33/ergo33.kicad_pcb"
+  ],
+  "repo": "kulmajaba/tunks-keyboard"
+ },
+ "ergodash": {
+  "paths": [
+   "PCB/Rev.1.1/ergodash.kicad_pcb",
+   "PCB/Rev.1/ergodash.kicad_pcb",
+   "PCB/Rev1.2/ergodash.kicad_pcb",
+   "mini/PCB/ergodash.kicad_pcb"
+  ],
+  "repo": "omkbd/ergodash"
+ },
+ "ergoslab": {
+  "paths": [
+   "pcb/ergoslab.kicad_pcb"
+  ],
+  "repo": "tomsaleeba/ergoslab"
+ },
+ "eternal-keypad": {
+  "paths": [
+   "pcb-kicad/eternal-keypad.kicad_pcb"
+  ],
+  "repo": "duckyb/eternal-keypad"
+ },
+ "euisopcb": {
+  "paths": [
+   "EUISOpcb.kicad_pcb"
+  ],
+  "repo": "TuckTuckFloof/EUISO-pcb"
+ },
+ "ferris-0-1-base": {
+  "paths": [
+   "0.1/base/ferris.kicad_pcb"
+  ],
+  "repo": "pierrechevalier83/ferris"
+ },
+ "ferris-0-1-compact": {
+  "paths": [
+   "0.1/compact/ferris.kicad_pcb"
+  ],
+  "repo": "pierrechevalier83/ferris"
+ },
+ "ferris-0-1-high": {
+  "paths": [
+   "0.1/high/ferris.kicad_pcb"
+  ],
+  "repo": "pierrechevalier83/ferris"
+ },
+ "ferris-0-1-low": {
+  "paths": [
+   "0.1/low/ferris.kicad_pcb"
+  ],
+  "repo": "pierrechevalier83/ferris"
+ },
+ "ferris-0-2-bling": {
+  "paths": [
+   "0.2/bling/ferris.kicad_pcb"
+  ],
+  "repo": "pierrechevalier83/ferris"
+ },
+ "ferris-0-2-compact": {
+  "paths": [
+   "0.2/compact/ferris.kicad_pcb"
+  ],
+  "repo": "pierrechevalier83/ferris"
+ },
+ "ferris-0-2-high": {
+  "paths": [
+   "0.2/high/ferris.kicad_pcb"
+  ],
+  "repo": "pierrechevalier83/ferris"
+ },
+ "ferris-0-2-mini": {
+  "paths": [
+   "0.2/mini/ferris.kicad_pcb"
+  ],
+  "repo": "pierrechevalier83/ferris"
+ },
+ "fnrow": {
+  "paths": [
+   "fnrow/fnrow.kicad_pcb"
+  ],
+  "repo": "dinofizz/fnrow-pcb"
+ },
+ "for-science": {
+  "paths": [
+   "for-science.kicad_pcb"
+  ],
+  "repo": "peej/for-science-keyboard"
+ },
+ "fourier": {
+  "paths": [
+   "fourier/fourier-left/fourier-left.kicad_pcb",
+   "fourier/fourier-right/fourier-right.kicad_pcb"
+  ],
+  "repo": "keebio/fourier"
+ },
+ "framework-rev0": {
+  "paths": [
+   "rev0/framework.kicad_pcb"
+  ],
+  "repo": "stevennguyen/framework"
+ },
+ "frankie-macropad": {
+  "paths": [
+   "macropad.kicad_pcb"
+  ],
+  "repo": "eric-wood/macro-pad"
+ },
+ "friedrich": {
+  "paths": [
+   "PCB/FriedrichPCB.kicad_pcb"
+  ],
+  "repo": "marvfpv/friedrich"
+ },
+ "frooastboard-nano": {
+  "paths": [
+   "Frooastboard Nano/KiCad Project/Frooastboard Nano.kicad_pcb"
+  ],
+  "repo": "Frooastside/Frooastboard"
+ },
+ "fruity60": {
+  "paths": [
+   "fruity60/fruity60.kicad_pcb"
+  ],
+  "repo": "yanfali/fruity60"
+ },
+ "g35": {
+  "paths": [
+   "PCB/G35.kicad_pcb"
+  ],
+  "repo": "kaylynb/mechllama-g35"
+ },
+ "game-hand": {
+  "paths": [
+   "pcb/GameHand.kicad_pcb"
+  ],
+  "repo": "kb-elmo/gamehand"
+ },
+ "gh80-1800": {
+  "paths": [
+   "GH80-1800/PCB/gh80-1800.kicad_pcb"
+  ],
+  "repo": "evyd13/gh80-series"
+ },
+ "gh80-3700": {
+  "paths": [
+   "GH80-3700/PCB/gh80-3700.kicad_pcb"
+  ],
+  "repo": "evyd13/gh80-series"
+ },
+ "glyphkbd": {
+  "paths": [
+   "v2/PCB/glyph-rounded.kicad_pcb",
+   "v2/PCB/glyph.kicad_pcb"
+  ],
+  "repo": "galile0-designs/glyphkbd"
+ },
+ "grooveboard-atmel-au": {
+  "paths": [
+   "grooveboard-atmel-au/grooveboard-atmel-au.kicad_pcb"
+  ],
+  "repo": "ianklug/grooveboard"
+ },
+ "grooveboard-atmel-mu": {
+  "paths": [
+   "grooveboard-atmel-mu/grooveboard-atmel-mu.kicad_pcb"
+  ],
+  "repo": "ianklug/grooveboard"
+ },
+ "grooveboard-choc-atmel-au": {
+  "paths": [
+   "grooveboard-choc-atmel-au/grooveboard-choc-atmel-au.kicad_pcb"
+  ],
+  "repo": "ianklug/grooveboard"
+ },
+ "grooveboard-choc-atmel-mu": {
+  "paths": [
+   "grooveboard-choc-atmel-mu/grooveboard-choc-atmel-mu.kicad_pcb"
+  ],
+  "repo": "ianklug/grooveboard"
+ },
+ "grooveboard-choc-rp": {
+  "paths": [
+   "grooveboard-choc-rp/grooveboard-choc-rp.kicad_pcb"
+  ],
+  "repo": "ianklug/grooveboard"
+ },
+ "grooveboard-mx-atmel-au": {
+  "paths": [
+   "grooveboard-mx-atmel-au/grooveboard-mx-atmel-au.kicad_pcb"
+  ],
+  "repo": "ianklug/grooveboard"
+ },
+ "grooveboard-mx-atmel-mu": {
+  "paths": [
+   "grooveboard-mx-atmel-mu/grooveboard-mx-atmel-mu.kicad_pcb"
+  ],
+  "repo": "ianklug/grooveboard"
+ },
+ "grooveboard-mx-rp": {
+  "paths": [
+   "grooveboard-mx-rp/grooveboard-mx-rp.kicad_pcb"
+  ],
+  "repo": "ianklug/grooveboard"
+ },
+ "grooveboard-rp": {
+  "paths": [
+   "grooveboard-rp/grooveboard-rp.kicad_pcb"
+  ],
+  "repo": "ianklug/grooveboard"
+ },
+ "gud70": {
+  "paths": [
+   "pcb-files/gud70.kicad_pcb"
+  ],
+  "repo": "evyd13/gud70-pcb"
+ },
+ "guide68-assemble": {
+  "paths": [
+   "Guide68/Assemble_L/Guide68_Assemble_L.kicad_pcb",
+   "Guide68/Assemble_R/Guide68_Assemble_R.kicad_pcb"
+  ],
+  "repo": "Salicylic-acid3/PCB_Data"
+ },
+ "gummy-key": {
+  "paths": [
+   "pcbs/left/GummyKey_Left.kicad_pcb",
+   "pcbs/right/GummyKey_Right.kicad_pcb"
+  ],
+  "repo": "gumorr/gummykey"
+ },
+ "helix": {
+  "paths": [
+   "PCB/beta/helix.kicad_pcb"
+  ],
+  "repo": "makotokurauchi/helix"
+ },
+ "hem": {
+  "paths": [
+   "pcb/kicad/hem.kicad_pcb"
+  ],
+  "repo": "marcocampione/Hem-keyboard"
+ },
+ "hillside-46": {
+  "paths": [
+   "hillside46/hillside46.kicad_pcb"
+  ],
+  "repo": "mmccoyd/hillside"
+ },
+ "hillside-48": {
+  "paths": [
+   "hillside48/hillside.kicad_pcb"
+  ],
+  "repo": "mmccoyd/hillside"
+ },
+ "hillside-52": {
+  "paths": [
+   "hillside52/hillside52.kicad_pcb"
+  ],
+  "repo": "mmccoyd/hillside"
+ },
+ "hnah40-atmega328p-v1": {
+  "paths": [
+   "Hnah40-Atmega328p/PCB_V1/PCB/PCB.kicad_pcb"
+  ],
+  "repo": "vuhopkep/pcb"
+ },
+ "horizon-choc": {
+  "paths": [
+   "kicad/choc/horizon-choc.kicad_pcb"
+  ],
+  "repo": "skarrmann/horizon"
+ },
+ "horizon-mx": {
+  "paths": [
+   "kicad/mx/horizon-mx.kicad_pcb"
+  ],
+  "repo": "skarrmann/horizon"
+ },
+ "hotswap-rgb-dumbpad": {
+  "paths": [
+   "hotswap_rgb/dumbpad.kicad_pcb"
+  ],
+  "repo": "imchipwood/dumbpad"
+ },
+ "hub20": {
+  "paths": [
+   "hardware/0.1/Hub20.kicad_pcb",
+   "hardware/0.2/Hub20.kicad_pcb",
+   "hardware/1.0.1/Hub20.kicad_pcb",
+   "hardware/1.0/Hub20.kicad_pcb"
+  ],
+  "repo": "joshajohnson/hub20"
+ },
+ "index-tab": {
+  "paths": [
+   "kicad/index-tab.kicad_pcb"
+  ],
+  "repo": "kyrremann/index-tab"
+ },
+ "isometria-75-iso": {
+  "paths": [
+   "isometria-75-pcb-iso/isometria-75-pcb-iso.kicad_pcb"
+  ],
+  "repo": "ebastler/isometria-75"
+ },
+ "janus": {
+  "paths": [
+   "kicad/mx/janus.kicad_pcb"
+  ],
+  "repo": "skarrmann/janus"
+ },
+ "jiran-cherry": {
+  "paths": [
+   "jiran-cherry/jiran-cherry.kicad_pcb"
+  ],
+  "repo": "ladniy/jiran"
+ },
+ "jiran-classic": {
+  "paths": [
+   "jiran-classic/jiran-classic.kicad_pcb"
+  ],
+  "repo": "ladniy/jiran"
+ },
+ "jiran-hotswap": {
+  "paths": [
+   "jiran-hotswap/jiran-hotswap.kicad_pcb"
+  ],
+  "repo": "ladniy/jiran"
+ },
+ "jorne-cherry-2-1": {
+  "paths": [
+   "corne-cherry/pcb/corne-cherry.kicad_pcb"
+  ],
+  "repo": "joric/jorne"
+ },
+ "jorne-cherry-3-0": {
+  "paths": [
+   "corne-cherry/pcb_v3/corne-cherry.kicad_pcb"
+  ],
+  "repo": "joric/jorne"
+ },
+ "jorne-classic-2-1": {
+  "paths": [
+   "corne-classic/pcb/corne-classic.kicad_pcb"
+  ],
+  "repo": "joric/jorne"
+ },
+ "jp60": {
+  "paths": [
+   "JP60.kicad_pcb"
+  ],
+  "repo": "ai03-2725/jp60"
+ },
+ "juliet": {
+  "paths": [
+   "juliet-pcb.kicad_pcb"
+  ],
+  "repo": "na-cly/juliet"
+ },
+ "junco": {
+  "paths": [
+   "PCB/Junco.kicad_pcb"
+  ],
+  "repo": "daneski13/junco"
+ },
+ "k34": {
+  "paths": [
+   "k34/k34.kicad_pcb"
+  ],
+  "repo": "wongjingping/k34"
+ },
+ "kaly": {
+  "paths": [
+   "KalyPCB/KalyPCB.kicad_pcb",
+   "KalyPCB/Steps/EdgesKalyPcb.kicad_pcb",
+   "KalyPCB/Steps/ErgogenKalyPcb.kicad_pcb",
+   "KalyPCB/Steps/MascotEvolution.kicad_pcb"
+  ],
+  "repo": "dwctor/kaly"
+ },
+ "kapl": {
+  "paths": [
+   "pcb/Kapl.kicad_pcb"
+  ],
+  "repo": "keyzog/kapl"
+ },
+ "karina": {
+  "paths": [
+   "KiCad-PCB/keyboard.kicad_pcb"
+  ],
+  "repo": "autumnisacutie/karina"
+ },
+ "karn": {
+  "paths": [
+   "pcbs/karn-left/karn-left.kicad_pcb",
+   "pcbs/karn-right/karn-right.kicad_pcb"
+  ],
+  "repo": "robcmills/karn-keyboard"
+ },
+ "karn-2": {
+  "paths": [
+   "pcbs/karn-2/karn-2.kicad_pcb"
+  ],
+  "repo": "robcmills/karn-keyboard"
+ },
+ "karn-3": {
+  "paths": [
+   "pcbs/karn-3/karn-3.kicad_pcb"
+  ],
+  "repo": "robcmills/karn-keyboard"
+ },
+ "kb58-pico": {
+  "paths": [
+   "pcb/kb58_pico.kicad_pcb"
+  ],
+  "repo": "beanaccle/kb58_pico"
+ },
+ "kbd-template": {
+  "paths": [
+   "kicad/kbd-template.kicad_pcb"
+  ],
+  "repo": "takashicompany/radialex"
+ },
+ "kbic65": {
+  "paths": [
+   "kicad/pcb/kbic65.kicad_pcb"
+  ],
+  "repo": "b-karl/KBIC65"
+ },
+ "keaboard-rev1": {
+  "paths": [
+   "PCB/keaboard_rev1/keaboard_rev1.kicad_pcb"
+  ],
+  "repo": "keawade/keaboard"
+ },
+ "keyboar-layout": {
+  "paths": [
+   "Splite-Keyboard-v2/Keyboar-layout.kicad_pcb"
+  ],
+  "repo": "ncwhale/keyboard_design"
+ },
+ "kintsugi": {
+  "paths": [
+   "kintsugi.kicad_pcb"
+  ],
+  "repo": "adpenrose/kintsugi_keeb"
+ },
+ "klor": {
+  "paths": [
+   "PCB/klor1_3/klor1_3.kicad_pcb"
+  ],
+  "repo": "geigeigeist/klor"
+ },
+ "kobold": {
+  "paths": [
+   "Kobold/R1/Kobold.kicad_pcb"
+  ],
+  "repo": "tzarc/keyboards"
+ },
+ "koca58": {
+  "paths": [
+   "PCB/Koca58.kicad_pcb"
+  ],
+  "repo": "hardware7253/koca58"
+ },
+ "kuro65": {
+  "paths": [
+   "kusabimaru/kuro65.kicad_pcb"
+  ],
+  "repo": "0x544D/kuro65"
+ },
+ "la-nc": {
+  "paths": [
+   "pcb/la_nc.kicad_pcb"
+  ],
+  "repo": "subrezon/la_nc"
+ },
+ "lagom": {
+  "paths": [
+   "PCB/lagom.kicad_pcb"
+  ],
+  "repo": "mohoyt/lagom"
+ },
+ "lancer-hotswap": {
+  "paths": [
+   "pcb-hotswap/lancer-hotswap.kicad_pcb"
+  ],
+  "repo": "subrezon/lancer"
+ },
+ "largelad": {
+  "paths": [
+   "largelad.kicad_pcb"
+  ],
+  "repo": "hyphen-ated/large-lad-keyboard"
+ },
+ "layout-jopr": {
+  "paths": [
+   "keyboard_layout_jopr.kicad_pcb"
+  ],
+  "repo": "joelproko/keyboard_layout_jopr"
+ },
+ "lck75": {
+  "paths": [
+   "LCK75gerbers&parts/LCK75.kicad_pcb"
+  ],
+  "repo": "lyso1/lck75"
+ },
+ "lily58": {
+  "paths": [
+   "pcb/Lily58.kicad_pcb"
+  ],
+  "repo": "kata0510/lily58"
+ },
+ "lily58-lite-rev3": {
+  "paths": [
+   "Lite_Rev3/Lily58_Lite_Rev3.kicad_pcb"
+  ],
+  "repo": "kata0510/lily58"
+ },
+ "lily58-pro": {
+  "paths": [
+   "Pro/PCB/Lily58_Pro.kicad_pcb"
+  ],
+  "repo": "kata0510/lily58"
+ },
+ "lime": {
+  "paths": [
+   "kicad/LimeKeyboard.kicad_pcb"
+  ],
+  "repo": "hellsingcoder/limekeyboard"
+ },
+ "litl": {
+  "paths": [
+   "PCB/litl.kicad_pcb"
+  ],
+  "repo": "mohoyt/litl"
+ },
+ "lotus58": {
+  "paths": [
+   "Lotus 58 TRRS/v1.11/Lotus58_Glow_111.kicad_pcb",
+   "Lotus 58 TRRS/v1.23/Lotus58_Glow_123.kicad_pcb",
+   "Lotus 58 TRRS/v1.24/Lotus58_Glow_124.kicad_pcb",
+   "Lotus 58 TRRS/v1.25/Lotus58_Glow_125.kicad_pcb",
+   "Lotus 58 TRRS/v1.26/Lotus58_Glow_126.kicad_pcb",
+   "Lotus 58 TRRS/v1.27/Lotus58_Glow_127.kicad_pcb",
+   "Lotus 58 TRRS/v1.28/Lotus58_Glow_128.kicad_pcb",
+   "Lotus 58 TRRS/v1.29/Lotus58_Glow_129.kicad_pcb",
+   "Lotus 58 TRRS/v1.30/Lotus58_Glow_130.kicad_pcb",
+   "Lotus 58 USB-C/v1.30/Lotus58_Glow_130.kicad_pcb",
+   "Lotus 58 USB-C/v1.31/Lotus58_Glow_131.kicad_pcb",
+   "Lotus 58 USB-C/v1.32/Lotus58_Glow_132.kicad_pcb",
+   "Lotus 58 USB-C/v1.33/Lotus58_Glow_133.kicad_pcb",
+   "Lotus 58 USB-C/v1.40/Lotus58_Glow_140.kicad_pcb",
+   "Lotus 58 USB-C/v1.41/Lotus58_Glow_141.kicad_pcb",
+   "Lotus 58 USB-C/v1.42/Lotus58_Glow_142.kicad_pcb",
+   "Lotus 58 USB-C/v1.50/Lotus58_Glow_150.kicad_pcb",
+   "Lotus 58 USB-C/v1.51/Lotus58_Glow_151.kicad_pcb"
+  ],
+  "repo": "tweetydabird/lotus58"
+ },
+ "lumberjack": {
+  "paths": [
+   "lumberjack.kicad_pcb"
+  ],
+  "repo": "peej/lumberjack-keyboard"
+ },
+ "m0110a-qmk": {
+  "paths": [
+   "m0110a_qmk.kicad_pcb"
+  ],
+  "repo": "kb-elmo/m0110a_usb"
+ },
+ "m0116-usb": {
+  "paths": [
+   "m0116_usb.kicad_pcb"
+  ],
+  "repo": "kb-elmo/m0116_usb"
+ },
+ "m3n3van-rev2": {
+  "paths": [
+   "rev2/m3n3van.kicad_pcb"
+  ],
+  "repo": "matthewdias/m3n3van"
+ },
+ "macro3": {
+  "paths": [
+   "macro3/macro3.kicad_pcb"
+  ],
+  "repo": "davidphilipbarr/macropads"
+ },
+ "macrocat": {
+  "paths": [
+   "pcb/macrocat.kicad_pcb"
+  ],
+  "repo": "catmunch/macrocat"
+ },
+ "madjax-macropad": {
+  "paths": [
+   "kicad/macropad.kicad_pcb"
+  ],
+  "repo": "guidoism/madjax_macropad"
+ },
+ "masonry": {
+  "paths": [
+   "pcb/pcb.kicad_pcb"
+  ],
+  "repo": "dcpedit/masonry"
+ },
+ "meson": {
+  "paths": [
+   "PCB/meson.kicad_pcb"
+  ],
+  "repo": "PyrooL/Meson"
+ },
+ "mikeneko-65": {
+  "paths": [
+   "pcb/kicad/mikeneko-65-pcb.kicad_pcb"
+  ],
+  "repo": "takishim/mikeneko65"
+ },
+ "milk": {
+  "paths": [
+   "Keyboards/2% Milk/kicad/milk.kicad_pcb"
+  ],
+  "repo": "spaceboards/spaceboardshardware"
+ },
+ "millipad": {
+  "paths": [
+   "millipad/millipad.kicad_pcb"
+  ],
+  "repo": "glozares/millipad"
+ },
+ "mini-e-li-xi-vy": {
+  "paths": [
+   "mini-eLiXiVy.kicad_pcb"
+  ],
+  "repo": "minibois/elixivy"
+ },
+ "mini-ten-key-plus": {
+  "paths": [
+   "mini-ten-key-plus.kicad_pcb"
+  ],
+  "repo": "minibois/ten-key-plus"
+ },
+ "minim": {
+  "paths": [
+   "PCB/minim.kicad_pcb"
+  ],
+  "repo": "matthewdias/minim"
+ },
+ "model-b": {
+  "paths": [
+   "pcb/model-b/model-b.kicad_pcb"
+  ],
+  "repo": "trojanpinata/model-b"
+ },
+ "molecule": {
+  "paths": [
+   "molecule/molecule.kicad_pcb"
+  ],
+  "repo": "bbrfkr/keyboards"
+ },
+ "morizon-choc": {
+  "paths": [
+   "kicad/choc/morizon-choc.kicad_pcb"
+  ],
+  "repo": "skarrmann/morizon"
+ },
+ "morizon-mx": {
+  "paths": [
+   "kicad/mx/morizon-mx.kicad_pcb"
+  ],
+  "repo": "skarrmann/morizon"
+ },
+ "mx-5160": {
+  "paths": [
+   "mx-5160/mx-5160.kicad_pcb"
+  ],
+  "repo": "evyd13/mx-5160"
+ },
+ "mysterium": {
+  "paths": [
+   "mysterium-pcb.kicad_pcb"
+  ],
+  "repo": "coseyfannitutti/mysterium"
+ },
+ "nack": {
+  "paths": [
+   "nack_v1/hardware/nack.kicad_pcb",
+   "nack_v2/hardware/nack.kicad_pcb"
+  ],
+  "repo": "farfalleflickan/nack"
+ },
+ "nafuda": {
+  "paths": [
+   "Nafuda/v1/Kicad/Assemble/Nafuda.kicad_pcb"
+  ],
+  "repo": "Salicylic-acid3/PCB_Data"
+ },
+ "neopad": {
+  "paths": [
+   "Neopad.kicad_pcb"
+  ],
+  "repo": "ivndbt/neopad"
+ },
+ "noah": {
+  "paths": [
+   "noah.kicad_pcb"
+  ],
+  "repo": "kb-elmo/noah_avr"
+ },
+ "np12": {
+  "paths": [
+   "np12.kicad_pcb"
+  ],
+  "repo": "nut1414/np12"
+ },
+ "nt210": {
+  "paths": [
+   "nt-210/nt210.kicad_pcb"
+  ],
+  "repo": "evyd13/nt-series"
+ },
+ "nt750": {
+  "paths": [
+   "nt-750/nt750.kicad_pcb"
+  ],
+  "repo": "evyd13/nt-series"
+ },
+ "num-discipline": {
+  "paths": [
+   "NumDiscipline-pcb.kicad_pcb"
+  ],
+  "repo": "ericrlau/numdiscipline"
+ },
+ "numpad": {
+  "paths": [
+   "numpad.kicad_pcb"
+  ],
+  "repo": "kb-elmo/numpad"
+ },
+ "omega": {
+  "paths": [
+   "omega_hotswap/omega.kicad_pcb",
+   "omega_soldered/omega_4_solder.kicad_pcb",
+   "omega_soldered/omega_solder.kicad_pcb"
+  ],
+  "repo": "makenova/omega"
+ },
+ "opendeck": {
+  "paths": [
+   "hardware/OpenDeck32/opendeck.kicad_pcb"
+  ],
+  "repo": "cmdremily/opendeck"
+ },
+ "orthocode": {
+  "paths": [
+   "orthoCode.kicad_pcb",
+   "orthoCodeCase.kicad_pcb"
+  ],
+  "repo": "jrodna/orthocode"
+ },
+ "osprette": {
+  "paths": [
+   "pcb/osprette.kicad_pcb"
+  ],
+  "repo": "smores56/osprette"
+ },
+ "pancake-v1": {
+  "paths": [
+   "Keyboards/Pancake/V1/kicad/dropin.kicad_pcb"
+  ],
+  "repo": "spaceboards/spaceboardshardware"
+ },
+ "pancake-v2": {
+  "paths": [
+   "Keyboards/Pancake/V2/kicad/dropin.kicad_pcb"
+  ],
+  "repo": "spaceboards/spaceboardshardware"
+ },
+ "pandamic": {
+  "paths": [
+   "PCB/Pandamic/Pandamic.kicad_pcb"
+  ],
+  "repo": "swiftrax/Pandamic"
+ },
+ "pando": {
+  "paths": [
+   "kicad/left/pando_left.kicad_pcb",
+   "kicad/right/pando_right.kicad_pcb"
+  ],
+  "repo": "jyap808/pando"
+ },
+ "pando58": {
+  "paths": [
+   "ergogen/output/pcbs/pando58_left.kicad_pcb",
+   "ergogen/output/pcbs/pando58_right.kicad_pcb"
+  ],
+  "repo": "jyap808/pando58"
+ },
+ "paws60": {
+  "paths": [
+   "paws60/pcb/rev1/paws-60-pcb.kicad_pcb"
+  ],
+  "repo": "horrortroll/keebproj"
+ },
+ "piantor": {
+  "paths": [
+   "pcb/left/keyboard_pcb.kicad_pcb",
+   "pcb/right/keyboard_pcb.kicad_pcb"
+  ],
+  "repo": "beekeeb/piantor"
+ },
+ "pica40": {
+  "paths": [
+   "pcb/full.kicad_pcb"
+  ],
+  "repo": "zzeneg/pica40"
+ },
+ "pill60": {
+  "paths": [
+   "Pill60.kicad_pcb"
+  ],
+  "repo": "iktas/pill60"
+ },
+ "pinky3": {
+  "paths": [
+   "pcb/Pinky3.kicad_pcb"
+  ],
+  "repo": "tamanishi/Pinky3"
+ },
+ "pinky4": {
+  "paths": [
+   "pcb/Pinky4.kicad_pcb"
+  ],
+  "repo": "tamanishi/Pinky4"
+ },
+ "pisces": {
+  "paths": [
+   "pcb/pisces/pisces.kicad_pcb"
+  ],
+  "repo": "knaruo/pisces"
+ },
+ "pisces-v2": {
+  "paths": [
+   "pcb/v2/pisces.kicad_pcb"
+  ],
+  "repo": "knaruo/pisces"
+ },
+ "pix": {
+  "paths": [
+   "pix.kicad_pcb"
+  ],
+  "repo": "sendz/pix"
+ },
+ "plaid": {
+  "paths": [
+   "pcb/plaid.kicad_pcb"
+  ],
+  "repo": "hsgw/plaid"
+ },
+ "plain60-c": {
+  "paths": [
+   "plain60-c.kicad_pcb"
+  ],
+  "repo": "evyd13/plain60-c"
+ },
+ "pluckey": {
+  "paths": [
+   "pcb/pcb.kicad_pcb"
+  ],
+  "repo": "floookay/pluckey"
+ },
+ "pluto12": {
+  "paths": [
+   "pluto12/pluto12.kicad_pcb"
+  ],
+  "repo": "psuieee/pluto12"
+ },
+ "potato65": {
+  "paths": [
+   "hotswap pcb/potato-65-hotswap.kicad_pcb",
+   "solder pcb mount/potato-65-solderable-platemount.kicad_pcb",
+   "solder pcb/potato-65-solderable.kicad_pcb"
+  ],
+  "repo": "aeonstrife/potato65"
+ },
+ "prkl30": {
+  "paths": [
+   "PRKL30.kicad_pcb"
+  ],
+  "repo": "erkhal/prkl30"
+ },
+ "pteron56v0": {
+  "paths": [
+   "KiCAD and GERBER/OLD versions/Pteron56v0.kicad_pcb"
+  ],
+  "repo": "kraken-jokes/pteron-pcb"
+ },
+ "punk75": {
+  "paths": [
+   "punk75.kicad_pcb",
+   "punk75_bottom.kicad_pcb",
+   "punk75_inner.kicad_pcb",
+   "punk75_plate.kicad_pcb"
+  ],
+  "repo": "dsanchezseco/punk75"
+ },
+ "qez": {
+  "paths": [
+   "pcb/qez.kicad_pcb"
+  ],
+  "repo": "str-dst/QEZ"
+ },
+ "quefrency-rev1": {
+  "paths": [
+   "quefrency-right-65/quefrency-right-65.kicad_pcb",
+   "spectrogram-left/quefrency-left-macro.kicad_pcb"
+  ],
+  "repo": "keebio/quefrency-rev1-pcb"
+ },
+ "redherring": {
+  "paths": [
+   "pcb-hotswap/redherring.kicad_pcb",
+   "pcb/redherring.kicad_pcb",
+   "solenoid/redherring.kicad_pcb"
+  ],
+  "repo": "dcpedit/redherring"
+ },
+ "redox-rev1": {
+  "paths": [
+   "redox/pcb/rev1.0/kicad_files/redox_rev1.kicad_pcb"
+  ],
+  "repo": "mattdibi/redox-keyboard"
+ },
+ "reviung34": {
+  "paths": [
+   "reviung34/pcb/reviung34.kicad_pcb"
+  ],
+  "repo": "gtips/reviung"
+ },
+ "reviung34-split": {
+  "paths": [
+   "reviung34split/reviung34-split-L/reviung34-split-L.kicad_pcb",
+   "reviung34split/reviung34-split-R/reviung34-split-R.kicad_pcb"
+  ],
+  "repo": "gtips/reviung"
+ },
+ "reviung41": {
+  "paths": [
+   "reviung41/pcb/ver1.2/reviung41.kicad_pcb",
+   "reviung41/pcb/ver1.3/reviung41.kicad_pcb",
+   "reviung41/pcb/ver1.4/reviung41.kicad_pcb"
+  ],
+  "repo": "gtips/reviung"
+ },
+ "reviung46": {
+  "paths": [
+   "reviung46/pcb/reviung46_ver1_1/reviung46/reviung46.kicad_pcb"
+  ],
+  "repo": "gtips/reviung"
+ },
+ "reviung5": {
+  "paths": [
+   "reviung5/pcb/ver1.0/reviung5.kicad_pcb"
+  ],
+  "repo": "gtips/reviung"
+ },
+ "reviung53": {
+  "paths": [
+   "reviung53/pcb/main-pcb/reviung53-ver1.0/reviung53.kicad_pcb"
+  ],
+  "repo": "gtips/reviung"
+ },
+ "reviung61": {
+  "paths": [
+   "reviung61/pcb/reviung61.kicad_pcb"
+  ],
+  "repo": "gtips/reviung"
+ },
+ "rhymestone": {
+  "paths": [
+   "rhymestone/pcb/rev1.0/Rhymestone.kicad_pcb"
+  ],
+  "repo": "marksard/keyboards"
+ },
+ "romac": {
+  "paths": [
+   "02 - PCBs/Schwann_PCB/PCB Documentation/Schwann_Rev0.5b.kicad_pcb"
+  ],
+  "repo": "the-royal/the_royal_open-source-projects"
+ },
+ "romeo": {
+  "paths": [
+   "romeo-pcb.kicad_pcb"
+  ],
+  "repo": "coseyfannitutti/romeo"
+ },
+ "rosaline": {
+  "paths": [
+   "rosaline.kicad_pcb"
+  ],
+  "repo": "peej/rosaline-keyboard"
+ },
+ "rosaline-ortho": {
+  "paths": [
+   "rosaline-ortho.kicad_pcb"
+  ],
+  "repo": "peej/rosaline-keyboard"
+ },
+ "sango": {
+  "paths": [
+   "PCB/Sango/Sango.kicad_pcb"
+  ],
+  "repo": "Aidan-OS/Sango"
+ },
+ "scatter42": {
+  "paths": [
+   "scatter42/scatter42.kicad_pcb"
+  ],
+  "repo": "bbrfkr/keyboards"
+ },
+ "schwann-rev0-5b": {
+  "paths": [
+   "02 - PCBs/Schwann_PCB/PCB Documentation/Schwann_Rev0.5b.kicad_pcb"
+  ],
+  "repo": "theroyalsweatshirt/the_royal_projects"
+ },
+ "sdra-kb00": {
+  "paths": [
+   "KiCad_PCB/SdraKb00.kicad_pcb"
+  ],
+  "repo": "drabaioli/sdrakb00"
+ },
+ "sepia-officinalis": {
+  "paths": [
+   "Sepia officinalis/sepia_officinalis.kicad_pcb"
+  ],
+  "repo": "tapioki/cephalopoda"
+ },
+ "sesame": {
+  "paths": [
+   "sesame.kicad_pcb"
+  ],
+  "repo": "kb-elmo/sesame"
+ },
+ "setta21": {
+  "paths": [
+   "Setta21/v1/Kicad/Assemble/Setta21.kicad_pcb"
+  ],
+  "repo": "Salicylic-acid3/PCB_Data"
+ },
+ "sha-choc": {
+  "paths": [
+   "kicad/choc/sha-choc.kicad_pcb"
+  ],
+  "repo": "skarrmann/sha"
+ },
+ "sha-mx": {
+  "paths": [
+   "kicad/mx/sha-mx.kicad_pcb"
+  ],
+  "repo": "skarrmann/sha"
+ },
+ "silakka54": {
+  "paths": [
+   "kicad/silakka54.kicad_pcb"
+  ],
+  "repo": "squalius-cephalus/silakka54"
+ },
+ "sith-zhuyin40": {
+  "paths": [
+   "PCB-files/PCB/SithZhuyin40.kicad_pcb"
+  ],
+  "repo": "sithlord121/slz40"
+ },
+ "skeleton-num-pad": {
+  "paths": [
+   "SkeletonNumPad.kicad_pcb"
+  ],
+  "repo": "skeletonkbd/skeletonnumpad"
+ },
+ "skeleton68rev2": {
+  "paths": [
+   "PCB/Skeleton68rev2.kicad_pcb"
+  ],
+  "repo": "skeletonkbd/Frost68"
+ },
+ "sl40": {
+  "paths": [
+   "SL40.kicad_pcb"
+  ],
+  "repo": "worldspawn00/SL40"
+ },
+ "slime88": {
+  "paths": [
+   "slime88.kicad_pcb"
+  ],
+  "repo": "zykrah/slime88"
+ },
+ "slimorta": {
+  "paths": [
+   "PCB/Slimorta_main_board/Slimorta_main_board.kicad_pcb"
+  ],
+  "repo": "ashijanken/slimorta"
+ },
+ "sofle-choc": {
+  "paths": [
+   "Sofle_Choc/PCB/SofleKeyboard.kicad_pcb"
+  ],
+  "repo": "josefadamcik/soflekeyboard"
+ },
+ "sofle-pico": {
+  "paths": [
+   "Sofle_Pico/PCB/Sofle_Pico.kicad_pcb"
+  ],
+  "repo": "jellytitan/sofle-pico"
+ },
+ "sofle-v1": {
+  "paths": [
+   "Sofle_v1/PCB/SofleKeyboard.kicad_pcb"
+  ],
+  "repo": "josefadamcik/soflekeyboard"
+ },
+ "solheim68": {
+  "paths": [
+   "solheim68.kicad_pcb"
+  ],
+  "repo": "evyd13/solheim68"
+ },
+ "southpawpcb": {
+  "paths": [
+   "ISO PCB/southpawpcb.kicad_pcb",
+   "PCB/southpawpcb.kicad_pcb"
+  ],
+  "repo": "kelvinhall05/southpaw75"
+ },
+ "soyuz": {
+  "paths": [
+   "Soyuz.kicad_pcb"
+  ],
+  "repo": "ai03-2725/soyuz"
+ },
+ "spacetime": {
+  "paths": [
+   "spacetime.kicad_pcb"
+  ],
+  "repo": "kyleterry/spacetime-keyboard"
+ },
+ "span": {
+  "paths": [
+   "pcb/span.kicad_pcb"
+  ],
+  "repo": "idank/spankbd"
+ },
+ "speedo": {
+  "paths": [
+   "pcb/speedo.kicad_pcb"
+  ],
+  "repo": "cozykeys/speedo"
+ },
+ "spleeb": {
+  "paths": [
+   "spleeb/pcbs/spleeb.kicad_pcb"
+  ],
+  "repo": "chrishoage/spleeb"
+ },
+ "splitreus": {
+  "paths": [
+   "splitreus.kicad_pcb"
+  ],
+  "repo": "na-cly/splitreus62"
+ },
+ "squiggle-36": {
+  "paths": [
+   "36/squiggle-36.kicad_pcb"
+  ],
+  "repo": "ibnuda/squiggle"
+ },
+ "squiggle-goldberg": {
+  "paths": [
+   "goldberg/squiggle-goldberg.kicad_pcb"
+  ],
+  "repo": "ibnuda/squiggle"
+ },
+ "squiggle-low-profile": {
+  "paths": [
+   "lopro/squiggle-lopro.kicad_pcb"
+  ],
+  "repo": "ibnuda/squiggle"
+ },
+ "squiggle-minimalist": {
+  "paths": [
+   "minimalist/squiggle-minimalist.kicad_pcb"
+  ],
+  "repo": "ibnuda/squiggle"
+ },
+ "squiggle-standard": {
+  "paths": [
+   "standard/squiggle-standard.kicad_pcb"
+  ],
+  "repo": "ibnuda/squiggle"
+ },
+ "steal-this": {
+  "paths": [
+   "steal_this_keyboard.kicad_pcb"
+  ],
+  "repo": "obosob/steal_this_keyboard"
+ },
+ "stoutgat": {
+  "paths": [
+   "stoutgat-pcb.kicad_pcb"
+  ],
+  "repo": "vattern/stoutgat"
+ },
+ "stoutgatv2": {
+  "paths": [
+   "stoutgatv2.kicad_pcb"
+  ],
+  "repo": "vattern/stoutgatv2"
+ },
+ "stront-choc": {
+  "paths": [
+   "pcb/choc/pcb.kicad_pcb"
+  ],
+  "repo": "zzeneg/stront"
+ },
+ "stront-mx-38": {
+  "paths": [
+   "pcb/mx/pcb.kicad_pcb"
+  ],
+  "repo": "zzeneg/stront"
+ },
+ "stront-mx-40": {
+  "paths": [
+   "pcb/mx40/pcb.kicad_pcb"
+  ],
+  "repo": "zzeneg/stront"
+ },
+ "supersplit": {
+  "paths": [
+   "output/pcbs/board.kicad_pcb"
+  ],
+  "repo": "tarneaux/supersplit"
+ },
+ "sweep-2": {
+  "paths": [
+   "Sweep v2.2/sweepv2.kicad_pcb"
+  ],
+  "repo": "davidphilipbarr/sweep"
+ },
+ "sweep-bling-lp": {
+  "paths": [
+   "Sweep Bling LP/pcb/sweepbling-lp__pcb.kicad_pcb"
+  ],
+  "repo": "davidphilipbarr/sweep"
+ },
+ "sweep-bling-mx": {
+  "paths": [
+   "Sweep Bling MX/pcb/sweep-bling-mx__pcb.kicad_pcb"
+  ],
+  "repo": "davidphilipbarr/sweep"
+ },
+ "sweep-half-swept": {
+  "paths": [
+   "Sweep half-swept/half-swept.kicad_pcb"
+  ],
+  "repo": "davidphilipbarr/sweep"
+ },
+ "sweep-high": {
+  "paths": [
+   "Sweep High/sweep-high.kicad_pcb"
+  ],
+  "repo": "davidphilipbarr/sweep"
+ },
+ "sweep-high-m": {
+  "paths": [
+   "Sweep High M/sweep-high.kicad_pcb"
+  ],
+  "repo": "davidphilipbarr/sweep"
+ },
+ "sweeq": {
+  "paths": [
+   "sweeq/sweeq.kicad_pcb"
+  ],
+  "repo": "idank/keyboards"
+ },
+ "sweeq-mx": {
+  "paths": [
+   "sweeq mx/sweeq mx.kicad_pcb"
+  ],
+  "repo": "idank/keyboards"
+ },
+ "swoop-mx": {
+  "paths": [
+   "pcbs/swoop-mx/swoop-mx.kicad_pcb"
+  ],
+  "repo": "jimmerricks/swoop"
+ },
+ "tanuki-pcb3": {
+  "paths": [
+   "Pcb/Kicad files/tanuki_pcb3.kicad_pcb"
+  ],
+  "repo": "SethSenpai/Tanuki"
+ },
+ "tartan": {
+  "paths": [
+   "pcb/tartan.kicad_pcb"
+  ],
+  "repo": "hsgw/tartan"
+ },
+ "teaqueen": {
+  "paths": [
+   "keyboard.kicad_pcb"
+  ],
+  "repo": "gregandcin/teaqueen"
+ },
+ "tenkey-plusplus": {
+  "paths": [
+   "kicad/tenkey_plusplus.kicad_pcb"
+  ],
+  "repo": "jonbobcar/tenkey_plusplus"
+ },
+ "tg4x": {
+  "paths": [
+   "KiCad/TG4x.kicad_pcb"
+  ],
+  "repo": "mythosmann/tg4x"
+ },
+ "th75": {
+  "paths": [
+   "TH75.kicad_pcb"
+  ],
+  "repo": "ramonimbao/Herringbone"
+ },
+ "torn": {
+  "paths": [
+   "torn_left/torn_left.kicad_pcb",
+   "torn_right/torn_right.kicad_pcb"
+  ],
+  "repo": "rtitmuss/torn"
+ },
+ "touhoupad-v2": {
+  "paths": [
+   "kicad/project.kicad_pcb"
+  ],
+  "repo": "pimentoso/touhoupad_v2"
+ },
+ "treadstone32": {
+  "paths": [
+   "treadstone32/pcb/rev1.1/Treadstone32.kicad_pcb"
+  ],
+  "repo": "marksard/keyboards"
+ },
+ "tripel": {
+  "paths": [
+   "tripel.kicad_pcb"
+  ],
+  "repo": "peej/tripel-keyboard"
+ },
+ "twelvekey": {
+  "paths": [
+   "pcb/twelvekey.kicad_pcb"
+  ],
+  "repo": "kb-elmo/twelvekey"
+ },
+ "ua62": {
+  "paths": [
+   "pcb/UA62.kicad_pcb"
+  ],
+  "repo": "na-cly/UA62"
+ },
+ "un-split": {
+  "paths": [
+   "Hardware/FullGroundPlane/UnSplit.kicad_pcb",
+   "Hardware/MCUGNDPlane/UnSplit.kicad_pcb"
+  ],
+  "repo": "swiftrax/unsplit"
+ },
+ "unicorn-f072": {
+  "paths": [
+   "unicorn-mx/unicorn-f072/unicorn.kicad_pcb"
+  ],
+  "repo": "yanghu/unicorne"
+ },
+ "unicorne": {
+  "paths": [
+   "unicorn-mx/unicorn/unicorn.kicad_pcb"
+  ],
+  "repo": "yanghu/unicorne"
+ },
+ "unison": {
+  "paths": [
+   "PCB/Unison.kicad_pcb"
+  ],
+  "repo": "jpskenn/unison"
+ },
+ "unix60pcb": {
+  "paths": [
+   "PCB/unix60pcb.kicad_pcb"
+  ],
+  "repo": "mkdl/unix60"
+ },
+ "vagrant": {
+  "paths": [
+   "pcb/vagrant.kicad_pcb"
+  ],
+  "repo": "sho-keebs/vagrant-10"
+ },
+ "varanidae": {
+  "paths": [
+   "pcb/kicad/Varanidae.kicad_pcb"
+  ],
+  "repo": "tokageitlab/varanidae"
+ },
+ "voyager60": {
+  "paths": [
+   "Voyager60.kicad_pcb"
+  ],
+  "repo": "ai03-2725/voyager60"
+ },
+ "wave": {
+  "paths": [
+   "pcbs/main/rounded/wave_pcb-rounded.kicad_pcb"
+  ],
+  "repo": "etiennecollin/wave"
+ },
+ "wired-pierce": {
+  "paths": [
+   "pcb/wired/pierce.kicad_pcb"
+  ],
+  "repo": "durken1/pierce"
+ },
+ "wren": {
+  "paths": [
+   "PCBs/legacy/wren-nav/wren-nav.kicad_pcb",
+   "PCBs/legacy/wren-numpad/wren-numpad.kicad_pcb",
+   "PCBs/legacy/wren-plain/wren-plain.kicad_pcb",
+   "PCBs/wren-universal-lemo-left/wren-universal.kicad_pcb",
+   "PCBs/wren-universal-lemo-right/wren-universal.kicad_pcb",
+   "PCBs/wren-universal/wren-universal.kicad_pcb"
+  ],
+  "repo": "oliviahanley/wren-keyboard"
+ },
+ "xenon-e": {
+  "paths": [
+   "xenon-e/xenon-e.kicad_pcb"
+  ],
+  "repo": "narinari/xenon-keyboard"
+ },
+ "xr63-gl": {
+  "paths": [
+   "XR63GL.kicad_pcb"
+  ],
+  "repo": "gachiham/XR63GL"
+ },
+ "yiancardesigns-gingham": {
+  "paths": [
+   "pcb/gingham.kicad_pcb",
+   "pcb/gingham_bottom.kicad_pcb"
+  ],
+  "repo": "yiancar/gingham_pcb"
+ },
+ "yosino58": {
+  "paths": [
+   "pcb/yosino58.kicad_pcb"
+  ],
+  "repo": "sakurachari/yosino58"
+ },
+ "yosino58-cherry": {
+  "paths": [
+   "cherry/yosino58_cherry.kicad_pcb"
+  ],
+  "repo": "sakurachari/yosino58"
+ },
+ "yosino58-chocolate": {
+  "paths": [
+   "chocolate/yosino58_chocolate.kicad_pcb"
+  ],
+  "repo": "sakurachari/yosino58"
+ },
+ "zero": {
+  "paths": [
+   "zero.kicad_pcb"
+  ],
+  "repo": "sol/chord-zero"
+ },
+ "zodiark": {
+  "paths": [
+   "ZodiarkSplit/ZodiarkSplit.kicad_pcb"
+  ],
+  "repo": "Aleblazer/Zodiark"
+ },
+ "zwerg": {
+  "paths": [
+   "pcb/zwerg.kicad_pcb"
+  ],
+  "repo": "floookay/zwerg"
+ }
+}

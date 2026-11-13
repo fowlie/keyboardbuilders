@@ -1,0 +1,126 @@
+
+@import net.keyboardbuilders.keyboardbuilders.web.DevBoardPage
+@import net.keyboardbuilders.keyboardbuilders.web.Head
+@import net.keyboardbuilders.keyboardbuilders.web.SiteUrl
+@param page: DevBoardPage
+@param head: Head
+@param site: SiteUrl
+
+<%-- NO BACKTICKS IN THIS FILE, not even inside an attribute or a comment: the whole
+     template is wrapped in a Kotlin raw string and one backtick closes the content
+     block, reporting an error on a line twenty rows from the real one. show.kte and the
+     previous version of this file both carry the same warning and it is still easy to
+     walk into. --%>
+
+@template.layout(head = head, site = site, content = @`
+    <%-- The crumb designs/compatible.kte already uses, pointing at the hub rather than
+         at nothing. Until /parts existed this page had no upward link at all. --%>
+    <p class="crumb"><a href="/parts">&larr; All dev boards</a></p>
+
+    <h1>${page.name}</h1>
+
+    <dl class="spec">
+        <dt>Footprint</dt>
+        <dd>${page.footprintLabel}</dd>
+
+        <dt>Connectivity</dt>
+        <dd>@if(page.wireless)wireless@else wired@endif</dd>
+
+        <%-- Absent for the five boards whose chip the research doc never names. The line
+             disappears rather than saying "not recorded": this is a fact about the PART,
+             and it is the design pages that own advertising the corpus's own gaps. --%>
+        @if(page.mcuFamilyLabel != null)
+            <dt>Chip</dt>
+            <dd>${page.mcuFamilyLabel}</dd>
+        @endif
+
+        <dt>Firmware</dt>
+        <dd>
+            @for(family in page.firmware)
+                <span>${family}</span>
+            @endfor
+        </dd>
+    </dl>
+
+    <%-- Deliberately "sockets a ... controller", never "designs that use this board" --
+         nothing in the corpus records which SPECIFIC board a design's author
+         recommends, only which footprint a design sockets (backlog #59). The three
+         lists below say what this board CAN run, which is a different claim and one the
+         footprint plus the chip actually support. --%>
+    <p class="summary">
+        <%-- Pluralised with designs/index.kte's own inline idiom rather than a new
+             helper: one project lexicon for one sentence shape. Was "1 designs" on the
+             Bluepill page, which is the sort of thing a reader reads as carelessness
+             about the numbers -- on a page whose whole claim is care about the numbers. --%>
+        <a href="${page.designsHref}">${page.designCount} design@if(page.designCount != 1)s@endif</a>
+        socket@if(page.designCount == 1)s@endif a ${page.footprintLabel}-shaped controller.
+    </p>
+
+    <%-- THE MARKUP IS designs/index.kte's RESULT ROW, COPIED RATHER THAN SHARED, and
+         that is a deliberate stop rather than the right end state. Extracting one jte
+         template for the row would be better, and it touches a file whose
+         li content-visibility/contain-intrinsic-size pairing is a MEASURED value
+         (OffscreenRowsTest, Forgejo #13) -- so the extraction wants its own change with
+         that test in front of it, not a drive-by at the end of a bigger one. Filed in
+         the backlog; keep the two in step until then. --%>
+
+    @if(!page.runs.isEmpty)
+        <h2>You can build these with it</h2>
+        <p class="summary">
+            This board fits the socket
+            @if(page.runs.total == 1)this design takes, and runs the firmware it ships.
+            @else these ${page.runs.total} designs take, and runs firmware each of them ships.
+            @endif
+        </p>
+        @template.parts.fitList(tier = page.runs, struck = false)
+    @else
+        <%-- Short on purpose. When this fires, the tiers below already explain WHY
+             (same socket, wrong firmware) design by design -- a longer sentence here
+             would say it twice and the first draft's attempt read as a mangled clause. --%>
+        <p class="summary unrecorded">
+            Nothing in the corpus ships firmware this board is recorded as running.
+        </p>
+    @endif
+
+    @if(!page.socketOnly.isEmpty)
+        <h2>Same socket, firmware not ready</h2>
+        <p class="summary">
+            ${page.socketOnly.total} design@if(page.socketOnly.total != 1)s@endif
+            take@if(page.socketOnly.total == 1)s@endif the same connector. Nothing says
+            ${page.name} cannot drive them &mdash; only that no source we read says it
+            does, so treat each one as a porting job rather than a purchase.
+        </p>
+        @template.parts.fitList(tier = page.socketOnly, struck = false)
+    @endif
+
+    <%-- STRUCK THROUGH, AND EVERY ROW STATES THE RULE THAT STRUCK IT. Ticket 16
+         decision 3 rule 1, applied to the reverse direction: a row a reader is told not
+         to buy is a claim about the world, so it names the documented rule rather than
+         saying "incompatible". Both rules and their primary sources are in
+         ControllerFit.kt and docs/research/controller-catalogue.md section 3.4. --%>
+    @if(!page.ruledOut.isEmpty)
+        <h2>Fits the socket, cannot run</h2>
+        <p class="summary">
+            ${page.ruledOut.total} design@if(page.ruledOut.total != 1)s@endif
+            take@if(page.ruledOut.total == 1)s@endif the same connector and
+            @if(page.ruledOut.total == 1)is@else are@endif still not buildable with this
+            board &mdash; not for want of a port, but because the firmware project itself
+            does not support this chip.
+        </p>
+        @template.parts.fitList(tier = page.ruledOut, struck = true)
+    @endif
+
+    <%-- THE SAME OFF-SITE TREATMENT designs/show.kte gives its sources: the glyph is a
+         promise that the link opens in a new tab, so it comes WITH the blank target
+         rather than instead of it -- this link had the arrow and not the behaviour. It
+         replaces a plain right-arrow, which said "there is more this way" and not "you
+         are leaving".
+
+         The title sits on the anchor and the svg is aria-hidden, as there. Unlike there,
+         the link text is words rather than a bare URL, so the title is the only thing
+         that announces the new tab -- which is why it is not omitted. --%>
+    @if(page.url != null)
+        <p class="summary"><a class="external" href="${page.url}" target="_blank"
+               rel="nofollow noopener" title="Opens in a new tab">Project page<svg class="ext" viewBox="0 0 24 24" width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6"/><path d="M20 4 10 14"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></p>
+    @endif
+`)

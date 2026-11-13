@@ -1,0 +1,344 @@
+# seed/board-fills.toml -- which of a layout-options PCB's alternate switch footprints make
+# up the layout a design declares, where no machine reading can say.
+#
+# A PCB that offers a split space bar, a split shift and ISO/ANSI places every option;
+# the keyboard you build fits one of them. `build_silhouettes.py` normally lets the
+# firmware choose (`keycap_geometry`, backlog #81), but that needs footprint names that
+# state their widths AND a firmware layout whose widths pick out one fill. Where neither
+# holds, the board cannot be drawn without a person saying which footprints are fitted,
+# and that is this file. Opened 2026-09-26 for `tg4x`.
+#
+# A ROW IS CHECKED AGAINST THE BOARD, NOT TRUSTED. `build_silhouettes.py` refuses the
+# build unless every `key`:
+#   * sits within 0.1 mm of exactly one switch footprint on `board`, as
+#     `measure_keycaps.py --only SLUG --refresh` recorded it (`switches` in
+#     keycap-scan.json);
+#   * has the width its footprint's name states, or else says `name_says` (the width the
+#     name states) and `why` the name is wrong -- a footprint name is evidence, and a
+#     disagreement is written down rather than silently won;
+#   * overlaps no other key (the same 1 mm-inset test `measure_keycaps.alternates` uses);
+# and unless the row count equals `keys`, which must be a layout the design declares.
+#
+# `x`/`y` are the footprint's placement in the board's millimetres, copied from the
+# scan; `w` (and `h`, default 1) are the keycap in key units. The rotation is the
+# footprint's own. `source` says where the choice of footprints comes from.
+#
+# TWO OPTIONAL FIELDS, added 2026-09-26 for `squiggle-lopro`:
+#   * `hand = "left"` (or "right") -- the board file holds ONE hand of a split, and the
+#     row lists that hand's keys: half of `keys`. The drawing mirrors it with one key of
+#     clear air between the hands, and the build refuses the row if the firmware's own
+#     left-right arrangement fits the other hand better.
+#   * `footprints = { "<name>" = { w = 2, why = "..." } }` -- a keycap width for a
+#     footprint whose NAME STATES NONE (`footprints:choc-2`), with the evidence. Every
+#     listed key on that footprint must then carry it. It cannot overrule a name that
+#     does state a width; a key does that with `name_says`.
+#
+# A row here OUTRANKS every other way of drawing that design: it is tried first, so a
+# later change to the position scan cannot silently stop it being used. The same fill is
+# read by `measure_stagger.py` and `measure_splay.py` in place of that board file's
+# merged positions, so stagger and splay are measured on the keys you actually fit.
+
+# TG4x, 2026-09-26. Its record is the ZMK shield `tg4x` (45 keys), and TG4x.kicad_pcb is
+# a layout-options board: 68 switch footprints for 44, 45 or 46 keys, so no count guard
+# can draw it and a width match alone mirrors the split space bar. The fill below is the
+# ZMK shield's own board, stated by:
+#   * app/boards/shields/tg4x/README.md: "rev 2.1 of the board", "Split spacebar with
+#     2.25U on the left and 2.75U on the right", "2U right shift";
+#   * tg4x.overlay's matrix-transform: rows of 13 / 12 / 11 / 9, and every RC() in it is
+#     a matrix position of upstream QMK's keyboards/tg4x LAYOUT (46 keys) except that it
+#     leaves out RC(6,3), the 1u key beside a split right shift. QMK places the rest at
+#     exactly these widths, including the 2.25u space at x 3.75 and the 2.75u at x 6.
+# Two things the ZMK side does not state, taken from the board and the other firmware:
+#   * Tab is 1.25u (Enter 1.75u), as upstream QMK and the author's own
+#     qmk_firmware/keyboards/tg4x/rev21 layouts both state; ZMK is silent.
+#   * The right shift is 2.25u, not the README's "2U": the only footprint that fills the
+#     row's last 2.25 units is MX_PCB_225H at (237.83, 59.16), and the row must total 13u.
+# RULED BY THE OWNER, 2026-09-26: the 2.25u right shift stands -- the README's "2U" is
+# "probably a typo" -- and Tab at 1.25u stands with it. The author's own firmware also
+# offers a different 45 (LAYOUT_TG3: 1u mods and a 6u space bar); this row draws the one
+# the design's ZMK record describes.
+[[fill]]
+slug   = "tg4x"
+board  = "KiCad/TG4x.kicad_pcb"
+keys   = 45
+source = "zmk app/boards/shields/tg4x (README.md, tg4x.overlay); qmk keyboards/tg4x/keyboard.json; mythosmann/tg4x KiCad/TG4x.kicad_pcb"
+key = [
+  # Row 0: Esc, Q .. P, ;, Backspace -- 13 x 1u.
+  { x = 21.16, y = 21.08, w = 1 },  # MX_PCB_100H
+  { x = 40.21, y = 21.08, w = 1 },  # MX_PCB_100H
+  { x = 59.26, y = 21.11, w = 1 },  # MX_PCB_100H
+  { x = 78.31, y = 21.08, w = 1 },  # MX_PCB_100H
+  { x = 97.36, y = 21.11, w = 1 },  # MX_PCB_100H
+  { x = 116.41, y = 21.11, w = 1 },  # MX_PCB_100H
+  { x = 135.48, y = 21.06, w = 1 },  # MX_PCB_100H
+  { x = 154.51, y = 21.08, w = 1 },  # MX_PCB_100H
+  { x = 173.56, y = 21.08, w = 1 },  # MX_PCB_100H
+  { x = 192.61, y = 21.08, w = 1 },  # MX_PCB_100H
+  { x = 211.66, y = 21.08, w = 1 },  # MX_PCB_100H
+  { x = 230.71, y = 21.11, w = 1 },  # MX_PCB_100H
+  { x = 249.75, y = 21.08, w = 1 },  # MX_PCB_100H
+  # Row 1: Tab 1.25u, A .. ', Enter 1.75u.
+  { x = 23.55, y = 40.13, w = 1.25 },  # MX_PCB_125H
+  { x = 44.96, y = 40.13, w = 1 },  # MX_PCB_100H
+  { x = 64.03, y = 40.13, w = 1 },  # MX_PCB_100H
+  { x = 83.06, y = 40.16, w = 1 },  # MX_PCB_100H
+  { x = 102.13, y = 40.13, w = 1 },  # MX_PCB_100H
+  { x = 121.16, y = 40.13, w = 1 },  # MX_PCB_100H
+  { x = 140.21, y = 40.16, w = 1 },  # MX_PCB_100H
+  { x = 159.28, y = 40.13, w = 1 },  # MX_PCB_100H
+  { x = 178.31, y = 40.13, w = 1 },  # MX_PCB_100H
+  { x = 197.38, y = 40.13, w = 1 },  # MX_PCB_100H
+  { x = 216.41, y = 40.13, w = 1 },  # MX_PCB_100H
+  { x = 242.62, y = 40.13, w = 1.75 },  # MX_PCB_175H
+  # Row 2: Shift 1.75u, Z .. ., the one 2.25u right Shift (no RC(6,3) in the transform).
+  { x = 28.3, y = 59.18, w = 1.75 },  # MX_PCB_175H
+  { x = 54.51, y = 59.18, w = 1 },  # MX_PCB_100H
+  { x = 73.53, y = 59.18, w = 1 },  # MX_PCB_100H
+  { x = 92.61, y = 59.21, w = 1 },  # MX_PCB_100H
+  { x = 111.63, y = 59.18, w = 1 },  # MX_PCB_100H
+  { x = 130.68, y = 59.18, w = 1 },  # MX_PCB_100H
+  { x = 149.73, y = 59.18, w = 1 },  # MX_PCB_100H
+  { x = 168.78, y = 59.21, w = 1 },  # MX_PCB_100H
+  { x = 187.83, y = 59.18, w = 1 },  # MX_PCB_100H
+  { x = 206.91, y = 59.18, w = 1 },  # MX_PCB_100H
+  { x = 237.83, y = 59.16, w = 2.25 },  # MX_PCB_225H
+  # Row 3: Ctrl, GUI, Alt at 1.25u; the 2.25u space LEFT of the 2.75u one; Alt 1.25u; three 1u.
+  { x = 23.55, y = 78.26, w = 1.25 },  # MX_PCB_125H
+  { x = 47.35, y = 78.26, w = 1.25 },  # MX_PCB_125H
+  { x = 71.15, y = 78.23, w = 1.25 },  # MX_PCB_125H
+  { x = 104.51, y = 78.24, w = 2.25 },  # MX_PCB_225H
+  { x = 152.11, y = 78.26, w = 2.75 },  # MX_PCB_275H
+  { x = 190.22, y = 78.23, w = 1.25, name_says = 1.0, why = "misnamed: the footprint is MX_PCB_100H but its reference reads 125u, and it sits at the 1.25u spot the row needs (the space bar ends at 8.75u, the next 1u key starts at 10u)" },  # MX_PCB_100H
+  { x = 211.66, y = 78.23, w = 1 },  # MX_PCB_100H
+  { x = 230.71, y = 78.26, w = 1 },  # MX_PCB_100H
+  { x = 249.76, y = 78.23, w = 1 },  # MX_PCB_100H
+]
+
+# squiggle lopro, 2026-09-26, on the owner's report that its thumbs were drawn straight and
+# its halves touching. Its record is QMK `ibnuda/squiggle/rev1`, whose layouts state the
+# thumbs as upright `h: 2` caps, so `board_may_draw` keeps the firmware (a 2u cap drawn 1u
+# leaves a hole) and the keycap path cannot help: the footprint names state no width, and
+# the one board file holds one hand. So this row states the widths and the hand.
+#
+# NOT A CHOICE BETWEEN ALTERNATES -- the board places exactly these 17 footprints and
+# nothing else (15 `choc-1`, 2 `choc-2`). What is ruled is only what the names cannot say:
+#   * the widths. `choc-2`'s own outline on the board is a 36 x 17.3 mm keycap (fp_line
+#     x -18..18, y -8.8..8.5, in the footprint's frame), so 2u along the footprint's x --
+#     at SW13's 63.4 and SW17's 243.4 degrees, a 2u key tilted toward the centre, as the
+#     repo's screenshots/squiggle-lopro.png render shows. The README's Low Profile
+#     section says "4x2u thumb keys", and every QMK layout states these keys as 2u.
+#     `choc-1`'s outline is 18 x 17 mm, 1u.
+#   * the hand. The file is a LEFT hand: the thumbs sit at its larger x (96.6 and 112 mm,
+#     against columns from 34 to 106). The build checks this against QMK's `LAYOUT`.
+# Accepted by the owner 2026-09-26 ("fine"), with the 34-key count and no photo.
+[[fill]]
+slug   = "squiggle-low-profile"
+board  = "lopro/squiggle-lopro.kicad_pcb"
+keys   = 34
+hand   = "left"
+source = "ibnuda/squiggle lopro/squiggle-lopro.kicad_pcb (footprint outlines), README.md 'Low Profile', screenshots/squiggle-lopro.png; qmk keyboards/ibnuda/squiggle/rev1/keyboard.json"
+footprints = { "footprints:choc-1" = { w = 1, why = "its outline on the board is an 18 x 17 mm keycap, 1u on Choc spacing" }, "footprints:choc-2" = { w = 2, why = "its outline on the board is a 36 x 17.3 mm keycap, 2u along the footprint's own x; README: '4x2u thumb keys'; QMK states these keys 2u" } }
+key = [
+  { x = 34.0, y = 44.0, w = 1 },  # choc-1
+  { x = 34.0, y = 61.0, w = 1 },  # choc-1
+  { x = 34.0, y = 78.0, w = 1 },  # choc-1
+  { x = 52.0, y = 32.0, w = 1 },  # choc-1
+  { x = 52.0, y = 49.0, w = 1 },  # choc-1
+  { x = 52.0, y = 66.0, w = 1 },  # choc-1
+  { x = 70.0, y = 26.0, w = 1 },  # choc-1
+  { x = 70.0, y = 43.0, w = 1 },  # choc-1
+  { x = 70.0, y = 60.0, w = 1 },  # choc-1
+  { x = 88.0, y = 33.0, w = 1 },  # choc-1
+  { x = 88.0, y = 50.0, w = 1 },  # choc-1
+  { x = 88.0, y = 67.0, w = 1 },  # choc-1
+  { x = 96.6, y = 98.7, w = 2 },  # choc-2 at 63.4 degrees
+  { x = 106.0, y = 36.0, w = 1 },  # choc-1
+  { x = 106.0, y = 53.0, w = 1 },  # choc-1
+  { x = 106.0, y = 70.0, w = 1 },  # choc-1
+  { x = 112.0, y = 106.4, w = 2 },  # choc-2 at 243.4 degrees
+]
+
+# The rest of ibnuda/squiggle, 2026-09-26, on the owner's ask to add the other variants.
+# The same two things the lopro row above rules, for the same reasons: the firmware
+# (`ibnuda/squiggle/rev1`, whose LAYOUTs state the thumbs as upright 2u caps) cannot be
+# drawn from a board that turns them, and the keycap path does not take a one-hand file.
+# Here the footprint names DO state widths -- `1u-dual`, `2u-dual`, `125u-dual`, the
+# MX/Alps hybrid `scripts/extract_switch_footprints.py` STATED_FAMILIES reads --
+# so no `footprints` table is needed, and each board is a LEFT hand for the lopro's
+# reason: its thumbs sit at its larger x (96.6 and 113.7 mm, columns 30 to 106).
+#
+# STANDARD: the lopro's layout at MX spacing. README `### Standard`: "34 Keys.",
+# "4x2u thumb keys."
+[[fill]]
+slug   = "squiggle-standard"
+board  = "standard/squiggle-standard.kicad_pcb"
+keys   = 34
+hand   = "left"
+source = "ibnuda/squiggle standard/squiggle-standard.kicad_pcb (footprint names and placements), README.md 'Standard'; qmk keyboards/ibnuda/squiggle/rev1/keyboard.json"
+key = [
+  { x = 30.0, y = 39.0, w = 1 },  # 1u-dual
+  { x = 30.0, y = 58.0, w = 1 },  # 1u-dual
+  { x = 30.0, y = 77.0, w = 1 },  # 1u-dual
+  { x = 49.0, y = 27.0, w = 1 },  # 1u-dual
+  { x = 49.0, y = 46.0, w = 1 },  # 1u-dual
+  { x = 49.0, y = 65.0, w = 1 },  # 1u-dual
+  { x = 68.0, y = 21.0, w = 1 },  # 1u-dual
+  { x = 68.0, y = 40.0, w = 1 },  # 1u-dual
+  { x = 68.0, y = 59.0, w = 1 },  # 1u-dual
+  { x = 87.0, y = 28.0, w = 1 },  # 1u-dual
+  { x = 87.0, y = 47.0, w = 1 },  # 1u-dual
+  { x = 87.0, y = 66.0, w = 1 },  # 1u-dual
+  { x = 96.6, y = 98.7, w = 2 },  # 2u-dual at 243.4 degrees
+  { x = 106.0, y = 30.0, w = 1 },  # 1u-dual
+  { x = 106.0, y = 49.0, w = 1 },  # 1u-dual
+  { x = 106.0, y = 68.0, w = 1 },  # 1u-dual
+  { x = 113.7, y = 107.3, w = 2 },  # 2u-dual at 63.4 degrees
+]
+
+# 36 KEYS: the Standard plus one 1.25u thumb, inboard of the two 2u. README `### 36 Keys`:
+# "36 Keys.", "4x2u+2x1.25u thumb keys." That footprint is `125u-dual`, and the width
+# pattern reads the bare `125u` as 125 units; it is 1.25u written without its point, so
+# the key says so with `name_says` rather than the drawing silently taking either.
+[[fill]]
+slug   = "squiggle-36"
+board  = "36/squiggle-36.kicad_pcb"
+keys   = 36
+hand   = "left"
+source = "ibnuda/squiggle 36/squiggle-36.kicad_pcb (footprint names and placements), README.md '36 Keys'; qmk keyboards/ibnuda/squiggle/rev1/keyboard.json (LAYOUT_split_3x5_3)"
+key = [
+  { x = 30.0, y = 39.0, w = 1 },  # 1u-dual
+  { x = 30.0, y = 58.0, w = 1 },  # 1u-dual
+  { x = 30.0, y = 77.0, w = 1 },  # 1u-dual
+  { x = 49.0, y = 27.0, w = 1 },  # 1u-dual
+  { x = 49.0, y = 46.0, w = 1 },  # 1u-dual
+  { x = 49.0, y = 65.0, w = 1 },  # 1u-dual
+  { x = 68.0, y = 21.0, w = 1 },  # 1u-dual
+  { x = 68.0, y = 40.0, w = 1 },  # 1u-dual
+  { x = 68.0, y = 59.0, w = 1 },  # 1u-dual
+  { x = 79.57, y = 90.06, w = 1.25, name_says = 125, why = "`125u` is 1.25u written without its decimal point, the way `1u`/`2u` beside it are whole units; README: '4x2u+2x1.25u thumb keys'" },  # 125u-dual at 63.4 degrees
+  { x = 87.0, y = 28.0, w = 1 },  # 1u-dual
+  { x = 87.0, y = 47.0, w = 1 },  # 1u-dual
+  { x = 87.0, y = 66.0, w = 1 },  # 1u-dual
+  { x = 96.6, y = 98.7, w = 2 },  # 2u-dual at 243.4 degrees
+  { x = 106.0, y = 30.0, w = 1 },  # 1u-dual
+  { x = 106.0, y = 49.0, w = 1 },  # 1u-dual
+  { x = 106.0, y = 68.0, w = 1 },  # 1u-dual
+  { x = 113.7, y = 107.3, w = 2 },  # 2u-dual at 63.4 degrees
+]
+
+# GOLDBERG: a CHOICE between alternates, unlike lopro, Standard and 36. Each of its two
+# thumb spots is a `2u-dual` -- which carries MX stabilizer holes, 3.05 and 3.99 mm at
+# +/-11.94 mm, so it takes a stabilized 2u key -- with a pair of `1u-dual` laid over it,
+# centred on it: (92.3, 107.2) and (100.9, 90.2) straddle (96.6, 98.7), and (109.5,
+# 115.8) and (117.9, 98.8) straddle (113.7, 107.3). README: "4x2u or 8x1u thumb keys.
+# (or anything in between)", "34 - 38 Keys". The owner read the same off the PCB,
+# 2026-09-26: "it looks like it supports two switches with stabilizers too".
+#
+# So two rows. This one is the design's own count, 38 (seed/sources.toml): the four 1u
+# thumbs, LAYOUT_complicated's count. The `alternate` row after it is 34, the two 2u.
+# The 36 in between -- one spot 2u, the other two 1u, per hand -- is not drawn: either
+# spot can be the 2u one and the README does not say which, so a picture would be a
+# pick, and it is not declared either.
+[[fill]]
+slug   = "squiggle-goldberg"
+board  = "goldberg/squiggle-goldberg.kicad_pcb"
+keys   = 38
+hand   = "left"
+source = "ibnuda/squiggle goldberg/squiggle-goldberg.kicad_pcb (footprint names and placements), README.md 'Goldberg'; qmk keyboards/ibnuda/squiggle/rev1/keyboard.json (LAYOUT_complicated)"
+key = [
+  { x = 30.0, y = 39.0, w = 1 },  # 1u-dual
+  { x = 30.0, y = 58.0, w = 1 },  # 1u-dual
+  { x = 30.0, y = 77.0, w = 1 },  # 1u-dual
+  { x = 49.0, y = 27.0, w = 1 },  # 1u-dual
+  { x = 49.0, y = 46.0, w = 1 },  # 1u-dual
+  { x = 49.0, y = 65.0, w = 1 },  # 1u-dual
+  { x = 68.0, y = 21.0, w = 1 },  # 1u-dual
+  { x = 68.0, y = 40.0, w = 1 },  # 1u-dual
+  { x = 68.0, y = 59.0, w = 1 },  # 1u-dual
+  { x = 87.0, y = 28.0, w = 1 },  # 1u-dual
+  { x = 87.0, y = 47.0, w = 1 },  # 1u-dual
+  { x = 87.0, y = 66.0, w = 1 },  # 1u-dual
+  { x = 92.3, y = 107.2, w = 1 },  # 1u-dual at 63.4 degrees
+  { x = 100.9, y = 90.2, w = 1 },  # 1u-dual at 63.4 degrees
+  { x = 106.0, y = 30.0, w = 1 },  # 1u-dual
+  { x = 106.0, y = 49.0, w = 1 },  # 1u-dual
+  { x = 106.0, y = 68.0, w = 1 },  # 1u-dual
+  { x = 109.5, y = 115.8, w = 1 },  # 1u-dual at 243.4 degrees
+  { x = 117.9, y = 98.8, w = 1 },  # 1u-dual at 243.4 degrees
+]
+
+# GOLDBERG's alternate: each thumb pair fitted as ONE stabilized 2u instead, the four
+# `1u-dual` thumbs left empty. 17 a hand, 34 in all, the README's lower end.
+[[fill]]
+slug      = "squiggle-goldberg"
+alternate = true
+board     = "goldberg/squiggle-goldberg.kicad_pcb"
+keys      = 34
+hand      = "left"
+source    = "ibnuda/squiggle goldberg/squiggle-goldberg.kicad_pcb (2u-dual stabilizer holes), README.md 'Goldberg'"
+key = [
+  { x = 30.0, y = 39.0, w = 1 },  # 1u-dual
+  { x = 30.0, y = 58.0, w = 1 },  # 1u-dual
+  { x = 30.0, y = 77.0, w = 1 },  # 1u-dual
+  { x = 49.0, y = 27.0, w = 1 },  # 1u-dual
+  { x = 49.0, y = 46.0, w = 1 },  # 1u-dual
+  { x = 49.0, y = 65.0, w = 1 },  # 1u-dual
+  { x = 68.0, y = 21.0, w = 1 },  # 1u-dual
+  { x = 68.0, y = 40.0, w = 1 },  # 1u-dual
+  { x = 68.0, y = 59.0, w = 1 },  # 1u-dual
+  { x = 87.0, y = 28.0, w = 1 },  # 1u-dual
+  { x = 87.0, y = 47.0, w = 1 },  # 1u-dual
+  { x = 87.0, y = 66.0, w = 1 },  # 1u-dual
+  { x = 96.6, y = 98.7, w = 2 },  # 2u-dual at 243.4 degrees
+  { x = 106.0, y = 30.0, w = 1 },  # 1u-dual
+  { x = 106.0, y = 49.0, w = 1 },  # 1u-dual
+  { x = 106.0, y = 68.0, w = 1 },  # 1u-dual
+  { x = 113.7, y = 107.3, w = 2 },  # 2u-dual at 63.4 degrees
+]
+
+# MINIMALIST: both hands in one file, one panel snapped in two, so no `hand`: the board
+# places every key of the keyboard where it goes, and the gap between the halves is the
+# board's own. Its firmware's info.json is a 5-key template that states no widths, so
+# without this row the 2u thumbs draw 1u. README `### Minimalist`: "34 Keys.", "4x2u
+# thumb keys."
+[[fill]]
+slug   = "squiggle-minimalist"
+board  = "minimalist/squiggle-minimalist.kicad_pcb"
+keys   = 34
+source = "ibnuda/squiggle minimalist/squiggle-minimalist.kicad_pcb (footprint names and placements), README.md 'Minimalist'"
+key = [
+  { x = 30.0, y = 39.0, w = 1 },  # 1u-dual
+  { x = 30.0, y = 58.0, w = 1 },  # 1u-dual
+  { x = 30.0, y = 77.0, w = 1 },  # 1u-dual
+  { x = 49.0, y = 27.0, w = 1 },  # 1u-dual
+  { x = 49.0, y = 46.0, w = 1 },  # 1u-dual
+  { x = 49.0, y = 65.0, w = 1 },  # 1u-dual
+  { x = 68.0, y = 21.0, w = 1 },  # 1u-dual
+  { x = 68.0, y = 40.0, w = 1 },  # 1u-dual
+  { x = 68.0, y = 59.0, w = 1 },  # 1u-dual
+  { x = 87.0, y = 28.0, w = 1 },  # 1u-dual
+  { x = 87.0, y = 47.0, w = 1 },  # 1u-dual
+  { x = 87.0, y = 66.0, w = 1 },  # 1u-dual
+  { x = 96.6, y = 98.7, w = 2 },  # 2u-dual at 243.4 degrees
+  { x = 106.0, y = 30.0, w = 1 },  # 1u-dual
+  { x = 106.0, y = 49.0, w = 1 },  # 1u-dual
+  { x = 106.0, y = 68.0, w = 1 },  # 1u-dual
+  { x = 113.7, y = 107.3, w = 2 },  # 2u-dual at 63.4 degrees
+  { x = 162.3, y = 107.3, w = 2 },  # 2u-dual at 296.6 degrees
+  { x = 170.0, y = 30.0, w = 1 },  # 1u-dual
+  { x = 170.0, y = 49.0, w = 1 },  # 1u-dual
+  { x = 170.0, y = 68.0, w = 1 },  # 1u-dual
+  { x = 179.4, y = 98.7, w = 2 },  # 2u-dual at 116.6 degrees
+  { x = 189.0, y = 28.0, w = 1 },  # 1u-dual
+  { x = 189.0, y = 47.0, w = 1 },  # 1u-dual
+  { x = 189.0, y = 66.0, w = 1 },  # 1u-dual
+  { x = 208.0, y = 21.0, w = 1 },  # 1u-dual
+  { x = 208.0, y = 40.0, w = 1 },  # 1u-dual
+  { x = 208.0, y = 59.0, w = 1 },  # 1u-dual
+  { x = 227.0, y = 27.0, w = 1 },  # 1u-dual
+  { x = 227.0, y = 46.0, w = 1 },  # 1u-dual
+  { x = 227.0, y = 65.0, w = 1 },  # 1u-dual
+  { x = 246.0, y = 39.0, w = 1 },  # 1u-dual
+  { x = 246.0, y = 58.0, w = 1 },  # 1u-dual
+  { x = 246.0, y = 77.0, w = 1 },  # 1u-dual
+]

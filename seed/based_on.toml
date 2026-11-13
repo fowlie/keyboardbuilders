@@ -1,0 +1,59 @@
+# seed/based_on.toml -- credited ancestors a person confirmed. Backlog #24, resolved
+# shape in ticket 22.
+#
+# based_on IS RECORDED ONLY FROM AN EXPLICIT STATEMENT, never guessed. The automatic
+# half of this field (scripts/build_seed.py's fork_based_on) reads GitHub's own
+# fork-parent data, and it is real evidence but a narrow one -- only 11 of 367 repos in
+# this corpus even carry a fork flag, and it says nothing about what a README credits
+# in prose. This file is where a person's own reading goes instead.
+#
+#   drafted    the queue's own row: a real signal that needs a person's judgement, not
+#              yet ruled on. `ancestors` is empty on a drafted row -- the absence of a
+#              ruling, never a design with no ancestors.
+#   confirmed  settled, and the ONLY verdict the build reads.
+#
+# `ancestors` is a list of tables, each `{kind = "held", slug = "..."}` for a design
+# this corpus also publishes, or `{kind = "external", name = "...", url = "..."}` for
+# one it does not (ticket 22) -- the two SeedAncestor shapes read on the Kotlin side.
+# `name` on an external credit is the word the source used, never a guess at what we
+# would have called it had we held it.
+
+[[entry]]
+slug      = "paws60"
+name      = "paws60"
+ancestors = []
+verdict   = "drafted"
+signal    = "human"
+note      = "horrortroll/keebproj is a confirmed GitHub fork of marksard/keyboards -- but that repo holds BOTH rhymestone and treadstone32, so which one paws60 actually descends from cannot be read off the fork edge alone (fork_based_on's own guard correctly declines to guess). Needs a person to check paws60's own README/history against the two candidates."
+
+[[entry]]
+slug      = "redherring"
+name      = "redherring"
+ancestors = []
+verdict   = "drafted"
+signal    = "human"
+note      = "Owner-stated 2026-09-09: \"redherring is a fork of adelheid, which is a fork of arisu-pcb.\" The adelheid->arisu edge is real and already covered automatically (adelheid's own README: \"It's a fork of FateNozomi's Arisu files\", corroborated by GitHub's fork flag). redherring->adelheid is NOT corroborated: fetched dcpedit/redherring's full README (1948 chars) and it names neither adelheid nor any fork/based-on relationship at all -- only \"similar to an Arisu/Alice,\" a resemblance, not a credit. GitHub does not show redherring as a fork of anything either. This is a real edge the owner knows firsthand; it just does not clear the bar this field sets for everything else (an explicit statement in the design's own source). Left drafted rather than confirmed or silently dropped -- the owner's call whether to confirm it anyway, and on what basis."
+
+[[entry]]
+slug      = "jorne-cherry-2-1"
+name      = "Jorne Cherry 2.1"
+ancestors = [{kind = "external", name = "Corne (crkbd)", url = "https://github.com/foostan/crkbd"}]
+verdict   = "confirmed"
+signal    = "human"
+note      = "Backlog #89. The repo's own wiki (github.com/joric/jorne/wiki) states it three times, unhedged: \"Jorne is essentially Corne keyboard (foostan/crkbd) with an extra key for brackets and international layouts\"; \"Jorne is a remix of Corne (by u/foostan) and Jian layout\"; and its own FAQ -- \"If I snap the pinky columns off a Jorne, does it become a Corne? Yes. A 100% stock Corne (same dimensions/schematic/firmware).\" `fork_based_on`'s automatic path cannot credit this: GitHub's fork flag is real (joric/jorne -> foostan/crkbd) but the guard correctly declines once a repo on either side maps to more than one published design, and foostan/crkbd holds both `corne-cherry` and `corne-chocolate` here -- crediting one specific row would fabricate a choice the source material never makes, since the FAQ's own answer is generic (\"a 100% stock Corne\"), not \"the Cherry\" or \"the Chocolate\". `external`, naming the project itself, rather than `held` to an arbitrary one of the two. The wiki ALSO credits Jian's layout (\"derived from... just visually, there was no actual copying involved\") -- left out deliberately: that is the author's own hedge away from a direct-derivation claim, the same shape KLOR's five \"inspirations\" are (real, stated, and not `based_on`)."
+
+[[entry]]
+slug      = "jorne-cherry-3-0"
+name      = "Jorne Cherry 3.0"
+ancestors = [{kind = "external", name = "Corne (crkbd)", url = "https://github.com/foostan/crkbd"}]
+verdict   = "confirmed"
+signal    = "human"
+note      = "Same wiki statements as jorne-cherry-2-1's row; the credit is repo-wide (Jorne as a whole is called a Corne remix), not specific to one PCB revision."
+
+[[entry]]
+slug      = "jorne-classic-2-1"
+name      = "Jorne Classic 2.1"
+ancestors = [{kind = "external", name = "Corne (crkbd)", url = "https://github.com/foostan/crkbd"}]
+verdict   = "confirmed"
+signal    = "human"
+note      = "Same wiki statements as jorne-cherry-2-1's row; the credit is repo-wide (Jorne as a whole is called a Corne remix), not specific to one PCB revision."

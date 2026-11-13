@@ -1,0 +1,93 @@
+@import net.keyboardbuilders.keyboardbuilders.AnswerIcon
+@import net.keyboardbuilders.keyboardbuilders.AnswerTile
+@import net.keyboardbuilders.keyboardbuilders.web.DesignCard
+@import net.keyboardbuilders.keyboardbuilders.web.Head
+@import net.keyboardbuilders.keyboardbuilders.web.SiteUrl
+@param head: Head
+@param total: Int
+@param answers: List<AnswerTile>
+@param featured: List<DesignCard>
+@param site: SiteUrl
+@param websiteLd: String
+
+@template.layout(head = head, site = site, content = @`
+    <%-- THE SITE'S OWN NAME FOR SEARCH ENGINES, which otherwise guess one from titles. --%>
+    <script type="application/ld+json">$unsafe{websiteLd}</script>
+    <%-- WHAT THE SITE IS, THEN THE QUESTION (2026-10-02). The heading was the question
+         alone, which told a search engine nothing about the page; the owner kept the
+         question as the line under it. The headline before that was the catalogue's
+         size, which is still stated below, but a number is not a way in. --%>
+    <section class="home-top">
+        <h1 class="home-ask">Find an open-source keyboard to build</h1>
+        <p class="home-q">What kind of keyboard are you after?</p>
+
+        <%-- The same plain GET to /designs as the index's own box, for the same reasons:
+             it works with scripting off, it bookmarks, and there is no second search
+             endpoint to drift from. Its own class, not "find", so it does not inherit
+             the index's compact styling. --%>
+        <form class="home-find" method="get" action="/designs" role="search">
+            <input type="search" name="q"
+                   placeholder="Know its name? Type it here" aria-label="Search designs by name"
+                   autocomplete="off" spellcheck="false">
+            <button type="submit">Search</button>
+        </form>
+
+        <%-- The method is the differentiator, so it stays on the first screen. --%>
+        <p class="home-sub">${total} open-source designs, every spec read from their own files</p>
+    </section>
+
+    <%-- FOR THE READER WITH NOTHING TO TYPE. One drawing per tile, never a stack of them,
+         and the count is what the link returns (HomeTest follows each one). --%>
+    <p class="answers-or">or pick what sounds right</p>
+    <ul class="answers">
+        @for(tile in answers)
+            <li>
+                <a class="answer" href="${tile.answer.href}">
+                    <span class="answer-pic">
+                        @if(tile.answer.icon == AnswerIcon.Wireless)
+                            <%-- Radio waves from a point: "no cable", without naming a protocol. --%>
+                            <svg class="answer-icon" viewBox="0 0 48 40" width="64" height="53" aria-hidden="true" focusable="false"
+                                 fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round">
+                                <path d="M16 27 A11 11 0 0 1 32 27"/>
+                                <path d="M9 20 A21 21 0 0 1 39 20"/>
+                                <path d="M2.5 13 A31 31 0 0 1 45.5 13"/>
+                                <circle cx="24" cy="33.5" r="3" fill="currentColor" stroke="none"/>
+                            </svg>
+                        @elseif(tile.answer.icon == AnswerIcon.LowProfile)
+                            <%-- Side view, the only view that shows height: an ordinary key in
+                                 outline beside a low-profile one, both on the same plate. --%>
+                            <svg class="answer-icon" viewBox="0 0 64 40" width="80" height="50" aria-hidden="true" focusable="false"
+                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round">
+                                <g opacity="0.45">
+                                    <path d="M7 23 L10 7 L24 7 L27 23 Z"/>
+                                    <rect x="9.5" y="23" width="15" height="12"/>
+                                </g>
+                                <g fill="currentColor">
+                                    <path d="M36 30 L37.5 24 L56.5 24 L58 30 Z"/>
+                                    <rect x="38.5" y="30" width="17" height="5"/>
+                                </g>
+                                <path d="M2 36 H62" stroke-linecap="round"/>
+                            </svg>
+                        @elseif(tile.silhouette != null)
+                            $unsafe{tile.silhouette}
+                        @endif
+                    </span>
+                    <span class="answer-label">${tile.answer.label}</span>
+                    <span class="answer-blurb">${tile.answer.blurb}</span>
+                    <span class="answer-count">${tile.count} designs &rarr;</span>
+                </a>
+            </li>
+        @endfor
+    </ul>
+    <p class="answers-all"><a href="/designs">or just show me all ${total}</a></p>
+
+    <%-- THE SHOP WINDOW, BELOW THE FOLD. Six build photos, one per repo, each a link --
+         kept when the page above it was redesigned, for the deep links it gives the
+         site's highest-authority page. The same card as /designs. --%>
+    <h2 class="strip-head">A few of them, refreshed daily</h2>
+    <ul class="strip">
+        @for(card in featured)
+            <li>@template.designs.card(card = card, cls = "strip-card")</li>
+        @endfor
+    </ul>
+`)

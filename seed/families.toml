@@ -1,0 +1,208 @@
+# seed/families.toml -- which keyboard each design is one PCB of. Backlog #107.
+#
+# The owner asked "why do we have so many sweep boards?" on 2026-09-30. The answer was six
+# real, separate PCBs from one repo, which the site showed as six unrelated keyboards
+# because nothing said they belong together. A family names them as one keyboard.
+#
+# A FAMILY IS A NAME OF ITS OWN, not one of its members. "Corne" is the family, and Corne
+# Cherry v4 and Corne Chocolate v4 are its variants; no design is called just "Corne".
+#
+# THE RULE THAT DRAFTS THESE (owner, 2026-09-30 to 10-01): same GitHub account + one name
+# starts with the other + at least one key count both boards can be built to, snap-offs
+# included + the same body kind. It changes ticket 07's decision 4 ("never inferred from
+# name stems"). The draft is in the owner's notes. A row here
+# is a person's ruling on it, and is also where a report that two boards are, or aren't,
+# one keyboard gets settled.
+#
+# KEYED BY PUBLISHED SLUG. `build_seed.py` refuses a member that does not publish and a
+# design claimed by two families, so a rename that strands a row fails the build rather
+# than quietly dropping a board from its family.
+#
+# `verdict` follows every other seed file: only `confirmed` rows are read.
+
+# Sweep, 2026-10-01. The repo README's "What are the different types?" list names the
+# family: Sweep 2, Sweep Half Swept, Sweep Bling MX, Sweep Bling LP, Sweep High, Sweep High
+# M, Sweep Mini. Sweep Mini is not in the corpus: the board scan does not read its Choc
+# Mini footprint as a switch. Cradio is NOT here -- the owner ruled it a different
+# keyboard (2026-10-01), even though ZMK's `cradio` shield names it "Cradio/Sweep".
+[[family]]
+name    = "Sweep"
+source  = "https://github.com/davidphilipbarr/Sweep#what-are-the-different-types"
+members = ["sweep-2", "sweep-half-swept", "sweep-bling-mx", "sweep-bling-lp", "sweep-high", "sweep-high-m"]
+verdict = "confirmed"
+
+# -- Drafted 2026-10-01 by the owner's rule: "take the first common word of the same author".
+#    Same GitHub account, and a word their names share once words that describe a variant
+#    rather than name a keyboard are set aside (choc, mx, cherry, low, profile, rev, pro,
+#    lite, split, hotswap, rgb, ...). The family takes that word, capitalized.
+#
+#    The owner's earlier rulings win over the rule:
+#    - Reviung34 and Reviung34 split are two keyboards (2026-09-30): no row.
+#    - Dilemma is two keyboards by size, as bastardkb.com sells them: Dilemma below, and
+#      Dilemma MAX, which has one board in the corpus until MAX V3 is added (#107), so no
+#      row yet.
+#
+#    Held back for the owner, because the shared word is a product line rather than one
+#    keyboard: Env (envious-data: KB65, KB60, a macropad, RGB), Anavi (anavitechnology:
+#    Arrows and two macro pads), GH80 (evyd13: the 1800 and the 3700 are different layouts).
+
+[[family]]
+name    = "Atom47"
+source  = "https://github.com/evyd13"
+members = ["atom47-rev5", "atom47-rev5-c"]
+verdict = "confirmed"
+
+[[family]]
+name    = "Atreyu"
+source  = "https://github.com/climent"
+members = ["atreyu", "atreyu-v2-choc"]
+verdict = "confirmed"
+
+[[family]]
+name    = "Bad Wings"
+source  = "https://github.com/hazels-garage"
+members = ["bad-wings-bold", "bad-wings-slim", "bw2-v2"]
+verdict = "confirmed"
+note    = "`bw2-v2` added by hand: the `bad-wings` repo's own BW2, which the rule can't see under the abbreviation."
+
+[[family]]
+name    = "Corne"
+source  = "https://github.com/foostan"
+members = ["corne-cherry-v4", "corne-chocolate-v4"]
+verdict = "confirmed"
+
+[[family]]
+name    = "Cradio"
+source  = "https://github.com/davidphilipbarr"
+members = ["cradio", "cradio-ble", "cradio-f", "cradio-mb", "cradio-pg1232", "cradio-z", "cradio-z-lp", "cradio10"]
+verdict = "confirmed"
+note    = "Not the Sweep: the owner ruled them two keyboards (2026-10-01), even though ZMK's `cradio` shield calls it \"Cradio/Sweep\". `cradio10` added by hand: its folder is `Cradio 10`, and the run-together name hides the shared word."
+
+[[family]]
+name    = "Crowboard"
+source  = "https://github.com/doesntfazer"
+members = ["crowboard-rev1-choc", "crowboard-rev1-mx", "crowboard-rev1-mx-kailh-hotswap", "crowboard-rev2-mx", "crowboard-rev2-with-pimoroni"]
+verdict = "confirmed"
+
+[[family]]
+name    = "Dilemma"
+source  = "https://github.com/bastardkb"
+members = ["dilemma-diy-v2", "dilemma-v2", "dilemma-v3-hotswap"]
+verdict = "confirmed"
+
+[[family]]
+name    = "Ergo Travel"
+source  = "https://github.com/jpconstantineau"
+members = ["choc-ergo-travel", "choc-led-ergo-travel", "choc-rgb-ergo-travel"]
+verdict = "confirmed"
+
+[[family]]
+name    = "Ferris"
+source  = "https://github.com/pierrechevalier83"
+members = ["ferris-0-1-base", "ferris-0-2-bling", "ferris-0-1-compact", "ferris-0-2-compact", "ferris-0-1-high", "ferris-0-2-high", "ferris-0-1-low", "ferris-0-2-mini"]
+verdict = "confirmed"
+note    = "Two versions on different chips (0.1 ATmega32U4, 0.2 STM32F072), so the 0.1/0.2 pairs stay separate designs (owner, 2026-10-01)."
+
+[[family]]
+name    = "Grooveboard"
+source  = "https://github.com/ianklug"
+members = ["grooveboard-atmel-au", "grooveboard-atmel-mu", "grooveboard-choc-atmel-au", "grooveboard-choc-atmel-mu", "grooveboard-choc-rp", "grooveboard-mx-atmel-au", "grooveboard-mx-atmel-mu", "grooveboard-mx-rp", "grooveboard-rp"]
+verdict = "confirmed"
+
+[[family]]
+name    = "Hillside"
+source  = "https://github.com/mmccoyd"
+members = ["hillside-46", "hillside-48", "hillside-52"]
+verdict = "confirmed"
+note    = "Different key counts, one family: the repo's own README is the Hillside family page."
+
+[[family]]
+name    = "Horizon"
+source  = "https://github.com/skarrmann"
+members = ["horizon-choc", "horizon-mx"]
+verdict = "confirmed"
+
+[[family]]
+name    = "Jiran"
+source  = "https://github.com/ladniy"
+members = ["jiran-cherry", "jiran-classic", "jiran-hotswap"]
+verdict = "confirmed"
+
+[[family]]
+name    = "Jorne"
+source  = "https://github.com/joric"
+members = ["jorne-cherry-2-1", "jorne-cherry-3-0", "jorne-classic-2-1"]
+verdict = "confirmed"
+
+[[family]]
+name    = "Karn"
+source  = "https://github.com/robcmills"
+members = ["karn", "karn-2", "karn-3"]
+verdict = "confirmed"
+
+[[family]]
+name    = "Lily58"
+source  = "https://github.com/kata0510"
+members = ["lily58", "lily58-lite-rev3", "lily58-pro"]
+verdict = "confirmed"
+
+[[family]]
+name    = "Morizon"
+source  = "https://github.com/skarrmann"
+members = ["morizon-choc", "morizon-mx"]
+verdict = "confirmed"
+
+[[family]]
+name    = "Pancake"
+source  = "https://github.com/spaceboards"
+members = ["pancake-v1", "pancake-v2"]
+verdict = "confirmed"
+
+[[family]]
+name    = "Pisces"
+source  = "https://github.com/knaruo"
+members = ["pisces", "pisces-v2"]
+verdict = "confirmed"
+
+[[family]]
+name    = "Rosaline"
+source  = "https://github.com/peej"
+members = ["rosaline", "rosaline-ortho"]
+verdict = "confirmed"
+
+[[family]]
+name    = "Sha"
+source  = "https://github.com/skarrmann"
+members = ["sha-choc", "sha-mx"]
+verdict = "confirmed"
+
+[[family]]
+name    = "Sofle"
+source  = "https://github.com/josefadamcik"
+members = ["sofle-choc", "sofle-v1"]
+verdict = "confirmed"
+note    = "Sofle Pico (`jellytitan/sofle-pico`) is out under the same-author rule: a different account, though ticket 07 drew it into the Sofle family."
+
+[[family]]
+name    = "Squiggle"
+source  = "https://github.com/ibnuda"
+members = ["squiggle-36", "squiggle-goldberg", "squiggle-low-profile", "squiggle-minimalist", "squiggle-standard"]
+verdict = "confirmed"
+
+[[family]]
+name    = "Stront"
+source  = "https://github.com/zzeneg"
+members = ["stront-choc", "stront-mx-38", "stront-mx-40"]
+verdict = "confirmed"
+
+[[family]]
+name    = "Sweeq"
+source  = "https://github.com/idank"
+members = ["sweeq", "sweeq-mx"]
+verdict = "confirmed"
+
+[[family]]
+name    = "Yosino58"
+source  = "https://github.com/sakurachari"
+members = ["yosino58", "yosino58-cherry", "yosino58-chocolate"]
+verdict = "confirmed"

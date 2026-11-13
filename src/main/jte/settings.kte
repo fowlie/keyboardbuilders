@@ -1,0 +1,134 @@
+@import net.keyboardbuilders.keyboardbuilders.web.Head
+@import net.keyboardbuilders.keyboardbuilders.web.HeroExample
+@import net.keyboardbuilders.keyboardbuilders.web.HeroFirst
+@import net.keyboardbuilders.keyboardbuilders.web.SiteUrl
+@param head: Head
+@param site: SiteUrl
+@param hero: HeroFirst
+@param saved: Boolean
+@param example: HeroExample?
+
+<%--
+    /settings, the owner's ask of 2026-10-02. NO BACKTICKS anywhere in this file -- one
+    closes the raw string the page is written in, and jte reports the error on the wrong line.
+
+    EACH CHOICE SHOWS WHAT IT MEANS, on one real design's own two pictures, rather than
+    describing a picture in words. Picking one saves it at once when script runs; the Save
+    key is for a browser without it, where the form posts and comes back with ?saved.
+--%>
+@template.layout(head = head, site = site, content = @`
+    <article class="settings">
+        <h1>Settings</h1>
+        <p class="settings-lede">Kept in this browser. Nothing here is sent anywhere else.</p>
+
+        <section class="settings-card" aria-labelledby="hero-heading">
+            <h2 id="hero-heading">Design pages</h2>
+            <p class="settings-q">Which picture should a design page show first?</p>
+            <form method="post" action="/settings" id="hero-form">
+                <div class="choices">
+                    <label class="choice">
+                        <input type="radio" name="hero" value="photo" checked="${hero == HeroFirst.Photo}">
+                        @if(example != null)
+                            <span class="choice-pic"><img src="${example.photo}" alt="" loading="lazy"></span>
+                        @endif
+                        <span class="choice-text">
+                            <strong>Photo</strong>
+                            <span>An assembled board, keycaps and all, where there is one.</span>
+                        </span>
+                    </label>
+                    <label class="choice">
+                        <input type="radio" name="hero" value="render" checked="${hero == HeroFirst.Render}">
+                        @if(example != null)
+                            <span class="choice-pic choice-pic-render"><img src="${example.render}" alt="" loading="lazy"></span>
+                        @endif
+                        <span class="choice-text">
+                            <strong>PCB render</strong>
+                            <span>The bare board. Good for comparing a family's boards one after another.</span>
+                        </span>
+                    </label>
+                </div>
+                <p class="settings-foot">
+                    @if(example != null)<span class="settings-example">Pictured: ${example.name}</span>@endif
+                    <span class="settings-saved" id="hero-saved" role="status">@if(saved)Saved@endif</span>
+                    <button type="submit" class="settings-save">Save</button>
+                </p>
+            </form>
+        </section>
+
+        <section class="settings-card" aria-labelledby="fav-heading">
+            <h2 id="fav-heading">Favorites</h2>
+            <p class="settings-q" id="fav-count">The designs you heart are kept in this browser.</p>
+            <div class="settings-row">
+                <button type="button" id="clear-favorites" class="key-quiet" hidden>Clear all favorites</button>
+                <span id="clear-status" class="settings-saved" role="status"></span>
+            </div>
+            <p class="settings-fine">Each heart is taken back, so every design's public count drops by one.</p>
+            <noscript><p class="settings-fine">Clearing favorites needs JavaScript, because they are kept in this browser.</p></noscript>
+        </section>
+    </article>
+
+    <script>
+        (function () {
+            // PICK TO SAVE. The same POST the Save key sends, so the cookie is set the one
+            // way; if the request fails the form is submitted the ordinary way instead.
+            var form = document.getElementById("hero-form");
+            var saved = document.getElementById("hero-saved");
+            form.classList.add("instant");
+            var timer;
+            function flash() {
+                saved.classList.add("show");
+                clearTimeout(timer);
+                timer = setTimeout(function () { saved.classList.remove("show"); }, 1800);
+            }
+            if (saved.textContent) flash();  // back from the no-script ?saved path
+            form.addEventListener("change", function () {
+                var body = new URLSearchParams(new FormData(form));
+                fetch("/settings", { method: "POST", body: body })
+                    .then(function (r) {
+                        if (!r.ok) throw new Error(r.status);
+                        saved.textContent = "Saved";
+                        flash();
+                    })
+                    .catch(function () { form.submit(); });
+            });
+
+            // Same list as the heart button's: localStorage "kb-hearts". Each slug's heart
+            // is DELETEd so the public count drops too, one at a time; a slug stays in the
+            // list if its DELETE failed (the server allows 60 heart changes an hour), so a
+            // later click can finish the job instead of leaving a count nobody can take
+            // back. A 404 is a design that is gone, so it is dropped.
+            var button = document.getElementById("clear-favorites");
+            var status = document.getElementById("clear-status");
+            var count = document.getElementById("fav-count");
+            function load() {
+                try { var v = JSON.parse(localStorage.getItem("kb-hearts") || "[]"); return Array.isArray(v) ? v : []; }
+                catch (e) { return []; }
+            }
+            function show() {
+                var n = load().length;
+                button.hidden = false;
+                button.disabled = n === 0;
+                count.textContent = n === 0 ? "You have no favorites yet."
+                    : "You have " + n + (n === 1 ? " favorite" : " favorites") + " in this browser.";
+            }
+            button.addEventListener("click", async function () {
+                var list = load();
+                if (!list.length || !confirm("Remove all " + list.length + " favorites?")) return;
+                button.disabled = true;
+                var left = [];
+                for (var i = 0; i < list.length; i++) {
+                    var r = await fetch("/designs/" + encodeURIComponent(list[i]) + "/heart", { method: "DELETE" })
+                        .catch(function () { return null; });
+                    if (!r || (!r.ok && r.status !== 404)) left.push(list[i]);
+                }
+                try { localStorage.setItem("kb-hearts", JSON.stringify(left)); } catch (e) {}
+                status.textContent = left.length
+                    ? (list.length - left.length) + " removed. " + left.length + " could not be, try again later."
+                    : "All favorites removed";
+                status.classList.add("show");
+                show();
+            });
+            show();
+        })();
+    </script>
+`)

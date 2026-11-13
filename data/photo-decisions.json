@@ -1,0 +1,605 @@
+{
+  "3w6": {
+    "url": "https://raw.githubusercontent.com/weteor/3W6/main/images/3w6_1s.jpg",
+    "repo": "https://github.com/weteor/3w6"
+  },
+  "dilemma-v2": {
+    "url": "https://raw.githubusercontent.com/Bastardkb/Dilemma/main/pics/1n.JPG",
+    "repo": "https://github.com/Bastardkb/Dilemma"
+  },
+  "dilemma-v3-hotswap": {
+    "url": "https://raw.githubusercontent.com/Bastardkb/Dilemma/main/pics/1n.JPG",
+    "repo": "https://github.com/Bastardkb/Dilemma"
+  },
+  "42": {
+    "url": "https://raw.githubusercontent.com/nglgzz/42/rev-3.2/42-pcb.png",
+    "repo": "https://github.com/nglgzz/42"
+  },
+  "8pack": {
+    "url": "https://raw.githubusercontent.com/cgarcia2097/8-pack/master/images/showcase/IMG_3407.JPG",
+    "repo": "https://github.com/cgarcia2097/8-pack"
+  },
+  "adelheid": {
+    "url": "https://gist.githubusercontent.com/floookay/7bf6511a8d84804d32de4d7bbe3bd0fb/raw/559336bcb5f8c04bbea9ad8aab7397812ab72859/adelheid.jpg",
+    "repo": "https://github.com/floookay/adelheid"
+  },
+  "atreyu": {
+    "url": "https://raw.githubusercontent.com/climent/atreyu/main/pcb/v1/pictures/keeb.jpg?raw=true",
+    "repo": "https://github.com/climent/atreyu"
+  },
+  "atreyu-v2-choc": {
+    "url": "https://raw.githubusercontent.com/climent/atreyu/main/pictures/atreyu-v2-choc.jpg?raw=true",
+    "repo": "https://github.com/climent/atreyu"
+  },
+  "avalanche-hotswap": {
+    "url": "https://raw.githubusercontent.com/vlkv/avalanche/master/images/avalanche_v3-0.jpg",
+    "repo": "https://github.com/vlkv/avalanche"
+  },
+  "aya": {
+    "url": "https://raw.githubusercontent.com/dannixon/aya/main/docs/both_sides.jpg",
+    "repo": "https://github.com/dannixon/aya"
+  },
+  "bakeneko-65": {
+    "url": "https://raw.githubusercontent.com/kkatano/bakeneko-65/develop/image/bakeneko-65.jpg",
+    "repo": "https://github.com/kkatano/bakeneko-65"
+  },
+  "banime40": {
+    "url": "https://raw.githubusercontent.com/ChrisChrisLoLo/banime40/master/docs/images/IMG_20220319_143632.jpg",
+    "repo": "https://github.com/chrischrislolo/banime40"
+  },
+  "barracuda": {
+    "url": "https://raw.githubusercontent.com/knaruo/barracuda/main/doc/res/barracuda_2.jpg",
+    "repo": "https://github.com/knaruo/barracuda"
+  },
+  "bartlepslit": {
+    "url": "https://raw.githubusercontent.com/kyrremann/bartlesplit/main/images/v1-pcb-1.png",
+    "repo": "https://github.com/kyrremann/bartlesplit"
+  },
+  "bevi": {
+    "url": "https://user-images.githubusercontent.com/3537856/115094858-48ef3f80-9f49-11eb-9e5f-1ed481c59b7c.jpg",
+    "repo": "https://github.com/sendyyeah/bevi"
+  },
+  "bto-layout": {
+    "url": "https://bit-trade-one.co.jp/selfmadekb/wp-content/uploads/sites/6/2019/04/3_ADKB96-%E8%A3%BD%E5%93%81%E3%83%88%E3%83%83%E3%83%97.png",
+    "repo": "https://github.com/bit-trade-one/ADKB96-hardware"
+  },
+  "cantor": {
+    "url": "https://raw.githubusercontent.com/diepala/cantor/main/assets/cantor_keyboard.jpg",
+    "repo": "https://github.com/diepala/cantor"
+  },
+  "cantor-remix": {
+    "url": "https://raw.githubusercontent.com/nilokr/cantor-remix/main/assets/cantor-remix.jpg",
+    "repo": "https://github.com/nilokr/cantor-remix"
+  },
+  "chameleon": {
+    "url": "https://raw.githubusercontent.com/TweetyDaBird/Chameleon/cacc1df8e47305e165246d7c2ac52fd11dd8695b/Store%20images/IMG_1472.JPEG",
+    "repo": "https://github.com/TweetyDaBird/Fat-Chameleon"
+  },
+  "cheapino": {
+    "url": "https://raw.githubusercontent.com/tompi/cheapino/master/doc/gallery/27.png",
+    "repo": "https://github.com/tompi/cheapino"
+  },
+  "choc-v": {
+    "url": "https://raw.githubusercontent.com/brickbots/chocv/main/images/family.jpeg",
+    "repo": "https://github.com/brickbots/chocv"
+  },
+  "chocofly": {
+    "url": "https://raw.githubusercontent.com/vlkv/chocofly/master/images/chocofly_v1-0.jpg",
+    "repo": "https://github.com/vlkv/chocofly"
+  },
+  "chouchou": {
+    "url": "https://raw.githubusercontent.com/dlip/chouchou/main/images/chouchou.jpg",
+    "repo": "https://github.com/dlip/chouchou"
+  },
+  "cornia": {
+    "url": "https://raw.githubusercontent.com/vaarai/cornia/main/images/Cornia_v1.jpg",
+    "repo": "https://github.com/vaarai/cornia"
+  },
+  "craftwalk": {
+    "url": "https://raw.githubusercontent.com/sotoba/craftwalk/images/craftwalk_blink.jpg",
+    "repo": "https://github.com/sotoba/craftwalk"
+  },
+  "discipad": {
+    "url": "https://raw.githubusercontent.com/coseyfannitutti/discipad/master/doc/images/discipad.jpeg",
+    "repo": "https://github.com/coseyfannitutti/discipad"
+  },
+  "dogtag": {
+    "url": "https://raw.githubusercontent.com/takashicompany/dogtag/master/images/04.jpg",
+    "repo": "https://github.com/takashicompany/dogtag"
+  },
+  "egg58v2": {
+    "url": "https://raw.githubusercontent.com/eggsworks/egg58/master/images/egg58.jpg",
+    "repo": "https://github.com/eggsworks/egg58"
+  },
+  "elephant42": {
+    "url": "https://raw.githubusercontent.com/illness072/elephant42/master/what-is-this.jpg",
+    "repo": "https://github.com/illness072/elephant42"
+  },
+  "endzone34": {
+    "url": "https://raw.githubusercontent.com/takashicompany/endzone34/master/images/13.jpg",
+    "repo": "https://github.com/takashicompany/endzone34"
+  },
+  "env-rgb": {
+    "url": "https://raw.githubusercontent.com/Envious-Data/Env-KB/main/_pictures/Rev.0/Built/DSC_0826.JPG",
+    "repo": "https://github.com/Envious-Data/Env-KB"
+  },
+  "equanimity": {
+    "url": "https://raw.githubusercontent.com/TyraelWasTaken/Equanimity/main/Renders/Alice_Keyboard_2024-Mar-21_06-38-16PM-000_CustomizedView23687820486.png",
+    "repo": "https://github.com/tyraelwastaken/equanimity"
+  },
+  "ergodash": {
+    "url": "https://raw.githubusercontent.com/omkbd/picture/master/Ergodash.jpg",
+    "repo": "https://github.com/omkbd/ergodash"
+  },
+  "ergoslab": {
+    "url": "https://raw.githubusercontent.com/tomsaleeba/ergoslab/master/ergoslab.jpg",
+    "repo": "https://github.com/tomsaleeba/ergoslab"
+  },
+  "eternal-keypad": {
+    "url": "https://user-images.githubusercontent.com/27895007/167808526-7cf01c83-1738-40c4-bed5-d04d67a561a3.png",
+    "repo": "https://github.com/duckyb/eternal-keypad"
+  },
+  "fourier": {
+    "url": "https://cdn.shopify.com/s/files/1/1851/5125/products/image_1d38793c-ebb6-4df8-bab5-933162628fe5_1024x1024@2x.jpg?v=1519971797",
+    "repo": "https://github.com/keebio/fourier"
+  },
+  "g35": {
+    "url": "https://raw.githubusercontent.com/kaylynb/mechllama-g35/master/images/g35v2.jpg",
+    "repo": "https://github.com/kaylynb/mechllama-g35"
+  },
+  "hillside-48": {
+    "url": "https://github.com/mmccoyd/hillside/wiki/image/48/hill48_600.png",
+    "repo": "https://github.com/mmccoyd/hillside"
+  },
+  "hillside-46": {
+    "url": "https://github.com/mmccoyd/hillside/wiki/image/46/hill46_photo_600.png",
+    "repo": "https://github.com/mmccoyd/hillside"
+  },
+  "hillside-52": {
+    "url": "https://github.com/mmccoyd/hillside/wiki/image/52/hill52_photo_600.png",
+    "repo": "https://github.com/mmccoyd/hillside"
+  },
+  "horizon-choc": {
+    "url": "https://raw.githubusercontent.com/skarrmann/horizon/main/images/horizon-choc-mx-top.jpg",
+    "repo": "https://github.com/skarrmann/horizon"
+  },
+  "horizon-mx": {
+    "url": "https://raw.githubusercontent.com/skarrmann/horizon/main/images/horizon-choc-mx-top.jpg",
+    "repo": "https://github.com/skarrmann/horizon"
+  },
+  "hub20": {
+    "url": "https://raw.githubusercontent.com/joshajohnson/hub20/master/documents/imgs/header.JPG",
+    "repo": "https://github.com/joshajohnson/hub20"
+  },
+  "index-tab": {
+    "url": "https://raw.githubusercontent.com/Kyrremann/index-tab/master/images/rev2.png",
+    "repo": "https://github.com/kyrremann/index-tab"
+  },
+  "isometria-75-iso": {
+    "url": "https://mpwr.xyz/projects/isometria75/full/proto_v1_4.JPG",
+    "repo": "https://github.com/ebastler/isometria-75"
+  },
+  "janus": {
+    "url": "https://raw.githubusercontent.com/skarrmann/janus/master/images/janus-complete-top.jpg",
+    "repo": "https://github.com/skarrmann/janus"
+  },
+  "jorne-cherry-2-1": {
+    "url": "https://i.imgur.com/mUDNrDy.jpeg",
+    "repo": "https://github.com/joric/jorne"
+  },
+  "jorne-cherry-3-0": {
+    "url": "https://raw.githubusercontent.com/joric/jorne/jorne/images/jorne.jpg",
+    "repo": "https://github.com/joric/jorne"
+  },
+  "junco": {
+    "url": "https://raw.githubusercontent.com/daneski13/junco/main/img/Junco.webp",
+    "repo": "https://github.com/daneski13/junco"
+  },
+  "k34": {
+    "url": "https://raw.githubusercontent.com/wongjingping/k34/main/docs/k34.jpg?raw=true",
+    "repo": "https://github.com/wongjingping/k34"
+  },
+  "kaly": {
+    "url": "https://raw.githubusercontent.com/dwctor/kaly/main/Pictures/20230716_153452.jpg",
+    "repo": "https://github.com/dwctor/kaly"
+  },
+  "kapl": {
+    "url": "https://raw.githubusercontent.com/keyzog/kapl/main/images/keyboard.jpg",
+    "repo": "https://github.com/keyzog/kapl"
+  },
+  "kb58-pico": {
+    "url": "https://user-images.githubusercontent.com/25994266/146207912-b725e22f-92dc-4a40-9157-c2fddff45ce2.jpg",
+    "repo": "https://github.com/beanaccle/kb58_pico"
+  },
+  "korris": {
+    "url": "https://raw.githubusercontent.com/yanghu/unicorne/main/artifacts/pics/red-glow.jpg",
+    "repo": "https://github.com/yanghu/unicorne"
+  },
+  "kuro65": {
+    "url": "https://raw.githubusercontent.com/0x544D/kuro65/main/pictures/kusabimaru/kuro65_case.jpeg",
+    "repo": "https://github.com/0x544D/kuro65"
+  },
+  "lancer-hotswap": {
+    "url": "https://github.com/subrezon/lancer/raw/master/docs/lancer-3.png",
+    "repo": "https://github.com/subrezon/lancer"
+  },
+  "lily58": {
+    "url": "https://user-images.githubusercontent.com/6285554/52002699-fd861d80-2505-11e9-96a8-f58a93534255.jpg",
+    "repo": "https://kata0510.github.io/Lily58-Document/Lily58_BG/"
+  },
+  "lily58-lite-rev3": {
+    "url": "https://raw.githubusercontent.com/kata0510/lily58/master/Lite_Rev3/img/lily58-lite-rev3.jpg",
+    "repo": "https://github.com/kata0510/Lily58/tree/master/Lite_Rev3"
+  },
+  "lily58-pro": {
+    "url": "https://user-images.githubusercontent.com/6285554/53640050-6203dc00-3c6e-11e9-9434-5591ed3e414f.jpg",
+    "repo": "https://github.com/kata0510/Lily58/blob/master/Pro/Doc/buildguide_en.md"
+  },
+  "lime": {
+    "url": "https://raw.githubusercontent.com/hellsingcoder/limekeyboard/main/media/lime_keyboard.jpeg",
+    "repo": "https://github.com/hellsingcoder/limekeyboard"
+  },
+  "lotus58": {
+    "url": "https://preview.redd.it/7apgomy67qf61.jpg?width=4032&format=pjpg&auto=webp&s=ce1f045339149a99311582d44b458c88c2b167a3",
+    "repo": "https://github.com/tweetydabird/lotus58"
+  },
+  "lumberjack": {
+    "url": "https://raw.githubusercontent.com/peej/lumberjack-keyboard/master/images/tofu-kat-spacecadet.jpg",
+    "repo": "https://github.com/peej/lumberjack-keyboard"
+  },
+  "mikeneko-65": {
+    "url": "https://raw.githubusercontent.com/takishim/mikeneko65/master/image/mikeneko-65.jpg",
+    "repo": "https://github.com/takishim/mikeneko65"
+  },
+  "millipad": {
+    "url": "https://raw.githubusercontent.com/GLozares/millipad/main/Renders/Front%20Cover.png",
+    "repo": "https://github.com/glozares/millipad"
+  },
+  "mini-ten-key-plus": {
+    "url": "https://raw.githubusercontent.com/minibois/ten-key-plus/master/Documents/Images/Full.jpeg",
+    "repo": "https://github.com/minibois/ten-key-plus"
+  },
+  "minim": {
+    "url": "https://raw.githubusercontent.com/matthewdias/minim/main/top.jpg",
+    "repo": "https://github.com/matthewdias/minim"
+  },
+  "morizon-choc": {
+    "url": "https://raw.githubusercontent.com/skarrmann/morizon/main/images/morizon-mx-top.jpg",
+    "repo": "https://github.com/skarrmann/morizon"
+  },
+  "morizon-mx": {
+    "url": "https://raw.githubusercontent.com/skarrmann/morizon/main/images/morizon-mx-top.jpg",
+    "repo": "https://github.com/skarrmann/morizon"
+  },
+  "mysterium": {
+    "url": "https://raw.githubusercontent.com/coseyfannitutti/mysterium/master/doc/images/mysterium.jpg",
+    "repo": "https://github.com/coseyfannitutti/mysterium"
+  },
+  "nack": {
+    "url": "https://raw.githubusercontent.com/farfalleflickan/nack/master/nack_v1/screenshots/Nack_rgb.gif",
+    "repo": "https://github.com/farfalleflickan/nack"
+  },
+  "num-discipline": {
+    "url": "https://raw.githubusercontent.com/ericrlau/numdiscipline/master/images/SampleBuild/top.jpg",
+    "repo": "https://github.com/ericrlau/numdiscipline"
+  },
+  "opendeck": {
+    "url": "https://raw.githubusercontent.com/cmdremily/opendeck/master/images/actual.jpg",
+    "repo": "https://github.com/cmdremily/opendeck"
+  },
+  "orthocode": {
+    "url": "https://raw.githubusercontent.com/Jrodna/OrthoCode/master/images/IMG_5573.JPG",
+    "repo": "https://github.com/jrodna/orthocode"
+  },
+  "osprette": {
+    "url": "https://raw.githubusercontent.com/smores56/osprette/main/images/osprette-front.jpg",
+    "repo": "https://github.com/smores56/osprette"
+  },
+  "piantor": {
+    "url": "https://raw.githubusercontent.com/beekeeb/piantor/main/case/top.jpg",
+    "repo": "https://github.com/beekeeb/piantor"
+  },
+  "pica40": {
+    "url": "https://raw.githubusercontent.com/zzeneg/pica40/main/images/full.jpg",
+    "repo": "https://github.com/zzeneg/pica40"
+  },
+  "pinky3": {
+    "url": "https://raw.githubusercontent.com/tamanishi/Pinky3/master/product.jpg",
+    "repo": "https://github.com/tamanishi/Pinky3"
+  },
+  "pinky4": {
+    "url": "https://raw.githubusercontent.com/tamanishi/Pinky4/master/image_grabbag.jpg",
+    "repo": "https://github.com/tamanishi/Pinky4"
+  },
+  "pisces": {
+    "url": "https://raw.githubusercontent.com/knaruo/pisces/main/doc/res/pisces_v2.png",
+    "repo": "https://github.com/knaruo/pisces"
+  },
+  "pisces-v2": {
+    "url": "https://raw.githubusercontent.com/knaruo/pisces/main/doc/res/pisces_v2.png",
+    "repo": "https://github.com/knaruo/pisces"
+  },
+  "plaid": {
+    "url": "https://raw.githubusercontent.com/hsgw/plaid/master/doc/img/plaid.jpg",
+    "repo": "https://github.com/hsgw/plaid"
+  },
+  "pluckey": {
+    "url": "https://gist.githubusercontent.com/floookay/ea7313862e407c9b5aaea3d6ed3ce233/raw/4c37d31cb414b9a7709810434a3b68f4b9b9c0dc/monolith.jpg",
+    "repo": "https://github.com/floookay/pluckey"
+  },
+  "pteron56v0": {
+    "url": "https://raw.githubusercontent.com/Kraken-Jokes/pteron-pcb/main/images/Pteron56PCBv0.1%20build.jpg",
+    "repo": "https://github.com/kraken-jokes/pteron-pcb"
+  },
+  "redherring": {
+    "url": "https://user-images.githubusercontent.com/800930/158265769-0780c26f-19fc-43e6-8f18-dc18801a05b9.jpg",
+    "repo": "https://github.com/dcpedit/redherring"
+  },
+  "redox-rev1": {
+    "url": "https://raw.githubusercontent.com/mattdibi/redox-keyboard/master/img/redox-1.jpg",
+    "repo": "https://github.com/mattdibi/redox-keyboard"
+  },
+  "reviung34": {
+    "url": "https://raw.githubusercontent.com/gtips/reviung/master/reviung34/image/reviung34-01.jpg",
+    "repo": "https://github.com/gtips/reviung"
+  },
+  "reviung34-split": {
+    "url": "https://raw.githubusercontent.com/gtips/reviung/master/reviung34split/image/REVIUNG34-1.jpg",
+    "repo": "https://github.com/gtips/reviung"
+  },
+  "reviung41": {
+    "url": "https://raw.githubusercontent.com/gtips/reviung/master/reviung41/image/REVIUNG41B-1.jpg",
+    "repo": "https://github.com/gtips/reviung"
+  },
+  "reviung5": {
+    "url": "https://raw.githubusercontent.com/gtips/reviung/master/reviung5/image/reviung5-1.jpg",
+    "repo": "https://github.com/gtips/reviung"
+  },
+  "reviung53": {
+    "url": "https://raw.githubusercontent.com/gtips/reviung/master/reviung53/image/reviung53-04.jpg",
+    "repo": "https://github.com/gtips/reviung"
+  },
+  "rhymestone": {
+    "url": "https://raw.githubusercontent.com/marksard/keyboards/master/_image/_rhymestone.jpg",
+    "repo": "https://github.com/marksard/keyboards"
+  },
+  "romeo": {
+    "url": "https://raw.githubusercontent.com/coseyfannitutti/romeo/master/doc/images/romeo.jpg",
+    "repo": "https://github.com/coseyfannitutti/romeo"
+  },
+  "sdra-kb00": {
+    "url": "https://raw.githubusercontent.com/drabaioli/sdrakb00/main/img/assembled_leds_on.jpg",
+    "repo": "https://github.com/drabaioli/sdrakb00"
+  },
+  "sha-choc": {
+    "url": "https://raw.githubusercontent.com/skarrmann/sha/main/images/sha-complete-top.jpg",
+    "repo": "https://github.com/skarrmann/sha"
+  },
+  "sha-mx": {
+    "url": "https://raw.githubusercontent.com/skarrmann/sha/main/images/sha-complete-top.jpg",
+    "repo": "https://github.com/skarrmann/sha"
+  },
+  "silakka54": {
+    "url": "https://raw.githubusercontent.com/Squalius-cephalus/silakka54/main/silakka54.png",
+    "repo": "https://github.com/squalius-cephalus/silakka54"
+  },
+  "skeleton-num-pad": {
+    "url": "https://user-images.githubusercontent.com/90203406/158052929-f8404de9-d401-4f91-9769-a327bcada874.jpg",
+    "repo": "https://github.com/skeletonkbd/skeletonnumpad"
+  },
+  "sofle-choc": {
+    "url": "https://raw.githubusercontent.com/josefadamcik/soflekeyboard/master/Images/chocclear.jpg",
+    "repo": "https://github.com/josefadamcik/soflekeyboard"
+  },
+  "sofle-pico": {
+    "url": "https://raw.githubusercontent.com/jellytitan/sofle-pico/main/docs/images/build_guide_pico/sofle_pico_v3.4_hero.jpeg",
+    "repo": "https://github.com/jellytitan/sofle-pico"
+  },
+  "sofle-v1": {
+    "url": "https://raw.githubusercontent.com/josefadamcik/soflekeyboard/master/docs/images/sofle_keyboard.jpg",
+    "repo": "https://github.com/josefadamcik/soflekeyboard"
+  },
+  "southpawpcb": {
+    "url": "https://raw.githubusercontent.com/kelvinhall05/southpaw75/master/Pictures/southpaw75.jpg",
+    "repo": "https://github.com/kelvinhall05/southpaw75"
+  },
+  "speedo": {
+    "url": "http://assets.cozykeys.xyz/images/keyboards/speedo/speedo-v3.0-angle-led-front_800x800.png",
+    "repo": "https://github.com/cozykeys/speedo"
+  },
+  "spleeb": {
+    "url": "https://raw.githubusercontent.com/chrishoage/spleeb/main/images/built_spleeb_3.jpg",
+    "repo": "https://github.com/chrishoage/spleeb"
+  },
+  "splitreus": {
+    "url": "https://raw.githubusercontent.com/na-cly/splitreus62/master/splitreus62.jpg",
+    "repo": "https://github.com/na-cly/splitreus62"
+  },
+  "squiggle-36": {
+    "url": "https://raw.githubusercontent.com/ibnuda/squiggle/master/screenshots/squiggle-standard.jpg",
+    "repo": "https://github.com/ibnuda/squiggle"
+  },
+  "squiggle-goldberg": {
+    "url": "https://raw.githubusercontent.com/ibnuda/squiggle/master/screenshots/squiggle-goldberg.jpg",
+    "repo": "https://github.com/ibnuda/squiggle"
+  },
+  "squiggle-minimalist": {
+    "url": "https://raw.githubusercontent.com/ibnuda/squiggle/master/screenshots/squiggle-minimalist.jpg",
+    "repo": "https://github.com/ibnuda/squiggle"
+  },
+  "squiggle-standard": {
+    "url": "https://raw.githubusercontent.com/ibnuda/squiggle/master/screenshots/squiggle-standard.jpg",
+    "repo": "https://github.com/ibnuda/squiggle"
+  },
+  "stront-choc": {
+    "url": "https://raw.githubusercontent.com/zzeneg/stront/main/images/top.jpg",
+    "repo": "https://github.com/zzeneg/stront"
+  },
+  "stront-mx-38": {
+    "url": "https://raw.githubusercontent.com/zzeneg/stront/main/images/mx.jpg",
+    "repo": "https://github.com/zzeneg/stront"
+  },
+  "stront-mx-40": {
+    "url": "https://raw.githubusercontent.com/zzeneg/stront/main/images/mx40.jpg",
+    "repo": "https://github.com/zzeneg/stront"
+  },
+  "supersplit": {
+    "url": "https://tarneo.fr/posts/split_keyboard/monkeyboard.webp",
+    "repo": "https://github.com/tarneaux/supersplit"
+  },
+  "swoop-mx": {
+    "url": "https://raw.githubusercontent.com/jimmerricks/swoop/main/images/howarya_small.jpg",
+    "repo": "https://github.com/jimmerricks/swoop"
+  },
+  "tanuki-pcb3": {
+    "url": "https://raw.githubusercontent.com/SethSenpai/Tanuki/master/Img/glamour1.jpg",
+    "repo": "https://github.com/SethSenpai/Tanuki"
+  },
+  "tg4x": {
+    "url": "https://github.com/MythosMann/tg4x/raw/master/keeb.jpg",
+    "repo": "https://github.com/mythosmann/tg4x"
+  },
+  "treadstone32": {
+    "url": "https://raw.githubusercontent.com/marksard/keyboards/master/_image/_treadstone48rev2.jpg",
+    "repo": "https://github.com/marksard/keyboards"
+  },
+  "unicorn-f072": {
+    "url": "https://raw.githubusercontent.com/yanghu/unicorne/main/artifacts/pics/top-black.jpg",
+    "repo": "https://github.com/yanghu/unicorne"
+  },
+  "unicorn-mx": {
+    "url": "https://raw.githubusercontent.com/yanghu/unicorne/main/artifacts/pics/top-black.jpg",
+    "repo": "https://github.com/yanghu/unicorne"
+  },
+  "unison": {
+    "url": "https://raw.githubusercontent.com/jpskenn/unison/main/assets/readme/DSC_7287.jpg",
+    "repo": "https://github.com/jpskenn/unison"
+  },
+  "unix60pcb": {
+    "url": "https://raw.githubusercontent.com/mkdl/unix60/main/Pictures/Top.JPG",
+    "repo": "https://github.com/mkdl/unix60"
+  },
+  "vagrant": {
+    "url": "https://raw.githubusercontent.com/sho-keebs/vagrant-10/master/doc/vag.jpg",
+    "repo": "https://github.com/sho-keebs/vagrant-10"
+  },
+  "varanidae": {
+    "url": "https://raw.githubusercontent.com/tokageitlab/varanidae/main/img/thumbnail.png",
+    "repo": "https://github.com/tokageitlab/varanidae"
+  },
+  "wave": {
+    "url": "https://raw.githubusercontent.com/etiennecollin/wave/main/resources/images/built_wave_1.jpeg",
+    "repo": "https://github.com/etiennecollin/wave"
+  },
+  "wren": {
+    "url": "https://raw.githubusercontent.com/oliviahanley/wren-keyboard/main/images/glamor_shot.jpeg",
+    "repo": "https://github.com/oliviahanley/wren-keyboard"
+  },
+  "xenon-e": {
+    "url": "https://raw.githubusercontent.com/narinari/xenon-keyboard/master/resources/example/xenon-classic_godspeed-custom-sa.jpg",
+    "repo": "https://github.com/narinari/xenon-keyboard"
+  },
+  "zero": {
+    "url": "https://user-images.githubusercontent.com/461132/187019809-5aaccf27-c189-4561-801b-86f32a59df2b.jpg",
+    "repo": "https://github.com/sol/chord-zero"
+  },
+  "zwerg": {
+    "url": "https://raw.githubusercontent.com/floookay/zwerg/master/images/desk-check.webp",
+    "repo": "https://github.com/floookay/zwerg"
+  },
+  "chameleon-v1-0-v1-00": {
+    "url": "https://raw.githubusercontent.com/TweetyDaBird/Chameleon/cacc1df8e47305e165246d7c2ac52fd11dd8695b/Store%20images/IMG_1473.JPEG",
+    "repo": "https://github.com/TweetyDaBird/Fat-Chameleon"
+  },
+  "soyuz": {
+    "url": "https://cdn.shopify.com/s/files/1/0462/4557/6854/products/DSC02541.jpg?v=1603867862",
+    "repo": "https://github.com/ai03-2725/soyuz",
+    "credit": "https://customkbd.com/products/soyuz-numpad-kit"
+  },
+  "kbic65": {
+    "url": "https://karlb.eu/assets/images/kbic65_header.jpg",
+    "repo": "https://github.com/b-karl/KBIC65",
+    "credit": "https://karlb.eu/kbic65"
+  },
+  "41-1353-r41l2": {
+    "url": "https://raw.githubusercontent.com/cyril279/keyboards/main/revlp/41_1353/photos/PXL_20210723_105702713~2.jpg",
+    "repo": "https://github.com/cyril279/keyboards"
+  },
+  "41-1350": {
+    "url": "https://raw.githubusercontent.com/cyril279/keyboards/main/revlp/41_1350/photos/PXL_20210426_002336718.jpg",
+    "repo": "https://github.com/cyril279/keyboards"
+  },
+  "cradio-z-lp": {
+    "url": "https://raw.githubusercontent.com/davidphilipbarr/36keys/HEAD/34Keys/Cradio-pg1232/34.png",
+    "repo": "https://github.com/davidphilipbarr/36keys"
+  },
+  "reviung46": {
+    "url": "https://raw.githubusercontent.com/gtips/reviung/master/reviung46/image/reviung46_01.jpg",
+    "repo": "https://github.com/gtips/reviung"
+  },
+  "keyboar-layout": {
+    "url": "https://raw.githubusercontent.com/ncwhale/keyboard_design/master/Splite-Keyboard-v3/Keyboard-complete.jpeg",
+    "repo": "https://github.com/ncwhale/keyboard_design"
+  },
+  "kbd-template": {
+    "url": "https://raw.githubusercontent.com/takashicompany/radialex/master/images/02.jpg",
+    "repo": "https://github.com/takashicompany/radialex"
+  },
+  "juliet": {
+    "url": "https://raw.githubusercontent.com/na-cly/juliet/master/doc/images/romeo.jpg",
+    "repo": "https://github.com/na-cly/juliet"
+  },
+  "jp60": {
+    "url": "https://shop.yushakobo.jp/cdn/shop/files/IMG_20240910_001132_1600x.jpg?v=1726206433",
+    "repo": "https://github.com/ai03-2725/jp60",
+    "credit": "https://shop.yushakobo.jp/products/2988"
+  },
+  "hotswap-rgb-dumbpad": {
+    "url": "https://raw.githubusercontent.com/imchipwood/dumbpad/master/combo_low_profile_oled/img/dumppad_oled_v1_3_1_keys_2.jpg",
+    "repo": "https://github.com/imchipwood/dumbpad"
+  },
+  "framework-rev0": {
+    "url": "https://raw.githubusercontent.com/stevennguyen/framework/master/images/10.jpg",
+    "repo": "https://github.com/stevennguyen/framework"
+  },
+  "dk60": {
+    "url": "https://raw.githubusercontent.com/Dbroqua/DK60/master/Previews/DK60-PCB.jpg",
+    "repo": "https://github.com/Dbroqua/DK60"
+  },
+  "buzzard": {
+    "url": "https://raw.githubusercontent.com/crehmann/buzzard/main/Pictures/build_guide_final.jpg",
+    "repo": "https://github.com/crehmann/buzzard"
+  },
+  "bad-wings-slim": {
+    "url": "https://raw.githubusercontent.com/hazels-garage/bad-wings/master/slim/images/bad-wings-slim-top.jpg",
+    "repo": "https://github.com/hazels-garage/bad-wings"
+  },
+  "bad-wings-bold": {
+    "url": "https://raw.githubusercontent.com/hazels-garage/bad-wings/master/bold/images/bad-wings-bold.jpg",
+    "repo": "https://github.com/hazels-garage/bad-wings"
+  },
+  "sango": {
+    "url": "https://raw.githubusercontent.com/Aidan-OS/Sango/main/Sango.jpg",
+    "repo": "https://github.com/Aidan-OS/Sango"
+  },
+  "punk75": {
+    "url": "https://github.com/dsanchezseco/punk75/raw/master/generated/images/punk75_front.jpg",
+    "repo": "https://github.com/dsanchezseco/punk75"
+  },
+  "draculad": {
+    "url": "https://raw.githubusercontent.com/mangoiv/draculad/master/pictures/rev1/both_sides_underglow_oleds.jpg",
+    "repo": "https://github.com/MangoIV/dracuLad"
+  },
+  "dm9records-ergoinu": {
+    "url": "https://github.com/hsgw/ergoinu/wiki/images/keyboard_top.JPG",
+    "repo": "https://github.com/hsgw/ergoinu"
+  },
+  "atreus62": {
+    "url": "https://raw.githubusercontent.com/profet23/atreus62/master/images/nantucket-atreus62.jpg",
+    "repo": "https://github.com/profet23/atreus62"
+  },
+  "alpha": {
+    "url": "https://raw.githubusercontent.com/PyrooL/Alpha/master/photos/instructions/switches.jpg",
+    "repo": "https://github.com/PyrooL/Alpha"
+  }
+}

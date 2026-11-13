@@ -1,0 +1,180 @@
+@import net.keyboardbuilders.keyboardbuilders.web.Head
+@import net.keyboardbuilders.keyboardbuilders.web.LearnPage
+@import net.keyboardbuilders.keyboardbuilders.web.SiteUrl
+@param page: LearnPage
+@param head: Head
+@param site: SiteUrl
+
+<%--
+    /learn/stagger. NO BACKTICKS anywhere in this file -- one closes the raw string this
+    page is written in, and jte then reports the error on the wrong line.
+
+    SOURCES for every number on this page, checked 2026-10-03:
+      - Row stagger, 1/4u then 1/2u: QMK's community layout layouts/default/60_ansi/info.json
+        puts the first letter of each row at x = 1.5 (Q), 1.75 (A) and 2.25 (Z).
+      - Column stagger, the Corne: QMK's keyboards/crkbd/info.json, LAYOUT_split_3x5_3,
+        gives the left hand's five columns y = 0.3, 0.1, 0, 0.1, 0.2, outer column first.
+        That is QMK's layout data for the Corne, not a measurement of its PCB.
+      - How the catalog decides: DesignExtras.stagger (build_silhouettes.stagger_kind),
+        plus the owner's by-eye rulings in seed/stagger-overrides.toml.
+    The live counts come from the corpus at request time.
+
+    THE DIAGRAM IS TO SCALE: one SVG unit is one millimeter, a key's space 19.05 mm.
+    The squares are key positions, not keycap sizes.
+--%>
+@template.layout(head = head, site = site, content = @`
+    <script type="application/ld+json">$unsafe{page.articleLd}</script>
+    <script type="application/ld+json">$unsafe{page.breadcrumbLd}</script>
+    <article class="learn">
+        <p class="crumb"><a href="/learn">&larr; Learn</a></p>
+        <h1>Ortholinear, row stagger and column stagger</h1>
+
+        <p class="learn-answer">
+            Stagger is how a keyboard's keys are shifted against their neighbors. An
+            ordinary keyboard shifts each row sideways, which is <strong>row stagger</strong>.
+            Many ergonomic boards shift the columns up and down instead, which is
+            <strong>column stagger</strong>. An <strong>ortholinear</strong> board shifts
+            nothing and its keys sit in a grid.
+        </p>
+
+        <figure class="learn-figure">
+            <svg class="lf-small" viewBox="0 0 128 228" role="img"
+                 aria-label="The same fifteen letter keys, Q to T, A to G and Z to B, drawn three ways to the same scale. Ortholinear: a plain grid. Row stagger: the A row shifted a quarter of a key to the right of the Q row, and the Z row a further half key. Column stagger, as on the Corne: the middle finger's column highest, the pinky's column 0.3 of a key lower.">
+                <text class="lf-title" x="4" y="5">Ortholinear</text>
+                <rect class="lf-cell" x="14" y="9" width="19.05" height="19.05"/>
+                <text class="lf-label" x="23.52" y="19.62" text-anchor="middle">Q</text>
+                <rect class="lf-cell" x="33.05" y="9" width="19.05" height="19.05"/>
+                <text class="lf-label" x="42.57" y="19.62" text-anchor="middle">W</text>
+                <rect class="lf-cell" x="52.1" y="9" width="19.05" height="19.05"/>
+                <text class="lf-label" x="61.62" y="19.62" text-anchor="middle">E</text>
+                <rect class="lf-cell" x="71.15" y="9" width="19.05" height="19.05"/>
+                <text class="lf-label" x="80.68" y="19.62" text-anchor="middle">R</text>
+                <rect class="lf-cell" x="90.2" y="9" width="19.05" height="19.05"/>
+                <text class="lf-label" x="99.73" y="19.62" text-anchor="middle">T</text>
+                <rect class="lf-cell" x="14" y="28.05" width="19.05" height="19.05"/>
+                <text class="lf-label" x="23.52" y="38.68" text-anchor="middle">A</text>
+                <rect class="lf-cell" x="33.05" y="28.05" width="19.05" height="19.05"/>
+                <text class="lf-label" x="42.57" y="38.68" text-anchor="middle">S</text>
+                <rect class="lf-cell" x="52.1" y="28.05" width="19.05" height="19.05"/>
+                <text class="lf-label" x="61.62" y="38.68" text-anchor="middle">D</text>
+                <rect class="lf-cell" x="71.15" y="28.05" width="19.05" height="19.05"/>
+                <text class="lf-label" x="80.68" y="38.68" text-anchor="middle">F</text>
+                <rect class="lf-cell" x="90.2" y="28.05" width="19.05" height="19.05"/>
+                <text class="lf-label" x="99.73" y="38.68" text-anchor="middle">G</text>
+                <rect class="lf-cell" x="14" y="47.1" width="19.05" height="19.05"/>
+                <text class="lf-label" x="23.52" y="57.73" text-anchor="middle">Z</text>
+                <rect class="lf-cell" x="33.05" y="47.1" width="19.05" height="19.05"/>
+                <text class="lf-label" x="42.57" y="57.73" text-anchor="middle">X</text>
+                <rect class="lf-cell" x="52.1" y="47.1" width="19.05" height="19.05"/>
+                <text class="lf-label" x="61.62" y="57.73" text-anchor="middle">C</text>
+                <rect class="lf-cell" x="71.15" y="47.1" width="19.05" height="19.05"/>
+                <text class="lf-label" x="80.68" y="57.73" text-anchor="middle">V</text>
+                <rect class="lf-cell" x="90.2" y="47.1" width="19.05" height="19.05"/>
+                <text class="lf-label" x="99.73" y="57.73" text-anchor="middle">B</text>
+                <text class="lf-title" x="4" y="77">Row stagger</text>
+                <rect class="lf-cell" x="14" y="81" width="19.05" height="19.05"/>
+                <text class="lf-label" x="23.52" y="91.62" text-anchor="middle">Q</text>
+                <rect class="lf-cell" x="33.05" y="81" width="19.05" height="19.05"/>
+                <text class="lf-label" x="42.57" y="91.62" text-anchor="middle">W</text>
+                <rect class="lf-cell" x="52.1" y="81" width="19.05" height="19.05"/>
+                <text class="lf-label" x="61.62" y="91.62" text-anchor="middle">E</text>
+                <rect class="lf-cell" x="71.15" y="81" width="19.05" height="19.05"/>
+                <text class="lf-label" x="80.68" y="91.62" text-anchor="middle">R</text>
+                <rect class="lf-cell" x="90.2" y="81" width="19.05" height="19.05"/>
+                <text class="lf-label" x="99.73" y="91.62" text-anchor="middle">T</text>
+                <rect class="lf-cell" x="18.76" y="100.05" width="19.05" height="19.05"/>
+                <text class="lf-label" x="28.29" y="110.67" text-anchor="middle">A</text>
+                <rect class="lf-cell" x="37.81" y="100.05" width="19.05" height="19.05"/>
+                <text class="lf-label" x="47.34" y="110.67" text-anchor="middle">S</text>
+                <rect class="lf-cell" x="56.86" y="100.05" width="19.05" height="19.05"/>
+                <text class="lf-label" x="66.39" y="110.67" text-anchor="middle">D</text>
+                <rect class="lf-cell" x="75.91" y="100.05" width="19.05" height="19.05"/>
+                <text class="lf-label" x="85.44" y="110.67" text-anchor="middle">F</text>
+                <rect class="lf-cell" x="94.96" y="100.05" width="19.05" height="19.05"/>
+                <text class="lf-label" x="104.49" y="110.67" text-anchor="middle">G</text>
+                <rect class="lf-cell" x="28.29" y="119.1" width="19.05" height="19.05"/>
+                <text class="lf-label" x="37.81" y="129.72" text-anchor="middle">Z</text>
+                <rect class="lf-cell" x="47.34" y="119.1" width="19.05" height="19.05"/>
+                <text class="lf-label" x="56.86" y="129.72" text-anchor="middle">X</text>
+                <rect class="lf-cell" x="66.39" y="119.1" width="19.05" height="19.05"/>
+                <text class="lf-label" x="75.91" y="129.72" text-anchor="middle">C</text>
+                <rect class="lf-cell" x="85.44" y="119.1" width="19.05" height="19.05"/>
+                <text class="lf-label" x="94.96" y="129.72" text-anchor="middle">V</text>
+                <rect class="lf-cell" x="104.49" y="119.1" width="19.05" height="19.05"/>
+                <text class="lf-label" x="114.01" y="129.72" text-anchor="middle">B</text>
+                <path class="lf-dim" d="M14 142.15H18.76M14 140.65v3M18.76 140.65v3"/>
+                <path class="lf-dim" d="M18.76 142.15H28.29M18.76 140.65v3M28.29 140.65v3"/>
+                <text class="lf-label" x="30.29" y="143.25">rows shift ¼u, then ½u</text>
+                <text class="lf-title" x="4" y="157">Column stagger</text>
+                <rect class="lf-cell" x="14" y="166.72" width="19.05" height="19.05"/>
+                <text class="lf-label" x="23.52" y="177.34" text-anchor="middle">Q</text>
+                <rect class="lf-cell" x="33.05" y="162.91" width="19.05" height="19.05"/>
+                <text class="lf-label" x="42.57" y="173.53" text-anchor="middle">W</text>
+                <rect class="lf-cell" x="52.1" y="161" width="19.05" height="19.05"/>
+                <text class="lf-label" x="61.62" y="171.62" text-anchor="middle">E</text>
+                <rect class="lf-cell" x="71.15" y="162.91" width="19.05" height="19.05"/>
+                <text class="lf-label" x="80.68" y="173.53" text-anchor="middle">R</text>
+                <rect class="lf-cell" x="90.2" y="164.81" width="19.05" height="19.05"/>
+                <text class="lf-label" x="99.73" y="175.44" text-anchor="middle">T</text>
+                <rect class="lf-cell" x="14" y="185.76" width="19.05" height="19.05"/>
+                <text class="lf-label" x="23.52" y="196.39" text-anchor="middle">A</text>
+                <rect class="lf-cell" x="33.05" y="181.96" width="19.05" height="19.05"/>
+                <text class="lf-label" x="42.57" y="192.58" text-anchor="middle">S</text>
+                <rect class="lf-cell" x="52.1" y="180.05" width="19.05" height="19.05"/>
+                <text class="lf-label" x="61.62" y="190.68" text-anchor="middle">D</text>
+                <rect class="lf-cell" x="71.15" y="181.96" width="19.05" height="19.05"/>
+                <text class="lf-label" x="80.68" y="192.58" text-anchor="middle">F</text>
+                <rect class="lf-cell" x="90.2" y="183.86" width="19.05" height="19.05"/>
+                <text class="lf-label" x="99.73" y="194.49" text-anchor="middle">G</text>
+                <rect class="lf-cell" x="14" y="204.81" width="19.05" height="19.05"/>
+                <text class="lf-label" x="23.52" y="215.44" text-anchor="middle">Z</text>
+                <rect class="lf-cell" x="33.05" y="201" width="19.05" height="19.05"/>
+                <text class="lf-label" x="42.57" y="211.63" text-anchor="middle">X</text>
+                <rect class="lf-cell" x="52.1" y="199.1" width="19.05" height="19.05"/>
+                <text class="lf-label" x="61.62" y="209.72" text-anchor="middle">C</text>
+                <rect class="lf-cell" x="71.15" y="201" width="19.05" height="19.05"/>
+                <text class="lf-label" x="80.68" y="211.63" text-anchor="middle">V</text>
+                <rect class="lf-cell" x="90.2" y="202.91" width="19.05" height="19.05"/>
+                <text class="lf-label" x="99.73" y="213.53" text-anchor="middle">B</text>
+                <path class="lf-dim" d="M52.1 161H10" stroke-dasharray="0.8 0.6"/>
+                <path class="lf-dim" d="M11.5 161V166.72M10 166.72h3"/>
+                <text class="lf-label" x="9.5" y="164.96" text-anchor="end">0.3u</text>
+            </svg>
+            <figcaption>
+                To scale, each square 19.05 mm. Row stagger as on a standard US keyboard,
+                column stagger as on the Corne's left hand, both from QMK's layout data.
+            </figcaption>
+        </figure>
+
+        <p>
+            Almost every laptop and desktop keyboard is row-staggered. On a US layout the
+            A row starts a quarter key right of Q, and Z another half key on, so a finger
+            moves at a slant going up and down.
+        </p>
+        <p>
+            Column stagger keeps the columns straight and moves them up or down to match
+            your finger lengths. On the Corne the middle-finger column is highest and the
+            pinky column sits 0.3 of a key lower.
+        </p>
+        <p>
+            Stagger isn't splay. Splay turns the columns so they fan out. A board can have
+            either, both or neither, and design pages show them on separate lines.
+        </p>
+
+        <p>
+            Here <a class="learn-all" href="/designs?stagger=column">${page.count("column")} are column-staggered</a>,
+            <a class="learn-all" href="/designs?stagger=row">${page.count("row")} are row-staggered</a>
+            and <a class="learn-all" href="/designs?stagger=ortho">${page.count("ortho")} are ortholinear</a>,
+            read from where each PCB file puts its switches, with a few sculpted boards
+            judged by eye.
+            Not recorded yet for ${page.count("unmeasured")} of the ${page.count("total")} designs,
+            where there's no board file, the board's key count matches none of its published
+            layouts, it has fewer than six keys, or its files disagree. One gamepad-shaped
+            board fits none of the three.
+        </p>
+
+        @template.learn.list(list = page.list("column"))
+        @template.learn.list(list = page.list("row"))
+        @template.learn.list(list = page.list("ortho"))
+    </article>
+`)

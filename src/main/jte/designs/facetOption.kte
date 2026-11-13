@@ -1,0 +1,18 @@
+@import net.keyboardbuilders.keyboardbuilders.web.RailOption
+@param option: RailOption
+
+<%-- One checkbox row. DISABLED, NOT HIDDEN when its count is zero (contract.md §3 rule
+     4): hiding leaves headed cards with nothing inside, which teach nothing and read as
+     a rendering failure. The `title` carries the reason so the row explains itself.
+
+     A SELECTED option is never disabled however small its count -- otherwise the control
+     representing the reader's own filter becomes unclickable and they cannot undo it. --%>
+<li class="${if (option.disabled) "off" else null}">
+    @if(option.disabled)
+        <span class="opt" title="No design matches this alongside your other filters">${option.label}</span>
+    @else
+        <a class="opt" href="${option.href}" aria-current="${if (option.selected) "true" else null}">
+            @if(option.selected)&#10003; @endif${option.label}</a>
+    @endif
+    <span class="n">${option.count}</span>
+</li>

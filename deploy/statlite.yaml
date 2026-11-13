@@ -1,0 +1,46 @@
+# StatLite, watching keyboardbuilders. Forgejo #28.
+#
+# STATLITE HAS NO AUTHENTICATION OF ITS OWN. Its docs say so plainly: "StatLite has no
+# built-in dashboard/API authentication. Keep `listen` on loopback unless access is
+# protected externally." The `auth` block in its config is for reaching a PROTECTED
+# ACTUATOR -- a property of a target, not of this UI.
+#
+# "Protected externally" is what Caddy does here: the site requires basic auth with a
+# 32-character random password, bcrypt cost 14, before a request reaches this at all. The
+# dashboard exposes health, metrics and host CPU/memory/disk -- readable, not writable --
+# so one strong credential is proportionate for a single-operator server.
+#
+# BOUND TO THE DOCKER BRIDGE, not loopback, for the same reason as the app and
+# GoatCounter: Caddy is a container and cannot reach host loopback. Needs
+# `ufw allow proto tcp from 172.16.0.0/12 to any port 9090`. It is still unreachable from
+# the internet directly -- only Caddy, which asks for the password, can get to it.
+server:
+  listen: "172.17.0.1:9090"
+
+storage:
+  sqlite_path: "/var/lib/statlite/statlite.sqlite"
+  # The issue asks for a deliberate retention period rather than keeping everything.
+  # 90 days is the default and is right here: long enough to see a seasonal shape,
+  # short enough that the file stays small on a 38 GB disk.
+  retention_days: 90
+
+polling:
+  interval: "30s"
+  timeout: "5s"
+
+targets:
+  # The app's management server -- a separate port from the site, bound to 127.0.0.1,
+  # which is why no auth block is needed: nothing off this host can reach it.
+  - name: "keyboardbuilders"
+    actuator_base_url: "http://127.0.0.1:9091/actuator"
+
+  # StatLite watching itself, which is how host CPU, memory and disk are collected.
+  # Host metrics are off for Spring targets by default and the docs recommend exactly
+  # this in a single-host setup -- which is what this box is.
+  - name: "statlite-self"
+    type: "statlite-metrics"
+    # MUST MATCH `server.listen` ABOVE. StatLite polls itself over the network like any
+    # other target, so moving the listen address off loopback breaks this too -- it went
+    # "connection refused" the moment the dashboard moved to the bridge, which is the
+    # kind of self-reference that is easy to change on one side only.
+    url: "http://172.17.0.1:9090/statlite/metrics"

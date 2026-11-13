@@ -1,0 +1,111 @@
+# seed/keycaps.toml -- the keycap profile catalogue Door B's KEYCAPS section checks a
+# design's own (stem, cap footprint) answer against (backlog #61). The reasoning and
+# every primary source live in docs/research/keycap-profiles.md -- this file only carries
+# the rows the build consumes, the same split seed/controllers.toml describes for its own
+# research document.
+#
+# TWO AXES, INDEPENDENTLY. `architecture.md` §1.5 settled keycap compatibility as a
+# function of (mounts, pitch) over two axes -- the STEM the cap presses onto and the
+# largest CAP FOOTPRINT the board's spacing allows -- and rule R2 makes it a method with
+# no field to lie in. A row here therefore states both and never a single "fits Choc"
+# flag: `stem` alone would publish choc-spaced sets for the 23 corpus designs that take
+# Choc switches at 19.05 mm spacing, and `caps` alone would publish MX sets for a
+# Choc-stemmed board. The research doc's §2.3 is the evidence that both quadrants are
+# real products.
+#
+# `slug` IS EXPLICIT DATA, not derived at runtime -- same discipline `seed/controllers.toml`
+# states for its own: a URL is a promise.
+#
+# FIVE FIELDS, and no `profile`/sculpt/material column. Whether a set is sculpted, PBT or
+# shine-through is a shopping preference, not a compatibility fact, and the section exists
+# to answer what FITS. Adding those columns would make this a product database we cannot
+# keep current.
+#
+# NO ROW IS MX-STEM AT 19.05 MM, and that is the finding rather than an omission. For an
+# MX cross stem at 19.05 mm the answer is the entire MX keycap market -- Cherry, OEM, SA, MT3, KAT,
+# DSA, XDA -- which the section states as one sentence and which answers 151 of the 324
+# built designs with no rows at all. A catalogue is only the useful answer where the market
+# is small enough to name, so `MX_DES_Standard` and `Philadelphia_Minimalist` (MX-stem
+# profiles by Chicago Steno's own author, one `gh api` call away) are deliberately absent:
+# listing five MX profiles would read as a restriction that does not exist.
+#
+# EXCLUDED, deliberately, rather than filed under the nearest value -- research doc §4:
+#   - Chosfox CFX -- the set several corpus boards are spaced for, and its vendor page
+#     states no millimetre anywhere. The one tier-1 measurement found says 16.5 x 16.5 mm,
+#     a THIRD spacing class rather than the 18x17 one, so calling it `reduced` would guess
+#     the pitch it is cut for. It joins the catalogue when one source states that pitch.
+#   - LPF and Tai-Hao THT -- MX-stem, so covered by the sentence above. `architecture.md`
+#     §1.5 offers them for the (MxCross, reduced) quadrant, but keeb.io gives THT as
+#     18.1 x 18.1 mm, which cannot sit on an 18x17 board's 17 mm axis. That quadrant is
+#     filled by Tai-Hao's THCS-MX and MT165-MX instead, the last two rows below.
+#   - Alps profiles -- none sourced. 4 corpus designs take Alps, and `KeycapStem.Alps`
+#     exists so those pages state "not catalogued" rather than inheriting MX's answer;
+#     research doc §5 records why that deviates from the record's own MVP fold.
+
+[[entry]]
+name = "MBK Choc Low Profile"
+slug = "mbk"
+stem = "choc_v1"
+caps = "reduced"
+url = "https://splitkb.com/collections/keycaps/products/mbk-choc-low-profile-keycaps"
+
+# The one tier-1 row: a parametric OpenSCAD source (GPL-3.0) whose own filename,
+# `Choc_Chicago_Steno.scad`, carries the stem. ux.md §3.2's spec-row example names this
+# profile and MBK together, and they are indeed the same quadrant.
+[[entry]]
+name = "Chicago Stenographer"
+slug = "chicago-stenographer"
+stem = "choc_v1"
+caps = "reduced"
+url = "https://github.com/pseudoku/PseudoMakeMeKeyCapProfiles"
+
+# MCC and DDC are sourced only from keeb.io's own compatibility article -- tier 3, and the
+# tier is stated in the research doc rather than implied by this URL. They are kept because
+# that article is the vendor's own, it states the stem and the close spacing explicitly, and
+# a builder shopping for choc-spaced caps will meet all four names.
+[[entry]]
+name = "MCC"
+slug = "mcc"
+stem = "choc_v1"
+caps = "reduced"
+url = "https://blog.keeb.io/low-profile-keycap-options-what-works-with-what/"
+
+[[entry]]
+name = "DDC"
+slug = "ddc"
+stem = "choc_v1"
+caps = "reduced"
+url = "https://blog.keeb.io/low-profile-keycap-options-what-works-with-what/"
+
+# THE ROW THE OBVIOUS RULE MISSES: a Choc V1 two-prong stem on an 18.25 x 18.25 mm cap,
+# cut for 19.05 mm MX spacing. Without it, 5 Choc-only designs at MX spacing (ajisai74,
+# barracuda, dropin-v1, slimorta, sofle-choc) and 18 more that also take MX would be shown
+# choc-spaced sets that physically leave gaps.
+[[entry]]
+name = "Choc V1 PBT sublimated, MX spacing"
+slug = "choc-v1-mx-spacing"
+stem = "choc_v1"
+caps = "full"
+url = "https://pandakb.com/shop/parts/keycap/mx-spacing-compatible-keycaps-for-kailh-choc-v1/"
+
+# THE (mx_cross, reduced) QUADRANT, filled 2026-10-03: MX-stem caps for a Choc v2 board at
+# choc spacing. Tier 2 -- beekeeb's own listings state the stem ("+ (MX Style)") and the
+# size, and say "compatible with choc spacing" and "not compatible with Choc v1". beekeeb's
+# guide (showcase.beekeeb.com/choc-spaced-chocv2-keycaps) names these two as the caps that
+# make Choc v2 usable at choc spacing; MaxGaming's THCS-profile listings corroborate
+# 16.5 x 17.5 mm and sell the profile with a Choc V1 stem too, hence "-MX" in the name.
+# MT165 is 16.5 x 16.5 mm, smaller than 17.5 x 16.5, so it clears an 18 x 17 grid; it is
+# NOT the Chosfox CFX row §4 still excludes, because here the vendor states the spacing.
+[[entry]]
+name = "Tai-Hao THCS-MX"
+slug = "tai-hao-thcs-mx"
+stem = "mx_cross"
+caps = "reduced"
+url = "https://shop.beekeeb.com/products/thcs-blank-black-keycaps"
+
+[[entry]]
+name = "Tai-Hao MT165-MX"
+slug = "tai-hao-mt165-mx"
+stem = "mx_cross"
+caps = "reduced"
+url = "https://shop.beekeeb.com/products/mt165-black-blank-keycap"

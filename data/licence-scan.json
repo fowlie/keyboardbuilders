@@ -1,0 +1,5982 @@
+{
+ "0x544D/kuro65": {
+  "files": [
+   {
+    "first_line": "Apache License",
+    "licence": "Apache-2.0",
+    "path": "LICENSE.md",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "0x544D/kuro65",
+  "status": "ok",
+  "truncated": false
+ },
+ "3araht/chromatonemini": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "3araht/chromatonemini",
+  "status": "ok",
+  "truncated": false
+ },
+ "4pplet/eagle_viper_rep": {
+  "files": [
+   {
+    "first_line": "CERN Open Hardware Licence Version 2 - Strongly Reciprocal",
+    "licence": "CERN-OHL-S-2.0",
+    "path": "LICENCE.md",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "4pplet/eagle_viper_rep",
+  "status": "ok",
+  "truncated": false
+ },
+ "4pplet/steezy60": {
+  "files": [
+   {
+    "first_line": "CERN Open Hardware Licence Version 2 - Strongly Reciprocal",
+    "licence": "CERN-OHL-S-2.0",
+    "path": "LICENCE.md",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "4pplet/steezy60",
+  "status": "ok",
+  "truncated": false
+ },
+ "4pplet/unextended": {
+  "files": [
+   {
+    "first_line": "CERN Open Hardware Licence Version 2 - Strongly Reciprocal",
+    "licence": "CERN-OHL-S-2.0",
+    "path": "LICENCE.md",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "4pplet/unextended",
+  "status": "ok",
+  "truncated": false
+ },
+ "4pplet/waffling60": {
+  "files": [
+   {
+    "first_line": "CERN Open Hardware Licence Version 2 - Strongly Reciprocal",
+    "licence": "CERN-OHL-S-2.0",
+    "path": "LICENCE.md",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "4pplet/waffling60",
+  "status": "ok",
+  "truncated": false
+ },
+ "74th/sparrow62-buildguide": {
+  "files": [],
+  "repo": "74th/sparrow62-buildguide",
+  "status": "ok",
+  "truncated": false
+ },
+ "Aidan-OS/Mochi40": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "Aidan-OS/Mochi40",
+  "status": "ok",
+  "truncated": false
+ },
+ "Aidan-OS/Sango": {
+  "files": [
+   {
+    "first_line": "Apache License",
+    "licence": "Apache-2.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "Aidan-OS/Sango",
+  "status": "ok",
+  "truncated": false
+ },
+ "Aleblazer/Zodiark": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   },
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "ZodiarkSplit/Keebio-Parts.pretty/LICENSE",
+    "root": false,
+    "vendored": true
+   }
+  ],
+  "repo": "Aleblazer/Zodiark",
+  "status": "ok",
+  "truncated": false
+ },
+ "Bastardkb/Dilemma": {
+  "files": [
+   {
+    "first_line": "CERN Open Hardware Licence Version 2 - Strongly Reciprocal",
+    "licence": "CERN-OHL-S-2.0",
+    "path": "LICENCE.md",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "Bastardkb/Dilemma",
+  "status": "ok",
+  "truncated": false
+ },
+ "Biacco42/Ergo42": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "unclassified",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "Biacco42/Ergo42",
+  "status": "ok",
+  "truncated": false
+ },
+ "Dbroqua/DK60": {
+  "files": [
+   {
+    "first_line": "GNU GENERAL PUBLIC LICENSE",
+    "licence": "GPL-3.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "Dbroqua/DK60",
+  "status": "ok",
+  "truncated": false
+ },
+ "Envious-Data/Env-KB": {
+  "files": [
+   {
+    "first_line": "GNU GENERAL PUBLIC LICENSE",
+    "licence": "GPL-3.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   },
+   {
+    "first_line": "<a rel=\"license\" href=\"http://creativecommons.org/licenses/by-sa/4.0/\"><img alt=\"Creative ",
+    "licence": "CC-BY-SA-4.0",
+    "path": "_KiCadLibs/Footprint_library/keyswitches.pretty/LICENSE.md",
+    "root": false,
+    "vendored": true
+   }
+  ],
+  "repo": "Envious-Data/Env-KB",
+  "status": "ok",
+  "truncated": false
+ },
+ "Envious-Data/Env-KB60F": {
+  "files": [
+   {
+    "first_line": "GNU GENERAL PUBLIC LICENSE",
+    "licence": "GPL-3.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "Envious-Data/Env-KB60F",
+  "status": "ok",
+  "truncated": false
+ },
+ "Envious-Data/Env-KB65M": {
+  "files": [
+   {
+    "first_line": "GNU GENERAL PUBLIC LICENSE",
+    "licence": "GPL-3.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "Envious-Data/Env-KB65M",
+  "status": "ok",
+  "truncated": false
+ },
+ "Envious-Data/Env-MCRO": {
+  "files": [
+   {
+    "first_line": "GNU GENERAL PUBLIC LICENSE",
+    "licence": "GPL-3.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "Envious-Data/Env-MCRO",
+  "status": "ok",
+  "truncated": false
+ },
+ "ErkHal/prkl30": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "ErkHal/prkl30",
+  "status": "ok",
+  "truncated": false
+ },
+ "Frooastside/Frooastboard": {
+  "files": [
+   {
+    "first_line": "GNU GENERAL PUBLIC LICENSE",
+    "licence": "GPL-3.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "Frooastside/Frooastboard",
+  "status": "ok",
+  "truncated": false
+ },
+ "KamoNanban/Manta60": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "KamoNanban/Manta60",
+  "status": "ok",
+  "truncated": false
+ },
+ "Ladniy/jiran": {
+  "files": [
+   {
+    "first_line": "Attribution-NonCommercial-ShareAlike 4.0 International",
+    "licence": "CC-BY-NC-SA-4.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "Ladniy/jiran",
+  "status": "ok",
+  "truncated": false
+ },
+ "MangoIV/dracuLad": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "kicad/kbd/LICENSE",
+    "root": false,
+    "vendored": false
+   }
+  ],
+  "repo": "MangoIV/dracuLad",
+  "status": "ok",
+  "truncated": false
+ },
+ "Pekaso/fortitude60": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "Pekaso/fortitude60",
+  "status": "ok",
+  "truncated": false
+ },
+ "PyrooL/Alpha": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   },
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "PCB_kicad/MX_Alps_Hybrid.pretty/LICENSE",
+    "root": false,
+    "vendored": true
+   }
+  ],
+  "repo": "PyrooL/Alpha",
+  "status": "ok",
+  "truncated": false
+ },
+ "PyrooL/Meson": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   },
+   {
+    "first_line": "The MIT License (MIT)",
+    "licence": "unclassified",
+    "path": "PCB/ProMicroKiCad-master/LICENSE",
+    "root": false,
+    "vendored": false
+   }
+  ],
+  "repo": "PyrooL/Meson",
+  "status": "ok",
+  "truncated": false
+ },
+ "Salicylic-acid3/PCB_Data": {
+  "files": [
+   {
+    "first_line": "Attribution-ShareAlike 4.0 International",
+    "licence": "CC-BY-SA-4.0",
+    "path": "KeebMicro-C/License.txt",
+    "root": false,
+    "vendored": false
+   },
+   {
+    "first_line": "Copyright 2021 Salicylic_acid3",
+    "licence": "MIT",
+    "path": "Licence.txt",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "Salicylic-acid3/PCB_Data",
+  "status": "ok",
+  "truncated": false
+ },
+ "SethSenpai/Tanuki": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   },
+   {
+    "first_line": "\ufeffCERN Open Hardware Licence v1.2",
+    "licence": "CERN-OHL-1.2",
+    "path": "Pcb/Kicad files/libs and footprints/keebs.pretty-master/LICENSE.md",
+    "root": false,
+    "vendored": false
+   }
+  ],
+  "repo": "SethSenpai/Tanuki",
+  "status": "ok",
+  "truncated": false
+ },
+ "Spaceboards/SpaceboardsHardware": {
+  "files": [
+   {
+    "first_line": "CERN Open Hardware Licence Version 2 - Weakly Reciprocal",
+    "licence": "CERN-OHL-S-2.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "Spaceboards/SpaceboardsHardware",
+  "status": "ok",
+  "truncated": false
+ },
+ "That-Canadian/MiniDox_PCB": {
+  "files": [
+   {
+    "first_line": "DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE",
+    "licence": "unclassified",
+    "path": "LICENSE.txt",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "That-Canadian/MiniDox_PCB",
+  "status": "ok",
+  "truncated": false
+ },
+ "TuckTuckFloof/EUISO-pcb": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "TuckTuckFloof/EUISO-pcb",
+  "status": "ok",
+  "truncated": false
+ },
+ "TweetyDaBird/Fat-Chameleon": {
+  "files": [
+   {
+    "first_line": "Attribution-ShareAlike 4.0 International",
+    "licence": "CC-BY-SA-4.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "TweetyDaBird/Fat-Chameleon",
+  "status": "ok",
+  "truncated": false
+ },
+ "TweetyDaBird/Little-Big-Scroll": {
+  "files": [
+   {
+    "first_line": "Attribution-ShareAlike 4.0 International",
+    "licence": "CC-BY-SA-4.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "TweetyDaBird/Little-Big-Scroll",
+  "status": "ok",
+  "truncated": false
+ },
+ "abraini-nascent/battleship_gamepad": {
+  "files": [],
+  "repo": "abraini-nascent/battleship_gamepad",
+  "status": "ok",
+  "truncated": false
+ },
+ "adereth/dactyl-keyboard": {
+  "files": [
+   {
+    "first_line": "GNU AFFERO GENERAL PUBLIC LICENSE",
+    "licence": "AGPL-3.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   },
+   {
+    "first_line": "Attribution-ShareAlike 4.0 International",
+    "licence": "CC-BY-SA-4.0",
+    "path": "LICENSE-models",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "adereth/dactyl-keyboard",
+  "status": "ok",
+  "truncated": false
+ },
+ "adpenrose/kintsugi_keeb": {
+  "files": [
+   {
+    "first_line": "Kintsugi is licensed under the Creative Commons Attribution-NonCommercial 4.0 Internationa",
+    "licence": "CC-BY-NC-4.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "adpenrose/kintsugi_keeb",
+  "status": "ok",
+  "truncated": false
+ },
+ "aeonstrife/potato65": {
+  "files": [],
+  "repo": "aeonstrife/potato65",
+  "status": "ok",
+  "truncated": false
+ },
+ "ai03-2725/contra": {
+  "files": [],
+  "repo": "ai03-2725/contra",
+  "status": "ok",
+  "truncated": false
+ },
+ "ai03-2725/duet-switch-tester": {
+  "files": [
+   {
+    "first_line": "GNU AFFERO GENERAL PUBLIC LICENSE",
+    "licence": "AGPL-3.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "ai03-2725/duet-switch-tester",
+  "status": "ok",
+  "truncated": false
+ },
+ "ai03-2725/jp60": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "ai03-2725/jp60",
+  "status": "ok",
+  "truncated": false
+ },
+ "ai03-2725/orbit": {
+  "files": [
+   {
+    "first_line": "GNU GENERAL PUBLIC LICENSE",
+    "licence": "GPL-3.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "ai03-2725/orbit",
+  "status": "ok",
+  "truncated": false
+ },
+ "ai03-2725/soyuz": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "ai03-2725/soyuz",
+  "status": "ok",
+  "truncated": false
+ },
+ "ai03-2725/voyager60": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "ai03-2725/voyager60",
+  "status": "ok",
+  "truncated": false
+ },
+ "akyp/desire65-pcb": {
+  "files": [
+   {
+    "first_line": "GNU GENERAL PUBLIC LICENSE",
+    "licence": "GPL-3.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "akyp/desire65-pcb",
+  "status": "ok",
+  "truncated": false
+ },
+ "anavitechnology/anavi-arrows": {
+  "files": [],
+  "repo": "anavitechnology/anavi-arrows",
+  "status": "ok",
+  "truncated": false
+ },
+ "anavitechnology/anavi-macro-pad-10": {
+  "files": [],
+  "repo": "anavitechnology/anavi-macro-pad-10",
+  "status": "ok",
+  "truncated": false
+ },
+ "anavitechnology/anavi-macro-pad-12": {
+  "files": [],
+  "repo": "anavitechnology/anavi-macro-pad-12",
+  "status": "ok",
+  "truncated": false
+ },
+ "ashijanken/slimorta": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "ashijanken/slimorta",
+  "status": "ok",
+  "truncated": false
+ },
+ "autumnisacutie/karina": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "KiCad-PCB/Keebio-Parts.pretty/LICENSE",
+    "root": false,
+    "vendored": true
+   },
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "KiCad-PCB/LICENSE",
+    "root": false,
+    "vendored": false
+   }
+  ],
+  "repo": "autumnisacutie/karina",
+  "status": "ok",
+  "truncated": false
+ },
+ "avdyushin/franky36": {
+  "files": [
+   {
+    "first_line": "GNU GENERAL PUBLIC LICENSE",
+    "licence": "GPL-3.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "avdyushin/franky36",
+  "status": "ok",
+  "truncated": false
+ },
+ "azhizhinov/elcantorhs": {
+  "files": [
+   {
+    "first_line": "GNU GENERAL PUBLIC LICENSE",
+    "licence": "GPL-3.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "azhizhinov/elcantorhs",
+  "status": "ok",
+  "truncated": false
+ },
+ "azhizhinov/piantoruv44": {
+  "files": [
+   {
+    "first_line": "GNU GENERAL PUBLIC LICENSE",
+    "licence": "GPL-3.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "azhizhinov/piantoruv44",
+  "status": "ok",
+  "truncated": false
+ },
+ "b-karl/KBIC65": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   },
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "kicad/pcb/Keebio-Parts.pretty/LICENSE",
+    "root": false,
+    "vendored": true
+   },
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "kicad/pcb/MX_Alps_Hybrid/LICENSE",
+    "root": false,
+    "vendored": false
+   },
+   {
+    "first_line": "The MIT License (MIT)",
+    "licence": "unclassified",
+    "path": "kicad/pcb/ProMicroKiCad/LICENSE",
+    "root": false,
+    "vendored": false
+   }
+  ],
+  "repo": "b-karl/KBIC65",
+  "status": "ok",
+  "truncated": false
+ },
+ "bastardkb/charybdis": {
+  "files": [],
+  "repo": "bastardkb/charybdis",
+  "status": "ok",
+  "truncated": false
+ },
+ "bastardkb/scylla": {
+  "files": [],
+  "repo": "bastardkb/scylla",
+  "status": "ok",
+  "truncated": false
+ },
+ "bastardkb/skeletyl": {
+  "files": [],
+  "repo": "bastardkb/skeletyl",
+  "status": "ok",
+  "truncated": false
+ },
+ "bastardkb/tbk-mini": {
+  "files": [],
+  "repo": "bastardkb/tbk-mini",
+  "status": "ok",
+  "truncated": false
+ },
+ "bbrfkr/keyboards": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "bbrfkr/keyboards",
+  "status": "ok",
+  "truncated": false
+ },
+ "beanaccle/kb58_pico": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "beanaccle/kb58_pico",
+  "status": "ok",
+  "truncated": false
+ },
+ "beekeeb/piantor": {
+  "files": [
+   {
+    "first_line": "GNU GENERAL PUBLIC LICENSE",
+    "licence": "GPL-3.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "beekeeb/piantor",
+  "status": "ok",
+  "truncated": false
+ },
+ "bemeier/bmek": {
+  "files": [],
+  "repo": "bemeier/bmek",
+  "status": "ok",
+  "truncated": false
+ },
+ "bigwheel/earth_rover": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "bigwheel/earth_rover",
+  "status": "ok",
+  "truncated": false
+ },
+ "bit-trade-one/ADKB96-hardware": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "bit-trade-one/ADKB96-hardware",
+  "status": "ok",
+  "truncated": false
+ },
+ "bleroy/3d-junkyard": {
+  "files": [
+   {
+    "first_line": "Copyright (c) 2021 Bertrand Le Roy",
+    "licence": "CERN-OHL-S-2.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "bleroy/3d-junkyard",
+  "status": "ok",
+  "truncated": false
+ },
+ "blewis308/bop-keyboard": {
+  "files": [],
+  "repo": "blewis308/bop-keyboard",
+  "status": "ok",
+  "truncated": false
+ },
+ "blu006/vimclutch_hw": {
+  "files": [
+   {
+    "first_line": "GNU GENERAL PUBLIC LICENSE",
+    "licence": "GPL-3.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "blu006/vimclutch_hw",
+  "status": "ok",
+  "truncated": false
+ },
+ "bluepylons/boston": {
+  "files": [],
+  "repo": "bluepylons/boston",
+  "status": "ok",
+  "truncated": false
+ },
+ "bonnee/aim-65_keyboard": {
+  "files": [],
+  "repo": "bonnee/aim-65_keyboard",
+  "status": "ok",
+  "truncated": false
+ },
+ "bpendragon/selene-keyboard": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "bpendragon/selene-keyboard",
+  "status": "ok",
+  "truncated": false
+ },
+ "bratzworth/6key": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "bratzworth/6key",
+  "status": "ok",
+  "truncated": false
+ },
+ "brickbots/aball": {
+  "files": [
+   {
+    "first_line": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International Public License",
+    "licence": "CC-BY-NC-SA-4.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "brickbots/aball",
+  "status": "ok",
+  "truncated": false
+ },
+ "brickbots/chocv": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "brickbots/chocv",
+  "status": "ok",
+  "truncated": false
+ },
+ "bschwind/key-ripper": {
+  "files": [
+   {
+    "first_line": "Apache License",
+    "licence": "Apache-2.0",
+    "path": "LICENSE-APACHE",
+    "root": true,
+    "vendored": false
+   },
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE-MIT",
+    "root": true,
+    "vendored": false
+   },
+   {
+    "first_line": "Zlib License",
+    "licence": "Zlib",
+    "path": "LICENSE-ZLIB",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "bschwind/key-ripper",
+  "status": "ok",
+  "truncated": false
+ },
+ "canbaytok/cans12erv2": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "canbaytok/cans12erv2",
+  "status": "ok",
+  "truncated": false
+ },
+ "catmunch/macrocat": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   },
+   {
+    "first_line": "This is free and unencumbered software released into the public domain.",
+    "licence": "Unlicense",
+    "path": "pcb/joric-nrfmicro/LICENSE",
+    "root": false,
+    "vendored": false
+   },
+   {
+    "first_line": "CC-BY-SA 4.0 License",
+    "licence": "CC-BY-SA-4.0",
+    "path": "pcb/perigoso-keyswitch-kicad-library/LICENSE-CC-BY-SA.txt",
+    "root": false,
+    "vendored": false
+   },
+   {
+    "first_line": "The MIT License (MIT)",
+    "licence": "MIT",
+    "path": "pcb/perigoso-keyswitch-kicad-library/LICENSE-MIT.txt",
+    "root": false,
+    "vendored": false
+   }
+  ],
+  "repo": "catmunch/macrocat",
+  "status": "ok",
+  "truncated": false
+ },
+ "cfbender/keyboards": {
+  "files": [
+   {
+    "first_line": "Mozilla Public License Version 2.0",
+    "licence": "AGPL-3.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "cfbender/keyboards",
+  "status": "ok",
+  "truncated": false
+ },
+ "cgarcia2097/8-pack": {
+  "files": [
+   {
+    "first_line": "Copyright 2019 Charles Garcia",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "cgarcia2097/8-pack",
+  "status": "ok",
+  "truncated": false
+ },
+ "chillkb/ghoultkl": {
+  "files": [
+   {
+    "first_line": "CERN Open Hardware Licence Version 2 - Permissive",
+    "licence": "CERN-OHL-S-2.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "chillkb/ghoultkl",
+  "status": "ok",
+  "truncated": false
+ },
+ "chrischrislolo/banime40": {
+  "files": [
+   {
+    "first_line": "Attribution-ShareAlike 4.0 International",
+    "licence": "CC-BY-SA-4.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "chrischrislolo/banime40",
+  "status": "ok",
+  "truncated": false
+ },
+ "chrishoage/spleeb": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "chrishoage/spleeb",
+  "status": "ok",
+  "truncated": false
+ },
+ "climent/atreyu": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "climent/atreyu",
+  "status": "ok",
+  "truncated": false
+ },
+ "cmdremily/opendeck": {
+  "files": [
+   {
+    "first_line": "GNU GENERAL PUBLIC LICENSE",
+    "licence": "GPL-3.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "cmdremily/opendeck",
+  "status": "ok",
+  "truncated": false
+ },
+ "coseyfannitutti/discipad": {
+  "files": [
+   {
+    "first_line": "GNU GENERAL PUBLIC LICENSE",
+    "licence": "GPL-3.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "coseyfannitutti/discipad",
+  "status": "ok",
+  "truncated": false
+ },
+ "coseyfannitutti/discipline": {
+  "files": [
+   {
+    "first_line": "Discipline V2 is licensed under the Creative Commons Attribution-NonCommercial 4.0 Interna",
+    "licence": "CC-BY-NC-4.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "coseyfannitutti/discipline",
+  "status": "ok",
+  "truncated": false
+ },
+ "coseyfannitutti/mysterium": {
+  "files": [
+   {
+    "first_line": "GNU GENERAL PUBLIC LICENSE",
+    "licence": "GPL-3.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "coseyfannitutti/mysterium",
+  "status": "ok",
+  "truncated": false
+ },
+ "coseyfannitutti/romeo": {
+  "files": [
+   {
+    "first_line": "GNU GENERAL PUBLIC LICENSE",
+    "licence": "GPL-3.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "coseyfannitutti/romeo",
+  "status": "ok",
+  "truncated": false
+ },
+ "cozykeys/bloomer": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "cozykeys/bloomer",
+  "status": "ok",
+  "truncated": false
+ },
+ "cozykeys/speedo": {
+  "files": [
+   {
+    "first_line": "GNU GENERAL PUBLIC LICENSE",
+    "licence": "GPL-3.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "cozykeys/speedo",
+  "status": "ok",
+  "truncated": false
+ },
+ "crehmann/buzzard": {
+  "files": [
+   {
+    "first_line": "CERN Open Hardware Licence Version 2 - Strongly Reciprocal",
+    "licence": "CERN-OHL-S-2.0",
+    "path": "LICENCE.md",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "crehmann/buzzard",
+  "status": "ok",
+  "truncated": false
+ },
+ "cybergear/mk-macro-01": {
+  "files": [
+   {
+    "first_line": "Creative Commons Legal Code",
+    "licence": "CC0-1.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   },
+   {
+    "first_line": "GNU GENERAL PUBLIC LICENSE",
+    "licence": "GPL-2.0",
+    "path": "firmware/LICENSE",
+    "root": false,
+    "vendored": false
+   }
+  ],
+  "repo": "cybergear/mk-macro-01",
+  "status": "ok",
+  "truncated": false
+ },
+ "cyril279/keyboards": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "cyril279/keyboards",
+  "status": "ok",
+  "truncated": false
+ },
+ "daneski13/junco": {
+  "files": [
+   {
+    "first_line": "CERN Open Hardware Licence Version 2 - Permissive",
+    "licence": "CERN-OHL-S-2.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "daneski13/junco",
+  "status": "ok",
+  "truncated": false
+ },
+ "dannixon/aya": {
+  "files": [
+   {
+    "first_line": "Copyright 2021-present Dan Nixon",
+    "licence": "MIT",
+    "path": "license.txt",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "dannixon/aya",
+  "status": "ok",
+  "truncated": false
+ },
+ "davidphilipbarr/36keys": {
+  "files": [],
+  "repo": "davidphilipbarr/36keys",
+  "status": "ok",
+  "truncated": false
+ },
+ "davidphilipbarr/macropads": {
+  "files": [],
+  "repo": "davidphilipbarr/macropads",
+  "status": "ok",
+  "truncated": false
+ },
+ "davidphilipbarr/sweep": {
+  "files": [
+   {
+    "first_line": "# Hardware",
+    "licence": "Apache-2.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "davidphilipbarr/sweep",
+  "status": "ok",
+  "truncated": false
+ },
+ "dayatz/mechanical-keyboards": {
+  "files": [],
+  "repo": "dayatz/mechanical-keyboards",
+  "status": "ok",
+  "truncated": false
+ },
+ "dcpedit/masonry": {
+  "files": [
+   {
+    "first_line": "Attribution 4.0 International",
+    "licence": "CC-BY-4.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "dcpedit/masonry",
+  "status": "ok",
+  "truncated": false
+ },
+ "dcpedit/redherring": {
+  "files": [
+   {
+    "first_line": "Attribution 4.0 International",
+    "licence": "CC-BY-4.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "dcpedit/redherring",
+  "status": "ok",
+  "truncated": false
+ },
+ "diepala/cantor": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "Cantor_Classic/libraries/Keebio-Parts.pretty/LICENSE",
+    "root": false,
+    "vendored": true
+   },
+   {
+    "first_line": "<a rel=\"license\" href=\"http://creativecommons.org/licenses/by-sa/4.0/\"><img alt=\"Creative ",
+    "licence": "CC-BY-SA-4.0",
+    "path": "Cantor_Classic/libraries/keyswitches.pretty/LICENSE.md",
+    "root": false,
+    "vendored": true
+   },
+   {
+    "first_line": "GNU GENERAL PUBLIC LICENSE",
+    "licence": "GPL-3.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "diepala/cantor",
+  "status": "ok",
+  "truncated": false
+ },
+ "dinofizz/fnrow-pcb": {
+  "files": [],
+  "repo": "dinofizz/fnrow-pcb",
+  "status": "ok",
+  "truncated": false
+ },
+ "dkruyt/mk": {
+  "files": [
+   {
+    "first_line": "GNU GENERAL PUBLIC LICENSE",
+    "licence": "GPL-2.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "dkruyt/mk",
+  "status": "ok",
+  "truncated": false
+ },
+ "dlford/quokka": {
+  "files": [],
+  "repo": "dlford/quokka",
+  "status": "ok",
+  "truncated": false
+ },
+ "dlip/chouchou": {
+  "files": [
+   {
+    "first_line": "GNU General Public License",
+    "licence": "GPL-2.0",
+    "path": "LICENSE.md",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "dlip/chouchou",
+  "status": "ok",
+  "truncated": false
+ },
+ "dmnosachev/kinesis80": {
+  "files": [
+   {
+    "first_line": "Attribution-ShareAlike 4.0 International",
+    "licence": "CC-BY-SA-4.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "dmnosachev/kinesis80",
+  "status": "ok",
+  "truncated": false
+ },
+ "dnlnm/cloak-xt-stm32": {
+  "files": [
+   {
+    "first_line": "CERN Open Hardware Licence Version 2 - Permissive",
+    "licence": "CERN-OHL-S-2.0",
+    "path": "LICENCE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "dnlnm/cloak-xt-stm32",
+  "status": "ok",
+  "truncated": false
+ },
+ "doesntfazer/Budgy": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "Libraries/Keebio-Parts.pretty/LICENSE",
+    "root": false,
+    "vendored": true
+   },
+   {
+    "first_line": "### TPCWare KiCad Library License",
+    "licence": "CC-BY-SA-4.0",
+    "path": "Libraries/KiCad-RP-Pico-main/LICENSE",
+    "root": false,
+    "vendored": true
+   },
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "Libraries/kbd/LICENSE",
+    "root": false,
+    "vendored": true
+   },
+   {
+    "first_line": "<a rel=\"license\" href=\"http://creativecommons.org/licenses/by-sa/4.0/\"><img alt=\"Creative ",
+    "licence": "CC-BY-SA-4.0",
+    "path": "Libraries/keyswitches.pretty/LICENSE.md",
+    "root": false,
+    "vendored": true
+   }
+  ],
+  "repo": "doesntfazer/Budgy",
+  "status": "ok",
+  "truncated": false
+ },
+ "doesntfazer/CrowBoard": {
+  "files": [
+   {
+    "first_line": "GNU GENERAL PUBLIC LICENSE",
+    "licence": "GPL-2.0",
+    "path": "Crowboard-Kicad-rev1 - MX - Kailh-hotswap/LICENSE",
+    "root": false,
+    "vendored": false
+   },
+   {
+    "first_line": "GNU GENERAL PUBLIC LICENSE",
+    "licence": "GPL-2.0",
+    "path": "Crowboard-Kicad-rev1 - MX/LICENSE",
+    "root": false,
+    "vendored": false
+   },
+   {
+    "first_line": "GNU GENERAL PUBLIC LICENSE",
+    "licence": "GPL-2.0",
+    "path": "Crowboard-Kicad-rev1 - choc/LICENSE",
+    "root": false,
+    "vendored": false
+   },
+   {
+    "first_line": "GNU GENERAL PUBLIC LICENSE",
+    "licence": "GPL-2.0",
+    "path": "Crowboard-Kicad-rev2 - With Pimoroni/LICENSE",
+    "root": false,
+    "vendored": false
+   },
+   {
+    "first_line": "GNU GENERAL PUBLIC LICENSE",
+    "licence": "GPL-2.0",
+    "path": "Crowboard-Kicad-rev2 MX/LICENSE",
+    "root": false,
+    "vendored": false
+   },
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "components and .pretty/Keebio-Parts.pretty-master/LICENSE",
+    "root": false,
+    "vendored": true
+   },
+   {
+    "first_line": "### TPCWare KiCad Library License",
+    "licence": "CC-BY-SA-4.0",
+    "path": "components and .pretty/KiCad-RP-Pico-main/LICENSE",
+    "root": false,
+    "vendored": true
+   },
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "components and .pretty/MX_Alps_Hybrid-master/LICENSE",
+    "root": false,
+    "vendored": true
+   },
+   {
+    "first_line": "<a rel=\"license\" href=\"http://creativecommons.org/licenses/by-sa/4.0/\"><img alt=\"Creative ",
+    "licence": "CC-BY-SA-4.0",
+    "path": "components and .pretty/keyswitches.pretty/LICENSE.md",
+    "root": false,
+    "vendored": true
+   }
+  ],
+  "repo": "doesntfazer/CrowBoard",
+  "status": "ok",
+  "truncated": false
+ },
+ "dpapavas/lagrange-keyboard": {
+  "files": [
+   {
+    "first_line": "GNU AFFERO GENERAL PUBLIC LICENSE",
+    "licence": "AGPL-3.0",
+    "path": "LICENSE.AGPL",
+    "root": true,
+    "vendored": false
+   },
+   {
+    "first_line": "Attribution-ShareAlike 4.0 International",
+    "licence": "CC-BY-SA-4.0",
+    "path": "LICENSE.CC",
+    "root": true,
+    "vendored": false
+   },
+   {
+    "first_line": "GNU GENERAL PUBLIC LICENSE",
+    "licence": "GPL-3.0",
+    "path": "LICENSE.GPL",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "dpapavas/lagrange-keyboard",
+  "status": "ok",
+  "truncated": false
+ },
+ "drabaioli/sdrakb00": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "drabaioli/sdrakb00",
+  "status": "ok",
+  "truncated": false
+ },
+ "dsanchezseco/punk75": {
+  "files": [
+   {
+    "first_line": "GNU GENERAL PUBLIC LICENSE",
+    "licence": "GPL-3.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "dsanchezseco/punk75",
+  "status": "ok",
+  "truncated": false
+ },
+ "duckyb/eternal-keypad": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "duckyb/eternal-keypad",
+  "status": "ok",
+  "truncated": false
+ },
+ "durken1/pierce": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "durken1/pierce",
+  "status": "ok",
+  "truncated": false
+ },
+ "dvorak55/chavdai40": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "dvorak55/chavdai40",
+  "status": "ok",
+  "truncated": false
+ },
+ "dwctor/kaly": {
+  "files": [
+   {
+    "first_line": "Apache License",
+    "licence": "Apache-2.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "dwctor/kaly",
+  "status": "ok",
+  "truncated": false
+ },
+ "ealdin/keyboards": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "ealdin/keyboards",
+  "status": "ok",
+  "truncated": false
+ },
+ "ebastler/isometria-75": {
+  "files": [
+   {
+    "first_line": "BSD 2-Clause License",
+    "licence": "BSD-2-Clause",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "ebastler/isometria-75",
+  "status": "ok",
+  "truncated": false
+ },
+ "eggsworks/egg58": {
+  "files": [
+   {
+    "first_line": "GNU GENERAL PUBLIC LICENSE",
+    "licence": "GPL-3.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "eggsworks/egg58",
+  "status": "ok",
+  "truncated": false
+ },
+ "eliassjogreen/4by3": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "eliassjogreen/4by3",
+  "status": "ok",
+  "truncated": false
+ },
+ "emajesty/eiri": {
+  "files": [],
+  "repo": "emajesty/eiri",
+  "status": "ok",
+  "truncated": false
+ },
+ "enochchau/dropout-numpad": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   },
+   {
+    "first_line": "GNU GENERAL PUBLIC LICENSE",
+    "licence": "GPL-2.0",
+    "path": "qmk_firmware/LICENSE",
+    "root": false,
+    "vendored": true
+   }
+  ],
+  "repo": "enochchau/dropout-numpad",
+  "status": "ok",
+  "truncated": false
+ },
+ "eric-wood/macro-pad": {
+  "files": [],
+  "repo": "eric-wood/macro-pad",
+  "status": "ok",
+  "truncated": false
+ },
+ "ericrlau/numdiscipline": {
+  "files": [
+   {
+    "first_line": "GNU GENERAL PUBLIC LICENSE",
+    "licence": "GPL-3.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "ericrlau/numdiscipline",
+  "status": "ok",
+  "truncated": false
+ },
+ "erikpeyronson/erkbd": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "erikpeyronson/erkbd",
+  "status": "ok",
+  "truncated": false
+ },
+ "erkhal/prkl30": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "erkhal/prkl30",
+  "status": "ok",
+  "truncated": false
+ },
+ "etiennecollin/wave": {
+  "files": [
+   {
+    "first_line": "GNU GENERAL PUBLIC LICENSE",
+    "licence": "GPL-3.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "etiennecollin/wave",
+  "status": "ok",
+  "truncated": false
+ },
+ "evyd13/atom47": {
+  "files": [
+   {
+    "first_line": "Apache License",
+    "licence": "Apache-2.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "evyd13/atom47",
+  "status": "ok",
+  "truncated": false
+ },
+ "evyd13/fin-pad": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "evyd13/fin-pad",
+  "status": "ok",
+  "truncated": false
+ },
+ "evyd13/gh80-series": {
+  "files": [
+   {
+    "first_line": "Attribution-ShareAlike 4.0 International",
+    "licence": "CC-BY-SA-4.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "evyd13/gh80-series",
+  "status": "ok",
+  "truncated": false
+ },
+ "evyd13/gud70-pcb": {
+  "files": [
+   {
+    "first_line": "Apache License",
+    "licence": "Apache-2.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "evyd13/gud70-pcb",
+  "status": "ok",
+  "truncated": false
+ },
+ "evyd13/mx-5160": {
+  "files": [
+   {
+    "first_line": "Apache License",
+    "licence": "Apache-2.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "evyd13/mx-5160",
+  "status": "ok",
+  "truncated": false
+ },
+ "evyd13/nt-series": {
+  "files": [
+   {
+    "first_line": "Attribution-ShareAlike 4.0 International",
+    "licence": "CC-BY-SA-4.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "evyd13/nt-series",
+  "status": "ok",
+  "truncated": false
+ },
+ "evyd13/plain60-c": {
+  "files": [
+   {
+    "first_line": "Attribution-ShareAlike 4.0 International",
+    "licence": "CC-BY-SA-4.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "evyd13/plain60-c",
+  "status": "ok",
+  "truncated": false
+ },
+ "evyd13/solheim68": {
+  "files": [
+   {
+    "first_line": "GNU GENERAL PUBLIC LICENSE",
+    "licence": "GPL-3.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "evyd13/solheim68",
+  "status": "ok",
+  "truncated": false
+ },
+ "farfalleflickan/nack": {
+  "files": [
+   {
+    "first_line": "GNU AFFERO GENERAL PUBLIC LICENSE",
+    "licence": "AGPL-3.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "farfalleflickan/nack",
+  "status": "ok",
+  "truncated": false
+ },
+ "fatenozomi/arisu-pcb": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "fatenozomi/arisu-pcb",
+  "status": "ok",
+  "truncated": false
+ },
+ "fearherbs1/blue-team-pad": {
+  "files": [
+   {
+    "first_line": "GNU GENERAL PUBLIC LICENSE",
+    "licence": "GPL-3.0",
+    "path": "LICENSE.md",
+    "root": true,
+    "vendored": false
+   },
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "PCB/Libraries/kbd/LICENSE",
+    "root": false,
+    "vendored": true
+   },
+   {
+    "first_line": "CERN Open Hardware Licence Version 2 - Permissive",
+    "licence": "CERN-OHL-S-2.0",
+    "path": "PCB/Libraries/marbastlib/LICENSE",
+    "root": false,
+    "vendored": true
+   }
+  ],
+  "repo": "fearherbs1/blue-team-pad",
+  "status": "ok",
+  "truncated": false
+ },
+ "fgoodwin/dactyl-manuform-5x6_6": {
+  "files": [],
+  "repo": "fgoodwin/dactyl-manuform-5x6_6",
+  "status": "ok",
+  "truncated": false
+ },
+ "fharding1/pdxkbc-badge": {
+  "files": [
+   {
+    "first_line": "This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International ",
+    "licence": "CC-BY-SA-4.0",
+    "path": "LICENSE.md",
+    "root": true,
+    "vendored": false
+   },
+   {
+    "first_line": "GNU GENERAL PUBLIC LICENSE",
+    "licence": "GPL-2.0",
+    "path": "components/SparkFun-KiCad-Libraries-master/Tools/eagle-to-kicad_ulp/LICENSE.txt",
+    "root": false,
+    "vendored": false
+   },
+   {
+    "first_line": "\ufeffCERN Open Hardware Licence v1.2",
+    "licence": "CERN-OHL-1.2",
+    "path": "components/keebs.pretty-master/LICENSE.md",
+    "root": false,
+    "vendored": false
+   }
+  ],
+  "repo": "fharding1/pdxkbc-badge",
+  "status": "ok",
+  "truncated": false
+ },
+ "floookay/adelheid": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "floookay/adelheid",
+  "status": "ok",
+  "truncated": false
+ },
+ "floookay/pluckey": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "floookay/pluckey",
+  "status": "ok",
+  "truncated": false
+ },
+ "floookay/zwerg": {
+  "files": [
+   {
+    "first_line": "CERN Open Hardware Licence Version 2 - Weakly Reciprocal",
+    "licence": "CERN-OHL-S-2.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "floookay/zwerg",
+  "status": "ok",
+  "truncated": false
+ },
+ "foostan/crkbd": {
+  "files": [
+   {
+    "first_line": "Attribution 4.0 International",
+    "licence": "CC-BY-4.0",
+    "path": "LICENSE_CC",
+    "root": true,
+    "vendored": false
+   },
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE_MIT",
+    "root": true,
+    "vendored": false
+   },
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "pcbs/common/kbd/LICENSE",
+    "root": false,
+    "vendored": false
+   }
+  ],
+  "repo": "foostan/crkbd",
+  "status": "ok",
+  "truncated": false
+ },
+ "freya-irl/splaytoraid40": {
+  "files": [],
+  "repo": "freya-irl/splaytoraid40",
+  "status": "ok",
+  "truncated": false
+ },
+ "frobiac/adnw": {
+  "files": [
+   {
+    "first_line": "GNU GENERAL PUBLIC LICENSE",
+    "licence": "GPL-3.0",
+    "path": "LICENSE.txt",
+    "root": true,
+    "vendored": false
+   },
+   {
+    "first_line": "PS/2 sources for AVR copied from tmk_keyboard firmware: <http://github.com/tmk/tmk_keyboar",
+    "licence": "unclassified",
+    "path": "src/external/tmk_ps2/LICENSE.md",
+    "root": false,
+    "vendored": true
+   }
+  ],
+  "repo": "frobiac/adnw",
+  "status": "ok",
+  "truncated": false
+ },
+ "gachiham/XR63GL": {
+  "files": [
+   {
+    "first_line": "Attribution-NonCommercial-ShareAlike 4.0 International",
+    "licence": "CC-BY-NC-SA-4.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "gachiham/XR63GL",
+  "status": "ok",
+  "truncated": false
+ },
+ "galile0-designs/glyphkbd": {
+  "files": [
+   {
+    "first_line": "Attribution-NonCommercial-ShareAlike 4.0 International",
+    "licence": "CC-BY-NC-SA-4.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "galile0-designs/glyphkbd",
+  "status": "ok",
+  "truncated": false
+ },
+ "geigeigeist/klor": {
+  "files": [
+   {
+    "first_line": "GNU GENERAL PUBLIC LICENSE",
+    "licence": "GPL-3.0",
+    "path": "LICENSE.md",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "geigeigeist/klor",
+  "status": "ok",
+  "truncated": false
+ },
+ "gkeyboard/gpad8-2r": {
+  "files": [],
+  "repo": "gkeyboard/gpad8-2r",
+  "status": "ok",
+  "truncated": false
+ },
+ "gkeyboard/greatpad": {
+  "files": [],
+  "repo": "gkeyboard/greatpad",
+  "status": "ok",
+  "truncated": false
+ },
+ "glozares/millipad": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "glozares/millipad",
+  "status": "ok",
+  "truncated": false
+ },
+ "gregandcin/teaqueen": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "gregandcin/teaqueen",
+  "status": "ok",
+  "truncated": false
+ },
+ "gtips/reviung": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "gtips/reviung",
+  "status": "ok",
+  "truncated": false
+ },
+ "guidoism/andean-condor": {
+  "files": [
+   {
+    "first_line": "This is free and unencumbered software released into the public domain.",
+    "licence": "Unlicense",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "guidoism/andean-condor",
+  "status": "ok",
+  "truncated": false
+ },
+ "guidoism/madjax_macropad": {
+  "files": [],
+  "repo": "guidoism/madjax_macropad",
+  "status": "ok",
+  "truncated": false
+ },
+ "gumorr/gummykey": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "gumorr/gummykey",
+  "status": "ok",
+  "truncated": false
+ },
+ "gustawxyz/dactyl_manuform_pi_pico": {
+  "files": [],
+  "repo": "gustawxyz/dactyl_manuform_pi_pico",
+  "status": "ok",
+  "truncated": false
+ },
+ "gzowski/somei70": {
+  "files": [
+   {
+    "first_line": "GNU GENERAL PUBLIC LICENSE",
+    "licence": "GPL-3.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "gzowski/somei70",
+  "status": "ok",
+  "truncated": false
+ },
+ "haierwangwei2005/10ble-oled-hub": {
+  "files": [],
+  "repo": "haierwangwei2005/10ble-oled-hub",
+  "status": "ok",
+  "truncated": false
+ },
+ "hardware7253/koca58": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "hardware7253/koca58",
+  "status": "ok",
+  "truncated": false
+ },
+ "hazels-garage/bad-wings": {
+  "files": [
+   {
+    "first_line": "Attribution-ShareAlike 4.0 International",
+    "licence": "CC-BY-SA-4.0",
+    "path": "LICENSE.txt",
+    "root": true,
+    "vendored": false
+   },
+   {
+    "first_line": "Attribution-ShareAlike 4.0 International",
+    "licence": "CC-BY-SA-4.0",
+    "path": "v2/source/LICENSE.txt",
+    "root": false,
+    "vendored": false
+   }
+  ],
+  "repo": "hazels-garage/bad-wings",
+  "status": "ok",
+  "truncated": false
+ },
+ "hellsingcoder/limekeyboard": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "hellsingcoder/limekeyboard",
+  "status": "ok",
+  "truncated": false
+ },
+ "henrikosorensen/keyboard_pcbs": {
+  "files": [
+   {
+    "first_line": "GNU GENERAL PUBLIC LICENSE",
+    "licence": "GPL-2.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "henrikosorensen/keyboard_pcbs",
+  "status": "ok",
+  "truncated": false
+ },
+ "herpiko/unk": {
+  "files": [],
+  "repo": "herpiko/unk",
+  "status": "ok",
+  "truncated": false
+ },
+ "horrortroll/keebproj": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "horrortroll/keebproj",
+  "status": "ok",
+  "truncated": false
+ },
+ "hsgw/ergoinu": {
+  "files": [
+   {
+    "first_line": "Attribution-ShareAlike 4.0 International",
+    "licence": "CC-BY-SA-4.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "hsgw/ergoinu",
+  "status": "ok",
+  "truncated": false
+ },
+ "hsgw/plaid": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "hsgw/plaid",
+  "status": "ok",
+  "truncated": false
+ },
+ "hsgw/tartan": {
+  "files": [],
+  "repo": "hsgw/tartan",
+  "status": "ok",
+  "truncated": false
+ },
+ "huytbt/h50-keyboard": {
+  "files": [],
+  "repo": "huytbt/h50-keyboard",
+  "status": "ok",
+  "truncated": false
+ },
+ "hyphen-ated/large-lad-keyboard": {
+  "files": [
+   {
+    "first_line": "<a rel=\"license\" href=\"http://creativecommons.org/licenses/by-sa/4.0/\"><img alt=\"Creative ",
+    "licence": "CC-BY-SA-4.0",
+    "path": "LICENSE.md",
+    "root": true,
+    "vendored": false
+   },
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "libraries/MX_Alps_Hybrid-master/LICENSE",
+    "root": false,
+    "vendored": true
+   },
+   {
+    "first_line": "<a rel=\"license\" href=\"http://creativecommons.org/licenses/by-sa/4.0/\"><img alt=\"Creative ",
+    "licence": "CC-BY-SA-4.0",
+    "path": "libraries/keyswitches.pretty-master/LICENSE.md",
+    "root": false,
+    "vendored": true
+   }
+  ],
+  "repo": "hyphen-ated/large-lad-keyboard",
+  "status": "ok",
+  "truncated": false
+ },
+ "ianklug/grooveboard": {
+  "files": [
+   {
+    "first_line": "Attribution-ShareAlike 4.0 International",
+    "licence": "CC-BY-SA-4.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "ianklug/grooveboard",
+  "status": "ok",
+  "truncated": false
+ },
+ "ibnuda/alicia-cook": {
+  "files": [
+   {
+    "first_line": "GNU GENERAL PUBLIC LICENSE",
+    "licence": "GPL-3.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "ibnuda/alicia-cook",
+  "status": "ok",
+  "truncated": false
+ },
+ "ibnuda/gurindam": {
+  "files": [
+   {
+    "first_line": "CERN Open Hardware Licence Version 2 - Strongly Reciprocal",
+    "licence": "CERN-OHL-S-2.0",
+    "path": "LICENSE-CERN-OHL",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "ibnuda/gurindam",
+  "status": "ok",
+  "truncated": false
+ },
+ "ibnuda/squiggle": {
+  "files": [
+   {
+    "first_line": "GNU GENERAL PUBLIC LICENSE",
+    "licence": "GPL-3.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "ibnuda/squiggle",
+  "status": "ok",
+  "truncated": false
+ },
+ "idank/keyboards": {
+  "files": [
+   {
+    "first_line": "Attribution-ShareAlike 4.0 International",
+    "licence": "CC-BY-SA-4.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   },
+   {
+    "first_line": "CERN Open Hardware Licence Version 2 - Strongly Reciprocal",
+    "licence": "CERN-OHL-S-2.0",
+    "path": "TPS42/LICENCE.md",
+    "root": false,
+    "vendored": false
+   },
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "kbd/LICENSE",
+    "root": false,
+    "vendored": false
+   }
+  ],
+  "repo": "idank/keyboards",
+  "status": "ok",
+  "truncated": false
+ },
+ "idank/spankbd": {
+  "files": [
+   {
+    "first_line": "Attribution-ShareAlike 4.0 International",
+    "licence": "CC-BY-SA-4.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "idank/spankbd",
+  "status": "ok",
+  "truncated": false
+ },
+ "iktas/pill60": {
+  "files": [],
+  "repo": "iktas/pill60",
+  "status": "ok",
+  "truncated": false
+ },
+ "illness072/elephant42": {
+  "files": [
+   {
+    "first_line": "\"THE BEER-WARE LICENSE\" (Revision 42):",
+    "licence": "Beerware",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "illness072/elephant42",
+  "status": "ok",
+  "truncated": false
+ },
+ "imchipwood/dumbpad": {
+  "files": [
+   {
+    "first_line": "GNU GENERAL PUBLIC LICENSE",
+    "licence": "GPL-2.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "imchipwood/dumbpad",
+  "status": "ok",
+  "truncated": false
+ },
+ "itsnoteasy/misc": {
+  "files": [],
+  "repo": "itsnoteasy/misc",
+  "status": "ok",
+  "truncated": false
+ },
+ "ivndbt/late-9": {
+  "files": [
+   {
+    "first_line": "GNU GENERAL PUBLIC LICENSE",
+    "licence": "GPL-2.0",
+    "path": "LICENSE.md",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "ivndbt/late-9",
+  "status": "ok",
+  "truncated": false
+ },
+ "ivndbt/neopad": {
+  "files": [
+   {
+    "first_line": "GNU GENERAL PUBLIC LICENSE",
+    "licence": "GPL-2.0",
+    "path": "LICENSE.md",
+    "root": true,
+    "vendored": false
+   },
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "MX_Alps_Hybrid-master/LICENSE",
+    "root": false,
+    "vendored": false
+   }
+  ],
+  "repo": "ivndbt/neopad",
+  "status": "ok",
+  "truncated": false
+ },
+ "jamessa/angel": {
+  "files": [],
+  "repo": "jamessa/angel",
+  "status": "ok",
+  "truncated": false
+ },
+ "jannikb5825/shoc": {
+  "files": [],
+  "repo": "jannikb5825/shoc",
+  "status": "ok",
+  "truncated": false
+ },
+ "jellytitan/sofle-pico": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "jellytitan/sofle-pico",
+  "status": "ok",
+  "truncated": false
+ },
+ "jeremyscook/jc-pro-macro-2": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "jeremyscook/jc-pro-macro-2",
+  "status": "ok",
+  "truncated": false
+ },
+ "jimmerricks/swoop": {
+  "files": [
+   {
+    "first_line": "# Hardware",
+    "licence": "Apache-2.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "jimmerricks/swoop",
+  "status": "ok",
+  "truncated": false
+ },
+ "jmdaly/co60": {
+  "files": [
+   {
+    "first_line": "Attribution-ShareAlike 4.0 International",
+    "licence": "CC-BY-SA-4.0",
+    "path": "LICENSE.txt",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "jmdaly/co60",
+  "status": "ok",
+  "truncated": false
+ },
+ "joe-scotto/scottokeebs": {
+  "files": [
+   {
+    "first_line": "# License",
+    "licence": "CC-BY-NC-SA-4.0",
+    "path": "LICENSE.md",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "joe-scotto/scottokeebs",
+  "status": "ok",
+  "truncated": false
+ },
+ "joedinkle/eyeohdesigns": {
+  "files": [
+   {
+    "first_line": "GNU GENERAL PUBLIC LICENSE",
+    "licence": "GPL-3.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "joedinkle/eyeohdesigns",
+  "status": "ok",
+  "truncated": false
+ },
+ "joelproko/keyboard_layout_jopr": {
+  "files": [],
+  "repo": "joelproko/keyboard_layout_jopr",
+  "status": "ok",
+  "truncated": false
+ },
+ "jonbobcar/tenkey_plusplus": {
+  "files": [],
+  "repo": "jonbobcar/tenkey_plusplus",
+  "status": "ok",
+  "truncated": false
+ },
+ "joric/jorne": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "corne-cherry/LICENSE",
+    "root": false,
+    "vendored": false
+   },
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "corne-chocolate/LICENSE",
+    "root": false,
+    "vendored": false
+   },
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "corne-classic/LICENSE",
+    "root": false,
+    "vendored": false
+   },
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "corne-light/LICENSE",
+    "root": false,
+    "vendored": false
+   }
+  ],
+  "repo": "joric/jorne",
+  "status": "ok",
+  "truncated": false
+ },
+ "josefadamcik/soflekeyboard": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "josefadamcik/soflekeyboard",
+  "status": "ok",
+  "truncated": false
+ },
+ "josh-l-wang/bruce-the-keyboard-the-resources": {
+  "files": [
+   {
+    "first_line": "GNU GENERAL PUBLIC LICENSE",
+    "licence": "GPL-3.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "josh-l-wang/bruce-the-keyboard-the-resources",
+  "status": "ok",
+  "truncated": false
+ },
+ "joshajohnson/hub20": {
+  "files": [
+   {
+    "first_line": "CERN Open Hardware Licence Version 2 - Strongly Reciprocal",
+    "licence": "CERN-OHL-S-2.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "joshajohnson/hub20",
+  "status": "ok",
+  "truncated": false
+ },
+ "joshreve/dactyl-keyboard": {
+  "files": [
+   {
+    "first_line": "GNU AFFERO GENERAL PUBLIC LICENSE",
+    "licence": "AGPL-3.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   },
+   {
+    "first_line": "Creative Commons Legal Code",
+    "licence": "CC-BY-NC-SA-3.0",
+    "path": "LICENSE-models",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "joshreve/dactyl-keyboard",
+  "status": "ok",
+  "truncated": false
+ },
+ "joshwjb/mutepad": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "joshwjb/mutepad",
+  "status": "ok",
+  "truncated": false
+ },
+ "jpconstantineau/ergotravel": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "jpconstantineau/ergotravel",
+  "status": "ok",
+  "truncated": false
+ },
+ "jpe230/big_knob": {
+  "files": [
+   {
+    "first_line": "GNU GENERAL PUBLIC LICENSE",
+    "licence": "GPL-2.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "jpe230/big_knob",
+  "status": "ok",
+  "truncated": false
+ },
+ "jpskenn/jones": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   },
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "PCB/MX_Alps_Hybrid.pretty/LICENSE",
+    "root": false,
+    "vendored": true
+   },
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "PCB_Blocker/Jones_blocker_v.1.001/Keebio-Parts.pretty/LICENSE",
+    "root": false,
+    "vendored": true
+   },
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "PCB_Blocker/Jones_blocker_v.1.001/MX_Alps_Hybrid.pretty/LICENSE",
+    "root": false,
+    "vendored": true
+   }
+  ],
+  "repo": "jpskenn/jones",
+  "status": "ok",
+  "truncated": false
+ },
+ "jpskenn/unison": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   },
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "PCB/MX_Alps_Hybrid.pretty/LICENSE",
+    "root": false,
+    "vendored": true
+   }
+  ],
+  "repo": "jpskenn/unison",
+  "status": "ok",
+  "truncated": false
+ },
+ "jpuerto96/v4n4g0rth0n": {
+  "files": [],
+  "repo": "jpuerto96/v4n4g0rth0n",
+  "status": "ok",
+  "truncated": false
+ },
+ "jrodna/orthocode": {
+  "files": [
+   {
+    "first_line": "GNU GENERAL PUBLIC LICENSE",
+    "licence": "GPL-3.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   },
+   {
+    "first_line": "\ufeffCERN Open Hardware Licence v1.2",
+    "licence": "CERN-OHL-1.2",
+    "path": "libraries/keebs.pretty/LICENSE.md",
+    "root": false,
+    "vendored": true
+   }
+  ],
+  "repo": "jrodna/orthocode",
+  "status": "ok",
+  "truncated": false
+ },
+ "jurassic73/split89": {
+  "files": [],
+  "repo": "jurassic73/split89",
+  "status": "ok",
+  "truncated": false
+ },
+ "jyap808/pando": {
+  "files": [
+   {
+    "first_line": "Copyright (c) 2026 Julian Yap",
+    "licence": "CERN-OHL-S-2.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "jyap808/pando",
+  "status": "ok",
+  "truncated": false
+ },
+ "jyap808/pando58": {
+  "files": [
+   {
+    "first_line": "Attribution-ShareAlike 4.0 International",
+    "licence": "CC-BY-SA-4.0",
+    "path": "LICENSE.txt",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "jyap808/pando58",
+  "status": "ok",
+  "truncated": false
+ },
+ "kata0510/lily58": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "kata0510/lily58",
+  "status": "ok",
+  "truncated": false
+ },
+ "kaylynb/mechllama-g35": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "kaylynb/mechllama-g35",
+  "status": "ok",
+  "truncated": false
+ },
+ "kb-elmo/aek2_usb": {
+  "files": [
+   {
+    "first_line": "Attribution-NonCommercial-ShareAlike 4.0 International",
+    "licence": "CC-BY-NC-SA-4.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   },
+   {
+    "first_line": "OBJECTIVE DEVELOPMENT GmbH's V-USB driver software is distributed under the",
+    "licence": "GPL-2.0",
+    "path": "firmware/bootloader/License.txt",
+    "root": false,
+    "vendored": false
+   },
+   {
+    "first_line": "OBJECTIVE DEVELOPMENT GmbH's V-USB driver software is distributed under the",
+    "licence": "GPL-2.0",
+    "path": "firmware/bootloader/firmware/usbdrv/License.txt",
+    "root": false,
+    "vendored": false
+   }
+  ],
+  "repo": "kb-elmo/aek2_usb",
+  "status": "ok",
+  "truncated": false
+ },
+ "kb-elmo/bm42": {
+  "files": [
+   {
+    "first_line": "Attribution-NonCommercial-ShareAlike 4.0 International",
+    "licence": "CC-BY-NC-SA-4.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "kb-elmo/bm42",
+  "status": "ok",
+  "truncated": false
+ },
+ "kb-elmo/dizzy40": {
+  "files": [],
+  "repo": "kb-elmo/dizzy40",
+  "status": "ok",
+  "truncated": false
+ },
+ "kb-elmo/eliza": {
+  "files": [],
+  "repo": "kb-elmo/eliza",
+  "status": "ok",
+  "truncated": false
+ },
+ "kb-elmo/gamehand": {
+  "files": [
+   {
+    "first_line": "Attribution-NonCommercial-ShareAlike 4.0 International",
+    "licence": "CC-BY-NC-SA-4.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "kb-elmo/gamehand",
+  "status": "ok",
+  "truncated": false
+ },
+ "kb-elmo/m0110a_usb": {
+  "files": [
+   {
+    "first_line": "Attribution-NonCommercial-ShareAlike 4.0 International",
+    "licence": "CC-BY-NC-SA-4.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   },
+   {
+    "first_line": "OBJECTIVE DEVELOPMENT GmbH's V-USB driver software is distributed under the",
+    "licence": "GPL-2.0",
+    "path": "firmware/bootloader/License.txt",
+    "root": false,
+    "vendored": false
+   },
+   {
+    "first_line": "OBJECTIVE DEVELOPMENT GmbH's V-USB driver software is distributed under the",
+    "licence": "GPL-2.0",
+    "path": "firmware/bootloader/firmware/usbdrv/License.txt",
+    "root": false,
+    "vendored": false
+   }
+  ],
+  "repo": "kb-elmo/m0110a_usb",
+  "status": "ok",
+  "truncated": false
+ },
+ "kb-elmo/m0116_usb": {
+  "files": [
+   {
+    "first_line": "Attribution-NonCommercial-ShareAlike 4.0 International",
+    "licence": "CC-BY-NC-SA-4.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   },
+   {
+    "first_line": "OBJECTIVE DEVELOPMENT GmbH's V-USB driver software is distributed under the",
+    "licence": "GPL-2.0",
+    "path": "firmware/bootloader/License.txt",
+    "root": false,
+    "vendored": false
+   },
+   {
+    "first_line": "OBJECTIVE DEVELOPMENT GmbH's V-USB driver software is distributed under the",
+    "licence": "GPL-2.0",
+    "path": "firmware/bootloader/firmware/usbdrv/License.txt",
+    "root": false,
+    "vendored": false
+   }
+  ],
+  "repo": "kb-elmo/m0116_usb",
+  "status": "ok",
+  "truncated": false
+ },
+ "kb-elmo/noah_avr": {
+  "files": [
+   {
+    "first_line": "Attribution-NonCommercial-ShareAlike 4.0 International",
+    "licence": "CC-BY-NC-SA-4.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "kb-elmo/noah_avr",
+  "status": "ok",
+  "truncated": false
+ },
+ "kb-elmo/numpad": {
+  "files": [
+   {
+    "first_line": "Attribution-NonCommercial-ShareAlike 4.0 International",
+    "licence": "CC-BY-NC-SA-4.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "kb-elmo/numpad",
+  "status": "ok",
+  "truncated": false
+ },
+ "kb-elmo/sesame": {
+  "files": [
+   {
+    "first_line": "Attribution-NonCommercial-ShareAlike 4.0 International",
+    "licence": "CC-BY-NC-SA-4.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   },
+   {
+    "first_line": "OBJECTIVE DEVELOPMENT GmbH's V-USB driver software is distributed under the",
+    "licence": "GPL-2.0",
+    "path": "firmware/bootloader/License.txt",
+    "root": false,
+    "vendored": false
+   },
+   {
+    "first_line": "OBJECTIVE DEVELOPMENT GmbH's V-USB driver software is distributed under the",
+    "licence": "GPL-2.0",
+    "path": "firmware/bootloader/firmware/usbdrv/License.txt",
+    "root": false,
+    "vendored": false
+   }
+  ],
+  "repo": "kb-elmo/sesame",
+  "status": "ok",
+  "truncated": false
+ },
+ "kb-elmo/twelvekey": {
+  "files": [
+   {
+    "first_line": "Attribution-NonCommercial-ShareAlike 4.0 International",
+    "licence": "CC-BY-NC-SA-4.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   },
+   {
+    "first_line": "OBJECTIVE DEVELOPMENT GmbH's V-USB driver software is distributed under the",
+    "licence": "GPL-2.0",
+    "path": "firmware/bootloader/License.txt",
+    "root": false,
+    "vendored": false
+   },
+   {
+    "first_line": "OBJECTIVE DEVELOPMENT GmbH's V-USB driver software is distributed under the",
+    "licence": "GPL-2.0",
+    "path": "firmware/bootloader/firmware/usbdrv/License.txt",
+    "root": false,
+    "vendored": false
+   }
+  ],
+  "repo": "kb-elmo/twelvekey",
+  "status": "ok",
+  "truncated": false
+ },
+ "keawade/keaboard": {
+  "files": [],
+  "repo": "keawade/keaboard",
+  "status": "ok",
+  "truncated": false
+ },
+ "keebio/bfo9000-pcb": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE.txt",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "keebio/bfo9000-pcb",
+  "status": "ok",
+  "truncated": false
+ },
+ "keebio/fourier": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "License",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "keebio/fourier",
+  "status": "ok",
+  "truncated": false
+ },
+ "keebio/quefrency-rev1-pcb": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "keebio/quefrency-rev1-pcb",
+  "status": "ok",
+  "truncated": false
+ },
+ "kelvinhall05/southpaw75": {
+  "files": [
+   {
+    "first_line": "GNU GENERAL PUBLIC LICENSE",
+    "licence": "GPL-3.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "kelvinhall05/southpaw75",
+  "status": "ok",
+  "truncated": false
+ },
+ "keyzog/kapl": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "keyzog/kapl",
+  "status": "ok",
+  "truncated": false
+ },
+ "kgoh/jian-info": {
+  "files": [
+   {
+    "first_line": "GNU GENERAL PUBLIC LICENSE",
+    "licence": "GPL-3.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "kgoh/jian-info",
+  "status": "ok",
+  "truncated": false
+ },
+ "kkatano/bakeneko-65": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "kkatano/bakeneko-65",
+  "status": "ok",
+  "truncated": false
+ },
+ "kkatano/yurei": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "kkatano/yurei",
+  "status": "ok",
+  "truncated": false
+ },
+ "klackygears/eek_doc": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "klackygears/eek_doc",
+  "status": "ok",
+  "truncated": false
+ },
+ "klausweiss/bolek": {
+  "files": [],
+  "repo": "klausweiss/bolek",
+  "status": "ok",
+  "truncated": false
+ },
+ "knaruo/barracuda": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "knaruo/barracuda",
+  "status": "ok",
+  "truncated": false
+ },
+ "knaruo/pisces": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "knaruo/pisces",
+  "status": "ok",
+  "truncated": false
+ },
+ "komar007/gh60": {
+  "files": [],
+  "repo": "komar007/gh60",
+  "status": "ok",
+  "truncated": false
+ },
+ "kraken-jokes/pteron-pcb": {
+  "files": [
+   {
+    "first_line": "GNU GENERAL PUBLIC LICENSE",
+    "licence": "GPL-3.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "kraken-jokes/pteron-pcb",
+  "status": "ok",
+  "truncated": false
+ },
+ "kulmajaba/tunks-keyboard": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "kulmajaba/tunks-keyboard",
+  "status": "ok",
+  "truncated": false
+ },
+ "kumaokobo/pico-keyboard": {
+  "files": [],
+  "repo": "kumaokobo/pico-keyboard",
+  "status": "ok",
+  "truncated": false
+ },
+ "kuriatsu/tsubasa": {
+  "files": [
+   {
+    "first_line": "Apache License",
+    "licence": "Apache-2.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "kuriatsu/tsubasa",
+  "status": "ok",
+  "truncated": false
+ },
+ "kyleterry/spacetime-keyboard": {
+  "files": [],
+  "repo": "kyleterry/spacetime-keyboard",
+  "status": "ok",
+  "truncated": false
+ },
+ "kyrremann/bartlesplit": {
+  "files": [
+   {
+    "first_line": "GNU GENERAL PUBLIC LICENSE",
+    "licence": "GPL-3.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "kyrremann/bartlesplit",
+  "status": "ok",
+  "truncated": false
+ },
+ "kyrremann/index-tab": {
+  "files": [
+   {
+    "first_line": "GNU GENERAL PUBLIC LICENSE",
+    "licence": "GPL-3.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "kyrremann/index-tab",
+  "status": "ok",
+  "truncated": false
+ },
+ "ladniy/jiran": {
+  "files": [
+   {
+    "first_line": "Attribution-NonCommercial-ShareAlike 4.0 International",
+    "licence": "CC-BY-NC-SA-4.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "ladniy/jiran",
+  "status": "ok",
+  "truncated": false
+ },
+ "latincompass/2-rotaryencoder-pad": {
+  "files": [],
+  "repo": "latincompass/2-rotaryencoder-pad",
+  "status": "ok",
+  "truncated": false
+ },
+ "lendunistus/rpneko65": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   },
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "plate/kicad-plate/LICENSE",
+    "root": false,
+    "vendored": false
+   }
+  ],
+  "repo": "lendunistus/rpneko65",
+  "status": "ok",
+  "truncated": false
+ },
+ "lighteningab/45keyboard_v1": {
+  "files": [
+   {
+    "first_line": "The MIT License (MIT)",
+    "licence": "MIT",
+    "path": "45_keyboard/defaultic45/qmk_firmware/quantum/serial_link/LICENSE",
+    "root": false,
+    "vendored": true
+   },
+   {
+    "first_line": "The files in this project are licensed under the MIT license",
+    "licence": "MIT",
+    "path": "45_keyboard/defaultic45/qmk_firmware/quantum/visualizer/LICENSE.md",
+    "root": false,
+    "vendored": true
+   },
+   {
+    "first_line": "LUFA Library",
+    "licence": "unclassified",
+    "path": "45_keyboard/defaultic45/qmk_firmware/tmk_core/protocol/lufa/LUFA-git/LUFA/License.txt",
+    "root": false,
+    "vendored": true
+   },
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "lighteningab/45keyboard_v1",
+  "status": "ok",
+  "truncated": false
+ },
+ "lyso1/lck75": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LCK75 kicad libs/LICENSE",
+    "root": false,
+    "vendored": false
+   }
+  ],
+  "repo": "lyso1/lck75",
+  "status": "ok",
+  "truncated": false
+ },
+ "makenova/omega": {
+  "files": [],
+  "repo": "makenova/omega",
+  "status": "ok",
+  "truncated": false
+ },
+ "makotokurauchi/helix": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "makotokurauchi/helix",
+  "status": "ok",
+  "truncated": false
+ },
+ "manna-harbour/xmk": {
+  "files": [],
+  "repo": "manna-harbour/xmk",
+  "status": "ok",
+  "truncated": false
+ },
+ "manoshu/baredev": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "manoshu/baredev",
+  "status": "ok",
+  "truncated": false
+ },
+ "marcocampione/Hem-keyboard": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "marcocampione/Hem-keyboard",
+  "status": "ok",
+  "truncated": false
+ },
+ "marksard/keyboards": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "marksard/keyboards",
+  "status": "ok",
+  "truncated": false
+ },
+ "marvfpv/adalyn": {
+  "files": [
+   {
+    "first_line": "GNU GENERAL PUBLIC LICENSE",
+    "licence": "GPL-3.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "marvfpv/adalyn",
+  "status": "ok",
+  "truncated": false
+ },
+ "marvfpv/friedrich": {
+  "files": [
+   {
+    "first_line": "GNU GENERAL PUBLIC LICENSE",
+    "licence": "GPL-3.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   },
+   {
+    "first_line": "Attribution-NonCommercial-ShareAlike 4.0 International",
+    "licence": "CC-BY-NC-SA-4.0",
+    "path": "PCB/LICENSE",
+    "root": false,
+    "vendored": false
+   }
+  ],
+  "repo": "marvfpv/friedrich",
+  "status": "ok",
+  "truncated": false
+ },
+ "mattdibi/redox-keyboard": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "mattdibi/redox-keyboard",
+  "status": "ok",
+  "truncated": false
+ },
+ "matthewdias/m3n3van": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "matthewdias/m3n3van",
+  "status": "ok",
+  "truncated": false
+ },
+ "matthewdias/minim": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "matthewdias/minim",
+  "status": "ok",
+  "truncated": false
+ },
+ "maxr1998/phoebe_keyboard": {
+  "files": [],
+  "repo": "maxr1998/phoebe_keyboard",
+  "status": "ok",
+  "truncated": false
+ },
+ "maxr1998/pulse_4k": {
+  "files": [],
+  "repo": "maxr1998/pulse_4k",
+  "status": "ok",
+  "truncated": false
+ },
+ "minibois/elixivy": {
+  "files": [
+   {
+    "first_line": "Copyright minibois 2021.",
+    "licence": "CERN-OHL-S-2.0",
+    "path": "LICENSE/LICENSE.txt",
+    "root": false,
+    "vendored": false
+   },
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "Libraries/MX_Alps_Hybrid/LICENSE",
+    "root": false,
+    "vendored": true
+   },
+   {
+    "first_line": "### KiCad Libraries License",
+    "licence": "CC-BY-SA-4.0",
+    "path": "Libraries/kicad-footprints/LICENSE.md",
+    "root": false,
+    "vendored": true
+   },
+   {
+    "first_line": "### KiCad Libraries License",
+    "licence": "CC-BY-SA-4.0",
+    "path": "Libraries/kicad-symbols/LICENSE.md",
+    "root": false,
+    "vendored": true
+   }
+  ],
+  "repo": "minibois/elixivy",
+  "status": "ok",
+  "truncated": false
+ },
+ "minibois/ten-key-plus": {
+  "files": [
+   {
+    "first_line": "Copyright minibois 2021.",
+    "licence": "CERN-OHL-S-2.0",
+    "path": "LICENSE/LICENSE.txt",
+    "root": false,
+    "vendored": false
+   }
+  ],
+  "repo": "minibois/ten-key-plus",
+  "status": "ok",
+  "truncated": false
+ },
+ "misonoworks/chocolate-bar": {
+  "files": [
+   {
+    "first_line": "GNU AFFERO GENERAL PUBLIC LICENSE",
+    "licence": "AGPL-3.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   },
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "v2_kicad/keyboard_parts.pretty/Keebio-Parts.pretty/LICENSE",
+    "root": false,
+    "vendored": true
+   }
+  ],
+  "repo": "misonoworks/chocolate-bar",
+  "status": "ok",
+  "truncated": false
+ },
+ "mizma/slimdash": {
+  "files": [
+   {
+    "first_line": "Attribution-ShareAlike 4.0 International",
+    "licence": "CC-BY-SA-4.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "mizma/slimdash",
+  "status": "ok",
+  "truncated": false
+ },
+ "mjohns/dactyl-cc": {
+  "files": [],
+  "repo": "mjohns/dactyl-cc",
+  "status": "ok",
+  "truncated": false
+ },
+ "mjohns/tracer": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "mjohns/tracer",
+  "status": "ok",
+  "truncated": false
+ },
+ "mkdl/unix60": {
+  "files": [
+   {
+    "first_line": "GNU GENERAL PUBLIC LICENSE",
+    "licence": "GPL-3.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "mkdl/unix60",
+  "status": "ok",
+  "truncated": false
+ },
+ "mmccoyd/hillside": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   },
+   {
+    "first_line": "The symbols and footprints used are not all created by me and carry these individual licen",
+    "licence": "CC-BY-NC-SA-4.0",
+    "path": "doc/license_components.md",
+    "root": false,
+    "vendored": false
+   }
+  ],
+  "repo": "mmccoyd/hillside",
+  "status": "ok",
+  "truncated": false
+ },
+ "mohoyt/lagom": {
+  "files": [
+   {
+    "first_line": "Lagom is licensed under the Creative Commons Attribution-NonCommercial 4.0 International L",
+    "licence": "CC-BY-NC-4.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   },
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "PCB/Keebio-Parts.pretty/LICENSE",
+    "root": false,
+    "vendored": true
+   },
+   {
+    "first_line": "Kicad Library by W. Lain - kcswalter@member.fsf.org",
+    "licence": "unclassified",
+    "path": "PCB/lib_w_logic/license.txt",
+    "root": false,
+    "vendored": true
+   }
+  ],
+  "repo": "mohoyt/lagom",
+  "status": "ok",
+  "truncated": false
+ },
+ "mohoyt/litl": {
+  "files": [
+   {
+    "first_line": "Litl is licensed under the Creative Commons Attribution-NonCommercial 4.0 International Li",
+    "licence": "CC-BY-NC-4.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   },
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "PCB/Keebio-Parts.pretty/LICENSE",
+    "root": false,
+    "vendored": true
+   }
+  ],
+  "repo": "mohoyt/litl",
+  "status": "ok",
+  "truncated": false
+ },
+ "mrninhvn/meow65-pcb": {
+  "files": [
+   {
+    "first_line": "# Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International",
+    "licence": "CC-BY-NC-SA-4.0",
+    "path": "LICENSE.md",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "mrninhvn/meow65-pcb",
+  "status": "ok",
+  "truncated": false
+ },
+ "mymakercorner/phoenix_project_no1": {
+  "files": [
+   {
+    "first_line": "# Creative Commons Attribution-ShareAlike 4.0 International",
+    "licence": "CC-BY-SA-4.0",
+    "path": "LICENCE.md",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "mymakercorner/phoenix_project_no1",
+  "status": "ok",
+  "truncated": false
+ },
+ "mythosmann/tg4x": {
+  "files": [
+   {
+    "first_line": "GNU GENERAL PUBLIC LICENSE",
+    "licence": "GPL-3.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   },
+   {
+    "first_line": "GNU GENERAL PUBLIC LICENSE",
+    "licence": "GPL-3.0",
+    "path": "qmk_firmware/keyboards/tg4x/LICENSE",
+    "root": false,
+    "vendored": true
+   }
+  ],
+  "repo": "mythosmann/tg4x",
+  "status": "ok",
+  "truncated": false
+ },
+ "na-cly/UA62": {
+  "files": [
+   {
+    "first_line": "GNU GENERAL PUBLIC LICENSE",
+    "licence": "GPL-3.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "na-cly/UA62",
+  "status": "ok",
+  "truncated": false
+ },
+ "na-cly/juliet": {
+  "files": [
+   {
+    "first_line": "GNU GENERAL PUBLIC LICENSE",
+    "licence": "GPL-3.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "na-cly/juliet",
+  "status": "ok",
+  "truncated": false
+ },
+ "na-cly/splitreus62": {
+  "files": [
+   {
+    "first_line": "GNU GENERAL PUBLIC LICENSE",
+    "licence": "GPL-3.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "na-cly/splitreus62",
+  "status": "ok",
+  "truncated": false
+ },
+ "narinari/xenon-keyboard": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "narinari/xenon-keyboard",
+  "status": "ok",
+  "truncated": false
+ },
+ "ncwhale/keyboard_design": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "ncwhale/keyboard_design",
+  "status": "ok",
+  "truncated": false
+ },
+ "nglgzz/42": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "nglgzz/42",
+  "status": "ok",
+  "truncated": false
+ },
+ "ngrigoriev/dactyl-manuform-5x7_2_6": {
+  "files": [
+   {
+    "first_line": "GNU AFFERO GENERAL PUBLIC LICENSE",
+    "licence": "AGPL-3.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "ngrigoriev/dactyl-manuform-5x7_2_6",
+  "status": "ok",
+  "truncated": false
+ },
+ "nickolaij/Abacus_Rev2": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "nickolaij/Abacus_Rev2",
+  "status": "ok",
+  "truncated": false
+ },
+ "nilokr/cantor-remix": {
+  "files": [
+   {
+    "first_line": "GNU GENERAL PUBLIC LICENSE",
+    "licence": "GPL-3.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   },
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "pcb/libraries/Keebio-Parts.pretty/LICENSE",
+    "root": false,
+    "vendored": true
+   },
+   {
+    "first_line": "<a rel=\"license\" href=\"http://creativecommons.org/licenses/by-sa/4.0/\"><img alt=\"Creative ",
+    "licence": "CC-BY-SA-4.0",
+    "path": "pcb/libraries/keyswitches.pretty/LICENSE.md",
+    "root": false,
+    "vendored": true
+   }
+  ],
+  "repo": "nilokr/cantor-remix",
+  "status": "ok",
+  "truncated": false
+ },
+ "niltea/palette1202": {
+  "files": [],
+  "repo": "niltea/palette1202",
+  "status": "ok",
+  "truncated": false
+ },
+ "nrtkbb/keyboards": {
+  "files": [],
+  "repo": "nrtkbb/keyboards",
+  "status": "ok",
+  "truncated": false
+ },
+ "null-ll/basketweave": {
+  "files": [
+   {
+    "first_line": "GNU GENERAL PUBLIC LICENSE",
+    "licence": "GPL-2.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "null-ll/basketweave",
+  "status": "ok",
+  "truncated": false
+ },
+ "nut1414/np12": {
+  "files": [
+   {
+    "first_line": "GNU GENERAL PUBLIC LICENSE",
+    "licence": "GPL-2.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "nut1414/np12",
+  "status": "ok",
+  "truncated": false
+ },
+ "nwhirschfeld/technicpad": {
+  "files": [
+   {
+    "first_line": "GNU AFFERO GENERAL PUBLIC LICENSE",
+    "licence": "AGPL-3.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "nwhirschfeld/technicpad",
+  "status": "ok",
+  "truncated": false
+ },
+ "nyhxis/keyboard-resources": {
+  "files": [
+   {
+    "first_line": "GNU GENERAL PUBLIC LICENSE",
+    "licence": "GPL-3.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "nyhxis/keyboard-resources",
+  "status": "ok",
+  "truncated": false
+ },
+ "obosob/steal_this_keyboard": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "obosob/steal_this_keyboard",
+  "status": "ok",
+  "truncated": false
+ },
+ "oliviahanley/wren-keyboard": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   },
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "PCBs/legacy/wren-nav/MX_Alps_Hybrid.pretty/LICENSE",
+    "root": false,
+    "vendored": true
+   },
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "PCBs/legacy/wren-numpad/MX_Alps_Hybrid.pretty/LICENSE",
+    "root": false,
+    "vendored": true
+   },
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "PCBs/legacy/wren-plain/MX_Alps_Hybrid.pretty/LICENSE",
+    "root": false,
+    "vendored": true
+   },
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "PCBs/wren-universal-lemo-left/MX_Alps_Hybrid.pretty/LICENSE",
+    "root": false,
+    "vendored": true
+   },
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "PCBs/wren-universal-lemo-right/MX_Alps_Hybrid.pretty/LICENSE",
+    "root": false,
+    "vendored": true
+   },
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "PCBs/wren-universal/MX_Alps_Hybrid.pretty/LICENSE",
+    "root": false,
+    "vendored": true
+   },
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "Plates/egg-bottom/MX_Alps_Hybrid.pretty/LICENSE",
+    "root": false,
+    "vendored": true
+   },
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "Plates/egg-top/MX_Alps_Hybrid.pretty/LICENSE",
+    "root": false,
+    "vendored": true
+   },
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "Plates/wren-nav-bottom/MX_Alps_Hybrid.pretty/LICENSE",
+    "root": false,
+    "vendored": true
+   },
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "Plates/wren-nav-top/MX_Alps_Hybrid.pretty/LICENSE",
+    "root": false,
+    "vendored": true
+   },
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "Plates/wren-numpad-bottom/MX_Alps_Hybrid.pretty/LICENSE",
+    "root": false,
+    "vendored": true
+   },
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "Plates/wren-numpad-top/MX_Alps_Hybrid.pretty/LICENSE",
+    "root": false,
+    "vendored": true
+   },
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "Plates/wren-plain-bottom/MX_Alps_Hybrid.pretty/LICENSE",
+    "root": false,
+    "vendored": true
+   },
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "Plates/wren-plain-top/MX_Alps_Hybrid.pretty/LICENSE",
+    "root": false,
+    "vendored": true
+   }
+  ],
+  "repo": "oliviahanley/wren-keyboard",
+  "status": "ok",
+  "truncated": false
+ },
+ "omkbd/ergodash": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "omkbd/ergodash",
+  "status": "ok",
+  "truncated": false
+ },
+ "peej/for-science-keyboard": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "peej/for-science-keyboard",
+  "status": "ok",
+  "truncated": false
+ },
+ "peej/lumberjack-keyboard": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "peej/lumberjack-keyboard",
+  "status": "ok",
+  "truncated": false
+ },
+ "peej/rosaline-keyboard": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "peej/rosaline-keyboard",
+  "status": "ok",
+  "truncated": false
+ },
+ "peej/tripel-keyboard": {
+  "files": [],
+  "repo": "peej/tripel-keyboard",
+  "status": "ok",
+  "truncated": false
+ },
+ "percyjw-2/split65": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "percyjw-2/split65",
+  "status": "ok",
+  "truncated": false
+ },
+ "ph-design/PH60": {
+  "files": [
+   {
+    "first_line": "Attribution-NonCommercial-ShareAlike 4.0 International",
+    "licence": "CC-BY-NC-SA-4.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "ph-design/PH60",
+  "status": "ok",
+  "truncated": false
+ },
+ "pierrechevalier83/ferris": {
+  "files": [
+   {
+    "first_line": "# Hardware",
+    "licence": "Apache-2.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   },
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "automation/tools/InteractiveHtmlBom/LICENSE",
+    "root": false,
+    "vendored": false
+   },
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "automation/tools/PcbDraw/LICENSE",
+    "root": false,
+    "vendored": false
+   },
+   {
+    "first_line": "All files under the script directory are shared under MIT licence:",
+    "licence": "CC-BY-SA-4.0",
+    "path": "automation/tools/PcbDraw/pcbdraw/footprints/LICENCE",
+    "root": false,
+    "vendored": false
+   },
+   {
+    "first_line": "GNU GENERAL PUBLIC LICENSE",
+    "licence": "GPL-3.0",
+    "path": "automation/tools/kiplot/LICENSE",
+    "root": false,
+    "vendored": false
+   },
+   {
+    "first_line": "Apache License",
+    "licence": "Apache-2.0",
+    "path": "automation/tools/ninja/COPYING",
+    "root": false,
+    "vendored": false
+   }
+  ],
+  "repo": "pierrechevalier83/ferris",
+  "status": "ok",
+  "truncated": false
+ },
+ "pietptr/microdox-pcb": {
+  "files": [
+   {
+    "first_line": "GNU GENERAL PUBLIC LICENSE",
+    "licence": "GPL-3.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "pietptr/microdox-pcb",
+  "status": "ok",
+  "truncated": false
+ },
+ "pimentoso/touhoupad_v2": {
+  "files": [],
+  "repo": "pimentoso/touhoupad_v2",
+  "status": "ok",
+  "truncated": false
+ },
+ "pje66/hummingbird": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "pje66/hummingbird",
+  "status": "ok",
+  "truncated": false
+ },
+ "polarityworks/crbn-featherlight": {
+  "files": [
+   {
+    "first_line": "The CRBN Featherlight is licensed under a Creative Commons Attribution-NonCommercial-Share",
+    "licence": "CC-BY-NC-SA-4.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "polarityworks/crbn-featherlight",
+  "status": "ok",
+  "truncated": false
+ },
+ "profet23/atreus62": {
+  "files": [
+   {
+    "first_line": "GNU GENERAL PUBLIC LICENSE",
+    "licence": "GPL-3.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "profet23/atreus62",
+  "status": "ok",
+  "truncated": false
+ },
+ "psuieee/pluto12": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "psuieee/pluto12",
+  "status": "ok",
+  "truncated": false
+ },
+ "ramonimbao/Herringbone": {
+  "files": [
+   {
+    "first_line": "Attribution-NonCommercial-ShareAlike 4.0 International",
+    "licence": "CC-BY-NC-SA-4.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "ramonimbao/Herringbone",
+  "status": "ok",
+  "truncated": false
+ },
+ "rarepotato8de/3x3macropad": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "PCB-Files/PCB/Libaries/Keebio-Parts.pretty-master/LICENSE",
+    "root": false,
+    "vendored": false
+   }
+  ],
+  "repo": "rarepotato8de/3x3macropad",
+  "status": "ok",
+  "truncated": false
+ },
+ "reversebias/mitosis-hardware": {
+  "files": [
+   {
+    "first_line": "GNU GENERAL PUBLIC LICENSE",
+    "licence": "GPL-3.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "reversebias/mitosis-hardware",
+  "status": "ok",
+  "truncated": false
+ },
+ "robcmills/karn-keyboard": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "libraries/kbd-master/LICENSE",
+    "root": false,
+    "vendored": true
+   },
+   {
+    "first_line": "<a rel=\"license\" href=\"http://creativecommons.org/licenses/by-sa/4.0/\"><img alt=\"Creative ",
+    "licence": "CC-BY-SA-4.0",
+    "path": "libraries/keyswitches.pretty-master/LICENSE.md",
+    "root": false,
+    "vendored": true
+   }
+  ],
+  "repo": "robcmills/karn-keyboard",
+  "status": "ok",
+  "truncated": false
+ },
+ "rtitmuss/torn": {
+  "files": [
+   {
+    "first_line": "Attribution-NonCommercial 4.0 International",
+    "licence": "CC-BY-NC-4.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "rtitmuss/torn",
+  "status": "ok",
+  "truncated": false
+ },
+ "ryanchomistek/lefty": {
+  "files": [],
+  "repo": "ryanchomistek/lefty",
+  "status": "ok",
+  "truncated": false
+ },
+ "sadeeed/soup10": {
+  "files": [],
+  "repo": "sadeeed/soup10",
+  "status": "ok",
+  "truncated": false
+ },
+ "sakurachari/yosino58": {
+  "files": [],
+  "repo": "sakurachari/yosino58",
+  "status": "ok",
+  "truncated": false
+ },
+ "samgowland/gowla-macro-board": {
+  "files": [],
+  "repo": "samgowland/gowla-macro-board",
+  "status": "ok",
+  "truncated": false
+ },
+ "satorusaka/15k-macropad": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "Source/MX_Alps_Hybrid.pretty/LICENSE",
+    "root": false,
+    "vendored": true
+   },
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "Source/MX_Alps_Hybrid/LICENSE",
+    "root": false,
+    "vendored": false
+   },
+   {
+    "first_line": "The original Raspberry Pi Foundation / Trading license:",
+    "licence": "Unlicense",
+    "path": "Source/RP_Silicon_KiCad/LICENSE",
+    "root": false,
+    "vendored": false
+   },
+   {
+    "first_line": "CERN Open Hardware Licence Version 2 - Permissive",
+    "licence": "CERN-OHL-S-2.0",
+    "path": "Source/marbastlib/LICENSE",
+    "root": false,
+    "vendored": false
+   }
+  ],
+  "repo": "satorusaka/15k-macropad",
+  "status": "ok",
+  "truncated": false
+ },
+ "schwarzer-geiger/edinburgh41": {
+  "files": [],
+  "repo": "schwarzer-geiger/edinburgh41",
+  "status": "ok",
+  "truncated": false
+ },
+ "seityaya/kepler-33": {
+  "files": [],
+  "repo": "seityaya/kepler-33",
+  "status": "http-409"
+ },
+ "sekigon-gonnoc/grs-70ec-doc": {
+  "files": [],
+  "repo": "sekigon-gonnoc/grs-70ec-doc",
+  "status": "ok",
+  "truncated": false
+ },
+ "sendyyeah/bevi": {
+  "files": [
+   {
+    "first_line": "GNU GENERAL PUBLIC LICENSE",
+    "licence": "GPL-3.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "sendyyeah/bevi",
+  "status": "ok",
+  "truncated": false
+ },
+ "sendz/pix": {
+  "files": [
+   {
+    "first_line": "GNU GENERAL PUBLIC LICENSE",
+    "licence": "GPL-3.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "sendz/pix",
+  "status": "ok",
+  "truncated": false
+ },
+ "shinoharata/keyboards": {
+  "files": [
+   {
+    "first_line": "# \u8a2d\u8a08\u30c7\u30fc\u30bf\u5229\u7528\u898f\u7d04 (Product Design data user license)",
+    "licence": "unclassified",
+    "path": "LICENSE.md",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "shinoharata/keyboards",
+  "status": "ok",
+  "truncated": false
+ },
+ "sho-keebs/vagrant-10": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "sho-keebs/vagrant-10",
+  "status": "ok",
+  "truncated": false
+ },
+ "shuguet/split89": {
+  "files": [],
+  "repo": "shuguet/split89",
+  "status": "ok",
+  "truncated": false
+ },
+ "sithlord121/slz40": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "sithlord121/slz40",
+  "status": "ok",
+  "truncated": false
+ },
+ "skarrmann/cata": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "skarrmann/cata",
+  "status": "ok",
+  "truncated": false
+ },
+ "skarrmann/horizon": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "skarrmann/horizon",
+  "status": "ok",
+  "truncated": false
+ },
+ "skarrmann/janus": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "skarrmann/janus",
+  "status": "ok",
+  "truncated": false
+ },
+ "skarrmann/morizon": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "skarrmann/morizon",
+  "status": "ok",
+  "truncated": false
+ },
+ "skarrmann/sha": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "skarrmann/sha",
+  "status": "ok",
+  "truncated": false
+ },
+ "skeletonkbd/Frost68": {
+  "files": [
+   {
+    "first_line": "# Creative Commons Attribution-NonCommercial 4.0 International",
+    "licence": "CC-BY-NC-4.0",
+    "path": "LICENSE.md",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "skeletonkbd/Frost68",
+  "status": "ok",
+  "truncated": false
+ },
+ "skeletonkbd/skeletonnumpad": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "skeletonkbd/skeletonnumpad",
+  "status": "ok",
+  "truncated": false
+ },
+ "smores56/clog": {
+  "files": [],
+  "repo": "smores56/clog",
+  "status": "ok",
+  "truncated": false
+ },
+ "smores56/osprette": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "smores56/osprette",
+  "status": "ok",
+  "truncated": false
+ },
+ "smssmssms/pos78": {
+  "files": [],
+  "repo": "smssmssms/pos78",
+  "status": "ok",
+  "truncated": false
+ },
+ "softplus/3keyecosystem": {
+  "files": [
+   {
+    "first_line": "Apache License",
+    "licence": "Apache-2.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "softplus/3keyecosystem",
+  "status": "ok",
+  "truncated": false
+ },
+ "sol/chord-zero": {
+  "files": [
+   {
+    "first_line": "CERN Open Hardware Licence Version 2 - Strongly Reciprocal",
+    "licence": "CERN-OHL-S-2.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "sol/chord-zero",
+  "status": "ok",
+  "truncated": false
+ },
+ "sotoba/contender": {
+  "files": [],
+  "repo": "sotoba/contender",
+  "status": "ok",
+  "truncated": false
+ },
+ "sotoba/craftwalk": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "sotoba/craftwalk",
+  "status": "ok",
+  "truncated": false
+ },
+ "spaceboards/spaceboardshardware": {
+  "files": [
+   {
+    "first_line": "CERN Open Hardware Licence Version 2 - Weakly Reciprocal",
+    "licence": "CERN-OHL-S-2.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "spaceboards/spaceboardshardware",
+  "status": "ok",
+  "truncated": false
+ },
+ "squalius-cephalus/silakka54": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "squalius-cephalus/silakka54",
+  "status": "ok",
+  "truncated": false
+ },
+ "stevennguyen/framework": {
+  "files": [
+   {
+    "first_line": "OBJECTIVE DEVELOPMENT GmbH's V-USB driver software is distributed under the",
+    "licence": "GPL-2.0",
+    "path": "USBaspLoader/License.txt",
+    "root": false,
+    "vendored": false
+   },
+   {
+    "first_line": "OBJECTIVE DEVELOPMENT GmbH's V-USB driver software is distributed under the",
+    "licence": "GPL-2.0",
+    "path": "USBaspLoader/firmware/usbdrv/License.txt",
+    "root": false,
+    "vendored": false
+   }
+  ],
+  "repo": "stevennguyen/framework",
+  "status": "ok",
+  "truncated": false
+ },
+ "stoutieee/macropad-workshop": {
+  "files": [
+   {
+    "first_line": "GNU GENERAL PUBLIC LICENSE",
+    "licence": "GPL-3.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "stoutieee/macropad-workshop",
+  "status": "ok",
+  "truncated": false
+ },
+ "str-dst/67mk_E": {
+  "files": [
+   {
+    "first_line": "Attribution-NonCommercial-ShareAlike 4.0 International",
+    "licence": "CC-BY-NC-SA-4.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "str-dst/67mk_E",
+  "status": "ok",
+  "truncated": false
+ },
+ "str-dst/QEZ": {
+  "files": [
+   {
+    "first_line": "Attribution-NonCommercial-ShareAlike 4.0 International",
+    "licence": "CC-BY-NC-SA-4.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "str-dst/QEZ",
+  "status": "ok",
+  "truncated": false
+ },
+ "subrezon/la_nc": {
+  "files": [
+   {
+    "first_line": "Copyright (c) 2022 Daniel Osipishin",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "subrezon/la_nc",
+  "status": "ok",
+  "truncated": false
+ },
+ "subrezon/lancer": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "subrezon/lancer",
+  "status": "ok",
+  "truncated": false
+ },
+ "suikagiken/suika15tone": {
+  "files": [],
+  "repo": "suikagiken/suika15tone",
+  "status": "ok",
+  "truncated": false
+ },
+ "suikagiken/suika27melo": {
+  "files": [],
+  "repo": "suikagiken/suika27melo",
+  "status": "ok",
+  "truncated": false
+ },
+ "suikagiken/suika83opti": {
+  "files": [],
+  "repo": "suikagiken/suika83opti",
+  "status": "ok",
+  "truncated": false
+ },
+ "suikagiken/suika85ergo": {
+  "files": [],
+  "repo": "suikagiken/suika85ergo",
+  "status": "ok",
+  "truncated": false
+ },
+ "swiftrax/Pandamic": {
+  "files": [
+   {
+    "first_line": "GNU GENERAL PUBLIC LICENSE",
+    "licence": "GPL-2.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "swiftrax/Pandamic",
+  "status": "ok",
+  "truncated": false
+ },
+ "swiftrax/unsplit": {
+  "files": [
+   {
+    "first_line": "GNU GENERAL PUBLIC LICENSE",
+    "licence": "GPL-2.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "swiftrax/unsplit",
+  "status": "ok",
+  "truncated": false
+ },
+ "takagi/plum47_buildguide": {
+  "files": [],
+  "repo": "takagi/plum47_buildguide",
+  "status": "ok",
+  "truncated": false
+ },
+ "takashicompany/compacx": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "takashicompany/compacx",
+  "status": "ok",
+  "truncated": false
+ },
+ "takashicompany/dogtag": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "takashicompany/dogtag",
+  "status": "ok",
+  "truncated": false
+ },
+ "takashicompany/endzone34": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "takashicompany/endzone34",
+  "status": "ok",
+  "truncated": false
+ },
+ "takashicompany/goat51": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "takashicompany/goat51",
+  "status": "ok",
+  "truncated": false
+ },
+ "takashicompany/minizone": {
+  "files": [],
+  "repo": "takashicompany/minizone",
+  "status": "ok",
+  "truncated": false
+ },
+ "takashicompany/palmbrain": {
+  "files": [
+   {
+    "first_line": "Attribution-NonCommercial-ShareAlike 4.0 International",
+    "licence": "CC-BY-NC-SA-4.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "takashicompany/palmbrain",
+  "status": "ok",
+  "truncated": false
+ },
+ "takashicompany/qoolee": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "takashicompany/qoolee",
+  "status": "ok",
+  "truncated": false
+ },
+ "takashicompany/radialex": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "takashicompany/radialex",
+  "status": "ok",
+  "truncated": false
+ },
+ "takashicompany/rookey": {
+  "files": [],
+  "repo": "takashicompany/rookey",
+  "status": "ok",
+  "truncated": false
+ },
+ "takashicompany/spreadwriter": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE.md",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "takashicompany/spreadwriter",
+  "status": "ok",
+  "truncated": false
+ },
+ "takishim/mikeneko65": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "takishim/mikeneko65",
+  "status": "ok",
+  "truncated": false
+ },
+ "tamanishi/Pinky3": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "tamanishi/Pinky3",
+  "status": "ok",
+  "truncated": false
+ },
+ "tamanishi/Pinky4": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "tamanishi/Pinky4",
+  "status": "ok",
+  "truncated": false
+ },
+ "tapioki/cephalopoda": {
+  "files": [
+   {
+    "first_line": "GNU GENERAL PUBLIC LICENSE",
+    "licence": "GPL-3.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "tapioki/cephalopoda",
+  "status": "ok",
+  "truncated": false
+ },
+ "tarneaux/supersplit": {
+  "files": [
+   {
+    "first_line": "GNU GENERAL PUBLIC LICENSE",
+    "licence": "GPL-2.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   },
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "ergogen/license.md",
+    "root": false,
+    "vendored": false
+   }
+  ],
+  "repo": "tarneaux/supersplit",
+  "status": "ok",
+  "truncated": false
+ },
+ "telzo2000/cool836a": {
+  "files": [],
+  "repo": "telzo2000/cool836a",
+  "status": "ok",
+  "truncated": false
+ },
+ "tenstad/keyboard": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "tenstad/keyboard",
+  "status": "ok",
+  "truncated": false
+ },
+ "thatfellarobin/axon": {
+  "files": [
+   {
+    "first_line": "Attribution-NonCommercial-ShareAlike 4.0 International",
+    "licence": "CC-BY-NC-SA-4.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "thatfellarobin/axon",
+  "status": "ok",
+  "truncated": false
+ },
+ "the-royal/the_royal_open-source-projects": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "01 - Complete Kits/The_Little_Foot-Keyboard-rev2.3/LICENSE",
+    "root": false,
+    "vendored": false
+   },
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "01 - Complete Kits/The_RoMac_rev2.1/LICENSE",
+    "root": false,
+    "vendored": false
+   },
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "02 - PCBs/Schwann_PCB/PCB Documentation/MX_Alps_Hybrid/LICENSE",
+    "root": false,
+    "vendored": false
+   },
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "03 - Cases/Vitamins-Included_Case-master/LICENSE",
+    "root": false,
+    "vendored": false
+   },
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "05 - Other/Tools-Spring_Lube_Station/LICENSE",
+    "root": false,
+    "vendored": false
+   },
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "the-royal/the_royal_open-source-projects",
+  "status": "ok",
+  "truncated": false
+ },
+ "theroyalsweatshirt/the_royal_projects": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "01 - Complete Kits/The_Little_Foot-Keyboard-rev2.3/LICENSE",
+    "root": false,
+    "vendored": false
+   },
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "01 - Complete Kits/The_RoMac_rev2.1/LICENSE",
+    "root": false,
+    "vendored": false
+   },
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "02 - PCBs/Schwann_PCB/PCB Documentation/MX_Alps_Hybrid/LICENSE",
+    "root": false,
+    "vendored": false
+   },
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "03 - Cases/Vitamins-Included_Case-master/LICENSE",
+    "root": false,
+    "vendored": false
+   },
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "05 - Other/Tools-Spring_Lube_Station/LICENSE",
+    "root": false,
+    "vendored": false
+   },
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "theroyalsweatshirt/the_royal_projects",
+  "status": "ok",
+  "truncated": false
+ },
+ "tokageitlab/varanidae": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "tokageitlab/varanidae",
+  "status": "ok",
+  "truncated": false
+ },
+ "tompi/cheapino": {
+  "files": [
+   {
+    "first_line": "Attribution 4.0 International",
+    "licence": "CC-BY-4.0",
+    "path": "LICENSE.txt",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "tompi/cheapino",
+  "status": "ok",
+  "truncated": false
+ },
+ "tomsaleeba/ergoslab": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "tomsaleeba/ergoslab",
+  "status": "ok",
+  "truncated": false
+ },
+ "trojanpinata/model-b": {
+  "files": [],
+  "repo": "trojanpinata/model-b",
+  "status": "ok",
+  "truncated": false
+ },
+ "tszaboo/ortho4exent": {
+  "files": [
+   {
+    "first_line": "Attribution-NonCommercial-ShareAlike 4.0 International",
+    "licence": "CC-BY-NC-SA-4.0",
+    "path": "LICENSE.txt",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "tszaboo/ortho4exent",
+  "status": "ok",
+  "truncated": false
+ },
+ "tweetydabird/lotus58": {
+  "files": [
+   {
+    "first_line": "SPDX-FileCopyrightText: 2020 Markus Knutsson <markus.knutsson@tweety.se>",
+    "licence": "CERN-OHL-S-2.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "tweetydabird/lotus58",
+  "status": "ok",
+  "truncated": false
+ },
+ "tyraelwastaken/equanimity": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "tyraelwastaken/equanimity",
+  "status": "ok",
+  "truncated": false
+ },
+ "tzarc/djinn": {
+  "files": [
+   {
+    "first_line": "CERN Open Hardware Licence Version 2 - Strongly Reciprocal",
+    "licence": "CERN-OHL-S-2.0",
+    "path": "Djinn/LICENSE",
+    "root": false,
+    "vendored": false
+   },
+   {
+    "first_line": "Creative Commons Legal Code",
+    "licence": "CC0-1.0",
+    "path": "Djinn/Rev1/reversible-kicad/LICENSE",
+    "root": false,
+    "vendored": false
+   },
+   {
+    "first_line": "Creative Commons Legal Code",
+    "licence": "CC0-1.0",
+    "path": "Djinn/Rev2a/reversible-kicad/LICENSE",
+    "root": false,
+    "vendored": false
+   },
+   {
+    "first_line": "CERN Open Hardware Licence Version 2 - Strongly Reciprocal",
+    "licence": "CERN-OHL-S-2.0",
+    "path": "Ghoul/LICENSE",
+    "root": false,
+    "vendored": false
+   },
+   {
+    "first_line": "CERN Open Hardware Licence Version 2 - Strongly Reciprocal",
+    "licence": "CERN-OHL-S-2.0",
+    "path": "Kobold/LICENSE",
+    "root": false,
+    "vendored": false
+   },
+   {
+    "first_line": "CERN Open Hardware Licence Version 2 - Strongly Reciprocal",
+    "licence": "CERN-OHL-S-2.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "tzarc/djinn",
+  "status": "ok",
+  "truncated": false
+ },
+ "tzarc/ghoul": {
+  "files": [
+   {
+    "first_line": "GNU GENERAL PUBLIC LICENSE",
+    "licence": "GPL-3.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "tzarc/ghoul",
+  "status": "ok",
+  "truncated": false
+ },
+ "tzarc/keyboards": {
+  "files": [
+   {
+    "first_line": "CERN Open Hardware Licence Version 2 - Strongly Reciprocal",
+    "licence": "CERN-OHL-S-2.0",
+    "path": "Djinn/LICENSE",
+    "root": false,
+    "vendored": false
+   },
+   {
+    "first_line": "Creative Commons Legal Code",
+    "licence": "CC0-1.0",
+    "path": "Djinn/Rev1/reversible-kicad/LICENSE",
+    "root": false,
+    "vendored": false
+   },
+   {
+    "first_line": "Creative Commons Legal Code",
+    "licence": "CC0-1.0",
+    "path": "Djinn/Rev2a/reversible-kicad/LICENSE",
+    "root": false,
+    "vendored": false
+   },
+   {
+    "first_line": "CERN Open Hardware Licence Version 2 - Strongly Reciprocal",
+    "licence": "CERN-OHL-S-2.0",
+    "path": "Ghoul/LICENSE",
+    "root": false,
+    "vendored": false
+   },
+   {
+    "first_line": "CERN Open Hardware Licence Version 2 - Strongly Reciprocal",
+    "licence": "CERN-OHL-S-2.0",
+    "path": "Kobold/LICENSE",
+    "root": false,
+    "vendored": false
+   },
+   {
+    "first_line": "CERN Open Hardware Licence Version 2 - Strongly Reciprocal",
+    "licence": "CERN-OHL-S-2.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "tzarc/keyboards",
+  "status": "ok",
+  "truncated": false
+ },
+ "v3lmx/cornifi": {
+  "files": [
+   {
+    "first_line": "GNU GENERAL PUBLIC LICENSE",
+    "licence": "GPL-3.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "v3lmx/cornifi",
+  "status": "ok",
+  "truncated": false
+ },
+ "vaarai/cornia": {
+  "files": [
+   {
+    "first_line": "GNU GENERAL PUBLIC LICENSE",
+    "licence": "GPL-2.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "vaarai/cornia",
+  "status": "ok",
+  "truncated": false
+ },
+ "vattern/grandiceps": {
+  "files": [],
+  "repo": "vattern/grandiceps",
+  "status": "ok",
+  "truncated": false
+ },
+ "vattern/stoutgat": {
+  "files": [
+   {
+    "first_line": "Discipline V2 is licensed under the Creative Commons Attribution-NonCommercial 4.0 Interna",
+    "licence": "CC-BY-NC-4.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "vattern/stoutgat",
+  "status": "ok",
+  "truncated": false
+ },
+ "vattern/stoutgatv2": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "vattern/stoutgatv2",
+  "status": "ok",
+  "truncated": false
+ },
+ "veikman/dactyl-keyboard": {
+  "files": [
+   {
+    "first_line": "GNU AFFERO GENERAL PUBLIC LICENSE",
+    "licence": "AGPL-3.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   },
+   {
+    "first_line": "Creative Commons Legal Code",
+    "licence": "CC-BY-NC-SA-3.0",
+    "path": "LICENSE-models",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "veikman/dactyl-keyboard",
+  "status": "ok",
+  "truncated": false
+ },
+ "vladantrhlik/vt-40": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "vladantrhlik/vt-40",
+  "status": "ok",
+  "truncated": false
+ },
+ "vlkv/avalanche": {
+  "files": [
+   {
+    "first_line": "Copyright (c) 2021 Vitaly Volkov",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "vlkv/avalanche",
+  "status": "ok",
+  "truncated": false
+ },
+ "vlkv/chocofly": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "vlkv/chocofly",
+  "status": "ok",
+  "truncated": false
+ },
+ "vuhopkep/pcb": {
+  "files": [],
+  "repo": "vuhopkep/pcb",
+  "status": "ok",
+  "truncated": false
+ },
+ "westfoxtrot/ccd60": {
+  "files": [
+   {
+    "first_line": "Attribution-ShareAlike 4.0 International",
+    "licence": "CC-BY-SA-4.0",
+    "path": "license.md",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "westfoxtrot/ccd60",
+  "status": "ok",
+  "truncated": false
+ },
+ "westfoxtrot/cyclops_pcb": {
+  "files": [
+   {
+    "first_line": "Attribution-ShareAlike 4.0 International",
+    "licence": "CC-BY-SA-4.0",
+    "path": "license.md",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "westfoxtrot/cyclops_pcb",
+  "status": "ok",
+  "truncated": false
+ },
+ "westfoxtrot/cypher_pcb": {
+  "files": [
+   {
+    "first_line": "Attribution-ShareAlike 4.0 International",
+    "licence": "CC-BY-SA-4.0",
+    "path": "license.md",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "westfoxtrot/cypher_pcb",
+  "status": "ok",
+  "truncated": false
+ },
+ "weteor/3w6": {
+  "files": [
+   {
+    "first_line": "Copyright (c) 2021 weteor",
+    "licence": "CERN-OHL-S-2.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "weteor/3w6",
+  "status": "ok",
+  "truncated": false
+ },
+ "wongjingping/k34": {
+  "files": [
+   {
+    "first_line": "Creative Commons Legal Code",
+    "licence": "CC0-1.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "wongjingping/k34",
+  "status": "ok",
+  "truncated": false
+ },
+ "worldspawn00/SL40": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   },
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "MX_Alps_Hybrid.pretty/LICENSE",
+    "root": false,
+    "vendored": true
+   }
+  ],
+  "repo": "worldspawn00/SL40",
+  "status": "ok",
+  "truncated": false
+ },
+ "yanfali/fruity60": {
+  "files": [
+   {
+    "first_line": "Attribution-NonCommercial-ShareAlike 4.0 International",
+    "licence": "CC-BY-NC-SA-4.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "yanfali/fruity60",
+  "status": "ok",
+  "truncated": false
+ },
+ "yanghu/unicorne": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "yanghu/unicorne",
+  "status": "ok",
+  "truncated": false
+ },
+ "yangpicui/ergonomicverticalkeyboard": {
+  "files": [
+   {
+    "first_line": "## ODC Open Database License (ODbL)",
+    "licence": "ODbL-1.0",
+    "path": "License.txt",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "yangpicui/ergonomicverticalkeyboard",
+  "status": "ok",
+  "truncated": false
+ },
+ "yatara-cc/drink-me": {
+  "files": [
+   {
+    "first_line": "GNU GENERAL PUBLIC LICENSE",
+    "licence": "GPL-3.0",
+    "path": "LICENCE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "yatara-cc/drink-me",
+  "status": "ok",
+  "truncated": false
+ },
+ "yiancar/gingham_pcb": {
+  "files": [
+   {
+    "first_line": "Gingham is licensed under the Creative Commons Attribution-NonCommercial 4.0 International",
+    "licence": "CC-BY-NC-4.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "yiancar/gingham_pcb",
+  "status": "ok",
+  "truncated": false
+ },
+ "yossiyossy/majistic": {
+  "files": [],
+  "repo": "yossiyossy/majistic",
+  "status": "ok",
+  "truncated": false
+ },
+ "zigotica/mechanical-keyboards": {
+  "files": [],
+  "repo": "zigotica/mechanical-keyboards",
+  "status": "ok",
+  "truncated": false
+ },
+ "zk-phi/1x2x3-keyboard": {
+  "files": [
+   {
+    "first_line": "CC BY-NC-SA 4.0",
+    "licence": "unclassified",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "zk-phi/1x2x3-keyboard",
+  "status": "ok",
+  "truncated": false
+ },
+ "zmkfirmware/zmk-uno": {
+  "files": [
+   {
+    "first_line": "CERN Open Hardware Licence Version 2 - Weakly Reciprocal",
+    "licence": "CERN-OHL-S-2.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "zmkfirmware/zmk-uno",
+  "status": "ok",
+  "truncated": false
+ },
+ "zykrah/fuyu": {
+  "files": [
+   {
+    "first_line": "CERN Open Hardware Licence Version 2 - Strongly Reciprocal",
+    "licence": "CERN-OHL-S-2.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   },
+   {
+    "first_line": "CERN Open Hardware Licence Version 2 - Permissive",
+    "licence": "CERN-OHL-S-2.0",
+    "path": "marbastlib/LICENSE",
+    "root": false,
+    "vendored": false
+   }
+  ],
+  "repo": "zykrah/fuyu",
+  "status": "ok",
+  "truncated": false
+ },
+ "zykrah/slime88": {
+  "files": [
+   {
+    "first_line": "CERN Open Hardware Licence Version 2 - Strongly Reciprocal",
+    "licence": "CERN-OHL-S-2.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "zykrah/slime88",
+  "status": "ok",
+  "truncated": false
+ },
+ "zzeneg/pica40": {
+  "files": [
+   {
+    "first_line": "GNU GENERAL PUBLIC LICENSE",
+    "licence": "GPL-2.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "zzeneg/pica40",
+  "status": "ok",
+  "truncated": false
+ },
+ "zzeneg/stront": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "zzeneg/stront",
+  "status": "ok",
+  "truncated": false
+ }
+}

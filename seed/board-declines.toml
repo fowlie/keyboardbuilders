@@ -1,0 +1,144 @@
+# seed/board-declines.toml -- board-sets a human has ruled are not a design of their own,
+# though their repo stays confirmed for the designs it does hold.
+#
+# `seed/declines.toml` rules out a firmware RECORD (a tree/id pair) before it ever gets
+# a sources.toml row -- the right shape for "this record names hardware that is not a
+# keyboard". It has no way to say "this ONE board file in an otherwise-good repo is not
+# its own design", because Half B does not mint from records at all -- it mints from
+# board-SETS, which have no (tree, id) to hang a ruling on.
+#
+# Backlog #89 is why this exists. `joric/jorne` holds three real Jorne PCB revisions
+# (Classic 2.1, Cherry 2.1, Cherry 3.0 -- see seed/boards.toml and seed/names.toml) and
+# one more board-set, `corne-cherry/pcb_wl/{left,right}` -- a wireless variant, real
+# hardware, matching Jorne's own declared 44-key count, that Half B independently mints
+# once `build_seed.py`'s fork-ancestor check stops wrongly refusing the whole repo. It
+# is not in the repo's own README's PCB list, and the owner's ruling was to decline it
+# rather than publish it under a guessed name -- not because it is fake, but because
+# nobody has confirmed what it actually is.
+#
+# KEYED BY (repo, path) -- one of a board-set's own file paths is enough to match it,
+# since a board-set is decided by grouping paths together, not by a name a person can
+# type without re-deriving it. `path` is any ONE file in the set, verbatim, as
+# `data/board-scan.json` writes it.
+#
+# `verdict = "confirmed"` is the only value the build reads. Anything else is a
+# proposal nobody has ruled on and is treated as if this file did not mention the row.
+
+[[entry]]
+repo     = "joric/jorne"
+path     = "corne-cherry/pcb_wl/left/corne-cherry-left.kicad_pcb"
+verdict  = "confirmed"
+reason   = "not-in-the-readme"
+note     = "Backlog #89, 2026-09-11. Real hardware, matches Jorne's declared 44-key count, but absent from the repo's own README (which names only Classic 2.1, Cherry 2.1, Cherry 3.0) -- so what this wireless variant actually is has not been confirmed. Declined rather than published under a guessed name."
+
+# ibnuda/squiggle, 2026-09-26. Two board files the README never names, both placing the
+# Standard's 17 footprints with NO DIODES (no-diode adds a reset button): a direct-wired
+# hand, which upstream's rev1 -- a 4x5 COL2ROW diode matrix -- cannot drive, so Half B's
+# count match would publish them with firmware and wiring they do not have. Declined on
+# #89's rule rather than published under a guessed name.
+[[entry]]
+repo     = "ibnuda/squiggle"
+path     = "no-diode/squiggle-no-diode.kicad_pcb"
+verdict  = "confirmed"
+reason   = "not-in-the-readme"
+note     = "17 switches, 0 diodes, a SW_PUSH_6mm; absent from the README's five variants, and no firmware record in the repo's links describes a diodeless hand."
+
+[[entry]]
+repo     = "ibnuda/squiggle"
+path     = "nodiodes/nodiodes.kicad_pcb"
+verdict  = "confirmed"
+reason   = "not-in-the-readme"
+note     = "the same diodeless 17-switch hand under its own `nodiodes:` library, without the reset button; absent from the README."
+
+# yanghu/unicorne, 2026-09-28. The repo's README is the Unicorne alone (MX, one piece,
+# STM32F411). `choc/korris/` is a second board with no readme, photo or firmware of its
+# own: 44 Choc footprints, an STM32F072, and a snap-apart split -- mouse bites on the
+# centre line x=132.8, MCU and USB-C on the left, an MCP23017 on the right, one TRRS jack
+# either side of the cut. It had published as `korris` with the Unicorne's photo, the
+# Unicorne's F411 firmware record, and a `unibody` ruling in seed/bodies.toml that read
+# those two jacks as a mis-citation (ticket 55). Every field it had was either borrowed or
+# wrong, so the owner's call was to decline it rather than correct it.
+[[entry]]
+repo     = "yanghu/unicorne"
+path     = "choc/korris/korris.kicad_pcb"
+verdict  = "confirmed"
+reason   = "not-in-the-readme"
+note     = "2026-09-28, the owner's call. A Ferris-style Choc split (STM32F072 left, MCP23017 right, TRRS, fabbed as one snap-apart panel) the README never names; it had published with the Unicorne's MX photo and F411 firmware."
+
+# joe-scotto/scottokeebs's ScottoModules is a KiCad TEMPLATE project on an STM32F072, not a
+# keyboard: its 6 switches are a demo macropad. Half B minted it and paired it with the
+# ScottoMouse's QMK record, because both count 6 switches and "soldered" didn't contradict
+# -- so it published as a 6-key RP2040 macropad, with ScottoMouse's firmware on a board
+# that runs none. Reported publicly by the designer on the launch thread, 2026-09-29.
+# Same failure as `korris` above: the pairing checks key count and controller KIND, never
+# the MCU the board actually places.
+[[entry]]
+repo     = "joe-scotto/scottokeebs"
+path     = "Extras/ScottoModules/STM32F072CBT6/ScottoModules.kicad_pcb"
+verdict  = "confirmed"
+reason   = "not-a-keyboard"
+note     = "2026-09-29, the designer's own report (Reddit): a KiCad template on an STM32, no layout; the 6-key macropad is only its demo. Had published as a 6-key RP2040 board with ScottoMouse's firmware."
+
+# TweetyDaBird/Fat-Chameleon keeps every PCB revision side by side under PCB/v1.xx/, and
+# Half B minted each old one as its own design -- "Chameleon v1 0 v1.00", "v1 0 v1.01",
+# "v1 10", "v1 11" -- beside `chameleon`, which already reads the newest, v1.20. The owner's
+# call 2026-09-29: list the newest revision only. A per-repo ruling, not an answer to
+# ticket 55's general revision question.
+[[entry]]
+repo     = "TweetyDaBird/Fat-Chameleon"
+path     = "PCB/v1.00/Chameleon v1_0.kicad_pcb"
+verdict  = "confirmed"
+reason   = "older-revision"
+note     = "2026-09-29, the owner's call: an older PCB revision of Chameleon, which lists v1.20 only."
+
+[[entry]]
+repo     = "TweetyDaBird/Fat-Chameleon"
+path     = "PCB/v1.01/Chameleon v1_0.kicad_pcb"
+verdict  = "confirmed"
+reason   = "older-revision"
+note     = "2026-09-29, the owner's call: an older PCB revision of Chameleon, which lists v1.20 only."
+
+[[entry]]
+repo     = "TweetyDaBird/Fat-Chameleon"
+path     = "PCB/v1.10/Chameleon v1_10.kicad_pcb"
+verdict  = "confirmed"
+reason   = "older-revision"
+note     = "2026-09-29, the owner's call: an older PCB revision of Chameleon, which lists v1.20 only."
+
+[[entry]]
+repo     = "TweetyDaBird/Fat-Chameleon"
+path     = "PCB/v1.11/Chameleon v1_11.kicad_pcb"
+verdict  = "confirmed"
+reason   = "older-revision"
+note     = "2026-09-29, the owner's call: an older PCB revision of Chameleon, which lists v1.20 only."
+
+
+# etiennecollin/wave holds the Wave twice: pcbs/main/wave_pcb.kicad_pcb with straight
+# traces, and pcbs/main/rounded/ with the same outline and footprints but traces routed as
+# arcs. They had published as `wave` and `wave-rounded`. One keyboard, so one design: the
+# rounded board, which the README shows (seed/boards.toml). The owner's call 2026-09-29.
+[[entry]]
+repo     = "etiennecollin/wave"
+path     = "pcbs/main/wave_pcb.kicad_pcb"
+verdict  = "confirmed"
+reason   = "older-revision"
+note     = "2026-09-29, the owner's call: the straight-trace twin of the rounded board Wave now reads. Same outline, same 28 footprints; only the trace routing differs."
+
+# horrortroll/keebproj, 2026-10-02 (backlog #106). paws60 rev2 is an RP2040 board that had
+# been folded into rev1's ATmega32U4 design by a `tied` attribution. Split, it would
+# publish as a board nobody has built, with no firmware anywhere.
+[[entry]]
+repo     = "horrortroll/keebproj"
+path     = "paws60/pcb/rev2/paws60.kicad_pcb"
+verdict  = "confirmed"
+reason   = "never-built"
+note     = "2026-10-02, the owner's call. The author's own readme (paws60/readme.md): \"This board not have prototyped for Rev 2 yet! Only Rev 1 was been printed and used.\" No firmware for it in the repo or upstream QMK. Remove this row if a rev2 is built."
+
+# lendunistus/rpneko65, 2026-11-10 (Forgejo #79). An RP2040 respin of kkatano/bakeneko-65,
+# which the corpus already publishes as `bakeneko-65`.
+[[entry]]
+repo     = "lendunistus/rpneko65"
+path     = "pcb/rp2040-bakeneko65.kicad_pcb"
+verdict  = "confirmed"
+reason   = "author-advises-against"
+note     = "2026-09-28, the owner's call on #79, carried out 2026-11-10. The author's own readme, line 3 at HEAD: \"This revision has several flaws. I do not recommend actually getting this manufactured. A second revision is currently work-in-progress in the rev2 branch.\" Remove this row if rev2 reaches main."

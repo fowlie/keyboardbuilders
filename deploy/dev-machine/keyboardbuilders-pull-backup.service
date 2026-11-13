@@ -1,0 +1,10 @@
+# Installed as a USER unit on the dev machine (no cron daemon on Arch). See
+# deploy/dev-machine/pull-backup.sh for why, and deploy/README.md for the install lines.
+[Unit]
+Description=Copy the keyboardbuilders database backup off the VPS
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=%h/code/keyboardbuilders/deploy/dev-machine/pull-backup.sh

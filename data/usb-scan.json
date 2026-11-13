@@ -1,0 +1,4071 @@
+{
+ "3w6": {
+  "controller": "soldered",
+  "files": {
+   "pcb/3w6/3W6.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 3
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "usb_c"
+  ]
+ },
+ "3x3macropad": {
+  "controller": "socket",
+  "files": {
+   "PCB-Files/PCB/PCB.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "3x5-2-dilemma": {
+  "controller": "socket",
+  "files": {
+   "3x5_2/dilemma.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "3x5-3-dilemma": {
+  "controller": "soldered",
+  "files": {
+   "3x5_3/dilemma.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 2
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "usb_c"
+  ]
+ },
+ "3x5-3-procyon-dilemma": {
+  "controller": "soldered",
+  "files": {
+   "3x5_3_procyon/dilemma.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 2
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "usb_c"
+  ]
+ },
+ "41-1350": {
+  "controller": "socket",
+  "files": {
+   "revlp/41_1350/41_1350_pcb/41_1350_pcb.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "41-1353-r41l2": {
+  "controller": "socket",
+  "files": {
+   "revlp/41_1353/41_1353_pcb/r41l2.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "42": {
+  "controller": "socket",
+  "files": {
+   "pcb/kicad/pcb.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "45": {
+  "controller": "soldered",
+  "files": {
+   "45_keyboard/45_keyboard.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "4by3": {
+  "controller": "socket",
+  "files": {
+   "pcb/4by3.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "4x6-4-dilemma": {
+  "controller": "soldered",
+  "files": {
+   "4x6_4/dilemma.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 2
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "usb_c"
+  ]
+ },
+ "67-e": {
+  "controller": "soldered",
+  "files": {
+   "pcb/67_E.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "usb_c"
+  ]
+ },
+ "8pack": {
+  "controller": "socket",
+  "files": {
+   "keypad/8keysimplev3/8pack.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "abacus": {
+  "controller": "socket",
+  "files": {
+   "AbacusPCB/AbacusPCB.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "adalyn": {
+  "controller": "soldered",
+  "files": {
+   "PCB/Adalyn.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "usb_c"
+  ]
+ },
+ "adelheid": {
+  "controller": "soldered",
+  "files": {
+   "pcb/adelheid.kicad_pcb": {
+    "receptacles": {
+     "mini_b": 1
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "mini_b"
+  ]
+ },
+ "aek2-usb": {
+  "controller": "soldered",
+  "files": {
+   "aek2_usb.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "ajisai74": {
+  "controller": "socket",
+  "files": {
+   "AJisai74/BM_L/AJ_BM_L.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   },
+   "AJisai74/BM_R/AJ_BM_R.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   },
+   "AJisai74/Mid_L/AJ_Mid_L.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   },
+   "AJisai74/Mid_R/AJ_Mid_R.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "anavi-arrows": {
+  "controller": "socket",
+  "files": {
+   "anavi-arrows.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "anavi-macro-pad-10": {
+  "controller": "socket",
+  "files": {
+   "anavi-macro-pad-10.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "anavi-macro-pad-12": {
+  "controller": "socket",
+  "files": {
+   "anavi-macro-pad-12.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "andean-condor": {
+  "controller": "socket",
+  "files": {
+   "andean-condor.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "architeuthis-dux": {
+  "controller": "socket",
+  "files": {
+   "Architeuthis dux/architeuthis_dux.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "arisu": {
+  "controller": "soldered",
+  "files": {
+   "arisu.kicad_pcb": {
+    "receptacles": {
+     "micro_b": 1
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "micro_b"
+  ]
+ },
+ "atom47-rev5": {
+  "controller": "soldered",
+  "files": {
+   "pcb-files/rev5/atom47-rev5.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {
+     "Keeb_components:USBLC6-2SC6": 1
+    }
+   }
+  },
+  "usb": []
+ },
+ "atom47-rev5-c": {
+  "controller": "soldered",
+  "files": {
+   "pcb-files/rev5-c/atom47-rev5-c.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {
+     "Keeb_components:USBLC6-2SC6": 1
+    }
+   }
+  },
+  "usb": [
+   "usb_c"
+  ]
+ },
+ "atreyu": {
+  "controller": "socket",
+  "files": {
+   "pcb/v1/atreyu-pcb2.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   },
+   "pcb/v2/atreyu-pcb2.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "atreyu-v2-choc": {
+  "controller": "socket",
+  "files": {
+   "pcb/v2-choc/v2-choc.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "avalanche-hotswap": {
+  "controller": "socket",
+  "files": {
+   "pcb/avalanche-hotswap.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "axon": {
+  "controller": "soldered",
+  "files": {
+   "axon_pcb/axon_pcb.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "usb_c"
+  ]
+ },
+ "aya": {
+  "controller": "socket",
+  "files": {
+   "hardware/aya.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "bad-wings-bold": {
+  "controller": "socket",
+  "files": {
+   "bold/source/bad_wings_bold.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "bad-wings-slim": {
+  "controller": "socket",
+  "files": {
+   "slim/source/bad_wings_slim.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "badge": {
+  "controller": "socket",
+  "files": {
+   "badge/badge.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "bakeneko-65": {
+  "controller": "soldered",
+  "files": {
+   "pcb/bakeneko-65-pcb.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "banime40": {
+  "controller": "socket",
+  "files": {
+   "pcb/banime40/banime40.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "barracuda": {
+  "controller": "soldered",
+  "files": {
+   "pcb/barracuda/barracuda.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "bartlepslit": {
+  "controller": "socket",
+  "files": {
+   "bartlepslit.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "base-ferris": {
+  "controller": "soldered",
+  "files": {
+   "0.1/base/ferris.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "usb_c"
+  ]
+ },
+ "basketweave": {
+  "controller": "soldered",
+  "files": {
+   "basketweave/basketweave.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "usb_c"
+  ]
+ },
+ "bevi": {
+  "controller": "socket",
+  "files": {
+   "bevi.kicad_pcb": {
+    "receptacles": {
+     "mini_b": 1
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "mini_b"
+  ]
+ },
+ "bfo-9000": {
+  "controller": "socket",
+  "files": {
+   "bfo9000.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 2
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "usb_c"
+  ]
+ },
+ "bling-ferris": {
+  "controller": "soldered",
+  "files": {
+   "0.2/bling/ferris.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "usb_c"
+  ]
+ },
+ "blue-team-pad": {
+  "controller": "soldered",
+  "files": {
+   "PCB/BlueTeamPad/BlueTeamPad.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "usb_c"
+  ]
+ },
+ "bm42": {
+  "controller": "soldered",
+  "files": {
+   "pcb/bm42.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "usb_c"
+  ]
+ },
+ "bto-layout": {
+  "controller": "socket",
+  "files": {
+   "ADKB96-PCB/BTO_Layout.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "buzzard": {
+  "controller": "socket",
+  "files": {
+   "PCB/Buzzard/Buzzard.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "bw2-v2": {
+  "controller": "soldered",
+  "files": {
+   "v2/source/bw2.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "usb_c"
+  ]
+ },
+ "cantor": {
+  "controller": "socket",
+  "files": {
+   "Cantor_Classic/keyboard_pcb-rounded.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   },
+   "Cantor_Classic/keyboard_pcb.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "cantor-remix": {
+  "controller": "socket",
+  "files": {
+   "pcb/keyboard_pcb.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "ccd60": {
+  "controller": "soldered",
+  "files": {
+   "ccd60.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "usb_c"
+  ]
+ },
+ "chameleon": {
+  "controller": "soldered",
+  "files": {
+   "PCB/v1.20/Chameleon.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "usb_c"
+  ]
+ },
+ "chameleon-v1-0-v1-00": {
+  "controller": "soldered",
+  "files": {
+   "PCB/v1.00/Chameleon v1_0.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "usb_c"
+  ]
+ },
+ "chameleon-v1-0-v1-01": {
+  "controller": "soldered",
+  "files": {
+   "PCB/v1.01/Chameleon v1_0.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "usb_c"
+  ]
+ },
+ "chameleon-v1-10": {
+  "controller": "soldered",
+  "files": {
+   "PCB/v1.10/Chameleon v1_10.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "usb_c"
+  ]
+ },
+ "chameleon-v1-11": {
+  "controller": "soldered",
+  "files": {
+   "PCB/v1.11/Chameleon v1_11.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "usb_c"
+  ]
+ },
+ "cheapino": {
+  "controller": "socket",
+  "files": {
+   "pcb/cheapino.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "choc-ergo-travel": {
+  "controller": "socket",
+  "files": {
+   "PCB_Choc/ErgoTravel.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "choc-led-ergo-travel": {
+  "controller": "socket",
+  "files": {
+   "PCB_Choc_LED/ErgoTravel.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "choc-rgb-ergo-travel": {
+  "controller": "socket",
+  "files": {
+   "PCB_Choc_RGB/ErgoTravel.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "choc-v": {
+  "controller": "socket",
+  "files": {
+   "kicad/chocV/chocV.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "choc-v2-env-kb65": {
+  "controller": "socket",
+  "files": {
+   "MainPCB-ChocV2/EnvKB65.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "chocofly": {
+  "controller": "socket",
+  "files": {
+   "pcb/chocofly.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   },
+   "pcb/chocofly_fz.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   },
+   "pcb/chocofly_roundtracks_filledzones.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "chocolatebar": {
+  "controller": "soldered",
+  "files": {
+   "v2_kicad/chocolatebar.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "usb_c"
+  ]
+ },
+ "chouchou": {
+  "controller": "socket",
+  "files": {
+   "kicad/chouchou.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "clog": {
+  "controller": "socket",
+  "files": {
+   "pcb/clog.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "compact-ferris-0-1": {
+  "controller": "soldered",
+  "files": {
+   "0.1/compact/ferris.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "usb_c"
+  ]
+ },
+ "compact-ferris-0-2": {
+  "controller": "soldered",
+  "files": {
+   "0.2/compact/ferris.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "usb_c"
+  ]
+ },
+ "contender": {
+  "controller": "soldered",
+  "files": {
+   "contender.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "usb_c"
+  ]
+ },
+ "contra": {
+  "controller": "socket",
+  "files": {
+   "Contra.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "corne-cherry": {
+  "controller": "soldered",
+  "files": {
+   "pcbs/corne-cherry/hotswap/corne-cherry.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 2
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "usb_c"
+  ]
+ },
+ "corne-chocolate": {
+  "controller": "soldered",
+  "files": {
+   "pcbs/corne-chocolate/hotswap/corne-chocolate.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 2
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "usb_c"
+  ]
+ },
+ "cornia": {
+  "controller": "socket",
+  "files": {
+   "PCB/cornia.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "cradio": {
+  "controller": "socket",
+  "files": {
+   "34Keys/Cradio S/cradio.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   },
+   "34Keys/Cradio/cradio.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "cradio-ble": {
+  "controller": "socket",
+  "files": {
+   "34Keys/Cradio BLE/cradio-ble.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "cradio-f": {
+  "controller": "socket",
+  "files": {
+   "34Keys/Cradio F/cradio-f.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "cradio-mb": {
+  "controller": "socket",
+  "files": {
+   "34Keys/Cradio (mindbend)/cradio-mb.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "cradio-z": {
+  "controller": "socket",
+  "files": {
+   "34Keys/Cradio-Z/cradio-z.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "cradio10": {
+  "controller": "socket",
+  "files": {
+   "34Keys/Cradio 10/cradio10.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "craftwalk": {
+  "controller": "socket",
+  "files": {
+   "craftwalk.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "cyclops": {
+  "controller": "soldered",
+  "files": {
+   "cyclops.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "cypher": {
+  "controller": "soldered",
+  "files": {
+   "cypher.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "usb_c"
+  ]
+ },
+ "desire65": {
+  "controller": "soldered",
+  "files": {
+   "kicad8/desire65.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "discipad": {
+  "controller": "soldered",
+  "files": {
+   "discipad-pcb.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "usb_c"
+  ]
+ },
+ "discipline": {
+  "controller": "soldered",
+  "files": {
+   "discipline-pcb.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "usb_c"
+  ]
+ },
+ "dizzy40": {
+  "controller": "soldered",
+  "files": {
+   "pcb/dizzy40.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "usb_c"
+  ]
+ },
+ "dk60": {
+  "controller": "soldered",
+  "files": {
+   "DK60/Kicad/DK60.kicad_pcb": {
+    "receptacles": {
+     "mini_b": 1
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "mini_b"
+  ]
+ },
+ "dogtag": {
+  "controller": "socket",
+  "files": {
+   "kicad/dogtag.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "dolphin": {
+  "controller": "soldered",
+  "files": {
+   "dolphin.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "usb_c"
+  ]
+ },
+ "pancake-v1": {
+  "controller": "socket",
+  "files": {
+   "Keyboards/Pancake/V1/kicad/dropin.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "pancake-v2": {
+  "controller": "soldered",
+  "files": {
+   "Keyboards/Pancake/V2/kicad/dropin.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "usb_c"
+  ]
+ },
+ "dropout": {
+  "controller": "socket",
+  "files": {
+   "pcb/dropout.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "egg58v2": {
+  "controller": "socket",
+  "files": {
+   "egg58bt/egg58v2.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   },
+   "egg58v2/egg58v2.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "elcantorhs": {
+  "controller": "socket",
+  "files": {
+   "ELCANTORHS.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "elephant42": {
+  "controller": "socket",
+  "files": {
+   "pcb/elephant42.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "eliza": {
+  "controller": "soldered",
+  "files": {
+   "pcb/Eliza.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "usb_c"
+  ]
+ },
+ "endzone34": {
+  "controller": "socket",
+  "files": {
+   "kicad/endzone34.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "env-kb60-mxhs": {
+  "controller": "socket",
+  "files": {
+   "KiCad Files/MainPCB_MX_HS/Env-KB60MXHS.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "usb_c"
+  ]
+ },
+ "env-mcro": {
+  "controller": "socket",
+  "files": {
+   "MainPCB_MX/EnvMCRO.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   },
+   "MainPCB_ULP/EnvMCRO.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "env-rgb": {
+  "controller": "socket",
+  "files": {
+   "KiCad Files/MainPCB_RGB-HS/ENV_KB_RGB.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "usb_c"
+  ]
+ },
+ "equanimity": {
+  "controller": "soldered",
+  "files": {
+   "Kicad Files/Alice Keyboard.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "ergo33": {
+  "controller": "soldered",
+  "files": {
+   "ergo33/ergo33.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "usb_c"
+  ]
+ },
+ "ergodash": {
+  "controller": "socket",
+  "files": {
+   "PCB/Rev.1.1/ergodash.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   },
+   "PCB/Rev.1/ergodash.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   },
+   "PCB/Rev1.2/ergodash.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   },
+   "mini/PCB/ergodash.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "ergoslab": {
+  "controller": "socket",
+  "files": {
+   "pcb/ergoslab.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "eternal-keypad": {
+  "controller": "socket",
+  "files": {
+   "pcb-kicad/eternal-keypad.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "euisopcb": {
+  "controller": "soldered",
+  "files": {
+   "EUISOpcb.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "usb_c"
+  ]
+ },
+ "fnrow": {
+  "controller": "soldered",
+  "files": {
+   "fnrow/fnrow.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "usb_c"
+  ]
+ },
+ "for-science": {
+  "controller": "socket",
+  "files": {
+   "for-science.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "fourier": {
+  "controller": "socket",
+  "files": {
+   "fourier/fourier-left/fourier-left.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   },
+   "fourier/fourier-right/fourier-right.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "frankie-macropad": {
+  "controller": "soldered",
+  "files": {
+   "macropad.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "friedrich": {
+  "controller": "soldered",
+  "files": {
+   "PCB/FriedrichPCB.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "frooastboard-nano": {
+  "controller": "soldered",
+  "files": {
+   "Frooastboard Nano/KiCad Project/Frooastboard Nano.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "usb_c"
+  ]
+ },
+ "fruity60": {
+  "controller": "socket",
+  "files": {
+   "fruity60/fruity60.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "g35": {
+  "controller": "soldered",
+  "files": {
+   "PCB/G35.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "usb_c"
+  ]
+ },
+ "game-hand": {
+  "controller": "soldered",
+  "files": {
+   "pcb/GameHand.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "usb_c"
+  ]
+ },
+ "gh80-1800": {
+  "controller": "soldered",
+  "files": {
+   "GH80-1800/PCB/gh80-1800.kicad_pcb": {
+    "receptacles": {
+     "mini_b": 3
+    },
+    "unclassified": {
+     "Keeb_components:USB_breakout": 1
+    }
+   }
+  },
+  "usb": [
+   "mini_b"
+  ]
+ },
+ "gh80-3700": {
+  "controller": "soldered",
+  "files": {
+   "GH80-3700/PCB/gh80-3700.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {
+     "Keeb_components:USBLC6-2SC6": 1,
+     "Keeb_components:USB_breakout": 1
+    }
+   }
+  },
+  "usb": [
+   "usb_c"
+  ]
+ },
+ "glyphkbd": {
+  "controller": "soldered",
+  "files": {
+   "v2/PCB/glyph-rounded.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   },
+   "v2/PCB/glyph.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "grooveboard-atmel-au": {
+  "controller": "soldered",
+  "files": {
+   "grooveboard-atmel-au/grooveboard-atmel-au.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "usb_c"
+  ]
+ },
+ "grooveboard-atmel-mu": {
+  "controller": "soldered",
+  "files": {
+   "grooveboard-atmel-mu/grooveboard-atmel-mu.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "usb_c"
+  ]
+ },
+ "grooveboard-choc-atmel-au": {
+  "controller": "soldered",
+  "files": {
+   "grooveboard-choc-atmel-au/grooveboard-choc-atmel-au.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "usb_c"
+  ]
+ },
+ "grooveboard-choc-atmel-mu": {
+  "controller": "soldered",
+  "files": {
+   "grooveboard-choc-atmel-mu/grooveboard-choc-atmel-mu.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "usb_c"
+  ]
+ },
+ "grooveboard-choc-rp": {
+  "controller": "soldered",
+  "files": {
+   "grooveboard-choc-rp/grooveboard-choc-rp.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "usb_c"
+  ]
+ },
+ "grooveboard-mx-atmel-au": {
+  "controller": "soldered",
+  "files": {
+   "grooveboard-mx-atmel-au/grooveboard-mx-atmel-au.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "usb_c"
+  ]
+ },
+ "grooveboard-mx-atmel-mu": {
+  "controller": "soldered",
+  "files": {
+   "grooveboard-mx-atmel-mu/grooveboard-mx-atmel-mu.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "usb_c"
+  ]
+ },
+ "grooveboard-mx-rp": {
+  "controller": "soldered",
+  "files": {
+   "grooveboard-mx-rp/grooveboard-mx-rp.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "usb_c"
+  ]
+ },
+ "grooveboard-rp": {
+  "controller": "soldered",
+  "files": {
+   "grooveboard-rp/grooveboard-rp.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "usb_c"
+  ]
+ },
+ "gud70": {
+  "controller": "soldered",
+  "files": {
+   "pcb-files/gud70.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {
+     "Keeb_components:USBLC6-2SC6": 1
+    }
+   }
+  },
+  "usb": []
+ },
+ "guide68-assemble": {
+  "controller": "socket",
+  "files": {
+   "Guide68/Assemble_L/Guide68_Assemble_L.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   },
+   "Guide68/Assemble_R/Guide68_Assemble_R.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "gummy-key": {
+  "controller": "socket",
+  "files": {
+   "pcbs/left/GummyKey_Left.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   },
+   "pcbs/right/GummyKey_Right.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "helix": {
+  "controller": "socket",
+  "files": {
+   "PCB/beta/helix.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "high-ferris-0-1": {
+  "controller": "soldered",
+  "files": {
+   "0.1/high/ferris.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "usb_c"
+  ]
+ },
+ "high-ferris-0-2": {
+  "controller": "soldered",
+  "files": {
+   "0.2/high/ferris.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "usb_c"
+  ]
+ },
+ "hillside-48": {
+  "controller": "socket",
+  "files": {
+   "hillside48/hillside.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "hillside-46": {
+  "controller": "socket",
+  "files": {
+   "hillside46/hillside46.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "hillside-52": {
+  "controller": "socket",
+  "files": {
+   "hillside52/hillside52.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "hnah40-atmega328p-v1": {
+  "controller": "soldered",
+  "files": {
+   "Hnah40-Atmega328p/PCB_V1/PCB/PCB.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "usb_c"
+  ]
+ },
+ "horizon-choc": {
+  "controller": "socket",
+  "files": {
+   "kicad/choc/horizon-choc.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "horizon-mx": {
+  "controller": "socket",
+  "files": {
+   "kicad/mx/horizon-mx.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "hotswap-rgb-dumbpad": {
+  "controller": "socket",
+  "files": {
+   "hotswap_rgb/dumbpad.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "hub20": {
+  "controller": "soldered",
+  "files": {
+   "hardware/0.1/Hub20.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 4
+    },
+    "unclassified": {}
+   },
+   "hardware/0.2/Hub20.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 4
+    },
+    "unclassified": {}
+   },
+   "hardware/1.0.1/Hub20.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 4
+    },
+    "unclassified": {}
+   },
+   "hardware/1.0/Hub20.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 4
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "usb_c"
+  ]
+ },
+ "index-tab": {
+  "controller": "soldered",
+  "files": {
+   "kicad/index-tab.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "usb_c"
+  ]
+ },
+ "isometria-75-iso": {
+  "controller": "soldered",
+  "files": {
+   "isometria-75-pcb-iso/isometria-75-pcb-iso.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "janus": {
+  "controller": "socket",
+  "files": {
+   "kicad/mx/janus.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "jiran-cherry": {
+  "controller": "socket",
+  "files": {
+   "jiran-cherry/jiran-cherry.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "jiran-classic": {
+  "controller": "socket",
+  "files": {
+   "jiran-classic/jiran-classic.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "jiran-hotswap": {
+  "controller": "socket",
+  "files": {
+   "jiran-hotswap/jiran-hotswap.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "jorne-cherry-2-1": {
+  "controller": "socket",
+  "files": {
+   "corne-cherry/pcb/corne-cherry.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "jorne-cherry-3-0": {
+  "controller": "socket",
+  "files": {
+   "corne-cherry/pcb_v3/corne-cherry.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "jorne-classic-2-1": {
+  "controller": "socket",
+  "files": {
+   "corne-classic/pcb/corne-classic.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "jp60": {
+  "controller": "soldered",
+  "files": {
+   "JP60.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "usb_c"
+  ]
+ },
+ "juliet": {
+  "controller": "socket",
+  "files": {
+   "juliet-pcb.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "junco": {
+  "controller": "socket",
+  "files": {
+   "PCB/Junco.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "k34": {
+  "controller": "socket",
+  "files": {
+   "k34/k34.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "kaly": {
+  "controller": "socket",
+  "files": {
+   "KalyPCB/KalyPCB.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   },
+   "KalyPCB/Steps/EdgesKalyPcb.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   },
+   "KalyPCB/Steps/ErgogenKalyPcb.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   },
+   "KalyPCB/Steps/MascotEvolution.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "kapl": {
+  "controller": "socket",
+  "files": {
+   "pcb/Kapl.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "karina": {
+  "controller": "soldered",
+  "files": {
+   "KiCad-PCB/keyboard.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "karn": {
+  "controller": "socket",
+  "files": {
+   "pcbs/karn-left/karn-left.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   },
+   "pcbs/karn-right/karn-right.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "karn-2": {
+  "controller": "socket",
+  "files": {
+   "pcbs/karn-2/karn-2.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "karn-3": {
+  "controller": "socket",
+  "files": {
+   "pcbs/karn-3/karn-3.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "kb58-pico": {
+  "controller": "socket",
+  "files": {
+   "pcb/kb58_pico.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "kbd-template": {
+  "controller": "socket",
+  "files": {
+   "kicad/kbd-template.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "kbic65": {
+  "controller": "socket",
+  "files": {
+   "kicad/pcb/kbic65.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "keaboard-rev1": {
+  "controller": "socket",
+  "files": {
+   "PCB/keaboard_rev1/keaboard_rev1.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "keyboar-layout": {
+  "controller": "socket",
+  "files": {
+   "Splite-Keyboard-v2/Keyboar-layout.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "kintsugi": {
+  "controller": "socket",
+  "files": {
+   "kintsugi.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "klor": {
+  "controller": "socket",
+  "files": {
+   "PCB/klor1_3/klor1_3.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "kobold": {
+  "controller": "soldered",
+  "files": {
+   "Kobold/R1/Kobold.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "usb_c"
+  ]
+ },
+ "koca58": {
+  "controller": "soldered",
+  "files": {
+   "PCB/Koca58.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 2
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "usb_c"
+  ]
+ },
+ "korris": {
+  "controller": "soldered",
+  "files": {
+   "choc/korris/korris.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "usb_c"
+  ]
+ },
+ "kuro65": {
+  "controller": "soldered",
+  "files": {
+   "kusabimaru/kuro65.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "usb_c"
+  ]
+ },
+ "la-nc": {
+  "controller": "socket",
+  "files": {
+   "pcb/la_nc.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "lagom": {
+  "controller": "socket",
+  "files": {
+   "PCB/lagom.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "lancer-hotswap": {
+  "controller": "socket",
+  "files": {
+   "pcb-hotswap/lancer-hotswap.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "largelad": {
+  "controller": "socket",
+  "files": {
+   "largelad.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "layout-jopr": {
+  "controller": "soldered",
+  "files": {
+   "keyboard_layout_jopr.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "lck75": {
+  "controller": "soldered",
+  "files": {
+   "LCK75gerbers&parts/LCK75.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "usb_c"
+  ]
+ },
+ "lily58": {
+  "controller": "socket",
+  "files": {
+   "pcb/Lily58.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "lily58-lite-rev3": {
+  "controller": "socket",
+  "files": {
+   "Lite_Rev3/Lily58_Lite_Rev3.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "lily58-pro": {
+  "controller": "socket",
+  "files": {
+   "Pro/PCB/Lily58_Pro.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "lime": {
+  "controller": "socket",
+  "files": {
+   "kicad/LimeKeyboard.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "litl": {
+  "controller": "socket",
+  "files": {
+   "PCB/litl.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "lotus58": {
+  "controller": "socket",
+  "files": {
+   "Lotus 58 TRRS/v1.11/Lotus58_Glow_111.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   },
+   "Lotus 58 TRRS/v1.23/Lotus58_Glow_123.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   },
+   "Lotus 58 TRRS/v1.24/Lotus58_Glow_124.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   },
+   "Lotus 58 TRRS/v1.25/Lotus58_Glow_125.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   },
+   "Lotus 58 TRRS/v1.26/Lotus58_Glow_126.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   },
+   "Lotus 58 TRRS/v1.27/Lotus58_Glow_127.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   },
+   "Lotus 58 TRRS/v1.28/Lotus58_Glow_128.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   },
+   "Lotus 58 TRRS/v1.29/Lotus58_Glow_129.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   },
+   "Lotus 58 TRRS/v1.30/Lotus58_Glow_130.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   },
+   "Lotus 58 USB-C/v1.30/Lotus58_Glow_130.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {}
+   },
+   "Lotus 58 USB-C/v1.31/Lotus58_Glow_131.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {}
+   },
+   "Lotus 58 USB-C/v1.32/Lotus58_Glow_132.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {}
+   },
+   "Lotus 58 USB-C/v1.33/Lotus58_Glow_133.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {}
+   },
+   "Lotus 58 USB-C/v1.40/Lotus58_Glow_140.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {}
+   },
+   "Lotus 58 USB-C/v1.41/Lotus58_Glow_141.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {}
+   },
+   "Lotus 58 USB-C/v1.42/Lotus58_Glow_142.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {}
+   },
+   "Lotus 58 USB-C/v1.50/Lotus58_Glow_150.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {}
+   },
+   "Lotus 58 USB-C/v1.51/Lotus58_Glow_151.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "usb_c"
+  ]
+ },
+ "low-ferris": {
+  "controller": "soldered",
+  "files": {
+   "0.1/low/ferris.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "usb_c"
+  ]
+ },
+ "lumberjack": {
+  "controller": "soldered",
+  "files": {
+   "lumberjack.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "usb_c"
+  ]
+ },
+ "m0110a-qmk": {
+  "controller": "soldered",
+  "files": {
+   "m0110a_qmk.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "m0116-usb": {
+  "controller": "soldered",
+  "files": {
+   "m0116_usb.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "m3n3van-rev2": {
+  "controller": "soldered",
+  "files": {
+   "rev2/m3n3van.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "usb_c"
+  ]
+ },
+ "macro3": {
+  "controller": "socket",
+  "files": {
+   "macro3/macro3.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "macrocat": {
+  "controller": "soldered",
+  "files": {
+   "pcb/macrocat.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "usb_c"
+  ]
+ },
+ "madjax-macropad": {
+  "controller": "socket",
+  "files": {
+   "kicad/macropad.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "masonry": {
+  "controller": "soldered",
+  "files": {
+   "pcb/pcb.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "usb_c"
+  ]
+ },
+ "meson": {
+  "controller": "socket",
+  "files": {
+   "PCB/meson.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "mikeneko-65": {
+  "controller": "soldered",
+  "files": {
+   "pcb/kicad/mikeneko-65-pcb.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "milk": {
+  "controller": "socket",
+  "files": {
+   "Keyboards/2% Milk/kicad/milk.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "millipad": {
+  "controller": "soldered",
+  "files": {
+   "millipad/millipad.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "usb_c"
+  ]
+ },
+ "mini-e-li-xi-vy": {
+  "controller": "soldered",
+  "files": {
+   "mini-eLiXiVy.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "usb_c"
+  ]
+ },
+ "mini-ferris": {
+  "controller": "soldered",
+  "files": {
+   "0.2/mini/ferris.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "usb_c"
+  ]
+ },
+ "mini-ten-key-plus": {
+  "controller": "socket",
+  "files": {
+   "mini-ten-key-plus.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "minim": {
+  "controller": "soldered",
+  "files": {
+   "PCB/minim.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "usb_c"
+  ]
+ },
+ "model-b": {
+  "controller": "soldered",
+  "files": {
+   "pcb/model-b/model-b.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "usb_c"
+  ]
+ },
+ "molecule": {
+  "controller": "socket",
+  "files": {
+   "molecule/molecule.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "morizon-choc": {
+  "controller": "socket",
+  "files": {
+   "kicad/choc/morizon-choc.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "morizon-mx": {
+  "controller": "socket",
+  "files": {
+   "kicad/mx/morizon-mx.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "mx-5160": {
+  "controller": "soldered",
+  "files": {
+   "mx-5160/mx-5160.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {
+     "Keeb_components:USBLC6-2SC6": 1
+    }
+   }
+  },
+  "usb": [
+   "usb_c"
+  ]
+ },
+ "mysterium": {
+  "controller": "soldered",
+  "files": {
+   "mysterium-pcb.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "usb_c"
+  ]
+ },
+ "nack": {
+  "controller": "soldered",
+  "files": {
+   "nack_v1/hardware/nack.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {}
+   },
+   "nack_v2/hardware/nack.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "usb_c"
+  ]
+ },
+ "nafuda": {
+  "controller": "socket",
+  "files": {
+   "Nafuda/v1/Kicad/Assemble/Nafuda.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "neopad": {
+  "controller": "socket",
+  "files": {
+   "Neopad.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "noah": {
+  "controller": "soldered",
+  "files": {
+   "noah.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "np12": {
+  "controller": "socket",
+  "files": {
+   "np12.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "nt210": {
+  "controller": "soldered",
+  "files": {
+   "nt-210/nt210.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {
+     "Keeb_components:USBLC6-2SC6": 1
+    }
+   }
+  },
+  "usb": []
+ },
+ "nt750": {
+  "controller": "soldered",
+  "files": {
+   "nt-750/nt750.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {
+     "Keeb_components:USBLC6-2SC6": 1
+    }
+   }
+  },
+  "usb": []
+ },
+ "num-discipline": {
+  "controller": "soldered",
+  "files": {
+   "NumDiscipline-pcb.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "usb_c"
+  ]
+ },
+ "numpad": {
+  "controller": "soldered",
+  "files": {
+   "numpad.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "usb_c"
+  ]
+ },
+ "omega": {
+  "controller": "socket",
+  "files": {
+   "omega_hotswap/omega.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   },
+   "omega_soldered/omega_4_solder.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   },
+   "omega_soldered/omega_solder.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "opendeck": {
+  "controller": "soldered",
+  "files": {
+   "hardware/OpenDeck32/opendeck.kicad_pcb": {
+    "receptacles": {
+     "micro_b": 1
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "micro_b"
+  ]
+ },
+ "orthocode": {
+  "controller": "soldered",
+  "files": {
+   "orthoCode.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {}
+   },
+   "orthoCodeCase.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "usb_c"
+  ]
+ },
+ "osprette": {
+  "controller": "socket",
+  "files": {
+   "pcb/osprette.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "pandamic": {
+  "controller": "soldered",
+  "files": {
+   "PCB/Pandamic/Pandamic.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "usb_c"
+  ]
+ },
+ "paws60": {
+  "controller": "soldered",
+  "files": {
+   "paws60/pcb/rev1/paws-60-pcb.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   },
+   "paws60/pcb/rev2/paws60.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "piantor": {
+  "controller": "socket",
+  "files": {
+   "pcb/left/keyboard_pcb.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   },
+   "pcb/right/keyboard_pcb.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "pica40": {
+  "controller": "socket",
+  "files": {
+   "pcb/full.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 2
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "usb_c"
+  ]
+ },
+ "pill60": {
+  "controller": "socket",
+  "files": {
+   "Pill60.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "pinky3": {
+  "controller": "socket",
+  "files": {
+   "pcb/Pinky3.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "pinky4": {
+  "controller": "socket",
+  "files": {
+   "pcb/Pinky4.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "pisces": {
+  "controller": "socket",
+  "files": {
+   "pcb/pisces/pisces.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "pisces-v2": {
+  "controller": "soldered",
+  "files": {
+   "pcb/v2/pisces.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "usb_c"
+  ]
+ },
+ "pix": {
+  "controller": "socket",
+  "files": {
+   "pix.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "plaid": {
+  "controller": "soldered",
+  "files": {
+   "pcb/plaid.kicad_pcb": {
+    "receptacles": {
+     "mini_b": 1
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "mini_b"
+  ]
+ },
+ "plain60-c": {
+  "controller": "soldered",
+  "files": {
+   "plain60-c.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {
+     "Keeb_components:USBLC6-2SC6": 1
+    }
+   }
+  },
+  "usb": [
+   "usb_c"
+  ]
+ },
+ "pluckey": {
+  "controller": "socket",
+  "files": {
+   "pcb/pcb.kicad_pcb": {
+    "receptacles": {
+     "mini_b": 1
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "mini_b"
+  ]
+ },
+ "pluto12": {
+  "controller": "socket",
+  "files": {
+   "pluto12/pluto12.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "potato65": {
+  "controller": "soldered",
+  "files": {
+   "hotswap pcb/potato-65-hotswap.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {}
+   },
+   "solder pcb mount/potato-65-solderable-platemount.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {}
+   },
+   "solder pcb/potato-65-solderable.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "usb_c"
+  ]
+ },
+ "prkl30": {
+  "controller": "socket",
+  "files": {
+   "PRKL30.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "pteron56v0": {
+  "controller": "socket",
+  "files": {
+   "KiCAD and GERBER/OLD versions/Pteron56v0.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "qez": {
+  "controller": "soldered",
+  "files": {
+   "pcb/qez.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "usb_c"
+  ]
+ },
+ "quefrency-rev1": {
+  "controller": "socket",
+  "files": {
+   "quefrency-right-65/quefrency-right-65.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   },
+   "spectrogram-left/quefrency-left-macro.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "redherring": {
+  "controller": "soldered",
+  "files": {
+   "pcb-hotswap/redherring.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {}
+   },
+   "pcb/redherring.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {}
+   },
+   "solenoid/redherring.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "usb_c"
+  ]
+ },
+ "redox-rev1": {
+  "controller": "socket",
+  "files": {
+   "redox/pcb/rev1.0/kicad_files/redox_rev1.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "reviung34": {
+  "controller": "socket",
+  "files": {
+   "reviung34/pcb/reviung34.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "reviung34-split": {
+  "controller": "socket",
+  "files": {
+   "reviung34split/reviung34-split-L/reviung34-split-L.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   },
+   "reviung34split/reviung34-split-R/reviung34-split-R.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "reviung41": {
+  "controller": "socket",
+  "files": {
+   "reviung41/pcb/ver1.2/reviung41.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   },
+   "reviung41/pcb/ver1.3/reviung41.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   },
+   "reviung41/pcb/ver1.4/reviung41.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "reviung46": {
+  "controller": "socket",
+  "files": {
+   "reviung46/pcb/reviung46_ver1_1/reviung46/reviung46.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "reviung5": {
+  "controller": "socket",
+  "files": {
+   "reviung5/pcb/ver1.0/reviung5.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "reviung53": {
+  "controller": "socket",
+  "files": {
+   "reviung53/pcb/main-pcb/reviung53-ver1.0/reviung53.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "reviung61": {
+  "controller": "soldered",
+  "files": {
+   "reviung61/pcb/reviung61.kicad_pcb": {
+    "receptacles": {
+     "micro_b": 1
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "micro_b"
+  ]
+ },
+ "rhymestone": {
+  "controller": "socket",
+  "files": {
+   "rhymestone/pcb/rev1.0/Rhymestone.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "romeo": {
+  "controller": "soldered",
+  "files": {
+   "romeo-pcb.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "usb_c"
+  ]
+ },
+ "rosaline": {
+  "controller": "soldered",
+  "files": {
+   "rosaline.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {
+     "juliet:USB_Hybrid_THT": 1
+    }
+   }
+  },
+  "usb": []
+ },
+ "rosaline-ortho": {
+  "controller": "soldered",
+  "files": {
+   "rosaline-ortho.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {
+     "juliet:USB_Hybrid_THT": 1
+    }
+   }
+  },
+  "usb": []
+ },
+ "rp2040-bakeneko65": {
+  "controller": "soldered",
+  "files": {
+   "pcb/rp2040-bakeneko65.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "sango": {
+  "controller": "soldered",
+  "files": {
+   "PCB/Sango/Sango.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 2
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "usb_c"
+  ]
+ },
+ "scatter42": {
+  "controller": "socket",
+  "files": {
+   "scatter42/scatter42.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "schwann-rev0-5b": {
+  "controller": "soldered",
+  "files": {
+   "02 - PCBs/Schwann_PCB/PCB Documentation/Schwann_Rev0.5b.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "usb_c"
+  ]
+ },
+ "scotto-modules": {
+  "controller": "soldered",
+  "files": {
+   "Extras/ScottoModules/STM32F072CBT6/ScottoModules.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "usb_c"
+  ]
+ },
+ "sdra-kb00": {
+  "controller": "soldered",
+  "files": {
+   "KiCad_PCB/SdraKb00.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "usb_c"
+  ]
+ },
+ "sepia-officinalis": {
+  "controller": "socket",
+  "files": {
+   "Sepia officinalis/sepia_officinalis.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "sesame": {
+  "controller": "soldered",
+  "files": {
+   "sesame.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "usb_c"
+  ]
+ },
+ "setta21": {
+  "controller": "socket",
+  "files": {
+   "Setta21/v1/Kicad/Assemble/Setta21.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "sha-choc": {
+  "controller": "socket",
+  "files": {
+   "kicad/choc/sha-choc.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "sha-mx": {
+  "controller": "socket",
+  "files": {
+   "kicad/mx/sha-mx.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "silakka54": {
+  "controller": "socket",
+  "files": {
+   "kicad/silakka54.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "sith-zhuyin40": {
+  "controller": "socket",
+  "files": {
+   "PCB-files/PCB/SithZhuyin40.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "skeleton-num-pad": {
+  "controller": "soldered",
+  "files": {
+   "SkeletonNumPad.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "usb_c"
+  ]
+ },
+ "skeleton68rev2": {
+  "controller": "soldered",
+  "files": {
+   "PCB/Skeleton68rev2.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "usb_c"
+  ]
+ },
+ "sl40": {
+  "controller": "socket",
+  "files": {
+   "SL40.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "slime88": {
+  "controller": "soldered",
+  "files": {
+   "slime88.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "usb_c"
+  ]
+ },
+ "slimorta": {
+  "controller": "socket",
+  "files": {
+   "PCB/Slimorta_main_board/Slimorta_main_board.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "sofle-choc": {
+  "controller": "socket",
+  "files": {
+   "Sofle_Choc/PCB/SofleKeyboard.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "sofle-pico": {
+  "controller": "socket",
+  "files": {
+   "Sofle_Pico/PCB/Sofle_Pico.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "sofle-v1": {
+  "controller": "socket",
+  "files": {
+   "Sofle_v1/PCB/SofleKeyboard.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "solheim68": {
+  "controller": "soldered",
+  "files": {
+   "solheim68.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "southpawpcb": {
+  "controller": "socket",
+  "files": {
+   "ISO PCB/southpawpcb.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   },
+   "PCB/southpawpcb.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "soyuz": {
+  "controller": "socket",
+  "files": {
+   "Soyuz.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "spacetime": {
+  "controller": "socket",
+  "files": {
+   "spacetime.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "span": {
+  "controller": "socket",
+  "files": {
+   "pcb/span.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "speedo": {
+  "controller": "socket",
+  "files": {
+   "pcb/speedo.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "spleeb": {
+  "controller": "socket",
+  "files": {
+   "spleeb/pcbs/spleeb.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "splitreus": {
+  "controller": "socket",
+  "files": {
+   "splitreus.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "squiggle-low-profile": {
+  "controller": "socket",
+  "files": {
+   "lopro/squiggle-lopro.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "steal-this": {
+  "controller": "socket",
+  "files": {
+   "steal_this_keyboard.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "stoutgat": {
+  "controller": "soldered",
+  "files": {
+   "stoutgat-pcb.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "usb_c"
+  ]
+ },
+ "stoutgatv2": {
+  "controller": "socket",
+  "files": {
+   "stoutgatv2.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "stront-choc": {
+  "controller": "socket",
+  "files": {
+   "pcb/choc/pcb.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 2
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "usb_c"
+  ]
+ },
+ "stront-mx-38": {
+  "controller": "socket",
+  "files": {
+   "pcb/mx/pcb.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 2
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "usb_c"
+  ]
+ },
+ "stront-mx-40": {
+  "controller": "socket",
+  "files": {
+   "pcb/mx40/pcb.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 2
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "usb_c"
+  ]
+ },
+ "supersplit": {
+  "controller": "socket",
+  "files": {
+   "output/pcbs/board.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "sweep-bling-mx": {
+  "controller": "socket",
+  "files": {
+   "Sweep Bling MX/pcb/sweep-bling-mx__pcb.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "sweep-half-swept": {
+  "controller": "socket",
+  "files": {
+   "Sweep half-swept/half-swept.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "sweep-high": {
+  "controller": "socket",
+  "files": {
+   "Sweep High/sweep-high.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "sweep-high-m": {
+  "controller": "socket",
+  "files": {
+   "Sweep High M/sweep-high.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "sweepbling-lp": {
+  "controller": "socket",
+  "files": {
+   "Sweep Bling LP/pcb/sweepbling-lp__pcb.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "sweepv2": {
+  "controller": "socket",
+  "files": {
+   "Sweep v2.2/sweepv2.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "sweeq": {
+  "controller": "socket",
+  "files": {
+   "sweeq/sweeq.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "sweeq-mx": {
+  "controller": "socket",
+  "files": {
+   "sweeq mx/sweeq mx.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "swoop-mx": {
+  "controller": "socket",
+  "files": {
+   "pcbs/swoop-mx/swoop-mx.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "tanuki-pcb3": {
+  "controller": "socket",
+  "files": {
+   "Pcb/Kicad files/tanuki_pcb3.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "tartan": {
+  "controller": "soldered",
+  "files": {
+   "pcb/tartan.kicad_pcb": {
+    "receptacles": {
+     "mini_b": 1
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "mini_b"
+  ]
+ },
+ "teaqueen": {
+  "controller": "socket",
+  "files": {
+   "keyboard.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "tenkey-plusplus": {
+  "controller": "soldered",
+  "files": {
+   "kicad/tenkey_plusplus.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "usb_c"
+  ]
+ },
+ "tg4x": {
+  "controller": "socket",
+  "files": {
+   "KiCad/TG4x.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "th75": {
+  "controller": "soldered",
+  "files": {
+   "TH75.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {
+     "Type-C:HRO-TYPE-C-31-M-12-USB-Spacer": 1
+    }
+   }
+  },
+  "usb": []
+ },
+ "torn": {
+  "controller": "soldered",
+  "files": {
+   "torn_left/torn_left.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {}
+   },
+   "torn_right/torn_right.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "usb_c"
+  ]
+ },
+ "touhoupad-v2": {
+  "controller": "socket",
+  "files": {
+   "kicad/project.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "treadstone32": {
+  "controller": "soldered",
+  "files": {
+   "treadstone32/pcb/rev1.1/Treadstone32.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "tripel": {
+  "controller": "socket",
+  "files": {
+   "tripel.kicad_pcb": {
+    "receptacles": {
+     "mini_b": 1
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "mini_b"
+  ]
+ },
+ "twelvekey": {
+  "controller": "soldered",
+  "files": {
+   "pcb/twelvekey.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "usb_c"
+  ]
+ },
+ "ua62": {
+  "controller": "socket",
+  "files": {
+   "pcb/UA62.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "un-split": {
+  "controller": "soldered",
+  "files": {
+   "Hardware/FullGroundPlane/UnSplit.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {}
+   },
+   "Hardware/MCUGNDPlane/UnSplit.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "usb_c"
+  ]
+ },
+ "unicorn-f072": {
+  "controller": "soldered",
+  "files": {
+   "unicorn-mx/unicorn-f072/unicorn.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "usb_c"
+  ]
+ },
+ "unicorn-mx": {
+  "controller": "soldered",
+  "files": {
+   "unicorn-mx/unicorn/unicorn.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "usb_c"
+  ]
+ },
+ "unison": {
+  "controller": "soldered",
+  "files": {
+   "PCB/Unison.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "usb_c"
+  ]
+ },
+ "unix60pcb": {
+  "controller": "socket",
+  "files": {
+   "PCB/unix60pcb.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "vagrant": {
+  "controller": "socket",
+  "files": {
+   "pcb/vagrant.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "varanidae": {
+  "controller": "socket",
+  "files": {
+   "pcb/kicad/Varanidae.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "voyager60": {
+  "controller": "soldered",
+  "files": {
+   "Voyager60.kicad_pcb": {
+    "receptacles": {
+     "usb_c": 1
+    },
+    "unclassified": {}
+   }
+  },
+  "usb": [
+   "usb_c"
+  ]
+ },
+ "wave": {
+  "controller": "socket",
+  "files": {
+   "pcbs/main/rounded/wave_pcb-rounded.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "wired-pierce": {
+  "controller": "socket",
+  "files": {
+   "pcb/wired/pierce.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "wren": {
+  "controller": "socket",
+  "files": {
+   "PCBs/legacy/wren-nav/wren-nav.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   },
+   "PCBs/legacy/wren-numpad/wren-numpad.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   },
+   "PCBs/legacy/wren-plain/wren-plain.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   },
+   "PCBs/wren-universal-lemo-left/wren-universal.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   },
+   "PCBs/wren-universal-lemo-right/wren-universal.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   },
+   "PCBs/wren-universal/wren-universal.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "xenon-e": {
+  "controller": "socket",
+  "files": {
+   "xenon-e/xenon-e.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "xr63-gl": {
+  "controller": "socket",
+  "files": {
+   "XR63GL.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "yosino58": {
+  "controller": "socket",
+  "files": {
+   "pcb/yosino58.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "yosino58-cherry": {
+  "controller": "socket",
+  "files": {
+   "cherry/yosino58_cherry.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "yosino58-chocolate": {
+  "controller": "socket",
+  "files": {
+   "chocolate/yosino58_chocolate.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "zero": {
+  "controller": "socket",
+  "files": {
+   "zero.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "zodiark": {
+  "controller": "socket",
+  "files": {
+   "ZodiarkSplit/ZodiarkSplit.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ },
+ "zwerg": {
+  "controller": "soldered",
+  "files": {
+   "pcb/zwerg.kicad_pcb": {
+    "receptacles": {},
+    "unclassified": {}
+   }
+  },
+  "usb": []
+ }
+}

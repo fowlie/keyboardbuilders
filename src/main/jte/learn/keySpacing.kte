@@ -1,0 +1,148 @@
+@import net.keyboardbuilders.keyboardbuilders.web.Head
+@import net.keyboardbuilders.keyboardbuilders.web.LearnPage
+@import net.keyboardbuilders.keyboardbuilders.web.SiteUrl
+@param page: LearnPage
+@param head: Head
+@param site: SiteUrl
+
+<%--
+    /learn/key-spacing. Editing: plain HTML paragraphs. NO BACKTICKS anywhere in this file --
+    one closes the raw string this page is written in, and jte then reports the error on
+    the wrong line.
+
+    SOURCES for every number on this page, checked 2026-10-03:
+      - 19.05 mm is 0.75 inch, exactly. The catalog's own scan measures it on the boards
+        listed as MX spacing (scripts/measure_key_pitch.py).
+      - MX plate cutout 0.551 +/- 0.002 inch (14.0 mm), plate 0.06 inch (1.5 mm): Cherry's
+        MX Series datasheet, "Metal Frame Cutout Dimensions".
+      - Choc boards at 18 x 17 mm: the catalog's own scan (KeyPitch.Choc).
+      - MBK keycaps 17.5 x 16.5 mm for 1u: splitkb's product listing for MBK caps.
+      - Choc v2 and keycaps, checked 2026-10-03. beekeeb's guide
+        (showcase.beekeeb.com/choc-spaced-chocv2-keycaps, Nov 2025) says MBK and "Chocfox"
+        Choc-spaced caps are made for Choc v1 and do not fit Choc v2's "+" stem, and names
+        Tai-Hao MT 165 and THCS as Choc-spaced caps with a "+" stem. beekeeb sells both, so
+        the page says the claim is theirs. Sizes from beekeeb's own listings:
+        shop.beekeeb.com/products/thcs-blank-black-keycaps (THCS-MX, 17.5 x 16.5 mm,
+        "+ (MX Style)") and shop.beekeeb.com/products/mt165-black-blank-keycap (MT165-MX,
+        16.5 x 16.5 mm, same stem). MaxGaming lists THCS-profile sets in both an MX and a
+        Choc V1 version, hence "check the stem". More in docs/research/keycap-profiles.md.
+    Nothing else here is a number, and nothing here should become one without a source.
+
+    THE DIAGRAM IS TO SCALE: one SVG unit is one millimeter, so the two grids can be
+    compared by eye. Colors come from app.css (LEARN), which reads the theme tokens.
+--%>
+@template.layout(head = head, site = site, content = @`
+    <script type="application/ld+json">$unsafe{page.articleLd}</script>
+    <script type="application/ld+json">$unsafe{page.breadcrumbLd}</script>
+    <article class="learn">
+        <p class="crumb"><a href="/learn">&larr; Learn</a></p>
+        <h1>Key spacing</h1>
+
+        <p class="learn-answer">
+            Key spacing is the distance from the center of one key to the center of the
+            next. MX-style boards use 19.05 mm, three quarters of an inch, called one unit
+            or <strong>1u</strong>. Boards made only for Kailh Choc switches usually space
+            their keys 18 mm apart side to side and 17 mm front to back.
+        </p>
+
+        <figure class="learn-figure">
+            <svg viewBox="0 0 156 68" role="img"
+                 aria-label="Two grids of six keys drawn to the same scale. Left, MX spacing: keys 19.05 mm apart center to center, each with a 14 mm square switch cutout, leaving 5.05 mm between cutouts. Right, Choc spacing: keys 18 mm apart side to side and 17 mm front to back, each holding a 17.5 by 16.5 mm keycap.">
+                <text class="lf-title" x="4" y="6">MX spacing</text>
+                <rect class="lf-cell" x="4" y="18" width="19.05" height="19.05"/>
+                <rect class="lf-cut" x="6.53" y="20.52" width="14" height="14"/>
+                <circle class="lf-centre" cx="13.53" cy="27.52" r="0.7"/>
+                <rect class="lf-cell" x="23.05" y="18" width="19.05" height="19.05"/>
+                <rect class="lf-cut" x="25.58" y="20.52" width="14" height="14"/>
+                <circle class="lf-centre" cx="32.58" cy="27.52" r="0.7"/>
+                <rect class="lf-cell" x="42.1" y="18" width="19.05" height="19.05"/>
+                <rect class="lf-cut" x="44.62" y="20.52" width="14" height="14"/>
+                <circle class="lf-centre" cx="51.62" cy="27.52" r="0.7"/>
+                <rect class="lf-cell" x="4" y="37.05" width="19.05" height="19.05"/>
+                <rect class="lf-cut" x="6.53" y="39.57" width="14" height="14"/>
+                <circle class="lf-centre" cx="13.53" cy="46.57" r="0.7"/>
+                <rect class="lf-cell" x="23.05" y="37.05" width="19.05" height="19.05"/>
+                <rect class="lf-cut" x="25.58" y="39.57" width="14" height="14"/>
+                <circle class="lf-centre" cx="32.58" cy="46.57" r="0.7"/>
+                <rect class="lf-cell" x="42.1" y="37.05" width="19.05" height="19.05"/>
+                <rect class="lf-cut" x="44.62" y="39.57" width="14" height="14"/>
+                <circle class="lf-centre" cx="51.62" cy="46.57" r="0.7"/>
+                <path class="lf-dim" d="M13.53 14H32.58M13.53 12.5v3M32.58 12.5v3"/>
+                <text class="lf-label" x="23.05" y="11.5" text-anchor="middle">19.05 mm</text>
+                <path class="lf-dim" d="M20.52 60.1H25.58M20.52 58.6v3M25.58 58.6v3"/>
+                <text class="lf-label" x="23.05" y="65.1" text-anchor="middle">5.05 mm</text>
+                <path class="lf-dim" d="M44.62 60.1H58.62M44.62 58.6v3M58.62 58.6v3"/>
+                <text class="lf-label" x="51.62" y="65.1" text-anchor="middle">14 mm</text>
+
+                <text class="lf-title" x="82" y="6">Choc spacing</text>
+                <rect class="lf-cell" x="82" y="18" width="18" height="17"/>
+                <rect class="lf-cap" x="82.25" y="18.25" width="17.5" height="16.5" rx="1.2"/>
+                <circle class="lf-centre" cx="91" cy="26.5" r="0.7"/>
+                <rect class="lf-cell" x="100" y="18" width="18" height="17"/>
+                <rect class="lf-cap" x="100.25" y="18.25" width="17.5" height="16.5" rx="1.2"/>
+                <circle class="lf-centre" cx="109" cy="26.5" r="0.7"/>
+                <rect class="lf-cell" x="118" y="18" width="18" height="17"/>
+                <rect class="lf-cap" x="118.25" y="18.25" width="17.5" height="16.5" rx="1.2"/>
+                <circle class="lf-centre" cx="127" cy="26.5" r="0.7"/>
+                <rect class="lf-cell" x="82" y="35" width="18" height="17"/>
+                <rect class="lf-cap" x="82.25" y="35.25" width="17.5" height="16.5" rx="1.2"/>
+                <circle class="lf-centre" cx="91" cy="43.5" r="0.7"/>
+                <rect class="lf-cell" x="100" y="35" width="18" height="17"/>
+                <rect class="lf-cap" x="100.25" y="35.25" width="17.5" height="16.5" rx="1.2"/>
+                <circle class="lf-centre" cx="109" cy="43.5" r="0.7"/>
+                <rect class="lf-cell" x="118" y="35" width="18" height="17"/>
+                <rect class="lf-cap" x="118.25" y="35.25" width="17.5" height="16.5" rx="1.2"/>
+                <circle class="lf-centre" cx="127" cy="43.5" r="0.7"/>
+                <path class="lf-dim" d="M91 14H109M91 12.5v3M109 12.5v3"/>
+                <text class="lf-label" x="100" y="11.5" text-anchor="middle">18 mm</text>
+                <path class="lf-dim" d="M139 26.5V43.5M137.5 26.5h3M137.5 43.5h3"/>
+                <text class="lf-label" x="141" y="36.2">17 mm</text>
+                <path class="lf-dim" d="M82.25 56H99.75M82.25 54.5v3M99.75 54.5v3"/>
+                <text class="lf-label" x="91" y="61" text-anchor="middle">17.5 mm cap</text>
+            </svg>
+            <figcaption>
+                To scale. Dashed squares are the room each key gets, dots are key centers.
+                Left, the 14 mm holes in an MX plate. Right, 1u Choc keycaps of the MBK
+                kind, 17.5 &times; 16.5 mm.
+            </figcaption>
+        </figure>
+
+        <p>
+            Keycap sizes use the same unit: a letter key is 1u, a 2u key is as wide as two.
+            Cherry's datasheet puts the MX plate hole at 14 mm square, which leaves 5.05 mm
+            of plate between switches.
+        </p>
+        <p>
+            Choc caps are not square. MBK caps are 17.5 mm wide and 16.5 mm deep, so
+            18 &times; 17 mm leaves half a millimeter between neighboring caps and makes a
+            smaller board than MX spacing would.
+        </p>
+
+        <h2>Keycaps</h2>
+        <p>
+            Caps are made for one grid. MX-spaced caps won't fit an 18 &times; 17 grid, and
+            Choc switches set 19.05 mm apart need Choc caps made for MX spacing. The "What
+            fits this board" link on a design page sorts it out.
+        </p>
+        <p>
+            Choc v2 is the catch. The usual Choc-spaced caps, like MBK and Chosfox, have
+            Choc v1 stems, so they do not fit Choc v2 and its cross stem.
+            <a href="https://showcase.beekeeb.com/choc-spaced-chocv2-keycaps/">beekeeb's guide</a>,
+            from a shop that sells them, names Tai-Hao's MT 165 and THCS (16.5 &times; 16.5
+            and 17.5 &times; 16.5 mm in its listings). THCS also comes with Choc v1 stems,
+            so check before you buy.
+        </p>
+
+        <h2>In this catalog</h2>
+        <p>
+            Of ${page.count("total")} designs,
+            <a class="learn-all" href="/designs?pitch=mx">${page.count("mx")} use MX spacing</a>,
+            <a class="learn-all" href="/designs?pitch=choc">${page.count("choc")} use Choc spacing</a>
+            and <a class="learn-all" href="/designs?pitch=other">${page.count("custom")} use something else</a>.
+            A few are below, each with the smallest distance between two switch centers on
+            its PCB. Not recorded yet for ${page.count("unrecorded")} designs.
+        </p>
+
+        @template.learn.list(list = page.list("custom"))
+    </article>
+`)

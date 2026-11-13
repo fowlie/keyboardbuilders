@@ -1,0 +1,1201 @@
+[
+ {
+  "slug": "3w6",
+  "name": "3W6",
+  "url": "https://github.com/weteor/3w6",
+  "packages": [],
+  "verdict": "none"
+ },
+ {
+  "slug": "3x5-3-dilemma",
+  "name": "3x5 3 dilemma",
+  "url": "https://github.com/Bastardkb/Dilemma",
+  "packages": [
+   "qfn-56"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "3x5-3-procyon-dilemma",
+  "name": "3x5 3 procyon dilemma",
+  "url": "https://github.com/Bastardkb/Dilemma",
+  "packages": [
+   "qfn-56"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "45",
+  "name": "45",
+  "url": "https://github.com/lighteningab/45keyboard_v1",
+  "packages": [
+   "qfn-44"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "4x6-4-dilemma",
+  "name": "4x6 4 dilemma",
+  "url": "https://github.com/Bastardkb/Dilemma",
+  "packages": [
+   "qfn-56"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "67-e",
+  "name": "67 E",
+  "url": "https://github.com/str-dst/67mk_E",
+  "packages": [
+   "tqfp-44"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "adalyn",
+  "name": "Adalyn",
+  "url": "https://github.com/marvfpv/adalyn",
+  "packages": [
+   "tqfp-44"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "adelheid",
+  "name": "adelheid",
+  "url": "https://github.com/floookay/adelheid",
+  "packages": [
+   "tqfp-44"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "aek2-usb",
+  "name": "aek2 usb",
+  "url": "https://github.com/kb-elmo/aek2_usb",
+  "packages": [
+   "dip-40"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "alice",
+  "name": "Alice",
+  "url": "https://github.com/tyraelwastaken/equanimity",
+  "packages": [
+   "lqfp-48"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "arisu",
+  "name": "arisu",
+  "url": "https://github.com/fatenozomi/arisu-pcb",
+  "packages": [
+   "tqfp-44"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "atom47-rev5",
+  "name": "atom47 rev5",
+  "url": "https://github.com/evyd13/atom47",
+  "packages": [
+   "qfn-48"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "atom47-rev5-c",
+  "name": "atom47 rev5 c",
+  "url": "https://github.com/evyd13/atom47",
+  "packages": [
+   "qfn-48"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "axon",
+  "name": "axon",
+  "url": "https://github.com/thatfellarobin/axon",
+  "packages": [
+   "dip-28"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "bakeneko-65",
+  "name": "bakeneko 65",
+  "url": "https://github.com/kkatano/bakeneko-65",
+  "packages": [
+   "tqfp-44"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "barracuda",
+  "name": "barracuda",
+  "url": "https://github.com/knaruo/barracuda",
+  "packages": [
+   "tqfp-32"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "base-ferris",
+  "name": "base ferris",
+  "url": "https://github.com/pierrechevalier83/ferris",
+  "packages": [
+   "tqfp-44"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "basketweave",
+  "name": "basketweave",
+  "url": "https://github.com/null-ll/basketweave",
+  "packages": [
+   "dip-40"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "bling-ferris",
+  "name": "bling ferris",
+  "url": "https://github.com/pierrechevalier83/ferris",
+  "packages": [
+   "qfn-28"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "blue-team-pad",
+  "name": "Blue Team Pad",
+  "url": "https://github.com/fearherbs1/blue-team-pad",
+  "packages": [
+   "qfn-56"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "bm42",
+  "name": "bm42",
+  "url": "https://github.com/kb-elmo/bm42",
+  "packages": [
+   "tqfp-32"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "bw2-v2",
+  "name": "bw2 v2",
+  "url": "https://github.com/hazels-garage/bad-wings",
+  "packages": [
+   "lqfp-48"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "ccd60",
+  "name": "ccd60",
+  "url": "https://github.com/westfoxtrot/ccd60",
+  "packages": [
+   "lqfp-48"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "chameleon",
+  "name": "Chameleon",
+  "url": "https://github.com/TweetyDaBird/Fat-Chameleon",
+  "packages": [
+   "qfn-56"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "chameleon-v1-0-v1-00",
+  "name": "Chameleon v1 0 v1.00",
+  "url": "https://github.com/TweetyDaBird/Fat-Chameleon",
+  "packages": [
+   "qfn-56"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "chameleon-v1-0-v1-01",
+  "name": "Chameleon v1 0 v1.01",
+  "url": "https://github.com/TweetyDaBird/Fat-Chameleon",
+  "packages": [
+   "qfn-56"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "chameleon-v1-10",
+  "name": "Chameleon v1 10",
+  "url": "https://github.com/TweetyDaBird/Fat-Chameleon",
+  "packages": [
+   "qfn-56"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "chameleon-v1-11",
+  "name": "Chameleon v1 11",
+  "url": "https://github.com/TweetyDaBird/Fat-Chameleon",
+  "packages": [
+   "qfn-56"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "chocolatebar",
+  "name": "chocolatebar",
+  "url": "https://github.com/misonoworks/chocolate-bar",
+  "packages": [
+   "tqfp-44"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "compact-ferris-0-1",
+  "name": "compact ferris 0.1",
+  "url": "https://github.com/pierrechevalier83/ferris",
+  "packages": [
+   "tqfp-44"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "compact-ferris-0-2",
+  "name": "compact ferris 0.2",
+  "url": "https://github.com/pierrechevalier83/ferris",
+  "packages": [],
+  "verdict": "none"
+ },
+ {
+  "slug": "contender",
+  "name": "contender",
+  "url": "https://github.com/sotoba/contender",
+  "packages": [
+   "qfn-32"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "corne-cherry",
+  "name": "corne cherry",
+  "url": "https://github.com/foostan/crkbd",
+  "packages": [
+   "qfn-56"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "corne-chocolate",
+  "name": "corne chocolate",
+  "url": "https://github.com/foostan/crkbd",
+  "packages": [
+   "qfn-56"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "cyclops",
+  "name": "cyclops",
+  "url": "https://github.com/westfoxtrot/cyclops_pcb",
+  "packages": [
+   "tqfp-44"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "cypher",
+  "name": "cypher",
+  "url": "https://github.com/westfoxtrot/cypher_pcb",
+  "packages": [
+   "lqfp-48"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "desire65",
+  "name": "desire65",
+  "url": "https://github.com/akyp/desire65-pcb",
+  "packages": [
+   "qfn-56"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "discipad",
+  "name": "discipad",
+  "url": "https://github.com/coseyfannitutti/discipad",
+  "packages": [
+   "dip-28"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "discipline",
+  "name": "discipline",
+  "url": "https://github.com/coseyfannitutti/discipline",
+  "packages": [
+   "dip-40"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "dizzy40",
+  "name": "dizzy40",
+  "url": "https://github.com/kb-elmo/dizzy40",
+  "packages": [
+   "tqfp-32"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "dk60",
+  "name": "DK60",
+  "url": "https://github.com/Dbroqua/DK60",
+  "packages": [
+   "tqfp-44"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "dolphin",
+  "name": "dolphin",
+  "url": "https://github.com/evyd13/fin-pad",
+  "packages": [],
+  "verdict": "none"
+ },
+ {
+  "slug": "pancake-v2",
+  "name": "dropin V2",
+  "url": "https://github.com/spaceboards/spaceboardshardware",
+  "packages": [
+   "qfn-44"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "eliza",
+  "name": "Eliza",
+  "url": "https://github.com/kb-elmo/eliza",
+  "packages": [
+   "tqfp-32"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "ergo33",
+  "name": "ergo33",
+  "url": "https://github.com/kulmajaba/tunks-keyboard",
+  "packages": [
+   "tqfp-44"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "euisopcb",
+  "name": "EUISOpcb",
+  "url": "https://github.com/TuckTuckFloof/EUISO-pcb",
+  "packages": [
+   "tqfp-44"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "fnrow",
+  "name": "fnrow",
+  "url": "https://github.com/dinofizz/fnrow-pcb",
+  "packages": [
+   "lqfp-32"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "frankie-macropad",
+  "name": "Frankie Macropad",
+  "url": "https://github.com/eric-wood/macro-pad",
+  "packages": [
+   "qfn-32"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "friedrich",
+  "name": "Friedrich",
+  "url": "https://github.com/marvfpv/friedrich",
+  "packages": [
+   "tqfp-44"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "frooastboard-nano",
+  "name": "Frooastboard Nano",
+  "url": "https://github.com/Frooastside/Frooastboard",
+  "packages": [
+   "tqfp-32"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "g35",
+  "name": "G35",
+  "url": "https://github.com/kaylynb/mechllama-g35",
+  "packages": [
+   "tqfp-44"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "game-hand",
+  "name": "Game Hand",
+  "url": "https://github.com/kb-elmo/gamehand",
+  "packages": [
+   "tqfp-32"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "gh80-1800",
+  "name": "gh80 1800",
+  "url": "https://github.com/evyd13/gh80-series",
+  "packages": [],
+  "verdict": "none"
+ },
+ {
+  "slug": "gh80-3700",
+  "name": "gh80 3700",
+  "url": "https://github.com/evyd13/gh80-series",
+  "packages": [],
+  "verdict": "none"
+ },
+ {
+  "slug": "glyphkbd",
+  "name": "glyphkbd",
+  "url": "https://github.com/galile0-designs/glyphkbd",
+  "packages": [
+   "lqfp-64"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "grooveboard-atmel-au",
+  "name": "grooveboard atmel au",
+  "url": "https://github.com/ianklug/grooveboard",
+  "packages": [
+   "tqfp-44"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "grooveboard-atmel-mu",
+  "name": "grooveboard atmel mu",
+  "url": "https://github.com/ianklug/grooveboard",
+  "packages": [
+   "qfn-44"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "grooveboard-choc-atmel-au",
+  "name": "grooveboard choc atmel au",
+  "url": "https://github.com/ianklug/grooveboard",
+  "packages": [
+   "tqfp-44"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "grooveboard-choc-atmel-mu",
+  "name": "grooveboard choc atmel mu",
+  "url": "https://github.com/ianklug/grooveboard",
+  "packages": [
+   "qfn-44"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "grooveboard-choc-rp",
+  "name": "grooveboard choc rp",
+  "url": "https://github.com/ianklug/grooveboard",
+  "packages": [],
+  "verdict": "none"
+ },
+ {
+  "slug": "grooveboard-mx-atmel-au",
+  "name": "grooveboard mx atmel au",
+  "url": "https://github.com/ianklug/grooveboard",
+  "packages": [
+   "tqfp-44"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "grooveboard-mx-atmel-mu",
+  "name": "grooveboard mx atmel mu",
+  "url": "https://github.com/ianklug/grooveboard",
+  "packages": [
+   "qfn-44"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "grooveboard-mx-rp",
+  "name": "grooveboard mx rp",
+  "url": "https://github.com/ianklug/grooveboard",
+  "packages": [],
+  "verdict": "none"
+ },
+ {
+  "slug": "grooveboard-rp",
+  "name": "grooveboard rp",
+  "url": "https://github.com/ianklug/grooveboard",
+  "packages": [],
+  "verdict": "none"
+ },
+ {
+  "slug": "gud70",
+  "name": "gud70",
+  "url": "https://github.com/evyd13/gud70-pcb",
+  "packages": [],
+  "verdict": "none"
+ },
+ {
+  "slug": "high-ferris-0-1",
+  "name": "high ferris 0.1",
+  "url": "https://github.com/pierrechevalier83/ferris",
+  "packages": [
+   "tqfp-44"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "high-ferris-0-2",
+  "name": "high ferris 0.2",
+  "url": "https://github.com/pierrechevalier83/ferris",
+  "packages": [],
+  "verdict": "none"
+ },
+ {
+  "slug": "hnah40-atmega328p-v1",
+  "name": "Hnah40 Atmega328p V1",
+  "url": "https://github.com/vuhopkep/pcb",
+  "packages": [
+   "tqfp-32"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "hub20",
+  "name": "Hub20",
+  "url": "https://github.com/joshajohnson/hub20",
+  "packages": [
+   "lqfp-48",
+   "qfn-28"
+  ],
+  "verdict": "several"
+ },
+ {
+  "slug": "index-tab",
+  "name": "index tab",
+  "url": "https://github.com/kyrremann/index-tab",
+  "packages": [
+   "tqfp-44"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "isometria-75-iso",
+  "name": "isometria 75 iso",
+  "url": "https://github.com/ebastler/isometria-75",
+  "packages": [
+   "lqfp-48"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "jp60",
+  "name": "JP60",
+  "url": "https://github.com/ai03-2725/jp60",
+  "packages": [
+   "qfn-44"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "karina",
+  "name": "karina",
+  "url": "https://github.com/autumnisacutie/karina",
+  "packages": [
+   "tqfp-44"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "kobold",
+  "name": "Kobold",
+  "url": "https://github.com/tzarc/keyboards",
+  "packages": [
+   "qfn-48"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "koca58",
+  "name": "Koca58",
+  "url": "https://github.com/hardware7253/koca58",
+  "packages": [
+   "lqfp-64"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "korris",
+  "name": "korris",
+  "url": "https://github.com/yanghu/unicorne",
+  "packages": [],
+  "verdict": "none"
+ },
+ {
+  "slug": "kuro65",
+  "name": "kuro65",
+  "url": "https://github.com/0x544D/kuro65",
+  "packages": [
+   "lqfp-44",
+   "qfn-44"
+  ],
+  "verdict": "several"
+ },
+ {
+  "slug": "layout-jopr",
+  "name": "layout jopr",
+  "url": "https://github.com/joelproko/keyboard_layout_jopr",
+  "packages": [
+   "tqfp-44"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "lck75",
+  "name": "LCK75",
+  "url": "https://github.com/lyso1/lck75",
+  "packages": [
+   "dip-40"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "low-ferris",
+  "name": "low ferris",
+  "url": "https://github.com/pierrechevalier83/ferris",
+  "packages": [
+   "tqfp-44"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "lumberjack",
+  "name": "lumberjack",
+  "url": "https://github.com/peej/lumberjack-keyboard",
+  "packages": [
+   "dip-28"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "m0110a-qmk",
+  "name": "m0110a qmk",
+  "url": "https://github.com/kb-elmo/m0110a_usb",
+  "packages": [
+   "dip-40"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "m0116-usb",
+  "name": "m0116 usb",
+  "url": "https://github.com/kb-elmo/m0116_usb",
+  "packages": [
+   "dip-40"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "m3n3van-rev2",
+  "name": "m3n3van rev2",
+  "url": "https://github.com/matthewdias/m3n3van",
+  "packages": [
+   "qfn-44",
+   "tqfp-44"
+  ],
+  "verdict": "several"
+ },
+ {
+  "slug": "macrocat",
+  "name": "macrocat",
+  "url": "https://github.com/catmunch/macrocat",
+  "packages": [
+   "qfn-44"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "masonry",
+  "name": "masonry",
+  "url": "https://github.com/dcpedit/masonry",
+  "packages": [
+   "lqfp-48"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "mikeneko-65",
+  "name": "mikeneko 65",
+  "url": "https://github.com/takishim/mikeneko65",
+  "packages": [
+   "qfn-44"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "millipad",
+  "name": "millipad",
+  "url": "https://github.com/glozares/millipad",
+  "packages": [
+   "tqfp-44"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "mini-e-li-xi-vy",
+  "name": "mini e Li Xi Vy",
+  "url": "https://github.com/minibois/elixivy",
+  "packages": [
+   "tqfp-44"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "mini-ferris",
+  "name": "mini ferris",
+  "url": "https://github.com/pierrechevalier83/ferris",
+  "packages": [],
+  "verdict": "none"
+ },
+ {
+  "slug": "minim",
+  "name": "minim",
+  "url": "https://github.com/matthewdias/minim",
+  "packages": [
+   "tqfp-44"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "model-b",
+  "name": "model b",
+  "url": "https://github.com/trojanpinata/model-b",
+  "packages": [
+   "qfn-56"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "mx-5160",
+  "name": "mx 5160",
+  "url": "https://github.com/evyd13/mx-5160",
+  "packages": [],
+  "verdict": "none"
+ },
+ {
+  "slug": "mysterium",
+  "name": "mysterium",
+  "url": "https://github.com/coseyfannitutti/mysterium",
+  "packages": [
+   "dip-40"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "nack",
+  "name": "nack",
+  "url": "https://github.com/farfalleflickan/nack",
+  "packages": [
+   "lqfp-48"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "noah",
+  "name": "noah",
+  "url": "https://github.com/kb-elmo/noah_avr",
+  "packages": [
+   "tqfp-44"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "nt210",
+  "name": "nt210",
+  "url": "https://github.com/evyd13/nt-series",
+  "packages": [],
+  "verdict": "none"
+ },
+ {
+  "slug": "nt750",
+  "name": "nt750",
+  "url": "https://github.com/evyd13/nt-series",
+  "packages": [],
+  "verdict": "none"
+ },
+ {
+  "slug": "num-discipline",
+  "name": "Num Discipline",
+  "url": "https://github.com/ericrlau/numdiscipline",
+  "packages": [
+   "dip-40"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "numpad",
+  "name": "numpad",
+  "url": "https://github.com/kb-elmo/numpad",
+  "packages": [
+   "dip-28"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "opendeck",
+  "name": "opendeck",
+  "url": "https://github.com/cmdremily/opendeck",
+  "packages": [
+   "tqfp-44"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "orthocode",
+  "name": "orthocode",
+  "url": "https://github.com/jrodna/orthocode",
+  "packages": [
+   "dip-40"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "pandamic",
+  "name": "Pandamic",
+  "url": "https://github.com/swiftrax/Pandamic",
+  "packages": [],
+  "verdict": "none"
+ },
+ {
+  "slug": "paws60",
+  "name": "paws60",
+  "url": "https://github.com/horrortroll/keebproj",
+  "packages": [
+   "qfn-56",
+   "tqfp-44"
+  ],
+  "verdict": "several"
+ },
+ {
+  "slug": "pisces-v2",
+  "name": "pisces v2",
+  "url": "https://github.com/knaruo/pisces",
+  "packages": [
+   "tqfp-32"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "plaid",
+  "name": "plaid",
+  "url": "https://github.com/hsgw/plaid",
+  "packages": [
+   "dip-28"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "plain60-c",
+  "name": "plain60 c",
+  "url": "https://github.com/evyd13/plain60-c",
+  "packages": [],
+  "verdict": "none"
+ },
+ {
+  "slug": "potato65",
+  "name": "potato65",
+  "url": "https://github.com/aeonstrife/potato65",
+  "packages": [
+   "tqfp-44"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "qez",
+  "name": "qez",
+  "url": "https://github.com/str-dst/QEZ",
+  "packages": [
+   "tqfp-32"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "redherring",
+  "name": "redherring",
+  "url": "https://github.com/dcpedit/redherring",
+  "packages": [
+   "dip-40"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "reviung61",
+  "name": "reviung61",
+  "url": "https://github.com/gtips/reviung",
+  "packages": [
+   "tqfp-44"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "romeo",
+  "name": "romeo",
+  "url": "https://github.com/coseyfannitutti/romeo",
+  "packages": [
+   "dip-28"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "rosaline",
+  "name": "rosaline",
+  "url": "https://github.com/peej/rosaline-keyboard",
+  "packages": [
+   "dip-28"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "rosaline-ortho",
+  "name": "rosaline ortho",
+  "url": "https://github.com/peej/rosaline-keyboard",
+  "packages": [
+   "dip-28"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "rp2040-bakeneko65",
+  "name": "rp2040 bakeneko65",
+  "url": "https://github.com/lendunistus/rpneko65",
+  "packages": [
+   "qfn-56"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "sango",
+  "name": "Sango",
+  "url": "https://github.com/Aidan-OS/Sango",
+  "packages": [
+   "qfn-56"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "schwann-rev0-5b",
+  "name": "Schwann Rev0.5b",
+  "url": "https://github.com/theroyalsweatshirt/the_royal_projects",
+  "packages": [
+   "qfn-44"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "scotto-modules",
+  "name": "Scotto Modules",
+  "url": "https://github.com/joe-scotto/scottokeebs",
+  "packages": [
+   "lqfp-48"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "sdra-kb00",
+  "name": "Sdra Kb00",
+  "url": "https://github.com/drabaioli/sdrakb00",
+  "packages": [
+   "tqfp-44"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "sesame",
+  "name": "sesame",
+  "url": "https://github.com/kb-elmo/sesame",
+  "packages": [
+   "dip-40"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "skeleton-num-pad",
+  "name": "Skeleton Num Pad",
+  "url": "https://github.com/skeletonkbd/skeletonnumpad",
+  "packages": [
+   "qfn-44"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "skeleton68rev2",
+  "name": "Skeleton68rev2",
+  "url": "https://github.com/skeletonkbd/Frost68",
+  "packages": [
+   "qfn-56"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "slime88",
+  "name": "slime88",
+  "url": "https://github.com/zykrah/slime88",
+  "packages": [
+   "qfn-56"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "solheim68",
+  "name": "solheim68",
+  "url": "https://github.com/evyd13/solheim68",
+  "packages": [],
+  "verdict": "none"
+ },
+ {
+  "slug": "stoutgat",
+  "name": "stoutgat",
+  "url": "https://github.com/vattern/stoutgat",
+  "packages": [
+   "dip-40"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "tartan",
+  "name": "tartan",
+  "url": "https://github.com/hsgw/tartan",
+  "packages": [
+   "dip-28"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "tenkey-plusplus",
+  "name": "tenkey plusplus",
+  "url": "https://github.com/jonbobcar/tenkey_plusplus",
+  "packages": [
+   "tqfp-44"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "th75",
+  "name": "TH75",
+  "url": "https://github.com/ramonimbao/Herringbone",
+  "packages": [
+   "dip-40"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "torn",
+  "name": "torn",
+  "url": "https://github.com/rtitmuss/torn",
+  "packages": [
+   "dip-28"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "treadstone32",
+  "name": "Treadstone32",
+  "url": "https://github.com/marksard/keyboards",
+  "packages": [
+   "tqfp-44"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "twelvekey",
+  "name": "twelvekey",
+  "url": "https://github.com/kb-elmo/twelvekey",
+  "packages": [
+   "tqfp-32"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "un-split",
+  "name": "Un Split",
+  "url": "https://github.com/swiftrax/unsplit",
+  "packages": [
+   "tqfp-44"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "unicorn-f072",
+  "name": "unicorn f072",
+  "url": "https://github.com/yanghu/unicorne",
+  "packages": [
+   "qfn-48"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "unicorn-mx",
+  "name": "unicorn mx",
+  "url": "https://github.com/yanghu/unicorne",
+  "packages": [
+   "qfn-48"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "unison",
+  "name": "Unison",
+  "url": "https://github.com/jpskenn/unison",
+  "packages": [
+   "qfn-44"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "voyager60",
+  "name": "Voyager60",
+  "url": "https://github.com/ai03-2725/voyager60",
+  "packages": [
+   "qfn-44"
+  ],
+  "verdict": "one"
+ },
+ {
+  "slug": "zwerg",
+  "name": "zwerg",
+  "url": "https://github.com/floookay/zwerg",
+  "packages": [],
+  "verdict": "none"
+ }
+]

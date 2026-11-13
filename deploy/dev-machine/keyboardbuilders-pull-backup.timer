@@ -1,0 +1,10 @@
+[Unit]
+Description=Weekly off-box copy of the keyboardbuilders database, Mondays 12:00
+
+[Timer]
+OnCalendar=Mon *-*-* 12:00:00
+# The machine is often off: a missed Monday runs at the next boot instead.
+Persistent=true
+
+[Install]
+WantedBy=timers.target

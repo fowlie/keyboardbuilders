@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <rect width="512" height="512" fill="#c03a18"/>
+  <!-- keycap skirt -->
+  <rect x="96" y="104" width="320" height="320" rx="44" fill="#cfcdc4"/>
+  <!-- keycap top face, set back toward the top like a sculpted cap seen from above -->
+  <rect x="132" y="120" width="248" height="244" rx="30" fill="#efeee9"/>
+  <text x="256" y="322" text-anchor="middle" font-family="DejaVu Sans, sans-serif"
+        font-weight="bold" font-size="210" fill="#1d1d22">?</text>
+</svg>

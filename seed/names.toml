@@ -1,0 +1,268 @@
+# seed/names.toml -- what a design is actually CALLED, where the drafted name is wrong.
+#
+# The name of a design is drafted from its own board FILE PATH -- `Sweep half-swept/
+# half-swept.kicad_pcb` becomes "half swept" -- because for the great majority of the
+# corpus that is exactly what the author called it and the path is the only name a board
+# file carries. Where it is wrong it is wrong in a way no rule can fix: the author's
+# README says one thing and their directory says another, and only a person reading the
+# README can tell which.
+#
+# `seed/boards.toml` already carries a `name` for this, and it only reaches HALF A --
+# designs built from an attributed firmware record. A design built from a board that no
+# record was attributed to (Half B) has no `(tree, id)` key to hang a name on, so it had
+# no override at all until this file. That is the gap this closes, and it is why the key
+# here is a slug rather than a record id.
+#
+# KEYED BY THE DRAFTED SLUG -- the slug the build DERIVES from the drafted name, not the
+# one the site publishes after this file has had its say. Those differ for exactly the
+# rows in here, which is the point: a key that changed when the override applied would
+# stop matching on the next build and the name would flip back and forth.
+#
+# A RENAME IS A URL CHANGE, so it needs a row in `seed/renames.toml` too. Ticket 07
+# decision 8: "slugs are mutable and old ones keep resolving. A machine-guessed name is a
+# first draft too, so a rename leaves a redirect rather than a dead link." `build_seed.py`
+# refuses a `renames.toml` row whose target does not publish, so the two files are checked
+# against each other on every build.
+#
+# `verdict` follows every other seed file: `confirmed` rows are used, anything else is a
+# proposal nobody has ruled on and is EXCLUDED from the build.
+
+[[entry]]
+drafted  = "half-swept"
+name     = "Sweep Half Swept"
+source   = "https://github.com/davidphilipbarr/Sweep/tree/main/Sweep%20half-swept"
+verdict  = "confirmed"
+note     = "The README's own headline is `# Sweep Half Swept`, and its first line reads \"Half of a Sweep2 with a reversible micro-controller footprint.\" The drafted name came from the board path and dropped the family, leaving a design called \"half swept\" that names no keyboard. Read from the repo 2026-09-07."
+
+# The rest of the Sweep family, 2026-10-01 (backlog #107). The repo README's "What are the
+# different types?" list names every board: Sweep 2, Sweep Half Swept, Sweep Bling MX,
+# Sweep Bling LP, Sweep High, Sweep High M, Sweep Mini. The drafted names came from file
+# names (`sweepbling-lp__pcb`, `sweepv2`) or lost their capitals.
+
+[[entry]]
+drafted  = "sweep-bling-mx"
+name     = "Sweep Bling MX"
+source   = "https://github.com/davidphilipbarr/Sweep#what-are-the-different-types"
+verdict  = "confirmed"
+note     = "README: \"Sweep Bling MX - An MX only Sweep that features Kailh's hotswap sockets and a stacked case.\" Its own folder README is headed `# Sweep Bling MX`. Capitals only, so the slug does not change."
+
+[[entry]]
+drafted  = "sweepbling-lp"
+name     = "Sweep Bling LP"
+source   = "https://github.com/davidphilipbarr/Sweep#what-are-the-different-types"
+verdict  = "confirmed"
+note     = "README: \"Sweep Bling LP - A Choc v1 only Sweep that features Kailh's hotswap sockets.\" Drafted from the file name `sweepbling-lp__pcb.kicad_pcb`, which runs the words together."
+
+[[entry]]
+drafted  = "sweep-high"
+name     = "Sweep High"
+source   = "https://github.com/davidphilipbarr/Sweep#what-are-the-different-types"
+verdict  = "confirmed"
+note     = "README: \"Sweep High - Same as the Sweep 2, but trades choc spacing for compatibility with more switches and keycaps.\" Capitals only, so the slug does not change."
+
+[[entry]]
+drafted  = "sweepv2"
+name     = "Sweep 2"
+source   = "https://github.com/davidphilipbarr/Sweep#what-are-the-different-types"
+verdict  = "confirmed"
+note     = "README: \"Sweep 2 - Recommended Choc v1 board with all the features.\" Its folder is `Sweep v2.2` and its README is headed `# Sweep2`; the type list and the comparison table (`Sweep2.x`) both call the board Sweep 2. Drafted from the file name `sweepv2.kicad_pcb`."
+
+# zzeneg's two repos, both drafted from a board path that names a SWITCH TYPE or a file
+# rather than a keyboard -- map.md's fog lists "three designs named `choc`, `mx` and
+# `full`" as one defect and this is it. Raised by the owner 2026-09-07.
+
+[[entry]]
+drafted  = "mx"
+name     = "Stront MX-38"
+source   = "https://github.com/zzeneg/stront"
+verdict  = "confirmed"
+note     = "The README is headed \"stront\" -- \"Family of modular split keyboards with 38 or 40 keys, LCD display and Cirque/Azoteq trackpad\" -- and names its three PCB variants MX-40 (40 keys), MX-38 (38 keys) and Choc (38 keys). This design is the 38-key MX board, `pcb/mx/pcb.kicad_pcb`. Capitalised `Stront` as a proper noun; the README's own headline is lower-case. Read from the repo 2026-09-07."
+
+[[entry]]
+drafted  = "choc"
+name     = "Stront Choc"
+source   = "https://github.com/zzeneg/stront"
+verdict  = "confirmed"
+note     = "The author's own name for the variant, from the same README. 38 keys, Choc v1, `pcb/choc/pcb.kicad_pcb`. The README notes it alone has no VIK or module support, so it is a genuinely different keyboard from the MX boards rather than a switch option on one -- which is what makes these separate designs rather than one with a switch set."
+
+[[entry]]
+drafted  = "mx40"
+name     = "Stront MX-40"
+source   = "https://github.com/zzeneg/stront"
+verdict  = "confirmed"
+note     = "Backlog #70. The 40-key MX variant the same README names, whose firmware only exists in the author's forks (seed/trees.toml `stront-vial`) -- added 2026-09-09, once the record existed for a names row to match. Drafted as `mx40` from the board path `pcb/mx40/pcb.kicad_pcb`, which names a switch type and a key count rather than a keyboard; matches the naming rule already applied to its two siblings."
+
+[[entry]]
+drafted  = "full"
+name     = "Pica40"
+source   = "https://github.com/zzeneg/pica40"
+verdict  = "confirmed"
+note     = "A different repo by the same author, drafted from `pcb/full.kicad_pcb`. `full` is the FILE's name and the repo holds no other switch-placing board, so the design simply IS the Pica40. Named without a version: our record cites both `pica40/rev1` and `pica40/rev2`, so \"Pica40 v2\" -- the README's headline -- would narrow it falsely."
+
+# foostan/crkbd's two boards, 2026-09-28. Drafted from `pcbs/corne-cherry/hotswap/` and
+# `pcbs/corne-chocolate/hotswap/`, lower-cased. VERSIONED, the owner's call 2026-09-28:
+# v3 -> v4 changed the controller from a Pro Micro socket to a soldered RP2040, and with
+# it the firmware and the wiring, so an unversioned "Corne Cherry" would claim v4's facts
+# for every Corne Cherry there is. The slugs change, and seed/renames.toml 301s the old
+# ones. A later v3 row would publish as `corne-cherry-v3` beside these, not over them.
+
+[[entry]]
+drafted  = "corne-cherry"
+name     = "Corne Cherry v4"
+source   = "https://github.com/foostan/crkbd"
+verdict  = "confirmed"
+note     = "The README is headed \"# Corne keyboard\" and lists this board as `corne-cherry` under \"Latest versions\" (\"for Cherry MX compatible switches\"), with the build guide headed \"Corne Cherry v4\". Main holds only the v4 board: 2 RP2040s placed on it, and QMK's `crkbd/rev4_*` records. v1-v3 (Pro Micro) are \"Old versions\" whose boards are not on main. Named with the version, as the build guide is. Read 2026-09-28."
+
+[[entry]]
+drafted  = "corne-chocolate"
+name     = "Corne Chocolate v4"
+source   = "https://github.com/foostan/crkbd"
+verdict  = "confirmed"
+note     = "Same README: `corne-chocolate`, \"for Kailh choc v1 and v2 switches\", build guide headed \"Corne Chocolate v4\". The same v4 board as Corne Cherry with `kbd:keyswitch_choc12_hotswap_1u` footprints in place of MX ones. Read 2026-09-28."
+
+[[entry]]
+drafted  = "corne-classic"
+name     = "Jorne Classic 2.1"
+source   = "https://github.com/joric/jorne"
+verdict  = "confirmed"
+note     = "Backlog #89. `joric/jorne`'s default branch is `jorne`, whose own README names three PCB revisions -- Jorne Classic 2.1, Jorne Cherry 2.1, Jorne Cherry 3.0 -- none of them literally named `jorne`, so the drafter reads `corne-classic` off the path `corne-classic/pcb/corne-classic.kicad_pcb`. Measured 22 switches spanning 128.8mm on X -- one hand, not a whole board -- doubling to 44, which is Jorne's own declared key count and not the 42 of plain, unmodified Corne. Verified 2026-09-11."
+
+# ibnuda/squiggle's two Half B variants, 2026-09-26. Drafted from the board paths
+# `standard/squiggle-standard` and `36/squiggle-36`; named as the README heads them
+# ("Standard", "36 Keys") with the family in front and capitalised as a proper noun, as
+# the Stront rows above are. The slugs do not change, so no renames.toml row.
+
+[[entry]]
+drafted  = "squiggle-standard"
+name     = "Squiggle Standard"
+source   = "https://github.com/ibnuda/squiggle"
+verdict  = "confirmed"
+note     = "README section `### Standard`: MX and Alps style switches, 34 keys, 4x2u thumb keys, 2 Pro Micros, TRRS/TRS cable. Board standard/squiggle-standard.kicad_pcb."
+
+[[entry]]
+drafted  = "squiggle-36"
+name     = "Squiggle 36"
+source   = "https://github.com/ibnuda/squiggle"
+verdict  = "confirmed"
+note     = "README section `### 36 Keys`: MX and Alps style switches, 36 keys, 4x2u+2x1.25u thumb keys, 2 Pro Micros, TRRS/TRS cable. Board 36/squiggle-36.kicad_pcb. Named by the number, as the README does, and never with a word standing in for it."
+
+[[entry]]
+drafted  = "unicorn-mx"
+name     = "Unicorne"
+source   = "https://github.com/yanghu/unicorne"
+verdict  = "confirmed"
+note     = "README headed \"# Unicorne - A single-piece 40% ortho keyboard inspired by Corne and more\", \"The name means uni(single-piece)corne\". Board unicorn-mx/unicorn/unicorn.kicad_pcb: 42 MX hotswap footprints and the STM32F411 the README lists. The directory drops the final e; the author does not. Read 2026-09-28."
+
+# spaceboards/spaceboardshardware: both drafted from the PCB file name, `dropin.kicad_pcb`,
+# which names no keyboard. The folders are Keyboards/Pancake/V1 and V2 and ZMK's shield
+# is `pancake`. Kept as two designs on the owner's call 2026-09-29: V1 sockets a Pro Micro
+# or Feather, V2 solders its MCU on, and that is a real difference to someone filtering.
+[[entry]]
+drafted  = "dropin-v1"
+name     = "Pancake v1"
+source   = "https://github.com/spaceboards/spaceboardshardware/tree/master/Keyboards/Pancake/V1"
+verdict  = "confirmed"
+note     = "The repo README's design table lists \"Pancake v1\" (tested, MKUltra Corp); board Keyboards/Pancake/V1/kicad/dropin.kicad_pcb. Read 2026-09-29."
+
+[[entry]]
+drafted  = "dropin-v2"
+name     = "Pancake v2"
+source   = "https://github.com/spaceboards/spaceboardshardware/tree/master/Keyboards/Pancake/V2"
+verdict  = "confirmed"
+note     = "The repo README's design table lists \"Pancake v2\" (tested, MKUltra Corp); board Keyboards/Pancake/V2/kicad/dropin.kicad_pcb. Read 2026-09-29."
+
+# Dilemma, 2026-10-01 (backlog #107). The repo README's own "Versions" table names every
+# board: Dilemma DIY V2 (3x5_2), Dilemma V2 (3x5_3), Dilemma V3 hotswap (3x5_3_procyon),
+# Dilemma MAX (4x6_4), Dilemma MAX V3 hotswap (4x6_4_procyon). The drafted names were
+# their folder names. MAX V3 is not in the corpus: its folder holds a schematic and no
+# board file.
+
+[[entry]]
+drafted  = "3x5-2-dilemma"
+name     = "Dilemma DIY V2"
+source   = "https://github.com/Bastardkb/Dilemma#versions"
+verdict  = "confirmed"
+note     = "README's Versions table: folder `3x5_2` is \"Dilemma DIY V2\". Drafted from the folder name."
+
+[[entry]]
+drafted  = "3x5-3-dilemma"
+name     = "Dilemma V2"
+source   = "https://github.com/Bastardkb/Dilemma#versions"
+verdict  = "confirmed"
+note     = "README's Versions table: folder `3x5_3` is \"Dilemma V2\". Drafted from the folder name."
+
+[[entry]]
+drafted  = "3x5-3-procyon-dilemma"
+name     = "Dilemma V3 hotswap"
+source   = "https://github.com/Bastardkb/Dilemma#versions"
+verdict  = "confirmed"
+note     = "README's Versions table: folder `3x5_3_procyon` is \"Dilemma V3 hotswap\". Drafted from the folder name."
+
+[[entry]]
+drafted  = "4x6-4-dilemma"
+name     = "Dilemma MAX"
+source   = "https://github.com/Bastardkb/Dilemma#versions"
+verdict  = "confirmed"
+note     = "README's Versions table: folder `4x6_4` is \"Dilemma MAX\". Drafted from the folder name."
+
+# Ferris, 2026-10-01 (backlog #107). The repo readme's "Versions and variants" list names
+# two versions on different chips (v0.1 ATmega32U4, v0.2 STM32F072) and their variants; the
+# author writes them version first ("Ferris 0.2 - Bling", release zips `{version}.{variant}`).
+# The drafted names were folder-word-first. The 0.1/0.2 pairs stay two designs each: different
+# chips, so not revisions of one board (owner, 2026-10-01). No design is called just "Ferris".
+
+[[entry]]
+drafted  = "base-ferris"
+name     = "Ferris 0.1 Base"
+source   = "https://github.com/pierrechevalier83/ferris#versions-and-variants"
+verdict  = "confirmed"
+note     = "readme's Versions and variants list: folder `0.1/base` is the \"Base variant\" of v0.1. Drafted from the folder name."
+
+[[entry]]
+drafted  = "low-ferris"
+name     = "Ferris 0.1 Low"
+source   = "https://github.com/pierrechevalier83/ferris#versions-and-variants"
+verdict  = "confirmed"
+note     = "readme's Versions and variants list: folder `0.1/low` is \"Ferris Low\" under v0.1. Drafted from the folder name."
+
+[[entry]]
+drafted  = "high-ferris-0-1"
+name     = "Ferris 0.1 High"
+source   = "https://github.com/pierrechevalier83/ferris#versions-and-variants"
+verdict  = "confirmed"
+note     = "readme's Versions and variants list: folder `0.1/high` is \"Ferris High\" under v0.1. Drafted from the folder name."
+
+[[entry]]
+drafted  = "compact-ferris-0-1"
+name     = "Ferris 0.1 Compact"
+source   = "https://github.com/pierrechevalier83/ferris#versions-and-variants"
+verdict  = "confirmed"
+note     = "readme's Versions and variants list: folder `0.1/compact` is \"Ferris Compact\" under v0.1. Drafted from the folder name."
+
+[[entry]]
+drafted  = "bling-ferris"
+name     = "Ferris 0.2 Bling"
+source   = "https://github.com/pierrechevalier83/ferris#versions-and-variants"
+verdict  = "confirmed"
+note     = "readme's Versions and variants list: folder `0.2/bling` is \"Ferris Bling\" under v0.2. Drafted from the folder name."
+
+[[entry]]
+drafted  = "compact-ferris-0-2"
+name     = "Ferris 0.2 Compact"
+source   = "https://github.com/pierrechevalier83/ferris#versions-and-variants"
+verdict  = "confirmed"
+note     = "readme's Versions and variants list: folder `0.2/compact` is \"Ferris Compact\" under v0.2. Drafted from the folder name."
+
+[[entry]]
+drafted  = "high-ferris-0-2"
+name     = "Ferris 0.2 High"
+source   = "https://github.com/pierrechevalier83/ferris#versions-and-variants"
+verdict  = "confirmed"
+note     = "readme's Versions and variants list: folder `0.2/high` is \"Ferris High\" under v0.2. Drafted from the folder name."
+
+[[entry]]
+drafted  = "mini-ferris"
+name     = "Ferris 0.2 Mini"
+source   = "https://github.com/pierrechevalier83/ferris#versions-and-variants"
+verdict  = "confirmed"
+note     = "readme's Versions and variants list: folder `0.2/mini` is \"Ferris Mini\" under v0.2. Drafted from the folder name."

@@ -1,0 +1,173 @@
+@import net.keyboardbuilders.keyboardbuilders.web.ComparePage
+@import net.keyboardbuilders.keyboardbuilders.web.Head
+@import net.keyboardbuilders.keyboardbuilders.web.SiteUrl
+@param page: ComparePage
+@param head: Head
+@param site: SiteUrl
+
+@template.layout(head = head, site = site, content = @`
+    <p class="crumb"><a href="/designs/${page.a.slug}">&larr; ${page.a.name}</a></p>
+
+    <h1>${page.a.name} <span class="vs">vs</span> ${page.b.name}</h1>
+    <p class="compare-actions">
+        <a href="${page.swapHref}">Swap them</a> &middot;
+        <a href="${page.changeB}">Compare ${page.a.name} with another board</a> &middot;
+        <a href="${page.changeA}">Compare ${page.b.name} with another board</a>
+    </p>
+
+    <%-- WHICH LAYOUT, per side, owner-reported on KLOR: its four break-offs are one design,
+         and comparing only Polydactyl answers the wrong question for a Konrad builder.
+         Links, not a select, so it works without scripting and every choice is a URL.
+         Only layouts with a drawing are offered; see CompareSide. --%>
+    @for(side in listOf(page.a, page.b))
+        @if(!side.choices.isEmpty())
+            <p class="layout-choice">
+                <span class="layout-choice-label">${side.name}:</span>
+                @for(choice in side.choices)
+                    @if(choice.current)
+                        <strong aria-current="true">${choice.label}</strong>
+                    @else
+                        <a href="${choice.href}" rel="nofollow">${choice.label}</a>
+                    @endif
+                @endfor
+            </p>
+        @endif
+    @endfor
+
+    <h2>Layouts</h2>
+    @if(page.overlay != null)
+        <%-- The legend is words as well as swatches: ux.md 7.3, colour is never the only
+             carrier, and "filled" / "outlined" is what the picture itself does. The notes
+             are the two decisions Silhouettes.overlay made, stated rather than assumed. --%>
+        <figure class="overlay-figure">
+            $unsafe{page.overlay}
+            <figcaption>
+                <ul class="overlay-legend">
+                    <li><span class="swatch swatch-a" aria-hidden="true"></span><a href="/designs/${page.a.slug}">${page.a.name}</a>@if(page.a.layout != null) (${page.a.layout})@endif, filled</li>
+                    <li><span class="swatch swatch-b" aria-hidden="true"></span><a href="/designs/${page.b.slug}">${page.b.name}</a>@if(page.b.layout != null) (${page.b.layout})@endif, outlined</li>
+                </ul>
+                @for(note in page.notes)
+                    <p class="overlay-note">${note}</p>
+                @endfor
+                <%-- Hidden until the script below runs: without it there is nothing to drag,
+                     and a hint for a control that does not exist is worse than none. --%>
+                <p class="overlay-hint" hidden>
+                    Drag the outline, or focus it and use the arrow keys, to line the boards up another way.
+                    <button type="button" class="overlay-reset" hidden>Put it back</button>
+                </p>
+            </figcaption>
+        </figure>
+    @else
+        @for(note in page.notes)
+            <p class="summary unrecorded">${note}</p>
+        @endfor
+    @endif
+
+    <h2>Side by side</h2>
+    <%-- ux.md:576: "a table with a differences only toggle (a link, &diff=1)". --%>
+    <p class="compare-toggle">
+        @if(page.diffOnly)
+            Differences only, ${page.hidden} shared @if(page.hidden == 1)row@else rows@endif hidden &middot;
+            <a href="${page.href}">Show every row</a>
+        @else
+            <a href="${page.diffHref}">Differences only</a>
+        @endif
+    </p>
+    <%-- ux.md 7.5: a comparison is genuinely tabular, so it scrolls sideways on a phone
+         inside a wrapper a keyboard can focus, with the label column pinned. --%>
+    <div class="compare-scroll" tabindex="0" aria-label="${page.a.name} and ${page.b.name}, fact by fact">
+        <table class="compare">
+            <thead>
+                <tr><td></td><th scope="col">${page.a.name}</th><th scope="col">${page.b.name}</th></tr>
+            </thead>
+            <tbody>
+                @for(row in page.rows)
+                    <tr class="@if(row.same)same@else differs@endif">
+                        <th scope="row">${row.label}</th>
+                        @if(row.aRecorded)
+                            <td>${row.a}</td>
+                        @else
+                            <td class="unrecorded">&mdash; ${row.a} &mdash;</td>
+                        @endif
+                        @if(row.bRecorded)
+                            <td>${row.b}</td>
+                        @else
+                            <td class="unrecorded">&mdash; ${row.b} &mdash;</td>
+                        @endif
+                    </tr>
+                @endfor
+            </tbody>
+        </table>
+    </div>
+
+    <%-- DRAG TO REALIGN, the ticket's "possibly interactive". ADDITIVE, the same terms
+         index.kte's first script was let in on (Forgejo #25): the page is complete
+         without it -- the overlay has a stated default alignment, and that is the picture
+         a screenshot or a no-script reader gets. This only lets a reader choose a
+         different anchor than the one Silhouettes.overlay picked.
+
+         The offset is not put in the URL. ux.md 0 prefers the query string over client
+         state, but this is a gesture, not a query: nobody shares "Corne over Sofle, moved
+         3 mm left", and a link that did carry it would silently drop the stated anchor.
+
+         Plain ES5 on purpose: a backtick or a dollar-brace in here would end or be read
+         by jte's raw string. --%>
+    <script>
+        (function () {
+            var svg = document.querySelector("svg.overlay");
+            var layer = svg && svg.querySelector(".overlay-b");
+            if (!layer || !svg.getScreenCTM || !window.DOMPoint) return;
+            var hint = document.querySelector(".overlay-hint");
+            var reset = document.querySelector(".overlay-reset");
+            var dx = 0, dy = 0, grab = null;
+            layer.setAttribute("tabindex", "0");
+            layer.setAttribute("aria-label", "The outlined board. Arrow keys move it; hold Shift to move further.");
+            hint.hidden = false;
+
+            function place() {
+                layer.setAttribute("transform", "translate(" + dx.toFixed(1) + " " + dy.toFixed(1) + ")");
+                reset.hidden = dx === 0 && dy === 0;
+            }
+            function point(e) {
+                return new DOMPoint(e.clientX, e.clientY).matrixTransform(svg.getScreenCTM().inverse());
+            }
+            layer.addEventListener("pointerdown", function (e) {
+                var p = point(e);
+                grab = { x: p.x - dx, y: p.y - dy };
+                layer.setPointerCapture(e.pointerId);
+                layer.classList.add("dragging");
+                e.preventDefault();
+            });
+            layer.addEventListener("pointermove", function (e) {
+                if (!grab) return;
+                var p = point(e);
+                dx = p.x - grab.x;
+                dy = p.y - grab.y;
+                place();
+            });
+            function drop() {
+                grab = null;
+                layer.classList.remove("dragging");
+            }
+            layer.addEventListener("pointerup", drop);
+            layer.addEventListener("pointercancel", drop);
+
+            var moves = { ArrowLeft: [-1, 0], ArrowRight: [1, 0], ArrowUp: [0, -1], ArrowDown: [0, 1] };
+            layer.addEventListener("keydown", function (e) {
+                var move = moves[e.key];
+                if (!move) return;
+                var step = e.shiftKey ? 10 : 1;
+                dx += move[0] * step;
+                dy += move[1] * step;
+                place();
+                e.preventDefault();
+            });
+            reset.addEventListener("click", function () {
+                dx = 0;
+                dy = 0;
+                place();
+                layer.focus();
+            });
+        })();
+    </script>
+`)

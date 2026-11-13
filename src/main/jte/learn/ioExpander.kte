@@ -1,0 +1,93 @@
+@import net.keyboardbuilders.keyboardbuilders.web.Head
+@import net.keyboardbuilders.keyboardbuilders.web.LearnPage
+@import net.keyboardbuilders.keyboardbuilders.web.SiteUrl
+@param page: LearnPage
+@param head: Head
+@param site: SiteUrl
+
+<%--
+    /learn/io-expander. NO BACKTICKS anywhere in this file -- one closes the raw string
+    this page is written in, and jte then reports the error on the wrong line.
+
+    SOURCES, checked 2026-10-03:
+      - MCP23017 (Microchip), PCA9555 (NXP, TI) and TCA9555 (TI) are each a 16-bit I/O
+        expander on the I2C bus: the makers' product pages.
+      - Ferris: seed/bodies.toml, from QMK's keyboards/ferris 0_1 and 0_2 matrix.c (the far
+        half scanned through an MCP23017 over I2C) and the board file (left half the chip
+        and USB-C receptacle, right half the MCP23017).
+      - Pando and 3w6: seed/bodies.toml, each quoting the design's own repo.
+    The list at the bottom is IO_EXPANDER_EXAMPLES in Learn.kt, kept by hand. The diagram
+    is a sketch, NOT to scale.
+--%>
+@template.layout(head = head, site = site, content = @`
+    <script type="application/ld+json">$unsafe{page.articleLd}</script>
+    <script type="application/ld+json">$unsafe{page.breadcrumbLd}</script>
+    <article class="learn">
+        <p class="crumb"><a href="/learn">&larr; Learn</a></p>
+        <h1>IO expanders in split keyboards</h1>
+
+        <p class="learn-answer">
+            An IO expander is a small chip that gives a controller more pins. On a split
+            keyboard it lets one controller run both halves: the other half gets an
+            expander, which reads its keys and sends them across the cable over I2C, a
+            two-wire connection between chips.
+        </p>
+
+        <figure class="learn-figure">
+            <svg viewBox="0 0 152 50" role="img"
+                 aria-label="Two halves of a split keyboard. The left half carries the controller chip and the USB-C port. The right half carries an IO expander chip instead. A cable between them is labeled I2C.">
+                <rect class="lf-board" x="4" y="10" width="54" height="30" rx="2"/>
+                <rect class="lf-cap" x="7" y="13" width="7" height="7" rx="0.8"/>
+                <rect class="lf-cap" x="15" y="13" width="7" height="7" rx="0.8"/>
+                <rect class="lf-cap" x="23" y="13" width="7" height="7" rx="0.8"/>
+                <rect class="lf-cap" x="7" y="21" width="7" height="7" rx="0.8"/>
+                <rect class="lf-cap" x="15" y="21" width="7" height="7" rx="0.8"/>
+                <rect class="lf-cap" x="23" y="21" width="7" height="7" rx="0.8"/>
+                <rect class="lf-cap" x="7" y="29" width="7" height="7" rx="0.8"/>
+                <rect class="lf-cap" x="15" y="29" width="7" height="7" rx="0.8"/>
+                <rect class="lf-cap" x="23" y="29" width="7" height="7" rx="0.8"/>
+                <rect class="lf-part" x="35" y="16" width="14" height="14" rx="0.6"/>
+                <text class="lf-note" x="42" y="24" text-anchor="middle">chip</text>
+                <rect class="lf-sock" x="37" y="6.5" width="10" height="3.5" rx="0.8"/>
+                <text class="lf-note" x="42" y="4.5" text-anchor="middle">USB-C</text>
+                <rect class="lf-board" x="94" y="10" width="54" height="30" rx="2"/>
+                <rect class="lf-cap" x="122" y="13" width="7" height="7" rx="0.8"/>
+                <rect class="lf-cap" x="130" y="13" width="7" height="7" rx="0.8"/>
+                <rect class="lf-cap" x="138" y="13" width="7" height="7" rx="0.8"/>
+                <rect class="lf-cap" x="122" y="21" width="7" height="7" rx="0.8"/>
+                <rect class="lf-cap" x="130" y="21" width="7" height="7" rx="0.8"/>
+                <rect class="lf-cap" x="138" y="21" width="7" height="7" rx="0.8"/>
+                <rect class="lf-cap" x="122" y="29" width="7" height="7" rx="0.8"/>
+                <rect class="lf-cap" x="130" y="29" width="7" height="7" rx="0.8"/>
+                <rect class="lf-cap" x="138" y="29" width="7" height="7" rx="0.8"/>
+                <rect class="lf-sock" x="102" y="18" width="12" height="10" rx="0.6"/>
+                <text class="lf-note" x="108" y="24" text-anchor="middle">IO exp.</text>
+                <path class="lf-wire" d="M58 25C70 32 82 32 94 25"/>
+                <text class="lf-label" x="76" y="27" text-anchor="middle">I2C</text>
+                <text class="lf-label" x="31" y="46" text-anchor="middle">Left half: the controller chip</text>
+                <text class="lf-label" x="121" y="46" text-anchor="middle">Right half: an IO expander</text>
+            </svg>
+            <figcaption>
+                Not to scale. A Ferris-style split: the controller chip on the left, an IO
+                expander on the right.
+            </figcaption>
+        </figure>
+
+        <p>
+            Most splits have a controller in each half, talking to each other. With an
+            expander there is one controller to buy, fit and flash, and the firmware sees
+            one keyboard instead of two halves each running their own copy. The MCP23017,
+            PCA9555 and TCA9555 used below each add 16 pins.
+        </p>
+        <p>
+            The catch is that the halves are no longer the same. A Ferris has the chip and
+            USB-C port on the left and an MCP23017 on the right, so it can't be a
+            <a href="/learn/reversible-pcb">reversible PCB</a>.
+        </p>
+
+        <p>
+            This list is kept by hand and surely missing some.
+        </p>
+        @template.learn.list(list = page.list("examples"))
+    </article>
+`)

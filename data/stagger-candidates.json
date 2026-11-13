@@ -1,0 +1,306 @@
+[
+ {
+  "slug": "3x3macropad",
+  "row_share": 0.0,
+  "column_share": 0.0,
+  "bucket_guess": "neither axis clearly aligned",
+  "splay": false,
+  "stagger": null
+ },
+ {
+  "slug": "3x5-3-dilemma",
+  "row_share": 0.0,
+  "column_share": 0.83,
+  "bucket_guess": "column-stagger?",
+  "splay": false,
+  "stagger": null
+ },
+ {
+  "slug": "architeuthis-dux",
+  "row_share": 0.0,
+  "column_share": 0.0,
+  "bucket_guess": "neither axis clearly aligned",
+  "splay": true,
+  "stagger": null
+ },
+ {
+  "slug": "avalanche-hotswap",
+  "row_share": 0.0,
+  "column_share": 0.5,
+  "bucket_guess": "neither axis clearly aligned",
+  "splay": true,
+  "stagger": null
+ },
+ {
+  "slug": "bad-wings-bold",
+  "row_share": 0.0,
+  "column_share": 0.0,
+  "bucket_guess": "neither axis clearly aligned",
+  "splay": true,
+  "stagger": null
+ },
+ {
+  "slug": "bad-wings-slim",
+  "row_share": 0.0,
+  "column_share": 0.0,
+  "bucket_guess": "neither axis clearly aligned",
+  "splay": true,
+  "stagger": null
+ },
+ {
+  "slug": "bfo-9000",
+  "row_share": 1.0,
+  "column_share": 1.0,
+  "bucket_guess": "ortho?",
+  "splay": false,
+  "stagger": null
+ },
+ {
+  "slug": "buzzard",
+  "row_share": 0.0,
+  "column_share": 0.2,
+  "bucket_guess": "neither axis clearly aligned",
+  "splay": true,
+  "stagger": null
+ },
+ {
+  "slug": "bw2-v2",
+  "row_share": 0.0,
+  "column_share": 0.0,
+  "bucket_guess": "neither axis clearly aligned",
+  "splay": true,
+  "stagger": null
+ },
+ {
+  "slug": "choc-v",
+  "row_share": 0.0,
+  "column_share": 0.0,
+  "bucket_guess": "neither axis clearly aligned",
+  "splay": true,
+  "stagger": null
+ },
+ {
+  "slug": "chouchou",
+  "row_share": 0.0,
+  "column_share": 0.0,
+  "bucket_guess": "neither axis clearly aligned",
+  "splay": true,
+  "stagger": null
+ },
+ {
+  "slug": "clog",
+  "row_share": 0.24,
+  "column_share": 0.24,
+  "bucket_guess": "neither axis clearly aligned",
+  "splay": false,
+  "stagger": null
+ },
+ {
+  "slug": "compact-ferris-0-1",
+  "row_share": 0.0,
+  "column_share": 0.0,
+  "bucket_guess": "neither axis clearly aligned",
+  "splay": false,
+  "stagger": null
+ },
+ {
+  "slug": "contra",
+  "row_share": 1.0,
+  "column_share": 1.0,
+  "bucket_guess": "ortho?",
+  "splay": false,
+  "stagger": null
+ },
+ {
+  "slug": "cradio-z",
+  "row_share": 0.0,
+  "column_share": 0.0,
+  "bucket_guess": "neither axis clearly aligned",
+  "splay": true,
+  "stagger": null
+ },
+ {
+  "slug": "dropout",
+  "row_share": 0.67,
+  "column_share": 0.94,
+  "bucket_guess": "ortho?",
+  "splay": false,
+  "stagger": null
+ },
+ {
+  "slug": "frankie-macropad",
+  "row_share": 1.0,
+  "column_share": 0.0,
+  "bucket_guess": "row-stagger?",
+  "splay": false,
+  "stagger": null
+ },
+ {
+  "slug": "gummy-key",
+  "row_share": 0.55,
+  "column_share": 0.76,
+  "bucket_guess": "column-stagger?",
+  "splay": false,
+  "stagger": null
+ },
+ {
+  "slug": "hillside-46",
+  "row_share": 0.0,
+  "column_share": 0.0,
+  "bucket_guess": "neither axis clearly aligned",
+  "splay": true,
+  "stagger": null
+ },
+ {
+  "slug": "hillside-52",
+  "row_share": 0.0,
+  "column_share": 0.0,
+  "bucket_guess": "neither axis clearly aligned",
+  "splay": true,
+  "stagger": null
+ },
+ {
+  "slug": "hotswap-rgb-dumbpad",
+  "row_share": 1.0,
+  "column_share": 1.0,
+  "bucket_guess": "ortho?",
+  "splay": false,
+  "stagger": null
+ },
+ {
+  "slug": "jiran-cherry",
+  "row_share": 0.0,
+  "column_share": 0.93,
+  "bucket_guess": "column-stagger?",
+  "splay": false,
+  "stagger": null
+ },
+ {
+  "slug": "jorne-cherry-2-1",
+  "row_share": 0.0,
+  "column_share": 0.0,
+  "bucket_guess": "neither axis clearly aligned",
+  "splay": false,
+  "stagger": null
+ },
+ {
+  "slug": "kbd-template",
+  "row_share": 0.0,
+  "column_share": 0.0,
+  "bucket_guess": "neither axis clearly aligned",
+  "splay": true,
+  "stagger": null
+ },
+ {
+  "slug": "klor",
+  "row_share": 0.0,
+  "column_share": 0.0,
+  "bucket_guess": "neither axis clearly aligned",
+  "splay": true,
+  "stagger": null
+ },
+ {
+  "slug": "korris",
+  "row_share": 0.64,
+  "column_share": 0.0,
+  "bucket_guess": "row-stagger?",
+  "splay": false,
+  "stagger": null
+ },
+ {
+  "slug": "kuro65",
+  "row_share": 0.99,
+  "column_share": 0.07,
+  "bucket_guess": "row-stagger?",
+  "splay": false,
+  "stagger": null
+ },
+ {
+  "slug": "lily58-pro",
+  "row_share": 0.0,
+  "column_share": 0.83,
+  "bucket_guess": "column-stagger?",
+  "splay": false,
+  "stagger": null
+ },
+ {
+  "slug": "morizon-mx",
+  "row_share": 1.0,
+  "column_share": 0.91,
+  "bucket_guess": "ortho?",
+  "splay": false,
+  "stagger": null
+ },
+ {
+  "slug": "omega",
+  "row_share": 1.0,
+  "column_share": 0.0,
+  "bucket_guess": "row-stagger?",
+  "splay": false,
+  "stagger": null
+ },
+ {
+  "slug": "reviung41",
+  "row_share": 0.59,
+  "column_share": 0.0,
+  "bucket_guess": "neither axis clearly aligned",
+  "splay": false,
+  "stagger": null
+ },
+ {
+  "slug": "sepia-officinalis",
+  "row_share": 0.0,
+  "column_share": 0.0,
+  "bucket_guess": "neither axis clearly aligned",
+  "splay": true,
+  "stagger": null
+ },
+ {
+  "slug": "sofle-pico",
+  "row_share": 0.0,
+  "column_share": 0.93,
+  "bucket_guess": "column-stagger?",
+  "splay": false,
+  "stagger": null
+ },
+ {
+  "slug": "soyuz",
+  "row_share": 1.0,
+  "column_share": 1.0,
+  "bucket_guess": "ortho?",
+  "splay": false,
+  "stagger": null
+ },
+ {
+  "slug": "sweep-bling-mx",
+  "row_share": 0.0,
+  "column_share": 0.0,
+  "bucket_guess": "neither axis clearly aligned",
+  "splay": false,
+  "stagger": null
+ },
+ {
+  "slug": "treadstone32",
+  "row_share": 0.94,
+  "column_share": 0.0,
+  "bucket_guess": "row-stagger?",
+  "splay": false,
+  "stagger": null
+ },
+ {
+  "slug": "yosino58",
+  "row_share": 0.0,
+  "column_share": 0.83,
+  "bucket_guess": "column-stagger?",
+  "splay": false,
+  "stagger": null
+ },
+ {
+  "slug": "zero",
+  "row_share": 1.0,
+  "column_share": 0.0,
+  "bucket_guess": "row-stagger?",
+  "splay": false,
+  "stagger": null
+ }
+]

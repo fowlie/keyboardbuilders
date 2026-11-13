@@ -1,0 +1,313 @@
+# seed/declines.toml -- firmware entries a human has ruled are not designs.
+#
+# Transcribed by hand from ticket 17 (the converter subtree) decision 3; the git
+# commit is the credential. Every `stated` span was re-read from the primary
+# source before it was written here, so a row is checkable without the ticket.
+#
+# This is an OVERRIDE FILE, NOT A CENSUS. A row exists only for a record that
+# would otherwise REACH the publication gate -- i.e. one naming a third-party
+# hardware repo. A decline row for a record nothing would publish is a claim
+# nobody checked, so most of each class is deliberately absent.
+#
+# `reason` NAMES A PROPERTY, NEVER A CLASS -- rebuilt 2026-08-21 by ticket 33.
+# The four reasons ticket 10 sketched had drifted from their examples: two had
+# none left (`parametric-generator`, after the Dactyls' real reason turned out to
+# be "no PCB", which ticket 37 then stopped being a reason at all; and
+# `unnamed-collection`, since clog does name its members), and
+# `replacement-controller` named a class where ticket 17's own argument was a
+# property. So the set is now:
+#
+#   layout-not-its-own    the layout it publishes measures hardware it does not own
+#   no-switch-positions   the board places no switch position at all
+#   not-a-keyboard        the device's keys are incidental to what it is
+#
+# and nothing else until a row needs one. A class name belongs in `note`, where
+# it describes the row rather than deciding it.
+#
+# `reason` RECORDS THE CHECK, NOT THE DESCRIPTION -- widened from two to three
+# 2026-08-21 by ticket 38, one day after ticket 33 narrowed four to two, because
+# `kinesis/kintwin` fits neither. Its thumb PCB may well hold switch positions
+# (the file is Sprint Layout, unreadable), so declining it on their absence would
+# be a confident negative; what IS measurable is that its 86 keys are a Kinesis
+# Contoured's. Note anavi and kintwin decline for OPPOSITE reasons: ANAVI's one
+# key is on its own board but is not a switch, kintwin's switches may be its own
+# but the layout is not.
+#
+# Every row so far is `no-switch-positions`, from two classes:
+#   * replacement controllers and protocol converters (ticket 17) -- 50 QMK
+#     records, of which 5 have rows; the other 45 already fail corpus reach's
+#     hardware gate.
+#   * encoder-only devices (ticket 25) -- 5 candidate records, of which 2 have
+#     rows. See the note above those rows for why the other 3 do not.
+#
+# `verdict` is the human's ruling, the same field sources.toml carries. There
+# `drafted` means a machine proposed the row and no human has ruled yet; here
+# every row is born ruled, because nothing drafted them. The build consumes rows
+# whose verdict is not `drafted`. `reason` is a separate axis -- the decline
+# taxonomy member -- so a future machine-proposed decline is writable as
+# `verdict = "drafted"` alongside its proposed `reason`, with no collision.
+#
+# `signal` names WHICH source the span came from, so a row is checkable without
+# the ticket that produced it:
+#   `qmk-readme`     the record's own readme in qmk_firmware
+#   `source-readme`  the hardware repo's own README
+#   `board-file`     a footprint placed in the design's own .kicad_pcb, cited
+#                    with file and line
+# Ticket 17 labelled all five of its rows `readme`; four are QMK's and ctrl_m's is
+# the hardware repo's, whose words are not in QMK's tree at all. A bare `readme`
+# makes a row uncheckable against the local archive, which is why the value names
+# the source class.
+#
+# `converter/xmk` is deliberately absent, and its reason matters. It is
+# repo-backed (`manna-harbour/xmk`) and filed under `converter/`, so a prefix
+# rule would have taken it -- but its readme says "Hardware Availability: No
+# additional hardware required." It is firmware with no hardware of its own,
+# which is corpus reach's already-ruled exclusion, not this one. Declining it
+# here would record the wrong reason for the right outcome.
+
+[[entry]]
+tree     = "qmk"
+id       = "ai03/quasar"
+name     = "Quasar"
+source   = "ai03-2725/Quasar"
+verdict  = "no_design"
+reason   = "layout-not-its-own"
+signal   = "qmk-readme"
+stated   = "Replacement controller for the IBM Model M Space Saving keyboard"
+note     = "replacement controller. no switch positions on this PCB; LAYOUT's 84 keys are the Model M SSK's"
+
+[[entry]]
+tree     = "qmk"
+id       = "converter/thinkpad_t6x/rpi_pico"
+name     = "converter/thinkpad_t6x/rpi_pico"
+source   = "strobo5/T61_PiPico_Scanner"
+verdict  = "no_design"
+reason   = "layout-not-its-own"
+signal   = "qmk-readme"
+stated   = "This is a converter PCB for Lenovo Thinkpad keyboards from a wide range of models (T60, T61, X220, ...), based on the Raspberry Pi Pico."
+note     = "replacement controller. no switch positions on this PCB; LAYOUT_iso's 94 keys are the Thinkpad's. Ticket 17 quoted \"convert a Thinkpad keyboard to USB\", which is this readme's aside about OTHER converters -- the sentence above is the span that justifies the verdict"
+
+[[entry]]
+tree     = "qmk"
+id       = "evyd13/quackfire"
+name     = "Quackfire"
+source   = "evyd13/quackfire-controller"
+verdict  = "no_design"
+reason   = "layout-not-its-own"
+signal   = "qmk-readme"
+stated   = "A drop-in replacement controller for the CM Quickfire Rapid. Not for the Quickfire Rapid-I!"
+note     = "replacement controller. no switch positions on this PCB; LAYOUT_tkl_ansi's 87 and LAYOUT_tkl_iso's 88 keys are the CM Quickfire Rapid's"
+
+[[entry]]
+tree     = "qmk"
+id       = "ibm/model_m/ctrl_m"
+name     = "ctrl-M"
+source   = "nuess0r/ctrl-m"
+verdict  = "no_design"
+reason   = "layout-not-its-own"
+signal   = "source-readme"
+stated   = "This is a replacement controller for the famous IBM Model M keyboard based on the STM32F072 microcontroller."
+note     = "replacement controller. no switch positions on this PCB; LAYOUT_all's 103 keys are the Model M's. Signal is the hardware repo, not QMK -- QMK's own readme calls it \"a configuration of QMK intended to be used with the ctrl-M controller\" and never says replacement, so the word \"famous\" appears nowhere in QMK's ibm/ tree"
+
+[[entry]]
+tree     = "qmk"
+id       = "ibm/model_m/yacobo"
+name     = "Model M (Yacobo)"
+source   = "sje-mse/yacobo"
+verdict  = "no_design"
+reason   = "layout-not-its-own"
+signal   = "qmk-readme"
+stated   = "A replacement qmk-compatible control board for the 101-key Model M keyboards."
+note     = "replacement controller. no switch positions on this PCB; LAYOUT_fullsize_ansi_wkl's 101 and LAYOUT_fullsize_iso_wkl's 102 keys are the Model M's. This record is ticket 17's argument in one line: QMK files manufacturer = \"IBM\" for a board sje-mse designed"
+
+# --- Added 2026-08-20 by ticket 25: encoder-only devices. -------------------
+# An encoder's integrated push-switch is not a switch position -- a position is
+# something a switch mounts INTO. So these hold zero switch positions, which is
+# ticket 17's rule verbatim, and the two models that declined anavi/knob1 on it
+# were right where this map's special-casing was wrong.
+#
+# `no-switch-positions` over `not-a-keyboard` on purpose: both readmes call the
+# device a "mini mechanical keyboard", so filing them as not-a-keyboard would
+# record a disagreement with the source where the real ground is narrower and
+# checkable. Ticket 33 has since made this the reason for the five rows above
+# too -- see the file header.
+#
+# Explicit rows rather than leaving it to the gate, for ticket 17's reason: the
+# gate rejects them only because the lexicon names nothing on the board, so a
+# future lexicon token would walk them back in silently.
+#
+# `keys == number of rotary encoders` finds this class (5 records), but it is a
+# CANDIDATE FILTER, NOT A VERDICT -- `minimacro5` matches 5/5 and is a real
+# macropad, "a combination of rotary encoders and mechanical switches".
+# `jpe230/big_knob` matches and is deliberately absent: its board file has not
+# been read, and a decline row nobody checked is the thing this file is not for.
+
+[[entry]]
+tree     = "qmk"
+id       = "anavi/knob1"
+name     = "Knob 1"
+source   = "AnaviTechnology/anavi-knob-1"
+verdict  = "no_design"
+reason   = "no-switch-positions"
+signal   = "board-file"
+stated   = "Rotary_Encoder:RotaryEncoder_Alps_EC11E-Switch_Vertical_H20mm"
+note     = "the only input footprint placed on anavi-knob-1.kicad_pcb:227; no switch footprint anywhere on the board. QMK declares LAYOUT_k1 = 1 key on direct pin GP26 and one rotary encoder on GP27/GP28, so the single key IS the encoder's detent"
+
+[[entry]]
+tree     = "qmk"
+id       = "anavi/knobs3"
+name     = "Knobs 3"
+source   = "AnaviTechnology/anavi-knobs-3"
+verdict  = "no_design"
+reason   = "no-switch-positions"
+signal   = "qmk-readme"
+stated   = "Mini mechanical keyboard with 3 clickable rotary encoders, USB-C, RP2040 microcontroller and I2C slot for mini OLED display."
+note     = "3 declared keys and 3 rotary encoders, so every key is a detent. Board file not read -- the count match plus the readme are the evidence, and both point one way"
+
+# --- Added 2026-08-21 by ticket 38: a hybrid, and the first `layout-not-its-own`
+# row written for that reason rather than inherited. The controller PCB places
+# ZERO switch footprints (25 placements: 8 Molex matrix connectors, 4 LEDs, 8
+# resistors, 2 mounting holes, a pin header, a BlackPill socket, a logo). The
+# thumb PCB EXISTS and is unreadable -- `thumb-pcb/thumb-pcb.lay6`, a Sprint
+# Layout project -- so this is NOT declined for having no switch positions; it is
+# declined because the 86 keys it publishes are the Kinesis Contoured's. The row
+# exists because the gate is currently holding it out on a file format: add a
+# Sprint Layout reader and it walks back in with someone else's layout.
+
+[[entry]]
+tree     = "qmk"
+id       = "kinesis/kintwin"
+name     = "Kinesis"
+source   = "alvicstep/kintwin"
+verdict  = "no_design"
+reason   = "layout-not-its-own"
+signal   = "qmk-readme"
+stated   = "[KinTwin](https://github.com/alvicstep/kintwin) is a drop-in replacement of a controller and thumb cluster PCB boards for [Kinesis Contoured keyboards](https://deskthority.net/wiki/Kinesis_Contoured)."
+note     = "not a keyboard on its own -- a component of someone else's. LAYOUT's 86 keys are the Kinesis Contoured's; QMK records keyboard_name as \"Kinesis\" and manufacturer as this repo's own url. development_board = blackpill_f401, so it is socketed and would also carry a controller_footprint if it published"
+
+# --- Added 2026-08-21 by ticket 26: six OverNumpad controller records, and the
+# reason they were not here already. All six are replacement controllers for IBM
+# and Unicomp buckling-spring keyboards, the class ticket 17 ruled out -- but they
+# were INVISIBLE when ticket 36 wrote the five converter rows. They became visible
+# only when the JSON5-tolerant parser landed in build_qmk_corpus.py that same
+# evening, so the corpus grew underneath the decline list.
+#
+# That is the structural point worth keeping: this class can grow TWO ways -- a
+# record appearing upstream, and an instrument being fixed beneath it -- and a
+# record-keyed override file covers neither. Ticket 17's refusal of a lexicon RULE
+# still stands, so what was added instead is a FLAG in draft_sources.py
+# (`replacement_controller_flag`): a readme naming a `[controller]` under Hardware
+# Availability. Measured 6/6 with zero false positives across 3,550 readmes; recall
+# is 6 of 11, since the five converter rows above use no such block. It points, a
+# human rules.
+#
+# One signal measured and REJECTED, recorded so nobody re-derives it: `manufacturer`
+# containing a slash. It reads "Unicomp/Purdea Andrei" on all six, which looks
+# decisive, but 26 records carry a slash and 20 are collaborations, reddit handles or
+# a brand with a slash in it (`I/O Keyboards`, `Yiancar/CapsUnlocked`, `u/ergorius`).
+# 6 of 26 is not an instrument.
+
+[[entry]]
+tree     = "qmk"
+id       = "ibm/model_m_4th_gen/overnumpad_1xb"
+name     = "IBM Model M (4th generation)"
+source   = "purdeaandrei/overnumpad_controller_1xb"
+verdict  = "no_design"
+reason   = "layout-not-its-own"
+signal   = "qmk-readme"
+stated   = "This firmware is intended to support 4th generation IBM Model M keyboards (the ones that have their controllers under the locklights header)."
+note     = "LAYOUT_all's 109 keys are the Model M's. manufacturer reads \"IBM/Purdea Andrei\" -- QMK naming the keyboard's maker and the controller's designer in one field. Readme's Hardware Availability lists only a [controller]; unlike the five Unicomp rows there is no [keyboard] line, because IBM stopped selling them"
+[[entry]]
+tree     = "qmk"
+id       = "unicomp/classic_ultracl_post_2013/overnumpad_1xb"
+name     = "Unicomp Classic / Ultra Classic / New M (post-2013)"
+source   = "purdeaandrei/overnumpad_controller_1xb"
+verdict  = "no_design"
+reason   = "layout-not-its-own"
+signal   = "qmk-readme"
+stated   = "Will support the following Unicomp Classic, Ultra Classic, and New Model M keyboards:"
+note     = "LAYOUT_all's 112 keys are the Unicomp's. Hardware Availability names a [controller] (this repo) and a [keyboard] (pckeyboard.com) SEPARATELY -- the record distinguishing the hardware it is from the hardware it is for"
+[[entry]]
+tree     = "qmk"
+id       = "unicomp/classic_ultracl_pre_2013/overnumpad_1xb"
+name     = "Unicomp Classic / Ultra Classic (pre-2013)"
+source   = "purdeaandrei/overnumpad_controller_1xb"
+verdict  = "no_design"
+reason   = "layout-not-its-own"
+signal   = "qmk-readme"
+stated   = "Will support the following Unicomp Classic and Ultra Classic keyboards:"
+note     = "LAYOUT_all's 112 keys are the Unicomp's. Hardware Availability names a [controller] and a separate [keyboard] (pckeyboard.com)"
+[[entry]]
+tree     = "qmk"
+id       = "unicomp/pc122/overnumpad_1xb"
+name     = "Unicomp PC122"
+source   = "purdeaandrei/overnumpad_controller_1xb"
+verdict  = "no_design"
+reason   = "layout-not-its-own"
+signal   = "qmk-readme"
+stated   = "Will support the Unicomp PC122 keyboard"
+note     = "LAYOUT_all's 123 keys are the Unicomp PC122's. Hardware Availability names a [controller] and a separate [keyboard] (pckeyboard.com). The clearest row of the six: four words, and every one of them says the keyboard is someone else's"
+[[entry]]
+tree     = "qmk"
+id       = "unicomp/spacesaver_m_post_2013/overnumpad_1xb"
+name     = "Unicomp Spacesaver M (post-2013)"
+source   = "purdeaandrei/overnumpad_controller_1xb"
+verdict  = "no_design"
+reason   = "layout-not-its-own"
+signal   = "qmk-readme"
+stated   = "Initially will support part number U242S6A, remains to be seen how compatible it is with other part numbers."
+note     = "LAYOUT_all's 112 keys are the Unicomp's. Hardware Availability names a [controller] and a separate [keyboard] (pckeyboard.com). Identifies its target by the KEYBOARD's part number, which is the whole argument in one detail"
+[[entry]]
+tree     = "qmk"
+id       = "unicomp/spacesaver_m_pre_2013/overnumpad_1xb"
+name     = "Unicomp Spacesaver M (pre-2013)"
+source   = "purdeaandrei/overnumpad_controller_1xb"
+verdict  = "no_design"
+reason   = "layout-not-its-own"
+signal   = "qmk-readme"
+stated   = "Support Unicomp Spacesaver M keyboards with pre-2013 bottom row."
+note     = "LAYOUT_all's 112 keys are the Unicomp's. Hardware Availability names a [controller] and a separate [keyboard] (pckeyboard.com)"
+
+[[entry]]
+tree     = "qmk"
+id       = "kin80/blackpill103"
+name     = "Kin80"
+source   = "dmnosachev/kinesis80"
+verdict  = "no_design"
+reason   = "layout-not-its-own"
+signal   = "qmk-readme"
+stated   = "Kin80 is a set of replacement PCBs and switch mounting plates for [Kinesis Contoured keyboards](https://deskthority.net/wiki/Kinesis_Contoured)."
+note     = "not a keyboard on its own -- a component of someone else's. LAYOUT_all's 84 keys (blackpill401/411) are the Kinesis Contoured's, matching kintwin's reason exactly -- this is the hybrid declines.toml:29 anticipated: the board DOES place 6+6 switch positions of its own (verified against the raw .kicad_pcb, a reversible pair, not 12 distinct), so ticket 17's no-switch-positions rule does not reach it and it slipped through as confirmed until #40. Four QMK records share one repo and one pair of board files (blackpill103, blackpill401, blackpill411, micro); all four decline together. Backlog #40."
+
+[[entry]]
+tree     = "qmk"
+id       = "kin80/blackpill401"
+name     = "Kin80"
+source   = "dmnosachev/kinesis80"
+verdict  = "no_design"
+reason   = "layout-not-its-own"
+signal   = "qmk-readme"
+stated   = "Kin80 is a set of replacement PCBs and switch mounting plates for [Kinesis Contoured keyboards](https://deskthority.net/wiki/Kinesis_Contoured)."
+note     = "not a keyboard on its own -- a component of someone else's. LAYOUT_all's 84 keys (blackpill401/411) are the Kinesis Contoured's, matching kintwin's reason exactly -- this is the hybrid declines.toml:29 anticipated: the board DOES place 6+6 switch positions of its own (verified against the raw .kicad_pcb, a reversible pair, not 12 distinct), so ticket 17's no-switch-positions rule does not reach it and it slipped through as confirmed until #40. Four QMK records share one repo and one pair of board files (blackpill103, blackpill401, blackpill411, micro); all four decline together. Backlog #40."
+
+[[entry]]
+tree     = "qmk"
+id       = "kin80/blackpill411"
+name     = "Kin80"
+source   = "dmnosachev/kinesis80"
+verdict  = "no_design"
+reason   = "layout-not-its-own"
+signal   = "qmk-readme"
+stated   = "Kin80 is a set of replacement PCBs and switch mounting plates for [Kinesis Contoured keyboards](https://deskthority.net/wiki/Kinesis_Contoured)."
+note     = "not a keyboard on its own -- a component of someone else's. LAYOUT_all's 84 keys (blackpill401/411) are the Kinesis Contoured's, matching kintwin's reason exactly -- this is the hybrid declines.toml:29 anticipated: the board DOES place 6+6 switch positions of its own (verified against the raw .kicad_pcb, a reversible pair, not 12 distinct), so ticket 17's no-switch-positions rule does not reach it and it slipped through as confirmed until #40. Four QMK records share one repo and one pair of board files (blackpill103, blackpill401, blackpill411, micro); all four decline together. Backlog #40."
+
+[[entry]]
+tree     = "qmk"
+id       = "kin80/micro"
+name     = "Kin80"
+source   = "dmnosachev/kinesis80"
+verdict  = "no_design"
+reason   = "layout-not-its-own"
+signal   = "qmk-readme"
+stated   = "Kin80 is a set of replacement PCBs and switch mounting plates for [Kinesis Contoured keyboards](https://deskthority.net/wiki/Kinesis_Contoured)."
+note     = "not a keyboard on its own -- a component of someone else's. LAYOUT_all's 84 keys (blackpill401/411) are the Kinesis Contoured's, matching kintwin's reason exactly -- this is the hybrid declines.toml:29 anticipated: the board DOES place 6+6 switch positions of its own (verified against the raw .kicad_pcb, a reversible pair, not 12 distinct), so ticket 17's no-switch-positions rule does not reach it and it slipped through as confirmed until #40. Four QMK records share one repo and one pair of board files (blackpill103, blackpill401, blackpill411, micro); all four decline together. Backlog #40."

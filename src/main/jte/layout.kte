@@ -1,0 +1,220 @@
+@import net.keyboardbuilders.keyboardbuilders.web.Head
+@import net.keyboardbuilders.keyboardbuilders.web.SiteUrl
+@param head: Head
+@param site: SiteUrl
+@param content: gg.jte.Content
+@param wide: Boolean = false
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>${head.title} · Keyboard Builders</title>
+    @if(head.description != null)
+        <meta name="description" content="${head.description}">
+    @endif
+    <%--
+        CANONICAL AND NOINDEX ARE NEVER BOTH PRESENT, and `Head` is where that is decided
+        rather than here. They contradict each other: `noindex` says drop this page,
+        `canonical` says fold it into another one. Given both, a crawler picks one and
+        which one is not defined.
+    --%>
+    @if(head.canonical != null)
+        <link rel="canonical" href="${head.canonical}">
+    @endif
+    @if(!head.indexable)
+        <meta name="robots" content="noindex, follow">
+    @endif
+    <link rel="stylesheet" href="${site.stylesheet}">
+    <%-- THE TAB ICON. Three files and each earns its place: the SVG carries its own
+         prefers-color-scheme rule so it follows the reader's theme like the rest of the
+         site; the .ico is the fallback, in a MID grey with the terracotta top key,
+         because a raster has no theme and must stay legible on light and dark tab
+         chrome alike; the PNG is for iOS, which composites onto an opaque tile and so
+         needs a ground -- the header bar's own dark.
+
+         The .ico's 16px layer is drawn on the pixel grid rather than scaled down from
+         the vector, which is the whole reason a raster fallback is worth shipping: the
+         same four keys scaled to 16 blur into a smudge, and hinted they stay four keys. --%>
+    <%-- THE RASTER IS DECLARED UNDER PLAIN `rel="icon"`, and both halves of that matter
+         to a crawler rather than to a browser. Google's favicon crawler reads the rel
+         values `icon`, `shortcut icon`, `apple-touch-icon` and
+         `apple-touch-icon-precomposed` -- `alternate icon` is not one of them -- and it
+         decodes BMP, GIF, ICO, PNG, JPEG, PPM and TIFF, which does not include SVG. So
+         the previous head offered it a rel it reads pointing at a format it cannot, and
+         a format it can under a rel it does not.
+
+         Browsers are unaffected and still take the SVG: it is declared second with an
+         explicit `type`, and a browser picks the best format it understands rather than
+         the first link it sees. Owner-reported after a Google result for "reviung53"
+         showed the generic globe. --%>
+    <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <%-- THE NAME A HOME-SCREEN INSTALL OFFERS. Without these a phone suggests the page
+         title, which on the front page is "Home · Keyboard Builders". Android reads the
+         manifest, iOS the apple meta, and the rest fall back to application-name. --%>
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="application-name" content="Keyboard Builders">
+    <meta name="apple-mobile-web-app-title" content="Keyboard Builders">
+    <%-- OPEN GRAPH. This hobby lives on Discord and r/ErgoMechKeyboards, which is exactly
+         where a link gets pasted, and without these a paste previews as a bare URL.
+
+         The same title and description the search result uses, so there is ONE set of
+         words to keep true rather than two drifting apart.
+
+         The card is drawn, not photographed -- `OgImageController` renders the design's
+         own silhouette into a 1200x630 raster, since Open Graph wants a raster and ours
+         is inline SVG sized for a 40px row. --%>
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Keyboard Builders">
+    <meta property="og:title" content="${head.title}">
+    @if(head.image != null)
+        <meta property="og:image" content="${head.image}">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="630">
+        <meta name="twitter:image" content="${head.image}">
+    @endif
+    <%-- `summary_large_image` only where there IS one; the plain `summary` card is right
+         for a page whose picture would be a list. --%>
+    <meta name="twitter:card" content="@if(head.image != null)summary_large_image@else summary@endif">
+    <meta name="twitter:title" content="${head.title}">
+    @if(head.description != null)
+        <meta property="og:description" content="${head.description}">
+        <meta name="twitter:description" content="${head.description}">
+    @endif
+    @if(head.canonical != null)
+        <meta property="og:url" content="${head.canonical}">
+    @endif
+    <%-- SCHEMA.ORG, not og:image again. Forgejo #42: Google indexes an `<img src>` or a
+         `primaryImageOfPage`, and this page has neither -- its only images are two
+         inline `<svg>`, which are markup, not an indexed resource. `og:image` is a
+         1200x630 card with a wordmark, which Google's own guidance says to avoid
+         ("a generic image, for example your site logo"); the thumbnail is the
+         silhouette alone, square, drawn for exactly this. --%>
+    @if(head.thumbnail != null)
+        <%-- Built by JsonLd, not templated: jte escapes for JavaScript inside a script, and
+             its \- in every hyphenated slug is not JSON. --%>
+        <script type="application/ld+json">$unsafe{head.webPageLd ?: ""}</script>
+    @endif
+</head>
+<body>
+<header class="site">
+    <%-- THE MARK, INLINE AND NOT AN img, so it inherits currentColor and needs no second
+         file for the dark theme. Four keys stepped into a column stagger: pinky lowest,
+         middle finger furthest, index back down. The same four rects are in
+         static/favicon.svg and MarkTest asserts the two agree. --%>
+    <a class="wordmark" href="/">
+        <svg class="mark" viewBox="0 0 32 32" width="20" height="20" aria-hidden="true" focusable="false">
+            <g fill="currentColor">
+                <rect x="1.4" y="18.4" width="6.4" height="6.4" rx="1.5"/>
+                <rect x="9.1" y="13" width="6.4" height="6.4" rx="1.5"/>
+                <rect x="16.8" y="7.2" width="6.4" height="6.4" rx="1.5"/>
+                <rect x="24.5" y="11.2" width="6.4" height="6.4" rx="1.5"/>
+            </g>
+        </svg>
+        <span>keyboardbuilders</span>
+    </a>
+    <nav class="bar-links"><a href="/designs">Designs</a> <a href="/favorites">Favorites</a> <a href="/settings">Settings</a></nav>
+    <%-- THE SAME LINKS BEHIND A MENU on a narrow screen, where they wrapped onto a second
+         line (owner, 2026-10-02). A details element, so it opens without JavaScript;
+         app.css shows exactly one of the two. --%>
+    <details class="menu">
+        <summary aria-label="Menu">&#9776;</summary>
+        <nav><a href="/designs">Designs</a> <a href="/favorites">Favorites</a> <a href="/settings">Settings</a></nav>
+    </details>
+    <%-- CLOSED BY A TAP OUTSIDE IT OR BY ESCAPE, as a menu is expected to (reader-reported,
+         2026-10-04). `pageshow` closes it too: Back restores a page from the cache with the
+         menu still open from the link that left it. --%>
+    <script>
+        (function () {
+            var menu = document.currentScript.previousElementSibling;
+            document.addEventListener("pointerdown", function (e) {
+                if (menu.open && !menu.contains(e.target)) menu.open = false;
+            });
+            document.addEventListener("keydown", function (e) {
+                if (e.key === "Escape" && menu.open) {
+                    menu.open = false;
+                    menu.querySelector("summary").focus();
+                }
+            });
+            window.addEventListener("pageshow", function () { menu.open = false; });
+        })();
+    </script>
+</header>
+<%-- `wide` is for scanning surfaces only -- 52rem stays right for a page of prose.
+     `ResultsGridTest` holds that line. --%>
+<main class="${if (wide) "wide" else null}">
+    ${content}
+</main>
+<%-- THE FOOTER, deepened 2026-10-02 (owner): every link the top bar has, plus the site's
+     own pages, so a reader at the bottom of a long page need not scroll back up. Column
+     labels are plain text, not headings, so they stay out of each page's outline. --%>
+<footer class="site-foot">
+    <div class="foot-grid">
+        <div class="foot-brand">
+            <a class="foot-mark" href="/">
+                <svg class="mark" viewBox="0 0 32 32" width="18" height="18" aria-hidden="true" focusable="false">
+                    <g fill="currentColor">
+                        <rect x="1.4" y="18.4" width="6.4" height="6.4" rx="1.5"/>
+                        <rect x="9.1" y="13" width="6.4" height="6.4" rx="1.5"/>
+                        <rect x="16.8" y="7.2" width="6.4" height="6.4" rx="1.5"/>
+                        <rect x="24.5" y="11.2" width="6.4" height="6.4" rx="1.5"/>
+                    </g>
+                </svg>
+                <span>keyboardbuilders</span>
+            </a>
+            <p>A searchable catalog of open-source keyboard designs, read from their own files.</p>
+            <p>Made by <a class="external" href="https://fowlie.github.io" rel="noopener" target="_blank">fowlie<svg class="ext" viewBox="0 0 24 24" width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6"/><path d="M20 4 10 14"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a> in Norway 🇳🇴</p>
+        </div>
+        <nav class="foot-col" aria-label="Browse">
+            <p class="foot-label">Browse</p>
+            <a href="/designs">Designs</a>
+            <a href="/learn">Learn</a>
+            <a href="/favorites">Favorites</a>
+            <a href="/settings">Settings</a>
+        </nav>
+        <nav class="foot-col" aria-label="About">
+            <p class="foot-label">About</p>
+            <a href="/about">About this site</a>
+            <a href="/about#privacy">Privacy</a>
+            <a href="/account">Designers: sign in</a>
+            <a href="mailto:hello@keyboardbuilders.net?subject=keyboardbuilders">hello@<wbr>keyboardbuilders.net</a>
+        </nav>
+        <div class="foot-col">
+            <p class="foot-label">Support</p>
+            <a class="support-link external" href="https://ko-fi.com/keyboardbuilders" rel="noopener" target="_blank">Buy me a beer 🍺<svg class="ext" viewBox="0 0 24 24" width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6"/><path d="M20 4 10 14"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
+            <span class="foot-fine">or share the site with a friend</span>
+        </div>
+    </div>
+</footer>
+<%--
+    Page views. Forgejo #27, amended: the counter moved from self-hosted to goatcounter.com
+    on the owner's rule that nothing is self-hosted unless it has to be. The origin is
+    configuration and UNSET LOADS NOTHING, so only the deployed instance counts anything.
+
+    THE SECOND SCRIPT ON THE SITE, and the first that serves the operator rather than the
+    reader -- #27 draws that distinction and it is a fair one. The no-JS alternative is
+    GoatCounter's 1x1 pixel, which was measured and rejected on cost rather than
+    principle: `p` is mandatory (the endpoint 400s without it), so a pixel needs the path
+    threaded through this layout and every call site, plus the incoming Referer read in
+    the controller if referrers are wanted. This tag needs one line and answers both
+    halves of the launch question -- is anyone arriving, and from where.
+
+    Blockers catch both roughly equally: filter lists match hostnames containing
+    `goatcounter` and `/count` paths, so the pixel's only real gain is true `noscript`
+    readers. If the numbers ever look implausibly low against another signal, switch to
+    the pixel then, with this as the baseline to compare against.
+
+    SELF-HOSTED, so first-party: no third-party request, and the same instance that
+    stores the data serves the script.
+
+    `async` so it never blocks render. The index is 85% inline SVG and the parse cost is
+    the page's real expense (ux.md); this must not add to it.
+--%>
+@if(site.hasAnalytics)
+    <script data-goatcounter="${site.analyticsOrigin}/count"
+            async src="${site.analyticsScript}"></script>
+@endif
+</body>
+</html>

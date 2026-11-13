@@ -1,0 +1,10 @@
+# seed/silhouette-mirrors.toml -- designs whose silhouette is drawn mirrored, a person's
+# ruling, applied last by scripts/build_silhouettes.py.
+#
+# A reversible board is built either face up, and its KiCad file draws one face. Nothing
+# in the file says which face the usual build shows, so the photo or README decides, and
+# `note` says which.
+
+[[entry]]
+slug = "eternal-keypad"
+note = "Owner, Forgejo #131, 2026-10-04: mirrored. The repo's photo has the lone column (F1, F2) on the right and the wide Shift bottom left; the board file (MX_socket_reversible, ProMicro_facedown) draws the other face."

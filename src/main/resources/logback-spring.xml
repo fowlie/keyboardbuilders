@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Local development logging. Named `logback-spring.xml` and not `logback.xml` on
+  purpose: only the `-spring` form is read by Spring Boot's initialiser, and only that
+  form understands <springProfile>, which is the whole mechanism here.
+
+  MOSTLY SELF-CONTAINED. The usual recipe is to
+  <include resource="org/springframework/boot/logging/logback/defaults.xml"/>, but that
+  is Boot's internal resource layout and it has moved between major versions. What is
+  borrowed instead is one class, registered by name below: Boot's ColorConverter, because
+  level-based colour is the thing logback cannot do on its own. Its %highlight only
+  offers a fixed map with INFO in blue; %clr(...){} with empty braces gives Boot's map,
+  which is INFO green, WARN yellow, ERROR red. If that class ever moves, this file fails
+  loudly at startup rather than silently mis-rendering.
+
+  WHAT IS QUIETENED, AND WHY EACH ONE. Measured over one `bootRun` with devtools: 71 log
+  records, of which about 30 are startup chatter repeated on every restart. The rule
+  applied was "would this line ever change what I do?" — so the pool announcing its own
+  existence goes, and Tomcat announcing the port it bound stays.
+
+  NOTHING IS QUIETENED ABOVE WARN. Every logger below keeps WARN and ERROR, so a real
+  failure still reaches the console. That rule paid for itself immediately: measuring the
+  noise here surfaced a Spring Data JDBC dialect error that had been failing every
+  devtools restart, and a blanket `logging.level.root=WARN` would have buried it instead
+  of fixing it. It is fixed (the starter that dragged in the repository layer was
+  dropped), but the rule stands for the next one.
+-->
+<configuration>
+
+    <!-- Boot 4 spells this `class`, not `converterClass`. Verified against the
+         defaults.xml inside spring-boot-4.0.7.jar rather than copied from a 3.x example. -->
+    <conversionRule conversionWord="clr"
+                    class="org.springframework.boot.logging.logback.ColorConverter"/>
+
+    <springProfile name="dev">
+        <!-- HH:mm only. No date, no seconds, no PID, no thread: in a loop where you
+             restart every few minutes none of it distinguishes one line from another,
+             and the one place sub-second timing matters already prints it in the
+             message ("Started ... in 1.653 seconds").
+
+             `%clr(){}` with EMPTY braces is level-based colour, not a fixed one. Naming
+             a colour there, as in `{green}`, would paint errors green too.
+
+             `logger{0}` is the class name with the package discarded. Zero is not a
+             width, it is logback's "rightmost segment only". -->
+        <property name="LOG_PATTERN"
+                  value="%clr(%d{HH:mm:ss}){faint} %clr(%-5level){} %clr(%-32.32logger{0}){cyan} %clr(:){faint} %msg%n"/>
+    </springProfile>
+    <springProfile name="!dev">
+        <!-- Anywhere that is not a developer's terminal keeps the full context: this is
+             the form you want when reading a log you were not watching being written.
+             No colour either, because ANSI escapes in a file are noise to every reader,
+             and the full logger name because there is no terminal width to save. -->
+        <property name="LOG_PATTERN"
+                  value="%d{yyyy-MM-dd'T'HH:mm:ss.SSS} %-5level [%thread] %logger{40} : %msg%n"/>
+    </springProfile>
+
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>${LOG_PATTERN}</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+    </appender>
+
+    <root level="INFO">
+        <appender-ref ref="CONSOLE"/>
+    </root>
+
+    <springProfile name="dev">
+        <!-- 6 lines per restart, all of them the pool describing its own lifecycle:
+             Starting, Added connection, Start completed, Shutdown initiated, Shutdown
+             completed. A pool that fails to start still says so at ERROR. -->
+        <logger name="com.zaxxer.hikari" level="WARN"/>
+
+        <!-- "Starting service [Tomcat]", "Starting Servlet engine: [Apache Tomcat/…]".
+             The version is worth knowing once, not on every reload. Note this does NOT
+             cover org.springframework.boot.tomcat, which is left at INFO below because
+             "Tomcat started on port 8080" is the line you actually look for. -->
+        <logger name="org.apache.catalina" level="WARN"/>
+        <logger name="org.apache.coyote" level="WARN"/>
+
+        <!-- Two lines of advice that are read once and true forever: that devtools
+             property defaults are on, and that logging.level.web can be set to DEBUG. -->
+        <logger name="org.springframework.boot.devtools.env" level="WARN"/>
+
+        <!-- "Initializing Servlet 'dispatcherServlet'" then "Completed initialization in
+             1 ms", every restart. -->
+        <logger name="org.springframework.web.servlet.DispatcherServlet" level="WARN"/>
+        <logger name="org.springframework.boot.web.servlet" level="WARN"/>
+
+        <!-- "Condition evaluation unchanged" after every hot reload. It is devtools
+             telling you the autoconfiguration report did not move, which is the normal
+             case and therefore never the interesting one. -->
+        <logger name="org.springframework.boot.devtools.autoconfigure" level="WARN"/>
+
+        <!-- LEFT AT INFO ON PURPOSE, so the reasoning is visible to whoever edits this:
+               org.springframework.boot.tomcat   the port it bound
+               org.flywaydb                      whether the schema moved, and to what
+               o.s.b.devtools.restart            that a reload actually happened
+               net.keyboardbuilders              ours
+             Add to the list above only after checking the line against the same
+             question: would it ever change what I do? -->
+    </springProfile>
+
+</configuration>

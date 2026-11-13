@@ -1,0 +1,23 @@
+@import net.keyboardbuilders.keyboardbuilders.web.Head
+@import net.keyboardbuilders.keyboardbuilders.web.SiteUrl
+@param head: Head
+@param site: SiteUrl
+@param status: Int
+@param headline: String
+@param reason: String? = null
+
+@template.layout(head = head, site = site, content = @`
+    <p class="crumb">${status}</p>
+    <h1>${headline}</h1>
+
+    <%-- The reason only ever arrives for a 4xx -- see ErrorPageController. It is our own
+         sentence, written for the reader, and JTE escapes it. --%>
+    @if(reason != null)
+        <p class="error-reason">${reason}</p>
+    @endif
+
+    <p class="error-next">
+        Try <a href="/designs">all designs</a>, or the
+        <a href="/">front page</a>.
+    </p>
+`)

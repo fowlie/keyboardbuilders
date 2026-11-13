@@ -1,0 +1,73 @@
+@import net.keyboardbuilders.keyboardbuilders.web.Head
+@import net.keyboardbuilders.keyboardbuilders.web.SiteUrl
+@import net.keyboardbuilders.keyboardbuilders.account.OwnedDesign
+@import org.springframework.security.web.csrf.CsrfToken
+@param head: Head
+@param site: SiteUrl
+@param login: String
+@param designs: List<OwnedDesign>
+@param csrf: CsrfToken
+
+<%--
+    "Your designs", backlog #116 (AccountController). Built from /settings' pieces: the
+    same column, a raised card, and key-shaped buttons. NO BACKTICKS anywhere in this
+    file -- one closes the raw string the page is written in.
+--%>
+@template.layout(head = head, site = site, content = @`
+    <article class="settings account">
+        <h1>Your designs</h1>
+        <div class="account-who">
+            <p class="settings-lede">Signed in with GitHub as <strong>${login}</strong>.</p>
+            <form method="post" action="/logout">
+                <input type="hidden" name="${csrf.parameterName}" value="${csrf.token}">
+                <button type="submit" class="settings-save">Sign out</button>
+            </form>
+        </div>
+
+        <section class="settings-card">
+            @if(designs.isEmpty())
+                <h2>Nothing here yet</h2>
+                <p class="settings-q">
+                    No designs on this site come from a GitHub account named ${login}.
+                </p>
+                <p class="settings-fine">
+                    If one is yours under another account or an organisation, email
+                    <a href="mailto:hello@keyboardbuilders.net">hello@keyboardbuilders.net</a>.
+                </p>
+            @else
+                <h2>@if(designs.size == 1)1 design@else${designs.size} designs@endif from github.com/${login}</h2>
+                <ul class="owned">
+                    @for(design in designs)
+                        <li class="owned-row${if (design.published) "" else " is-off"}">
+                            <span class="owned-pic">$unsafe{design.silhouette}</span>
+                            <span class="owned-text">
+                                @if(design.published)
+                                    <a href="/designs/${design.slug}">${design.name}</a>
+                                    <span class="owned-state">On the site</span>
+                                @else
+                                    <strong>${design.name}</strong>
+                                    <span class="owned-state">Unpublished. Its page says you took it down.</span>
+                                @endif
+                            </span>
+                            @if(design.published)
+                                <form method="post" action="/account/designs/${design.slug}/unpublish">
+                                    <input type="hidden" name="${csrf.parameterName}" value="${csrf.token}">
+                                    <button type="submit" class="key-quiet">Unpublish</button>
+                                </form>
+                            @else
+                                <form method="post" action="/account/designs/${design.slug}/publish">
+                                    <input type="hidden" name="${csrf.parameterName}" value="${csrf.token}">
+                                    <button type="submit" class="settings-save">Publish again</button>
+                                </form>
+                            @endif
+                        </li>
+                    @endfor
+                </ul>
+                <p class="settings-fine">
+                    Unpublishing takes a design out of search, lists and the sitemap at once.
+                    You can publish it again here whenever you like.
+                </p>
+            @endif
+        </section>
+    </article>
+`)

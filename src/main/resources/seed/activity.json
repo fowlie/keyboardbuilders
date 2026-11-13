@@ -1,0 +1,1331 @@
+{
+ "fetchedAt": "2026-11-13T02:44:50Z",
+ "repos": {
+  "0x544D/kuro65": {
+   "stars": 2,
+   "lastPush": "2023-03-14T16:44:23Z",
+   "archived": false
+  },
+  "Aidan-OS/Sango": {
+   "stars": 0,
+   "lastPush": "2025-08-30T00:04:35Z",
+   "archived": false
+  },
+  "Aleblazer/Zodiark": {
+   "stars": 14,
+   "lastPush": "2024-05-26T19:22:07Z",
+   "archived": false
+  },
+  "Bastardkb/Dilemma": {
+   "stars": 591,
+   "lastPush": "2026-10-27T13:36:06Z",
+   "archived": false
+  },
+  "Dbroqua/DK60": {
+   "stars": 3,
+   "lastPush": "2019-01-19T20:27:37Z",
+   "archived": false
+  },
+  "Envious-Data/Env-KB": {
+   "stars": 256,
+   "lastPush": "2024-04-16T18:20:26Z",
+   "archived": false
+  },
+  "Envious-Data/Env-KB60F": {
+   "stars": 8,
+   "lastPush": "2025-03-02T20:46:11Z",
+   "archived": false
+  },
+  "Envious-Data/Env-KB65M": {
+   "stars": 8,
+   "lastPush": "2023-09-24T17:03:56Z",
+   "archived": false
+  },
+  "Envious-Data/Env-MCRO": {
+   "stars": 87,
+   "lastPush": "2025-02-26T00:28:43Z",
+   "archived": false
+  },
+  "Frooastside/Frooastboard": {
+   "stars": 1,
+   "lastPush": "2026-06-16T21:26:53Z",
+   "archived": false
+  },
+  "MangoIV/dracuLad": {
+   "stars": 230,
+   "lastPush": "2024-03-07T10:09:39Z",
+   "archived": false
+  },
+  "PyrooL/Alpha": {
+   "stars": 297,
+   "lastPush": "2024-07-01T01:45:13Z",
+   "archived": false
+  },
+  "PyrooL/Meson": {
+   "stars": 2,
+   "lastPush": "2019-07-28T02:28:27Z",
+   "archived": false
+  },
+  "Salicylic-acid3/PCB_Data": {
+   "stars": 51,
+   "lastPush": "2026-10-02T13:31:26Z",
+   "archived": false
+  },
+  "SethSenpai/Tanuki": {
+   "stars": 286,
+   "lastPush": "2022-07-30T12:13:27Z",
+   "archived": false
+  },
+  "TuckTuckFloof/EUISO-pcb": {
+   "stars": 0,
+   "lastPush": "2021-06-16T20:54:44Z",
+   "archived": false
+  },
+  "TweetyDaBird/Fat-Chameleon": {
+   "stars": 14,
+   "lastPush": "2026-11-10T14:49:05Z",
+   "archived": false
+  },
+  "adpenrose/kintsugi_keeb": {
+   "stars": 3,
+   "lastPush": "2022-06-16T19:15:44Z",
+   "archived": false,
+   "renamedTo": "apaydev/kintsugi_keeb"
+  },
+  "aeonstrife/potato65": {
+   "stars": 1,
+   "lastPush": "2024-04-02T16:58:33Z",
+   "archived": false
+  },
+  "ai03-2725/contra": {
+   "stars": 197,
+   "lastPush": "2019-05-27T23:15:56Z",
+   "archived": false
+  },
+  "ai03-2725/jp60": {
+   "stars": 30,
+   "lastPush": "2023-04-18T13:41:15Z",
+   "archived": false
+  },
+  "ai03-2725/soyuz": {
+   "stars": 59,
+   "lastPush": "2019-06-08T03:59:32Z",
+   "archived": false
+  },
+  "ai03-2725/voyager60": {
+   "stars": 78,
+   "lastPush": "2019-05-27T23:14:09Z",
+   "archived": true
+  },
+  "akyp/desire65-pcb": {
+   "stars": 9,
+   "lastPush": "2024-12-21T13:29:40Z",
+   "archived": false
+  },
+  "anavitechnology/anavi-arrows": {
+   "stars": 8,
+   "lastPush": "2026-04-15T17:25:30Z",
+   "archived": false
+  },
+  "anavitechnology/anavi-macro-pad-10": {
+   "stars": 31,
+   "lastPush": "2026-04-03T16:51:03Z",
+   "archived": false
+  },
+  "anavitechnology/anavi-macro-pad-12": {
+   "stars": 12,
+   "lastPush": "2025-12-07T19:31:51Z",
+   "archived": false
+  },
+  "ashijanken/slimorta": {
+   "stars": 0,
+   "lastPush": "2025-06-08T12:38:18Z",
+   "archived": false
+  },
+  "autumnisacutie/karina": {
+   "stars": 0,
+   "lastPush": "2021-08-17T06:21:32Z",
+   "archived": false,
+   "renamedTo": "misonoworks/jungfrau"
+  },
+  "azhizhinov/elcantorhs": {
+   "stars": 5,
+   "lastPush": "2024-10-31T08:24:42Z",
+   "archived": false
+  },
+  "b-karl/KBIC65": {
+   "stars": 67,
+   "lastPush": "2021-08-26T16:57:15Z",
+   "archived": false
+  },
+  "bbrfkr/keyboards": {
+   "stars": 2,
+   "lastPush": "2022-02-25T10:21:09Z",
+   "archived": false
+  },
+  "beanaccle/kb58_pico": {
+   "stars": 0,
+   "lastPush": "2026-03-19T07:07:58Z",
+   "archived": false,
+   "renamedTo": "beanaccle/kb58"
+  },
+  "beekeeb/piantor": {
+   "stars": 868,
+   "lastPush": "2023-10-23T06:38:56Z",
+   "archived": false
+  },
+  "bit-trade-one/ADKB96-hardware": {
+   "stars": 2,
+   "lastPush": "2021-12-01T07:24:00Z",
+   "archived": false
+  },
+  "brickbots/chocv": {
+   "stars": 188,
+   "lastPush": "2023-01-24T19:30:34Z",
+   "archived": false
+  },
+  "catmunch/macrocat": {
+   "stars": 0,
+   "lastPush": "2022-10-31T12:19:52Z",
+   "archived": false
+  },
+  "cgarcia2097/8-pack": {
+   "stars": 14,
+   "lastPush": "2020-07-07T03:52:50Z",
+   "archived": false
+  },
+  "chrischrislolo/banime40": {
+   "stars": 113,
+   "lastPush": "2026-01-08T01:14:10Z",
+   "archived": false
+  },
+  "chrishoage/spleeb": {
+   "stars": 87,
+   "lastPush": "2024-08-26T00:24:09Z",
+   "archived": false
+  },
+  "climent/atreyu": {
+   "stars": 63,
+   "lastPush": "2023-05-21T07:03:59Z",
+   "archived": false
+  },
+  "cmdremily/opendeck": {
+   "stars": 1,
+   "lastPush": "2022-10-05T21:43:23Z",
+   "archived": false
+  },
+  "coseyfannitutti/discipad": {
+   "stars": 221,
+   "lastPush": "2020-07-06T00:10:23Z",
+   "archived": false
+  },
+  "coseyfannitutti/discipline": {
+   "stars": 1008,
+   "lastPush": "2024-02-03T03:47:29Z",
+   "archived": false
+  },
+  "coseyfannitutti/mysterium": {
+   "stars": 541,
+   "lastPush": "2023-02-22T15:41:03Z",
+   "archived": false
+  },
+  "coseyfannitutti/romeo": {
+   "stars": 148,
+   "lastPush": "2020-11-30T04:36:18Z",
+   "archived": false
+  },
+  "cozykeys/speedo": {
+   "stars": 19,
+   "lastPush": "2020-10-24T05:25:26Z",
+   "archived": false
+  },
+  "crehmann/buzzard": {
+   "stars": 122,
+   "lastPush": "2021-12-16T19:45:53Z",
+   "archived": false
+  },
+  "cyril279/keyboards": {
+   "stars": 74,
+   "lastPush": "2022-07-01T11:54:26Z",
+   "archived": false
+  },
+  "daneski13/junco": {
+   "stars": 15,
+   "lastPush": "2024-06-04T05:42:10Z",
+   "archived": false
+  },
+  "dannixon/aya": {
+   "stars": 1,
+   "lastPush": "2022-02-15T16:59:45Z",
+   "archived": false
+  },
+  "davidphilipbarr/36keys": {
+   "stars": 129,
+   "lastPush": "2021-08-03T09:43:59Z",
+   "archived": false
+  },
+  "davidphilipbarr/macropads": {
+   "stars": 14,
+   "lastPush": "2022-05-23T11:04:32Z",
+   "archived": false
+  },
+  "davidphilipbarr/sweep": {
+   "stars": 2129,
+   "lastPush": "2025-12-14T10:23:10Z",
+   "archived": false
+  },
+  "dcpedit/masonry": {
+   "stars": 19,
+   "lastPush": "2024-08-26T20:41:57Z",
+   "archived": false
+  },
+  "dcpedit/redherring": {
+   "stars": 253,
+   "lastPush": "2024-05-12T18:46:25Z",
+   "archived": false
+  },
+  "diepala/cantor": {
+   "stars": 757,
+   "lastPush": "2024-11-24T18:53:28Z",
+   "archived": false
+  },
+  "dinofizz/fnrow-pcb": {
+   "stars": 13,
+   "lastPush": "2024-01-13T13:59:25Z",
+   "archived": false
+  },
+  "dlip/chouchou": {
+   "stars": 28,
+   "lastPush": "2025-10-07T02:50:46Z",
+   "archived": false
+  },
+  "doesntfazer/Budgy": {
+   "stars": 27,
+   "lastPush": "2024-04-05T15:30:03Z",
+   "archived": false
+  },
+  "doesntfazer/CrowBoard": {
+   "stars": 56,
+   "lastPush": "2023-02-24T15:59:01Z",
+   "archived": false
+  },
+  "drabaioli/sdrakb00": {
+   "stars": 1,
+   "lastPush": "2025-07-21T15:01:13Z",
+   "archived": false
+  },
+  "dsanchezseco/punk75": {
+   "stars": 44,
+   "lastPush": "2021-02-10T21:40:33Z",
+   "archived": false
+  },
+  "duckyb/eternal-keypad": {
+   "stars": 195,
+   "lastPush": "2025-07-10T09:34:39Z",
+   "archived": false
+  },
+  "durken1/pierce": {
+   "stars": 171,
+   "lastPush": "2024-09-14T18:46:33Z",
+   "archived": false
+  },
+  "dwctor/kaly": {
+   "stars": 234,
+   "lastPush": "2023-10-27T17:13:07Z",
+   "archived": false
+  },
+  "ebastler/isometria-75": {
+   "stars": 228,
+   "lastPush": "2020-12-17T07:08:56Z",
+   "archived": false
+  },
+  "eggsworks/egg58": {
+   "stars": 89,
+   "lastPush": "2023-12-04T13:32:02Z",
+   "archived": false
+  },
+  "eliassjogreen/4by3": {
+   "stars": 3,
+   "lastPush": "2019-08-15T23:27:05Z",
+   "archived": false
+  },
+  "enochchau/dropout-numpad": {
+   "stars": 2,
+   "lastPush": "2025-09-11T07:50:06Z",
+   "archived": false
+  },
+  "eric-wood/macro-pad": {
+   "stars": 0,
+   "lastPush": "2021-03-24T04:48:26Z",
+   "archived": false
+  },
+  "ericrlau/numdiscipline": {
+   "stars": 15,
+   "lastPush": "2020-06-14T21:04:22Z",
+   "archived": false
+  },
+  "erkhal/prkl30": {
+   "stars": 47,
+   "lastPush": "2023-11-08T18:46:21Z",
+   "archived": false
+  },
+  "etiennecollin/wave": {
+   "stars": 40,
+   "lastPush": "2025-04-08T18:52:32Z",
+   "archived": false
+  },
+  "evyd13/atom47": {
+   "stars": 30,
+   "lastPush": "2024-02-14T20:10:10Z",
+   "archived": false
+  },
+  "evyd13/fin-pad": {
+   "stars": 1,
+   "lastPush": "2022-07-01T07:06:54Z",
+   "archived": false
+  },
+  "evyd13/gh80-series": {
+   "stars": 69,
+   "lastPush": "2021-05-03T13:28:33Z",
+   "archived": false
+  },
+  "evyd13/gud70-pcb": {
+   "stars": 1,
+   "lastPush": "2021-02-24T20:38:28Z",
+   "archived": false
+  },
+  "evyd13/mx-5160": {
+   "stars": 3,
+   "lastPush": "2021-05-03T13:36:58Z",
+   "archived": false
+  },
+  "evyd13/nt-series": {
+   "stars": 56,
+   "lastPush": "2022-07-07T04:28:08Z",
+   "archived": false
+  },
+  "evyd13/plain60-c": {
+   "stars": 229,
+   "lastPush": "2021-05-03T13:39:57Z",
+   "archived": false
+  },
+  "evyd13/solheim68": {
+   "stars": 19,
+   "lastPush": "2021-05-03T15:16:00Z",
+   "archived": false
+  },
+  "farfalleflickan/nack": {
+   "stars": 11,
+   "lastPush": "2024-03-15T18:31:33Z",
+   "archived": false
+  },
+  "fatenozomi/arisu-pcb": {
+   "stars": 284,
+   "lastPush": "2020-10-20T05:05:52Z",
+   "archived": false
+  },
+  "fearherbs1/blue-team-pad": {
+   "stars": 6,
+   "lastPush": "2023-05-04T23:30:58Z",
+   "archived": false
+  },
+  "fharding1/pdxkbc-badge": {
+   "stars": 3,
+   "lastPush": "2020-03-19T21:37:15Z",
+   "archived": false
+  },
+  "floookay/adelheid": {
+   "stars": 123,
+   "lastPush": "2023-09-18T06:38:34Z",
+   "archived": false
+  },
+  "floookay/pluckey": {
+   "stars": 42,
+   "lastPush": "2022-01-28T12:43:03Z",
+   "archived": false
+  },
+  "floookay/zwerg": {
+   "stars": 5,
+   "lastPush": "2025-03-07T14:31:58Z",
+   "archived": false
+  },
+  "foostan/crkbd": {
+   "stars": 7740,
+   "lastPush": "2025-05-10T16:33:06Z",
+   "archived": false
+  },
+  "gachiham/XR63GL": {
+   "stars": 0,
+   "lastPush": "2022-09-21T03:46:31Z",
+   "archived": false
+  },
+  "galile0-designs/glyphkbd": {
+   "stars": 24,
+   "lastPush": "2025-09-28T13:01:37Z",
+   "archived": false,
+   "renamedTo": "ixmachine/glyphkbd"
+  },
+  "geigeigeist/klor": {
+   "stars": 1209,
+   "lastPush": "2023-06-28T13:22:02Z",
+   "archived": false
+  },
+  "glozares/millipad": {
+   "stars": 0,
+   "lastPush": "2021-04-10T02:04:19Z",
+   "archived": false
+  },
+  "gregandcin/teaqueen": {
+   "stars": 3,
+   "lastPush": "2023-10-28T23:36:25Z",
+   "archived": false
+  },
+  "gtips/reviung": {
+   "stars": 517,
+   "lastPush": "2024-09-25T02:20:29Z",
+   "archived": false
+  },
+  "guidoism/andean-condor": {
+   "stars": 8,
+   "lastPush": "2026-03-20T03:36:51Z",
+   "archived": false
+  },
+  "guidoism/madjax_macropad": {
+   "stars": 1,
+   "lastPush": "2024-10-25T22:59:15Z",
+   "archived": false
+  },
+  "gumorr/gummykey": {
+   "stars": 0,
+   "lastPush": "2023-01-27T19:35:51Z",
+   "archived": false
+  },
+  "hardware7253/koca58": {
+   "stars": 0,
+   "lastPush": "2026-08-27T10:11:01Z",
+   "archived": false
+  },
+  "hazels-garage/bad-wings": {
+   "stars": 107,
+   "lastPush": "2026-03-23T17:41:44Z",
+   "archived": false
+  },
+  "hellsingcoder/limekeyboard": {
+   "stars": 25,
+   "lastPush": "2021-11-21T20:06:26Z",
+   "archived": false
+  },
+  "horrortroll/keebproj": {
+   "stars": 0,
+   "lastPush": "2022-08-20T14:37:17Z",
+   "archived": false,
+   "renamedTo": "HorrorTroll/Keeb_Project"
+  },
+  "hsgw/ergoinu": {
+   "stars": 26,
+   "lastPush": "2018-09-26T03:13:13Z",
+   "archived": false
+  },
+  "hsgw/plaid": {
+   "stars": 777,
+   "lastPush": "2020-12-13T18:18:46Z",
+   "archived": false
+  },
+  "hsgw/tartan": {
+   "stars": 99,
+   "lastPush": "2020-12-05T08:25:20Z",
+   "archived": false
+  },
+  "hyphen-ated/large-lad-keyboard": {
+   "stars": 4,
+   "lastPush": "2022-07-10T09:28:02Z",
+   "archived": false
+  },
+  "ianklug/grooveboard": {
+   "stars": 58,
+   "lastPush": "2024-03-06T23:22:45Z",
+   "archived": false
+  },
+  "ibnuda/squiggle": {
+   "stars": 47,
+   "lastPush": "2020-12-04T01:17:07Z",
+   "archived": false
+  },
+  "idank/keyboards": {
+   "stars": 10,
+   "lastPush": "2026-04-15T17:15:49Z",
+   "archived": false
+  },
+  "idank/spankbd": {
+   "stars": 52,
+   "lastPush": "2024-11-08T17:13:40Z",
+   "archived": false
+  },
+  "iktas/pill60": {
+   "stars": 8,
+   "lastPush": "2021-05-22T11:56:26Z",
+   "archived": false
+  },
+  "illness072/elephant42": {
+   "stars": 136,
+   "lastPush": "2022-05-19T10:37:38Z",
+   "archived": false
+  },
+  "imchipwood/dumbpad": {
+   "stars": 519,
+   "lastPush": "2026-03-04T01:52:59Z",
+   "archived": false
+  },
+  "ivndbt/neopad": {
+   "stars": 21,
+   "lastPush": "2025-03-18T08:43:16Z",
+   "archived": false
+  },
+  "jellytitan/sofle-pico": {
+   "stars": 119,
+   "lastPush": "2026-10-12T02:07:27Z",
+   "archived": false
+  },
+  "jimmerricks/swoop": {
+   "stars": 250,
+   "lastPush": "2024-06-18T04:19:37Z",
+   "archived": false
+  },
+  "joelproko/keyboard_layout_jopr": {
+   "stars": 1,
+   "lastPush": "2019-06-22T19:59:20Z",
+   "archived": false
+  },
+  "jonbobcar/tenkey_plusplus": {
+   "stars": 4,
+   "lastPush": "2024-06-19T02:32:48Z",
+   "archived": false
+  },
+  "joric/jorne": {
+   "stars": 545,
+   "lastPush": "2024-03-20T05:08:28Z",
+   "archived": false
+  },
+  "josefadamcik/soflekeyboard": {
+   "stars": 2569,
+   "lastPush": "2026-02-20T00:18:10Z",
+   "archived": false
+  },
+  "joshajohnson/hub20": {
+   "stars": 68,
+   "lastPush": "2022-02-04T06:12:01Z",
+   "archived": false
+  },
+  "jpconstantineau/ergotravel": {
+   "stars": 284,
+   "lastPush": "2021-10-28T13:22:41Z",
+   "archived": false
+  },
+  "jpskenn/unison": {
+   "stars": 23,
+   "lastPush": "2021-03-07T05:59:54Z",
+   "archived": false
+  },
+  "jrodna/orthocode": {
+   "stars": 18,
+   "lastPush": "2024-06-24T02:50:59Z",
+   "archived": false
+  },
+  "jyap808/pando": {
+   "stars": 13,
+   "lastPush": "2026-10-07T20:44:39Z",
+   "archived": false
+  },
+  "jyap808/pando58": {
+   "stars": 16,
+   "lastPush": "2026-10-14T21:17:59Z",
+   "archived": false
+  },
+  "kata0510/lily58": {
+   "stars": 2316,
+   "lastPush": "2025-12-26T13:21:12Z",
+   "archived": false
+  },
+  "kaylynb/mechllama-g35": {
+   "stars": 0,
+   "lastPush": "2021-03-26T20:40:59Z",
+   "archived": true
+  },
+  "kb-elmo/aek2_usb": {
+   "stars": 55,
+   "lastPush": "2021-11-12T08:19:06Z",
+   "archived": false,
+   "renamedTo": "str-dst/aek2_usb"
+  },
+  "kb-elmo/bm42": {
+   "stars": 7,
+   "lastPush": "2022-03-03T08:56:47Z",
+   "archived": false,
+   "renamedTo": "str-dst/BM42"
+  },
+  "kb-elmo/dizzy40": {
+   "stars": 12,
+   "lastPush": "2023-05-31T15:05:44Z",
+   "archived": false,
+   "renamedTo": "str-dst/Dizzy40"
+  },
+  "kb-elmo/eliza": {
+   "stars": 9,
+   "lastPush": "2024-02-24T12:44:20Z",
+   "archived": false,
+   "renamedTo": "str-dst/Eliza"
+  },
+  "kb-elmo/gamehand": {
+   "stars": 20,
+   "lastPush": "2021-07-30T13:05:05Z",
+   "archived": false,
+   "renamedTo": "str-dst/GameHand"
+  },
+  "kb-elmo/m0110a_usb": {
+   "stars": 36,
+   "lastPush": "2021-11-12T08:18:40Z",
+   "archived": false,
+   "renamedTo": "str-dst/m0110a_usb"
+  },
+  "kb-elmo/m0116_usb": {
+   "stars": 34,
+   "lastPush": "2021-11-12T08:18:30Z",
+   "archived": false,
+   "renamedTo": "str-dst/m0116_usb"
+  },
+  "kb-elmo/noah_avr": {
+   "stars": 5,
+   "lastPush": "2021-11-12T08:18:47Z",
+   "archived": false,
+   "renamedTo": "str-dst/noah_avr"
+  },
+  "kb-elmo/numpad": {
+   "stars": 14,
+   "lastPush": "2020-08-05T14:09:36Z",
+   "archived": false,
+   "renamedTo": "str-dst/numpad"
+  },
+  "kb-elmo/sesame": {
+   "stars": 331,
+   "lastPush": "2021-12-09T13:20:59Z",
+   "archived": false,
+   "renamedTo": "str-dst/sesame"
+  },
+  "kb-elmo/twelvekey": {
+   "stars": 49,
+   "lastPush": "2024-02-25T02:13:01Z",
+   "archived": false,
+   "renamedTo": "str-dst/twelvekey"
+  },
+  "keawade/keaboard": {
+   "stars": 7,
+   "lastPush": "2023-02-16T12:43:43Z",
+   "archived": false
+  },
+  "keebio/bfo9000-pcb": {
+   "stars": 20,
+   "lastPush": "2025-01-17T15:41:08Z",
+   "archived": false
+  },
+  "keebio/fourier": {
+   "stars": 96,
+   "lastPush": "2020-09-04T14:24:53Z",
+   "archived": false
+  },
+  "keebio/quefrency-rev1-pcb": {
+   "stars": 45,
+   "lastPush": "2021-04-30T17:28:18Z",
+   "archived": false
+  },
+  "kelvinhall05/southpaw75": {
+   "stars": 35,
+   "lastPush": "2022-09-02T12:57:39Z",
+   "archived": false
+  },
+  "keyzog/kapl": {
+   "stars": 88,
+   "lastPush": "2024-02-09T11:06:58Z",
+   "archived": false
+  },
+  "kkatano/bakeneko-65": {
+   "stars": 314,
+   "lastPush": "2022-04-19T04:43:08Z",
+   "archived": false
+  },
+  "knaruo/barracuda": {
+   "stars": 3,
+   "lastPush": "2021-05-23T13:16:14Z",
+   "archived": false
+  },
+  "knaruo/pisces": {
+   "stars": 2,
+   "lastPush": "2024-12-30T03:08:01Z",
+   "archived": false
+  },
+  "kraken-jokes/pteron-pcb": {
+   "stars": 30,
+   "lastPush": "2021-12-17T22:55:40Z",
+   "archived": false
+  },
+  "kulmajaba/tunks-keyboard": {
+   "stars": 0,
+   "lastPush": "2022-03-09T09:45:35Z",
+   "archived": false
+  },
+  "kyleterry/spacetime-keyboard": {
+   "stars": 1,
+   "lastPush": "2019-05-18T05:11:01Z",
+   "archived": false
+  },
+  "kyrremann/bartlesplit": {
+   "stars": 0,
+   "lastPush": "2023-10-26T19:53:15Z",
+   "archived": false
+  },
+  "kyrremann/index-tab": {
+   "stars": 8,
+   "lastPush": "2021-10-10T15:37:06Z",
+   "archived": false
+  },
+  "ladniy/jiran": {
+   "stars": 67,
+   "lastPush": "2022-04-27T14:15:00Z",
+   "archived": false
+  },
+  "lighteningab/45keyboard_v1": {
+   "stars": 0,
+   "lastPush": "2025-01-16T17:00:43Z",
+   "archived": false
+  },
+  "lyso1/lck75": {
+   "stars": 45,
+   "lastPush": "2023-03-03T09:36:14Z",
+   "archived": false
+  },
+  "makenova/omega": {
+   "stars": 8,
+   "lastPush": "2022-08-09T06:14:22Z",
+   "archived": false
+  },
+  "makotokurauchi/helix": {
+   "stars": 1008,
+   "lastPush": "2022-11-20T22:01:11Z",
+   "archived": false
+  },
+  "marcocampione/Hem-keyboard": {
+   "stars": 0,
+   "lastPush": "2026-10-13T21:07:01Z",
+   "archived": false
+  },
+  "marksard/keyboards": {
+   "stars": 193,
+   "lastPush": "2024-08-17T00:02:05Z",
+   "archived": false
+  },
+  "marvfpv/adalyn": {
+   "stars": 55,
+   "lastPush": "2022-02-09T09:57:19Z",
+   "archived": false,
+   "renamedTo": "Marbelymarble/Adalyn"
+  },
+  "marvfpv/friedrich": {
+   "stars": 13,
+   "lastPush": "2021-08-23T13:47:16Z",
+   "archived": false,
+   "renamedTo": "Marbelymarble/Friedrich"
+  },
+  "mattdibi/redox-keyboard": {
+   "stars": 1993,
+   "lastPush": "2026-05-26T18:15:22Z",
+   "archived": false
+  },
+  "matthewdias/m3n3van": {
+   "stars": 20,
+   "lastPush": "2022-01-17T00:30:38Z",
+   "archived": false
+  },
+  "matthewdias/minim": {
+   "stars": 13,
+   "lastPush": "2020-11-15T21:46:45Z",
+   "archived": false
+  },
+  "minibois/elixivy": {
+   "stars": 10,
+   "lastPush": "2021-11-17T12:51:18Z",
+   "archived": false
+  },
+  "minibois/ten-key-plus": {
+   "stars": 1,
+   "lastPush": "2022-01-03T00:26:09Z",
+   "archived": false
+  },
+  "misonoworks/chocolate-bar": {
+   "stars": 16,
+   "lastPush": "2021-09-28T20:12:35Z",
+   "archived": false
+  },
+  "mkdl/unix60": {
+   "stars": 62,
+   "lastPush": "2021-09-17T12:48:08Z",
+   "archived": false
+  },
+  "mmccoyd/hillside": {
+   "stars": 449,
+   "lastPush": "2025-07-13T01:58:04Z",
+   "archived": false
+  },
+  "mohoyt/lagom": {
+   "stars": 145,
+   "lastPush": "2026-11-12T13:24:26Z",
+   "archived": false
+  },
+  "mohoyt/litl": {
+   "stars": 75,
+   "lastPush": "2025-03-21T09:48:21Z",
+   "archived": false
+  },
+  "mythosmann/tg4x": {
+   "stars": 81,
+   "lastPush": "2019-08-28T14:28:48Z",
+   "archived": false
+  },
+  "na-cly/UA62": {
+   "stars": 2,
+   "lastPush": "2019-11-11T21:49:44Z",
+   "archived": false
+  },
+  "na-cly/juliet": {
+   "stars": 3,
+   "lastPush": "2020-05-01T20:39:21Z",
+   "archived": false
+  },
+  "na-cly/splitreus62": {
+   "stars": 37,
+   "lastPush": "2022-03-18T13:26:25Z",
+   "archived": false
+  },
+  "narinari/xenon-keyboard": {
+   "stars": 37,
+   "lastPush": "2019-09-16T03:17:13Z",
+   "archived": false
+  },
+  "ncwhale/keyboard_design": {
+   "stars": 5,
+   "lastPush": "2020-06-27T01:23:14Z",
+   "archived": false
+  },
+  "nglgzz/42": {
+   "stars": 41,
+   "lastPush": "2026-07-15T16:50:12Z",
+   "archived": false
+  },
+  "nickolaij/Abacus_Rev2": {
+   "stars": 8,
+   "lastPush": "2020-08-11T00:34:54Z",
+   "archived": false
+  },
+  "nilokr/cantor-remix": {
+   "stars": 123,
+   "lastPush": "2022-06-03T11:41:54Z",
+   "archived": false
+  },
+  "null-ll/basketweave": {
+   "stars": 129,
+   "lastPush": "2022-06-18T22:50:41Z",
+   "archived": false
+  },
+  "nut1414/np12": {
+   "stars": 2,
+   "lastPush": "2021-04-08T10:50:15Z",
+   "archived": false
+  },
+  "obosob/steal_this_keyboard": {
+   "stars": 19,
+   "lastPush": "2021-05-14T16:56:10Z",
+   "archived": false
+  },
+  "oliviahanley/wren-keyboard": {
+   "stars": 93,
+   "lastPush": "2024-10-31T01:26:39Z",
+   "archived": false
+  },
+  "omkbd/ergodash": {
+   "stars": 732,
+   "lastPush": "2022-05-15T01:51:39Z",
+   "archived": false
+  },
+  "peej/for-science-keyboard": {
+   "stars": 101,
+   "lastPush": "2021-02-27T16:06:48Z",
+   "archived": false
+  },
+  "peej/lumberjack-keyboard": {
+   "stars": 403,
+   "lastPush": "2026-10-07T08:53:51Z",
+   "archived": false
+  },
+  "peej/rosaline-keyboard": {
+   "stars": 53,
+   "lastPush": "2021-10-10T07:48:52Z",
+   "archived": false
+  },
+  "peej/tripel-keyboard": {
+   "stars": 54,
+   "lastPush": "2020-09-18T19:38:24Z",
+   "archived": false
+  },
+  "pierrechevalier83/ferris": {
+   "stars": 1272,
+   "lastPush": "2024-04-07T20:44:18Z",
+   "archived": false
+  },
+  "pimentoso/touhoupad_v2": {
+   "stars": 16,
+   "lastPush": "2021-08-10T16:29:40Z",
+   "archived": false
+  },
+  "profet23/atreus62": {
+   "stars": 240,
+   "lastPush": "2021-11-17T16:03:30Z",
+   "archived": false
+  },
+  "psuieee/pluto12": {
+   "stars": 1,
+   "lastPush": "2021-12-01T04:17:51Z",
+   "archived": true
+  },
+  "ramonimbao/Herringbone": {
+   "stars": 3,
+   "lastPush": "2020-11-28T15:15:30Z",
+   "archived": false
+  },
+  "rarepotato8de/3x3macropad": {
+   "stars": 87,
+   "lastPush": "2024-08-21T17:36:57Z",
+   "archived": false
+  },
+  "robcmills/karn-keyboard": {
+   "stars": 9,
+   "lastPush": "2025-05-16T05:55:03Z",
+   "archived": false
+  },
+  "rtitmuss/torn": {
+   "stars": 692,
+   "lastPush": "2022-05-31T06:34:37Z",
+   "archived": false
+  },
+  "sakurachari/yosino58": {
+   "stars": 5,
+   "lastPush": "2019-05-22T01:52:17Z",
+   "archived": false
+  },
+  "sendyyeah/bevi": {
+   "stars": 23,
+   "lastPush": "2021-04-16T23:51:21Z",
+   "archived": false
+  },
+  "sendz/pix": {
+   "stars": 23,
+   "lastPush": "2021-06-09T00:03:39Z",
+   "archived": false
+  },
+  "sho-keebs/vagrant-10": {
+   "stars": 0,
+   "lastPush": "2022-10-27T08:51:34Z",
+   "archived": true
+  },
+  "sithlord121/slz40": {
+   "stars": 3,
+   "lastPush": "2024-06-24T22:49:21Z",
+   "archived": false
+  },
+  "skarrmann/horizon": {
+   "stars": 179,
+   "lastPush": "2024-09-28T17:35:18Z",
+   "archived": false
+  },
+  "skarrmann/janus": {
+   "stars": 55,
+   "lastPush": "2025-08-09T22:44:11Z",
+   "archived": false
+  },
+  "skarrmann/morizon": {
+   "stars": 20,
+   "lastPush": "2023-12-20T17:55:58Z",
+   "archived": false
+  },
+  "skarrmann/sha": {
+   "stars": 11,
+   "lastPush": "2024-10-12T01:17:04Z",
+   "archived": false
+  },
+  "skeletonkbd/Frost68": {
+   "stars": 5,
+   "lastPush": "2023-06-13T17:46:34Z",
+   "archived": false
+  },
+  "skeletonkbd/skeletonnumpad": {
+   "stars": 1,
+   "lastPush": "2023-09-14T13:07:39Z",
+   "archived": false
+  },
+  "smores56/clog": {
+   "stars": 12,
+   "lastPush": "2026-10-18T22:52:10Z",
+   "archived": false
+  },
+  "smores56/osprette": {
+   "stars": 63,
+   "lastPush": "2026-10-18T22:52:10Z",
+   "archived": false
+  },
+  "sol/chord-zero": {
+   "stars": 4,
+   "lastPush": "2022-08-27T07:30:35Z",
+   "archived": false,
+   "renamedTo": "stenobase/chord-zero"
+  },
+  "sotoba/contender": {
+   "stars": 0,
+   "lastPush": "2021-12-04T15:57:27Z",
+   "archived": false
+  },
+  "sotoba/craftwalk": {
+   "stars": 3,
+   "lastPush": "2021-06-13T12:59:20Z",
+   "archived": false
+  },
+  "spaceboards/spaceboardshardware": {
+   "stars": 144,
+   "lastPush": "2026-04-12T15:29:41Z",
+   "archived": false
+  },
+  "squalius-cephalus/silakka54": {
+   "stars": 641,
+   "lastPush": "2026-05-20T07:55:29Z",
+   "archived": false
+  },
+  "stevennguyen/framework": {
+   "stars": 131,
+   "lastPush": "2023-02-08T16:57:11Z",
+   "archived": false
+  },
+  "str-dst/67mk_E": {
+   "stars": 29,
+   "lastPush": "2021-11-12T08:18:56Z",
+   "archived": false
+  },
+  "str-dst/QEZ": {
+   "stars": 111,
+   "lastPush": "2023-12-10T18:43:21Z",
+   "archived": false
+  },
+  "subrezon/la_nc": {
+   "stars": 20,
+   "lastPush": "2023-05-08T14:42:29Z",
+   "archived": false
+  },
+  "subrezon/lancer": {
+   "stars": 28,
+   "lastPush": "2023-09-28T11:23:32Z",
+   "archived": false
+  },
+  "swiftrax/Pandamic": {
+   "stars": 5,
+   "lastPush": "2020-09-13T20:10:33Z",
+   "archived": false
+  },
+  "swiftrax/unsplit": {
+   "stars": 68,
+   "lastPush": "2020-11-17T17:40:59Z",
+   "archived": false
+  },
+  "takashicompany/dogtag": {
+   "stars": 17,
+   "lastPush": "2023-08-02T02:04:49Z",
+   "archived": false
+  },
+  "takashicompany/endzone34": {
+   "stars": 16,
+   "lastPush": "2024-09-06T03:43:24Z",
+   "archived": false
+  },
+  "takashicompany/radialex": {
+   "stars": 14,
+   "lastPush": "2024-05-22T15:11:52Z",
+   "archived": false
+  },
+  "takishim/mikeneko65": {
+   "stars": 21,
+   "lastPush": "2025-02-08T08:01:31Z",
+   "archived": false
+  },
+  "tamanishi/Pinky3": {
+   "stars": 83,
+   "lastPush": "2022-06-26T10:05:47Z",
+   "archived": false
+  },
+  "tamanishi/Pinky4": {
+   "stars": 120,
+   "lastPush": "2022-06-26T10:04:18Z",
+   "archived": false
+  },
+  "tapioki/cephalopoda": {
+   "stars": 240,
+   "lastPush": "2023-11-07T05:34:15Z",
+   "archived": false
+  },
+  "tarneaux/supersplit": {
+   "stars": 3,
+   "lastPush": "2024-03-15T17:21:45Z",
+   "archived": false
+  },
+  "thatfellarobin/axon": {
+   "stars": 62,
+   "lastPush": "2022-04-02T13:47:20Z",
+   "archived": false
+  },
+  "the-royal/the_royal_open-source-projects": {
+   "stars": 159,
+   "lastPush": "2021-05-05T21:07:13Z",
+   "archived": false
+  },
+  "theroyalsweatshirt/the_royal_projects": {
+   "stars": 159,
+   "lastPush": "2021-05-05T21:07:13Z",
+   "archived": false,
+   "renamedTo": "The-Royal/The_Royal_Open-Source-Projects"
+  },
+  "tokageitlab/varanidae": {
+   "stars": 0,
+   "lastPush": "2023-08-08T22:31:51Z",
+   "archived": false
+  },
+  "tompi/cheapino": {
+   "stars": 1195,
+   "lastPush": "2026-09-25T21:25:24Z",
+   "archived": false
+  },
+  "tomsaleeba/ergoslab": {
+   "stars": 18,
+   "lastPush": "2022-02-03T17:31:47Z",
+   "archived": false
+  },
+  "trojanpinata/model-b": {
+   "stars": 3,
+   "lastPush": "2024-12-21T02:43:14Z",
+   "archived": false
+  },
+  "tweetydabird/lotus58": {
+   "stars": 391,
+   "lastPush": "2025-08-01T12:39:15Z",
+   "archived": false,
+   "renamedTo": "TweetyDaBird/Lotus-58-Classic"
+  },
+  "tyraelwastaken/equanimity": {
+   "stars": 2,
+   "lastPush": "2024-06-19T12:37:21Z",
+   "archived": false
+  },
+  "tzarc/keyboards": {
+   "stars": 993,
+   "lastPush": "2025-04-16T06:54:09Z",
+   "archived": false
+  },
+  "vaarai/cornia": {
+   "stars": 12,
+   "lastPush": "2024-09-29T19:18:38Z",
+   "archived": false
+  },
+  "vattern/stoutgat": {
+   "stars": 1,
+   "lastPush": "2020-07-26T14:33:25Z",
+   "archived": false
+  },
+  "vattern/stoutgatv2": {
+   "stars": 1,
+   "lastPush": "2021-02-21T19:42:47Z",
+   "archived": false
+  },
+  "vlkv/avalanche": {
+   "stars": 184,
+   "lastPush": "2024-09-26T16:46:13Z",
+   "archived": false
+  },
+  "vlkv/chocofly": {
+   "stars": 75,
+   "lastPush": "2026-05-10T16:09:51Z",
+   "archived": false
+  },
+  "vuhopkep/pcb": {
+   "stars": 0,
+   "lastPush": "2020-12-31T17:04:05Z",
+   "archived": false
+  },
+  "westfoxtrot/ccd60": {
+   "stars": 13,
+   "lastPush": "2021-07-26T18:39:58Z",
+   "archived": false
+  },
+  "westfoxtrot/cyclops_pcb": {
+   "stars": 12,
+   "lastPush": "2020-08-09T19:42:13Z",
+   "archived": false
+  },
+  "westfoxtrot/cypher_pcb": {
+   "stars": 19,
+   "lastPush": "2022-08-06T10:41:19Z",
+   "archived": false
+  },
+  "weteor/3w6": {
+   "stars": 489,
+   "lastPush": "2022-12-12T09:07:30Z",
+   "archived": false
+  },
+  "wongjingping/k34": {
+   "stars": 6,
+   "lastPush": "2022-05-14T15:21:56Z",
+   "archived": false
+  },
+  "worldspawn00/SL40": {
+   "stars": 4,
+   "lastPush": "2020-09-23T00:38:20Z",
+   "archived": false
+  },
+  "yanfali/fruity60": {
+   "stars": 3,
+   "lastPush": "2021-11-10T23:59:32Z",
+   "archived": false
+  },
+  "yanghu/unicorne": {
+   "stars": 63,
+   "lastPush": "2021-05-24T20:23:27Z",
+   "archived": false
+  },
+  "yatara-cc/drink-me": {
+   "stars": 9,
+   "lastPush": "2020-06-02T08:11:52Z",
+   "archived": false
+  },
+  "yiancar/gingham_pcb": {
+   "stars": 86,
+   "lastPush": "2020-06-18T11:38:13Z",
+   "archived": false
+  },
+  "zykrah/slime88": {
+   "stars": 29,
+   "lastPush": "2023-05-02T08:30:24Z",
+   "archived": false
+  },
+  "zzeneg/pica40": {
+   "stars": 179,
+   "lastPush": "2024-04-15T22:09:03Z",
+   "archived": false
+  },
+  "zzeneg/stront": {
+   "stars": 354,
+   "lastPush": "2024-11-06T06:19:25Z",
+   "archived": false
+  }
+ }
+}

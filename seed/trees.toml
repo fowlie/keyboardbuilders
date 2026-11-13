@@ -1,0 +1,117 @@
+# seed/trees.toml -- where a row's firmware record lives.
+#
+# Backlog #64. Until this file existed a row's `tree` was one of two literal
+# strings, `"qmk"` or `"zmk"`, compared against by name in thirty-odd places, and
+# that was the ONLY thing stopping a design whose firmware sits in someone's fork
+# from entering the corpus at all. Every reader was already parameterised by a
+# tree root -- `qmk_metadata.facts(kb_id, qmk_root)` and its three siblings all
+# take a root and an id, and nothing anywhere says *the* QMK tree. So `tree`
+# becomes a key into this registry, and both halves of #64 fall out of it.
+#
+# A row in `seed/sources.toml` names a tree by `id`. Three questions get asked of
+# the entry and no others:
+#
+#   reader   WHICH READER understands this tree's records. It is the ZIMK seam: a
+#            third framework is one entry here plus one reader module. A QMK fork
+#            reads with QMK's reader, because a fork changes where a record lives
+#            and never what runs it.
+#   local    the checkout this build reads from. `--qmk` and `--zmk` still
+#            override the two upstream ones, so no existing command line changes.
+#   url/ref  the address a builder types. Only interesting for a tree that is not
+#            upstream -- see `upstream` below.
+#
+# `upstream = true` says this tree is the canonical home for its reader. It is
+# stated, not derived from `id == reader`, because that equality holds only by a
+# naming coincidence and coincidence is what this file exists to remove. Exactly
+# the entries WITHOUT it are the ones whose designs must tell a builder to go
+# clone a fork first: `qmk compile -kb cheapino` does not work against upstream
+# QMK, and a page that hides that sends a reader to a command that fails.
+#
+# ON PINNING A BRANCH RATHER THAN A COMMIT. A branch can move or vanish. That is
+# the same exposure `source` already carries -- URLs into repos that may move,
+# watched by `check_source_reachability.py`, which has already caught a repo that
+# left GitHub entirely. A branch tracks the author's current truth, which is what
+# a catalogue of BUILDABLE designs wants; a SHA is stable and immediately stale.
+# So: the branch, plus the existing reachability check, and a fork tree is treated
+# as higher-decay than upstream rather than as a different kind of thing.
+
+[[entry]]
+id       = "qmk"
+reader   = "qmk"
+upstream = true
+url      = "https://github.com/qmk/qmk_firmware"
+ref      = "master"
+local    = "~/code/qmk_firmware"
+
+[[entry]]
+id       = "zmk"
+reader   = "zmk"
+upstream = true
+url      = "https://github.com/zmkfirmware/zmk"
+ref      = "main"
+local    = "~/code/zmk"
+
+# NOT A TREE, and it is in the registry anyway. A `hardware` row -- Forgejo #22 --
+# names no firmware record of its own; it names another row's, as `tree:id`, and
+# borrows it. Cantor Remix ships its own PCB and reuses Cantor's QMK firmware
+# unchanged.
+#
+# The alternative was to leave `hardware` as the one `tree` value that is not a
+# registry key, and that would put back the literal this file removes: the check
+# `if row["tree"] == "hardware"` is the same hard-coded comparison as
+# `if row["tree"] == "qmk"` was. It also costs the one property that makes the
+# registry checkable -- that EVERY tree a row names is an entry here, so a typo
+# is caught rather than silently read as ZMK.
+#
+# So it is an entry with an honest reader and no tree behind it. `local`, `url`
+# and `ref` are absent because there is nothing to check out or link to, and the
+# reader resolves the borrowed row instead of opening a file.
+[[entry]]
+id     = "hardware"
+reader = "hardware"
+
+# -- forks ---------------------------------------------------------------------
+# A tree that is not upstream. Everything below this line is a design whose author
+# never merged the firmware record, or has not yet.
+
+[[entry]]
+id     = "cheapino-vial"
+reader = "qmk"
+url    = "https://github.com/tompi/vial-qmk"
+ref    = "cheapinov2"
+local  = "~/code/tompi-vial-qmk"
+note   = "the author's own, unmerged -- keyboards/cheapino/info.json declares `url = \"\"`, so there is nothing for the source drafter to read either"
+
+[[entry]]
+id     = "stront-vial"
+reader = "qmk"
+url    = "https://github.com/zzeneg/vial-qmk"
+ref    = "feature/zzeneg"
+local  = "~/code/zzeneg-vial-qmk"
+note   = "backlog #70: the author's own 40-key variant, `keyboards/stront/40keys`, never merged upstream -- upstream `qmk_firmware` holds only the 38-key `stront` record and never held a 40keys directory (`git log --all` on the registered qmk checkout finds nothing). The same directory exists on the author's plain-QMK fork too (`zzeneg/qmk_firmware` branch `stront`, head 2024-05-09); this one is picked because the vial branch is 8 months fresher (head 2025-01-23) and matches the `cheapino-vial` precedent above -- prefer the author's actively maintained fork over the older one when both carry the same record. The repo's own README advertises both under a Firmware section."
+
+[[entry]]
+id     = "squiggle-minimalist"
+reader = "qmk"
+url    = "https://github.com/ibnuda/qmk_firmware"
+ref    = "squiggle-minimalist"
+local  = "~/code/ibnuda-qmk-firmware"
+note   = "2026-09-26, on the owner's ask to add the other squiggle variants. The Minimalist is one controller driving both halves, so upstream's split `ibnuda/squiggle/rev1` is not its firmware; ibnuda/squiggle's README links this branch for it (\"Example firmware: Ibnuda's fork\"). `keyboards/squiggle_minimalist` is a LEGACY record -- its info.json layout is an unfilled 5-key template, and the real 34-key LAYOUT, the 4x10 matrix and COL2ROW live only in config.h and squiggle_minimalist.h -- so the design states its count (seed/sources.toml) and the reader leaves wiring and chip unread. Checked out sparse, that one directory, head 529fd1b (2021-01-17)."
+
+[[entry]]
+id     = "pando"
+reader = "qmk"
+url    = "https://github.com/jyap808/pando"
+ref    = "main"
+local  = "~/code/jyap808-pando"
+within = "firmware"
+note   = "2026-09-29, from the author's own Reddit comment: newer boards wait a long time for a QMK merge. Not a fork -- the hardware repo carries its own QMK/Vial keyboard definition at firmware/keyboards/jyap808/pando, so the tree starts one folder down (`within`). Head 60905cc (2026-09-18)."
+
+[[entry]]
+id      = "hem"
+reader  = "qmk"
+url     = "https://github.com/marcocampione/Hem-keyboard"
+ref     = "main"
+local   = "~/code/marcocampione-hem-keyboard"
+records = "firmware"
+note    = "2026-11-09, found by discover_repos.py (backlog #105) and added on the owner's go-ahead. The hardware repo carries its own QMK definition at firmware/hem/keyboard.json with no `keyboards/` folder above it, so the tree names its record folder outright (`records`). Head 3e37f69 (2026-10-13)."

@@ -1,0 +1,3935 @@
+[
+ {
+  "slug": "3w6",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "passive"
+  ],
+  "footprints": [
+   "c_0402_handsolder",
+   "r_0402_handsolder"
+  ]
+ },
+ {
+  "slug": "3x3macropad",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "led"
+  ],
+  "footprints": [
+   "led_ws2812b_plcc4_5.0x5.0mm_p3.2mm"
+  ]
+ },
+ {
+  "slug": "41-1350",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "ic",
+   "other"
+  ],
+  "footprints": [
+   "sot-23",
+   "pg1350_socket_smdled"
+  ]
+ },
+ {
+  "slug": "41-1353-r41l2",
+  "hardest": null
+ },
+ {
+  "slug": "42",
+  "hardest": "through_hole",
+  "driven_by": [
+   "diode"
+  ],
+  "footprints": [
+   "d_sod123_axial"
+  ]
+ },
+ {
+  "slug": "45",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "mcu"
+  ],
+  "footprints": [
+   "qfn-44-1ep_7x7mm_p0.5mm_ep5.2x5.2mm"
+  ]
+ },
+ {
+  "slug": "4by3",
+  "hardest": null
+ },
+ {
+  "slug": "67-e",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "ic",
+   "usb"
+  ],
+  "footprints": [
+   "sot-23-6",
+   "usb_c_receptacle_hro_type-c-31-m-12"
+  ]
+ },
+ {
+  "slug": "8pack",
+  "hardest": "through_hole",
+  "driven_by": [
+   "other"
+  ],
+  "footprints": [
+   "axial-0.3"
+  ]
+ },
+ {
+  "slug": "abacus",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "led"
+  ],
+  "footprints": [
+   "ws2812_hand_solder"
+  ]
+ },
+ {
+  "slug": "adalyn",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "usb"
+  ],
+  "footprints": [
+   "hro-type-c-31-m-12-assembly"
+  ]
+ },
+ {
+  "slug": "adelheid",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "ic"
+  ],
+  "footprints": [
+   "sot-23-6_handsoldering"
+  ]
+ },
+ {
+  "slug": "aek2-usb",
+  "hardest": "through_hole",
+  "driven_by": [
+   "connector",
+   "diode",
+   "led",
+   "mcu",
+   "other"
+  ],
+  "footprints": [
+   "pinheader_2x03_p2.54mm_horizontal",
+   "d_do-35_sod27_p7.62mm_horizontal",
+   "led_d5.0mm",
+   "dip-40_w15.24mm_socket",
+   "r_axial_din0207_l6.3mm_d2.5mm_p10.16mm_horizontal"
+  ]
+ },
+ {
+  "slug": "ajisai74",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "other"
+  ],
+  "footprints": [
+   "d3_smd_bl_a",
+   "d3_smd_l1"
+  ]
+ },
+ {
+  "slug": "alpha",
+  "hardest": null
+ },
+ {
+  "slug": "anavi-arrows",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "ic"
+  ],
+  "footprints": [
+   "sot-23"
+  ]
+ },
+ {
+  "slug": "anavi-macro-pad-10",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "diode",
+   "ic"
+  ],
+  "footprints": [
+   "d_sod-123",
+   "sot-23"
+  ]
+ },
+ {
+  "slug": "anavi-macro-pad-12",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "diode",
+   "ic"
+  ],
+  "footprints": [
+   "d_sod-123",
+   "sot-23"
+  ]
+ },
+ {
+  "slug": "andean-condor",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "other"
+  ],
+  "footprints": [
+   "switch-msk-12c02-smd"
+  ]
+ },
+ {
+  "slug": "architeuthis-dux",
+  "hardest": "through_hole",
+  "driven_by": [
+   "connector"
+  ],
+  "footprints": [
+   "trrs-pj-320a-dual"
+  ]
+ },
+ {
+  "slug": "arisu",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "ic"
+  ],
+  "footprints": [
+   "sot-23-6_handsoldering"
+  ]
+ },
+ {
+  "slug": "atom47-rev5",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "mcu",
+   "usb"
+  ],
+  "footprints": [
+   "qfn-48-1ep_6x6mm_p0.4mm_ep4.2x4.2mm",
+   "usblc6-2sc6"
+  ]
+ },
+ {
+  "slug": "atom47-rev5-c",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "mcu",
+   "usb"
+  ],
+  "footprints": [
+   "qfn-48-1ep_6x6mm_p0.4mm_ep4.2x4.2mm",
+   "hro-type-c-31-m-12",
+   "usblc6-2sc6"
+  ]
+ },
+ {
+  "slug": "atreus62",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "diode"
+  ],
+  "footprints": [
+   "sod-123"
+  ]
+ },
+ {
+  "slug": "atreyu",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "led"
+  ],
+  "footprints": [
+   "ys-sk6812mini-e"
+  ]
+ },
+ {
+  "slug": "atreyu-v2-choc",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "led"
+  ],
+  "footprints": [
+   "ys-sk6812mini-e"
+  ]
+ },
+ {
+  "slug": "avalanche-hotswap",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "led"
+  ],
+  "footprints": [
+   "ys-sk6812mini-e"
+  ]
+ },
+ {
+  "slug": "axon",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "usb"
+  ],
+  "footprints": [
+   "usb_c_receptacle_gct_usb4085_personalized"
+  ]
+ },
+ {
+  "slug": "aya",
+  "hardest": "through_hole",
+  "driven_by": [
+   "connector",
+   "diode",
+   "other"
+  ],
+  "footprints": [
+   "pinheader_1x04_p2.54mm_horizontal",
+   "d_do-35_sod27_p7.62mm_horizontal",
+   "r_axial_din0207_l6.3mm_d2.5mm_p7.62mm_horizontal"
+  ]
+ },
+ {
+  "slug": "bad-wings-bold",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "diode"
+  ],
+  "footprints": [
+   "d_sod-123"
+  ]
+ },
+ {
+  "slug": "bad-wings-slim",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "diode"
+  ],
+  "footprints": [
+   "d_sod-123"
+  ]
+ },
+ {
+  "slug": "badge",
+  "hardest": "through_hole",
+  "driven_by": [
+   "diode"
+  ],
+  "footprints": [
+   "d_sod123_axial"
+  ]
+ },
+ {
+  "slug": "bakeneko-65",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "ic"
+  ],
+  "footprints": [
+   "sot-23-6"
+  ]
+ },
+ {
+  "slug": "banime40",
+  "hardest": "through_hole",
+  "driven_by": [
+   "diode",
+   "encoder"
+  ],
+  "footprints": [
+   "diode-hybrid-back",
+   "rotaryencoder_ec11"
+  ]
+ },
+ {
+  "slug": "barracuda",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "mcu",
+   "other"
+  ],
+  "footprints": [
+   "tqfp-32_7x7mm_p0.8mm",
+   "crystal_smd_seikoepson_fa238-4pin_3.2x2.5mm_handsoldering",
+   "d3_smd"
+  ]
+ },
+ {
+  "slug": "bartlepslit",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "diode"
+  ],
+  "footprints": [
+   "d_sod-123"
+  ]
+ },
+ {
+  "slug": "basketweave",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "usb"
+  ],
+  "footprints": [
+   "usb_c_gct_usb4085"
+  ]
+ },
+ {
+  "slug": "bevi",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "usb"
+  ],
+  "footprints": [
+   "usb-mini-b_ lcsc-c46398"
+  ]
+ },
+ {
+  "slug": "bfo-9000",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "usb"
+  ],
+  "footprints": [
+   "hro-type-c-31-m-12-assembly"
+  ]
+ },
+ {
+  "slug": "blue-team-pad",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "ic",
+   "mcu",
+   "passive",
+   "usb"
+  ],
+  "footprints": [
+   "sot-23-6-routable",
+   "rp2040-qfn-56",
+   "c_0402_1005metric",
+   "r_0402_1005metric",
+   "usb_c_receptacle_hro_type-c-31-m-12"
+  ]
+ },
+ {
+  "slug": "bm42",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "ic",
+   "usb"
+  ],
+  "footprints": [
+   "sot-23-6",
+   "usb_c_receptacle_hro_type-c-31-m-12"
+  ]
+ },
+ {
+  "slug": "bto-layout",
+  "hardest": "through_hole",
+  "driven_by": [
+   "other"
+  ],
+  "footprints": [
+   "r_axial_din0207_l6.3mm_d2.5mm_p10.16mm_horizontal"
+  ]
+ },
+ {
+  "slug": "budgy-rev1-chergo",
+  "hardest": "through_hole",
+  "driven_by": [
+   "connector"
+  ],
+  "footprints": [
+   "trrs-pj-320a-rev"
+  ]
+ },
+ {
+  "slug": "budgy-rev2-chergo",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "led"
+  ],
+  "footprints": [
+   "ys-sk6812mini-e-reversible-fix"
+  ]
+ },
+ {
+  "slug": "buzzard",
+  "hardest": "through_hole",
+  "driven_by": [
+   "connector",
+   "other"
+  ],
+  "footprints": [
+   "mj-4pp-9",
+   "pinsocket_1x05_p2.54mm_vertical",
+   "c_tht_smd_0805_handsolder_reversable",
+   "d3_th_smd_v2",
+   "resistor-th_smd"
+  ]
+ },
+ {
+  "slug": "bw2-v2",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "ic",
+   "other",
+   "passive",
+   "usb"
+  ],
+  "footprints": [
+   "sot-23-6-routable",
+   "fpc-smd_fpc05012-09200-.5mm-rev",
+   "c_0402_1005metric",
+   "r_0402_1005metric",
+   "molex-216990_gct-usb45xx_hro-type-c-31-m-13x"
+  ]
+ },
+ {
+  "slug": "cantor",
+  "hardest": "through_hole",
+  "driven_by": [
+   "connector"
+  ],
+  "footprints": [
+   "trrs-pj-320a"
+  ]
+ },
+ {
+  "slug": "cantor-remix",
+  "hardest": "through_hole",
+  "driven_by": [
+   "connector"
+  ],
+  "footprints": [
+   "trrs-pj-320a"
+  ]
+ },
+ {
+  "slug": "ccd60",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "usb"
+  ],
+  "footprints": [
+   "hro-type-c-31-m-12-handsoldering"
+  ]
+ },
+ {
+  "slug": "chameleon",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "ic",
+   "mcu",
+   "passive",
+   "usb"
+  ],
+  "footprints": [
+   "sot-23-6_handsoldering",
+   "qfn-56-1ep_7x7mm_p0.4mm_ep3.2x3.2mm",
+   "c_0402_1005metric",
+   "r_0402_1005metric",
+   "hro_type-c-31-m-12"
+  ]
+ },
+ {
+  "slug": "cheapino",
+  "hardest": "through_hole",
+  "driven_by": [
+   "connector",
+   "encoder"
+  ],
+  "footprints": [
+   "rj45_ninigi_ge",
+   "rotaryencoder_alps_ec11e-switch_vertical_h20mm"
+  ]
+ },
+ {
+  "slug": "choc-ergo-travel",
+  "hardest": "through_hole",
+  "driven_by": [
+   "connector",
+   "diode",
+   "other"
+  ],
+  "footprints": [
+   "pj320d_3.5mm_jack",
+   "d_sod123_axial-dual",
+   "r_axial_din0207_l6.3mm_d2.5mm_p10.16mm_horizontal"
+  ]
+ },
+ {
+  "slug": "choc-led-ergo-travel",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "ic",
+   "other"
+  ],
+  "footprints": [
+   "sot-23",
+   "kailh-pg1350-1u-reversible_smdled"
+  ]
+ },
+ {
+  "slug": "choc-rgb-ergo-travel",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "diode",
+   "led",
+   "other"
+  ],
+  "footprints": [
+   "d_sod-123-double-sided",
+   "sk6812-ec1515-double-sided",
+   "kailh-pg1350-1u-reversible_smdled"
+  ]
+ },
+ {
+  "slug": "choc-v",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "diode"
+  ],
+  "footprints": [
+   "d_sod-123"
+  ]
+ },
+ {
+  "slug": "choc-v2-env-kb65",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "diode"
+  ],
+  "footprints": [
+   "d_sod-123"
+  ]
+ },
+ {
+  "slug": "chocofly",
+  "hardest": "through_hole",
+  "driven_by": [
+   "diode",
+   "other"
+  ],
+  "footprints": [
+   "diode_th_smd",
+   "switch_reset_tht"
+  ]
+ },
+ {
+  "slug": "chocolatebar",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "usb"
+  ],
+  "footprints": [
+   "usb_c_receptacle_hro_type-c-31-m-12"
+  ]
+ },
+ {
+  "slug": "chouchou",
+  "hardest": null
+ },
+ {
+  "slug": "clog",
+  "hardest": "through_hole",
+  "driven_by": [
+   "connector"
+  ],
+  "footprints": [
+   "mj-4pp-9"
+  ]
+ },
+ {
+  "slug": "contender",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "mcu",
+   "usb"
+  ],
+  "footprints": [
+   "qfn-32-1ep_5x5mm_pitch0.5mm",
+   "hro-type-c-31-m-12-assembly"
+  ]
+ },
+ {
+  "slug": "contra",
+  "hardest": "through_hole",
+  "driven_by": [
+   "diode"
+  ],
+  "footprints": [
+   "d_do-35_sod27_p7.62mm_horizontal-doublesided"
+  ]
+ },
+ {
+  "slug": "corne-cherry-v4",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "mcu",
+   "passive",
+   "usb"
+  ],
+  "footprints": [
+   "qfn-56-1ep_7x7mm_p0.4mm_ep3.2x3.2mm",
+   "c_0402_1005metric",
+   "r_0402_1005metric",
+   "type-c-31-m-13c"
+  ]
+ },
+ {
+  "slug": "corne-chocolate-v4",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "mcu",
+   "passive",
+   "usb"
+  ],
+  "footprints": [
+   "qfn-56-1ep_7x7mm_p0.4mm_ep3.2x3.2mm",
+   "c_0402_1005metric",
+   "r_0402_1005metric",
+   "type-c-31-m-13c"
+  ]
+ },
+ {
+  "slug": "cornia",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "led",
+   "other"
+  ],
+  "footprints": [
+   "ys-sk6812mini-e",
+   "sw_smd_4x4mm"
+  ]
+ },
+ {
+  "slug": "cradio",
+  "hardest": "through_hole",
+  "driven_by": [
+   "connector"
+  ],
+  "footprints": [
+   "mj-4pp-9"
+  ]
+ },
+ {
+  "slug": "cradio-ble",
+  "hardest": null
+ },
+ {
+  "slug": "cradio-f",
+  "hardest": "through_hole",
+  "driven_by": [
+   "connector"
+  ],
+  "footprints": [
+   "mj-4pp-9"
+  ]
+ },
+ {
+  "slug": "cradio-mb",
+  "hardest": "through_hole",
+  "driven_by": [
+   "connector"
+  ],
+  "footprints": [
+   "mj-4pp-9"
+  ]
+ },
+ {
+  "slug": "cradio-pg1232",
+  "hardest": "through_hole",
+  "driven_by": [
+   "connector"
+  ],
+  "footprints": [
+   "mj-4pp-9"
+  ]
+ },
+ {
+  "slug": "cradio-z",
+  "hardest": "through_hole",
+  "driven_by": [
+   "connector"
+  ],
+  "footprints": [
+   "mj-4pp-9"
+  ]
+ },
+ {
+  "slug": "cradio-z-lp",
+  "hardest": "through_hole",
+  "driven_by": [
+   "connector"
+  ],
+  "footprints": [
+   "mj-4pp-9"
+  ]
+ },
+ {
+  "slug": "cradio10",
+  "hardest": "through_hole",
+  "driven_by": [
+   "connector"
+  ],
+  "footprints": [
+   "mj-4pp-9"
+  ]
+ },
+ {
+  "slug": "craftwalk",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "led",
+   "other"
+  ],
+  "footprints": [
+   "ys-sk6812",
+   "ys-sk6812-underglow",
+   "d3_smd"
+  ]
+ },
+ {
+  "slug": "crowboard-rev1-choc",
+  "hardest": "through_hole",
+  "driven_by": [
+   "diode"
+  ],
+  "footprints": [
+   "diode-hybrid-back"
+  ]
+ },
+ {
+  "slug": "crowboard-rev1-mx",
+  "hardest": "through_hole",
+  "driven_by": [
+   "diode"
+  ],
+  "footprints": [
+   "diode-hybrid-back"
+  ]
+ },
+ {
+  "slug": "crowboard-rev1-mx-kailh-hotswap",
+  "hardest": "through_hole",
+  "driven_by": [
+   "diode"
+  ],
+  "footprints": [
+   "diode-hybrid-back"
+  ]
+ },
+ {
+  "slug": "crowboard-rev2-mx",
+  "hardest": "through_hole",
+  "driven_by": [
+   "connector",
+   "diode",
+   "encoder"
+  ],
+  "footprints": [
+   "pinheader_1x04_p2.54mm_vertical",
+   "diode-hybrid-back",
+   "rotaryencoder_alps_ec11e-switch_vertical_h20mm",
+   "rotaryencoder_alps_ec12e_vertical_h20mm"
+  ]
+ },
+ {
+  "slug": "crowboard-rev2-with-pimoroni",
+  "hardest": "through_hole",
+  "driven_by": [
+   "connector",
+   "diode",
+   "encoder"
+  ],
+  "footprints": [
+   "pinheader_1x04_p2.54mm_vertical",
+   "diode-hybrid-back",
+   "rotaryencoder_alps_ec12e_vertical_h20mm"
+  ]
+ },
+ {
+  "slug": "cyclops",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "mcu",
+   "other"
+  ],
+  "footprints": [
+   "tqfp-44_10x10mm_p0.8mm",
+   "crystal_smd_3225-4pin_3.2x2.5mm"
+  ]
+ },
+ {
+  "slug": "cypher",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "ic",
+   "led",
+   "usb"
+  ],
+  "footprints": [
+   "sot-23-6",
+   "ws2812-2020",
+   "hro-type-c-31-m-12"
+  ]
+ },
+ {
+  "slug": "desire65",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "mcu",
+   "passive"
+  ],
+  "footprints": [
+   "rp2040-qfn-56",
+   "c_0402_1005metric",
+   "r_0402_1005metric"
+  ]
+ },
+ {
+  "slug": "dilemma-diy-v2",
+  "hardest": "smd_passive",
+  "driven_by": [
+   "diode",
+   "passive"
+  ],
+  "footprints": [
+   "d_1206_handsolder_reversible",
+   "r_1206_handsolder",
+   "r_1206_handsolder_reversible"
+  ]
+ },
+ {
+  "slug": "dilemma-max",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "led",
+   "mcu",
+   "other",
+   "passive",
+   "usb"
+  ],
+  "footprints": [
+   "led_0402_1005metric",
+   "qfn-56-1ep_7x7mm_p0.4mm_ep3.2x3.2mm",
+   "fpc-smd_fpc05012-09200-.5mm",
+   "c_0402_1005metric",
+   "r_0402_1005metric",
+   "r_0402_1005metric_nolabel"
+  ]
+ },
+ {
+  "slug": "dilemma-v2",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "led",
+   "mcu",
+   "other",
+   "passive",
+   "usb"
+  ],
+  "footprints": [
+   "led_0402_1005metric",
+   "qfn-56-1ep_7x7mm_p0.4mm_ep3.2x3.2mm",
+   "fpc-smd_fpc05012-09200-.5mm",
+   "c_0402_1005metric",
+   "r_0402_1005metric",
+   "r_0402_1005metric_nolabel"
+  ]
+ },
+ {
+  "slug": "dilemma-v3-hotswap",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "led",
+   "mcu",
+   "other",
+   "passive",
+   "usb"
+  ],
+  "footprints": [
+   "led_0402_1005metric",
+   "qfn-56-1ep_7x7mm_p0.4mm_ep3.2x3.2mm",
+   "fpc-smd_fpc05012-09200-.5mm",
+   "c_0402_1005metric",
+   "r_0402_1005metric",
+   "r_0402_1005metric_nolabel"
+  ]
+ },
+ {
+  "slug": "discipad",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "usb"
+  ],
+  "footprints": [
+   "usb_c_gct_usb4085"
+  ]
+ },
+ {
+  "slug": "discipline",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "usb"
+  ],
+  "footprints": [
+   "usb_c_gct_usb4085"
+  ]
+ },
+ {
+  "slug": "dizzy40",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "ic",
+   "led",
+   "usb"
+  ],
+  "footprints": [
+   "sot-23-6",
+   "ws2812-2020",
+   "usb_c_receptacle_hro_type-c-31-m-12"
+  ]
+ },
+ {
+  "slug": "dk60",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "mcu",
+   "usb"
+  ],
+  "footprints": [
+   "tqfp-44_10x10mm_pitch0.8mm",
+   "usb_minib_hirose_5s8"
+  ]
+ },
+ {
+  "slug": "dm9records-ergoinu",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "led"
+  ],
+  "footprints": [
+   "ws2812_tape_10mm"
+  ]
+ },
+ {
+  "slug": "dogtag",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "led"
+  ],
+  "footprints": [
+   "sk6812mini_bg_reversible"
+  ]
+ },
+ {
+  "slug": "dolphin",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "ic",
+   "usb"
+  ],
+  "footprints": [
+   "package_sot-23-6",
+   "conn_hro-type-c-31-m-12"
+  ]
+ },
+ {
+  "slug": "draculad",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "led",
+   "other"
+  ],
+  "footprints": [
+   "ws2812b",
+   "switch_msk-12c02_smd"
+  ]
+ },
+ {
+  "slug": "drink-me-usb-c",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "usb"
+  ],
+  "footprints": [
+   "hro-type-c-31-m-12-assembly"
+  ]
+ },
+ {
+  "slug": "drink-me-usb-micro",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "mcu",
+   "other"
+  ],
+  "footprints": [
+   "tqfp-32_7x7mm_p0.8mm",
+   "crystal_smd_3225-4pin_3.2x2.5mm"
+  ]
+ },
+ {
+  "slug": "drink-me-usb-mini",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "mcu",
+   "other",
+   "usb"
+  ],
+  "footprints": [
+   "tqfp-32_7x7mm_p0.8mm",
+   "crystal_smd_3225-4pin_3.2x2.5mm",
+   "usb_minib_hirose_5s8"
+  ]
+ },
+ {
+  "slug": "dropout",
+  "hardest": "smd_passive",
+  "driven_by": [
+   "passive"
+  ],
+  "footprints": [
+   "c_0805_2012metric_pad1.15x1.40mm_handsolder",
+   "r_0805_2012metric_pad1.15x1.40mm_handsolder"
+  ]
+ },
+ {
+  "slug": "egg58v2",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "led"
+  ],
+  "footprints": [
+   "choc_hotswap_sk6812minie"
+  ]
+ },
+ {
+  "slug": "elcantorhs",
+  "hardest": "through_hole",
+  "driven_by": [
+   "connector"
+  ],
+  "footprints": [
+   "trrs-pj-320a"
+  ]
+ },
+ {
+  "slug": "elephant42",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "led",
+   "other"
+  ],
+  "footprints": [
+   "ys-sk6812mini-e",
+   "ys-sk6812mini-e-underglow",
+   "d3_smd_v2"
+  ]
+ },
+ {
+  "slug": "eliza",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "ic",
+   "usb"
+  ],
+  "footprints": [
+   "sot-23-6",
+   "usb_c_receptacle_hro_type-c-31-m-12"
+  ]
+ },
+ {
+  "slug": "endzone34",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "led"
+  ],
+  "footprints": [
+   "ws2812b"
+  ]
+ },
+ {
+  "slug": "env-kb60-mxhs",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "usb"
+  ],
+  "footprints": [
+   "usb_c_type-c-31-m-14"
+  ]
+ },
+ {
+  "slug": "env-mcro",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "led"
+  ],
+  "footprints": [
+   "mx_sk6812mini-e_rev"
+  ]
+ },
+ {
+  "slug": "env-rgb",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "usb"
+  ],
+  "footprints": [
+   "usb_c_type-c-31-m-14"
+  ]
+ },
+ {
+  "slug": "equanimity",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "diode",
+   "ic",
+   "mcu"
+  ],
+  "footprints": [
+   "d_sod-123",
+   "sot-23-3",
+   "lqfp-48_7x7mm_p0.5mm"
+  ]
+ },
+ {
+  "slug": "ergo33",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "ic",
+   "usb"
+  ],
+  "footprints": [
+   "sot-23-6_handsoldering",
+   "hro-type-c-31-m-12-handsoldering"
+  ]
+ },
+ {
+  "slug": "ergodash",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "ic",
+   "led",
+   "other"
+  ],
+  "footprints": [
+   "sot-23_2",
+   "ws2812b-5",
+   "jumper_smd_2dub"
+  ]
+ },
+ {
+  "slug": "ergoslab",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "led"
+  ],
+  "footprints": [
+   "ws2812-single",
+   "ws2812-strip"
+  ]
+ },
+ {
+  "slug": "eternal-keypad",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "diode",
+   "led"
+  ],
+  "footprints": [
+   "d_smd_th",
+   "led_ws2812b_reversible"
+  ]
+ },
+ {
+  "slug": "euisopcb",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "usb"
+  ],
+  "footprints": [
+   "usb_c_receptacle_hro_type-c-31-m-12"
+  ]
+ },
+ {
+  "slug": "ferris-0-1-base",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "usb"
+  ],
+  "footprints": [
+   "usb_c_receptacle_hro_type-c-31-m-12"
+  ]
+ },
+ {
+  "slug": "ferris-0-1-compact",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "usb"
+  ],
+  "footprints": [
+   "usb_c_receptacle_hro_type-c-31-m-12"
+  ]
+ },
+ {
+  "slug": "ferris-0-1-high",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "usb"
+  ],
+  "footprints": [
+   "usb_c_receptacle_hro_type-c-31-m-12"
+  ]
+ },
+ {
+  "slug": "ferris-0-1-low",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "usb"
+  ],
+  "footprints": [
+   "usb_c_receptacle_hro_type-c-31-m-12"
+  ]
+ },
+ {
+  "slug": "ferris-0-2-bling",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "ic",
+   "mcu",
+   "usb"
+  ],
+  "footprints": [
+   "sot-23-6",
+   "qfn-28-1ep_4x4mm_p0.4mm_ep2.3x2.3mm_thermalvias",
+   "usb_c_receptacle_hro_type-c-31-m-12"
+  ]
+ },
+ {
+  "slug": "ferris-0-2-compact",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "ic",
+   "usb"
+  ],
+  "footprints": [
+   "sot-23-6",
+   "usb_c_receptacle_hro_type-c-31-m-12"
+  ]
+ },
+ {
+  "slug": "ferris-0-2-high",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "ic",
+   "usb"
+  ],
+  "footprints": [
+   "sot-23-6",
+   "usb_c_receptacle_hro_type-c-31-m-12"
+  ]
+ },
+ {
+  "slug": "ferris-0-2-mini",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "ic",
+   "usb"
+  ],
+  "footprints": [
+   "sot-23-6",
+   "usb_c_receptacle_hro_type-c-31-m-12"
+  ]
+ },
+ {
+  "slug": "fnrow",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "usb"
+  ],
+  "footprints": [
+   "usb_c_receptacle_gct_usb4085"
+  ]
+ },
+ {
+  "slug": "for-science",
+  "hardest": "through_hole",
+  "driven_by": [
+   "connector",
+   "diode"
+  ],
+  "footprints": [
+   "pj320d_3.5mm_jack_smd",
+   "pj320d_3.5mm_jack_smd_flip",
+   "d_sod123_axial"
+  ]
+ },
+ {
+  "slug": "fourier",
+  "hardest": "through_hole",
+  "driven_by": [
+   "connector",
+   "diode",
+   "other"
+  ],
+  "footprints": [
+   "trrs-pj-320a",
+   "diode-hybrid-back",
+   "resistor-hybrid-back"
+  ]
+ },
+ {
+  "slug": "framework-rev0",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "usb"
+  ],
+  "footprints": [
+   "usb_c_receptacle_gct_usb4085"
+  ]
+ },
+ {
+  "slug": "frankie-macropad",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "mcu"
+  ],
+  "footprints": [
+   "qfn-32-1ep_5x5mm_p0.5mm_ep3.1x3.1mm"
+  ]
+ },
+ {
+  "slug": "friedrich",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "ic"
+  ],
+  "footprints": [
+   "sot-23-6"
+  ]
+ },
+ {
+  "slug": "frooastboard-nano",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "usb"
+  ],
+  "footprints": [
+   "hro-type-c-31-m-12"
+  ]
+ },
+ {
+  "slug": "fruity60",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "diode"
+  ],
+  "footprints": [
+   "d_sod-123"
+  ]
+ },
+ {
+  "slug": "g35",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "usb"
+  ],
+  "footprints": [
+   "usb_c_receptacle_hro_type-c-31-m-12"
+  ]
+ },
+ {
+  "slug": "game-hand",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "ic",
+   "usb"
+  ],
+  "footprints": [
+   "sot-23-6",
+   "usb_c_receptacle_hro_type-c-31-m-12"
+  ]
+ },
+ {
+  "slug": "gh80-1800",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "other",
+   "usb"
+  ],
+  "footprints": [
+   "resonator_smd_murata_cstnexxv-3pin-p1.2",
+   "usb_mini_smd"
+  ]
+ },
+ {
+  "slug": "gh80-3700",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "usb"
+  ],
+  "footprints": [
+   "hro-type-c-31-m-12",
+   "usblc6-2sc6"
+  ]
+ },
+ {
+  "slug": "glyphkbd",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "passive"
+  ],
+  "footprints": [
+   "c_0402_1005metric"
+  ]
+ },
+ {
+  "slug": "grooveboard-atmel-au",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "passive",
+   "usb"
+  ],
+  "footprints": [
+   "c_0402",
+   "r_0402",
+   "usb_c_gct_usb4085"
+  ]
+ },
+ {
+  "slug": "grooveboard-atmel-mu",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "mcu",
+   "passive",
+   "usb"
+  ],
+  "footprints": [
+   "qfn-44-1ep_7x7mm_p0.5mm_ep5.2x5.2mm",
+   "c_0402",
+   "r_0402",
+   "usb_c_gct_usb4085"
+  ]
+ },
+ {
+  "slug": "grooveboard-choc-atmel-au",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "passive",
+   "usb"
+  ],
+  "footprints": [
+   "c_0402",
+   "r_0402",
+   "usb_c_gct_usb4085"
+  ]
+ },
+ {
+  "slug": "grooveboard-choc-atmel-mu",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "mcu",
+   "passive",
+   "usb"
+  ],
+  "footprints": [
+   "qfn-44-1ep_7x7mm_p0.5mm_ep5.2x5.2mm",
+   "c_0402",
+   "r_0402",
+   "usb_c_gct_usb4085"
+  ]
+ },
+ {
+  "slug": "grooveboard-choc-rp",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "passive",
+   "usb"
+  ],
+  "footprints": [
+   "c_0402",
+   "r_0402",
+   "usb_c_gct_usb4085"
+  ]
+ },
+ {
+  "slug": "grooveboard-mx-atmel-au",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "passive",
+   "usb"
+  ],
+  "footprints": [
+   "c_0402",
+   "r_0402",
+   "usb_c_gct_usb4085"
+  ]
+ },
+ {
+  "slug": "grooveboard-mx-atmel-mu",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "mcu",
+   "passive",
+   "usb"
+  ],
+  "footprints": [
+   "qfn-44-1ep_7x7mm_p0.5mm_ep5.2x5.2mm",
+   "c_0402",
+   "r_0402",
+   "usb_c_gct_usb4085"
+  ]
+ },
+ {
+  "slug": "grooveboard-mx-rp",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "passive",
+   "usb"
+  ],
+  "footprints": [
+   "c_0402",
+   "r_0402",
+   "usb_c_gct_usb4085"
+  ]
+ },
+ {
+  "slug": "grooveboard-rp",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "passive",
+   "usb"
+  ],
+  "footprints": [
+   "c_0402",
+   "r_0402",
+   "usb_c_gct_usb4085"
+  ]
+ },
+ {
+  "slug": "gud70",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "usb"
+  ],
+  "footprints": [
+   "usblc6-2sc6"
+  ]
+ },
+ {
+  "slug": "guide68-assemble",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "led"
+  ],
+  "footprints": [
+   "led_sk6812mini-e_bl"
+  ]
+ },
+ {
+  "slug": "gummy-key",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "diode"
+  ],
+  "footprints": [
+   "d_sod-123"
+  ]
+ },
+ {
+  "slug": "helix",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "led"
+  ],
+  "footprints": [
+   "sk6812mini_rev"
+  ]
+ },
+ {
+  "slug": "hem",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "mcu",
+   "passive"
+  ],
+  "footprints": [
+   "qfn-56-1ep_7x7mm_p0.4mm_ep3.2x3.2mm",
+   "c_0402_1005metric",
+   "r_0402_1005metric"
+  ]
+ },
+ {
+  "slug": "hillside-46",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "ic"
+  ],
+  "footprints": [
+   "sot-23-6_handsoldering_threenumbered"
+  ]
+ },
+ {
+  "slug": "hillside-48",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "ic",
+   "led"
+  ],
+  "footprints": [
+   "sot-23",
+   "sk6812-mini-e"
+  ]
+ },
+ {
+  "slug": "hillside-52",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "ic",
+   "led"
+  ],
+  "footprints": [
+   "sot-23",
+   "sk6812-mini-e"
+  ]
+ },
+ {
+  "slug": "hnah40-atmega328p-v1",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "usb"
+  ],
+  "footprints": [
+   "hro-type-c-31-m-12"
+  ]
+ },
+ {
+  "slug": "horizon-choc",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "diode"
+  ],
+  "footprints": [
+   "d_sod-123"
+  ]
+ },
+ {
+  "slug": "horizon-mx",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "diode"
+  ],
+  "footprints": [
+   "d_sod-123"
+  ]
+ },
+ {
+  "slug": "hotswap-rgb-dumbpad",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "led"
+  ],
+  "footprints": [
+   "ys-sk6812mini-e"
+  ]
+ },
+ {
+  "slug": "hub20",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "ic",
+   "mcu",
+   "usb"
+  ],
+  "footprints": [
+   "sot-23-6",
+   "qfn-28-1ep_5x5mm_p0.5mm_ep3.35x3.35mm_thermalvias",
+   "usb_c_u262-161n-4bvc11"
+  ]
+ },
+ {
+  "slug": "index-tab",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "ic",
+   "usb"
+  ],
+  "footprints": [
+   "sot-23-6",
+   "usb_c_receptacle_hro_type-c-31-m-12"
+  ]
+ },
+ {
+  "slug": "isometria-75-iso",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "passive"
+  ],
+  "footprints": [
+   "c_0402_1005metric",
+   "r_0402_1005metric"
+  ]
+ },
+ {
+  "slug": "janus",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "diode"
+  ],
+  "footprints": [
+   "d_sod-123_reversible"
+  ]
+ },
+ {
+  "slug": "jiran-cherry",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "other"
+  ],
+  "footprints": [
+   "jumper_smd"
+  ]
+ },
+ {
+  "slug": "jiran-classic",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "ic",
+   "other"
+  ],
+  "footprints": [
+   "mosfet_smd_dual_sot-23",
+   "jumper_smd"
+  ]
+ },
+ {
+  "slug": "jiran-hotswap",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "other"
+  ],
+  "footprints": [
+   "jumper_smd"
+  ]
+ },
+ {
+  "slug": "jorne-cherry-2-1",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "led",
+   "other"
+  ],
+  "footprints": [
+   "sk6812mini_rev",
+   "sk6812mini_underglow_rev",
+   "d3_smd"
+  ]
+ },
+ {
+  "slug": "jorne-cherry-3-0",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "led",
+   "other"
+  ],
+  "footprints": [
+   "led_ws2812b_plcc4_5.0x5.0mm_p3.2mm",
+   "ys-sk6812mini-e",
+   "d3_smd_v2"
+  ]
+ },
+ {
+  "slug": "jorne-classic-2-1",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "led"
+  ],
+  "footprints": [
+   "sk6812mini_rev",
+   "sk6812mini_underglow"
+  ]
+ },
+ {
+  "slug": "jp60",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "mcu",
+   "usb"
+  ],
+  "footprints": [
+   "qfn-44-1ep_7x7mm_p0.5mm_ep5.2x5.2mm",
+   "hro-type-c-31-m-12-assembly"
+  ]
+ },
+ {
+  "slug": "juliet",
+  "hardest": "through_hole",
+  "driven_by": [
+   "diode"
+  ],
+  "footprints": [
+   "d_do-35_sod27_p5.08mm_horizontal"
+  ]
+ },
+ {
+  "slug": "junco",
+  "hardest": "through_hole",
+  "driven_by": [
+   "connector",
+   "diode",
+   "encoder"
+  ],
+  "footprints": [
+   "trrs_pj320a",
+   "d_sod-123_do-35_hybrid_doublesided_v2",
+   "ec11_rotary_encoder"
+  ]
+ },
+ {
+  "slug": "k34",
+  "hardest": null
+ },
+ {
+  "slug": "kaly",
+  "hardest": "through_hole",
+  "driven_by": [
+   "connector"
+  ],
+  "footprints": [
+   "trrs-pj-320a"
+  ]
+ },
+ {
+  "slug": "kapl",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "led"
+  ],
+  "footprints": [
+   "sk6812mini_rev",
+   "sk6812mini_surface"
+  ]
+ },
+ {
+  "slug": "karina",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "diode",
+   "led",
+   "mcu",
+   "other"
+  ],
+  "footprints": [
+   "d_sod-123",
+   "led_ws2812b_plcc4_5.0x5.0mm_p3.2mm",
+   "tqfp-44_10x10mm_p0.8mm",
+   "crystal_smd_3225-4pin_3.2x2.5mm"
+  ]
+ },
+ {
+  "slug": "karn",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "diode",
+   "led"
+  ],
+  "footprints": [
+   "diode-smd-1n4148x-tp",
+   "led_sk6812mini_plcc4_3.5x3.5mm_p1.75mm"
+  ]
+ },
+ {
+  "slug": "karn-2",
+  "hardest": "through_hole",
+  "driven_by": [
+   "connector"
+  ],
+  "footprints": [
+   "trrs-pj-320a"
+  ]
+ },
+ {
+  "slug": "karn-3",
+  "hardest": "through_hole",
+  "driven_by": [
+   "connector"
+  ],
+  "footprints": [
+   "trrs-pj-320a"
+  ]
+ },
+ {
+  "slug": "kb58-pico",
+  "hardest": "through_hole",
+  "driven_by": [
+   "connector"
+  ],
+  "footprints": [
+   "trrs_1side_b"
+  ]
+ },
+ {
+  "slug": "kbd-template",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "led"
+  ],
+  "footprints": [
+   "sk6812mini_bg",
+   "ws2812b"
+  ]
+ },
+ {
+  "slug": "kbic65",
+  "hardest": "through_hole",
+  "driven_by": [
+   "diode"
+  ],
+  "footprints": [
+   "d_do-35_sod27_p5.08mm_vertical_anodeup"
+  ]
+ },
+ {
+  "slug": "keaboard-rev1",
+  "hardest": "through_hole",
+  "driven_by": [
+   "connector"
+  ],
+  "footprints": [
+   "trrs-pj-320a_reversible"
+  ]
+ },
+ {
+  "slug": "keyboar-layout",
+  "hardest": "through_hole",
+  "driven_by": [
+   "connector",
+   "diode"
+  ],
+  "footprints": [
+   "rj45_smd_mj88_hlsv6",
+   "d_do-35_sod27_p10.16mm_horizontal",
+   "d_sod123_axial"
+  ]
+ },
+ {
+  "slug": "kintsugi",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "led"
+  ],
+  "footprints": [
+   "led_ws2812b_plcc4_5.0x5.0mm_p3.2mm"
+  ]
+ },
+ {
+  "slug": "klor",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "led"
+  ],
+  "footprints": [
+   "sk6812mini_and_cherry"
+  ]
+ },
+ {
+  "slug": "kobold",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "diode",
+   "mcu",
+   "passive",
+   "usb"
+  ],
+  "footprints": [
+   "d_sod-882",
+   "qfn-48-1ep_7x7mm_p0.5mm_ep5.6x5.6mm",
+   "c_0402_1005metric",
+   "r_0402_1005metric",
+   "usb_c_receptacle_hro_type-c-31-m-12"
+  ]
+ },
+ {
+  "slug": "koca58",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "ic",
+   "passive",
+   "usb"
+  ],
+  "footprints": [
+   "sot-23-6",
+   "c_0402_1005metric",
+   "r_0402_1005metric",
+   "usb_type-c-31-m-12"
+  ]
+ },
+ {
+  "slug": "kuro65",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "mcu",
+   "usb"
+  ],
+  "footprints": [
+   "qfn-44-1ep_7x7mm_p0.5mm_ep5.2x5.2mm_thermalvias",
+   "usb_c_receptacle_hro_type-c-31-m-12"
+  ]
+ },
+ {
+  "slug": "la-nc",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "other"
+  ],
+  "footprints": [
+   "d3_smd_v2"
+  ]
+ },
+ {
+  "slug": "lagom",
+  "hardest": "through_hole",
+  "driven_by": [
+   "connector",
+   "diode",
+   "encoder",
+   "other"
+  ],
+  "footprints": [
+   "pinsocket_1x03_p2.54mm_vertical",
+   "pinsocket_1x04_p2.54mm_vertical",
+   "d_do-34_sod68_p7.62mm_horizontal",
+   "rotaryencoder_ec11",
+   "dip-16_w7.62mm_socket"
+  ]
+ },
+ {
+  "slug": "lancer-hotswap",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "diode"
+  ],
+  "footprints": [
+   "diode_smd"
+  ]
+ },
+ {
+  "slug": "largelad",
+  "hardest": "through_hole",
+  "driven_by": [
+   "diode"
+  ],
+  "footprints": [
+   "d_do-35_sod27_p7.62mm_horizontal"
+  ]
+ },
+ {
+  "slug": "layout-jopr",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "diode",
+   "mcu",
+   "other"
+  ],
+  "footprints": [
+   "d_sod-123",
+   "tqfp-44_10x10mm_p0.8mm",
+   "crystal_smd_3225-4pin_3.2x2.5mm"
+  ]
+ },
+ {
+  "slug": "lck75",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "usb"
+  ],
+  "footprints": [
+   "usb_c_gct_usb4085"
+  ]
+ },
+ {
+  "slug": "lily58",
+  "hardest": "through_hole",
+  "driven_by": [
+   "connector"
+  ],
+  "footprints": [
+   "mj-4pp-9"
+  ]
+ },
+ {
+  "slug": "lily58-lite-rev3",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "diode",
+   "ic"
+  ],
+  "footprints": [
+   "d_sod-123",
+   "sot-23"
+  ]
+ },
+ {
+  "slug": "lily58-pro",
+  "hardest": "through_hole",
+  "driven_by": [
+   "connector"
+  ],
+  "footprints": [
+   "mj-4pp-9"
+  ]
+ },
+ {
+  "slug": "lime",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "led"
+  ],
+  "footprints": [
+   "sk6812mini_underglow_dev"
+  ]
+ },
+ {
+  "slug": "litl",
+  "hardest": "through_hole",
+  "driven_by": [
+   "connector",
+   "encoder"
+  ],
+  "footprints": [
+   "pinsocket_1x04_p2.54mm_vertical",
+   "rotaryencoder_ec11"
+  ]
+ },
+ {
+  "slug": "lotus58",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "ic",
+   "usb"
+  ],
+  "footprints": [
+   "sot-23-6",
+   "molex-216990_gct-usb45xx_hro-type-c-31-m-13x-pimicro",
+   "molex-216990_gct-usb45xx_hro-type-c-31-m-13x-pimicro_1_doublesided"
+  ]
+ },
+ {
+  "slug": "lumberjack",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "usb"
+  ],
+  "footprints": [
+   "type-c-31-m-12"
+  ]
+ },
+ {
+  "slug": "m0110a-qmk",
+  "hardest": "through_hole",
+  "driven_by": [
+   "connector",
+   "diode",
+   "led",
+   "mcu",
+   "other"
+  ],
+  "footprints": [
+   "pinheader_2x03_p2.54mm_horizontal",
+   "d_do-35_sod27_p7.62mm_horizontal",
+   "led_d3.0mm",
+   "dip-40_w15.24mm_socket",
+   "r_axial_din0207_l6.3mm_d2.5mm_p10.16mm_horizontal"
+  ]
+ },
+ {
+  "slug": "m0116-usb",
+  "hardest": "through_hole",
+  "driven_by": [
+   "connector",
+   "diode",
+   "mcu",
+   "other"
+  ],
+  "footprints": [
+   "pinheader_2x03_p2.54mm_horizontal",
+   "d_do-35_sod27_p7.62mm_horizontal",
+   "dip-40_w15.24mm_socket",
+   "r_axial_din0207_l6.3mm_d2.5mm_p10.16mm_horizontal"
+  ]
+ },
+ {
+  "slug": "m3n3van-rev2",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "ic",
+   "mcu",
+   "usb"
+  ],
+  "footprints": [
+   "sot-23-6",
+   "qfn-44-1ep_7x7mm_p0.5mm_ep5.2x5.2mm",
+   "hro-type-c-31-m-12-assembly"
+  ]
+ },
+ {
+  "slug": "macro3",
+  "hardest": "through_hole",
+  "driven_by": [
+   "encoder"
+  ],
+  "footprints": [
+   "rotaryencoder_alps_ec11e_vertical_h20mm"
+  ]
+ },
+ {
+  "slug": "macrocat",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "mcu"
+  ],
+  "footprints": [
+   "qfn-44-1ep_7x7mm_p0.5mm_ep5.2x5.2mm"
+  ]
+ },
+ {
+  "slug": "madjax-macropad",
+  "hardest": null
+ },
+ {
+  "slug": "masonry",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "ic",
+   "passive",
+   "usb"
+  ],
+  "footprints": [
+   "sot-23-6",
+   "c_0402_1005metric",
+   "r_0402_1005metric",
+   "usb_c_receptacle_hro_type-c-31-m-12"
+  ]
+ },
+ {
+  "slug": "meson",
+  "hardest": "through_hole",
+  "driven_by": [
+   "connector",
+   "diode",
+   "other"
+  ],
+  "footprints": [
+   "pinheader_1x03_p2.54mm_vertical",
+   "trrs-pj-320a",
+   "d_do-35_sod27_p7.62mm_horizontal",
+   "resistor-hybrid"
+  ]
+ },
+ {
+  "slug": "mikeneko-65",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "ic",
+   "mcu"
+  ],
+  "footprints": [
+   "sot-23-6",
+   "qfn-44-1ep_7x7mm_p0.5mm_ep5.2x5.2mm"
+  ]
+ },
+ {
+  "slug": "milk",
+  "hardest": "through_hole",
+  "driven_by": [
+   "connector"
+  ],
+  "footprints": [
+   "pinheader_1x02_p2.54mm_vertical",
+   "pinheader_1x03_p2.54mm_vertical"
+  ]
+ },
+ {
+  "slug": "millipad",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "usb"
+  ],
+  "footprints": [
+   "hro-type-c-31-m-12-handsoldering"
+  ]
+ },
+ {
+  "slug": "mini-e-li-xi-vy",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "ic",
+   "usb"
+  ],
+  "footprints": [
+   "sot-23-6_tweaked",
+   "hro-type-c-31-m-12-handsoldering_tweaked"
+  ]
+ },
+ {
+  "slug": "mini-ten-key-plus",
+  "hardest": "through_hole",
+  "driven_by": [
+   "diode",
+   "encoder"
+  ],
+  "footprints": [
+   "d_sod123_axial-dual",
+   "rotaryencoder_alps_ec11e-switch-vertical-edit"
+  ]
+ },
+ {
+  "slug": "minim",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "usb"
+  ],
+  "footprints": [
+   "hro-type-c-31-m-12-assembly"
+  ]
+ },
+ {
+  "slug": "model-b",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "mcu",
+   "passive",
+   "usb"
+  ],
+  "footprints": [
+   "rp2040-qfn-56",
+   "c_0402_1005metric",
+   "r_0402_1005metric",
+   "hro-type-c-31-m-12"
+  ]
+ },
+ {
+  "slug": "molecule",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "other"
+  ],
+  "footprints": [
+   "d3_smd"
+  ]
+ },
+ {
+  "slug": "morizon-choc",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "diode"
+  ],
+  "footprints": [
+   "d_sod-123"
+  ]
+ },
+ {
+  "slug": "morizon-mx",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "diode"
+  ],
+  "footprints": [
+   "d_sod-123"
+  ]
+ },
+ {
+  "slug": "mx-5160",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "usb"
+  ],
+  "footprints": [
+   "hro-type-c-31-m-13",
+   "usblc6-2sc6"
+  ]
+ },
+ {
+  "slug": "mysterium",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "usb"
+  ],
+  "footprints": [
+   "usb_c_gct_usb4085"
+  ]
+ },
+ {
+  "slug": "nack",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "led",
+   "passive",
+   "usb"
+  ],
+  "footprints": [
+   "ws2812c2020",
+   "c_0402_1005metric",
+   "r_0402_1005metric",
+   "usb_c_receptacle"
+  ]
+ },
+ {
+  "slug": "nafuda",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "led",
+   "other"
+  ],
+  "footprints": [
+   "sk6812mini_rev_bl",
+   "d3_smd_l1"
+  ]
+ },
+ {
+  "slug": "neopad",
+  "hardest": "through_hole",
+  "driven_by": [
+   "diode",
+   "encoder",
+   "led",
+   "other"
+  ],
+  "footprints": [
+   "diode_do-35_sod27_p7.62mm",
+   "rotaryencoder_alps_ec11e-switch",
+   "led_d3.0mm",
+   "r_axial_p7.62mm"
+  ]
+ },
+ {
+  "slug": "noah",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "ic"
+  ],
+  "footprints": [
+   "sot-23-6"
+  ]
+ },
+ {
+  "slug": "np12",
+  "hardest": "through_hole",
+  "driven_by": [
+   "connector",
+   "encoder"
+  ],
+  "footprints": [
+   "trrs-pj-320a",
+   "rotaryencoder_alps_ec11e-switch_vertical_h20mm"
+  ]
+ },
+ {
+  "slug": "nt210",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "usb"
+  ],
+  "footprints": [
+   "usblc6-2sc6"
+  ]
+ },
+ {
+  "slug": "nt750",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "usb"
+  ],
+  "footprints": [
+   "usblc6-2sc6"
+  ]
+ },
+ {
+  "slug": "num-discipline",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "usb"
+  ],
+  "footprints": [
+   "usb_c_gct_usb4085"
+  ]
+ },
+ {
+  "slug": "numpad",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "usb"
+  ],
+  "footprints": [
+   "usb_c_gct_usb4085"
+  ]
+ },
+ {
+  "slug": "omega",
+  "hardest": "through_hole",
+  "driven_by": [
+   "diode",
+   "other"
+  ],
+  "footprints": [
+   "diode-hybrid-back",
+   "r_axial_din0204_l3.6mm_d1.6mm_p5.08mm_horizontal"
+  ]
+ },
+ {
+  "slug": "opendeck",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "ic"
+  ],
+  "footprints": [
+   "sot-23-6"
+  ]
+ },
+ {
+  "slug": "orthocode",
+  "hardest": "through_hole",
+  "driven_by": [
+   "diode",
+   "led",
+   "mcu",
+   "other"
+  ],
+  "footprints": [
+   "d_do-35_sod27_p5.08mm_horizontal",
+   "led_d3.0mm",
+   "dip-40_w15.24mm",
+   "r_axial_din0204_l3.6mm_d1.6mm_p7.62mm_horizontal"
+  ]
+ },
+ {
+  "slug": "osprette",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "diode"
+  ],
+  "footprints": [
+   "d_sod-123"
+  ]
+ },
+ {
+  "slug": "pancake-v1",
+  "hardest": "through_hole",
+  "driven_by": [
+   "diode"
+  ],
+  "footprints": [
+   "d_sod123_axial"
+  ]
+ },
+ {
+  "slug": "pancake-v2",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "mcu"
+  ],
+  "footprints": [
+   "qfn-44-1ep_7x7mm_p0.5mm_ep5.2x5.2mm"
+  ]
+ },
+ {
+  "slug": "pandamic",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "usb"
+  ],
+  "footprints": [
+   "mid_mount-usb_c_handsoldering"
+  ]
+ },
+ {
+  "slug": "pando",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "usb"
+  ],
+  "footprints": [
+   "usb_c_receptacle_hro_type-c-31-m-12"
+  ]
+ },
+ {
+  "slug": "pando58",
+  "hardest": "through_hole",
+  "driven_by": [
+   "connector"
+  ],
+  "footprints": [
+   "rj45_molex_43860_3wire"
+  ]
+ },
+ {
+  "slug": "paws60",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "ic"
+  ],
+  "footprints": [
+   "sot-23-6"
+  ]
+ },
+ {
+  "slug": "piantor",
+  "hardest": "smd_passive",
+  "driven_by": [
+   "passive"
+  ],
+  "footprints": [
+   "r_1206_3216metric_pad1.30x1.75mm_handsolder"
+  ]
+ },
+ {
+  "slug": "pica40",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "usb"
+  ],
+  "footprints": [
+   "connector_hro-type-c-31-m-12-data"
+  ]
+ },
+ {
+  "slug": "pill60",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "diode",
+   "led"
+  ],
+  "footprints": [
+   "d_sod-123",
+   "led_sk6812mini_plcc4_3.5x3.5mm_p1.75mm"
+  ]
+ },
+ {
+  "slug": "pinky3",
+  "hardest": "through_hole",
+  "driven_by": [
+   "connector",
+   "other"
+  ],
+  "footprints": [
+   "mj-4pp-9",
+   "d3_th_smd"
+  ]
+ },
+ {
+  "slug": "pinky4",
+  "hardest": "through_hole",
+  "driven_by": [
+   "connector",
+   "other"
+  ],
+  "footprints": [
+   "mj-4pp-9",
+   "d3_th_smd"
+  ]
+ },
+ {
+  "slug": "pisces",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "led",
+   "other"
+  ],
+  "footprints": [
+   "led_ws2812b_plcc4_5.0x5.0mm_p3.2mm",
+   "d3_smd"
+  ]
+ },
+ {
+  "slug": "pisces-v2",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "passive",
+   "usb"
+  ],
+  "footprints": [
+   "c_0402_1005metric",
+   "r_0402_1005metric",
+   "usb_c_receptacle_xkb_u262-16xn-4bvc11"
+  ]
+ },
+ {
+  "slug": "pix",
+  "hardest": "through_hole",
+  "driven_by": [
+   "encoder"
+  ],
+  "footprints": [
+   "rotaryencoder_ec11"
+  ]
+ },
+ {
+  "slug": "plaid",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "usb"
+  ],
+  "footprints": [
+   "usb_minib_akizuki_musb-5bf01as"
+  ]
+ },
+ {
+  "slug": "plain60-c",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "usb"
+  ],
+  "footprints": [
+   "hro-type-c-31-m-12",
+   "usblc6-2sc6"
+  ]
+ },
+ {
+  "slug": "pluckey",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "usb"
+  ],
+  "footprints": [
+   "usb-mini-b_2leg"
+  ]
+ },
+ {
+  "slug": "pluto12",
+  "hardest": "through_hole",
+  "driven_by": [
+   "diode"
+  ],
+  "footprints": [
+   "d_do-35_sod27_p7.62mm_horizontal"
+  ]
+ },
+ {
+  "slug": "potato65",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "ic",
+   "usb"
+  ],
+  "footprints": [
+   "sot-23-6",
+   "usb_c_receptacle_hro_type-c-31-m-12"
+  ]
+ },
+ {
+  "slug": "prkl30",
+  "hardest": "through_hole",
+  "driven_by": [
+   "diode",
+   "encoder"
+  ],
+  "footprints": [
+   "d_sod123_axial",
+   "rotaryencoder_alps_ec11e-switch_vertical_h20mm"
+  ]
+ },
+ {
+  "slug": "pteron56v0",
+  "hardest": "through_hole",
+  "driven_by": [
+   "diode"
+  ],
+  "footprints": [
+   "d_do-35_sod27_p7.62mm_horizontal"
+  ]
+ },
+ {
+  "slug": "punk75",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "usb"
+  ],
+  "footprints": [
+   "usb_c_receptacle_gct_usb4085"
+  ]
+ },
+ {
+  "slug": "qez",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "ic",
+   "usb"
+  ],
+  "footprints": [
+   "sot-23-6",
+   "usb_c_receptacle_hro_type-c-31-m-12"
+  ]
+ },
+ {
+  "slug": "quefrency-rev1",
+  "hardest": "through_hole",
+  "driven_by": [
+   "connector",
+   "diode",
+   "other"
+  ],
+  "footprints": [
+   "trrs-pj-320a",
+   "diode-hybrid-back",
+   "resistor-hybrid-back"
+  ]
+ },
+ {
+  "slug": "redherring",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "usb"
+  ],
+  "footprints": [
+   "usb_c_gct_usb4085"
+  ]
+ },
+ {
+  "slug": "redox-rev1",
+  "hardest": "through_hole",
+  "driven_by": [
+   "connector"
+  ],
+  "footprints": [
+   "trrs-pj-320a-dual"
+  ]
+ },
+ {
+  "slug": "reviung34",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "led",
+   "other"
+  ],
+  "footprints": [
+   "led_ws2812b_plcc4_5.0x5.0mm_p3.2mm",
+   "d3_smd_1side"
+  ]
+ },
+ {
+  "slug": "reviung34-split",
+  "hardest": "through_hole",
+  "driven_by": [
+   "connector",
+   "diode"
+  ],
+  "footprints": [
+   "rj45-ds1128-05-s8b8p",
+   "d_do-35_sod27_p7.62mm_horizontal"
+  ]
+ },
+ {
+  "slug": "reviung41",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "led",
+   "other"
+  ],
+  "footprints": [
+   "led_ws2812b_plcc4_5.0x5.0mm_p3.2mm",
+   "d3_smd_1side"
+  ]
+ },
+ {
+  "slug": "reviung46",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "led",
+   "other"
+  ],
+  "footprints": [
+   "led_ws2812b_plcc4_5.0x5.0mm_p3.2mm_bigfoot",
+   "d3_smd_1side"
+  ]
+ },
+ {
+  "slug": "reviung5",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "led"
+  ],
+  "footprints": [
+   "led_ws2812b_plcc4_5.0x5.0mm_p3.2mm"
+  ]
+ },
+ {
+  "slug": "reviung53",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "led",
+   "other"
+  ],
+  "footprints": [
+   "led_ws2812b_plcc4_5.0x5.0mm_p3.2mm_bigfoot",
+   "d3_smd_1side"
+  ]
+ },
+ {
+  "slug": "reviung61",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "mcu",
+   "other"
+  ],
+  "footprints": [
+   "tqfp-44_10x10mm_p0.8mm",
+   "crystal_smd_3225-4pin_3.2x2.5mm_handsoldering"
+  ]
+ },
+ {
+  "slug": "rhymestone",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "led",
+   "other"
+  ],
+  "footprints": [
+   "sk6812mini_rev",
+   "d3_smd"
+  ]
+ },
+ {
+  "slug": "romac",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "mcu",
+   "usb"
+  ],
+  "footprints": [
+   "qfn-44-1ep_7x7mm_p0.5mm_ep5.2x5.2mm",
+   "hro-type-c-31-m-12"
+  ]
+ },
+ {
+  "slug": "romeo",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "usb"
+  ],
+  "footprints": [
+   "usb_c_gct_usb4085"
+  ]
+ },
+ {
+  "slug": "rosaline",
+  "hardest": "through_hole",
+  "driven_by": [
+   "connector",
+   "diode",
+   "led",
+   "mcu",
+   "other",
+   "usb"
+  ],
+  "footprints": [
+   "pinheader_2x03_p2.54mm_vertical",
+   "d_do-35_sod27_p7.62mm_horizontal",
+   "led_d3.0mm",
+   "dip-28_w7.62mm",
+   "r_axial_din0204_l3.6mm_d1.6mm_p7.62mm_horizontal",
+   "usb_hybrid_tht"
+  ]
+ },
+ {
+  "slug": "rosaline-ortho",
+  "hardest": "through_hole",
+  "driven_by": [
+   "connector",
+   "diode",
+   "led",
+   "mcu",
+   "other",
+   "usb"
+  ],
+  "footprints": [
+   "pinheader_2x03_p2.54mm_vertical",
+   "d_do-35_sod27_p7.62mm_horizontal",
+   "led_d3.0mm",
+   "dip-28_w7.62mm",
+   "r_axial_din0204_l3.6mm_d1.6mm_p7.62mm_horizontal",
+   "usb_hybrid_tht"
+  ]
+ },
+ {
+  "slug": "sango",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "mcu",
+   "usb"
+  ],
+  "footprints": [
+   "qfn-56-1ep_7x7mm_p0.4mm_ep3.2x3.2mm",
+   "hro-type-c-31-m-12"
+  ]
+ },
+ {
+  "slug": "scatter42",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "other"
+  ],
+  "footprints": [
+   "d3_smd"
+  ]
+ },
+ {
+  "slug": "schwann-rev0-5b",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "mcu",
+   "usb"
+  ],
+  "footprints": [
+   "qfn-44-1ep_7x7mm_p0.5mm_ep5.2x5.2mm",
+   "hro-type-c-31-m-12"
+  ]
+ },
+ {
+  "slug": "sdra-kb00",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "usb"
+  ],
+  "footprints": [
+   "hro-type-c-31-m-12-handsoldering"
+  ]
+ },
+ {
+  "slug": "sepia-officinalis",
+  "hardest": "through_hole",
+  "driven_by": [
+   "connector"
+  ],
+  "footprints": [
+   "trrs-pj-320a-dual"
+  ]
+ },
+ {
+  "slug": "sesame",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "usb"
+  ],
+  "footprints": [
+   "usb_c_gct_usb4085"
+  ]
+ },
+ {
+  "slug": "setta21",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "led",
+   "other"
+  ],
+  "footprints": [
+   "sk6812mini_rev_bl",
+   "d3_smd_l1"
+  ]
+ },
+ {
+  "slug": "sha-choc",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "diode"
+  ],
+  "footprints": [
+   "d_sod-123"
+  ]
+ },
+ {
+  "slug": "sha-mx",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "diode"
+  ],
+  "footprints": [
+   "d_sod-123"
+  ]
+ },
+ {
+  "slug": "silakka54",
+  "hardest": "through_hole",
+  "driven_by": [
+   "connector",
+   "diode"
+  ],
+  "footprints": [
+   "jack_3.5mm_pj320d_horizontal",
+   "diode_do-35"
+  ]
+ },
+ {
+  "slug": "sith-zhuyin40",
+  "hardest": "through_hole",
+  "driven_by": [
+   "diode"
+  ],
+  "footprints": [
+   "diode-hybrid-back"
+  ]
+ },
+ {
+  "slug": "skeleton-num-pad",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "mcu",
+   "usb"
+  ],
+  "footprints": [
+   "qfn-44-1ep_7x7mm_p0.5mm_ep5.2x5.2mm",
+   "usb_c_receptacle_palconn_utc16-g"
+  ]
+ },
+ {
+  "slug": "skeleton68rev2",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "ic",
+   "mcu",
+   "passive",
+   "usb"
+  ],
+  "footprints": [
+   "sot-23-6",
+   "qfn-56-1ep_7x7mm_p0.4mm_ep3.2x3.2mm",
+   "c_0402_1005metric",
+   "r_0402_1005metric",
+   "usb_c_receptacle_hro_type-c-31-m-12"
+  ]
+ },
+ {
+  "slug": "sl40",
+  "hardest": null
+ },
+ {
+  "slug": "slime88",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "ic",
+   "mcu",
+   "passive",
+   "usb"
+  ],
+  "footprints": [
+   "sot-23-6-routable",
+   "rp2040-qfn-56",
+   "c_0402_1005metric",
+   "r_0402_1005metric",
+   "usb_c_receptacle_hro_type-c-31-m-12"
+  ]
+ },
+ {
+  "slug": "slimorta",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "diode"
+  ],
+  "footprints": [
+   "diode_smd"
+  ]
+ },
+ {
+  "slug": "sofle-choc",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "led"
+  ],
+  "footprints": [
+   "choc_hotswap_sk6812minie"
+  ]
+ },
+ {
+  "slug": "sofle-pico",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "ic"
+  ],
+  "footprints": [
+   "sot-23_ds"
+  ]
+ },
+ {
+  "slug": "sofle-v1",
+  "hardest": "through_hole",
+  "driven_by": [
+   "connector",
+   "encoder"
+  ],
+  "footprints": [
+   "mj-4pp-9",
+   "rotaryencoder_alps_ec11e-switch_vertical_h20mm-keebio_modified"
+  ]
+ },
+ {
+  "slug": "solheim68",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "other"
+  ],
+  "footprints": [
+   "resonator_smd_murata_cstnexxv-3pin-p1.2"
+  ]
+ },
+ {
+  "slug": "southpawpcb",
+  "hardest": "through_hole",
+  "driven_by": [
+   "diode"
+  ],
+  "footprints": [
+   "d_sod123_axial-dual"
+  ]
+ },
+ {
+  "slug": "soyuz",
+  "hardest": "through_hole",
+  "driven_by": [
+   "diode"
+  ],
+  "footprints": [
+   "d_do-35_sod27_p7.62mm_horizontal"
+  ]
+ },
+ {
+  "slug": "spacetime",
+  "hardest": "through_hole",
+  "driven_by": [
+   "connector",
+   "diode"
+  ],
+  "footprints": [
+   "audio_jack_3.5mm_trrs_smd_ra",
+   "d_sod123_axial"
+  ]
+ },
+ {
+  "slug": "span",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "other"
+  ],
+  "footprints": [
+   "d3_smd_v2",
+   "rsw_2pin_smd"
+  ]
+ },
+ {
+  "slug": "speedo",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "diode",
+   "led"
+  ],
+  "footprints": [
+   "d_sod-123f",
+   "led_ws2812b_plcc4_5.0x5.0mm_p3.2mm"
+  ]
+ },
+ {
+  "slug": "spleeb",
+  "hardest": "through_hole",
+  "driven_by": [
+   "connector"
+  ],
+  "footprints": [
+   "trrs-pj-320a-dual"
+  ]
+ },
+ {
+  "slug": "splitreus",
+  "hardest": "through_hole",
+  "driven_by": [
+   "connector",
+   "diode"
+  ],
+  "footprints": [
+   "mj-4pp-9",
+   "diode-hybrid-back"
+  ]
+ },
+ {
+  "slug": "squiggle-36",
+  "hardest": "through_hole",
+  "driven_by": [
+   "connector"
+  ],
+  "footprints": [
+   "trrs"
+  ]
+ },
+ {
+  "slug": "squiggle-goldberg",
+  "hardest": "through_hole",
+  "driven_by": [
+   "connector"
+  ],
+  "footprints": [
+   "trrs"
+  ]
+ },
+ {
+  "slug": "squiggle-low-profile",
+  "hardest": "through_hole",
+  "driven_by": [
+   "connector"
+  ],
+  "footprints": [
+   "trrs"
+  ]
+ },
+ {
+  "slug": "squiggle-minimalist",
+  "hardest": null
+ },
+ {
+  "slug": "squiggle-standard",
+  "hardest": "through_hole",
+  "driven_by": [
+   "connector"
+  ],
+  "footprints": [
+   "trrs"
+  ]
+ },
+ {
+  "slug": "steal-this",
+  "hardest": "through_hole",
+  "driven_by": [
+   "connector"
+  ],
+  "footprints": [
+   "trrs-pj-320a-dual-squished"
+  ]
+ },
+ {
+  "slug": "stoutgat",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "usb"
+  ],
+  "footprints": [
+   "usb_c_receptacle_gct_usb4085"
+  ]
+ },
+ {
+  "slug": "stoutgatv2",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "led"
+  ],
+  "footprints": [
+   "led_ws2812b_plcc4_5.0x5.0mm_p3.2mm"
+  ]
+ },
+ {
+  "slug": "stront-choc",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "other",
+   "usb"
+  ],
+  "footprints": [
+   "connector_ffc-fpc-vertical-12pin",
+   "connector_fpc-ffc-adapter-12pin",
+   "connector_hro-type-c-31-m-12-data"
+  ]
+ },
+ {
+  "slug": "stront-mx-38",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "usb"
+  ],
+  "footprints": [
+   "connector_hro-type-c-31-m-12-data"
+  ]
+ },
+ {
+  "slug": "stront-mx-40",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "usb"
+  ],
+  "footprints": [
+   "connector_hro-type-c-31-m-12-data"
+  ]
+ },
+ {
+  "slug": "supersplit",
+  "hardest": "through_hole",
+  "driven_by": [
+   "connector"
+  ],
+  "footprints": [
+   "trrs-pj-320a-dual"
+  ]
+ },
+ {
+  "slug": "sweep-2",
+  "hardest": "through_hole",
+  "driven_by": [
+   "connector"
+  ],
+  "footprints": [
+   "trrs-pj-320a"
+  ]
+ },
+ {
+  "slug": "sweep-bling-lp",
+  "hardest": "through_hole",
+  "driven_by": [
+   "connector"
+  ],
+  "footprints": [
+   "trrs-pj-320a"
+  ]
+ },
+ {
+  "slug": "sweep-bling-mx",
+  "hardest": "through_hole",
+  "driven_by": [
+   "connector"
+  ],
+  "footprints": [
+   "trrs-pj-dpb2"
+  ]
+ },
+ {
+  "slug": "sweep-half-swept",
+  "hardest": "through_hole",
+  "driven_by": [
+   "connector"
+  ],
+  "footprints": [
+   "trrs-pj-dpb2"
+  ]
+ },
+ {
+  "slug": "sweep-high",
+  "hardest": "through_hole",
+  "driven_by": [
+   "connector"
+  ],
+  "footprints": [
+   "trrs-pj-dpb2"
+  ]
+ },
+ {
+  "slug": "sweep-high-m",
+  "hardest": "through_hole",
+  "driven_by": [
+   "connector"
+  ],
+  "footprints": [
+   "trrs-pj-dpb2"
+  ]
+ },
+ {
+  "slug": "sweeq",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "other"
+  ],
+  "footprints": [
+   "d3_smd_v2",
+   "rsw_2pin_smd"
+  ]
+ },
+ {
+  "slug": "sweeq-mx",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "other"
+  ],
+  "footprints": [
+   "d3_smd_v2",
+   "rsw_2pin_smd"
+  ]
+ },
+ {
+  "slug": "swoop-mx",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "diode",
+   "led"
+  ],
+  "footprints": [
+   "d_smd_th",
+   "sk6812_mini_e"
+  ]
+ },
+ {
+  "slug": "tanuki-pcb3",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "led",
+   "other"
+  ],
+  "footprints": [
+   "led_ws2812b-plcc4",
+   "tactile_switch_smd_6.0x3.5mm"
+  ]
+ },
+ {
+  "slug": "tartan",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "usb"
+  ],
+  "footprints": [
+   "usb_minib_akizuki_musb-5bf01as"
+  ]
+ },
+ {
+  "slug": "teaqueen",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "diode"
+  ],
+  "footprints": [
+   "d_sod-123"
+  ]
+ },
+ {
+  "slug": "tenkey-plusplus",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "usb"
+  ],
+  "footprints": [
+   "usb_c_receptacle_gct_usb4085"
+  ]
+ },
+ {
+  "slug": "tg4x",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "led"
+  ],
+  "footprints": [
+   "ws2812b"
+  ]
+ },
+ {
+  "slug": "th75",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "usb"
+  ],
+  "footprints": [
+   "hro-type-c-31-m-12-usb-spacer"
+  ]
+ },
+ {
+  "slug": "torn",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "usb"
+  ],
+  "footprints": [
+   "usb_c_gct_usb4085"
+  ]
+ },
+ {
+  "slug": "touhoupad-v2",
+  "hardest": "through_hole",
+  "driven_by": [
+   "connector"
+  ],
+  "footprints": [
+   "pinheader_1x03_p2.54mm_vertical"
+  ]
+ },
+ {
+  "slug": "treadstone32",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "mcu",
+   "other"
+  ],
+  "footprints": [
+   "tqfp-44_10x10mm_p0.8mm",
+   "crystal_smd_3225-4pin_3.2x2.5mm_handsoldering",
+   "d3_smd_only_front"
+  ]
+ },
+ {
+  "slug": "tripel",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "usb"
+  ],
+  "footprints": [
+   "usb_mini-b"
+  ]
+ },
+ {
+  "slug": "twelvekey",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "ic",
+   "usb"
+  ],
+  "footprints": [
+   "sot-23-6",
+   "usb_c_receptacle_hro_type-c-31-m-12"
+  ]
+ },
+ {
+  "slug": "ua62",
+  "hardest": "through_hole",
+  "driven_by": [
+   "diode"
+  ],
+  "footprints": [
+   "diode-hybrid-back"
+  ]
+ },
+ {
+  "slug": "un-split",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "usb"
+  ],
+  "footprints": [
+   "mid_mount-usb_c_handsoldering"
+  ]
+ },
+ {
+  "slug": "unicorn-f072",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "ic",
+   "mcu",
+   "usb"
+  ],
+  "footprints": [
+   "sot-23-6",
+   "qfn-48-1ep_7x7mm_p0.5mm_ep5.15x5.15mm_thermalvias",
+   "usb_c_hro_type-c-31-m-12"
+  ]
+ },
+ {
+  "slug": "unicorne",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "ic",
+   "mcu",
+   "usb"
+  ],
+  "footprints": [
+   "sot-23-6",
+   "qfn-48-1ep_7x7mm_p0.5mm_ep5.6x5.6mm",
+   "usb_c_hro_type-c-31-m-12"
+  ]
+ },
+ {
+  "slug": "unison",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "mcu"
+  ],
+  "footprints": [
+   "qfn-44-1ep_7x7mm_pitch0.5mm"
+  ]
+ },
+ {
+  "slug": "unix60pcb",
+  "hardest": "through_hole",
+  "driven_by": [
+   "connector",
+   "diode"
+  ],
+  "footprints": [
+   "pinsocket_1x04_p2.54mm_vertical",
+   "d_sod123_axial-dual"
+  ]
+ },
+ {
+  "slug": "vagrant",
+  "hardest": "through_hole",
+  "driven_by": [
+   "diode"
+  ],
+  "footprints": [
+   "d_do-35_sod27_p7.62mm_horizontal"
+  ]
+ },
+ {
+  "slug": "varanidae",
+  "hardest": "through_hole",
+  "driven_by": [
+   "diode",
+   "encoder"
+  ],
+  "footprints": [
+   "d_do-35_sod27_p7.62mm_horizontal",
+   "rotaryencoder_alps_ec11e-switch_vertical_h20mm"
+  ]
+ },
+ {
+  "slug": "voyager60",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "mcu",
+   "usb"
+  ],
+  "footprints": [
+   "qfn-44-1ep_7x7mm_pitch0.5mm",
+   "hro-type-c-31-m-12-assembly"
+  ]
+ },
+ {
+  "slug": "wave",
+  "hardest": null
+ },
+ {
+  "slug": "wired-pierce",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "other"
+  ],
+  "footprints": [
+   "c_smd_v2",
+   "r_smd_v2"
+  ]
+ },
+ {
+  "slug": "wren",
+  "hardest": "through_hole",
+  "driven_by": [
+   "connector",
+   "diode",
+   "encoder",
+   "other"
+  ],
+  "footprints": [
+   "jack_3.5mm_pj320e_horizontal",
+   "trrs_jack_mj4pp9",
+   "d_sod123_axial",
+   "rotaryencoder_alps_ec11e-switch_vertical_h20mm",
+   "r_axial_din0204_l3.6mm_d1.6mm_p5.08mm_vertical"
+  ]
+ },
+ {
+  "slug": "xenon-e",
+  "hardest": "through_hole",
+  "driven_by": [
+   "connector",
+   "encoder",
+   "other"
+  ],
+  "footprints": [
+   "mj-4pp-9_rev2",
+   "rotaryencoder_alps_ec11e-switch_vertical_h20mm",
+   "d3_th_smd"
+  ]
+ },
+ {
+  "slug": "xr63-gl",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "other"
+  ],
+  "footprints": [
+   "d3_smd_single_side_rev"
+  ]
+ },
+ {
+  "slug": "yiancardesigns-gingham",
+  "hardest": "through_hole",
+  "driven_by": [
+   "connector",
+   "diode",
+   "led",
+   "mcu",
+   "other"
+  ],
+  "footprints": [
+   "pinheader_1x04_p2.54mm_vertical",
+   "pinheader_2x03_p2.54mm_vertical",
+   "d_do-35_sod27_p7.62mm_horizontal",
+   "led_d3.0mm_clear",
+   "dip-28_w7.62mm",
+   "dip-18_w7.62mm"
+  ]
+ },
+ {
+  "slug": "yosino58",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "led"
+  ],
+  "footprints": [
+   "sk6812mini_rev"
+  ]
+ },
+ {
+  "slug": "yosino58-cherry",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "led"
+  ],
+  "footprints": [
+   "sk6812mini_rev"
+  ]
+ },
+ {
+  "slug": "yosino58-chocolate",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "led"
+  ],
+  "footprints": [
+   "sk6812mini_rev"
+  ]
+ },
+ {
+  "slug": "zero",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "diode",
+   "led"
+  ],
+  "footprints": [
+   "d_sod-123",
+   "led_sk6812mini_plcc4_3.5x3.5mm_p1.75mm"
+  ]
+ },
+ {
+  "slug": "zodiark",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "led",
+   "other"
+  ],
+  "footprints": [
+   "ys-sk6812mini-e",
+   "jumper_smd_2dub"
+  ]
+ },
+ {
+  "slug": "zwerg",
+  "hardest": "through_hole",
+  "driven_by": [
+   "connector",
+   "other"
+  ],
+  "footprints": [
+   "con_mj-4pp-9_reversible",
+   "d3_th_smd"
+  ]
+ }
+]

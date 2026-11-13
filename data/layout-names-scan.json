@@ -1,0 +1,26 @@
+{
+ "jiran-cherry": {
+  "56": "Full (with pinky/numbers)"
+ },
+ "jiran-classic": {
+  "56": "Full (with pinky/numbers)"
+ },
+ "jiran-hotswap": {
+  "56": "Full (with pinky/numbers)"
+ },
+ "jorne-cherry-3-0": {
+  "36": "5 Column",
+  "42": "6 Column",
+  "44": "Full (with pinky)"
+ },
+ "jorne-classic-2-1": {
+  "44": "Full (with pinky)"
+ },
+ "reviung34": {
+  "33": "Single 2U (33 keys)",
+  "34": "Dual 1U (34 keys)"
+ },
+ "reviung34-split": {
+  "34": "Dual 1U (34 keys)"
+ }
+}

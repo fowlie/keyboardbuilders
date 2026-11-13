@@ -1,0 +1,161 @@
+# seed/licences.toml -- which licence file covers which slot, where the repo
+# holds more than one and does not say. Queued by scripts/draft_licences.py;
+# every filled row is a PERSON's ruling. Keyed by REPO, because a licence is a
+# property of the repository and not of a firmware record.
+#
+#   drafted    the queue's own row: empty slots, nobody has ruled -- the repo
+#              defers exactly as it did before this file existed
+#   confirmed  settled, and the ONLY verdict the build reads
+#
+# EMPTY SLOTS MEAN TWO DIFFERENT THINGS and `verdict` is what separates them.
+# On a `drafted` row `[]` is the absence of a ruling. On a `confirmed` row `[]`
+# is a ruling -- `Unstated`, all rights reserved -- which is a real answer a
+# repo can deserve. The build reads confirmed rows only, so the two never meet.
+#
+# `signal = "human"` is copied through every re-draft untouched, evidence and
+# all. Nothing else in this file is machine-proposed: the drafter fills no slot
+# ever, under the owner's rule of 2026-08-26 that choosing between a repo's own
+# licence files is inventing the answer the three slots exist to ask. A machine
+# row's `signal` names the gate instead -- `root-tie` several at the root,
+# `no-root` several with none at the root, `unclassified` a file we cannot name.
+#
+# `note` on a drafted row is the EVIDENCE, root files first, so the ruling can be
+# made from this file alone. On a confirmed row it is the person's reasoning, and
+# that is the thing a later reader needs most.
+#
+# `documentation` is asked for explicitly and never inferred. Measured: all 234
+# built records carry one licence in all three slots, so this slot has never held
+# a value of its own -- which makes it the one a reviewer fills in by reflex. It
+# is the terms on the README and the build guide, and it decides whether this
+# site may republish a photo.
+
+[[entry]]
+repo          = "adereth/dactyl-keyboard"
+hardware      = []
+firmware      = []
+documentation = []
+verdict       = "drafted"
+signal        = "root-tie"
+note          = "LICENSE = AGPL-3.0; LICENSE-models = CC-BY-SA-4.0"
+
+[[entry]]
+repo          = "bschwind/key-ripper"
+hardware      = []
+firmware      = []
+documentation = []
+verdict       = "drafted"
+signal        = "root-tie"
+note          = "LICENSE-APACHE = Apache-2.0; LICENSE-MIT = MIT; LICENSE-ZLIB = Zlib"
+
+[[entry]]
+repo          = "dpapavas/lagrange-keyboard"
+hardware      = []
+firmware      = []
+documentation = []
+verdict       = "drafted"
+signal        = "root-tie"
+note          = "LICENSE.AGPL = AGPL-3.0; LICENSE.CC = CC-BY-SA-4.0; LICENSE.GPL = GPL-3.0"
+
+[[entry]]
+repo          = "foostan/crkbd"
+hardware      = ["CC-BY-4.0"]
+firmware      = ["MIT"]
+documentation = ["CC-BY-4.0"]
+verdict       = "confirmed"
+signal        = "human"
+note          = "Owner's ruling 2026-08-31: LICENSE_CC covers the PCBs and the written material, LICENSE_MIT the firmware and the shared footprint library at pcbs/common/kbd. The filenames say it and the licences' own natures agree -- CC-BY on a keyboard repo is not firmware terms, MIT is not PCB terms."
+
+[[entry]]
+repo          = "joshreve/dactyl-keyboard"
+hardware      = []
+firmware      = []
+documentation = []
+verdict       = "drafted"
+signal        = "root-tie"
+note          = "LICENSE = AGPL-3.0; LICENSE-models = CC-BY-NC-SA-3.0"
+
+[[entry]]
+repo          = "satorusaka/15k-macropad"
+hardware      = []
+firmware      = []
+documentation = []
+verdict       = "drafted"
+signal        = "no-root"
+note          = "Source/MX_Alps_Hybrid/LICENSE = MIT; Source/RP_Silicon_KiCad/LICENSE = Unlicense; Source/marbastlib/LICENSE = CERN-OHL-S-2.0"
+
+[[entry]]
+repo          = "shinoharata/keyboards"
+hardware      = []
+firmware      = []
+documentation = []
+verdict       = "drafted"
+signal        = "unclassified"
+note          = "LICENSE.md = unclassified"
+
+[[entry]]
+repo          = "veikman/dactyl-keyboard"
+hardware      = []
+firmware      = []
+documentation = []
+verdict       = "drafted"
+signal        = "root-tie"
+note          = "LICENSE = AGPL-3.0; LICENSE-models = CC-BY-NC-SA-3.0"
+
+[[entry]]
+repo          = "zk-phi/1x2x3-keyboard"
+hardware      = []
+firmware      = []
+documentation = []
+verdict       = "drafted"
+signal        = "unclassified"
+note          = "LICENSE = unclassified"
+
+[[entry]]
+repo          = "jyap808/pando"
+hardware      = ["CERN-OHL-S-2.0"]
+firmware      = ["GPL-2.0"]
+documentation = ["CERN-OHL-S-2.0"]
+verdict       = "confirmed"
+signal        = "human"
+note          = "2026-09-29, from the README's own License section, not a choice between files: \"Pando Keyboard (c) 2026 by Julian Yap is Open Hardware, licensed under CERN-OHL-S v2. See LICENSE.\" then \"The firmware in `firmware/` is licensed under the GPL v2.\" The root LICENSE is CERN-OHL-S only, which is why the build read that into all three slots. Documentation takes the project-wide grant; only the firmware is carved out."
+
+# Ferris and its two descendants, 2026-10-01 (backlog #107). One LICENSE file with
+# `# Hardware`, `# Software` and `# Documentation` sections, so one file states three
+# licences and the scan could only name one. The hardware section's SPDX line is
+# `Apache-2.0 WITH SHL-2.1`, the SPDX spelling of Solderpad 2.1; reading its first word
+# published all three slots as Apache-2.0. scan_licences.py now reads the WITH clause.
+[[entry]]
+repo          = "pierrechevalier83/ferris"
+hardware      = ["Solderpad-2.1"]
+firmware      = ["GPL-3.0"]
+documentation = ["CC0-1.0"]
+verdict       = "confirmed"
+signal        = "human"
+note          = "Read 2026-10-01, the LICENSE's own sections: Hardware is the Solderpad Hardware License 2.1; Software is \"the GPL, version 3\" with \"or (at your option) any later version\"; Documentation is \"released to the public domain under the CC0 terms\". The readme says the same in one line."
+
+[[entry]]
+repo          = "jimmerricks/swoop"
+hardware      = ["Solderpad-2.1"]
+firmware      = ["GPL-3.0"]
+documentation = ["CC0-1.0"]
+verdict       = "confirmed"
+signal        = "human"
+note          = "Read 2026-10-01: Ferris's three-section LICENSE, kept whole. Hardware Solderpad 2.1, Software GPL v3 or later (\"contains changes to the original product ... Ferris under the GPL, version 3\"), Documentation CC0."
+
+[[entry]]
+repo          = "davidphilipbarr/sweep"
+hardware      = ["Solderpad-2.1"]
+firmware      = []
+documentation = []
+verdict       = "confirmed"
+signal        = "human"
+note          = "Read 2026-10-01: the LICENSE holds ONLY Ferris's `# Hardware` section, Solderpad 2.1 (`SPDX-License-Identifier: Apache-2.0 WITH SHL-2.1`). No software or documentation terms appear in it, so those two slots are Unstated, the file's own silence, not a guess."
+
+[[entry]]
+repo          = "marcocampione/Hem-keyboard"
+hardware      = ["MIT"]
+firmware      = ["MIT"]
+documentation = ["MIT"]
+verdict       = "confirmed"
+signal        = "human"
+note          = "Read 2026-11-09: one root LICENSE, MIT, and the README's License section says \"MIT, see `LICENSE`\" for the whole repo. The OpenStreetMap art on the PCB's back is ODbL data, credited in the README; it is artwork, not a licence on the design."

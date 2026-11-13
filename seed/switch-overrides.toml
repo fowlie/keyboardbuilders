@@ -1,0 +1,16 @@
+# seed/switch-overrides.toml -- switch facts the board scans got wrong, corrected by hand
+# from the design's own README. Applied last by build_seed.py, the same shape as
+# seed/splay-overrides.toml: a keyed correction, not a retuned rule that would move other
+# designs nobody has looked at.
+#
+# Each row was found by #107 step 9's pad scan (2026-10-02,
+# a measurement in the owner's notes) and checked against the README. Hillside
+# 46/52's Mill-Max rows went once the pads were read per key position.
+#
+# `switches` replaces the design's switch list; `switch_mounts` replaces what its switch
+# positions accept (solder, mx_socket, choc_socket, millmax). Either may be left out.
+
+[[entry]]
+slug     = "ergoslab"
+switches = ["choc_v1", "mx"]
+note     = "README: \"Kailh hotswap sockets for all the MX-style switches (choc are soldered in)\", 42 MX and 10 Choc. The MX footprint, `Kailh_socket_reversible`, names no family, so the switch scan missed it; its holes are MX socket spacing."

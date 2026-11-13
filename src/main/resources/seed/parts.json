@@ -1,0 +1,711 @@
+{
+ "shops": [
+  {
+   "slug": "42keebs",
+   "name": "42. Keebs",
+   "currency": "EUR",
+   "prices_include_vat": false,
+   "vat": {
+    "NO": 25
+   }
+  }
+ ],
+ "parts": [
+  {
+   "slug": "kailh-mx-hotswap-socket",
+   "name": "Kailh MX hotswap socket",
+   "fits": {
+    "switch_socket": [
+     "mx_socket"
+    ]
+   },
+   "mpn": "CPG151101S11"
+  },
+  {
+   "slug": "kailh-choc-hotswap-socket",
+   "name": "Kailh Choc V1 hotswap socket",
+   "fits": {
+    "switch_socket": [
+     "choc_socket"
+    ]
+   },
+   "mpn": "CPG135001S30"
+  },
+  {
+   "slug": "1n4148w-sod123f",
+   "name": "1N4148W diode, SMD (SOD-123F)",
+   "fits": {
+    "diode": "sod_123f"
+   }
+  },
+  {
+   "slug": "1n4148-do35",
+   "name": "1N4148 diode, through-hole (DO-35)",
+   "fits": {
+    "diode": "do_35"
+   }
+  },
+  {
+   "slug": "nice-nano-v2",
+   "dev_board": "nice-nano-v2"
+  },
+  {
+   "slug": "pro-micro",
+   "dev_board": "pro-micro"
+  },
+  {
+   "slug": "gateron-yellow-milky",
+   "name": "Gateron Yellow Black/Milky",
+   "fits": {
+    "switch": [
+     "mx"
+    ]
+   },
+   "switch_kind": "linear",
+   "spec": {
+    "per": "42keebs",
+    "read_on": "2026-10-05",
+    "actuation_force_gf": 50,
+    "bottom_out_force_gf": 60,
+    "actuation_mm": 2,
+    "travel_mm": 4,
+    "factory_lubed": false,
+    "pins": 5,
+    "housing": "Nylon top and bottom housing",
+    "stem": "POM stem",
+    "vendor_says": "Great value classic linear switch"
+   }
+  },
+  {
+   "slug": "gateron-yellow-ks3",
+   "name": "Gateron Yellow All Black (KS-3)",
+   "fits": {
+    "switch": [
+     "mx"
+    ]
+   },
+   "switch_kind": "linear",
+   "spec": {
+    "per": "42keebs",
+    "read_on": "2026-10-05",
+    "actuation_force_gf": 50,
+    "bottom_out_force_gf": 60,
+    "actuation_mm": 2,
+    "travel_mm": 4,
+    "factory_lubed": false,
+    "housing": "Nylon bottom/nylon top housing",
+    "stem": "POM stem",
+    "vendor_says": "Great value smooth linear switches."
+   }
+  },
+  {
+   "slug": "gateron-pro-yellow-milky",
+   "name": "Gateron Pro Yellow Milky",
+   "fits": {
+    "switch": [
+     "mx"
+    ]
+   },
+   "switch_kind": "linear",
+   "spec": {
+    "per": "42keebs",
+    "read_on": "2026-10-05",
+    "actuation_force_gf": 50,
+    "bottom_out_force_gf": 60,
+    "actuation_mm": 2,
+    "travel_mm": 4,
+    "factory_lubed": true,
+    "pins": 5,
+    "housing": "Nylon top/bottom housing",
+    "stem": "POM stem",
+    "vendor_says": "Great value pre-lubed smooth linear switch."
+   }
+  },
+  {
+   "slug": "gateron-pro-red-milky",
+   "name": "Gateron Pro Red Milky",
+   "fits": {
+    "switch": [
+     "mx"
+    ]
+   },
+   "switch_kind": "linear",
+   "spec": {
+    "per": "42keebs",
+    "read_on": "2026-10-05",
+    "actuation_force_gf": 45,
+    "bottom_out_force_gf": 60,
+    "actuation_mm": 2,
+    "travel_mm": 4,
+    "factory_lubed": true,
+    "pins": 5,
+    "housing": "Nylon top/bottom housing",
+    "stem": "POM stem",
+    "vendor_says": "Great value light and smooth pre-lubed linear switch."
+   }
+  },
+  {
+   "slug": "gateron-cj",
+   "name": "Gateron CJ",
+   "fits": {
+    "switch": [
+     "mx"
+    ]
+   },
+   "switch_kind": "linear",
+   "spec": {
+    "per": "42keebs",
+    "read_on": "2026-10-05",
+    "actuation_force_gf": 50,
+    "bottom_out_force_gf": 60,
+    "actuation_mm": 2,
+    "travel_mm": 4,
+    "factory_lubed": false,
+    "pins": 5,
+    "housing": "Top housing: proprietary translucent “ink material”; bottom housing: POM",
+    "stem": "POM",
+    "vendor_says": "Smooth and pretty dark blue linear switches"
+   }
+  },
+  {
+   "slug": "gateron-brown-ks3",
+   "name": "Gateron Brown All Black (KS-3)",
+   "fits": {
+    "switch": [
+     "mx"
+    ]
+   },
+   "switch_kind": "tactile",
+   "spec": {
+    "per": "42keebs",
+    "read_on": "2026-10-05",
+    "actuation_force_gf": 55,
+    "actuation_mm": 2,
+    "travel_mm": 4,
+    "factory_lubed": false,
+    "pins": 5,
+    "housing": "Nylon bottom/nylon top housing",
+    "stem": "POM stem",
+    "vendor_says": "A great value light tactile switch [...] it has a pleasant light tactile bump."
+   }
+  },
+  {
+   "slug": "jwick-black",
+   "name": "JWICK Black",
+   "fits": {
+    "switch": [
+     "mx"
+    ]
+   },
+   "switch_kind": "linear",
+   "spec": {
+    "per": "42keebs",
+    "read_on": "2026-10-05",
+    "actuation_force_gf": 45,
+    "bottom_out_force_gf": 63.5,
+    "actuation_mm": 2,
+    "travel_mm": 4,
+    "factory_lubed": true,
+    "pins": 5,
+    "housing": "Black nylon top and bottom housing",
+    "stem": "Black POM stem",
+    "vendor_says": "Very smooth pre-lubed heavier linear switches"
+   }
+  },
+  {
+   "slug": "jwick-ice-white",
+   "name": "JWICK Ice White",
+   "fits": {
+    "switch": [
+     "mx"
+    ]
+   },
+   "switch_kind": "linear",
+   "spec": {
+    "per": "42keebs",
+    "read_on": "2026-10-05",
+    "bottom_out_force_gf": 45,
+    "actuation_mm": 2,
+    "travel_mm": 4,
+    "factory_lubed": false,
+    "pins": 5,
+    "housing": "Clear polycarbonate top, milky nylon bottom housing",
+    "stem": "White POM stem",
+    "vendor_says": "Great value smooth light linear switch."
+   }
+  },
+  {
+   "slug": "jwick-t1",
+   "name": "JWICK T1",
+   "fits": {
+    "switch": [
+     "mx"
+    ]
+   },
+   "switch_kind": "tactile",
+   "spec": {
+    "per": "42keebs",
+    "read_on": "2026-10-05",
+    "bottom_out_force_gf": 67,
+    "actuation_mm": 2,
+    "travel_mm": 4,
+    "factory_lubed": false,
+    "pins": 5,
+    "housing": "Black nylon top/bottom housing",
+    "stem": "POM stem",
+    "vendor_says": "Great value smooth tactile switch."
+   }
+  },
+  {
+   "slug": "ktt-sea-salt-lemon",
+   "name": "KTT Sea Salt Lemon",
+   "fits": {
+    "switch": [
+     "mx"
+    ]
+   },
+   "switch_kind": "linear",
+   "spec": {
+    "per": "42keebs",
+    "read_on": "2026-10-05",
+    "actuation_force_gf": 45,
+    "bottom_out_force_gf": 55,
+    "actuation_mm": 2,
+    "travel_mm": 4,
+    "factory_lubed": false,
+    "pins": 3,
+    "housing": "Polycarbonate top/nylon bottom housing",
+    "stem": "POM stem",
+    "vendor_says": "Smooth premium switches at a very affordable price"
+   }
+  },
+  {
+   "slug": "ktt-grapefruit",
+   "name": "KTT Grapefruit",
+   "fits": {
+    "switch": [
+     "mx"
+    ]
+   },
+   "switch_kind": "linear",
+   "spec": {
+    "per": "42keebs",
+    "read_on": "2026-10-05",
+    "actuation_force_gf": 45,
+    "bottom_out_force_gf": 55,
+    "actuation_mm": 2,
+    "travel_mm": 4,
+    "factory_lubed": false,
+    "pins": 3,
+    "housing": "Polycarbonate top/nylon bottom housing",
+    "stem": "POM stem",
+    "vendor_says": "Smooth premium switches at a very affordable price"
+   }
+  },
+  {
+   "slug": "kailh-choc-pink",
+   "name": "Kailh Choc Pink",
+   "fits": {
+    "switch": [
+     "choc_v1"
+    ]
+   },
+   "switch_kind": "linear",
+   "spec": {
+    "per": "42keebs",
+    "read_on": "2026-10-05",
+    "actuation_mm": 1.5,
+    "travel_mm": 3,
+    "pins": 5,
+    "vendor_says": "Pink (recolour of Light Blue): linear, 20 gf"
+   }
+  },
+  {
+   "slug": "kailh-choc-pro-red",
+   "name": "Kailh Choc Pro Red",
+   "fits": {
+    "switch": [
+     "choc_v1"
+    ]
+   },
+   "switch_kind": "linear",
+   "spec": {
+    "per": "42keebs",
+    "read_on": "2026-10-05",
+    "actuation_mm": 1.5,
+    "travel_mm": 3,
+    "pins": 5,
+    "vendor_says": "Pro Red: linear, 35 gf"
+   }
+  },
+  {
+   "slug": "kailh-choc-red",
+   "name": "Kailh Choc Red",
+   "fits": {
+    "switch": [
+     "choc_v1"
+    ]
+   },
+   "switch_kind": "linear",
+   "spec": {
+    "per": "42keebs",
+    "read_on": "2026-10-05",
+    "actuation_mm": 1.5,
+    "travel_mm": 3,
+    "pins": 5,
+    "vendor_says": "Red: linear, 50 gf"
+   }
+  },
+  {
+   "slug": "kailh-choc-sunset",
+   "name": "Kailh Choc Sunset",
+   "fits": {
+    "switch": [
+     "choc_v1"
+    ]
+   },
+   "switch_kind": "tactile",
+   "spec": {
+    "per": "42keebs",
+    "read_on": "2026-10-05",
+    "actuation_force_gf": 40,
+    "actuation_mm": 1.5,
+    "travel_mm": 3,
+    "factory_lubed": true,
+    "housing": "Amber PC top, black nylon bottom",
+    "stem": "Orange POM stem",
+    "vendor_says": "The tactile event (bump) of the Sunset switch can be described as “short and sweet”"
+   }
+  },
+  {
+   "slug": "ambients-nocturnal",
+   "name": "Ambients Silent Choc Nocturnal",
+   "fits": {
+    "switch": [
+     "choc_v1"
+    ]
+   },
+   "switch_kind": "silent_linear",
+   "spec": {
+    "per": "42keebs",
+    "read_on": "2026-10-05",
+    "vendor_says": "Nocturnal (20 g linear)"
+   }
+  },
+  {
+   "slug": "ambients-twilight",
+   "name": "Ambients Silent Choc Twilight",
+   "fits": {
+    "switch": [
+     "choc_v1"
+    ]
+   },
+   "switch_kind": "silent_linear",
+   "spec": {
+    "per": "42keebs",
+    "read_on": "2026-10-05",
+    "vendor_says": "Twilight (35 g linear)"
+   }
+  },
+  {
+   "slug": "ambients-sunrise",
+   "name": "Ambients Silent Choc Sunrise",
+   "fits": {
+    "switch": [
+     "choc_v1"
+    ]
+   },
+   "switch_kind": "silent_tactile"
+  }
+ ],
+ "kits": [
+  {
+   "slug": "42keebs-lily58-pro",
+   "name": "Lily58 Pro Hotswap Split Ergo 50% Kit",
+   "shop": "42keebs",
+   "url": "https://42keebs.eu/shop/kits/pro-micro-based/lily58-pro-hotswap-split-ergo-50-kit/",
+   "based_on": "lily58-pro",
+   "read_on": "2026-10-04",
+   "contents": [
+    {
+     "quantity": 2,
+     "text": "main PCBs",
+     "kind": "pcb"
+    },
+    {
+     "quantity": 2,
+     "text": "bottom plates made from PCB material (FR4)"
+    },
+    {
+     "quantity": 2,
+     "text": "FR4 switch plates"
+    },
+    {
+     "quantity": 60,
+     "text": "SMD diodes",
+     "kind": "diodes"
+    },
+    {
+     "quantity": 2,
+     "text": "TRRS sockets"
+    },
+    {
+     "quantity": 2,
+     "text": "reset/boot switches"
+    },
+    {
+     "quantity": 2,
+     "text": "SMD power switch"
+    },
+    {
+     "quantity": 58,
+     "text": "MX or Choc hotswap sockets",
+     "kind": "switch_sockets"
+    },
+    {
+     "text": "Brass standoffs and screws"
+    },
+    {
+     "quantity": 2,
+     "text": "acrylic covers"
+    }
+   ],
+   "needs": [
+    {
+     "fits": {
+      "controller_socket": [
+       "pro_micro"
+      ]
+     },
+     "quantity": 2
+    },
+    {
+     "fits": {
+      "switch": [
+       "mx",
+       "choc_v1"
+      ]
+     },
+     "quantity": 58
+    }
+   ],
+   "not_priced": [
+    "TRRS cable (for a wired build)"
+   ]
+  }
+ ],
+ "listings": [
+  {
+   "shop": "42keebs",
+   "ref": "855",
+   "product": "kailh-mx-hotswap-socket",
+   "pack": 10,
+   "url": "https://42keebs.eu/shop/parts/kailh-mx-hot-swap-sockets/"
+  },
+  {
+   "shop": "42keebs",
+   "ref": "6198",
+   "product": "kailh-choc-hotswap-socket",
+   "pack": 10,
+   "url": "https://42keebs.eu/shop/parts/kailh-choc-hot-swap-sockets/"
+  },
+  {
+   "shop": "42keebs",
+   "ref": "7336",
+   "product": "1n4148w-sod123f",
+   "label": "SMD",
+   "pack": 10,
+   "url": "https://42keebs.eu/shop/parts/components/1n4148-diodes-through-hole-smd/?attribute_type=SMD"
+  },
+  {
+   "shop": "42keebs",
+   "ref": "7335",
+   "product": "1n4148-do35",
+   "label": "Through-hole",
+   "pack": 10,
+   "url": "https://42keebs.eu/shop/parts/components/1n4148-diodes-through-hole-smd/?attribute_type=Through-hole"
+  },
+  {
+   "shop": "42keebs",
+   "ref": "4808",
+   "product": "nice-nano-v2",
+   "pack": 1,
+   "url": "https://42keebs.eu/shop/parts/controllers/nice-nano-v2-wireless-controller/"
+  },
+  {
+   "shop": "42keebs",
+   "ref": "382",
+   "product": "pro-micro",
+   "pack": 1,
+   "url": "https://42keebs.eu/shop/parts/controllers/pro-micro-controller/"
+  },
+  {
+   "shop": "42keebs",
+   "ref": "6241",
+   "product": "42keebs-lily58-pro",
+   "label": "Cherry MX-compatible, black",
+   "pack": 1,
+   "url": "https://42keebs.eu/shop/kits/pro-micro-based/lily58-pro-hotswap-split-ergo-50-kit/"
+  },
+  {
+   "shop": "42keebs",
+   "ref": "6242",
+   "product": "42keebs-lily58-pro",
+   "label": "Cherry MX-compatible, white",
+   "pack": 1,
+   "url": "https://42keebs.eu/shop/kits/pro-micro-based/lily58-pro-hotswap-split-ergo-50-kit/"
+  },
+  {
+   "shop": "42keebs",
+   "ref": "6243",
+   "product": "42keebs-lily58-pro",
+   "label": "Kailh Choc V1, black",
+   "pack": 1,
+   "url": "https://42keebs.eu/shop/kits/pro-micro-based/lily58-pro-hotswap-split-ergo-50-kit/"
+  },
+  {
+   "shop": "42keebs",
+   "ref": "6244",
+   "product": "42keebs-lily58-pro",
+   "label": "Kailh Choc V1, white",
+   "pack": 1,
+   "url": "https://42keebs.eu/shop/kits/pro-micro-based/lily58-pro-hotswap-split-ergo-50-kit/"
+  },
+  {
+   "shop": "42keebs",
+   "ref": "26360",
+   "product": "gateron-yellow-milky",
+   "pack": 1,
+   "url": "https://42keebs.eu/shop/switches/gateron/gateron-yellow-black-milky-switches/"
+  },
+  {
+   "shop": "42keebs",
+   "ref": "743",
+   "product": "gateron-yellow-ks3",
+   "pack": 10,
+   "url": "https://42keebs.eu/shop/switches/gateron/gateron-yellow-all-black-switches-ks-3/"
+  },
+  {
+   "shop": "42keebs",
+   "ref": "26598",
+   "product": "gateron-pro-yellow-milky",
+   "pack": 1,
+   "url": "https://42keebs.eu/shop/switches/gateron/gateron-pro-yellow-milky-switches/"
+  },
+  {
+   "shop": "42keebs",
+   "ref": "26596",
+   "product": "gateron-pro-red-milky",
+   "pack": 1,
+   "url": "https://42keebs.eu/shop/switches/gateron/gateron-pro-red-milky-switches-2/"
+  },
+  {
+   "shop": "42keebs",
+   "ref": "26354",
+   "product": "gateron-cj",
+   "pack": 1,
+   "url": "https://42keebs.eu/shop/switches/gateron/gateron-cj-linear-switches/"
+  },
+  {
+   "shop": "42keebs",
+   "ref": "1390",
+   "product": "gateron-brown-ks3",
+   "pack": 10,
+   "url": "https://42keebs.eu/shop/switches/gateron/gateron-brown-all-black-switches-ks-3/"
+  },
+  {
+   "shop": "42keebs",
+   "ref": "9488",
+   "product": "jwick-black",
+   "pack": 10,
+   "url": "https://42keebs.eu/shop/switches/jwick/jwick-black-linear-switches/"
+  },
+  {
+   "shop": "42keebs",
+   "ref": "5887",
+   "product": "jwick-ice-white",
+   "pack": 10,
+   "url": "https://42keebs.eu/shop/switches/jwick/jwick-ice-white-linear-switches/"
+  },
+  {
+   "shop": "42keebs",
+   "ref": "5873",
+   "product": "jwick-t1",
+   "pack": 10,
+   "url": "https://42keebs.eu/shop/switches/jwick/jwick-t1-tactile-switches/"
+  },
+  {
+   "shop": "42keebs",
+   "ref": "6575",
+   "product": "ktt-sea-salt-lemon",
+   "pack": 10,
+   "url": "https://42keebs.eu/shop/switches/ktt/ktt-sea-salt-lemon-linear-switches/"
+  },
+  {
+   "shop": "42keebs",
+   "ref": "6574",
+   "product": "ktt-grapefruit",
+   "pack": 10,
+   "url": "https://42keebs.eu/shop/switches/ktt/ktt-grapefruit-linear-switches/"
+  },
+  {
+   "shop": "42keebs",
+   "ref": "9012",
+   "product": "kailh-choc-pink",
+   "label": "Pink",
+   "pack": 10,
+   "url": "https://42keebs.eu/shop/switches/choc/kailh-choc-low-profile-switches/?attribute_type=Pink"
+  },
+  {
+   "shop": "42keebs",
+   "ref": "9013",
+   "product": "kailh-choc-pro-red",
+   "label": "Pro Red",
+   "pack": 10,
+   "url": "https://42keebs.eu/shop/switches/choc/kailh-choc-low-profile-switches/?attribute_type=Pro+Red"
+  },
+  {
+   "shop": "42keebs",
+   "ref": "9022",
+   "product": "kailh-choc-red",
+   "label": "Red",
+   "pack": 10,
+   "url": "https://42keebs.eu/shop/switches/choc/kailh-choc-low-profile-switches/?attribute_type=Red"
+  },
+  {
+   "shop": "42keebs",
+   "ref": "26600",
+   "product": "kailh-choc-sunset",
+   "pack": 1,
+   "url": "https://42keebs.eu/shop/switches/choc/kailh-choc-sunset-tactile-switches/"
+  },
+  {
+   "shop": "42keebs",
+   "ref": "26592",
+   "product": "ambients-nocturnal",
+   "pack": 1,
+   "url": "https://42keebs.eu/shop/switches/choc/ambients-silent-choc-switches/?attribute_type=Nocturnal+%2820+g+linear%29"
+  },
+  {
+   "shop": "42keebs",
+   "ref": "26593",
+   "product": "ambients-twilight",
+   "pack": 1,
+   "url": "https://42keebs.eu/shop/switches/choc/ambients-silent-choc-switches/?attribute_type=Twilight+%2835+g+linear%29"
+  },
+  {
+   "shop": "42keebs",
+   "ref": "26594",
+   "product": "ambients-sunrise",
+   "pack": 1,
+   "url": "https://42keebs.eu/shop/switches/choc/ambients-silent-choc-switches/?attribute_type=Sunrise+%2840+g+tactile%29"
+  }
+ ],
+ "diode_packages": [
+  {
+   "design": "lily58-pro",
+   "package": "sod_123",
+   "source": "board-scan.json: Lily58-footprint:Diode_SOD123 x29 in kata0510/lily58 Pro/PCB/Lily58_Pro.kicad_pcb (reversible, one PCB per half)"
+  }
+ ]
+}

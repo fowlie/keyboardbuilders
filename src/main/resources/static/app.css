@@ -1,0 +1,1775 @@
+/* THE KEYCAP THEME, chosen 2026-09-26 from four prototypes on branch `prototype/theme`.
+   Cards and buttons are keys: a raised face with a bottom edge that presses on hover.
+
+   ux.md §7.3 says one accent, everything else greyscale, and that still holds for every
+   link and control. THE ONE EXCEPTION is the home page's four answers, which each wear a
+   colour from one keycap set (`--k1`..`--k4`) -- owner's pick, and confined to those
+   tiles so the accent keeps meaning "you can press this". §7.4: dark mode follows the OS.
+
+   The two faces are served from /vendor/fonts under their own OFL licences, not fetched
+   from Google: a font request to a third party on every page view is a visitor's IP
+   handed to that party, for text we can serve ourselves in 70 KB. */
+@font-face {
+    font-family: "Inter";
+    src: url("/vendor/fonts/inter-latin-var.woff2") format("woff2");
+    font-weight: 100 900;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Space Grotesk";
+    src: url("/vendor/fonts/space-grotesk-latin-var.woff2") format("woff2");
+    font-weight: 300 700;
+    font-display: swap;
+}
+
+:root {
+    color-scheme: light dark;
+    --bg: #efeee9;
+    --fg: #1d1d22;
+    --muted: #626168;
+    --rule: #d9d7cf;
+    /* Measured against --bg, not picked by eye: the prototype's #e0492a was 3.8:1 there,
+       under AA's 4.5 for the small rail links it colours. This is 4.7:1, and white text
+       on it as a button is 5.4:1. */
+    --accent: #c03a18;
+    /* Text ON an accent button. White in light mode; in dark mode the accent is light
+       enough that white on it was 2.6:1, so the dark scheme uses near-black (6.5:1). */
+    --on-accent: #ffffff;
+    --card: #ffffff;
+    /* A RECESSED surface, where --card is a raised one. A result row sits ON the page and
+       is lighter than it; the footer sits UNDER the page and is darker. Both directions
+       invert in dark mode, which is why this cannot just be "grey". */
+    --sunk: #e4e2da;
+    /* A key's bottom edge, and the header bar, which stays dark in both schemes. */
+    --edge: #c9c6bb;
+    --bar: #1d1d22;
+    --display: "Space Grotesk", system-ui, sans-serif;
+    /* One keycap set for the home page's answers: a red, a teal, a mustard, a navy. */
+    --k1: #e0492a; --k2: #2a9d8f; --k3: #e2a93b; --k4: #3d5a98;
+
+    /* The narrowest a keyboard card may get, and so the one place deciding how many
+       columns every grid of them lands on: three on a laptop, one on a phone. Not used
+       by the home page's `.answers`, which are four answers to a question rather than
+       cards for keyboards, and sit in one row of four on purpose. */
+    --card-min: 15.5rem;}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #16171b;
+        --fg: #ecebe6;
+        --muted: #9a99a0;
+        --rule: #2c2e35;
+        --accent: #ff7a57;
+        --on-accent: #1d1d22;
+        --card: #22242a;
+        --sunk: #121317;
+        --edge: #0a0b0d;
+        --bar: #0b0c0f;
+        --k1: #ff6b4a; --k2: #3cc1b1; --k3: #f2bd52; --k4: #6f8fd6;
+    }
+}
+
+* { box-sizing: border-box; }
+
+/* A COLUMN THE HEIGHT OF THE VIEWPORT, so the footer sits at the bottom of the window on
+   a short page instead of floating halfway up it. `main` takes the slack.
+   `100dvh` because on a phone `100vh` is the height with the address bar HIDDEN, so a
+   viewport-tall page scrolls by exactly the height of the bar. `100vh` first for anything
+   that does not know the dynamic units. */
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font: 15px/1.5 "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+}
+
+a { color: var(--accent); }
+
+header.site {
+    display: flex;
+    /* CENTRE, NOT BASELINE, and the mark is why. An inline-flex wordmark containing an
+       SVG has no text baseline of its own to align on -- a flex container takes its
+       baseline from its first item, and an <svg> has none -- so under `baseline` the
+       whole wordmark aligned on its bottom edge and sat a few pixels below the nav. */
+    align-items: center;
+    gap: 1.5rem;
+    padding: 0.85rem 1.25rem;
+    /* A dark bar in BOTH schemes -- a keyboard's case, with the keys on the page below.
+       Its text is therefore fixed light rather than following --fg. */
+    background: var(--bar);
+    color: #ecebe6;
+}
+
+.wordmark {
+    font-family: var(--display);
+    font-weight: 600;
+    text-decoration: none;
+    color: inherit;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* `flex: none` so the mark keeps its 20px however narrow the header gets; the wordmark
+   text is what should give way, and it does, because it is the flexible item.
+
+   TWO COLOURS, BOTH QUIET: grey keys and a dusty terracotta on the top-most one (the
+   middle finger's, third in the mark). A saturated orange square beside bright white
+   ones read as "white things and a bright red LED" -- owner, on the first try. Fixed
+   values rather than tokens, because the bar behind them does not change with the
+   scheme. favicon.svg carries the same two. */
+.wordmark .mark {
+    flex: none;
+    display: block;
+    color: #a9a8ae;
+}
+.wordmark .mark rect:nth-child(3) { fill: #c0705a; }
+/* The accent on hover, as the footer's wordmark does (owner, 2026-10-02). The dark
+   scheme's accent in both schemes: the bar is dark in both, and the light scheme's
+   #c03a18 is too dim on it. */
+.wordmark { transition: color .12s; }
+.wordmark:hover { color: #ff7a57; }
+
+/* THE KEYS SIT RIGHT, the wordmark left (owner, 2026-10-04): the header is a flex row, so
+   an auto left margin takes all the spare width. The phone menu does the same below. */
+header.site .bar-links { margin-left: auto; }
+
+/* The nav link is a small key on the bar. */
+header.site nav a {
+    color: inherit;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.3rem 0.75rem;
+    border: 1px solid #3a3c44;
+    border-radius: 8px;
+    background: #26282e;
+    box-shadow: 0 3px 0 #000;
+    transition: transform .08s, box-shadow .08s;
+}
+header.site nav a:hover { transform: translateY(2px); box-shadow: 0 1px 0 #000; }
+
+/* THE SMALL-SCREEN MENU: the bar's links folded behind a key of their own once three keys
+   and the wordmark no longer fit on one line. Measured in Chrome with "Favorites" (not
+   "My favorites", owner 2026-10-02): the full bar needs 506px, so 34rem (544px) leaves
+   room. Exactly one of .bar-links and .menu shows at any width. */
+header.site .menu { display: none; margin-left: auto; position: relative; }
+header.site .menu summary {
+    list-style: none;
+    /* Both undo the site-wide `details summary` rule: its 8px top margin made the bar
+       17px taller, and its muted colour greyed the key out on the dark bar. */
+    margin: 0;
+    color: inherit;
+    cursor: pointer;
+    font-size: 1.1rem;
+    line-height: 1;
+    padding: 0.4rem 0.7rem;
+    border: 1px solid #3a3c44;
+    border-radius: 8px;
+    background: #26282e;
+    box-shadow: 0 3px 0 #000;
+}
+header.site .menu summary::-webkit-details-marker { display: none; }
+header.site .menu[open] summary { transform: translateY(2px); box-shadow: 0 1px 0 #000; }
+header.site .menu:not([open]) nav { display: none; }
+header.site .menu[open] nav {
+    position: absolute;
+    right: 0;
+    top: calc(100% + 0.6rem);
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    padding: 0.75rem;
+    background: var(--bar);
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+    white-space: nowrap;
+}
+@media (max-width: 34rem) {
+    header.site .bar-links { display: none; }
+    header.site .menu { display: block; }
+}
+
+main {
+    max-width: 52rem;
+    /* `width: 100%` IS NOT REDUNDANT. Auto cross-axis margins turn off a flex item's
+       stretch (Flexbox §4.2), so without it `main` is sized by fit-content -- and an
+       `auto-fit` grid inside then collapses to one column. */
+    width: 100%;
+    margin: 0 auto;
+    padding: 1.5rem 1.25rem 4rem;
+    /* Takes the slack in the body column, which is what pins the footer to the bottom of
+       a short page. ONE `main` RULE, not two: a second block setting only the flex
+       properties works and is exactly the split that later gets edited in one place. */
+    flex: 1 0 auto;
+}
+
+/* A scanning surface, not prose: 52rem is right for a design's own page and too narrow
+   for 50 rows. Per-page-type rather than raising `main`'s cap. */
+main.wide { max-width: 80rem; }
+
+h1 { font-family: var(--display); font-size: 1.6rem; letter-spacing: -0.02em; margin: 0 0 0.25rem; }
+h2 {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--muted);
+    margin: 2rem 0 0.5rem;
+}
+
+.count, .crumb { color: var(--muted); font-size: 0.85rem; margin: 0 0 1.25rem; }
+.crumb { margin: 0 0 1rem; }
+
+/* Result rows: name, then the shape, then the electronics (ux.md §2.3). */
+ul.results { list-style: none; margin: 0; padding: 0; }
+
+/* A SHALLOW KEY: a list of fifty full-height keys reads as noise, so rows get a 3px
+   edge where single cards get 5. The edge is a box-shadow on purpose -- it takes no
+   layout space, so the row's measured intrinsic size (OffscreenRowsTest) is unchanged. */
+ul.results li {
+    padding: 0.85rem 1rem;
+    border: 1px solid var(--edge);
+    border-radius: 12px;
+    background: var(--card);
+    box-shadow: 0 3px 0 var(--edge);
+    margin-bottom: 0.7rem;
+    transition: transform .08s, box-shadow .08s;
+}
+ul.results li:hover { transform: translateY(1px); box-shadow: 0 2px 0 var(--edge); }
+
+.name { font-family: var(--display); font-weight: 600; font-size: 1.05rem; }
+
+/* The whole row is the link (owner-reported: only the name was clickable, and the
+   home page's cards already worked the other way). `border-color` stays on the `<li>`
+   -- its box is the one OffscreenRowsTest measures -- and `:has()` reaches up to it
+   from a hover on the child `<a>` rather than moving the border onto that `<a>`, which
+   would change what the `<li>`'s own content box contains and invalidate the measured
+   `contain-intrinsic-size` below. */
+ul.results li:has(.result-card:hover) { border-color: var(--accent); }
+.result-card { text-decoration: none; color: inherit; }
+
+/* The middot separators are drawn, not typed, so no facet has to carry punctuation. */
+.facts { margin: 0.3rem 0 0; color: var(--muted); font-size: 0.9rem; }
+.facts span + span::before { content: " · "; }
+
+.summary { margin: 1rem 0 0; }
+
+/* ux.md §5.3: ignorance gets its own rendering, never a blank cell. */
+.unrecorded { color: var(--muted); font-style: italic; }
+
+dl.spec {
+    display: grid;
+    grid-template-columns: 12rem 1fr;
+    gap: 0.35rem 1rem;
+    margin: 0;
+}
+
+/* The Spec table's section headings. NOT the h2's small muted capitals: "SPEC" then
+   "SHAPE" in one style read as two sibling sections. Sentence case in the body colour
+   says these sit inside Spec, and they hug the rows they name, not the section before. */
+h3.spec-section {
+    margin: 1.1rem 0 0.4rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--fg);
+}
+
+dl.spec dt { color: var(--muted); }
+dl.spec dd { margin: 0; }
+/* A label that leads to its learn page (#108). Muted like every label, with a dotted
+   underline that says "there is an explanation behind this" without competing with the
+   value's own links; the accent on hover, as every link here does. */
+dl.spec dt a { color: inherit; text-decoration: underline dotted; text-underline-offset: 3px; }
+dl.spec dt a:hover { color: var(--accent); }
+
+ul.layouts, ul.sources { margin: 0; padding-left: 1.1rem; }
+ul.sources { word-break: break-all; }
+
+/* A SOURCE LINK LEAVES THE SITE, AND SAYS SO BEFORE IT IS CLICKED. It opens in a new
+   tab so a reader checking a claim keeps the catalogue page they were reading, and the
+   drawn arrow-out-of-box is what warns them that the click behaves differently -- an
+   unannounced new tab is the same surprise either way. The glyph inherits currentColor
+   and sits on the text baseline, so it works in both link and visited colours. */
+a.external .ext { margin-left: 0.25em; vertical-align: -0.05em; }
+
+/* Door B, CONTROLLER and SWITCHES sections (ticket 16). A struck switch row states
+   the reason inline rather than relying on colour alone -- decision 3 rule 1: a
+   struck row is a claim about the world and must survive being screenshotted into
+   a Discord thread. */
+ul.fit-list { list-style: none; margin: 0.5rem 0 0; padding: 0; }
+ul.fit-list li { padding: 0.2rem 0; }
+ul.fit-list li.fits { color: var(--fg); }
+ul.fit-list li.excluded { color: var(--muted); }
+/* #98: fits the SOCKET, runs none of this design's firmware. Same rule as a struck
+   switch row -- the caveat is spelled out in the row's own text, so colour is
+   reinforcement and never the carrier. Full-strength foreground because these are real
+   boards a builder can buy, not a rule-out. */
+ul.fit-list li.fits-socket { color: var(--fg); }
+
+/* A spec value with a long form behind it (owner, 2026-09-16). The dotted underline is
+   the only thing telling a reader there is more, so it must not be colour alone -- and
+   `help` is the cursor the convention already trained people on. Unset <abbr>'s UA
+   default so the rule is ours in every browser. */
+abbr.hinted { text-decoration: underline dotted; text-underline-offset: 0.2em; cursor: help; }
+
+/* The wired-controller disclosure -- plain <details>, no JS, so it degrades to "always
+   open" with no styling at all if this rule is ever missing. */
+details summary { cursor: pointer; color: var(--muted); margin-top: 0.5rem; }
+
+@media (max-width: 34rem) {
+    dl.spec { grid-template-columns: 1fr; gap: 0 0; }
+    dl.spec dd { margin-bottom: 0.6rem; }
+}
+
+/* ux.md §3.5: the silhouette is the only image the product has. It inherits
+   currentColor, so dark mode costs nothing. Common scale means the width varies
+   between designs on purpose — a 34-key board is meant to look smaller than a
+   42-key one, so never stretch one to fill its box.
+
+   ON `.result-card`, NOT `ul.results li`: the flex children (`.thumb`, `.row-text`)
+   moved one level deeper when the whole row became a link, and the `<li>` itself must
+   keep the exact box OffscreenRowsTest measures. */
+.result-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Forgejo #13. ux.md §2.7 renders the whole page per facet click and swaps it in with
+   hx-select, so every click pays parse plus layout for every silhouette in the corpus
+   — measured at 471 ms on a 4x-throttled profile at 300 designs, against a 120 ms
+   budget. `content-visibility: auto` lets the browser skip layout and paint for rows
+   that are offscreen, and the swap drops to 164 ms.
+
+   It is a rendering hint and nothing depends on it: every row is in the DOM either
+   way, so a browser without support renders the list exactly as before, only slower.
+   That is why this is a stylesheet change and not a template one.
+
+   The intrinsic sizes are MEASURED, and they are CONTENT-box heights. That distinction
+   is the whole bug this rule shipped with once: `contain-intrinsic-size` sizes the
+   contents, so `box-sizing: border-box` does not apply to it and the 29px of padding
+   and border are added on top. Feeding it the 107px border-box height over-estimated
+   every row by 29px and the page lost 14.5% of its height as rows were laid out for
+   real — a scrollbar that shrinks under your thumb. The content box is 78px, uniform
+   across all 300 rows because .thumb reserves 208px; below the breakpoint the row
+   restacks and content heights spread 102–164px, so the mobile rule takes their median.
+   `auto` means the browser prefers the real height once it has laid a row out and falls
+   back to these only before it ever has — so a wrong number costs scrollbar stability,
+   never content. Measured drift after this correction is in the test below. */
+ul.results li {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 78px;
+}
+
+.thumb {
+    flex: 0 0 auto;
+    /* Reserve the widest a capped silhouette can be, so the text column starts at
+       the same x on every row. Without this, common scale gives a ragged left edge
+       on the names and the list becomes hard to scan. */
+    width: 208px;
+    display: flex;
+    justify-content: center;
+    /* Same strength as the detail page. The silhouette was briefly muted here on the
+       theory that the names should lead, and that fought ux.md §3.5: at row size its
+       whole job is instant shape recognition, and dimming it is exactly the wrong
+       place to spend contrast. It is also the only image the product has, so it
+       should not look like a disabled control on the page where people scan. */
+    color: var(--fg);
+}
+
+.row-text { min-width: 0; }
+
+.thumb svg { display: block; max-width: 100%; height: auto; }
+
+/* The results grid. Scoped to `.results-col` rather than to `ul.results`/`.result-card`
+   themselves, because `parts/fitList.kte` reuses those classes for a plain row list.
+   Same `--card-min` as the home page's `.strip`, so the two agree.
+
+   AUTO-FILL, NOT AUTO-FIT, since 2026-10-01. auto-fit collapses the empty tracks and
+   lets `1fr` stretch what is left, so ONE card filled the whole row: owner-reported on a
+   favourites page holding a single heart, and true of a one-result search too
+   (`?q=sweep bling lp`). auto-fill keeps the empty tracks, so a lone card stays the size
+   it has in a full grid. */
+.results-col ul.results {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(var(--card-min), 1fr));
+    gap: 0.75rem;
+}
+/* Re-measured for the PHOTO card, 2026-09-26, not carried over from the line-drawing
+   card's 147px. The number estimates a grid TRACK -- as tall as its tallest card -- so
+   it is the mean: desktop at 1400px, three across, tracks 322-343px, mean 332. Measured
+   in headless Chromium over all 50 cards of page 1, with content-visibility switched off. */
+.results-col ul.results li { margin-bottom: 0; height: 100%; padding: 0; overflow: hidden; contain-intrinsic-size: auto 332px; }
+.results-col .result-card { height: 100%; }
+
+/* ---------------------------------------------------------------------------
+   THE CARD (designs/card.kte), on the home strip and the /designs grid alike: a build
+   photo cropped to one shape, the board's own drawing over its corner, stars in the
+   other, "name by author" underneath. Chosen from the theme prototypes, 2026-09-26.
+   --------------------------------------------------------------------------- */
+/* `a.card`, not `.card`: the phone block below sets `.result-card` to flex-start,
+   which shrank the photo box to nothing (its img is out of flow) -- measured 125px cards. */
+a.card { display: flex; flex-direction: column; align-items: stretch; gap: 0; padding: 0; overflow: hidden; }
+
+/* ONE SHAPE FOR EVERY PHOTO, so a 3:1 panorama and a square shot sit evenly in a row.
+   The <img> is out of flow on purpose: in flow, a tall one stretched its box past 16:10. */
+.card-photo { position: relative; display: block; aspect-ratio: 16 / 10; overflow: hidden; background: var(--sunk); }
+.card-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+
+/* NO PHOTO: the drawing takes the photo's place. `zoom` enlarges every drawing by the
+   SAME factor, so a macropad still draws smaller than a full-size board -- fitting each
+   to the box would erase the one comparison a drawing makes. */
+.card-photo.no-photo { display: flex; align-items: center; justify-content: center; color: var(--fg); }
+.card-drawn { zoom: 2; max-width: 50%; }
+.card-drawn svg { display: block; max-width: 100%; height: auto; }
+
+/* The owner's favourite detail: the board's drawing, small, in a frosted chip over its
+   own photo. Fit to the chip on purpose -- it labels the photo, it does not compare. */
+.card-badge, .card-stars {
+    position: absolute;
+    right: 0.5rem;
+    background: color-mix(in srgb, var(--card) 88%, transparent);
+    backdrop-filter: blur(4px);
+    color: var(--fg);
+}
+.card-badge { bottom: 0.5rem; width: 4.5rem; padding: 0.35rem 0.45rem; border-radius: 8px; }
+.card-badge svg { display: block; width: 100%; height: auto; }
+.card-stars {
+    top: 0.5rem;
+    padding: 0.2rem 0.55rem;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+}
+
+/* Hearts (2026-10-01): inside the stars' own chip, top-right, "★ 2.1k · ♥ 3" -- one
+   place for how much a design is liked. The owner moved it there from a second chip in
+   the top-left corner. The heart takes the accent; zero shows too. */
+.card-hearts { color: var(--accent); }
+.stars.hearts { color: var(--accent); }
+
+.card-text { display: flex; flex-direction: column; gap: 0.15rem; padding: 0.75rem 0.9rem 0.85rem; }
+.card-text .facts { margin: 0; }
+.card-title { display: flex; align-items: baseline; flex-wrap: wrap; gap: 0 0.4rem; }
+.card-by { color: var(--muted); font-size: 0.88rem; }
+
+.thumb.detail {
+    width: auto;
+    justify-content: flex-start;
+    margin: 1rem 0 0;
+}
+
+/* ONE BIG PICTURE, THEN A RAIL OF THE OTHERS -- backlog #101, owner's design. The hero
+   is whatever the page's best single picture is (photo, else bare PCB render); the rail
+   under it holds the rest of the board's pictures small, and everything in both opens the
+   same PhotoSwipe gallery. Same 44rem measure as the prose column, so a design page reads
+   as one column rather than a picture wider than its own text. */
+figure.hero {
+    margin: 1.5rem 0 0;
+    max-width: 44rem;
+}
+
+figure.hero a.hero-shot {
+    display: block;
+    cursor: zoom-in;
+}
+
+figure.hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 3px;
+}
+
+figure.hero figcaption {
+    margin-top: .4rem;
+    font-size: .85rem;
+    color: var(--muted);
+}
+
+.shot-rail {
+    display: flex;
+    gap: .5rem;
+    flex-wrap: wrap;
+    max-width: 44rem;
+    margin: .6rem 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* A LINK AND A BUTTON STYLED AS ONE THING, deliberately: the PCB thumb is an <a> because
+   it has a file to point at without JavaScript, the 3D one is a <button> because it does
+   not, and a reader should not be able to tell which is which by looking. */
+.shot-rail .shot {
+    display: block;
+    width: 8rem;
+    padding: 0;
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    background: var(--card);
+    color: inherit;
+    font: inherit;
+    text-align: left;
+    cursor: zoom-in;
+    overflow: hidden;
+}
+
+.shot-rail .shot:hover { border-color: var(--accent); }
+
+/* ONE FRAME FOR EVERY THUMB, the render poster's 14:9, so cards of different pictures
+   line up: with height: auto a 1600x820 photo beside the 1400x900 poster made the two
+   cards 5-10px apart (owner, 2026-10-02). The thumb is cropped; the gallery shows the
+   whole picture. */
+.shot-rail .shot img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 14 / 9;
+    height: auto;
+    object-fit: cover;
+}
+
+.shot-rail .shot span {
+    display: block;
+    padding: .3rem .4rem;
+    font-size: .75rem;
+    color: var(--muted);
+}
+
+/* A CAPTION PER SLIDE. PhotoSwipe ships none, so this is a registered UI element; the
+   text comes off the page itself (see show.kte's gallery script) rather than being
+   restated in script. `pointer-events: none` because it sits over the bottom of the
+   picture -- and over the 3D model, where swallowing a drag would cost an orbit. */
+.pswp-caption {
+    position: absolute;
+    left: 50%;
+    bottom: 1rem;
+    transform: translateX(-50%);
+    z-index: 10;
+    max-width: min(46rem, 88vw);
+    padding: .45rem .75rem;
+    border-radius: 4px;
+    background: rgba(0, 0, 0, .55);
+    color: #f4f4f2;
+    font-size: .85rem;
+    line-height: 1.35;
+    text-align: center;
+    pointer-events: none;
+}
+
+/* A photo credit's link is the one thing in a caption meant to be touched. */
+.pswp-caption a {
+    color: inherit;
+    text-decoration: underline;
+    pointer-events: auto;
+}
+
+/* THE MODEL, LAID OVER THE BOARD SLIDE. `pointer-events: none` on the wrapper and `auto`
+   on the stage is PhotoSwipe's own documented pattern for interactive content (their
+   example is a Google Maps iframe) -- it has no per-slide option to disable its gestures,
+   so the stage takes the drag model-viewer needs to orbit. It sits inside PhotoSwipe's
+   root but OUTSIDE the zoom wrap, which is what keeps a pinch from scaling it. */
+/* WHILE THE MODEL IS UP, THE POSTER UNDERNEATH IS HIDDEN. The model's own background is
+   transparent and its box does not cover the whole picture, so without this the render
+   showed around and behind it -- owner: "I get the 3D model WITH the png still in the
+   background". Visibility rather than display, so PhotoSwipe's own layout is untouched
+   and the picture comes straight back when the model is dismissed. */
+.pswp--model-on .pswp__zoom-wrap { visibility: hidden; }
+
+.pswp-3d {
+    position: absolute;
+    inset: 0;
+    z-index: 5;                         /* over the picture, under PhotoSwipe's buttons */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+}
+
+/* FILLS THE OVERLAY. It used to stop at 86% to leave a margin where a swipe could still
+   reach PhotoSwipe and change slide -- but measured on a phone with the model up, that
+   margin did nothing, and no reader would find a 27px strip anyway. The Exit 3D control
+   and the close button are the two ways off this slide, and both are always visible. */
+.pswp-3d-stage {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    pointer-events: auto;
+}
+
+.pswp-3d-stage > model-viewer {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* THE LOAD BUTTON IS A PHOTOSWIPE UI ELEMENT, not part of the slide -- which is what
+   stops a pinch from scaling it along with the picture (owner: "the Load 3D Model button
+   is also being zoomed"). Same visual language as `.what-fits a`, and still in the corner
+   rather than dead centre, per ux.md 3.5. The box-shadow is the one addition: it sits on
+   a picture of arbitrary brightness, and a border alone can vanish against a light board. */
+.pswp-load3d {
+    position: absolute;
+    right: 1rem;
+    /* BELOW THE TOP BAR, NOT ABOVE THE CAPTION. It sat bottom-right until a phone-sized
+       test found the caption -- four lines at 390px wide -- covering it. The top edge has
+       only PhotoSwipe's own bar to clear, and that height does not vary with the text. */
+    top: 3.75rem;
+    z-index: 20;
+    display: inline-block;
+    width: auto;
+    height: auto;
+    padding: 0.45rem 0.9rem;
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    background: var(--card);
+    color: var(--fg);
+    font: inherit;
+    cursor: pointer;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .35);
+}
+
+.pswp-load3d:hover { border-color: var(--accent); }
+
+.pswp-load3d:disabled {
+    cursor: progress;
+    opacity: .8;
+}
+
+/* The progress bar that used to sit in model-viewer's `progress-bar` slot is gone. It was
+   written for the page's light background and then moved into the lightbox, where it was a
+   3px black bar on a black backdrop at y=997 of a 1000px viewport -- measured under
+   throttling, invisible by construction. The percentage now counts up in the button
+   itself, which is already where the reader is looking. */
+
+/* A LAYOUT'S SILHOUETTE, MADE CLICKABLE -- backlog #101. There is no separate file
+   behind it (it's inline SVG), so it can only ever be a script-driven affordance;
+   `cursor` and the focus ring are the only things CSS needs to add here. */
+.thumb-clickable { cursor: zoom-in; }
+.thumb-clickable:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+@media (max-width: 40rem) {
+    ul.results li {
+        /* Restacked rows are taller and no longer uniform: content heights 102–164px, median 134. */
+        contain-intrinsic-size: auto 134px;
+    }
+    /* The flex container is `.result-card` now, not the `<li>` -- see the comment
+       above `.result-card`'s base rule. The `<li>`'s own box above is untouched. */
+    .result-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .thumb { width: auto; }
+
+    /* The card is this shape at every width already, so only the height differs.
+       Photo card at 390px, one column: 342-364px, mean 342 (2026-09-26). */
+    .results-col ul.results li { contain-intrinsic-size: auto 342px; }
+}
+
+/* ux.md §2.7's paging links. Plain anchors, because they are the no-JS path and
+   v0.5 loads no script at all — nothing here may depend on one. The exhausted end
+   keeps its place rather than disappearing, so the row does not reflow between
+   pages and "Next" stays where the reader last clicked it. */
+nav.pages {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin: 1.5rem 0 0;
+    padding-top: 1rem;
+    border-top: 1px solid var(--rule);
+}
+
+nav.pages .where { color: var(--muted); font-size: 0.9rem; }
+nav.pages .spent { color: var(--rule); }
+
+/* Ticket 54's star count on a result row. Muted and after the name, because it explains
+   the sort order rather than being a fact about the keyboard -- the facts live in the
+   chips below. Small enough to be skipped by someone scanning names. */
+.name-line {
+    margin: 0;
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.stars {
+    color: var(--muted);
+    font-size: 0.85rem;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+}
+
+/* Applied filters, and the zero-recovery block beneath them. ux.md §2.6 Risk 1 makes an
+   empty result a main path on this corpus rather than an edge case, so it is styled as
+   content rather than as an error: no red, no warning icon, just the way onward. */
+/* `center`, not `baseline`: a chip now contains an icon with no text baseline of its own,
+   and under `baseline` the pills sat a couple of pixels off each other. */
+.chips { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; margin: 0 0 1rem; }
+.chip {
+    background: var(--card);
+    border: 1px solid var(--edge);
+    border-radius: 8px;
+    box-shadow: 0 3px 0 var(--edge);
+    /* Less padding on the right than the left: the x brings its own. */
+    padding: 0.15rem 0.3rem 0.15rem 0.7rem;
+    font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+/* ALWAYS VISIBLE, never revealed on hover. There is no hover on a touch screen, and a
+   control that only appears to a mouse is a control half the readers never find. */
+.chip-drop {
+    display: inline-flex;
+    color: var(--muted);
+    border-radius: 999px;
+    /* Padding out, margin back in: the tap target grows without the pill growing with it. */
+    padding: 0.3rem;
+    margin: -0.2rem 0;
+}
+.chip-drop:hover, .chip-drop:focus-visible { color: var(--fg); background: var(--rule); }
+.chip-drop svg { display: block; }
+.chips .clear { font-size: 0.85rem; color: var(--muted); }
+
+.recover { border: 1px solid var(--rule); border-radius: 6px; padding: 1rem 1.2rem; }
+.recover p { margin: 0 0 0.6rem; }
+.recover ul { margin: 0; padding-left: 1.2rem; }
+.recover li { margin: 0.25rem 0; }
+.recover em { font-style: normal; font-weight: 600; }
+
+/* The filter rail. Two columns above 60rem, stacked below — ux.md §2.8 turns filters
+   into their own page on mobile, which is a later issue; until then they stack. */
+.search { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
+@media (min-width: 60rem) { .search { grid-template-columns: 15rem 1fr; } }
+
+.rail { display: flex; flex-direction: column; gap: 1rem; }
+
+/* The rail accordion. Nine groups meant scrolling past most of them to reach
+   Extensions; `FacetRail.kt` decides which open. Native `<details>`, since v0.5 loads
+   no script. The summary replaces the old `<legend>`, same type treatment. */
+details.rail-acc summary {
+    cursor: pointer;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--muted);
+    padding: 0.2rem 0.3rem;
+    list-style: none;
+}
+/* Our own triangle, so both engines agree; `list-style: none` above kills Firefox's. */
+details.rail-acc summary::-webkit-details-marker { display: none; }
+details.rail-acc summary::before { content: "\25b8"; display: inline-block; width: 0.9em; }
+details.rail-acc[open] summary::before { content: "\25be"; }
+details.rail-acc fieldset.facet { margin-top: 0.3rem; }
+
+fieldset.facet { border: 1px solid var(--rule); border-radius: 6px; margin: 0; padding: 0.6rem 0.8rem 0.8rem; }
+fieldset.facet ul { list-style: none; margin: 0; padding: 0; }
+fieldset.facet li { display: flex; justify-content: space-between; gap: 0.5rem; padding: 0.1rem 0; font-size: 0.92rem; }
+fieldset.facet .n { color: var(--muted); font-variant-numeric: tabular-nums; }
+
+/* Disabled, not hidden: legible but plainly inert, and it keeps its count so the row
+   says "this exists and your other filters exclude it" rather than vanishing. */
+fieldset.facet li.off { color: var(--muted); opacity: 0.55; cursor: not-allowed; }
+fieldset.facet a.opt { text-decoration: none; }
+fieldset.facet a.opt:hover { text-decoration: underline; }
+fieldset.facet [aria-current="true"] { font-weight: 600; }
+
+/* The stated remainder -- contract.md 3, "a truncated value list says so". Smaller and
+   muted, and links rather than checkboxes, because these values exist but are not among
+   the questions the group expects. A checkbox here would undo the sparsity finding that
+   kept them off the list in the first place. */
+p.facet-more { margin: 0.35rem 0 0; font-size: 0.82rem; color: var(--muted); line-height: 1.5; }
+p.facet-more a { color: inherit; }
+p.facet-more a:hover { color: var(--fg); }
+p.facet-more .n { font-variant-numeric: tabular-nums; }
+p.facet-more .n::after { content: ","; }
+p.facet-more .n:last-of-type::after { content: ""; }
+
+/* The divider between facts about the keyboard and facts about our database. Dashed,
+   because it is a change of subject rather than a separator between peers. */
+hr.divider { border: 0; border-top: 1px dashed var(--rule); margin: 0.5rem 0; }
+
+/* The rail, folded away on a phone.
+   ------------------------------------------------------------------------------
+   `.search` is one column below 60rem and `.rail` precedes `.results-col` in the
+   DOM, so on a narrow screen the reader met the whole rail first: measured at
+   ~1,540px, which is roughly four screenfuls of filters before the first keyboard.
+   Licence alone is 15 options.
+
+   The order below is deliberate and is the whole fix: the CONTROL comes first, then
+   the rail it opens, then the results. Collapsed -- the default -- that is one row
+   of chrome and then keyboards. Expanded, the rail sits directly under the control
+   that opened it rather than after 100 results.
+
+   CSS only, because v0.5 loads no script. A `<details>` would be the better element
+   but cannot be reliably forced open by CSS for the desktop side, where this control
+   must disappear entirely and the rail must always show. */
+.rail-toggle { position: absolute; opacity: 0; pointer-events: none; }
+.rail-open { display: none; }
+
+@media (max-width: 59.999rem) {
+    .rail-open {
+        order: 1;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        align-self: start;
+        padding: 0.4rem 0.75rem;
+        border: 1px solid var(--rule);
+        border-radius: 6px;
+        background: var(--card);
+        color: var(--fg);
+        font-size: 0.92rem;
+        cursor: pointer;
+    }
+    .rail-open .n {
+        color: var(--muted);
+        font-variant-numeric: tabular-nums;
+    }
+    .rail-open .chev { transition: transform 0.12s ease; }
+    .rail-toggle:checked ~ .rail-open .chev { transform: rotate(90deg); }
+
+    /* Hidden, not merely moved: a rail below the results is still 1,540px the reader
+       has to scroll past to reach the pager. */
+    .rail { order: 2; display: none; }
+    .rail-toggle:checked ~ .rail { display: flex; }
+
+    .results-col { order: 3; }
+
+    /* The control is the one thing that must stay reachable while scrolling a long
+       result list -- otherwise refining a search means scrolling back to the top. */
+    .rail-open { position: sticky; top: 0.5rem; z-index: 2; }
+}
+
+/* Keyboard focus must be visible on the label, since the input it drives is offscreen. */
+.rail-toggle:focus-visible ~ .rail-open { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+/* The search box. Sits above the two-column grid because it applies to both halves,
+   and full-width because a name is the one thing a reader arrives already knowing. */
+form.find {
+    display: flex;
+    gap: 0.5rem;
+    margin: 0 0 1.25rem;
+}
+form.find input[type="search"] {
+    flex: 1 1 auto;
+    min-width: 0;
+    padding: 0.45rem 0.7rem;
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    background: var(--card);
+    color: var(--fg);
+    font: inherit;
+}
+form.find input[type="search"]:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 1px;
+}
+/* The accent key for Enter: its own darker edge, pressing on hover. The same key as the
+   home page's search button, so the two search boxes read as one control. */
+form.find button {
+    --enter-edge: color-mix(in srgb, var(--accent) 55%, black);
+    padding: 0.45rem 0.9rem;
+    border: 1px solid var(--enter-edge);
+    border-radius: 10px;
+    background: var(--accent);
+    color: var(--on-accent);
+    font: inherit;
+    font-family: var(--display);
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 3px 0 var(--enter-edge);
+    transition: transform .08s, box-shadow .08s;
+}
+form.find button:hover { transform: translateY(1px); box-shadow: 0 2px 0 var(--enter-edge); }
+form.find button:active { transform: translateY(3px); box-shadow: 0 0 0 var(--enter-edge); }
+
+/* Door B's entry point on a design page (ux.md §3.1's `[ What fits this board -> ]`).
+   ITS OWN CLASS, not borrowed from the home page's entry points: those carried a 2.5rem
+   bottom margin, which would push the summary quote away from the chips it belongs
+   under. Styled as the search button is -- a bordered affordance rather than a bare link --
+   because ux.md draws it as a button and the mock calls it "prominent". */
+/* A ROW THAT WRAPS since Share joined it (Forgejo #49): on a phone three keys do not fit
+   one line, and Share, pushed to the far end, is the one that drops to its own. */
+.what-fits { margin: 1rem 0 0; display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem 0.5rem; }
+.what-fits a {
+    display: inline-block;
+    padding: 0.45rem 0.9rem;
+    border: 1px solid var(--edge);
+    border-radius: 10px;
+    background: var(--card);
+    color: var(--fg);
+    text-decoration: none;
+    box-shadow: 0 4px 0 var(--edge);
+    transition: transform .08s, box-shadow .08s;
+}
+.what-fits a:hover { transform: translateY(2px); box-shadow: 0 2px 0 var(--edge); }
+
+/* BACKLOG #47, THE COMPARE PAGE. The overlay's first board is filled and its second a
+   SOLID outline (never dashed: that is --unknown's look, ux.md 7.3), so the pair reads in
+   greyscale; the accent on the outline is an extra, not the carrier. */
+h1 .vs { color: var(--muted); font-weight: 400; }
+.compare-actions { margin: -0.5rem 0 1.5rem; color: var(--muted); }
+.layout-choice { margin: 0 0 0.5rem; font-size: 13.5px; display: flex; flex-wrap: wrap; gap: 0.25rem 0.9rem; }
+.layout-choice-label { color: var(--muted); }
+.layout-choice strong { font-weight: 600; }
+.overlay-figure { margin: 1rem 0 0; }
+svg.overlay {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    /* A dragged outline may leave the canvas; clipping it would hide the board being moved. */
+    overflow: visible;
+}
+.overlay-b { color: var(--accent); }
+/* `fill: none` hit-tests nothing but the stroke, so without this the outline could only
+   be grabbed by its one-pixel edge. */
+.overlay-b > * { pointer-events: all; }
+.overlay-b[tabindex] { cursor: grab; touch-action: none; outline: none; }
+.overlay-b.dragging { cursor: grabbing; }
+.overlay-b:focus-visible > * { stroke-width: 3; }
+.overlay-figure figcaption { margin-top: 0.75rem; font-size: 13.5px; }
+.overlay-legend { list-style: none; margin: 0 0 0.5rem; padding: 0; display: flex; flex-wrap: wrap; gap: 0.25rem 1.25rem; }
+.swatch {
+    display: inline-block;
+    width: 0.9em;
+    height: 0.9em;
+    margin-right: 0.4em;
+    vertical-align: -0.1em;
+    border-radius: 2px;
+}
+.swatch-a { background: currentColor; opacity: 0.3; }
+.swatch-b { border: 2px solid var(--accent); }
+.overlay-note, .overlay-hint { margin: 0.25rem 0 0; color: var(--muted); }
+.overlay-reset {
+    margin-left: 0.5rem;
+    font: inherit;
+    padding: 0.1rem 0.6rem;
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    background: var(--card);
+    color: var(--fg);
+    cursor: pointer;
+}
+.overlay-reset:hover { border-color: var(--accent); }
+
+/* ux.md 7.5 item 2: a comparison is a real table, so it scrolls sideways on a narrow
+   screen, the label column pinned and a fade at the edge saying there is more. The
+   cover that hides the fade once the end is reached is solid, not a second fade: two
+   fades of one width left a grey strip on every row of a table that did not scroll. */
+.compare-toggle { margin: 0 0 0.75rem; color: var(--muted); }
+.compare-scroll {
+    overflow-x: auto;
+    background:
+        linear-gradient(var(--bg), var(--bg)) right / 1.5rem 100% no-repeat local,
+        linear-gradient(to left, var(--rule), transparent) right / 1.5rem 100% no-repeat scroll;
+}
+.compare-scroll:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+table.compare { border-collapse: collapse; width: 100%; font-size: 13.5px; line-height: 1.4; }
+table.compare th, table.compare td {
+    text-align: left;
+    vertical-align: top;
+    padding: 0.4rem 0.75rem 0.4rem 0;
+    border-bottom: 1px solid var(--rule);
+    min-width: 10rem;
+}
+table.compare thead th { font-weight: 600; }
+table.compare tbody th {
+    position: sticky;
+    left: 0;
+    background: var(--bg);
+    color: var(--muted);
+    font-weight: 400;
+    min-width: 8rem;
+}
+table.compare tr.same td { color: var(--muted); }
+
+/* Backlog #46. Same muted treatment as `.byline` -- this is metadata about the
+   record, not a fact about the keyboard. The bar is decorative text, not a real
+   progress bar, so it needs no extra markup or script to render.
+
+   A native <details>, not a <p> (owner, 2026-09-16, then 2026-09-17): the stat
+   line IS the <summary>, so there is no separate "show fields" trigger competing
+   with it for attention -- clicking the line itself is what reveals the
+   field-by-field accounting below. */
+.completeness { margin: 0.6rem 0 0; color: var(--muted); font-size: 0.9rem; }
+.completeness > summary { cursor: pointer; list-style-position: outside; }
+.completeness > summary:hover { color: var(--fg); }
+.completeness-bar { margin-left: 0.4rem; letter-spacing: 1px; }
+
+/* Wrapped and dense rather than `ul.fit-list`'s one-per-line, because this list
+   runs to fifteen-odd items on most pages. Same &check;/&cross; convention as
+   Door B's switch rows. */
+.completeness-fields {
+    list-style: none;
+    margin: 0.4rem 0 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 0.9rem;
+    row-gap: 0.2rem;
+    font-size: 0.85rem;
+}
+.completeness-fields li.fits { color: var(--fg); }
+.completeness-fields li.excluded { color: var(--muted); }
+
+
+/* ---------------------------------------------------------------------------
+   The home page: one question, a search box for the reader who knows a name,
+   four answers for the one who does not, and the daily strip below the fold.
+   Chosen from five prototypes on branch `prototype/front-page`.
+   --------------------------------------------------------------------------- */
+
+.home-q { margin: -0.4rem 0 0; font-size: 1.15rem; color: var(--muted); }
+
+.home-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    padding: 1.75rem 0 2rem;
+}
+
+.home-ask {
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: clamp(2.1rem, 6vw, 3.3rem);
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    margin: 0;
+    text-wrap: balance;
+}
+
+/* TWO KEYS SIDE BY SIDE, deliberately bigger than the index's `form.find`: on this page
+   the box is the primary control. A wide spacebar to type in, and a separate accent key
+   for Enter with its own darker edge -- the owner asked for it to press "like it is on
+   the all designs page". `padding-bottom` makes room for the keys' edges. */
+.home-find {
+    display: flex;
+    gap: 0.6rem;
+    width: min(36rem, 100%);
+    padding-bottom: 5px;
+}
+.home-find input {
+    flex: 1;
+    min-width: 0;
+    padding: 0.85rem 1.3rem;
+    border: 1px solid var(--edge);
+    border-radius: 14px;
+    background: var(--card);
+    box-shadow: 0 5px 0 var(--edge);
+    font: inherit;
+    font-size: 1.05rem;
+    color: var(--fg);
+    outline: none;
+}
+.home-find input:focus {
+    border-color: var(--accent);
+    box-shadow: 0 5px 0 var(--edge), 0 0 0 4px color-mix(in srgb, var(--accent) 25%, transparent);
+}
+.home-find button {
+    --enter-edge: color-mix(in srgb, var(--accent) 55%, black);
+    padding: 0 1.5rem;
+    border: 1px solid var(--enter-edge);
+    border-radius: 14px;
+    background: var(--accent);
+    color: var(--on-accent);
+    box-shadow: 0 5px 0 var(--enter-edge);
+    font: inherit;
+    font-family: var(--display);
+    font-size: 1.05rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform .08s, box-shadow .08s;
+}
+.home-find button:hover { transform: translateY(2px); box-shadow: 0 3px 0 var(--enter-edge); }
+.home-find button:active { transform: translateY(5px); box-shadow: 0 0 0 var(--enter-edge); }
+
+.home-sub { color: var(--muted); font-size: 0.92rem; margin: 0; }
+
+/* A rule either side of the words, so "or" reads as the fork between the box and
+   the tiles rather than as a heading over the tiles alone. */
+.answers-or {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--muted);
+    font-size: 0.85rem;
+    margin: 0 0 1rem;
+}
+.answers-or::before, .answers-or::after { content: ""; flex: 1; border-top: 1px solid var(--rule); }
+
+.answers {
+    list-style: none;
+    margin: 0 0 1.25rem;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0.75rem;
+}
+@media (max-width: 44rem) { .answers { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+/* COLOURED KEYCAPS, one colour per answer from the set in :root: a face tinted with the
+   key's colour and a bottom edge of a darker shade of it, pressing on hover. The one
+   place the site goes past one accent (see the top of this file). */
+.answers li:nth-child(4n+1) .answer { --k: var(--k1); }
+.answers li:nth-child(4n+2) .answer { --k: var(--k2); }
+.answers li:nth-child(4n+3) .answer { --k: var(--k3); }
+.answers li:nth-child(4n+4) .answer { --k: var(--k4); }
+.answer {
+    --k-edge: color-mix(in srgb, var(--k) 60%, black);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+    height: 100%;
+    padding: 1.3rem 0.9rem 1rem;
+    text-align: center;
+    text-decoration: none;
+    color: var(--fg);
+    border: 1px solid color-mix(in srgb, var(--k) 45%, var(--card));
+    border-radius: 12px;
+    background: color-mix(in srgb, var(--k) 12%, var(--card));
+    box-shadow: 0 6px 0 var(--k-edge);
+    transition: transform .08s, box-shadow .08s, border-color .08s;
+}
+.answer:hover { transform: translateY(3px); box-shadow: 0 3px 0 var(--k-edge); border-color: var(--k); }
+.answer:active { transform: translateY(6px); box-shadow: 0 0 0 var(--k-edge); }
+
+/* The drawing keeps the catalogue's common 8px-per-unit scale, so a tiny board draws
+   small and a full-size one wide -- that difference IS the answer. `max-width` only
+   stops an unusually wide board overflowing a phone's two-column tile. */
+.answer-pic {
+    min-height: 4.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--k);
+}
+.answer-pic svg { display: block; max-width: 100%; height: auto; }
+
+.answer-label { font-family: var(--display); font-weight: 600; font-size: 1.15rem; margin-top: 0.3rem; }
+.answer-blurb { color: var(--muted); font-size: 0.85rem; }
+.answer-count {
+    margin-top: auto;
+    padding: 0.2rem 0.75rem;
+    border: 1px solid color-mix(in srgb, var(--k) 40%, var(--card));
+    border-radius: 999px;
+    background: var(--card);
+    color: var(--fg);
+    font-family: var(--display);
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+.answer:hover .answer-count { background: var(--k); border-color: var(--k); color: #fff; }
+
+.answers-all { text-align: center; margin: 0 0 2.75rem; }
+
+.strip-head {
+    font-family: var(--display);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+    font-weight: 600;
+    margin: 0 0 0.75rem;
+}
+
+/* AUTO-FIT RATHER THAN A FIXED COLUMN COUNT, because the silhouettes are wildly
+   different widths -- a 12-key macropad and a 130-key Unison sit in the same
+   strip -- and a fixed grid would give the macropad a card of mostly air.
+
+   The minimum comes from `--card-min` so this and `/designs` cannot disagree. */
+.strip {
+    list-style: none;
+    margin: 0 0 1.5rem;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(var(--card-min), 1fr));
+    gap: 0.75rem;
+}
+
+.strip-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    height: 100%;
+    padding: 0.85rem 0.9rem 0.9rem;
+    border: 1px solid var(--edge);
+    border-radius: 12px;
+    background: var(--card);
+    color: var(--fg);
+    text-decoration: none;
+    box-shadow: 0 5px 0 var(--edge);
+    transition: transform .08s, box-shadow .08s, border-color .08s;
+}
+.strip-card:hover { transform: translateY(2px); box-shadow: 0 3px 0 var(--edge); border-color: var(--accent); }
+.strip-card:active { transform: translateY(5px); box-shadow: 0 0 0 var(--edge); }
+
+/* The whole card is one link, so the silhouette must not swallow the pointer as
+   a separate target -- and `.thumb`'s 208px reservation is for the list's shared
+   left edge, which a grid of cards does not have.
+
+   NOTHING IS SCALED TO FIT, and that is the point rather than an omission. ux.md:551
+   requires a "consistent scale within a viewport": every silhouette is drawn at a
+   fixed 8px per key unit, so a 12-key macropad IS smaller than a 60-key split and
+   the sizes are comparable at a glance. Fitting each one to its card would have made
+   Kobold (33x32) render exactly as tall as Sofle (132x46) and quietly destroyed that.
+   Measured across the eight featured: 33-139px wide, 32-49px tall, all inside the
+   ~179px of card and the 56px box, so no scaling is needed to make them fit. */
+.strip-card .thumb {
+    width: auto;
+    justify-content: center;
+    align-items: center;
+    min-height: 56px;
+    pointer-events: none;
+}
+
+.strip-name { font-family: var(--display); font-weight: 600; font-size: 0.95rem; }
+
+.strip-facts {
+    color: var(--muted);
+    font-size: 0.82rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem 0.6rem;
+}
+
+/* `.strip-head` alone renders with no top margin, right for the home page where it
+   follows a paragraph that already carries one -- wrong here, where nothing above it
+   does. Restores the plain <h2> rule's 2rem rather than changing `.strip-head` itself,
+   which would double the gap on the home page. Reported directly: no space between
+   "Sources" and this heading, unlike every other section break on the page. */
+.related-head { margin-top: 2rem; }
+
+/* Backlog #24. The one line "boards like this" cards add over the home page's
+   shop window -- ux.md 3.6 is explicit that an unlabelled related-items strip is
+   noise, so this is never optional the way a normal caption would be. */
+.related-reason {
+    color: var(--muted);
+    font-size: 0.78rem;
+    font-style: italic;
+}
+
+.strip-more { margin: 0; }
+.more { font-weight: 600; text-decoration: none; }
+.more:hover { text-decoration: underline; }
+
+
+/* The correction route, on every page. ux.md §2.10 wants a real report-a-problem
+   surface as the third door; this is the cheap stand-in until that exists, and a
+   mailto is deliberate -- a form needs decisions (per-field or per-design, where
+   reports land, anti-spam) that a mailto does not. */
+/* FULL-BLEED BAND, CONSTRAINED CONTENT. Bordering only the 52rem column made the rule
+   stop mid-page and read as another divider inside the article rather than as the end of
+   it. A footer has to reach both edges to be one. */
+.site-foot {
+    /* No top margin: on a short page the space above the footer is `main` growing, and on
+       a long one the content already ends with its own spacing. A margin here added a gap
+       on top of both. */
+    flex: none;
+    background: var(--sunk);
+    border-top: 1px solid var(--rule);
+    color: var(--muted);
+    font-size: 0.85rem;
+}
+
+/* FOUR COLUMNS ON A WIDE SCREEN, the brand twice as wide as a link column; on a phone the
+   brand spans the top and the three link columns share two. Deeper than the one-line
+   footer it replaced (owner, 2026-10-02), so it reads as the end of the page. */
+.foot-grid {
+    max-width: 64rem;
+    margin: 0 auto;
+    padding: 2.25rem 1.25rem 2rem;
+    display: grid;
+    grid-template-columns: 1.8fr 1fr 1.35fr 1fr;
+    gap: 1.75rem 2rem;
+}
+@media (max-width: 44rem) {
+    .foot-grid { grid-template-columns: 1fr 1fr; padding-top: 1.75rem; }
+    .foot-brand { grid-column: 1 / -1; }
+}
+.foot-brand p { margin: 0.6rem 0 0; max-width: 22rem; line-height: 1.5; }
+.site-foot .foot-mark {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+}
+.foot-mark .mark { flex: none; color: var(--muted); }
+.foot-mark .mark rect:nth-child(3) { fill: #c0705a; }
+.foot-col { display: flex; flex-direction: column; gap: 0.5rem; align-items: flex-start; }
+.foot-label {
+    margin: 0 0 0.15rem;
+    font-family: var(--display);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+}
+.site-foot .foot-col a { text-decoration: none; }
+.site-foot .foot-col a:hover { text-decoration: underline; }
+.foot-fine { font-size: 0.8rem; }
+/* The email is the longest thing here: layout.kte lets it break only after the @. */
+
+/* The address is the only thing here anyone clicks, so it is the only thing that is not
+   muted -- but it stays the foreground rather than the accent, because a bright link in
+   a recessed band pulls the eye off the page content above it. */
+.site-foot a { color: var(--fg); }
+.site-foot a:hover { color: var(--accent); }
+
+/* THE ABOUT PAGE: a prose column with the owner's badge floated beside the opening.
+   The caption sits over the picture's own empty speech bubble, placed in percentages of
+   the image so it stays inside the bubble at every size. */
+.about { max-width: 44rem; }
+.about p { line-height: 1.6; }
+.about a { color: var(--accent); }
+.about-portrait {
+    position: relative;
+    float: right;
+    width: min(16rem, 45%);
+    margin: 0 0 1rem 1.25rem;
+}
+.about-portrait img { display: block; width: 100%; height: auto; }
+.about-bubble {
+    position: absolute;
+    left: 56%; top: 14%; width: 34%; height: 30%;
+    display: flex; align-items: center; justify-content: center;
+    text-align: center;
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: clamp(0.7rem, 2.6vw, 1rem);
+    line-height: 1.15;
+    /* The bubble is white in both themes, so its text is fixed dark rather than --fg. */
+    color: #1a1a1a;
+}
+@media (max-width: 30rem) {
+    .about-portrait { float: none; width: min(16rem, 80%); margin: 0 auto 1rem; }
+    .about-bubble { font-size: 0.95rem; }
+}
+
+/* LEARN -- /learn and /learn/:topic, backlog #108. A prose column like .about, with the
+   question-shaped h2s a newcomer searched for set as readable headings rather than the
+   site's small muted section labels: on these pages the heading IS the question.
+
+   THE DIAGRAMS ARE INLINE SVG STYLED FROM HERE, and only from tokens, so they follow the
+   reader's theme with the rest of the page. Presentation attributes cannot read a custom
+   property reliably, which is why every mark carries a class rather than a fill. One SVG
+   unit is one millimeter wherever a figure is about size. */
+.learn { max-width: 44rem; }
+.learn p, .learn li { line-height: 1.6; }
+.learn a { color: var(--accent); }
+.learn h2 {
+    font-family: var(--display);
+    font-size: 1.15rem;
+    text-transform: none;
+    letter-spacing: -0.01em;
+    color: var(--fg);
+    margin: 2rem 0 0.5rem;
+}
+.learn-answer { font-size: 1.05rem; }
+.learn-topics { list-style: none; padding: 0; margin: 1.5rem 0 0; }
+.learn-topics li { padding: 0.75rem 0; border-top: 1px solid var(--rule); }
+.learn-topics a { font-family: var(--display); font-weight: 600; font-size: 1.05rem; }
+.learn-topics p { margin: 0.25rem 0 0; color: var(--muted); }
+.learn-figure {
+    margin: 1.5rem 0;
+    padding: 1rem;
+    background: var(--card);
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+}
+.learn-figure svg { display: block; width: 100%; height: auto; color: var(--fg); }
+/* A figure of small parts, drawn in a small viewBox: capped, so its labels stay the size
+   of the page's own text instead of scaling up with the column. */
+.learn-figure svg.lf-small { max-width: 26rem; margin: 0 auto; }
+.learn-figure figcaption { margin: 0.75rem 0 0; color: var(--muted); font-size: 0.85rem; line-height: 1.5; }
+.learn-figure .lf-title { font-family: var(--display); font-weight: 600; font-size: 4px; fill: currentColor; }
+.learn-figure .lf-label { font-size: 3.2px; fill: currentColor; }
+.learn-figure .lf-note { font-size: 3.2px; fill: var(--muted); }
+.learn-figure .lf-cell { fill: none; stroke: var(--muted); stroke-width: 0.25; stroke-dasharray: 1 0.8; }
+.learn-figure .lf-cut { fill: var(--sunk); stroke: currentColor; stroke-width: 0.35; }
+.learn-figure .lf-cap { fill: var(--sunk); stroke: currentColor; stroke-width: 0.35; }
+.learn-figure .lf-board { fill: var(--sunk); stroke: currentColor; stroke-width: 0.4; }
+.learn-figure .lf-part { fill: var(--card); stroke: currentColor; stroke-width: 0.4; }
+/* A part on the board's far face: outlined only, dashed, the drafting convention for
+   something hidden behind what you are looking at. */
+.learn-figure .lf-under { fill: none; stroke: currentColor; stroke-width: 0.4; stroke-dasharray: 1 0.7; }
+.learn-figure .lf-hole { fill: var(--bg); stroke: currentColor; stroke-width: 0.3; }
+.learn-figure .lf-sock { fill: var(--card); stroke: var(--accent); stroke-width: 0.4; }
+.learn-figure .lf-pad { fill: var(--muted); }
+.learn-figure .lf-mark { fill: var(--accent); }
+.learn-figure .lf-line { fill: none; stroke: currentColor; stroke-width: 0.4; }
+.learn-figure .lf-wire { fill: none; stroke: var(--accent); stroke-width: 0.5; }
+.learn-figure .lf-centre { fill: var(--accent); }
+.learn-figure .lf-dim { fill: none; stroke: var(--accent); stroke-width: 0.3; }
+/* A small side-by-side, where a page compares a few things on the same few points. */
+.learn-table { border-collapse: collapse; width: 100%; margin: 1.5rem 0; font-size: 0.9rem; line-height: 1.4; }
+.learn-table th, .learn-table td { padding: 0.4rem 0.5rem; border-bottom: 1px solid var(--rule); text-align: left; vertical-align: top; }
+.learn-table thead th { font-family: var(--display); font-weight: 600; }
+.learn-table tbody th { font-weight: 600; color: var(--muted); }
+.learn-list-head { margin: 1.75rem 0 0.5rem; font-size: 1rem; }
+.learn-count { color: var(--muted); font-weight: 400; margin-left: 0.25rem; }
+.learn-more { margin: 0.5rem 0 0; font-size: 0.9rem; }
+/* Three cards across inside the article's 44rem, which the site's 15.5rem minimum would
+   wrap to two and an orphan. Narrower, the strip still falls to one card a row. The
+   strip's own bottom margin gives way to the see-all line right under it. */
+.learn-strip { --card-min: 13rem; margin-bottom: 0.25rem; }
+
+
+
+/* Who published a design. Sits under the name, above the drawing, in the muted register
+   the facts use -- it is context for the keyboard, not a fact about the hardware. */
+.byline { margin: 0.1rem 0 0; color: var(--muted); font-size: 0.9rem; }
+.byline a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+.byline a:hover { color: var(--accent); }
+/* Forgejo #49, YouTube's share pattern: a key in the row under the picture opens a panel
+   with a row of round targets and the link in a box beside Copy. The key matches its
+   neighbours in .what-fits, but it opens a panel rather than going to a page, so it
+   carries the share arrow instead of their arrow to the right. Brand colours live only
+   on the discs inside the panel. */
+.share-open {
+    display: inline-flex; align-items: center; gap: 0.4rem;
+    margin-left: auto; padding: 0.45rem 0.9rem;
+    font: inherit; color: var(--fg); cursor: pointer;
+    background: var(--card); border: 1px solid var(--edge); border-radius: 10px;
+    box-shadow: 0 4px 0 var(--edge);
+    transition: transform .08s, box-shadow .08s;
+}
+.share-open svg { width: 1rem; height: 1rem; fill: currentColor; }
+.share-open:hover { transform: translateY(2px); box-shadow: 0 2px 0 var(--edge); }
+.share-open:focus-visible, .share-panel :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+.share-panel {
+    width: min(34rem, calc(100vw - 2rem));
+    margin: auto; padding: 1rem 1.25rem 1.1rem;
+    color: var(--fg); background: var(--card);
+    border: 1px solid var(--edge); border-radius: 14px;
+    box-shadow: 0 5px 0 var(--edge), 0 20px 50px rgb(0 0 0 / .25);
+}
+.share-panel::backdrop { background: rgb(0 0 0 / .45); }
+.share-head { display: flex; align-items: center; justify-content: space-between; }
+.share-head h2 { margin: 0; font-family: var(--display); font-size: 1.1rem; text-transform: none; letter-spacing: 0; color: var(--fg); }
+.share-close {
+    font: inherit; font-size: 1.5rem; line-height: 1; color: var(--muted);
+    background: none; border: 0; padding: 0.1rem 0.4rem; border-radius: 6px; cursor: pointer;
+}
+.share-close:hover { color: var(--fg); background: var(--sunk); }
+
+/* ONE ROW THAT SCROLLS SIDEWAYS, as YouTube's does, rather than wrapping into a grid: on a
+   phone the panel is narrower than the targets and a swipe is the expected gesture. */
+.share-targets {
+    list-style: none; margin: 1rem 0 0.9rem; padding: 0 0 0.4rem;
+    display: flex; gap: 0.35rem; overflow-x: auto; scrollbar-width: thin;
+}
+.share-target {
+    display: flex; flex-direction: column; align-items: center; gap: 0.35rem;
+    width: 4.4rem; padding: 0.2rem 0; border: 0; background: none;
+    font: inherit; font-size: 0.78rem; color: var(--fg); text-decoration: none; cursor: pointer;
+}
+.share-disc {
+    display: grid; place-items: center;
+    width: 3.25rem; height: 3.25rem; border-radius: 50%;
+    background: var(--brand); transition: transform .08s;
+}
+.share-disc svg { width: 55%; height: 55%; fill: #fff; }
+/* Reddit's and Telegram's marks are themselves discs; drawn white on a brand disc they
+   would be a white disc. So they get a white ground and their own colour, full size. */
+.share-target.round .share-disc { background: #fff; }
+.share-target.round .share-disc svg { width: 100%; height: 100%; fill: var(--brand); }
+.share-target:hover .share-disc { transform: translateY(-2px); }
+
+.share-link {
+    display: flex; gap: 0.5rem; align-items: center;
+    padding: 0.35rem 0.35rem 0.35rem 0.75rem;
+    background: var(--sunk); border: 1px solid var(--rule); border-radius: 10px;
+}
+.share-link input {
+    flex: 1; min-width: 0; font: inherit; font-size: 0.9rem; color: var(--fg);
+    background: none; border: 0; outline: none;
+}
+.share-copy {
+    font: inherit; font-weight: 600; color: var(--on-accent); background: var(--accent);
+    border: 0; border-radius: 999px; padding: 0.4rem 1rem; cursor: pointer;
+}
+.share-copy:hover { filter: brightness(1.08); }
+.share-status { margin: 0.5rem 0 0; min-height: 1.2em; font-size: 0.85rem; color: var(--muted); }
+
+/* Backlog #24. Same treatment as .byline -- both are provenance, sitting right beside
+   each other, and a reader should read them as one family of fact rather than two. */
+.based-on { margin: 0.1rem 0 0; color: var(--muted); font-size: 0.9rem; }
+.based-on a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+.based-on a:hover { color: var(--accent); }
+/* #107: same quiet line as based-on, one step below the byline. */
+/* The title and its family on one line, wrapping under it when the name is long. */
+.title { display: flex; flex-wrap: wrap; align-items: baseline; column-gap: 0.5rem; }
+.family { margin: 0 0 0.25rem; color: var(--muted); font-size: 0.9rem; }
+.family a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+.family a:hover { color: var(--accent); }
+.family strong { color: var(--fg); font-weight: 600; }
+/* /designs/families/:family. The lead is the page's one sentence of prose; the source is
+   provenance, so it takes based-on's quiet treatment. */
+.family-lead { margin: 0.25rem 0 0.5rem; max-width: 42rem; }
+.family-source { margin: 0 0 1.5rem; color: var(--muted); font-size: 0.9rem; }
+
+/* /parts/dev-board/:slug -- the three fit tiers (owner's ruling, 2026-09-10).
+   REUSES `ul.results` WHOLESALE and adds exactly two things: the per-row reason
+   and the struck-through tier. Anything more would be a second row style to keep
+   in step with the first, and `ul.results li` already carries a MEASURED
+   content-visibility/contain-intrinsic-size pairing (OffscreenRowsTest, Forgejo
+   #13) that a differently-boxed variant would silently invalidate. */
+
+/* Same treatment as `.related-reason`, which is the same job one page over: the
+   line that turns a list into an explained list. Not italic-and-muted by reflex
+   -- ux.md 3.6's rule is that an unlabelled related-items strip is noise, and a
+   tier of boards a reader is told not to buy is the same claim needing the same
+   reason. */
+.fit-note {
+    color: var(--muted);
+    font-size: 0.78rem;
+    font-style: italic;
+    margin: 0.2rem 0 0;
+}
+
+/* THE ROW IS DIMMED, THE NAME IS STRUCK, AND THE REASON IS NEITHER. Ticket 16
+   decision 3 rule 1: the row states the recorded fact that excluded it, so the
+   fact itself must stay readable -- striking the reason through would hide the
+   only part of a rejected row that is worth reading. Dimming carries the verdict
+   for a sighted reader; the sentence carries it for everyone, which is why the
+   styling is never the only signal. */
+ul.results.ruled-out .result-card { opacity: 0.62; }
+ul.results.ruled-out .name { text-decoration: line-through; }
+ul.results.ruled-out .fit-note { font-style: normal; opacity: 1; }
+
+/* The reconciling line under a capped tier. Muted like `.fit-note` because it is
+   the same register -- a fact about the list rather than a row in it -- but not
+   italic: it is a count, and italics here read as another per-row aside. */
+.fit-more { color: var(--muted); font-size: 0.82rem; margin: 0.5rem 0 0; }
+
+/* /parts -- the dev-board hub. A plainer card than `.result-card`: these rows
+   have no silhouette to align to, so they are one line of name plus facts
+   rather than a two-column thumb/text flex. Reuses `.facts` for the chips so a
+   chip looks the same here as on a design row. */
+ul.parts-list { list-style: none; margin: 0 0 1.5rem; padding: 0; }
+
+ul.parts-list li { border-top: 1px solid var(--rule); }
+ul.parts-list li:last-child { border-bottom: 1px solid var(--rule); }
+
+.parts-card {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.4rem 0.75rem;
+    padding: 0.6rem 0.2rem;
+    text-decoration: none;
+    color: inherit;
+}
+.parts-card:hover .parts-name { text-decoration: underline; }
+
+.parts-name { font-weight: 600; }
+
+/* Pushed right where there is room, and simply wrapping where there is not --
+   no media query, because the only thing that changes is whether the count sits
+   on the same line. */
+.parts-count { margin-left: auto; color: var(--muted); font-size: 0.82rem; }
+
+/* Hearts, 2026-10-01. A button that reads as part of the byline: no box, the byline's
+   own colour, the heart filled in the accent when this browser has hearted it. */
+.heart { font: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer; }
+.heart:disabled { cursor: default; }
+.heart[aria-pressed="true"] .heart-icon { color: var(--accent); }
+.heart:not(:disabled):hover .heart-icon { color: var(--accent); }
+.favorites-empty, .favorites-note { color: var(--muted); }
+
+/* /SETTINGS (owner, 2026-10-02: "looks a bit like a backend engineer designed it").
+   Built from the site's own keycap pieces: each section is a raised card, each choice a
+   key that stays pressed while it is the one chosen, and each shows the design's own
+   picture so the choice is seen rather than read. */
+.settings { max-width: 44rem; }
+.settings-lede { color: var(--muted); margin: 0 0 1.5rem; }
+.settings-card {
+    background: var(--card);
+    border: 1px solid var(--edge);
+    border-radius: 14px;
+    box-shadow: 0 4px 0 var(--edge);
+    padding: 1.25rem 1.35rem 1.1rem;
+    margin: 0 0 1.5rem;
+}
+.settings-card h2 { margin-top: 0; }
+.settings-q { margin: 0 0 1rem; }
+.settings-fine { color: var(--muted); font-size: 0.85rem; margin: 0.75rem 0 0; }
+
+.choices { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+
+
+.choice {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--edge);
+    border-radius: 12px;
+    background: var(--bg);
+    box-shadow: 0 4px 0 var(--edge);
+    cursor: pointer;
+    overflow: hidden;
+    transition: transform .08s, box-shadow .08s, border-color .08s;
+}
+.choice:hover { transform: translateY(2px); box-shadow: 0 2px 0 var(--edge); }
+/* The radio itself is kept for keyboards and screen readers, and only hidden from view. */
+.choice input {
+    position: absolute;
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+}
+/* CHOSEN = PRESSED, in the accent: the key sits down on its edge, and a tick marks it. */
+.choice:has(input:checked) {
+    border-color: var(--accent);
+    box-shadow: 0 1px 0 var(--accent), 0 0 0 1px var(--accent);
+    transform: translateY(3px);
+}
+.choice:has(input:checked)::after {
+    content: "✓";
+    position: absolute;
+    top: 0.6rem;
+    right: 0.6rem;
+    width: 1.6rem;
+    height: 1.6rem;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--accent);
+    color: var(--on-accent);
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+.choice:has(input:focus-visible) { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+.choice-pic { display: block; background: var(--sunk); }
+.choice-pic img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 14 / 9;
+    object-fit: cover;
+}
+/* The render is the whole board on a plain ground; cropping it would cut the board. */
+.choice-pic-render img { object-fit: contain; }
+
+.choice-text { display: block; padding: 0.7rem 0.85rem 0.85rem; }
+.choice-text strong { display: block; font-family: var(--display); font-size: 1.05rem; }
+.choice-text span { display: block; color: var(--muted); font-size: 0.88rem; margin-top: 0.15rem; }
+
+.settings-foot {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin: 1.1rem 0 0;
+    min-height: 2.2rem;
+}
+.settings-example { color: var(--muted); font-size: 0.85rem; margin-right: auto; }
+.settings-saved { color: var(--k2); font-weight: 600; font-size: 0.9rem; }
+.settings-saved:empty { display: none; }
+/* With script, picking saves; the note fades in and out instead of sitting there. */
+.instant .settings-save { display: none; }
+.instant .settings-saved { opacity: 0; transition: opacity .2s; }
+.instant .settings-saved.show { opacity: 1; }
+
+.settings-save, .key-quiet {
+    padding: 0.45rem 0.9rem;
+    border: 1px solid var(--edge);
+    border-radius: 10px;
+    background: var(--card);
+    color: var(--fg);
+    font: inherit;
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow: 0 3px 0 var(--edge);
+    transition: transform .08s, box-shadow .08s;
+}
+.settings-save:hover, .key-quiet:hover:not(:disabled) { transform: translateY(2px); box-shadow: 0 1px 0 var(--edge); }
+/* The one destructive key: quiet, but its words in the accent. */
+.key-quiet { color: var(--accent); }
+.key-quiet:disabled { color: var(--muted); cursor: default; opacity: 0.6; }
+.settings-row { display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap; }
+
+/* "YOUR DESIGNS" (#116), from /settings' own pieces: the card, the key buttons. Each
+   design is a row: its outline, its name, one key. An unpublished one is greyed, and its
+   key is the plain one, since putting a page back is not the destructive direction. */
+.account-who { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; margin: 0 0 1.5rem; }
+.account-who .settings-lede { margin: 0; margin-right: auto; }
+.account-who form { margin: 0; }
+.owned { list-style: none; margin: 0; padding: 0; }
+.owned-row {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    padding: 0.7rem 0;
+    border-top: 1px solid var(--rule);
+}
+.owned-row:first-child { border-top: 0; padding-top: 0.2rem; }
+.owned-row form { margin: 0; flex: none; }
+.owned-pic {
+    flex: 0 0 4.5rem;
+    padding: 0.35rem 0.45rem;
+    border-radius: 8px;
+    background: var(--sunk);
+}
+.owned-pic svg { display: block; width: 100%; height: auto; }
+.owned-text { flex: 1; min-width: 0; }
+.owned-text a, .owned-text strong { display: block; font-family: var(--display); font-weight: 600; font-size: 1.02rem; }
+.owned-text a { text-decoration: none; color: var(--fg); }
+.owned-text a:hover { color: var(--accent); text-decoration: underline; }
+.owned-state { display: block; color: var(--muted); font-size: 0.85rem; }
+.owned-row.is-off .owned-pic, .owned-row.is-off strong { opacity: 0.55; }
+
+/* On a phone each choice is a row, picture beside words, so the two fit one screen.
+   LAST in the file on purpose: it overrides .choice, which is declared above. */
+@media (max-width: 34rem) {
+    .choices { grid-template-columns: 1fr; gap: 0.85rem; }
+    .choice { flex-direction: row; align-items: center; }
+    .choice-pic { flex: 0 0 36%; align-self: stretch; }
+    .choice-pic img { height: 100%; }
+    .choice-text { padding: 0.6rem 2.3rem 0.6rem 0.75rem; }
+    /* Outline beside the name, the key under the name: side by side, the key squeezed
+       names into a word per line. */
+    .owned-row { display: grid; grid-template-columns: 4.5rem 1fr; column-gap: 0.9rem; row-gap: 0.5rem; }
+    .owned-row form { grid-column: 2; }
+}
+
+/* #113: the build list as a grid, a need per row pinned left as on the compare pages.
+   A cell's part name opens the row's offers in place; the cell widens while it is open
+   so the offers read as lines, not a column of single words. */
+table.build-grid th, table.build-grid td { min-width: 9rem; }
+table.build-grid tbody th { color: var(--fg); min-width: 11rem; max-width: 16rem; }
+table.build-grid thead .corner, table.build-grid tfoot th { position: sticky; left: 0; background: var(--bg); }
+table.build-grid .sub { display: block; color: var(--muted); font-style: italic; }
+table.build-grid .own { display: inline-block; margin-top: 0.2rem; }
+table.build-grid tbody td, table.build-grid tbody th { padding-top: 0.6rem; padding-bottom: 0.6rem; }
+table.build-grid tfoot th, table.build-grid tfoot td { border-bottom: 0; padding-top: 0.75rem; }
+table.build-grid details.pick summary { cursor: pointer; color: var(--accent); }
+table.build-grid details.pick summary:hover .part { text-decoration: underline; }
+table.build-grid details.pick summary .sub { color: var(--muted); }
+/* A gap that opens on why: greyed like any gap, the dotted line saying it opens. */
+table.build-grid td.unrecorded details.pick summary { color: var(--muted); font-style: italic; }
+table.build-grid td.unrecorded details.pick summary .part { text-decoration: underline dotted; text-underline-offset: 3px; }
+table.build-grid td:has(details.pick[open]) { min-width: 18rem; }
+table.build-grid ul.offers { list-style: none; margin: 0.4rem 0 0; padding: 0.4rem 0 0; border-top: 1px dashed var(--rule); }
+table.build-grid ul.offers li { padding: 0.25rem 0; }
+table.build-grid ul.offers li.excluded { color: var(--muted); }
+@media (max-width: 34rem) {
+    table.build-grid th, table.build-grid td { min-width: 7rem; padding-right: 0.6rem; }
+    table.build-grid tbody th { min-width: 6rem; max-width: 7rem; }
+    table.build-grid td:has(details.pick[open]) { min-width: 14rem; }
+}

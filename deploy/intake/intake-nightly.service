@@ -1,0 +1,22 @@
+# The intake bot's nightly run (backlog #104): refresh the corpus, commit what it derives,
+# open the day's questions. See scripts/intake_nightly.sh and deploy/intake/README.md.
+[Unit]
+Description=keyboardbuilders intake bot, nightly refresh and questions
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=intake
+WorkingDirectory=/srv/intake/code/keyboardbuilders
+EnvironmentFile=/etc/intake/env
+# ONE WRITER AT A TIME. The nightly run and the answer poll both commit to this checkout,
+# so they share a lock; the nightly waits for a poll in progress rather than skipping.
+ExecStart=/usr/bin/flock /var/lib/intake/lock scripts/intake_nightly.sh
+# The app next door is capped at 1280m on a 3.8 GB box; a KiCad-heavy scan must never
+# be what starves it.
+MemoryMax=2G
+CPUQuota=100%
+Nice=10
+IOSchedulingClass=idle
+TimeoutStartSec=2h

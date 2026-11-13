@@ -1,0 +1,83 @@
+HELP.md
+.gradle
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+bin/
+!**/src/main/**/bin/
+!**/src/test/**/bin/
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+out/
+!**/src/main/**/out/
+!**/src/test/**/out/
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+### VS Code ###
+.vscode/
+
+### jte ###
+/jte-classes/
+
+### Kotlin ###
+.kotlin
+
+### SQLite ###
+*.db
+
+### Project ###
+
+__pycache__/
+*.pyc
+
+### wayfinder sweep caches
+# source-trees.json is 3.9 MB of GitHub path listings, cheap to refetch.
+# board-scan.json is NOT ignored: it holds every footprint name the corpus
+# places, which is what makes the next lexicon question answerable without
+# re-reading 600 MB of board files. Its predicate has been wrong twice.
+data/source-trees.json
+data/board-sizes.json
+# Every README in the corpus, whole: the input to draft_summaries.py, refilled by
+# measure_summaries.py. Other people's text, so never committed.
+data/readme-scan.json
+
+# Claude Code worktrees -- scratch checkouts, never part of the tree.
+.claude/worktrees/
+
+# Board files generated from a repo's Ergogen config -- a cache generate_ergogen.py refills.
+data/generated-boards/
+
+# The dev OAuth app secret for a real GitHub sign-in under bootRun (#116).
+github-dev.env
+
+### Private, on the owner's machine only
+# Working notes, the backlog, design docs and drafts. Never part of the public repo.
+.scratch/
+docs/design/
+docs/research/affiliate-programs.md
+docs/research/parts-picker-ux.md
+# The owner's AI-assistant setup and skills (some vendored from others' repos).
+.agents/
+.claude/
+skills-lock.json
+.termdbms/

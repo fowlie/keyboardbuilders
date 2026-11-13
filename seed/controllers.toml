@@ -1,0 +1,537 @@
+# seed/controllers.toml -- the controller board catalogue Door B's CONTROLLER section
+# checks a socketed design's footprint against (ticket 16 decision 4; ticket 5/14 decided
+# this file's home), and the source for `/parts/dev-board/:slug` (ux.md's own answer to
+# "a bare list of 20 board names teaches a newcomer nothing" -- §9 build order item 6,
+# "cheap, high SEO leverage"). The reasoning and every primary source live in
+# docs/research/controller-catalogue.md -- this file only carries the rows the build
+# actually consumes, same split `seed/licences.toml`'s header describes for its own
+# reasoning-vs-data documents.
+#
+# `slug` IS EXPLICIT DATA, not derived at runtime -- same discipline `Slug` follows for
+# designs (ticket 07 decision 8): a URL is a promise, so what it is is a fact this file
+# states, not something a slugify function might one day compute differently.
+#
+# `url` is the research doc's own primary-source citation, and it is ABSENT rather than
+# guessed where the doc cites no single clean link (`Stemcell`, `Michi`, `Imera`,
+# `Svlinky`, `Bonsai C4`, `Bonsai C3`, `Bluepill` -- all sourced there only as
+# "development_board enum + converters", not a page to send a reader to).
+#
+# SIX FIELDS -- five until 2026-09-10, when `mcu_family` was added; see below. GPIO
+# count, ADC channels and logic voltage stay out for the same reason they always have
+# here: ticket 5's headline finding is that the compatibility graph
+# needs none of them, and the doc's own §6 "Gaps" table marks most of that data as not
+# sourced for most boards -- a spec table built from it would be mostly blank, not a
+# comparison aid. `firmware` is not optional: footprint alone is not compatibility
+# (backlog #58's own history -- a QMK-only design was shown a ZMK-only board as fitting
+# because both share `pro_micro`).
+#
+# `mcu_family` IS THE ONE FACT DOOR B'S REVERSE DIRECTION NEEDS, added 2026-09-10 on the
+# owner's ruling that `/parts/dev-board/:slug` should list designs sharing the footprint
+# as well as the 1:1 fits, minus what a firmware demonstrably cannot run. `firmware`
+# above cannot make that call: it is a POSITIVE list ("this board is known to run these"),
+# so its silence is Unknown and never Impossible. The two rules that ARE impossibility --
+# `nRF52 => not QMK` and `AVR 8-bit => not ZMK` -- are stated by QMK's and ZMK's own docs
+# at MCU-FAMILY level (docs/research/controller-catalogue.md §3.4), so a family is exactly
+# what they need and a part number would be false precision. `ControllerFit.kt` holds the
+# rules and cites both sources.
+#
+# Values: `nrf52` `rp2040` `stm32` `samd21` `avr8` `unknown`. Matching `McuFamily` plus
+# an explicit `unknown` -- NOT an omitted key, so that a typo'd field name is a build
+# error rather than a board quietly losing its rule-outs.
+#
+# `unknown` is stated for FIVE boards -- michi, imera, svlinky, bonsai-c4, bonsai-c3 --
+# and this is the honest read rather than a gap to fill in. §4.3's table groups them under
+# a heading reading "Pro Micro / Elite-C footprint, RP2040", but that heading is NOT a
+# per-row assertion: `Stemcell` sits in the same table annotated STM32F411, which is what
+# a heading-as-fact reading would have got wrong. The doc sources all five only as
+# "development_board enum + converters" and names no chip for any of them. Resolving them
+# needs a fetch of each vendor's own repo, which is a research pass and not a guess --
+# and until then no rule fires on them, which is the correct outcome for a chip nobody
+# has read.
+#
+# `footprint` is one of the seven `ControllerFootprint` values `Design.kt` already has --
+# NOT the research doc's own footprint names, several of which this build does not
+# model (see EXCLUDED below). Elite-C-footprint boards are filed under `pro_micro`,
+# matching ticket 27's own reading: "Elite-C, nice!nano, Sea-Picro, Frood and Proton C
+# all fit that footprint" -- the two footprints are pin-compatible for every pin this
+# catalogue tracks, and the model has never carried a separate Elite-C variant.
+#
+# CORRECTED 2026-09-04, owner-raised, from QMK's own two documentation pages. The three
+# RP2040 boards here -- Raspberry Pi Pico, Seeed XIAO RP2040, Adafruit QT Py RP2040 --
+# carried `firmware = ["zmk"]`, taken from the research doc's per-board table, which read
+# QMK support off the `development_board` enum and its converters. THAT IS THE WRONG
+# QUESTION. `docs.qmk.fm/compatible_microcontrollers` lists RP2040 as a supported
+# microcontroller outright ("any USB-capable AVR or ARM microcontroller with enough flash
+# space"), and `docs.qmk.fm/platformdev_rp2040` documents `BOARD = GENERIC_RP_RP2040`
+# precisely for boards that "do not wish to leverage the configuration matching the Generic
+# Pro Micro RP2040 board" and declare their own pins. A converter is a pin-NAMING
+# convenience; it is not the gate on whether QMK runs.
+#
+# The consequence was 16 live pages -- 8 socketing `rpi_pico` including `piantor`, `junco`
+# and `sofle-pico`, 8 socketing `seeed_xiao` -- each telling a QMK-only design that none of
+# the catalogued boards run its firmware. Those are QMK keyboards on a Pico.
+#
+# `Seeeduino XIAO` is deliberately NOT corrected alongside them, and it is the control that
+# makes this chip-driven rather than a blanket edit: it is SAMD21, which appears nowhere in
+# QMK's supported list. It stays ZMK-only.
+#
+# ZMK needed no correction in the same pass. `zmk.dev/docs/hardware` says ZMK supports
+# "not limited to Nordic nRF52, Raspberry Pi RP2040/RP2350, most ST STM32 MCUs, and
+# Microchip SAMD21" -- broader than nRF52 -- but Zephyr requires a board definition, so
+# ZMK's supported-hardware list IS the set of boards, and every board on it that this
+# catalogue models already carries `zmk`. `Bluepill (STM32F103)` is absent from that list
+# and stays QMK-only for exactly that reason.
+#
+# `usb` ADDED 2026-09-25, backlog #97: the receptacle ON THE BOARD, so a design page can say
+# which cable reaches the computer. Every value is sourced in
+# the owner's notes with a quote from the vendor, the board's own
+# repo or its datasheet. TWO values mean the board is sold both ways, and the builder picks:
+# nRFMicro rev 1.1 places both footprints, and the classic Pro Micro has USB-C versions from
+# SparkFun (DEV-15795) and Keebio. OMITTED means no primary source says so (`rp2040-ce` is a
+# pinout standard rather than a board; `imera`'s page is gone; `bluepill` has no vendor to
+# cite), which is Unknown and never a guess from "boards like this usually have".
+#
+# EXCLUDED, deliberately, rather than forced into the nearest slot:
+#   - Makerdiary nRF52840 M.2 -- an M.2 edge connector, not a pin-header footprint at
+#     all, and `ControllerFootprint` has no member for it (same gap backlog #39 found
+#     for MicroMod, ItsyBitsy, Feather and Teensy 2.0 on the DESIGN side). Feather got
+#     its member on 2026-09-25 (#99) and has a row below.
+#   - ~~Every RP2040-Zero-footprint board~~ **NO LONGER EXCLUDED, 2026-09-10.** This
+#     bullet said "nothing here is invented to fill that member" and that stayed true
+#     while the research doc covered no such board. `RP2040-Zero` is now a row, sourced
+#     from Waveshare's own wiki rather than from that doc -- which is a widening of where
+#     this file may take a citation, not a licence to guess. The 10 designs socketing the
+#     footprint were being told "nothing catalogued"; see the row's own comment for why it
+#     carries `qmk` and `kmk` but deliberately not `zmk`.
+#   - Frood RP2040, Puchi-C, Supermini nRF52840, Bit-C (non-PRO) -- the doc's own §6
+#     "Gaps" table: no primary source, listed there rather than silently dropped.
+
+# ADDED 2026-09-25, backlog #97. The board the `pro_micro` footprint is NAMED for, and the
+# commonest one in it, was missing from this catalogue: the research doc tabled its
+# replacements and never the original. It matters most for the cable question: every
+# other `pro_micro` board here is USB-C, so without this row a design page would tell a
+# reader "USB-C on every catalogued board" while the board most builders buy is micro-USB.
+# SparkFun's own page for DEV-12640, verbatim: "On-Board micro-USB connector for
+# programming". SparkFun's DEV-15795 and Keebio's "Pro Micro (USB-C Version)" are the
+# same ATmega32U4 board with USB-C, hence both values. `qmk` only: ZMK excludes `avr8`
+# (`seed/firmwares.toml`), and no KMK source names it.
+[[entry]]
+name      = "Pro Micro (ATmega32U4)"
+slug      = "pro-micro"
+footprint = "pro_micro"
+usb       = ["micro_b", "usb_c"]
+wireless  = false
+mcu_family = "avr8"
+firmware  = ["qmk"]
+url       = "https://www.sparkfun.com/products/12640"
+
+[[entry]]
+name      = "nice!nano v2"
+slug      = "nice-nano-v2"
+footprint = "pro_micro"
+usb       = ["usb_c"]
+wireless  = true
+mcu_family = "nrf52"
+# `kmk` ADDED 2026-09-10: KMK's own "Officially supported microcontrollers" page lists
+# nice!nano first, with "Both USB HID and Bluetooth support" and "Can do Bluetooth split
+# keyboards with no wires at all". Owner-raised. It carries one caveat KMK states itself --
+# "Not enough space to run KMK without compiling" -- which is a build step, not a support
+# denial, so it belongs in this comment and not in the field.
+firmware  = ["zmk", "kmk"]
+# Vendor homepage, not the ZMK board-definition file -- owner's preference, 2026-09-03:
+# a reader looking at a part page wants the product, not a firmware source file.
+# Fetch-verified: describes this exact board ("a Pro Micro drop-in replacement...
+# makes building wireless keyboards a breeze", nRF52840, UF2 bootloader).
+url       = "https://nicekeyboards.com/nice-nano"
+
+[[entry]]
+name      = "nice!nano v1"
+slug      = "nice-nano-v1"
+footprint = "pro_micro"
+usb       = ["usb_c"]
+wireless  = true
+mcu_family = "nrf52"
+# `kmk` ADDED 2026-09-10: KMK's own "Officially supported microcontrollers" page lists
+# nice!nano first, with "Both USB HID and Bluetooth support" and "Can do Bluetooth split
+# keyboards with no wires at all". Owner-raised. It carries one caveat KMK states itself --
+# "Not enough space to run KMK without compiling" -- which is a build step, not a support
+# denial, so it belongs in this comment and not in the field.
+firmware  = ["zmk", "kmk"]
+url       = "https://nicekeyboards.com/nice-nano"
+
+[[entry]]
+name      = "nRFMicro (nRF52840, rev 1.1-1.4)"
+slug      = "nrfmicro-nrf52840"
+footprint = "pro_micro"
+usb       = ["usb_c", "micro_b"]
+wireless  = true
+mcu_family = "nrf52"
+firmware  = ["zmk"]
+url       = "https://github.com/joric/nrfmicro/wiki/Pinout"
+
+[[entry]]
+name      = "nRFMicro (nRF52833)"
+slug      = "nrfmicro-nrf52833"
+footprint = "pro_micro"
+usb       = ["usb_c"]
+wireless  = true
+mcu_family = "nrf52"
+firmware  = ["zmk"]
+url       = "https://github.com/zmkfirmware/zmk/blob/main/app/boards/joric/nrfmicro/nrfmicro_nrf52833.zmk.yml"
+
+[[entry]]
+name      = "Puchi-BLE V1"
+slug      = "puchi-ble-v1"
+footprint = "pro_micro"
+usb       = ["usb_c"]
+wireless  = true
+mcu_family = "nrf52"
+firmware  = ["zmk"]
+url       = "https://github.com/zmkfirmware/zmk/blob/main/app/boards/keycapsss/puchi_ble/puchi_ble.zmk.yml"
+
+[[entry]]
+name      = "Mikoto"
+slug      = "mikoto"
+footprint = "pro_micro"
+usb       = ["usb_c"]
+wireless  = true
+mcu_family = "nrf52"
+firmware  = ["zmk"]
+url       = "https://github.com/zmkfirmware/zmk/blob/main/app/boards/zhiayang/mikoto/mikoto.zmk.yml"
+
+# Also runs its own dedicated firmware -- https://bluemicro.jpconstantineau.com,
+# confirmed a genuinely distinct Arduino-based BLE firmware for nRF52 chips, not a
+# fork of QMK/ZMK/KMK (owner-supplied source, 2026-09-03). No corpus design declares
+# it today (`FirmwareRef.Custom` would match it case-insensitively the moment one
+# does), so this changes nothing live -- it is a catalogue-accuracy fix, not a bug fix.
+# `url` points at that homepage rather than the ZMK board file, since a reader looking
+# at this board's own part page wants the project, not a YAML source file.
+[[entry]]
+name      = "BlueMicro840 v1"
+slug      = "bluemicro840-v1"
+footprint = "pro_micro"
+usb       = ["usb_c"]
+wireless  = true
+mcu_family = "nrf52"
+firmware  = ["zmk", "bluemicro"]
+url       = "https://bluemicro.jpconstantineau.com"
+
+[[entry]]
+name      = "Elite-Pi"
+slug      = "elite-pi"
+footprint = "pro_micro"
+usb       = ["usb_c"]
+wireless  = false
+mcu_family = "rp2040"
+firmware  = ["qmk", "kmk"]
+url       = "https://github.com/keebio/keebio-docs/blob/master/docs/elite-pi-guide.md"
+
+[[entry]]
+name      = "Liatris"
+slug      = "liatris"
+footprint = "pro_micro"
+usb       = ["usb_c"]
+wireless  = false
+mcu_family = "rp2040"
+firmware  = ["qmk"]
+url       = "https://docs.splitkb.com/product-guides/liatris/pinout"
+
+[[entry]]
+name      = "0xCB Helios"
+slug      = "0xcb-helios"
+footprint = "pro_micro"
+usb       = ["usb_c"]
+wireless  = false
+mcu_family = "rp2040"
+firmware  = ["qmk"]
+url       = "https://github.com/0xCB-dev/0xCB-Helios"
+
+[[entry]]
+name      = "Blok"
+slug      = "blok"
+footprint = "pro_micro"
+usb       = ["usb_c"]
+wireless  = false
+mcu_family = "rp2040"
+firmware  = ["qmk", "zmk"]
+url       = "https://github.com/zmkfirmware/zmk/blob/main/app/boards/boardsource/blok/boardsource_blok.zmk.yml"
+
+[[entry]]
+name      = "SparkFun Pro Micro RP2040"
+slug      = "sparkfun-pro-micro-rp2040"
+footprint = "pro_micro"
+usb       = ["usb_c"]
+wireless  = false
+mcu_family = "rp2040"
+firmware  = ["qmk", "zmk"]
+url       = "https://github.com/zephyrproject-rtos/zephyr/blob/main/boards/sparkfun/pro_micro_rp2040/sparkfun_pro_micro_connector.dtsi"
+
+[[entry]]
+name      = "Adafruit KB2040"
+slug      = "adafruit-kb2040"
+footprint = "pro_micro"
+usb       = ["usb_c"]
+wireless  = false
+mcu_family = "rp2040"
+firmware  = ["qmk", "zmk"]
+url       = "https://github.com/zmkfirmware/zmk/blob/main/app/boards/adafruit/kb2040/adafruit_kb2040.zmk.yml"
+
+[[entry]]
+name      = "Bit-C PRO"
+slug      = "bit-c-pro"
+footprint = "pro_micro"
+usb       = ["usb_c"]
+wireless  = false
+mcu_family = "rp2040"
+firmware  = ["qmk"]
+url       = "https://github.com/qmk/qmk_firmware/blob/master/platforms/chibios/converters/promicro_to_bit_c_pro/_pin_defs.h"
+
+# No single clean citation in the research doc (sourced there only as "QMK converters +
+# defaults.hjson") -- `url` absent rather than guessed.
+[[entry]]
+name      = "Stemcell"
+slug      = "stemcell"
+footprint = "pro_micro"
+usb       = ["usb_c"]
+wireless  = false
+mcu_family = "stm32"
+firmware  = ["qmk"]
+
+[[entry]]
+name      = "RP2040-CE"
+slug      = "rp2040-ce"
+footprint = "pro_micro"
+wireless  = false
+mcu_family = "rp2040"
+firmware  = ["qmk"]
+url       = "https://github.com/qmk/qmk_firmware/blob/master/platforms/chibios/converters/elite_c_to_rp2040_ce/_pin_defs.h"
+
+# No single clean citation -- "development_board enum + converters" only.
+[[entry]]
+name      = "Michi"
+slug      = "michi"
+footprint = "pro_micro"
+usb       = ["usb_c"]
+wireless  = false
+mcu_family = "unknown"
+firmware  = ["qmk"]
+
+[[entry]]
+name      = "Imera"
+slug      = "imera"
+footprint = "pro_micro"
+wireless  = false
+mcu_family = "unknown"
+firmware  = ["qmk"]
+
+[[entry]]
+name      = "Svlinky"
+slug      = "svlinky"
+footprint = "pro_micro"
+usb       = ["usb_c"]
+wireless  = false
+mcu_family = "unknown"
+firmware  = ["qmk"]
+
+[[entry]]
+name      = "Bonsai C4"
+slug      = "bonsai-c4"
+footprint = "pro_micro"
+usb       = ["usb_c"]
+wireless  = false
+mcu_family = "unknown"
+firmware  = ["qmk"]
+
+# No single clean citation -- "converter exists, absent from the enum" only.
+[[entry]]
+name      = "Bonsai C3"
+slug      = "bonsai-c3"
+footprint = "pro_micro"
+usb       = ["usb_c"]
+wireless  = false
+mcu_family = "unknown"
+firmware  = ["qmk"]
+
+[[entry]]
+name      = "Sea-Picro EXT"
+slug      = "sea-picro-ext"
+footprint = "pro_micro"
+usb       = ["usb_c"]
+wireless  = false
+mcu_family = "rp2040"
+firmware  = ["qmk"]
+url       = "https://github.com/joshajohnson/sea-picro"
+
+[[entry]]
+name      = "Sea-Picro RST"
+slug      = "sea-picro-rst"
+footprint = "pro_micro"
+usb       = ["usb_c"]
+wireless  = false
+mcu_family = "rp2040"
+firmware  = ["qmk"]
+url       = "https://github.com/joshajohnson/sea-picro"
+
+[[entry]]
+name      = "Splinky (0xB2)"
+slug      = "splinky-0xb2"
+footprint = "pro_micro"
+usb       = ["usb_c"]
+wireless  = false
+mcu_family = "rp2040"
+firmware  = ["qmk"]
+url       = "https://github.com/Bastardkb/Splinky"
+
+[[entry]]
+name      = "RP Micro"
+slug      = "rp-micro"
+footprint = "pro_micro"
+usb       = ["usb_c"]
+wireless  = false
+mcu_family = "rp2040"
+firmware  = ["qmk"]
+url       = "https://github.com/siderakb/rp-micro"
+
+[[entry]]
+name      = "QMK Proton C"
+slug      = "qmk-proton-c"
+footprint = "pro_micro"
+usb       = ["usb_c"]
+wireless  = false
+mcu_family = "stm32"
+firmware  = ["qmk", "zmk"]
+url       = "https://github.com/zmkfirmware/zmk/blob/main/app/boards/qmk/proton_c/proton_c.zmk.yml"
+
+[[entry]]
+name      = "Seeed XIAO nRF52840 (XIAO BLE)"
+slug      = "seeed-xiao-ble"
+footprint = "seeed_xiao"
+usb       = ["usb_c"]
+wireless  = true
+mcu_family = "nrf52"
+firmware  = ["zmk"]
+url       = "https://github.com/zmkfirmware/zmk/blob/main/app/boards/seeed/xiao_ble/xiao_ble.zmk.yml"
+
+[[entry]]
+name      = "Seeed XIAO RP2040"
+slug      = "seeed-xiao-rp2040"
+footprint = "seeed_xiao"
+usb       = ["usb_c"]
+wireless  = false
+mcu_family = "rp2040"
+firmware  = ["qmk", "zmk"]
+url       = "https://github.com/zmkfirmware/zmk/blob/main/app/boards/seeed/xiao_rp2040/xiao_rp2040.zmk.yml"
+
+[[entry]]
+name      = "Seeeduino XIAO"
+slug      = "seeeduino-xiao"
+footprint = "seeed_xiao"
+usb       = ["usb_c"]
+wireless  = false
+mcu_family = "samd21"
+firmware  = ["zmk"]
+url       = "https://github.com/zmkfirmware/zmk/blob/main/app/boards/seeed/seeeduino_xiao/seeeduino_xiao.zmk.yml"
+
+[[entry]]
+name      = "Adafruit QT Py RP2040"
+slug      = "adafruit-qt-py-rp2040"
+footprint = "seeed_xiao"
+usb       = ["usb_c"]
+wireless  = false
+mcu_family = "rp2040"
+firmware  = ["qmk", "zmk"]
+url       = "https://github.com/zmkfirmware/zmk/blob/main/app/boards/adafruit/qt_py_rp2040/adafruit_qt_py_rp2040.zmk.yml"
+
+[[entry]]
+name      = "Raspberry Pi Pico"
+slug      = "raspberry-pi-pico"
+footprint = "rpi_pico"
+usb       = ["micro_b"]
+wireless  = false
+mcu_family = "rp2040"
+firmware  = ["qmk", "zmk"]
+url       = "https://github.com/zmkfirmware/zmk/blob/main/app/boards/raspberrypi/rpi_pico/rpi_pico.zmk.yml"
+
+# ADDED 2026-09-10, owner-raised ("we should add a rp2040_zero"). It closes the one
+# footprint this catalogue modelled and had no row for -- backlog #59 named
+# `ControllerFootprint.Rp2040Zero` as "exactly this today" -- and **10 corpus designs
+# socket it**: bad-wings-bold, cheapino, chouchou, sha-choc, sha-mx, silakka54, the three
+# stronts (QMK) and lily58-lite-rev3 (ZMK). Until now every one of them was told "we don't
+# have any of those catalogued yet".
+#
+# NO `zmk`, AND THAT IS THE CAREFUL PART. §3.4's asymmetry: "QMK's board-level support is
+# broader than its enum; ZMK's is not broader than its list", because Zephyr needs a board
+# definition to build at all. ZMK's `app/boards` has no `waveshare` vendor directory
+# (checked 2026-09-10 against both the GitHub API and the local checkout), so there is no
+# ZMK board definition for this module and claiming `zmk` would assert a build that cannot
+# happen. `qmk` is sourced at the chip level, which §3.4 established is the right gate --
+# RP2040 is listed outright in `compatible_microcontrollers`. `kmk` likewise: KMK's own
+# supported-microcontrollers page carries a bare "## RP2040" section, and its stated
+# minimum is a capability ("CircuitPython, 256KB of flash storage"), which this board's
+# 2 MB clears.
+#
+# LEAVES ONE HONEST ODDITY VISIBLE rather than papering over it: `lily58-lite-rev3` ships
+# a ZMK shield and sockets this footprint, so its Door B page now reads "none of the 1
+# we've catalogued run ZMK" instead of "nothing catalogued". Both are true; the second says
+# more. Whether a stock RP2040-Zero can run that shield at all is a question for the
+# corpus, not for this row.
+[[entry]]
+name      = "RP2040-Zero"
+slug      = "rp2040-zero"
+footprint = "rp2040_zero"
+usb       = ["usb_c"]
+wireless  = false
+mcu_family = "rp2040"
+firmware  = ["qmk", "kmk"]
+url       = "https://www.waveshare.com/wiki/RP2040-Zero"
+
+[[entry]]
+name      = "MechWild PillBug"
+slug      = "mechwild-pillbug"
+footprint = "black_pill"
+usb       = ["usb_c"]
+wireless  = true
+mcu_family = "nrf52"
+firmware  = ["zmk"]
+url       = "https://github.com/zmkfirmware/zmk/blob/main/app/boards/mechwild/pillbug/pillbug.zmk.yml"
+
+[[entry]]
+name      = "WeAct BlackPill (F401/F411)"
+slug      = "weact-blackpill"
+footprint = "black_pill"
+usb       = ["usb_c"]
+wireless  = false
+mcu_family = "stm32"
+firmware  = ["qmk", "zmk"]
+url       = "https://github.com/zmkfirmware/zmk/tree/main/app/boards/weact"
+
+# No single clean citation -- "development_board enum" only.
+[[entry]]
+name      = "Bluepill (STM32F103)"
+slug      = "bluepill"
+footprint = "blue_pill"
+wireless  = false
+mcu_family = "stm32"
+firmware  = ["qmk"]
+
+# Backlog #99, 2026-09-25. The one Feather this file carries, because it is the one a
+# firmware's own docs name. QMK's docs/features/wireless.md, verbatim: "The Feather 32u4
+# Bluefruit LE is supported as it's an AVR mcu connected via SPI to the Nordic BLE chip
+# with Adafruit firmware." So `avr8`, not `nrf52`: the chip QMK runs on is the 32u4, and
+# the nRF51822 beside it is the radio. `wireless = true` is that radio.
+#
+# Three published PCBs place a Feather footprint (`prkl30`, `dropin-v1`, `fruity60`),
+# and `fruity60`'s own QMK record declares `bluetooth: {driver: bluefruit_le}` on an
+# `atmega32u4` at 8 MHz, the Feather 32u4's clock.
+#
+# NO FEATHER nRF52840, and not for lack of the board. No ZMK or KMK source read so far
+# names it, and a row with no firmware source is a guess.
+[[entry]]
+name      = "Adafruit Feather 32u4 Bluefruit LE"
+slug      = "feather-32u4-bluefruit-le"
+footprint = "feather"
+usb       = ["micro_b"]
+wireless  = true
+mcu_family = "avr8"
+firmware  = ["qmk"]
+url       = "https://www.adafruit.com/product/2829"

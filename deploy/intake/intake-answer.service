@@ -1,0 +1,18 @@
+# The intake bot's answer check (backlog #104): read the owner's replies, commit them.
+# See scripts/intake_poll.sh.
+[Unit]
+Description=keyboardbuilders intake bot, read the owner's answers
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=intake
+WorkingDirectory=/srv/intake/code/keyboardbuilders
+EnvironmentFile=/etc/intake/env
+# -n -E 0: if the nightly run holds the lock, skip this poll as a success -- the next one
+# is ten minutes away. A real failure still exits non-zero (and has already told ntfy).
+ExecStart=/usr/bin/flock -n -E 0 /var/lib/intake/lock scripts/intake_poll.sh
+MemoryMax=512M
+Nice=10
+TimeoutStartSec=15min

@@ -1,0 +1,180 @@
+@import net.keyboardbuilders.keyboardbuilders.web.Head
+@import net.keyboardbuilders.keyboardbuilders.web.LearnPage
+@import net.keyboardbuilders.keyboardbuilders.web.SiteUrl
+@param page: LearnPage
+@param head: Head
+@param site: SiteUrl
+
+<%--
+    /learn/reversible-pcb. NO BACKTICKS anywhere in this file -- one closes the raw string
+    this page is written in, and jte then reports the error on the wrong line.
+
+    THE EXAMPLE BOARDS, AND HOW EACH WAS CHECKED (2026-10-03). The corpus records only
+    whether a split is reversible, never how, so every method named below rests on the
+    board's own file or a build photo, and a board nobody checked is not named:
+      - Architeuthis Dux: seed/bodies.toml, owner-confirmed 2026-10-02. One board file of
+        17 key positions for a 34-key design, a plain 24-hole Pro Micro footprint, and a
+        build photo with one nice!nano face up and the other face down.
+      - Cradio Z lp: davidphilipbarr/36keys, 34Keys/Cradio-Z lp/cradio-z.kicad_pcb. One
+        board file, 17 switches, and a ProMicro_v2 footprint of 50 pads: two overlapping
+        24-hole sets, mirror images of each other. Its body.reversible is still unrecorded
+        in the corpus, which is the owner's to fill (seed/bodies.toml).
+      - Ferris: seed/bodies.toml, owner's ruling 2026-10-01: the left half places the chip
+        and the USB-C receptacle, the right half the MCP23017 IO expander.
+
+    The diagram is a sketch, NOT to scale: it shows which face a part is on, nothing else.
+--%>
+@template.layout(head = head, site = site, content = @`
+    <script type="application/ld+json">$unsafe{page.articleLd}</script>
+    <script type="application/ld+json">$unsafe{page.breadcrumbLd}</script>
+    <article class="learn">
+        <p class="crumb"><a href="/learn">&larr; Learn</a></p>
+        <h1>Reversible PCBs</h1>
+
+        <p class="learn-answer">
+            A reversible PCB is one board design that makes both halves of a split
+            keyboard. Build the left half on one board, flip the next one over and build
+            the right half on that. You order one design instead of two.
+        </p>
+
+        <figure class="learn-figure">
+            <svg viewBox="0 0 152 52" role="img"
+                 aria-label="Three sketches of one keyboard half. First, the left half with its controller on top. Second, the same board flipped over to make the right half: the controller's holes now face the other way, so the controller goes on the other face. Third, a board with two mirrored sets of controller holes, so the controller can sit on top on both halves.">
+                <rect class="lf-board" x="4" y="12" width="40" height="26" rx="2"/>
+                <rect class="lf-cap" x="7" y="15" width="7" height="7" rx="0.8"/>
+                <rect class="lf-cap" x="7" y="25" width="7" height="7" rx="0.8"/>
+                <rect class="lf-cap" x="15" y="15" width="7" height="7" rx="0.8"/>
+                <rect class="lf-cap" x="15" y="25" width="7" height="7" rx="0.8"/>
+                <rect class="lf-cap" x="23" y="15" width="7" height="7" rx="0.8"/>
+                <rect class="lf-cap" x="23" y="25" width="7" height="7" rx="0.8"/>
+                <rect class="lf-part" x="33" y="15" width="8" height="20" rx="0.6"/>
+                <circle class="lf-hole" cx="34.2" cy="17" r="0.45"/>
+                <circle class="lf-hole" cx="34.2" cy="19.6" r="0.45"/>
+                <circle class="lf-hole" cx="34.2" cy="22.2" r="0.45"/>
+                <circle class="lf-hole" cx="34.2" cy="24.8" r="0.45"/>
+                <circle class="lf-hole" cx="34.2" cy="27.4" r="0.45"/>
+                <circle class="lf-hole" cx="34.2" cy="30" r="0.45"/>
+                <circle class="lf-hole" cx="34.2" cy="32.6" r="0.45"/>
+                <circle class="lf-hole" cx="39.8" cy="17" r="0.45"/>
+                <circle class="lf-hole" cx="39.8" cy="19.6" r="0.45"/>
+                <circle class="lf-hole" cx="39.8" cy="22.2" r="0.45"/>
+                <circle class="lf-hole" cx="39.8" cy="24.8" r="0.45"/>
+                <circle class="lf-hole" cx="39.8" cy="27.4" r="0.45"/>
+                <circle class="lf-hole" cx="39.8" cy="30" r="0.45"/>
+                <circle class="lf-hole" cx="39.8" cy="32.6" r="0.45"/>
+                <rect class="lf-board" x="56" y="12" width="40" height="26" rx="2"/>
+                <rect class="lf-cap" x="86" y="15" width="7" height="7" rx="0.8"/>
+                <rect class="lf-cap" x="86" y="25" width="7" height="7" rx="0.8"/>
+                <rect class="lf-cap" x="78" y="15" width="7" height="7" rx="0.8"/>
+                <rect class="lf-cap" x="78" y="25" width="7" height="7" rx="0.8"/>
+                <rect class="lf-cap" x="70" y="15" width="7" height="7" rx="0.8"/>
+                <rect class="lf-cap" x="70" y="25" width="7" height="7" rx="0.8"/>
+                <rect class="lf-under" x="59" y="15" width="8" height="20" rx="0.6"/>
+                <circle class="lf-hole" cx="65.8" cy="17" r="0.45"/>
+                <circle class="lf-hole" cx="65.8" cy="19.6" r="0.45"/>
+                <circle class="lf-hole" cx="65.8" cy="22.2" r="0.45"/>
+                <circle class="lf-hole" cx="65.8" cy="24.8" r="0.45"/>
+                <circle class="lf-hole" cx="65.8" cy="27.4" r="0.45"/>
+                <circle class="lf-hole" cx="65.8" cy="30" r="0.45"/>
+                <circle class="lf-hole" cx="65.8" cy="32.6" r="0.45"/>
+                <circle class="lf-hole" cx="60.2" cy="17" r="0.45"/>
+                <circle class="lf-hole" cx="60.2" cy="19.6" r="0.45"/>
+                <circle class="lf-hole" cx="60.2" cy="22.2" r="0.45"/>
+                <circle class="lf-hole" cx="60.2" cy="24.8" r="0.45"/>
+                <circle class="lf-hole" cx="60.2" cy="27.4" r="0.45"/>
+                <circle class="lf-hole" cx="60.2" cy="30" r="0.45"/>
+                <circle class="lf-hole" cx="60.2" cy="32.6" r="0.45"/>
+                <rect class="lf-board" x="108" y="12" width="40" height="26" rx="2"/>
+                <rect class="lf-cap" x="111" y="15" width="7" height="7" rx="0.8"/>
+                <rect class="lf-cap" x="111" y="25" width="7" height="7" rx="0.8"/>
+                <rect class="lf-cap" x="119" y="15" width="7" height="7" rx="0.8"/>
+                <rect class="lf-cap" x="119" y="25" width="7" height="7" rx="0.8"/>
+                <rect class="lf-cap" x="127" y="15" width="7" height="7" rx="0.8"/>
+                <rect class="lf-cap" x="127" y="25" width="7" height="7" rx="0.8"/>
+                <rect class="lf-part" x="137" y="15" width="8" height="20" rx="0.6"/>
+                <circle class="lf-hole" cx="138.2" cy="17" r="0.45"/>
+                <circle class="lf-hole" cx="138.2" cy="19.6" r="0.45"/>
+                <circle class="lf-hole" cx="138.2" cy="22.2" r="0.45"/>
+                <circle class="lf-hole" cx="138.2" cy="24.8" r="0.45"/>
+                <circle class="lf-hole" cx="138.2" cy="27.4" r="0.45"/>
+                <circle class="lf-hole" cx="138.2" cy="30" r="0.45"/>
+                <circle class="lf-hole" cx="138.2" cy="32.6" r="0.45"/>
+                <circle class="lf-hole" cx="139.4" cy="17" r="0.45"/>
+                <circle class="lf-hole" cx="139.4" cy="19.6" r="0.45"/>
+                <circle class="lf-hole" cx="139.4" cy="22.2" r="0.45"/>
+                <circle class="lf-hole" cx="139.4" cy="24.8" r="0.45"/>
+                <circle class="lf-hole" cx="139.4" cy="27.4" r="0.45"/>
+                <circle class="lf-hole" cx="139.4" cy="30" r="0.45"/>
+                <circle class="lf-hole" cx="139.4" cy="32.6" r="0.45"/>
+                <circle class="lf-hole" cx="142.6" cy="17" r="0.45"/>
+                <circle class="lf-hole" cx="142.6" cy="19.6" r="0.45"/>
+                <circle class="lf-hole" cx="142.6" cy="22.2" r="0.45"/>
+                <circle class="lf-hole" cx="142.6" cy="24.8" r="0.45"/>
+                <circle class="lf-hole" cx="142.6" cy="27.4" r="0.45"/>
+                <circle class="lf-hole" cx="142.6" cy="30" r="0.45"/>
+                <circle class="lf-hole" cx="142.6" cy="32.6" r="0.45"/>
+                <circle class="lf-hole" cx="143.8" cy="17" r="0.45"/>
+                <circle class="lf-hole" cx="143.8" cy="19.6" r="0.45"/>
+                <circle class="lf-hole" cx="143.8" cy="22.2" r="0.45"/>
+                <circle class="lf-hole" cx="143.8" cy="24.8" r="0.45"/>
+                <circle class="lf-hole" cx="143.8" cy="27.4" r="0.45"/>
+                <circle class="lf-hole" cx="143.8" cy="30" r="0.45"/>
+                <circle class="lf-hole" cx="143.8" cy="32.6" r="0.45"/>
+                <path class="lf-wire" d="M42 9 Q50 2 58 9"/>
+                <path class="lf-wire" d="M55.5 8.6 L58 9 L57.6 6.5"/>
+                <text class="lf-label" x="50" y="4" text-anchor="middle">flip</text>
+                <text class="lf-label" x="24" y="44" text-anchor="middle">Left half</text>
+                <text class="lf-label" x="76" y="44" text-anchor="middle">Same PCB, flipped:</text>
+                <text class="lf-label" x="128" y="44" text-anchor="middle">Doubled, mirrored</text>
+                <text class="lf-note" x="24" y="48.5" text-anchor="middle">controller on top</text>
+                <text class="lf-note" x="76" y="48.5" text-anchor="middle">the right half</text>
+                <text class="lf-note" x="128" y="48.5" text-anchor="middle">controller holes</text>
+            </svg>
+            <figcaption>
+                Not to scale. Flipping a board mirrors it, controller holes too, so the
+                flipped half has its controller on the other face (dashed). Two mirrored sets
+                of holes let it sit on top on both halves.
+            </figcaption>
+        </figure>
+
+        <p>
+            PCB makers sell boards in batches of a few copies. With a reversible design any
+            two of them make a keyboard. With separate left and right boards you order
+            both, and a spare left is no use without a right.
+        </p>
+        <p>
+            It works because most splits are mirror images, and flipping a board mirrors
+            it. The switch holes work from either face. The controller is the tricky part,
+            since flipping the board reverses the order of its pin holes.
+        </p>
+
+        <h2>Where the controller goes</h2>
+        <p>
+            <strong>One set of holes.</strong> On the flipped half the controller goes
+            underneath, or stays on top mounted face down. A build photo of the
+            <a href="/designs/architeuthis-dux">Architeuthis Dux</a> shows one nice!nano
+            face up on the left half and the other face down on the right.
+        </p>
+        <p>
+            <strong>Two mirrored sets of holes,</strong> overlapping, so the controller sits
+            face up on both halves. The <a href="/designs/cradio-z-lp">Cradio Z lp</a> does
+            this: its controller footprint has two full sets of 24 holes.
+            @if(page.count("cradioZLpRecorded") == 0)
+                It isn't recorded in the catalog yet, so it's not in the lists below.
+            @endif
+        </p>
+
+        <p>
+            Some splits can't be reversible because the halves carry different parts. The
+            Ferris has the chip and USB-C port on the left and an
+            <a href="/learn/io-expander">IO expander</a> on the right.
+        </p>
+
+        <p>
+            Recorded by hand, one design at a time. Not recorded yet for
+            ${page.count("unknown")} of the ${page.count("splits")} split designs.
+        </p>
+        @template.learn.list(list = page.list("yes"))
+        @template.learn.list(list = page.list("no"))
+    </article>
+`)

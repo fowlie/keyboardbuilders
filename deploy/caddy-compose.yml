@@ -1,0 +1,31 @@
+# The Caddy container, copied from /home/fowlie/caddy/docker-compose.yml on the VPS.
+#
+# It is in this repository for the reason deploy/README.md gives for the Caddyfile and the
+# systemd unit: a config that exists only in production is a config nobody can review, and
+# it goes wrong silently. This file had lived only on the box until 2026-09-07.
+#
+# Changing THIS file needs `docker compose up -d caddy`, which recreates the container and
+# briefly drops every vhost -- unlike a Caddyfile edit, which is a `caddy reload` and drops
+# nothing. Prefer the Caddyfile whenever a change can live there.
+services:
+  caddy:
+    image: caddy:2-alpine
+    container_name: caddy
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile
+      - caddy_data:/data
+      - caddy_config:/config
+      - /srv/keyboards:/srv/keyboards:ro
+      # Access logs land on the host so fail2ban can tail them. Caddy rolls the file
+      # itself (roll_size/roll_keep in the Caddyfile), so no logrotate rule is needed --
+      # but the cap matters: unrolled, this directory grows ~3.7 GB/day at current load.
+      - /var/log/caddy:/var/log/caddy
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+volumes:
+  caddy_data:
+  caddy_config:

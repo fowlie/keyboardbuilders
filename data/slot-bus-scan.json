@@ -1,0 +1,1430 @@
+[
+ {
+  "slug": "3x5-2-dilemma",
+  "kind": "trackpad",
+  "board": [],
+  "firmware": [
+   "i2c",
+   "spi"
+  ]
+ },
+ {
+  "slug": "3x5-3-dilemma",
+  "kind": "trackpad",
+  "board": [],
+  "firmware": [
+   "spi"
+  ]
+ },
+ {
+  "slug": "3x5-3-procyon-dilemma",
+  "kind": "trackpad",
+  "board": [],
+  "firmware": [
+   "spi"
+  ]
+ },
+ {
+  "slug": "4x6-4-dilemma",
+  "kind": "trackpad",
+  "board": [],
+  "firmware": [
+   "spi"
+  ]
+ },
+ {
+  "slug": "avalanche-hotswap",
+  "kind": "display",
+  "board": [
+   {
+    "footprint": "used_footprints:OLED_4Pin_SSD1306",
+    "ref": "J2",
+    "bus": "unnamed",
+    "power": "unknown: net named VCC, no source found",
+    "power_by_name": "unstated",
+    "nets": [
+     "Net-(J2-Pad1)",
+     "Net-(J2-Pad2)",
+     "Net-(J2-Pad3)",
+     "Net-(J2-Pad4)"
+    ]
+   }
+  ],
+  "firmware": [
+   "i2c"
+  ]
+ },
+ {
+  "slug": "bad-wings-bold",
+  "kind": "trackpad",
+  "board": [],
+  "firmware": [
+   "spi"
+  ]
+ },
+ {
+  "slug": "bad-wings-slim",
+  "kind": "trackpad",
+  "board": [],
+  "firmware": [
+   "spi"
+  ]
+ },
+ {
+  "slug": "blue-team-pad",
+  "kind": "display",
+  "board": [
+   {
+    "footprint": "foostan:OLED_v2",
+    "ref": "OL1",
+    "bus": "i2c",
+    "power": "5V (net name only)",
+    "power_by_name": "5v",
+    "nets": [
+     "+5V",
+     "GND",
+     "OLED_SCL",
+     "OLED_SDA"
+    ]
+   }
+  ],
+  "firmware": [
+   "i2c"
+  ]
+ },
+ {
+  "slug": "buzzard",
+  "kind": "display",
+  "board": [
+   {
+    "footprint": "Buzzard:OLED",
+    "ref": "J6",
+    "bus": "unnamed",
+    "power": "Pro Micro VCC pin: follows the controller",
+    "power_by_name": "unstated",
+    "nets": [
+     "Net-(J6-Pad1)",
+     "Net-(J6-Pad2)",
+     "Net-(J6-Pad3)",
+     "Net-(J6-Pad4)"
+    ]
+   }
+  ],
+  "firmware": [
+   "i2c"
+  ]
+ },
+ {
+  "slug": "bw2-v2",
+  "kind": "trackpad",
+  "board": [],
+  "firmware": [
+   "spi"
+  ]
+ },
+ {
+  "slug": "corne-cherry",
+  "kind": "display",
+  "board": [
+   {
+    "footprint": "kbd_local:OLED",
+    "ref": "rJ3",
+    "bus": "unnamed",
+    "power": "5V (net name only)",
+    "power_by_name": "5v",
+    "nets": [
+     "+5VR",
+     "/right/RE1A",
+     "/right/REB",
+     "GNDR"
+    ]
+   },
+   {
+    "footprint": "kbd_local:OLED",
+    "ref": "J3",
+    "bus": "unnamed",
+    "power": "5V (net name only)",
+    "power_by_name": "5v",
+    "nets": [
+     "+5V",
+     "/left/RE1A",
+     "/left/REB",
+     "GND"
+    ]
+   }
+  ],
+  "firmware": [
+   "i2c"
+  ]
+ },
+ {
+  "slug": "corne-chocolate",
+  "kind": "display",
+  "board": [
+   {
+    "footprint": "kbd_local:OLED",
+    "ref": "rJ3",
+    "bus": "unnamed",
+    "power": "5V (net name only)",
+    "power_by_name": "5v",
+    "nets": [
+     "+5VR",
+     "/right/RE1A",
+     "/right/REB",
+     "GNDR"
+    ]
+   },
+   {
+    "footprint": "kbd_local:OLED",
+    "ref": "J3",
+    "bus": "unnamed",
+    "power": "5V (net name only)",
+    "power_by_name": "5v",
+    "nets": [
+     "+5V",
+     "/left/RE1A",
+     "/left/REB",
+     "GND"
+    ]
+   }
+  ],
+  "firmware": [
+   "i2c"
+  ]
+ },
+ {
+  "slug": "cornia",
+  "kind": "display",
+  "board": [
+   {
+    "footprint": "cornia-footprints:OLED",
+    "ref": "OL1",
+    "bus": "i2c",
+    "power": "selectable by jumper",
+    "power_by_name": "vcc",
+    "nets": [
+     "Net-(OL1-GND)",
+     "Net-(OL1-SCL)",
+     "Net-(OL1-SDA)",
+     "Net-(OL1-VCC)"
+    ]
+   }
+  ],
+  "firmware": [
+   "i2c"
+  ]
+ },
+ {
+  "slug": "elephant42",
+  "kind": "display",
+  "board": [
+   {
+    "footprint": "kbd:OLED_1side",
+    "ref": "OL2",
+    "bus": "i2c",
+    "power": "Pro Micro VCC pin: follows the controller",
+    "power_by_name": "vcc",
+    "nets": [
+     "GND",
+     "VCC",
+     "scl_l",
+     "sda_l"
+    ]
+   },
+   {
+    "footprint": "kbd:OLED_1side",
+    "ref": "OL1",
+    "bus": "i2c",
+    "power": "Pro Micro VCC pin: follows the controller",
+    "power_by_name": "vcc",
+    "nets": [
+     "GND",
+     "VCC",
+     "scl_r",
+     "sda_r"
+    ]
+   }
+  ],
+  "firmware": [
+   "i2c"
+  ]
+ },
+ {
+  "slug": "endzone34",
+  "kind": "display",
+  "board": [
+   {
+    "footprint": "kbd:OLED_v2",
+    "ref": "OL1",
+    "bus": "i2c",
+    "power": "Pro Micro VCC pin: follows the controller",
+    "power_by_name": "vcc",
+    "nets": [
+     "GND",
+     "SCL",
+     "SDA",
+     "VCC"
+    ]
+   }
+  ],
+  "firmware": [
+   "i2c"
+  ]
+ },
+ {
+  "slug": "ergoslab",
+  "kind": "display",
+  "board": [
+   {
+    "footprint": "footprints:oled_header_helix",
+    "ref": "P1",
+    "bus": "unnamed",
+    "power": "Pro Micro VCC pin: follows the controller",
+    "power_by_name": "unstated",
+    "nets": [
+     "Net-(JP1-Pad2)",
+     "Net-(JP2-Pad2)",
+     "Net-(JP3-Pad2)",
+     "Net-(JP4-Pad2)"
+    ]
+   }
+  ],
+  "firmware": []
+ },
+ {
+  "slug": "g35",
+  "kind": "display",
+  "board": [
+   {
+    "footprint": "MechLlama:PinHeader_SSD1306",
+    "ref": "OLED1",
+    "bus": "i2c",
+    "power": "5V (net name only)",
+    "power_by_name": "5v",
+    "nets": [
+     "+5V",
+     "GND",
+     "SCL",
+     "SDA"
+    ]
+   }
+  ],
+  "firmware": [
+   "i2c"
+  ]
+ },
+ {
+  "slug": "jorne-cherry-2-1",
+  "kind": "display",
+  "board": [
+   {
+    "footprint": "kbd:OLED",
+    "ref": "J2",
+    "bus": "unnamed",
+    "power": "Pro Micro VCC pin: follows the controller",
+    "power_by_name": "unstated",
+    "nets": [
+     "Net-(J2-Pad1)",
+     "Net-(J2-Pad2)",
+     "Net-(J2-Pad3)",
+     "Net-(J2-Pad4)"
+    ]
+   }
+  ],
+  "firmware": [
+   "i2c"
+  ]
+ },
+ {
+  "slug": "jorne-cherry-3-0",
+  "kind": "display",
+  "board": [
+   {
+    "footprint": "kbd:OLED_1side",
+    "ref": "J2",
+    "bus": "i2c",
+    "power": "Pro Micro VCC pin: follows the controller",
+    "power_by_name": "vcc",
+    "nets": [
+     "GND",
+     "SCL",
+     "SDA",
+     "VCC"
+    ]
+   },
+   {
+    "footprint": "kbd:OLED_1side",
+    "ref": "J4",
+    "bus": "i2c",
+    "power": "Pro Micro VCC pin: follows the controller",
+    "power_by_name": "vcc",
+    "nets": [
+     "GNDA",
+     "SCL_r",
+     "SDA_r",
+     "VDD"
+    ]
+   }
+  ],
+  "firmware": [
+   "i2c"
+  ]
+ },
+ {
+  "slug": "jorne-classic-2-1",
+  "kind": "display",
+  "board": [
+   {
+    "footprint": "kbd:OLED",
+    "ref": "J2",
+    "bus": "unnamed",
+    "power": "Pro Micro VCC pin: follows the controller",
+    "power_by_name": "unstated",
+    "nets": [
+     "Net-(J2-Pad1)",
+     "Net-(J2-Pad2)",
+     "Net-(J2-Pad3)",
+     "Net-(J2-Pad4)"
+    ]
+   }
+  ],
+  "firmware": [
+   "i2c"
+  ]
+ },
+ {
+  "slug": "klor",
+  "kind": "display",
+  "board": [
+   {
+    "footprint": "KLOR:SSD1306_128x64OLED",
+    "ref": "OLED1",
+    "bus": "i2c",
+    "power": "Pro Micro VCC pin: follows the controller",
+    "power_by_name": "vcc",
+    "nets": [
+     "Net-(JP1-Pad1)",
+     "Net-(JP2-Pad1)",
+     "Net-(JP3-Pad1)",
+     "Net-(JP4-Pad1)"
+    ]
+   }
+  ],
+  "firmware": [
+   "i2c"
+  ]
+ },
+ {
+  "slug": "la-nc",
+  "kind": "display",
+  "board": [
+   {
+    "footprint": "kbd:OLED_v2",
+    "ref": "OL1",
+    "bus": "i2c",
+    "power": "Pro Micro VCC pin: follows the controller",
+    "power_by_name": "vcc",
+    "nets": [
+     "GND",
+     "SCL",
+     "SDA",
+     "VCC"
+    ]
+   }
+  ],
+  "firmware": [
+   "i2c"
+  ]
+ },
+ {
+  "slug": "lck75",
+  "kind": "display",
+  "board": [
+   {
+    "footprint": "cftkb:ssd1306",
+    "ref": "SSD1306",
+    "bus": "i2c",
+    "power": "unknown: net named VCC, no source found",
+    "power_by_name": "unstated",
+    "nets": [
+     "EC11-GND",
+     "oledSCL",
+     "oledSDA",
+     "oledVCC"
+    ]
+   }
+  ],
+  "firmware": [
+   "i2c"
+  ]
+ },
+ {
+  "slug": "lily58-lite-rev3",
+  "kind": "display",
+  "board": [
+   {
+    "footprint": "yuchi:OLED_4Pin",
+    "ref": "J7",
+    "bus": "i2c",
+    "power": "5V (socket pin)",
+    "power_by_name": "vcc",
+    "nets": [
+     "GND",
+     "SCL_L",
+     "SDA_L",
+     "VCC"
+    ]
+   },
+   {
+    "footprint": "yuchi:OLED_4Pin",
+    "ref": "J16",
+    "bus": "i2c",
+    "power": "5V (socket pin)",
+    "power_by_name": "unstated",
+    "nets": [
+     "GNDA",
+     "SCL_R",
+     "SDA_R",
+     "VCCQ"
+    ]
+   }
+  ],
+  "firmware": [
+   "i2c"
+  ]
+ },
+ {
+  "slug": "lily58-pro",
+  "kind": "display",
+  "board": [
+   {
+    "footprint": "Lily58-footprint:OLED_4Pin",
+    "ref": "J3",
+    "bus": "unnamed",
+    "power": "Pro Micro VCC pin: follows the controller",
+    "power_by_name": "unstated",
+    "nets": [
+     "Net-(J3-Pad1)",
+     "Net-(J3-Pad2)",
+     "Net-(J3-Pad3)",
+     "Net-(J3-Pad4)"
+    ]
+   }
+  ],
+  "firmware": [
+   "i2c"
+  ]
+ },
+ {
+  "slug": "lime",
+  "kind": "display",
+  "board": [
+   {
+    "footprint": "SofleKeyboard-footprint:OLED_4Pin",
+    "ref": "J3",
+    "bus": "unnamed",
+    "power": "Pro Micro VCC pin: follows the controller",
+    "power_by_name": "unstated",
+    "nets": [
+     "Net-(J3-Pad1)",
+     "Net-(J3-Pad2)",
+     "Net-(J3-Pad3)",
+     "Net-(J3-Pad4)"
+    ]
+   }
+  ],
+  "firmware": [
+   "i2c"
+  ]
+ },
+ {
+  "slug": "lotus58",
+  "kind": "display",
+  "board": [
+   {
+    "footprint": "KiCad-SSD1306-0.91-OLED-4pin-128x32:SSD1306-0.91-OLED-4pin-128x32",
+    "ref": "P4",
+    "bus": "unnamed",
+    "power": "unknown: net named VCC, no source found",
+    "power_by_name": "unstated",
+    "nets": [
+     "Net-(JP1-Pad1)",
+     "Net-(JP2-Pad1)",
+     "Net-(JP3-Pad1)",
+     "Net-(JP4-Pad1)"
+    ]
+   },
+   {
+    "footprint": "KiCad-SSD1306-0.91-OLED-4pin-128x32:SSD1306-0.91-OLED-4pin-128x32",
+    "ref": "P1",
+    "bus": "unnamed",
+    "power": "unknown: net named VCC, no source found",
+    "power_by_name": "unstated",
+    "nets": [
+     "Net-(JP10-Pad1)",
+     "Net-(JP11-Pad1)",
+     "Net-(JP12-Pad1)",
+     "Net-(JP5-Pad1)"
+    ]
+   },
+   {
+    "footprint": "KiCad-SSD1306-0.91-OLED-4pin-128x32:SSD1306-0.91-OLED-4pin-128x32",
+    "ref": "P1",
+    "bus": "unnamed",
+    "power": "unknown: net named VCC, no source found",
+    "power_by_name": "unstated",
+    "nets": [
+     "Net-(JP10-Pad1)",
+     "Net-(JP11-Pad1)",
+     "Net-(JP12-Pad1)",
+     "Net-(JP13-Pad1)"
+    ]
+   },
+   {
+    "footprint": "KiCad-SSD1306-0.91-OLED-4pin-128x32:SSD1306-0.91-OLED-4pin-128x32",
+    "ref": "P1",
+    "bus": "unnamed",
+    "power": "unknown: net named VCC, no source found",
+    "power_by_name": "unstated",
+    "nets": [
+     "Net-(P1-Pin_1)",
+     "Net-(P1-Pin_2)",
+     "Net-(P1-Pin_3)",
+     "Net-(P1-Pin_4)"
+    ]
+   }
+  ],
+  "firmware": [
+   "i2c"
+  ]
+ },
+ {
+  "slug": "macrocat",
+  "kind": "display",
+  "board": [
+   {
+    "footprint": "kbd:OLED_v2",
+    "ref": "OL1",
+    "bus": "i2c",
+    "power": "5V (net name only)",
+    "power_by_name": "5v",
+    "nets": [
+     "+5V",
+     "GND",
+     "SCL",
+     "SDA"
+    ]
+   }
+  ],
+  "firmware": [
+   "i2c"
+  ]
+ },
+ {
+  "slug": "pix",
+  "kind": "display",
+  "board": [
+   {
+    "footprint": "kbd:OLED_v2",
+    "ref": "OL1",
+    "bus": "i2c",
+    "power": "Pro Micro VCC pin: follows the controller",
+    "power_by_name": "vcc",
+    "nets": [
+     "GND",
+     "SCL",
+     "SDA",
+     "VCC"
+    ]
+   }
+  ],
+  "firmware": [
+   "i2c"
+  ]
+ },
+ {
+  "slug": "redherring",
+  "kind": "display",
+  "board": [
+   {
+    "footprint": "Custom_Footprints:SSD1306_OLED",
+    "ref": "J2",
+    "bus": "i2c",
+    "power": "5V (net name only)",
+    "power_by_name": "5v",
+    "nets": [
+     "+5V",
+     "GND",
+     "SCL",
+     "SDA"
+    ]
+   },
+   {
+    "footprint": "Custom_Footprints:SSD1306_OLED",
+    "ref": "J2",
+    "bus": "i2c",
+    "power": "5V (net name only)",
+    "power_by_name": "5v",
+    "nets": [
+     "+5V",
+     "GND",
+     "SCL",
+     "SDA"
+    ]
+   },
+   {
+    "footprint": "Custom_Footprints:SSD1306_OLED",
+    "ref": "J2",
+    "bus": "i2c",
+    "power": "5V (net name only)",
+    "power_by_name": "5v",
+    "nets": [
+     "+5V",
+     "GND",
+     "SCL",
+     "SDA"
+    ]
+   }
+  ],
+  "firmware": [
+   "i2c"
+  ]
+ },
+ {
+  "slug": "rhymestone",
+  "kind": "display",
+  "board": [
+   {
+    "footprint": "kbd:OLED",
+    "ref": "J3",
+    "bus": "unnamed",
+    "power": "Pro Micro VCC pin: follows the controller",
+    "power_by_name": "unstated",
+    "nets": [
+     "Net-(J2-Pad1)",
+     "Net-(J2-Pad2)",
+     "Net-(J2-Pad3)",
+     "Net-(J2-Pad4)"
+    ]
+   }
+  ],
+  "firmware": [
+   "i2c"
+  ]
+ },
+ {
+  "slug": "setta21",
+  "kind": "display",
+  "board": [
+   {
+    "footprint": "kbd:OLED_FL",
+    "ref": "J3",
+    "bus": "i2c",
+    "power": "Pro Micro VCC pin: follows the controller",
+    "power_by_name": "vcc",
+    "nets": [
+     "GND",
+     "SCL",
+     "SDA",
+     "VCC"
+    ]
+   }
+  ],
+  "firmware": []
+ },
+ {
+  "slug": "sofle-choc",
+  "kind": "display",
+  "board": [
+   {
+    "footprint": "SofleKeyboard-footprint:OLED_4Pin",
+    "ref": "J3",
+    "bus": "unnamed",
+    "power": "Pro Micro VCC pin: follows the controller",
+    "power_by_name": "unstated",
+    "nets": [
+     "Net-(J3-Pad1)",
+     "Net-(J3-Pad2)",
+     "Net-(J3-Pad3)",
+     "Net-(J3-Pad4)"
+    ]
+   }
+  ],
+  "firmware": [
+   "i2c"
+  ]
+ },
+ {
+  "slug": "sofle-pico",
+  "kind": "display",
+  "board": [
+   {
+    "footprint": "Sofle_Pico:OLED",
+    "ref": "J3",
+    "bus": "i2c",
+    "power": "3.3V (socket pin)",
+    "power_by_name": "3v3",
+    "nets": [
+     "3V3",
+     "GND",
+     "SCL",
+     "SDA"
+    ]
+   }
+  ],
+  "firmware": [
+   "i2c"
+  ]
+ },
+ {
+  "slug": "sofle-pico",
+  "kind": "trackpad",
+  "board": [
+   {
+    "footprint": "Sofle_Pico:Cirque",
+    "ref": "J7",
+    "bus": "i2c",
+    "power": "3.3V (socket pin)",
+    "power_by_name": "3v3",
+    "nets": [
+     "3V3",
+     "GND",
+     "SCL",
+     "SDA"
+    ]
+   },
+   {
+    "footprint": "Sofle_Pico:Cirque",
+    "ref": "J4",
+    "bus": "i2c",
+    "power": "3.3V (socket pin)",
+    "power_by_name": "3v3",
+    "nets": [
+     "3V3",
+     "GND",
+     "SCL",
+     "SDA"
+    ]
+   },
+   {
+    "footprint": "Sofle_Pico:Cirque_40mm_OLED_RH",
+    "ref": "STP**",
+    "bus": "no-signal-nets",
+    "power": null,
+    "power_by_name": "unstated",
+    "nets": []
+   }
+  ],
+  "firmware": []
+ },
+ {
+  "slug": "sofle-v1",
+  "kind": "display",
+  "board": [
+   {
+    "footprint": "SofleKeyboard-footprint:OLED_4Pin",
+    "ref": "J3",
+    "bus": "unnamed",
+    "power": "Pro Micro VCC pin: follows the controller",
+    "power_by_name": "unstated",
+    "nets": [
+     "Net-(J3-Pad1)",
+     "Net-(J3-Pad2)",
+     "Net-(J3-Pad3)",
+     "Net-(J3-Pad4)"
+    ]
+   }
+  ],
+  "firmware": [
+   "i2c"
+  ]
+ },
+ {
+  "slug": "span",
+  "kind": "display",
+  "board": [
+   {
+    "footprint": "kbd:OLED_1side",
+    "ref": "J4",
+    "bus": "i2c",
+    "power": "Pro Micro VCC pin: follows the controller",
+    "power_by_name": "vcc",
+    "nets": [
+     "GND",
+     "SCL_r",
+     "SDA_r",
+     "VCC"
+    ]
+   },
+   {
+    "footprint": "kbd:OLED_1side",
+    "ref": "J3",
+    "bus": "i2c",
+    "power": "Pro Micro VCC pin: follows the controller",
+    "power_by_name": "vcc",
+    "nets": [
+     "GND",
+     "SCL",
+     "SDA",
+     "VCC"
+    ]
+   }
+  ],
+  "firmware": [
+   "i2c"
+  ]
+ },
+ {
+  "slug": "spleeb",
+  "kind": "trackpad",
+  "board": [],
+  "firmware": [
+   "i2c"
+  ]
+ },
+ {
+  "slug": "stront-choc",
+  "kind": "display",
+  "board": [
+   {
+    "footprint": "zzkeeb:Connector_Display-8pin-SPI-2.0mm",
+    "ref": "DISP2",
+    "bus": "i2c+spi",
+    "power": "3.3V (socket pin)",
+    "power_by_name": "vcc",
+    "nets": [
+     "BL_r",
+     "CS_r",
+     "GNDA",
+     "MISO_r",
+     "MOSI{slash}SCL_r",
+     "RST_r",
+     "SCLK{slash}SDA_r",
+     "VDD"
+    ]
+   },
+   {
+    "footprint": "zzkeeb:Display_1.69inch",
+    "ref": "REF**",
+    "bus": "no-signal-nets",
+    "power": null,
+    "power_by_name": "unstated",
+    "nets": []
+   },
+   {
+    "footprint": "zzkeeb:Connector_Display-8pin-SPI-2.0mm",
+    "ref": "DISP1",
+    "bus": "i2c+spi",
+    "power": "3.3V (socket pin)",
+    "power_by_name": "vcc",
+    "nets": [
+     "BL",
+     "CS",
+     "GND",
+     "MISO",
+     "MOSI{slash}SCL",
+     "RST",
+     "SCLK{slash}SDA",
+     "VCC"
+    ]
+   },
+   {
+    "footprint": "zzkeeb:Display_1.69inch",
+    "ref": "REF**",
+    "bus": "no-signal-nets",
+    "power": null,
+    "power_by_name": "unstated",
+    "nets": []
+   }
+  ],
+  "firmware": [
+   "spi"
+  ]
+ },
+ {
+  "slug": "stront-choc",
+  "kind": "trackpad",
+  "board": [],
+  "firmware": [
+   "spi"
+  ]
+ },
+ {
+  "slug": "stront-mx-38",
+  "kind": "display",
+  "board": [
+   {
+    "footprint": "zzkeeb:Connector_Display-8pin-SPI-2.0mm",
+    "ref": "DISP2",
+    "bus": "i2c+spi",
+    "power": "3.3V (socket pin)",
+    "power_by_name": "vcc",
+    "nets": [
+     "CS_r",
+     "GNDA",
+     "GPIO1_r",
+     "GPIO2_r",
+     "MISO_r",
+     "MOSI{slash}SCL_r",
+     "SCLK{slash}SDA_r",
+     "VDD"
+    ]
+   },
+   {
+    "footprint": "zzkeeb:Display_1.69inch",
+    "ref": "REF**",
+    "bus": "no-signal-nets",
+    "power": null,
+    "power_by_name": "unstated",
+    "nets": []
+   },
+   {
+    "footprint": "zzkeeb:Connector_Display-8pin-SPI-2.0mm",
+    "ref": "DISP1",
+    "bus": "i2c+spi",
+    "power": "3.3V (socket pin)",
+    "power_by_name": "vcc",
+    "nets": [
+     "CS",
+     "GND",
+     "GPIO1",
+     "GPIO2",
+     "MISO",
+     "MOSI{slash}SCL",
+     "SCLK{slash}SDA",
+     "VCC"
+    ]
+   },
+   {
+    "footprint": "zzkeeb:Display_1.69inch",
+    "ref": "REF**",
+    "bus": "no-signal-nets",
+    "power": null,
+    "power_by_name": "unstated",
+    "nets": []
+   }
+  ],
+  "firmware": [
+   "spi"
+  ]
+ },
+ {
+  "slug": "stront-mx-38",
+  "kind": "trackpad",
+  "board": [],
+  "firmware": [
+   "spi"
+  ]
+ },
+ {
+  "slug": "stront-mx-40",
+  "kind": "display",
+  "board": [
+   {
+    "footprint": "zzkeeb:Connector_Display-8pin-SPI-2.0mm",
+    "ref": "DISP2",
+    "bus": "i2c+spi",
+    "power": "3.3V (socket pin)",
+    "power_by_name": "3v3",
+    "nets": [
+     "+3.3VP",
+     "CS_r",
+     "GNDA",
+     "GPIO1_r",
+     "GPIO2_r",
+     "MISO_r",
+     "MOSI{slash}SCL_r",
+     "SCLK{slash}SDA_r"
+    ]
+   },
+   {
+    "footprint": "zzkeeb:Display_1.69inch",
+    "ref": "REF**",
+    "bus": "no-signal-nets",
+    "power": null,
+    "power_by_name": "unstated",
+    "nets": []
+   },
+   {
+    "footprint": "zzkeeb:Connector_Display-8pin-SPI-2.0mm",
+    "ref": "DISP1",
+    "bus": "i2c+spi",
+    "power": "3.3V (socket pin)",
+    "power_by_name": "3v3",
+    "nets": [
+     "+3.3V",
+     "CS",
+     "GND",
+     "GPIO1",
+     "GPIO2",
+     "MISO",
+     "MOSI{slash}SCL",
+     "SCLK{slash}SDA"
+    ]
+   },
+   {
+    "footprint": "zzkeeb:Display_1.69inch",
+    "ref": "REF**",
+    "bus": "no-signal-nets",
+    "power": null,
+    "power_by_name": "unstated",
+    "nets": []
+   }
+  ],
+  "firmware": [
+   "spi"
+  ]
+ },
+ {
+  "slug": "stront-mx-40",
+  "kind": "trackpad",
+  "board": [],
+  "firmware": [
+   "i2c",
+   "spi"
+  ]
+ },
+ {
+  "slug": "swoop-mx",
+  "kind": "display",
+  "board": [
+   {
+    "footprint": "swoop:OLED_jumpers",
+    "ref": "O1",
+    "bus": "i2c",
+    "power": "Pro Micro VCC pin: follows the controller",
+    "power_by_name": "vcc",
+    "nets": [
+     "GND",
+     "VCC",
+     "sda",
+     "sla"
+    ]
+   }
+  ],
+  "firmware": []
+ },
+ {
+  "slug": "torn",
+  "kind": "display",
+  "board": [
+   {
+    "footprint": "footprints:OLED_1side",
+    "ref": "J3",
+    "bus": "i2c",
+    "power": "5V (net name only)",
+    "power_by_name": "5v",
+    "nets": [
+     "+5V",
+     "/i2c_SCL",
+     "/i2c_SDA",
+     "GND"
+    ]
+   }
+  ],
+  "firmware": [
+   "i2c"
+  ]
+ },
+ {
+  "slug": "unicorn-f072",
+  "kind": "display",
+  "board": [
+   {
+    "footprint": "kbd:OLED_v2",
+    "ref": "OL1",
+    "bus": "i2c",
+    "power": "3.3V (net name only)",
+    "power_by_name": "3v3",
+    "nets": [
+     "+3V3",
+     "GND",
+     "i2c_scl",
+     "i2c_sda"
+    ]
+   }
+  ],
+  "firmware": [
+   "i2c"
+  ]
+ },
+ {
+  "slug": "unicorn-mx",
+  "kind": "display",
+  "board": [
+   {
+    "footprint": "kbd:OLED_v2",
+    "ref": "OL1",
+    "bus": "i2c",
+    "power": "3.3V (net name only)",
+    "power_by_name": "3v3",
+    "nets": [
+     "+3V3",
+     "GND",
+     "i2c_scl",
+     "i2c_sda"
+    ]
+   }
+  ],
+  "firmware": [
+   "i2c"
+  ]
+ },
+ {
+  "slug": "yosino58",
+  "kind": "display",
+  "board": [
+   {
+    "footprint": "yosino58:OLED",
+    "ref": "J6",
+    "bus": "unnamed",
+    "power": "Pro Micro VCC pin: follows the controller",
+    "power_by_name": "unstated",
+    "nets": [
+     "Net-(J2-Pad1)",
+     "Net-(J2-Pad2)",
+     "Net-(J2-Pad3)",
+     "Net-(J2-Pad4)"
+    ]
+   },
+   {
+    "footprint": "yosino58:OLED",
+    "ref": "J3",
+    "bus": "unnamed",
+    "power": "Pro Micro VCC pin: follows the controller",
+    "power_by_name": "unstated",
+    "nets": [
+     "Net-(J2-Pad1)",
+     "Net-(J2-Pad2)",
+     "Net-(J2-Pad3)",
+     "Net-(J2-Pad4)"
+    ]
+   },
+   {
+    "footprint": "yosino58:OLED",
+    "ref": "J5",
+    "bus": "unnamed",
+    "power": "Pro Micro VCC pin: follows the controller",
+    "power_by_name": "unstated",
+    "nets": [
+     "Net-(J2-Pad1)",
+     "Net-(J2-Pad2)",
+     "Net-(J2-Pad3)",
+     "Net-(J2-Pad4)"
+    ]
+   },
+   {
+    "footprint": "yosino58:OLED",
+    "ref": "J4",
+    "bus": "unnamed",
+    "power": "Pro Micro VCC pin: follows the controller",
+    "power_by_name": "unstated",
+    "nets": [
+     "Net-(J2-Pad1)",
+     "Net-(J2-Pad2)",
+     "Net-(J2-Pad3)",
+     "Net-(J2-Pad4)"
+    ]
+   },
+   {
+    "footprint": "yosino58:OLED",
+    "ref": "J2",
+    "bus": "unnamed",
+    "power": "Pro Micro VCC pin: follows the controller",
+    "power_by_name": "unstated",
+    "nets": [
+     "Net-(J2-Pad1)",
+     "Net-(J2-Pad2)",
+     "Net-(J2-Pad3)",
+     "Net-(J2-Pad4)"
+    ]
+   }
+  ],
+  "firmware": [
+   "i2c"
+  ]
+ },
+ {
+  "slug": "yosino58-cherry",
+  "kind": "display",
+  "board": [
+   {
+    "footprint": "yosino58_cherry:OLED",
+    "ref": "J6",
+    "bus": "unnamed",
+    "power": "Pro Micro VCC pin: follows the controller",
+    "power_by_name": "unstated",
+    "nets": [
+     "Net-(J2-Pad1)",
+     "Net-(J2-Pad2)",
+     "Net-(J2-Pad3)",
+     "Net-(J2-Pad4)"
+    ]
+   },
+   {
+    "footprint": "yosino58_cherry:OLED",
+    "ref": "J3",
+    "bus": "unnamed",
+    "power": "Pro Micro VCC pin: follows the controller",
+    "power_by_name": "unstated",
+    "nets": [
+     "Net-(J2-Pad1)",
+     "Net-(J2-Pad2)",
+     "Net-(J2-Pad3)",
+     "Net-(J2-Pad4)"
+    ]
+   },
+   {
+    "footprint": "yosino58_cherry:OLED",
+    "ref": "J5",
+    "bus": "unnamed",
+    "power": "Pro Micro VCC pin: follows the controller",
+    "power_by_name": "unstated",
+    "nets": [
+     "Net-(J2-Pad1)",
+     "Net-(J2-Pad2)",
+     "Net-(J2-Pad3)",
+     "Net-(J2-Pad4)"
+    ]
+   },
+   {
+    "footprint": "yosino58_cherry:OLED",
+    "ref": "J4",
+    "bus": "unnamed",
+    "power": "Pro Micro VCC pin: follows the controller",
+    "power_by_name": "unstated",
+    "nets": [
+     "Net-(J2-Pad1)",
+     "Net-(J2-Pad2)",
+     "Net-(J2-Pad3)",
+     "Net-(J2-Pad4)"
+    ]
+   },
+   {
+    "footprint": "yosino58_cherry:OLED",
+    "ref": "J2",
+    "bus": "unnamed",
+    "power": "Pro Micro VCC pin: follows the controller",
+    "power_by_name": "unstated",
+    "nets": [
+     "Net-(J2-Pad1)",
+     "Net-(J2-Pad2)",
+     "Net-(J2-Pad3)",
+     "Net-(J2-Pad4)"
+    ]
+   }
+  ],
+  "firmware": [
+   "i2c"
+  ]
+ },
+ {
+  "slug": "yosino58-chocolate",
+  "kind": "display",
+  "board": [
+   {
+    "footprint": "yosino58_chocolate:OLED",
+    "ref": "J6",
+    "bus": "unnamed",
+    "power": "Pro Micro VCC pin: follows the controller",
+    "power_by_name": "unstated",
+    "nets": [
+     "Net-(J2-Pad1)",
+     "Net-(J2-Pad2)",
+     "Net-(J2-Pad3)",
+     "Net-(J2-Pad4)"
+    ]
+   },
+   {
+    "footprint": "yosino58_chocolate:OLED",
+    "ref": "J3",
+    "bus": "unnamed",
+    "power": "Pro Micro VCC pin: follows the controller",
+    "power_by_name": "unstated",
+    "nets": [
+     "Net-(J2-Pad1)",
+     "Net-(J2-Pad2)",
+     "Net-(J2-Pad3)",
+     "Net-(J2-Pad4)"
+    ]
+   },
+   {
+    "footprint": "yosino58_chocolate:OLED",
+    "ref": "J5",
+    "bus": "unnamed",
+    "power": "Pro Micro VCC pin: follows the controller",
+    "power_by_name": "unstated",
+    "nets": [
+     "Net-(J2-Pad1)",
+     "Net-(J2-Pad2)",
+     "Net-(J2-Pad3)",
+     "Net-(J2-Pad4)"
+    ]
+   },
+   {
+    "footprint": "yosino58_chocolate:OLED",
+    "ref": "J4",
+    "bus": "unnamed",
+    "power": "Pro Micro VCC pin: follows the controller",
+    "power_by_name": "unstated",
+    "nets": [
+     "Net-(J2-Pad1)",
+     "Net-(J2-Pad2)",
+     "Net-(J2-Pad3)",
+     "Net-(J2-Pad4)"
+    ]
+   },
+   {
+    "footprint": "yosino58_chocolate:OLED",
+    "ref": "J2",
+    "bus": "unnamed",
+    "power": "Pro Micro VCC pin: follows the controller",
+    "power_by_name": "unstated",
+    "nets": [
+     "Net-(J2-Pad1)",
+     "Net-(J2-Pad2)",
+     "Net-(J2-Pad3)",
+     "Net-(J2-Pad4)"
+    ]
+   }
+  ],
+  "firmware": [
+   "i2c"
+  ]
+ },
+ {
+  "slug": "zodiark",
+  "kind": "display",
+  "board": [
+   {
+    "footprint": "Zodiark:OLED_4Pin",
+    "ref": "P1",
+    "bus": "unnamed",
+    "power": "Pro Micro VCC pin: follows the controller",
+    "power_by_name": "unstated",
+    "nets": [
+     "Net-(LEFT1-Pad1)",
+     "Net-(LEFT2-Pad1)",
+     "Net-(LEFT3-Pad1)",
+     "Net-(LEFT4-Pad1)"
+    ]
+   },
+   {
+    "footprint": "Zodiark:OLED_4Pin",
+    "ref": "P2",
+    "bus": "unnamed",
+    "power": "Pro Micro VCC pin: follows the controller",
+    "power_by_name": "unstated",
+    "nets": [
+     "Net-(LEFT5-Pad1)",
+     "Net-(LEFT6-Pad1)",
+     "Net-(LEFT7-Pad1)",
+     "Net-(LEFT8-Pad1)"
+    ]
+   }
+  ],
+  "firmware": [
+   "i2c"
+  ]
+ }
+]

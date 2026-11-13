@@ -1,0 +1,104 @@
+# seed/stagger-overrides.toml -- designs the owner ruled by eye where
+# `build_silhouettes.stagger_kind` gets the wrong answer, corrected by hand.
+#
+# `stagger_kind` is fitted against 38 designs `measure_stagger_candidates.py` sampled and
+# the owner ruled one by one (2026-09-24) -- 36 of the 38 agree with it after the sparse-row
+# fix below (`choc-v` and `gummy-key` are the two that do not, both real LOCAL exceptions
+# -- one or two columns, not the whole board -- not evidence the fitted rule is wrong
+# elsewhere). Owner review of the shipped verdicts the same day found six more designs
+# outside that fitting sample where the rule reads a genuine geometric ambiguity
+# (near-zero on both axes, or a numpad's wide keys) the wrong way; those six are below the
+# first two.
+#
+# KEYED BY SLUG, the design-level key `measure_stagger.py` itself verdicts against -- one
+# verdict per design, combined across every board file that design offers, same as splay.
+
+[[entry]]
+slug    = "choc-v"
+stagger = "ortho"
+note    = "ortho but for one splayed outer column -- owner's own description, not a rule fit"
+
+# `adjacent_row_alignment`'s sparse-row fix (2026-09-24, EUISOpcb/Setta21/Lily58 Lite Rev3
+# false positives) drops rows of four or fewer before pairing -- which is exactly what
+# `gummy-key`'s two outer columns are: one key each per "row", individually offset from
+# the four-column ortho core, real column stagger the old, buggier average used to catch
+# by accident. Fixing the bug for the three false positives above cost this one its right
+# answer, so it moves here rather than reintroducing the bug the fix was for.
+[[entry]]
+slug    = "gummy-key"
+stagger = "column"
+note    = "four-column ortho core plus two individually offset outer columns -- owner's original ruling, lost to the sparse-row fix"
+
+# `discipad` -- a 17-key numpad (the owner's own word for it) whose wide `+` and `0` keys
+# break the row grouping the same way a sparse thumb row does, just with no general fix
+# attempted for it here: numpad-shaped exceptions are rare enough that one more override
+# is cheaper than a second row-floor special case.
+[[entry]]
+slug    = "discipad"
+stagger = "ortho"
+note    = "a 17-key numpad; its wide +/0 keys break row grouping the same way sparse rows did"
+
+# FIVE MORE, OWNER-CORRECTED 2026-09-24, all sharing one shape: `adjacent_row_alignment`
+# and `row_share` both read near-zero on these boards' RAW geometry, because none of
+# sesame, arisu, skeleton68rev2, teaqueen or equanimity draws a clean shared row OR a
+# clean shared column at all -- each key sits at its own small offset, a sculpted/
+# individually-contoured board rather than a flat grid a geometric measurement can read
+# stagger off of. `stagger_kind`'s `column` fallback (row_share below 0.8, alignment
+# below 0.5) is a default for "neither axis lines up cleanly", not a positive finding,
+# and on these five boards that default is wrong: the owner rules all five row-staggered
+# regardless -- the LOGICAL matrix each one's firmware defines is a typewriter-style
+# stagger even where the physical PCB does not present it geometrically.
+#
+# NOT A COINCIDENCE that four of these five (sesame, arisu, skeleton68rev2, teaqueen)
+# already needed a `splay-overrides.toml` correction for the same underlying reason --
+# unusual geometry `has_splay`'s thumb-cluster rule could not read cleanly either.
+# `equanimity` is the fifth, corrected there for its own "peculiar splay" (an Alice
+# layout, not a name of its own) that this facet reads the same way: not splay, and the
+# owner's own aside here -- "I guess you'd say row-stagger still" -- is the ruling kept.
+[[entry]]
+slug    = "sesame"
+stagger = "row"
+note    = "sculpted geometry reads near-zero on both axes; owner rules it row-staggered regardless"
+
+[[entry]]
+slug    = "arisu"
+stagger = "row"
+note    = "sculpted geometry reads near-zero on both axes; owner rules it row-staggered regardless"
+
+[[entry]]
+slug    = "skeleton68rev2"
+stagger = "row"
+note    = "sculpted geometry reads near-zero on both axes; owner rules it row-staggered regardless"
+
+[[entry]]
+slug    = "teaqueen"
+stagger = "row"
+note    = "sculpted geometry reads near-zero on both axes; owner rules it row-staggered regardless"
+
+[[entry]]
+slug    = "equanimity"
+stagger = "row"
+note    = "an Alice layout -- \"I guess you'd say row-stagger still\", the owner's own words"
+
+# `"unknown"` REMOVES A VERDICT RATHER THAN ASSIGNING ONE -- see `measure_stagger.py`'s
+# own handling of this value. `touhoupad-v2` is a hand-shaped Touhou gamepad, not a
+# keyboard: its own summary says the bomb button is pressed with the left thumb, and its
+# ten keys sit at four different rotations (345, 270, 0, 15 degrees) in a shape built for
+# a hand, not a grid. None of ortho/row/column is a true answer for it -- owner-ruled
+# 2026-09-24.
+[[entry]]
+slug    = "touhoupad-v2"
+stagger = "unknown"
+note    = "a hand-shaped gamepad, not a keyboard grid -- none of the three buckets fits"
+
+# `lily58-lite-rev3` -- owner-corrected 2026-10-04: "it's column-staggered". The board file
+# (kata0510/lily58, Lite_Rev3/Lily58_Lite_Rev3.kicad_pcb) is drawn turned a quarter turn:
+# its file "rows" of equal y are the keyboard's COLUMNS, six of four keys a hand, and the
+# sideways shifts between them (up to 7.7 mm) are the column stagger. `stagger_kind` reads
+# the file's axes as given, so it saw level rows and ruled ortho. The repo's own
+# lite-rev3-pcb.png shows the turn, and its build photo shows the stagger. The 2026-09-24
+# check that called this board "genuinely ortho" made the same mistake.
+[[entry]]
+slug    = "lily58-lite-rev3"
+stagger = "column"
+note    = "board file drawn a quarter turn round; its level 'rows' are the columns -- owner, 2026-10-04"

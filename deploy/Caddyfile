@@ -1,0 +1,122 @@
+forgejo.keyboardbuilders.net {
+  reverse_proxy host.docker.internal:3000
+}
+
+dev.keyboardbuilders.net {
+  reverse_proxy host.docker.internal:8081
+}
+
+www.keyboardbuilders.net {
+  redir https://keyboardbuilders.net{uri} permanent
+}
+
+keyboardbuilders.net {
+  # A trailing slash is a different URL to a crawler and a 404 to this app: /designs/ was
+  # dead while /designs worked. 301 rather than serving both, so one address is canonical.
+  # `(.+)/$` cannot match "/" itself, so the front page is untouched.
+  @trailingSlash path_regexp trail (.+)/$
+  redir @trailingSlash {re.trail.1} permanent
+
+  header {
+    # The site is HTTPS-only through this proxy and never said so. A year, and WITHOUT
+    # includeSubDomains: this block is the apex, and that directive would silently bind
+    # every subdomain -- forgejo, statlite -- to HTTPS forever on a decision made here.
+    Strict-Transport-Security "max-age=31536000"
+    # The catalogue serves user-supplied strings inside HTML and an SVG favicon; nosniff
+    # stops a browser deciding a response is something more executable than it says.
+    X-Content-Type-Options "nosniff"
+    Referrer-Policy "strict-origin-when-cross-origin"
+    X-Frame-Options "SAMEORIGIN"
+  }
+  # Forgejo #28. The actuator lives on its own loopback port and is not proxied here at
+  # all, so this can never match anything today. It is here so that a future change to
+  # application-prod.properties -- moving management back onto the main port -- cannot
+  # quietly publish health details and a metrics index to the internet.
+  handle /actuator* {
+    respond 404
+  }
+
+  # THE ENFORCEMENT HALF OF `robots.txt`, and it is here because robots.txt is a request
+  # that takes a day to be heard: crawlers cache it, so the `Disallow: /designs?` groups
+  # SeoController serves cannot quiet this box tonight. This block says the same thing to
+  # the same agents and says it immediately.
+  #
+  # IT IS THE FIX FOR THE FLOOD AFTER ALL, AND THE REVERSAL IS THE POINT OF THIS COMMENT.
+  # It used to say the 2026-09-07 flood was **Googlebot** -- 2510 of 2533 requests, ten IPs
+  # in 66.249.66.0/24, forward-confirmed rDNS, walking the ~151,000 facet combinations at
+  # 87 req/s with both vCPUs pegged -- and concluded that Google cannot be blocked here
+  # because it is the traffic the site is for. The measurement stands; the attribution was
+  # a misread of the user agent. A 60-second window on 2026-09-08 was **4961 GoogleOther
+  # out of 5000 requests** against 24 from Googlebot, every URI a filtered list, and
+  # GoogleOther sends the same Android/Mobile Safari string with its own name only in the
+  # trailing parenthesis. One product token in brackets was the whole difference.
+  #
+  # The conclusion holds for Googlebot and fails for GoogleOther, which is why only one of
+  # them is listed below. Google documents GoogleOther as a generic fetcher whose crawling
+  # preferences "don't affect any specific product": it feeds no index, so a 429 costs this
+  # site no search traffic. Googlebot stays out for the original reason, and `noindex` still
+  # only works on a page it is allowed to fetch.
+  #
+  # 429 AND NOT 403: "you are asking too fast", not "you may never have this". A 403
+  # invites a crawler to drop the URLs from its frontier permanently; a 429 with
+  # Retry-After is the documented way to ask for a slower rate on pages that still exist.
+  #
+  # The agent list must stay identical to SeoController.FACET_CRAWLERS. Two lists that
+  # disagree is worse than either alone: the site would then refuse an agent it publicly
+  # told to come in, which is the kind of contradiction a crawler is entitled to ignore.
+  # ACCESS LOGGING, AND ITS ABSENCE IS WHY THE FIRST DIAGNOSIS WAS WRONG. Caddy logs
+  # errors and TLS events by default and NOT requests, so `docker logs caddy` was empty
+  # for 30 minutes while the app served 87 req/s -- read as "no traffic", which sent the
+  # investigation after an imaginary spin bug. A log never asked to record a thing is not
+  # evidence that the thing did not happen.
+  #
+  # IT GOES IN /config, WHICH IS ODD ON PURPOSE. That is an existing named volume, so the
+  # file lands at /var/lib/docker/volumes/caddy_caddy_config/_data/access.log on the host
+  # -- readable by fail2ban, surviving container recreation, and needing only a `reload`.
+  # A bind mount to /var/log/caddy would be tidier and would cost a `compose up -d`, which
+  # drops every vhost on this box. Visibility was worth more than tidiness that evening.
+  #
+  # The roll is not housekeeping: at this request rate the JSON lines run ~3.7 GB/day, and
+  # the disk is 38 GB.
+  log {
+    output file /config/access.log {
+      roll_size 20MiB
+      roll_keep 3
+    }
+    format json
+  }
+
+  @facetCrawler {
+    header_regexp User-Agent (?i)(GoogleOther|ClaudeBot|GPTBot|CCBot|Bytespider|Amazonbot|meta-externalagent|meta-webindexer|PerplexityBot)
+    path /designs
+    expression {query} != ""
+  }
+  handle @facetCrawler {
+    header Retry-After 3600
+    respond "Filtered lists are closed to this agent; see /robots.txt. The catalogue is at /designs and /sitemap.xml." 429
+  }
+
+  # A SCRAPER DRESSED AS A BROWSER, 2026-10-04: 98% of all requests (7/s) were filtered
+  # lists from 400 rotating Alibaba Cloud IPs (47.79.0.0/16), claiming Chrome and a Google
+  # referer, so the agent list above never saw them. What gave them away is a header they
+  # never send: every real browser sends Accept-Language, and 11,000 of 11,000 of these did
+  # not. Honest crawlers that skip it name themselves as bots and are left to the rule above.
+  @disguisedFacetCrawler {
+    path /designs
+    expression {query} != ""
+    not header Accept-Language *
+    not header_regexp User-Agent (?i)(bot|crawler|spider)
+  }
+  handle @disguisedFacetCrawler {
+    header Retry-After 3600
+    respond "Filtered lists are closed to this agent; see /robots.txt. The catalogue is at /designs and /sitemap.xml." 429
+  }
+  reverse_proxy host.docker.internal:8080
+}
+
+statlite.keyboardbuilders.net {
+  basic_auth {
+    fowlie $2a$14$cKp1sUmIhywFyQY7KHKB1ejRDJ1G8lIqBwwH37K7yAMlImAnmXSaK
+  }
+  reverse_proxy host.docker.internal:9090
+}

@@ -1,0 +1,17 @@
+[Unit]
+Description=Back up the keyboardbuilders SQLite database
+Documentation=https://github.com/fowlie/keyboardbuilders/blob/main/deploy/README.md
+
+[Service]
+Type=oneshot
+User=keyboardbuilders
+Group=keyboardbuilders
+Environment=KB_DATABASE=/var/lib/keyboardbuilders/app.db
+Environment=KB_BACKUP_DIR=/var/backups/keyboardbuilders
+Environment=KB_BACKUP_KEEP=14
+ExecStart=/opt/keyboardbuilders/backup.sh
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/backups/keyboardbuilders

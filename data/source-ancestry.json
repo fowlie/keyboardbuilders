@@ -1,0 +1,4324 @@
+{
+ "0x544D/kuro65": {
+  "archived": false,
+  "description": "Kuro65 - The hot-swappable ISO mechanical keyboard PCB",
+  "fork": false,
+  "full_name": "0x544D/kuro65",
+  "parent": null,
+  "pushed_at": "2023-03-14T16:44:23Z",
+  "root": null,
+  "stargazers_count": 2
+ },
+ "3araht/chromatonemini": {
+  "archived": false,
+  "description": null,
+  "fork": false,
+  "full_name": "3araht/chromatonemini",
+  "parent": null,
+  "pushed_at": "2023-09-23T05:36:21Z",
+  "root": null,
+  "stargazers_count": 11
+ },
+ "4pplet/bootlegs": {
+  "error": "gh: Not Found (HTTP 404)"
+ },
+ "4pplet/eagle_viper_rep": {
+  "archived": false,
+  "description": "Replacement PCB for the Duck Viper V2-V3 and Duck Eagle V2-V3",
+  "fork": false,
+  "full_name": "4pplet/eagle_viper_rep",
+  "parent": null,
+  "pushed_at": "2024-05-30T09:28:31Z",
+  "root": null,
+  "stargazers_count": 3
+ },
+ "4pplet/steezy60": {
+  "archived": false,
+  "description": "Steezy60 is a 60% PCB in two versions: one for SMK gen 2 switches one for ALPS-compatible switches. Compatible with standard tray-mount cases. BIG layout compatibility.",
+  "fork": false,
+  "full_name": "4pplet/Steezy60",
+  "parent": null,
+  "pushed_at": "2025-02-05T21:24:03Z",
+  "root": null,
+  "stargazers_count": 30
+ },
+ "4pplet/unextended": {
+  "archived": false,
+  "description": "The Unextended Keyboard. A 60% Keyboard targeting Alps and AEK-keycaps",
+  "fork": false,
+  "full_name": "4pplet/Unextended",
+  "parent": null,
+  "pushed_at": "2023-04-12T09:33:31Z",
+  "root": null,
+  "stargazers_count": 22
+ },
+ "4pplet/waffling60": {
+  "archived": false,
+  "description": "Multi layout 60% PCB with support for common ANSI and ISO layouts and split space. SE-version is for use in Polaris, DB-version for use in Bakeneko/Kei.",
+  "fork": false,
+  "full_name": "4pplet/waffling60",
+  "parent": null,
+  "pushed_at": "2024-10-25T12:40:17Z",
+  "root": null,
+  "stargazers_count": 99
+ },
+ "4pplet/yakiimo-pcb": {
+  "error": "gh: Not Found (HTTP 404)"
+ },
+ "74th/sparrow62-buildguide": {
+  "archived": false,
+  "description": "build guides of DIY keyboard kit designed by @74rh",
+  "fork": false,
+  "full_name": "74th/sparrow62-buildguide",
+  "parent": null,
+  "pushed_at": "2025-05-16T07:23:14Z",
+  "root": null,
+  "stargazers_count": 13
+ },
+ "Aidan-OS/Mochi40": {
+  "archived": false,
+  "description": "A 40% keyboard with an OLED and rotary encoder",
+  "fork": false,
+  "full_name": "Aidan-OS/Mochi40",
+  "parent": null,
+  "pushed_at": "2023-04-24T20:19:31Z",
+  "root": null,
+  "stargazers_count": 69
+ },
+ "Aidan-OS/Sango": {
+  "archived": false,
+  "description": "A 65%ish percent ortholinear split keyboard",
+  "fork": false,
+  "full_name": "Aidan-OS/Sango",
+  "parent": null,
+  "pushed_at": "2025-08-30T00:04:35Z",
+  "root": null,
+  "stargazers_count": 0
+ },
+ "Aleblazer/Zodiark": {
+  "archived": false,
+  "description": "Feature packed split keyboard",
+  "fork": false,
+  "full_name": "Aleblazer/Zodiark",
+  "parent": null,
+  "pushed_at": "2024-05-26T19:22:07Z",
+  "root": null,
+  "stargazers_count": 14
+ },
+ "Bastardkb/Dilemma": {
+  "archived": false,
+  "description": null,
+  "fork": false,
+  "full_name": "Bastardkb/Dilemma",
+  "parent": null,
+  "pushed_at": "2026-09-10T09:53:21Z",
+  "root": null,
+  "stargazers_count": 584
+ },
+ "Biacco42/Ergo42": {
+  "archived": false,
+  "description": "7x4 ortho linear split keyboard - The Answer to the Ultimate Question of Life, the Universe, and at least Keyboards",
+  "fork": false,
+  "full_name": "Biacco42/Ergo42",
+  "parent": null,
+  "pushed_at": "2022-12-14T14:25:36Z",
+  "root": null,
+  "stargazers_count": 217
+ },
+ "Biacco42/meishi2": {
+  "archived": false,
+  "description": null,
+  "fork": false,
+  "full_name": "Biacco42/meishi2",
+  "parent": null,
+  "pushed_at": "2019-08-10T07:32:25Z",
+  "root": null,
+  "stargazers_count": 22
+ },
+ "Dbroqua/DK60": {
+  "archived": false,
+  "description": "[MOVED] Mechanical keyboard based on HHKB layout",
+  "fork": false,
+  "full_name": "Dbroqua/DK60",
+  "parent": null,
+  "pushed_at": "2019-01-19T20:27:37Z",
+  "root": null,
+  "stargazers_count": 3
+ },
+ "Envious-Data/Env-KB": {
+  "archived": false,
+  "description": "A custom mechanical keyboard inspired by the CFTKB Mysterium utilizing the Raspberry Pi Pico",
+  "fork": false,
+  "full_name": "Envious-Data/Env-KB",
+  "parent": null,
+  "pushed_at": "2024-04-16T18:20:26Z",
+  "root": null,
+  "stargazers_count": 257
+ },
+ "Envious-Data/Env-KB60F": {
+  "archived": false,
+  "description": "Another Custom Mechanical Keyboard... F stands for FOREHEAD!",
+  "fork": false,
+  "full_name": "Envious-Data/Env-KB60F",
+  "parent": null,
+  "pushed_at": "2025-03-02T20:46:11Z",
+  "root": null,
+  "stargazers_count": 8
+ },
+ "Envious-Data/Env-KB65M": {
+  "archived": false,
+  "description": "A 65% Custom Mechanical Keyboard.",
+  "fork": false,
+  "full_name": "Envious-Data/Env-KB65M",
+  "parent": null,
+  "pushed_at": "2023-09-24T17:03:56Z",
+  "root": null,
+  "stargazers_count": 8
+ },
+ "Envious-Data/Env-MCRO": {
+  "archived": false,
+  "description": "A Raspberry Pi Pico powered Macro board, like a Streamdeck but cheaper and simpler.",
+  "fork": false,
+  "full_name": "Envious-Data/Env-MCRO",
+  "parent": null,
+  "pushed_at": "2025-02-26T00:28:43Z",
+  "root": null,
+  "stargazers_count": 87
+ },
+ "ErkHal/prkl30": {
+  "archived": false,
+  "description": "MechKeebs Finland 30% keyboard project",
+  "fork": false,
+  "full_name": "ErkHal/PRKL30",
+  "parent": null,
+  "pushed_at": "2023-11-08T18:46:21Z",
+  "root": null,
+  "stargazers_count": 47
+ },
+ "Frooastside/Frooastboard": {
+  "archived": false,
+  "description": null,
+  "fork": false,
+  "full_name": "Frooastside/Frooastboard",
+  "parent": null,
+  "pushed_at": "2026-06-16T21:26:53Z",
+  "root": null,
+  "stargazers_count": 1
+ },
+ "KamoNanban/Manta60": {
+  "archived": false,
+  "description": "60% split keyboard",
+  "fork": false,
+  "full_name": "KamoNanban/Manta60",
+  "parent": null,
+  "pushed_at": "2020-02-09T16:17:30Z",
+  "root": null,
+  "stargazers_count": 42
+ },
+ "Ladniy/jiran": {
+  "archived": false,
+  "description": "Ergo Split Keyboard",
+  "fork": false,
+  "full_name": "Ladniy/jiran",
+  "parent": null,
+  "pushed_at": "2022-04-27T14:15:00Z",
+  "root": null,
+  "stargazers_count": 67
+ },
+ "MangoIV/dracuLad": {
+  "archived": false,
+  "description": "QMK-powered 34-36 key split keyboard",
+  "fork": false,
+  "full_name": "MangoIV/dracuLad",
+  "parent": null,
+  "pushed_at": "2024-03-07T10:09:39Z",
+  "root": null,
+  "stargazers_count": 230
+ },
+ "Pekaso/fortitude60": {
+  "archived": false,
+  "description": null,
+  "fork": false,
+  "full_name": "Pekaso/fortitude60",
+  "parent": null,
+  "pushed_at": "2021-11-24T00:41:44Z",
+  "root": null,
+  "stargazers_count": 195
+ },
+ "PyrooL/Alpha": {
+  "archived": false,
+  "description": "A 28-key semi-ortholinear mechanical keyboard designed by PyroL",
+  "fork": false,
+  "full_name": "PyrooL/Alpha",
+  "parent": null,
+  "pushed_at": "2024-07-01T01:45:13Z",
+  "root": null,
+  "stargazers_count": 297
+ },
+ "PyrooL/Meson": {
+  "archived": false,
+  "description": "A split 3x14 keyboard with spacebars on a fourth row. Reversible MX/Alps/Choc support.",
+  "fork": false,
+  "full_name": "PyrooL/Meson",
+  "parent": null,
+  "pushed_at": "2019-07-28T02:28:27Z",
+  "root": null,
+  "stargazers_count": 2
+ },
+ "Salicylic-acid3/PCB_Data": {
+  "archived": false,
+  "description": null,
+  "fork": false,
+  "full_name": "Salicylic-acid3/PCB_Data",
+  "parent": null,
+  "pushed_at": "2026-08-16T13:18:04Z",
+  "root": null,
+  "stargazers_count": 51
+ },
+ "SethSenpai/Tanuki": {
+  "archived": false,
+  "description": "An open source 40% keyboard",
+  "fork": false,
+  "full_name": "SethSenpai/Tanuki",
+  "parent": null,
+  "pushed_at": "2022-07-30T12:13:27Z",
+  "root": null,
+  "stargazers_count": 284
+ },
+ "Spaceboards/SpaceboardsHardware": {
+  "archived": false,
+  "description": "A collection of open source hardware that has been designed by Spaceboards",
+  "fork": false,
+  "full_name": "Spaceboards/SpaceboardsHardware",
+  "parent": null,
+  "pushed_at": "2026-04-12T15:29:41Z",
+  "root": null,
+  "stargazers_count": 144
+ },
+ "That-Canadian/Keyboard_Files": {
+  "archived": false,
+  "description": "My open source keyboard files will go here",
+  "fork": false,
+  "full_name": "That-Canadian/Keyboard_Files",
+  "parent": null,
+  "pushed_at": "2017-11-21T14:15:08Z",
+  "root": null,
+  "stargazers_count": 13
+ },
+ "That-Canadian/MiniDox_PCB": {
+  "archived": false,
+  "description": "MiniDox Keyboard, PCB files",
+  "fork": false,
+  "full_name": "That-Canadian/MiniDox_PCB",
+  "parent": null,
+  "pushed_at": "2017-08-20T00:49:01Z",
+  "root": null,
+  "stargazers_count": 169
+ },
+ "TuckTuckFloof/EUISO-pcb": {
+  "archived": false,
+  "description": "Oh Lord, what is this trainwreck",
+  "fork": false,
+  "full_name": "TuckTuckFloof/EUISO-pcb",
+  "parent": null,
+  "pushed_at": "2021-06-16T20:54:44Z",
+  "root": null,
+  "stargazers_count": 0
+ },
+ "TweetyDaBird/Fat-Chameleon": {
+  "archived": false,
+  "description": "A Grid Ortho keyboard for BM40, JJ40/JJ50 cases inspired by Planck and Preonic",
+  "fork": false,
+  "full_name": "TweetyDaBird/Fat-Chameleon",
+  "parent": null,
+  "pushed_at": "2025-11-29T10:05:03Z",
+  "root": null,
+  "stargazers_count": 14
+ },
+ "TweetyDaBird/Little-Big-Scroll": {
+  "archived": false,
+  "description": "A family of macropads featuring a large Encoder wheel and (1?)/4 or 6 keys.",
+  "fork": false,
+  "full_name": "TweetyDaBird/Little-Big-Scroll",
+  "parent": null,
+  "pushed_at": "2025-06-03T12:19:22Z",
+  "root": null,
+  "stargazers_count": 55
+ },
+ "abraini-nascent/battleship_gamepad": {
+  "archived": false,
+  "description": "A hand-wired 3d-printed mechanical keyboard intended for one hand with an analog thumbstick for movement. The layout matches the left side of large \"battleship\" keyboards with their extra bank of 2x5 1u F keys.",
+  "fork": false,
+  "full_name": "abraini-Nascent/battleship_gamepad",
+  "parent": null,
+  "pushed_at": "2021-09-22T03:42:57Z",
+  "root": null,
+  "stargazers_count": 3
+ },
+ "adereth/dactyl-keyboard": {
+  "archived": false,
+  "description": "Parameterized ergonomic keyboard",
+  "fork": false,
+  "full_name": "adereth/dactyl-keyboard",
+  "parent": null,
+  "pushed_at": "2021-01-17T09:20:46Z",
+  "root": null,
+  "stargazers_count": 3158
+ },
+ "adpenrose/kintsugi_keeb": {
+  "archived": false,
+  "description": "Repository for the kintsugi keyboard.",
+  "fork": false,
+  "full_name": "apaydev/kintsugi_keeb",
+  "parent": null,
+  "pushed_at": "2022-06-16T19:15:44Z",
+  "root": null,
+  "stargazers_count": 3
+ },
+ "adpenrose/shisaku_keeb": {
+  "error": "gh: Not Found (HTTP 404)"
+ },
+ "aeonstrife/potato65": {
+  "archived": false,
+  "description": "PCB, Plate and Case files for Potato65 keyboard",
+  "fork": false,
+  "full_name": "Aeonstrife/potato65",
+  "parent": null,
+  "pushed_at": "2024-04-02T16:58:33Z",
+  "root": null,
+  "stargazers_count": 1
+ },
+ "aeonstrife/potato65hotswap": {
+  "error": "gh: Not Found (HTTP 404)"
+ },
+ "aeonstrife/potato65solderable": {
+  "error": "gh: Not Found (HTTP 404)"
+ },
+ "ai03-2725/contra": {
+  "archived": false,
+  "description": "Contra - Lowest cost ortholinear keyboard kit possible",
+  "fork": false,
+  "full_name": "ai03-2725/Contra",
+  "parent": null,
+  "pushed_at": "2019-05-27T23:15:56Z",
+  "root": null,
+  "stargazers_count": 195
+ },
+ "ai03-2725/duet-switch-tester": {
+  "archived": false,
+  "description": "Switch tester designed for two of each switch for display and testability",
+  "fork": false,
+  "full_name": "ai03-2725/duet-switch-tester",
+  "parent": null,
+  "pushed_at": "2023-10-29T23:17:41Z",
+  "root": null,
+  "stargazers_count": 3
+ },
+ "ai03-2725/jp60": {
+  "archived": false,
+  "description": "GH60-compatible JIS-like hotswap keyboard PCB",
+  "fork": false,
+  "full_name": "ai03-2725/JP60",
+  "parent": null,
+  "pushed_at": "2023-04-18T13:41:15Z",
+  "root": null,
+  "stargazers_count": 27
+ },
+ "ai03-2725/orbit": {
+  "archived": false,
+  "description": "Orbit Keyboard - Split ergonomic keyboard with 5 rows and 7 columns",
+  "fork": true,
+  "full_name": "ai03-2725/Orbit",
+  "parent": "foostan/crkbd",
+  "pushed_at": "2020-06-18T18:46:40Z",
+  "root": "foostan/crkbd",
+  "stargazers_count": 87
+ },
+ "ai03-2725/soyuz": {
+  "archived": false,
+  "description": "Inexpensive mechanical numpad kit",
+  "fork": false,
+  "full_name": "ai03-2725/Soyuz",
+  "parent": null,
+  "pushed_at": "2019-06-08T03:59:32Z",
+  "root": null,
+  "stargazers_count": 58
+ },
+ "ai03-2725/voyager60": {
+  "archived": true,
+  "description": "A versatile, modern 60% PCB",
+  "fork": false,
+  "full_name": "ai03-2725/Voyager60",
+  "parent": null,
+  "pushed_at": "2019-05-27T23:14:09Z",
+  "root": null,
+  "stargazers_count": 78
+ },
+ "akyp/desire65-pcb": {
+  "archived": false,
+  "description": "Open-source 65% hotswap pcb",
+  "fork": false,
+  "full_name": "akyp/desire65-pcb",
+  "parent": null,
+  "pushed_at": "2024-12-21T13:29:40Z",
+  "root": null,
+  "stargazers_count": 9
+ },
+ "an-achronism/tetromino": {
+  "error": "gh: Not Found (HTTP 404)"
+ },
+ "anavitechnology/anavi-arrows": {
+  "archived": false,
+  "description": "ANAVI Arrows is an open source programmable mini mechanical keyboard with 4 mechanical switches and a rotary encoder.",
+  "fork": false,
+  "full_name": "AnaviTechnology/anavi-arrows",
+  "parent": null,
+  "pushed_at": "2026-04-15T17:25:30Z",
+  "root": null,
+  "stargazers_count": 8
+ },
+ "anavitechnology/anavi-macro-pad-10": {
+  "archived": false,
+  "description": "Mini hot-swappable mechanical keyboard with a clickable rotary encoder, 9 Cherry MX compatible switches, translucent key caps, USB-C, RP2040 microcontroller, backlighting and under lighting.",
+  "fork": false,
+  "full_name": "AnaviTechnology/anavi-macro-pad-10",
+  "parent": null,
+  "pushed_at": "2026-04-03T16:51:03Z",
+  "root": null,
+  "stargazers_count": 30
+ },
+ "anavitechnology/anavi-macro-pad-12": {
+  "archived": false,
+  "description": "Mini hot-swappable mechanical keyboard with 12 Cherry MX compatible switches, translucent key caps, USB-C, RP2040 microcontroller, mini OLED display, backlighting and under lighting.",
+  "fork": false,
+  "full_name": "AnaviTechnology/anavi-macro-pad-12",
+  "parent": null,
+  "pushed_at": "2025-12-07T19:31:51Z",
+  "root": null,
+  "stargazers_count": 11
+ },
+ "ashijanken/slimorta": {
+  "archived": false,
+  "description": "A slim and portable keyboad.",
+  "fork": false,
+  "full_name": "ASHIJANKEN/Slimorta",
+  "parent": null,
+  "pushed_at": "2025-06-08T12:38:18Z",
+  "root": null,
+  "stargazers_count": 0
+ },
+ "autumnisacutie/karina": {
+  "archived": false,
+  "description": "A 80-ish% Alps keyboard with an LED bar",
+  "fork": false,
+  "full_name": "misonoworks/jungfrau",
+  "parent": null,
+  "pushed_at": "2021-08-17T06:21:32Z",
+  "root": null,
+  "stargazers_count": 0
+ },
+ "avdyushin/franky36": {
+  "archived": false,
+  "description": "Franky36 handwired keyboard",
+  "fork": false,
+  "full_name": "avdyushin/franky36",
+  "parent": null,
+  "pushed_at": "2026-01-05T10:44:31Z",
+  "root": null,
+  "stargazers_count": 2
+ },
+ "azhizhinov/elcantorhs": {
+  "archived": false,
+  "description": "The El Cantor HS keyboard is a 44 key diodeless split keyboard with support for hotswap sockets, designed with simplicity in mind.",
+  "fork": false,
+  "full_name": "azhizhinov/ELCANTORHS",
+  "parent": null,
+  "pushed_at": "2024-10-31T08:24:42Z",
+  "root": null,
+  "stargazers_count": 5
+ },
+ "azhizhinov/piantoruv44": {
+  "archived": false,
+  "description": "The Piantor UV 44 keyboard is a 44 key diodeless split keyboard with support for hotswap sockets, designed with simplicity in mind. Piantor UV 44 is a Piantor/Cantor fork with Raspberry Pi Pico, hybrid hotswap socket and soldered-in switches support and flippable PCB.",
+  "fork": false,
+  "full_name": "azhizhinov/PIANTORUV44",
+  "parent": null,
+  "pushed_at": "2024-10-31T08:23:38Z",
+  "root": null,
+  "stargazers_count": 1
+ },
+ "b-karl/KBIC65": {
+  "archived": false,
+  "description": "65% keyboard PCB with ProMicro footprint. Through-hole kit design with focus on wireless.",
+  "fork": false,
+  "full_name": "b-karl/KBIC65",
+  "parent": null,
+  "pushed_at": "2021-08-26T16:57:15Z",
+  "root": null,
+  "stargazers_count": 67
+ },
+ "bastardkb/charybdis": {
+  "archived": false,
+  "description": null,
+  "fork": false,
+  "full_name": "Bastardkb/Charybdis",
+  "parent": null,
+  "pushed_at": "2026-07-29T08:20:05Z",
+  "root": null,
+  "stargazers_count": 1837
+ },
+ "bastardkb/scylla": {
+  "archived": false,
+  "description": "Ergonomic mechanical keyboard",
+  "fork": false,
+  "full_name": "Bastardkb/Scylla",
+  "parent": null,
+  "pushed_at": "2026-03-05T09:59:03Z",
+  "root": null,
+  "stargazers_count": 372
+ },
+ "bastardkb/skeletyl": {
+  "archived": false,
+  "description": null,
+  "fork": false,
+  "full_name": "Bastardkb/Skeletyl",
+  "parent": null,
+  "pushed_at": "2025-02-20T09:43:09Z",
+  "root": null,
+  "stargazers_count": 771
+ },
+ "bastardkb/tbk-mini": {
+  "archived": false,
+  "description": null,
+  "fork": false,
+  "full_name": "Bastardkb/TBK-Mini",
+  "parent": null,
+  "pushed_at": "2025-03-21T08:55:26Z",
+  "root": null,
+  "stargazers_count": 323
+ },
+ "bbrfkr/keyboards": {
+  "archived": false,
+  "description": "keyboards source by bbrfkr",
+  "fork": false,
+  "full_name": "bbrfkr/keyboards",
+  "parent": null,
+  "pushed_at": "2022-02-25T10:21:09Z",
+  "root": null,
+  "stargazers_count": 2
+ },
+ "beanaccle/kb58_pico": {
+  "archived": false,
+  "description": null,
+  "fork": false,
+  "full_name": "beanaccle/kb58",
+  "parent": null,
+  "pushed_at": "2026-03-19T07:07:58Z",
+  "root": null,
+  "stargazers_count": 0
+ },
+ "beekeeb/piantor": {
+  "archived": false,
+  "description": "The Piantor Keyboard is a beginner-friendly, easy-to-solder, 42-key or 36-key, diodeless, low profile aggressive column staggered, hotswappable and non-hotswappable, programmable ergonomic mechanical split keyboard powered by Raspberry Pi Pico or other compatible RP2040 boards. It is based on the Cantor Keyboard.",
+  "fork": false,
+  "full_name": "beekeeb/piantor",
+  "parent": null,
+  "pushed_at": "2023-10-23T06:38:56Z",
+  "root": null,
+  "stargazers_count": 861
+ },
+ "bemeier/bmek": {
+  "archived": false,
+  "description": null,
+  "fork": false,
+  "full_name": "Bemeier/bmek",
+  "parent": null,
+  "pushed_at": "2022-05-16T08:27:52Z",
+  "root": null,
+  "stargazers_count": 210
+ },
+ "bigwheel/earth_rover": {
+  "archived": false,
+  "description": null,
+  "fork": false,
+  "full_name": "bigwheel/earth_rover",
+  "parent": null,
+  "pushed_at": "2021-01-04T15:06:02Z",
+  "root": null,
+  "stargazers_count": 0
+ },
+ "bit-trade-one/ADKB96-hardware": {
+  "archived": false,
+  "description": "ADKB96 PCD & Case Data",
+  "fork": false,
+  "full_name": "bit-trade-one/ADKB96-hardware",
+  "parent": null,
+  "pushed_at": "2021-12-01T07:24:00Z",
+  "root": null,
+  "stargazers_count": 2
+ },
+ "bleroy/3d-junkyard": {
+  "archived": false,
+  "description": "Random 3D models",
+  "fork": false,
+  "full_name": "bleroy/3d-junkyard",
+  "parent": null,
+  "pushed_at": "2026-08-10T16:30:23Z",
+  "root": null,
+  "stargazers_count": 66
+ },
+ "blewis308/bop-keyboard": {
+  "archived": false,
+  "description": null,
+  "fork": false,
+  "full_name": "blewis308/BOP-Keyboard",
+  "parent": null,
+  "pushed_at": "2022-02-23T16:38:07Z",
+  "root": null,
+  "stargazers_count": 10
+ },
+ "blu006/vimclutch_hw": {
+  "archived": false,
+  "description": "vimclutch hardware",
+  "fork": false,
+  "full_name": "blu006/vimclutch_hw",
+  "parent": null,
+  "pushed_at": "2024-05-24T02:41:56Z",
+  "root": null,
+  "stargazers_count": 0
+ },
+ "bluepylons/boston": {
+  "archived": false,
+  "description": "A 120% mechanical keyboard ",
+  "fork": false,
+  "full_name": "bluepylons/Boston",
+  "parent": null,
+  "pushed_at": "2026-06-24T02:57:09Z",
+  "root": null,
+  "stargazers_count": 235
+ },
+ "bonnee/aim-65_keyboard": {
+  "archived": false,
+  "description": "Hi-Tek High Profile keyboard from a Rockwell AIM-65 Microcomputer",
+  "fork": false,
+  "full_name": "bonnee/aim-65_keyboard",
+  "parent": null,
+  "pushed_at": "2021-02-05T00:15:09Z",
+  "root": null,
+  "stargazers_count": 0
+ },
+ "bpendragon/selene-keyboard": {
+  "archived": false,
+  "description": "Relevant Project Files for a 109 key keybaord",
+  "fork": false,
+  "full_name": "Bpendragon/Selene-Keyboard",
+  "parent": null,
+  "pushed_at": "2020-08-03T03:22:19Z",
+  "root": null,
+  "stargazers_count": 1
+ },
+ "bratzworth/6key": {
+  "archived": false,
+  "description": "3D-Printed 6 Key Macropad",
+  "fork": false,
+  "full_name": "bratzworth/6key",
+  "parent": null,
+  "pushed_at": "2021-01-03T22:04:29Z",
+  "root": null,
+  "stargazers_count": 0
+ },
+ "brickbots/aball": {
+  "archived": false,
+  "description": "A Ball - Buttonless trackball for all",
+  "fork": false,
+  "full_name": "brickbots/aball",
+  "parent": null,
+  "pushed_at": "2024-12-21T18:09:22Z",
+  "root": null,
+  "stargazers_count": 803
+ },
+ "brickbots/chocv": {
+  "archived": false,
+  "description": "40% Choc keyboard based on a trimmed down Baby-V layout",
+  "fork": false,
+  "full_name": "brickbots/chocV",
+  "parent": null,
+  "pushed_at": "2023-01-24T19:30:34Z",
+  "root": null,
+  "stargazers_count": 186
+ },
+ "bschwind/key-ripper": {
+  "archived": false,
+  "description": "A keyboard personalized for myself, designed in KiCad, with custom firmware and a case, both written in Rust. Can sit on top of a macbook keyboard.",
+  "fork": false,
+  "full_name": "bschwind/key-ripper",
+  "parent": null,
+  "pushed_at": "2026-02-09T09:47:25Z",
+  "root": null,
+  "stargazers_count": 288
+ },
+ "canbaytok/cans12erv2": {
+  "archived": false,
+  "description": "Gerber, STL files and instructions to manufacture a Cans12erV2 keypad",
+  "fork": false,
+  "full_name": "canbaytok/Cans12erV2",
+  "parent": null,
+  "pushed_at": "2024-11-21T20:56:27Z",
+  "root": null,
+  "stargazers_count": 0
+ },
+ "catmunch/macrocat": {
+  "archived": false,
+  "description": "A cat like macro keyboard/numpad.",
+  "fork": false,
+  "full_name": "catmunch/macrocat",
+  "parent": null,
+  "pushed_at": "2022-10-31T12:19:52Z",
+  "root": null,
+  "stargazers_count": 0
+ },
+ "cfbender/keyboards": {
+  "archived": false,
+  "description": "A collection of all of my keyboard projects",
+  "fork": false,
+  "full_name": "cfbender/keyboards",
+  "parent": null,
+  "pushed_at": "2021-04-30T19:03:06Z",
+  "root": null,
+  "stargazers_count": 64
+ },
+ "cgarcia2097/8-pack": {
+  "archived": false,
+  "description": "Repository for design files, source code and assembly guides regarding this keypad.",
+  "fork": false,
+  "full_name": "cgarcia2097/8-Pack",
+  "parent": null,
+  "pushed_at": "2020-07-07T03:52:50Z",
+  "root": null,
+  "stargazers_count": 14
+ },
+ "chillkb/ghoultkl": {
+  "archived": false,
+  "description": "A modern Filco TKL replacement PCB",
+  "fork": false,
+  "full_name": "chillKB/ghoulTKL",
+  "parent": null,
+  "pushed_at": "2025-06-30T02:07:19Z",
+  "root": null,
+  "stargazers_count": 8
+ },
+ "chrischrislolo/banime40": {
+  "archived": false,
+  "description": "A 4x10 hotswap ortholinear keyboard that supports multiple configurations.",
+  "fork": false,
+  "full_name": "ChrisChrisLoLo/banime40",
+  "parent": null,
+  "pushed_at": "2026-01-08T01:14:10Z",
+  "root": null,
+  "stargazers_count": 111
+ },
+ "chrishoage/spleeb": {
+  "archived": false,
+  "description": "A split keyboard... or spleeb",
+  "fork": false,
+  "full_name": "chrishoage/spleeb",
+  "parent": null,
+  "pushed_at": "2024-08-26T00:24:09Z",
+  "root": null,
+  "stargazers_count": 87
+ },
+ "cipulot/ec-pro-x": {
+  "error": "gh: Not Found (HTTP 404)"
+ },
+ "cipulot/ec23u": {
+  "error": "gh: Not Found (HTTP 404)"
+ },
+ "cipulot/ec60": {
+  "error": "gh: Not Found (HTTP 404)"
+ },
+ "cipulot/rf_r1_8-9xu": {
+  "error": "gh: Not Found (HTTP 404)"
+ },
+ "climent/atreyu": {
+  "archived": false,
+  "description": null,
+  "fork": false,
+  "full_name": "climent/atreyu",
+  "parent": null,
+  "pushed_at": "2023-05-21T07:03:59Z",
+  "root": null,
+  "stargazers_count": 62
+ },
+ "cmdremily/opendeck": {
+  "archived": false,
+  "description": null,
+  "fork": false,
+  "full_name": "cmdremily/OpenDeck",
+  "parent": null,
+  "pushed_at": "2022-10-05T21:43:23Z",
+  "root": null,
+  "stargazers_count": 1
+ },
+ "coseyfannitutti/discipad": {
+  "archived": false,
+  "description": "17-key numpad assembled with only through hole components, including usb type-c",
+  "fork": false,
+  "full_name": "coseyfannitutti/discipad",
+  "parent": null,
+  "pushed_at": "2020-07-06T00:10:23Z",
+  "root": null,
+  "stargazers_count": 219
+ },
+ "coseyfannitutti/discipline": {
+  "archived": false,
+  "description": "65% keyboard assembled with only through hole components, including usb type-c",
+  "fork": false,
+  "full_name": "coseyfannitutti/discipline",
+  "parent": null,
+  "pushed_at": "2024-02-03T03:47:29Z",
+  "root": null,
+  "stargazers_count": 1003
+ },
+ "coseyfannitutti/mullet": {
+  "error": "gh: Not Found (HTTP 404)"
+ },
+ "coseyfannitutti/mulletpad": {
+  "error": "gh: Not Found (HTTP 404)"
+ },
+ "coseyfannitutti/mysterium": {
+  "archived": false,
+  "description": "TKL keyboard that can be entirely assembled using only through hole components, including usb type-c",
+  "fork": false,
+  "full_name": "coseyfannitutti/mysterium",
+  "parent": null,
+  "pushed_at": "2023-02-22T15:41:03Z",
+  "root": null,
+  "stargazers_count": 542
+ },
+ "coseyfannitutti/romeo": {
+  "archived": false,
+  "description": "Staggered 40% keyboard pcb that can be assembled with only through hole components, including USB Type-C",
+  "fork": false,
+  "full_name": "coseyfannitutti/romeo",
+  "parent": null,
+  "pushed_at": "2020-11-30T04:36:18Z",
+  "root": null,
+  "stargazers_count": 147
+ },
+ "cozykeys/bloomer": {
+  "archived": false,
+  "description": "An 87 key ergonomic mechanical keyboard",
+  "fork": false,
+  "full_name": "cozykeys/bloomer",
+  "parent": null,
+  "pushed_at": "2024-12-21T20:18:53Z",
+  "root": null,
+  "stargazers_count": 61
+ },
+ "cozykeys/speedo": {
+  "archived": false,
+  "description": "A 66-key ergonomic mechanical keyboard",
+  "fork": false,
+  "full_name": "cozykeys/speedo",
+  "parent": null,
+  "pushed_at": "2020-10-24T05:25:26Z",
+  "root": null,
+  "stargazers_count": 19
+ },
+ "crehmann/buzzard": {
+  "archived": false,
+  "description": "Buzzard is a 40 keys ergonomic split keyboard",
+  "fork": false,
+  "full_name": "crehmann/Buzzard",
+  "parent": null,
+  "pushed_at": "2021-12-16T19:45:53Z",
+  "root": null,
+  "stargazers_count": 121
+ },
+ "cybergear/mk-macro-01": {
+  "archived": false,
+  "description": "Macro keyboard project",
+  "fork": false,
+  "full_name": "CyberGear/mk-macro-01",
+  "parent": null,
+  "pushed_at": "2021-04-09T05:31:22Z",
+  "root": null,
+  "stargazers_count": 0
+ },
+ "cyril279/keyboards": {
+  "archived": false,
+  "description": null,
+  "fork": false,
+  "full_name": "cyril279/keyboards",
+  "parent": null,
+  "pushed_at": "2022-07-01T11:54:26Z",
+  "root": null,
+  "stargazers_count": 74
+ },
+ "daneski13/junco": {
+  "archived": false,
+  "description": "Junco, an ergonomic split keyboard with rotary encoders. Powered by Raspberry Pi Pico",
+  "fork": false,
+  "full_name": "daneski13/Junco",
+  "parent": null,
+  "pushed_at": "2024-06-04T05:42:10Z",
+  "root": null,
+  "stargazers_count": 15
+ },
+ "dannixon/aya": {
+  "archived": false,
+  "description": "Another split keyboard, because the world does not have enough split keyboards.",
+  "fork": false,
+  "full_name": "DanNixon/aya",
+  "parent": null,
+  "pushed_at": "2022-02-15T16:59:45Z",
+  "root": null,
+  "stargazers_count": 1
+ },
+ "davidphilipbarr/36keys": {
+  "archived": false,
+  "description": "Keyboard pcbs with 36key or less?",
+  "fork": false,
+  "full_name": "davidphilipbarr/36keys",
+  "parent": null,
+  "pushed_at": "2021-08-03T09:43:59Z",
+  "root": null,
+  "stargazers_count": 129
+ },
+ "davidphilipbarr/hypergolic": {
+  "archived": false,
+  "description": "Ergonomic 34 key keyboard with ring and pinky splay.",
+  "fork": false,
+  "full_name": "davidphilipbarr/hypergolic",
+  "parent": null,
+  "pushed_at": "2023-05-08T18:12:16Z",
+  "root": null,
+  "stargazers_count": 50
+ },
+ "davidphilipbarr/macropads": {
+  "archived": false,
+  "description": "Choc spaced macro pads.",
+  "fork": false,
+  "full_name": "davidphilipbarr/Macropads",
+  "parent": null,
+  "pushed_at": "2022-05-23T11:04:32Z",
+  "root": null,
+  "stargazers_count": 14
+ },
+ "davidphilipbarr/sweep": {
+  "archived": false,
+  "description": "Sweep - a small promicro based keyboard inspired by the Ferris.",
+  "fork": false,
+  "full_name": "davidphilipbarr/Sweep",
+  "parent": null,
+  "pushed_at": "2025-12-14T10:23:10Z",
+  "root": null,
+  "stargazers_count": 2108
+ },
+ "dayatz/mechanical-keyboards": {
+  "archived": false,
+  "description": null,
+  "fork": false,
+  "full_name": "dayatz/mechanical-keyboards",
+  "parent": null,
+  "pushed_at": "2021-08-29T01:08:21Z",
+  "root": null,
+  "stargazers_count": 4
+ },
+ "dcpedit/masonry": {
+  "archived": false,
+  "description": "Ergonomic columnar 40% keyboard based of Bruce the Keyboard",
+  "fork": false,
+  "full_name": "dcpedit/masonry",
+  "parent": null,
+  "pushed_at": "2024-08-26T20:41:57Z",
+  "root": null,
+  "stargazers_count": 19
+ },
+ "dcpedit/redherring": {
+  "archived": false,
+  "description": "Red Herring Keyboard PCB and case files",
+  "fork": false,
+  "full_name": "dcpedit/redherring",
+  "parent": null,
+  "pushed_at": "2024-05-12T18:46:25Z",
+  "root": null,
+  "stargazers_count": 250
+ },
+ "diepala/cantor": {
+  "archived": false,
+  "description": "Cantor keyboard, a 42 key diodeless split keyboard.",
+  "fork": false,
+  "full_name": "diepala/cantor",
+  "parent": null,
+  "pushed_at": "2024-11-24T18:53:28Z",
+  "root": null,
+  "stargazers_count": 750
+ },
+ "dinofizz/fnrow-pcb": {
+  "archived": false,
+  "description": "KiCad files for the FnRow mechanical keyboard",
+  "fork": false,
+  "full_name": "dinofizz/fnrow-pcb",
+  "parent": null,
+  "pushed_at": "2024-01-13T13:59:25Z",
+  "root": null,
+  "stargazers_count": 13
+ },
+ "dkruyt/mk": {
+  "archived": false,
+  "description": "Mechanical Keyboard projects ",
+  "fork": false,
+  "full_name": "dkruyt/mk",
+  "parent": null,
+  "pushed_at": "2023-10-22T20:51:37Z",
+  "root": null,
+  "stargazers_count": 1
+ },
+ "dlford/quokka": {
+  "archived": true,
+  "description": "A split ortholinear keyboard designed for the small handed",
+  "fork": false,
+  "full_name": "dlford/quokka",
+  "parent": null,
+  "pushed_at": "2026-03-08T22:19:43Z",
+  "root": null,
+  "stargazers_count": 29
+ },
+ "dlip/chouchou": {
+  "archived": false,
+  "description": "20 Key keyboard",
+  "fork": false,
+  "full_name": "dlip/chouchou",
+  "parent": null,
+  "pushed_at": "2025-10-07T02:50:46Z",
+  "root": null,
+  "stargazers_count": 27
+ },
+ "dmnosachev/kinesis80": {
+  "archived": false,
+  "description": "Replacement PCB for Kinesis Contoured keyboards",
+  "fork": false,
+  "full_name": "DmNosachev/kin80",
+  "parent": null,
+  "pushed_at": "2023-03-10T07:58:09Z",
+  "root": null,
+  "stargazers_count": 25
+ },
+ "dnlnm/cloak-xt-stm32": {
+  "archived": false,
+  "description": "PCB for Cloak XT",
+  "fork": false,
+  "full_name": "dnlnm/cloak-xt-stm32",
+  "parent": null,
+  "pushed_at": "2024-08-29T10:06:24Z",
+  "root": null,
+  "stargazers_count": 0
+ },
+ "doesntfazer/Budgy": {
+  "archived": false,
+  "description": "Split 34 key keyboard powered by a raspberry pi pico and QMK",
+  "fork": false,
+  "full_name": "doesntfazer/Budgy",
+  "parent": null,
+  "pushed_at": "2024-04-05T15:30:03Z",
+  "root": null,
+  "stargazers_count": 27
+ },
+ "doesntfazer/CrowBoard": {
+  "archived": false,
+  "description": "Single Board 34/36 Keyboard",
+  "fork": false,
+  "full_name": "doesntfazer/CrowBoard",
+  "parent": null,
+  "pushed_at": "2023-02-24T15:59:01Z",
+  "root": null,
+  "stargazers_count": 55
+ },
+ "dpapavas/lagrange-keyboard": {
+  "archived": false,
+  "description": "A configurable, handwired, ergonomic keyboard",
+  "fork": false,
+  "full_name": "dpapavas/lagrange-keyboard",
+  "parent": null,
+  "pushed_at": "2021-11-02T20:08:37Z",
+  "root": null,
+  "stargazers_count": 136
+ },
+ "drabaioli/sdrakb00": {
+  "archived": false,
+  "description": "Hot-swap macropad with rotary encoder",
+  "fork": false,
+  "full_name": "drabaioli/SdraKb00",
+  "parent": null,
+  "pushed_at": "2025-07-21T15:01:13Z",
+  "root": null,
+  "stargazers_count": 1
+ },
+ "dsanchezseco/punk75": {
+  "archived": false,
+  "description": "Ortholinear keyboard with 75 keys and all components through hole",
+  "fork": false,
+  "full_name": "dsanchezseco/punk75",
+  "parent": null,
+  "pushed_at": "2021-02-10T21:40:33Z",
+  "root": null,
+  "stargazers_count": 44
+ },
+ "duckyb/eternal-keypad": {
+  "archived": false,
+  "description": "A 36 key gaming keypad, for both right and left handed mouse users.",
+  "fork": false,
+  "full_name": "duckyb/eternal-keypad",
+  "parent": null,
+  "pushed_at": "2025-07-10T09:34:39Z",
+  "root": null,
+  "stargazers_count": 191
+ },
+ "durken1/pierce": {
+  "archived": false,
+  "description": "split 5x3 column stagger keyboard",
+  "fork": false,
+  "full_name": "durken1/pierce",
+  "parent": null,
+  "pushed_at": "2024-09-14T18:46:33Z",
+  "root": null,
+  "stargazers_count": 170
+ },
+ "dvorak55/chavdai40": {
+  "archived": false,
+  "description": "Challenge to Handle Acoustic-noise, Verify Drastic Abductive Implementation.",
+  "fork": false,
+  "full_name": "dvorak55/chavdai40",
+  "parent": null,
+  "pushed_at": "2026-08-13T10:16:56Z",
+  "root": null,
+  "stargazers_count": 6
+ },
+ "dwctor/kaly": {
+  "archived": false,
+  "description": "The Kaly is a Cheap, Split and Ergo 42 key Keyboard! ",
+  "fork": false,
+  "full_name": "Dwctor/Kaly",
+  "parent": null,
+  "pushed_at": "2023-10-27T17:13:07Z",
+  "root": null,
+  "stargazers_count": 232
+ },
+ "ealdin/keyboards": {
+  "archived": false,
+  "description": null,
+  "fork": false,
+  "full_name": "Ealdin/keyboards",
+  "parent": null,
+  "pushed_at": "2021-03-11T17:22:59Z",
+  "root": null,
+  "stargazers_count": 8
+ },
+ "ebastler/isometria-75": {
+  "archived": false,
+  "description": "Minimalist 75% ISO keyboard",
+  "fork": false,
+  "full_name": "ebastler/isometria-75",
+  "parent": null,
+  "pushed_at": "2020-12-17T07:08:56Z",
+  "root": null,
+  "stargazers_count": 225
+ },
+ "eggsworks/egg58": {
+  "archived": false,
+  "description": "a 58-key, low profile, split keyboard with RGB",
+  "fork": false,
+  "full_name": "eggsworks/egg58",
+  "parent": null,
+  "pushed_at": "2023-12-04T13:32:02Z",
+  "root": null,
+  "stargazers_count": 87
+ },
+ "eliassjogreen/4by3": {
+  "archived": false,
+  "description": "\u2328\ufe0f A 12 key mechanical keypad",
+  "fork": false,
+  "full_name": "eliassjogreen/4by3",
+  "parent": null,
+  "pushed_at": "2019-08-15T23:27:05Z",
+  "root": null,
+  "stargazers_count": 3
+ },
+ "emajesty/eiri": {
+  "archived": false,
+  "description": "Atreus-inspired 40% keyboard",
+  "fork": false,
+  "full_name": "EMajesty/eiri",
+  "parent": null,
+  "pushed_at": "2021-07-12T22:01:08Z",
+  "root": null,
+  "stargazers_count": 8
+ },
+ "enochchau/dropout-numpad": {
+  "archived": false,
+  "description": "Mechanical numpad using QMK firmware",
+  "fork": false,
+  "full_name": "enochchau/dropout-numpad",
+  "parent": null,
+  "pushed_at": "2025-09-11T07:50:06Z",
+  "root": null,
+  "stargazers_count": 2
+ },
+ "eric-wood/macro-pad": {
+  "archived": false,
+  "description": "a simple mechanical keyboard macro pad",
+  "fork": false,
+  "full_name": "eric-wood/macro-pad",
+  "parent": null,
+  "pushed_at": "2021-03-24T04:48:26Z",
+  "root": null,
+  "stargazers_count": 0
+ },
+ "ericrlau/numdiscipline": {
+  "archived": false,
+  "description": "Modified CFTKB Discipline with num pad",
+  "fork": false,
+  "full_name": "ericrlau/NumDiscipline",
+  "parent": null,
+  "pushed_at": "2020-06-14T21:04:22Z",
+  "root": null,
+  "stargazers_count": 15
+ },
+ "erikpeyronson/erkbd": {
+  "archived": false,
+  "description": "3D printed, handwired, 44 key split mechanical keyboard",
+  "fork": false,
+  "full_name": "erikpeyronson/erkbd",
+  "parent": null,
+  "pushed_at": "2026-06-30T18:14:02Z",
+  "root": null,
+  "stargazers_count": 23
+ },
+ "erkhal/prkl30": {
+  "archived": false,
+  "description": "MechKeebs Finland 30% keyboard project",
+  "fork": false,
+  "full_name": "ErkHal/PRKL30",
+  "parent": null,
+  "pushed_at": "2023-11-08T18:46:21Z",
+  "root": null,
+  "stargazers_count": 47
+ },
+ "etiennecollin/wave": {
+  "archived": false,
+  "description": "A small, minimalist and reversible elite-c based split keyboard that builds on previous designs to fit your needs.",
+  "fork": false,
+  "full_name": "etiennecollin/wave",
+  "parent": null,
+  "pushed_at": "2025-04-08T18:52:32Z",
+  "root": null,
+  "stargazers_count": 41
+ },
+ "evyd13/atom47": {
+  "archived": false,
+  "description": "Replacement PCB for the Vortex Core",
+  "fork": false,
+  "full_name": "evyd13/atom47",
+  "parent": null,
+  "pushed_at": "2024-02-14T20:10:10Z",
+  "root": null,
+  "stargazers_count": 30
+ },
+ "evyd13/fin-pad": {
+  "archived": false,
+  "description": "Replacement PCB for Lin Dolphin Pad",
+  "fork": false,
+  "full_name": "evyd13/fin-pad",
+  "parent": null,
+  "pushed_at": "2022-07-01T07:06:54Z",
+  "root": null,
+  "stargazers_count": 1
+ },
+ "evyd13/gh80-series": {
+  "archived": false,
+  "description": "GH80-1800, GH80-3700 and GH80-3003 by Evy (aka anykeys.eu)",
+  "fork": false,
+  "full_name": "evyd13/gh80-series",
+  "parent": null,
+  "pushed_at": "2021-05-03T13:28:33Z",
+  "root": null,
+  "stargazers_count": 67
+ },
+ "evyd13/gud70-pcb": {
+  "archived": false,
+  "description": "Replacement PCB for the Uniqey C70",
+  "fork": false,
+  "full_name": "evyd13/gud70-pcb",
+  "parent": null,
+  "pushed_at": "2021-02-24T20:38:28Z",
+  "root": null,
+  "stargazers_count": 1
+ },
+ "evyd13/mx-5160": {
+  "archived": false,
+  "description": "PCB and plate files for retrofitting MX type switches in a Chicony 5160c",
+  "fork": false,
+  "full_name": "evyd13/mx-5160",
+  "parent": null,
+  "pushed_at": "2021-05-03T13:36:58Z",
+  "root": null,
+  "stargazers_count": 3
+ },
+ "evyd13/nt-series": {
+  "archived": false,
+  "description": "Replacement PCBs for the FC660m, FC750r and FC980m.",
+  "fork": false,
+  "full_name": "evyd13/nt-series",
+  "parent": null,
+  "pushed_at": "2022-07-07T04:28:08Z",
+  "root": null,
+  "stargazers_count": 55
+ },
+ "evyd13/plain60-c": {
+  "archived": false,
+  "description": "Universally compatible 60% PCB with minimal layout support and USB-C",
+  "fork": false,
+  "full_name": "evyd13/plain60-c",
+  "parent": null,
+  "pushed_at": "2021-05-03T13:39:57Z",
+  "root": null,
+  "stargazers_count": 229
+ },
+ "evyd13/solheim68": {
+  "archived": false,
+  "description": "Replacement PCB for the VA68m with mini-usb port",
+  "fork": false,
+  "full_name": "evyd13/solheim68",
+  "parent": null,
+  "pushed_at": "2021-05-03T15:16:00Z",
+  "root": null,
+  "stargazers_count": 19
+ },
+ "farfalleflickan/nack": {
+  "archived": false,
+  "description": "nack keyboard",
+  "fork": false,
+  "full_name": "farfalleflickan/nack",
+  "parent": null,
+  "pushed_at": "2024-03-15T18:31:33Z",
+  "root": null,
+  "stargazers_count": 11
+ },
+ "fatenozomi/arisu-pcb": {
+  "archived": false,
+  "description": "PCB design files for Arisu Keyboard",
+  "fork": false,
+  "full_name": "FateNozomi/arisu-pcb",
+  "parent": null,
+  "pushed_at": "2020-10-20T05:05:52Z",
+  "root": null,
+  "stargazers_count": 282
+ },
+ "fearherbs1/blue-team-pad": {
+  "archived": false,
+  "description": "An open source macropad for the cyber security analyst.",
+  "fork": false,
+  "full_name": "fearherbs1/blue-team-pad",
+  "parent": null,
+  "pushed_at": "2023-05-04T23:30:58Z",
+  "root": null,
+  "stargazers_count": 6
+ },
+ "fgoodwin/dactyl-manuform-5x6_6": {
+  "archived": false,
+  "description": null,
+  "fork": false,
+  "full_name": "Inconel625/dactyl-manuform-5x6_6",
+  "parent": null,
+  "pushed_at": "2022-10-25T15:28:01Z",
+  "root": null,
+  "stargazers_count": 0
+ },
+ "fharding1/pdxkbc-badge": {
+  "archived": false,
+  "description": "A PDX KBC (Portland Keyboard Club) badge for DEF CON",
+  "fork": false,
+  "full_name": "fharding1/pdxkbc-badge",
+  "parent": null,
+  "pushed_at": "2020-03-19T21:37:15Z",
+  "root": null,
+  "stargazers_count": 3
+ },
+ "floookay/adelheid": {
+  "archived": false,
+  "description": "a 75% Alice-like keyboard based on the Arisu",
+  "fork": true,
+  "full_name": "floookay/adelheid",
+  "parent": "FateNozomi/arisu-pcb",
+  "pushed_at": "2023-09-18T06:38:34Z",
+  "root": "FateNozomi/arisu-pcb",
+  "stargazers_count": 122
+ },
+ "floookay/pluckey": {
+  "archived": false,
+  "description": "a 4x7 split keyboard with wide space keys and ergodox keycap support",
+  "fork": false,
+  "full_name": "floookay/pluckey",
+  "parent": null,
+  "pushed_at": "2022-01-28T12:43:03Z",
+  "root": null,
+  "stargazers_count": 42
+ },
+ "floookay/zwerg": {
+  "archived": false,
+  "description": "a 40% ortholinear split keyboard",
+  "fork": false,
+  "full_name": "floookay/zwerg",
+  "parent": null,
+  "pushed_at": "2025-03-07T14:31:58Z",
+  "root": null,
+  "stargazers_count": 4
+ },
+ "foostan/crkbd": {
+  "archived": false,
+  "description": "Corne keyboard, a split keyboard with 3x6 column staggered keys and 3 thumb keys.",
+  "fork": false,
+  "full_name": "foostan/crkbd",
+  "parent": null,
+  "pushed_at": "2025-05-10T16:33:06Z",
+  "root": null,
+  "stargazers_count": 7612
+ },
+ "freya-irl/splaytoraid40": {
+  "archived": false,
+  "description": "An ergonomic 40% keyboard with underglow and splay",
+  "fork": false,
+  "full_name": "freya-irl/splaytoraid40",
+  "parent": null,
+  "pushed_at": "2023-02-24T16:41:17Z",
+  "root": null,
+  "stargazers_count": 52
+ },
+ "frobiac/adnw": {
+  "archived": false,
+  "description": "AVR keyboard firmware with PS/2 trackpoint support & macro mode.",
+  "fork": false,
+  "full_name": "frobiac/adnw",
+  "parent": null,
+  "pushed_at": "2020-07-11T17:47:28Z",
+  "root": null,
+  "stargazers_count": 41
+ },
+ "gachiham/XR63GL": {
+  "archived": false,
+  "description": null,
+  "fork": false,
+  "full_name": "gachiham/XR63GL",
+  "parent": null,
+  "pushed_at": "2022-09-21T03:46:31Z",
+  "root": null,
+  "stargazers_count": 0
+ },
+ "galile0-designs/glyphkbd": {
+  "archived": false,
+  "description": "An ortholinear TKL keyboard",
+  "fork": false,
+  "full_name": "ixmachine/glyphkbd",
+  "parent": null,
+  "pushed_at": "2025-09-28T13:01:37Z",
+  "root": null,
+  "stargazers_count": 24
+ },
+ "geigeigeist/klor": {
+  "archived": false,
+  "description": "KLOR is 36-42 keys column-staggered split keyboard. It supports a per key RGB matrix, encoders, OLED displays, haptic feedback, audio, a Pixart Paw3204 trackball and four different layouts, through brake off parts.",
+  "fork": false,
+  "full_name": "GEIGEIGEIST/KLOR",
+  "parent": null,
+  "pushed_at": "2023-06-28T13:22:02Z",
+  "root": null,
+  "stargazers_count": 1187
+ },
+ "gkeyboard/gpad8-2r": {
+  "archived": false,
+  "description": null,
+  "fork": false,
+  "full_name": "gkeyboard/GPAD8-2R",
+  "parent": null,
+  "pushed_at": "2024-08-06T12:47:10Z",
+  "root": null,
+  "stargazers_count": 0
+ },
+ "gkeyboard/greatpad": {
+  "archived": false,
+  "description": null,
+  "fork": false,
+  "full_name": "gkeyboard/GreatPad",
+  "parent": null,
+  "pushed_at": "2024-02-29T13:29:18Z",
+  "root": null,
+  "stargazers_count": 0
+ },
+ "glozares/millipad": {
+  "archived": false,
+  "description": "My first foray into custom mechanical keyboards",
+  "fork": false,
+  "full_name": "GLozares/millipad",
+  "parent": null,
+  "pushed_at": "2021-04-10T02:04:19Z",
+  "root": null,
+  "stargazers_count": 0
+ },
+ "gregandcin/teaqueen": {
+  "archived": false,
+  "description": "An Alice Inspired Split Keyboard",
+  "fork": false,
+  "full_name": "gregandcin/teaqueen",
+  "parent": null,
+  "pushed_at": "2023-10-28T23:36:25Z",
+  "root": null,
+  "stargazers_count": 3
+ },
+ "gtips/reviung": {
+  "archived": false,
+  "description": null,
+  "fork": false,
+  "full_name": "gtips/reviung",
+  "parent": null,
+  "pushed_at": "2024-09-25T02:20:29Z",
+  "root": null,
+  "stargazers_count": 515
+ },
+ "guidoism/andean-condor": {
+  "archived": false,
+  "description": "48 key monoblock split keyboard",
+  "fork": false,
+  "full_name": "guidoism/andean-condor",
+  "parent": null,
+  "pushed_at": "2026-03-20T03:36:51Z",
+  "root": null,
+  "stargazers_count": 8
+ },
+ "guidoism/madjax_macropad": {
+  "archived": false,
+  "description": null,
+  "fork": false,
+  "full_name": "guidoism/madjax_macropad",
+  "parent": null,
+  "pushed_at": "2024-10-25T22:59:15Z",
+  "root": null,
+  "stargazers_count": 1
+ },
+ "gumorr/gummykey": {
+  "archived": false,
+  "description": "a split keyboard that i made",
+  "fork": false,
+  "full_name": "gumorr/GummyKey",
+  "parent": null,
+  "pushed_at": "2023-01-27T19:35:51Z",
+  "root": null,
+  "stargazers_count": 0
+ },
+ "gustawxyz/dactyl_manuform_pi_pico": {
+  "archived": true,
+  "description": "This is a dactyl_manuform on Raspberry Pi Pico guide.",
+  "fork": false,
+  "full_name": "GustawXYZ/dactyl_manuform_pi_pico",
+  "parent": null,
+  "pushed_at": "2026-01-26T21:36:45Z",
+  "root": null,
+  "stargazers_count": 4
+ },
+ "gzowski/somei70": {
+  "archived": false,
+  "description": "Somei70 - 70 key alternative keyboard",
+  "fork": false,
+  "full_name": "gzowski/Somei70",
+  "parent": null,
+  "pushed_at": "2024-09-28T15:19:42Z",
+  "root": null,
+  "stargazers_count": 3
+ },
+ "haierwangwei2005/10ble-oled-hub": {
+  "archived": false,
+  "description": "use MDBT40 256Rv3 ble4.0   0.91`OLED  2USB HUB",
+  "fork": false,
+  "full_name": "haierwangwei2005/10BLE-OLED-HUB",
+  "parent": null,
+  "pushed_at": "2020-12-05T01:08:01Z",
+  "root": null,
+  "stargazers_count": 0
+ },
+ "hardware7253/koca58": {
+  "archived": false,
+  "description": "A split keyboard design.",
+  "fork": false,
+  "full_name": "Hardware7253/Koca58",
+  "parent": null,
+  "pushed_at": "2026-03-19T03:50:56Z",
+  "root": null,
+  "stargazers_count": 0
+ },
+ "harrycutts/twentypad": {
+  "archived": false,
+  "description": "A simple twenty-key macro pad based on the ATMEGA32",
+  "fork": false,
+  "full_name": "HarryCutts/twentypad",
+  "parent": null,
+  "pushed_at": "2026-08-11T21:25:56Z",
+  "root": null,
+  "stargazers_count": 0
+ },
+ "hazels-garage/bad-wings": {
+  "archived": false,
+  "description": "Bad Wings",
+  "fork": false,
+  "full_name": "hazels-garage/bad-wings",
+  "parent": null,
+  "pushed_at": "2026-03-23T17:41:44Z",
+  "root": null,
+  "stargazers_count": 107
+ },
+ "hellsingcoder/limekeyboard": {
+  "archived": false,
+  "description": "a 6\u00d74+6 keys column-staggered split keyboard with encoder and joystick support",
+  "fork": false,
+  "full_name": "HellSingCoder/LimeKeyboard",
+  "parent": null,
+  "pushed_at": "2021-11-21T20:06:26Z",
+  "root": null,
+  "stargazers_count": 25
+ },
+ "henrikosorensen/keyboard_pcbs": {
+  "archived": false,
+  "description": null,
+  "fork": false,
+  "full_name": "henrikosorensen/keyboard_pcbs",
+  "parent": null,
+  "pushed_at": "2020-03-14T01:39:55Z",
+  "root": null,
+  "stargazers_count": 1
+ },
+ "herpiko/unk": {
+  "archived": false,
+  "description": "My own version of Ultimate Hacking Keyboard, wired by hand with love.",
+  "fork": false,
+  "full_name": "herpiko/unk",
+  "parent": null,
+  "pushed_at": "2023-04-02T06:43:20Z",
+  "root": null,
+  "stargazers_count": 125
+ },
+ "horrortroll/keebproj": {
+  "archived": false,
+  "description": "This repository is warehouse of my keyboard architecture.",
+  "fork": true,
+  "full_name": "HorrorTroll/Keeb_Project",
+  "parent": "marksard/Keyboards",
+  "pushed_at": "2022-08-20T14:37:17Z",
+  "root": "marksard/Keyboards",
+  "stargazers_count": 0
+ },
+ "hsgw/ergoinu": {
+  "archived": false,
+  "description": "An (not portable but small) ergonomic split keyboad",
+  "fork": false,
+  "full_name": "hsgw/ergoinu",
+  "parent": null,
+  "pushed_at": "2018-09-26T03:13:13Z",
+  "root": null,
+  "stargazers_count": 26
+ },
+ "hsgw/plaid": {
+  "archived": false,
+  "description": "12x4 ortholinear usb keyboard made by Through Hole components ONLY.",
+  "fork": false,
+  "full_name": "hsgw/plaid",
+  "parent": null,
+  "pushed_at": "2020-12-13T18:18:46Z",
+  "root": null,
+  "stargazers_count": 779
+ },
+ "hsgw/tartan": {
+  "archived": false,
+  "description": "60% keyboard made by through-hole parts only",
+  "fork": false,
+  "full_name": "hsgw/tartan",
+  "parent": null,
+  "pushed_at": "2020-12-05T08:25:20Z",
+  "root": null,
+  "stargazers_count": 97
+ },
+ "huytbt/h50-keyboard": {
+  "archived": false,
+  "description": "The H50 is a mini keyboard with a 50 percent layout. The keyboard consists of 53 keys.",
+  "fork": false,
+  "full_name": "huytbt/h50-keyboard",
+  "parent": null,
+  "pushed_at": "2022-10-17T15:07:58Z",
+  "root": null,
+  "stargazers_count": 1
+ },
+ "hyphen-ated/large-lad-keyboard": {
+  "archived": false,
+  "description": "Keyboard design with 148 keys. You can build it yourself.",
+  "fork": false,
+  "full_name": "Hyphen-ated/large-lad-keyboard",
+  "parent": null,
+  "pushed_at": "2022-07-10T09:28:02Z",
+  "root": null,
+  "stargazers_count": 4
+ },
+ "ianklug/grooveboard": {
+  "archived": false,
+  "description": "A four-key mechanical keyboard for rhythm games.",
+  "fork": false,
+  "full_name": "ianklug/grooveboard",
+  "parent": null,
+  "pushed_at": "2024-03-06T23:22:45Z",
+  "root": null,
+  "stargazers_count": 58
+ },
+ "ibnuda/alicia-cook": {
+  "archived": false,
+  "description": "yet another uninspiring, boring, and beaten to death clone of alice \"ergonomic\" keyboard. lol.",
+  "fork": false,
+  "full_name": "ibnuda/alicia-cook",
+  "parent": null,
+  "pushed_at": "2021-09-03T07:58:32Z",
+  "root": null,
+  "stargazers_count": 2
+ },
+ "ibnuda/gurindam": {
+  "archived": false,
+  "description": "arisu-style keyboard with promicro.",
+  "fork": false,
+  "full_name": "ibnuda/Gurindam",
+  "parent": null,
+  "pushed_at": "2022-02-04T13:29:26Z",
+  "root": null,
+  "stargazers_count": 2
+ },
+ "ibnuda/squiggle": {
+  "archived": false,
+  "description": null,
+  "fork": false,
+  "full_name": "ibnuda/Squiggle",
+  "parent": null,
+  "pushed_at": "2020-12-04T01:17:07Z",
+  "root": null,
+  "stargazers_count": 47
+ },
+ "idank/keyboards": {
+  "archived": false,
+  "description": null,
+  "fork": false,
+  "full_name": "idank/keyboards",
+  "parent": null,
+  "pushed_at": "2026-04-15T17:15:49Z",
+  "root": null,
+  "stargazers_count": 10
+ },
+ "idank/spankbd": {
+  "archived": false,
+  "description": null,
+  "fork": false,
+  "full_name": "idank/spankbd",
+  "parent": null,
+  "pushed_at": "2024-11-08T17:13:40Z",
+  "root": null,
+  "stargazers_count": 49
+ },
+ "iktas/pill60": {
+  "archived": false,
+  "description": "60% Keyboard utilizing BluePill",
+  "fork": false,
+  "full_name": "IktaS/Pill60",
+  "parent": null,
+  "pushed_at": "2021-05-22T11:56:26Z",
+  "root": null,
+  "stargazers_count": 8
+ },
+ "illness072/elephant42": {
+  "archived": false,
+  "description": "hardware of elephant42 keyboard",
+  "fork": false,
+  "full_name": "illness072/elephant42",
+  "parent": null,
+  "pushed_at": "2022-05-19T10:37:38Z",
+  "root": null,
+  "stargazers_count": 135
+ },
+ "imchipwood/dumbpad": {
+  "archived": false,
+  "description": "Simple 4x4 numpad with rotary encoder. Powered by QMK via ATmega32u4 Pro Micro",
+  "fork": false,
+  "full_name": "imchipwood/dumbpad",
+  "parent": null,
+  "pushed_at": "2026-03-04T01:52:59Z",
+  "root": null,
+  "stargazers_count": 501
+ },
+ "itsnoteasy/misc": {
+  "archived": false,
+  "description": null,
+  "fork": false,
+  "full_name": "itsnoteasy/misc",
+  "parent": null,
+  "pushed_at": "2026-04-03T18:24:28Z",
+  "root": null,
+  "stargazers_count": 12
+ },
+ "ivndbt/late-9": {
+  "archived": false,
+  "description": "The LATE-9 is a multi-tap input keyboard with OLED screen.",
+  "fork": false,
+  "full_name": "ivndbt/late-9",
+  "parent": null,
+  "pushed_at": "2025-03-18T08:46:43Z",
+  "root": null,
+  "stargazers_count": 1
+ },
+ "ivndbt/neopad": {
+  "archived": false,
+  "description": "Neopad is a little macropad with four switches and two rotary encoders, made by through hole components only. ",
+  "fork": false,
+  "full_name": "ivndbt/neopad",
+  "parent": null,
+  "pushed_at": "2025-03-18T08:43:16Z",
+  "root": null,
+  "stargazers_count": 21
+ },
+ "jamessa/angel": {
+  "archived": false,
+  "description": "Angel - a symmetrical staggered ergonomic keyboard.",
+  "fork": false,
+  "full_name": "jamessa/Angel",
+  "parent": null,
+  "pushed_at": "2021-01-27T09:34:37Z",
+  "root": null,
+  "stargazers_count": 13
+ },
+ "jannikb5825/shoc": {
+  "archived": false,
+  "description": "OpenSource stagered Choc Keyboard",
+  "fork": false,
+  "full_name": "JannikB5825/Shoc",
+  "parent": null,
+  "pushed_at": "2022-09-05T04:53:29Z",
+  "root": null,
+  "stargazers_count": 47
+ },
+ "jellytitan/sofle-pico": {
+  "archived": false,
+  "description": "A split ortholinear keyboard based on Sofle V2 that uses RP2040 Pico MCU, 128x64 OLEDs, RGB lighting, and rotary encoders.",
+  "fork": false,
+  "full_name": "JellyTitan/Sofle-Pico",
+  "parent": null,
+  "pushed_at": "2026-06-19T15:49:48Z",
+  "root": null,
+  "stargazers_count": 115
+ },
+ "jeremyscook/jc-pro-macro-2": {
+  "archived": false,
+  "description": "Programmable macro keypad and rotary input, with GPIO breakouts. Uses an ATmega32u4 Pro Micro for HID functionality.",
+  "fork": false,
+  "full_name": "JeremySCook/JC-Pro-Macro-2",
+  "parent": null,
+  "pushed_at": "2025-08-19T16:50:09Z",
+  "root": null,
+  "stargazers_count": 38
+ },
+ "jimmerricks/swoop": {
+  "archived": false,
+  "description": null,
+  "fork": true,
+  "full_name": "jimmerricks/swoop",
+  "parent": "davidphilipbarr/Sweep",
+  "pushed_at": "2024-06-18T04:19:37Z",
+  "root": "davidphilipbarr/Sweep",
+  "stargazers_count": 251
+ },
+ "jmdaly/co60": {
+  "archived": false,
+  "description": "KiCad design files for the CO60, an open hardware 60% keyboard PCB",
+  "fork": false,
+  "full_name": "jmdaly/CO60",
+  "parent": null,
+  "pushed_at": "2020-06-12T23:48:14Z",
+  "root": null,
+  "stargazers_count": 53
+ },
+ "joe-scotto/scottokeebs": {
+  "archived": false,
+  "description": "A collection of free-to-build handwired keyboard and macropad projects.",
+  "fork": false,
+  "full_name": "joe-scotto/scottokeebs",
+  "parent": null,
+  "pushed_at": "2026-08-20T15:10:33Z",
+  "root": null,
+  "stargazers_count": 1564
+ },
+ "joedinkle/eyeohdesigns": {
+  "archived": false,
+  "description": "Files for EOD keyboards",
+  "fork": false,
+  "full_name": "joedinkle/eyeohdesigns",
+  "parent": null,
+  "pushed_at": "2022-01-29T15:51:46Z",
+  "root": null,
+  "stargazers_count": 24
+ },
+ "joelproko/keyboard_layout_jopr": {
+  "archived": false,
+  "description": null,
+  "fork": false,
+  "full_name": "joelproko/keyboard_layout_jopr",
+  "parent": null,
+  "pushed_at": "2019-06-22T19:59:20Z",
+  "root": null,
+  "stargazers_count": 1
+ },
+ "jonbobcar/tenkey_plusplus": {
+  "archived": false,
+  "description": "Tenkey++ is a QMK powered, OSHW, USB-C connected, hotswapable numpad.",
+  "fork": false,
+  "full_name": "jonbobcar/tenkey_plusplus",
+  "parent": null,
+  "pushed_at": "2024-06-19T02:32:48Z",
+  "root": null,
+  "stargazers_count": 4
+ },
+ "joric/jorne": {
+  "archived": false,
+  "description": "Jorne is an extended Corne keyboard with extra keys for brackets and international layouts",
+  "fork": true,
+  "full_name": "joric/jorne",
+  "parent": "foostan/crkbd",
+  "pushed_at": "2024-03-20T05:08:28Z",
+  "root": "foostan/crkbd",
+  "stargazers_count": 539
+ },
+ "josefadamcik/soflekeyboard": {
+  "archived": false,
+  "description": "A split keyboard based on Lily58, Crkbd and Helix keyboards",
+  "fork": false,
+  "full_name": "josefadamcik/SofleKeyboard",
+  "parent": null,
+  "pushed_at": "2026-02-20T00:18:10Z",
+  "root": null,
+  "stargazers_count": 2528
+ },
+ "josh-l-wang/bruce-the-keyboard-the-resources": {
+  "archived": false,
+  "description": "A repository containing information about Bruce the Keyboard",
+  "fork": false,
+  "full_name": "josh-l-wang/Bruce-the-Keyboard-the-Resources",
+  "parent": null,
+  "pushed_at": "2024-03-24T18:00:43Z",
+  "root": null,
+  "stargazers_count": 16
+ },
+ "joshajohnson/hub20": {
+  "archived": false,
+  "description": "Hub20 is a numpad with a bunch of features you never knew you needed.",
+  "fork": false,
+  "full_name": "joshajohnson/Hub20",
+  "parent": null,
+  "pushed_at": "2022-02-04T06:12:01Z",
+  "root": null,
+  "stargazers_count": 67
+ },
+ "joshreve/dactyl-keyboard": {
+  "archived": false,
+  "description": "Dactyl-ManuForm, a parameterized ergonomic keyboard translated into Python including a cadquery / Open CASCADE implementation.",
+  "fork": true,
+  "full_name": "joshreve/dactyl-keyboard",
+  "parent": "tshort/dactyl-keyboard",
+  "pushed_at": "2026-05-26T22:51:19Z",
+  "root": "adereth/dactyl-keyboard",
+  "stargazers_count": 473
+ },
+ "joshwjb/mutepad": {
+  "archived": false,
+  "description": "A simple under desk mounted keypad with rotary encoder, for muting applications (discord, zoom etc.) and adjusting volume.",
+  "fork": false,
+  "full_name": "JoshwJB/MutePad",
+  "parent": null,
+  "pushed_at": "2022-06-22T20:08:15Z",
+  "root": null,
+  "stargazers_count": 1
+ },
+ "jpconstantineau/ergotravel": {
+  "archived": false,
+  "description": "A Portable Ergonomic Split Keyboard inspired from the ErgoDox, Let's Split and Minidox",
+  "fork": false,
+  "full_name": "jpconstantineau/ErgoTravel",
+  "parent": null,
+  "pushed_at": "2021-10-28T13:22:41Z",
+  "root": null,
+  "stargazers_count": 284
+ },
+ "jpe230/big_knob": {
+  "archived": false,
+  "description": "A 3D printed single encoder volume knob",
+  "fork": false,
+  "full_name": "Jpe230/big_knob",
+  "parent": null,
+  "pushed_at": "2023-10-18T04:12:29Z",
+  "root": null,
+  "stargazers_count": 1
+ },
+ "jpskenn/jones": {
+  "archived": false,
+  "description": " Row-staggered 60% keyboard with gapless R2-R3 row.\u3000GH60 case compatible.",
+  "fork": false,
+  "full_name": "jpskenn/Jones",
+  "parent": null,
+  "pushed_at": "2023-03-30T11:54:34Z",
+  "root": null,
+  "stargazers_count": 12
+ },
+ "jpskenn/unison": {
+  "archived": false,
+  "description": "2-way turn around keyboard for Computer & Music",
+  "fork": false,
+  "full_name": "jpskenn/Unison",
+  "parent": null,
+  "pushed_at": "2021-03-07T05:59:54Z",
+  "root": null,
+  "stargazers_count": 23
+ },
+ "jpuerto96/v4n4g0rth0n": {
+  "archived": false,
+  "description": null,
+  "fork": false,
+  "full_name": "jpuerto96/V4N4G0RTH0N",
+  "parent": null,
+  "pushed_at": "2023-03-24T18:24:28Z",
+  "root": null,
+  "stargazers_count": 11
+ },
+ "jrodna/orthocode": {
+  "archived": false,
+  "description": "Ortholinear keyboard with thumb clusters and a rotary encoder designed with all THT components and regular keysets.",
+  "fork": false,
+  "full_name": "Jrodna/OrthoCode",
+  "parent": null,
+  "pushed_at": "2024-06-24T02:50:59Z",
+  "root": null,
+  "stargazers_count": 18
+ },
+ "jurassic73/split89": {
+  "archived": false,
+  "description": "split89 keyboard",
+  "fork": false,
+  "full_name": "jurassic73/split89",
+  "parent": null,
+  "pushed_at": "2025-09-01T14:27:31Z",
+  "root": null,
+  "stargazers_count": 111
+ },
+ "jyap808/pando": {
+  "archived": false,
+  "description": "58 key split keyboard. Integrated STM32G0B1KBT6, USB-C interconnect, PCA9555 IO Expander design",
+  "fork": false,
+  "full_name": "jyap808/pando",
+  "parent": null,
+  "pushed_at": "2026-09-19T02:41:56Z",
+  "root": null,
+  "stargazers_count": 10
+ },
+ "jyap808/pando58": {
+  "archived": false,
+  "description": "58-key column staggered split keyboard",
+  "fork": false,
+  "full_name": "jyap808/pando58",
+  "parent": null,
+  "pushed_at": "2026-06-05T21:21:22Z",
+  "root": null,
+  "stargazers_count": 15
+ },
+ "kaiec/rabbit68": {
+  "archived": false,
+  "description": "The Rabbit68 Keyboard",
+  "fork": false,
+  "full_name": "kaiec/rabbit68",
+  "parent": null,
+  "pushed_at": "2019-09-09T12:10:57Z",
+  "root": null,
+  "stargazers_count": 1
+ },
+ "kata0510/lily58": {
+  "archived": false,
+  "description": "6\u00d74+4keys column-staggered split keyboard.",
+  "fork": false,
+  "full_name": "kata0510/Lily58",
+  "parent": null,
+  "pushed_at": "2025-12-26T13:21:12Z",
+  "root": null,
+  "stargazers_count": 2279
+ },
+ "kaylynb/mechllama-g35": {
+  "archived": true,
+  "description": null,
+  "fork": false,
+  "full_name": "kaylynb/MechLlama-G35",
+  "parent": null,
+  "pushed_at": "2021-03-26T20:40:59Z",
+  "root": null,
+  "stargazers_count": 0
+ },
+ "kb-elmo/aek2_usb": {
+  "archived": false,
+  "description": "drop-in replacement pcb for the AEK II",
+  "fork": false,
+  "full_name": "str-dst/aek2_usb",
+  "parent": null,
+  "pushed_at": "2021-11-12T08:19:06Z",
+  "root": null,
+  "stargazers_count": 54
+ },
+ "kb-elmo/bm42": {
+  "archived": false,
+  "description": "Simple drop-in replacement PCB for the KPR BM43",
+  "fork": false,
+  "full_name": "str-dst/BM42",
+  "parent": null,
+  "pushed_at": "2022-03-03T08:56:47Z",
+  "root": null,
+  "stargazers_count": 7
+ },
+ "kb-elmo/dizzy40": {
+  "archived": false,
+  "description": "Daisy40 drop-in replacement PCB",
+  "fork": false,
+  "full_name": "str-dst/Dizzy40",
+  "parent": null,
+  "pushed_at": "2023-05-31T15:05:44Z",
+  "root": null,
+  "stargazers_count": 11
+ },
+ "kb-elmo/eliza": {
+  "archived": false,
+  "description": "12u 40% ergo keyboard",
+  "fork": false,
+  "full_name": "str-dst/Eliza",
+  "parent": null,
+  "pushed_at": "2024-02-24T12:44:20Z",
+  "root": null,
+  "stargazers_count": 9
+ },
+ "kb-elmo/gamehand": {
+  "archived": false,
+  "description": "Left hand gaming keypad with a 3D printed case",
+  "fork": false,
+  "full_name": "str-dst/GameHand",
+  "parent": null,
+  "pushed_at": "2021-07-30T13:05:05Z",
+  "root": null,
+  "stargazers_count": 20
+ },
+ "kb-elmo/m0110a_usb": {
+  "archived": false,
+  "description": "QMK powered drop-in replacement PCB for the Apple M0110a",
+  "fork": false,
+  "full_name": "str-dst/m0110a_usb",
+  "parent": null,
+  "pushed_at": "2021-11-12T08:18:40Z",
+  "root": null,
+  "stargazers_count": 36
+ },
+ "kb-elmo/m0116_usb": {
+  "archived": false,
+  "description": "Drop-in replacement USB PCB for the Apple M0116 powered by QMK",
+  "fork": false,
+  "full_name": "str-dst/m0116_usb",
+  "parent": null,
+  "pushed_at": "2021-11-12T08:18:30Z",
+  "root": null,
+  "stargazers_count": 34
+ },
+ "kb-elmo/noah_avr": {
+  "archived": false,
+  "description": "replacement PCB for the Matrix Noah",
+  "fork": false,
+  "full_name": "str-dst/noah_avr",
+  "parent": null,
+  "pushed_at": "2021-11-12T08:18:47Z",
+  "root": null,
+  "stargazers_count": 5
+ },
+ "kb-elmo/numpad": {
+  "archived": false,
+  "description": "simple numpad",
+  "fork": false,
+  "full_name": "str-dst/numpad",
+  "parent": null,
+  "pushed_at": "2020-08-05T14:09:36Z",
+  "root": null,
+  "stargazers_count": 13
+ },
+ "kb-elmo/sesame": {
+  "archived": false,
+  "description": "Alice type ergo keyboard using only THT parts",
+  "fork": false,
+  "full_name": "str-dst/sesame",
+  "parent": null,
+  "pushed_at": "2021-12-09T13:20:59Z",
+  "root": null,
+  "stargazers_count": 329
+ },
+ "kb-elmo/twelvekey": {
+  "archived": false,
+  "description": "simple mechanical macropad case",
+  "fork": false,
+  "full_name": "str-dst/twelvekey",
+  "parent": null,
+  "pushed_at": "2024-02-25T02:13:01Z",
+  "root": null,
+  "stargazers_count": 48
+ },
+ "keawade/keaboard": {
+  "archived": false,
+  "description": "Split columnular stagger 4x6 keyboard",
+  "fork": false,
+  "full_name": "keawade/keaboard",
+  "parent": null,
+  "pushed_at": "2023-02-16T12:43:43Z",
+  "root": null,
+  "stargazers_count": 7
+ },
+ "keebio/bfo9000-pcb": {
+  "archived": false,
+  "description": "KiCAD Files for BFO-9000 PCB Design",
+  "fork": false,
+  "full_name": "keebio/bfo9000-pcb",
+  "parent": null,
+  "pushed_at": "2025-01-17T15:41:08Z",
+  "root": null,
+  "stargazers_count": 18
+ },
+ "keebio/fourier": {
+  "archived": false,
+  "description": "PCB files for Fourier Keyboard, a 40% split keyboard",
+  "fork": false,
+  "full_name": "keebio/fourier",
+  "parent": null,
+  "pushed_at": "2020-09-04T14:24:53Z",
+  "root": null,
+  "stargazers_count": 95
+ },
+ "keebio/quefrency-rev1-pcb": {
+  "archived": false,
+  "description": null,
+  "fork": false,
+  "full_name": "keebio/quefrency-rev1-pcb",
+  "parent": null,
+  "pushed_at": "2021-04-30T17:28:18Z",
+  "root": null,
+  "stargazers_count": 45
+ },
+ "kelvinhall05/southpaw75": {
+  "archived": false,
+  "description": "Design files and assembly guide for the Southpaw75 keyboard.",
+  "fork": false,
+  "full_name": "kelvinhall05/Southpaw75",
+  "parent": null,
+  "pushed_at": "2022-09-02T12:57:39Z",
+  "root": null,
+  "stargazers_count": 36
+ },
+ "keotl/11squares": {
+  "archived": false,
+  "description": "The optimal packing of 11 keyswitches",
+  "fork": false,
+  "full_name": "keotl/11squares",
+  "parent": null,
+  "pushed_at": "2026-07-23T13:51:18Z",
+  "root": null,
+  "stargazers_count": 0
+ },
+ "keyzog/kapl": {
+  "archived": false,
+  "description": "The Kapl is a split ergonomic keyboard with 70 keys (7x5)",
+  "fork": false,
+  "full_name": "keyzog/kapl",
+  "parent": null,
+  "pushed_at": "2024-02-09T11:06:58Z",
+  "root": null,
+  "stargazers_count": 86
+ },
+ "kgoh/jian-info": {
+  "archived": false,
+  "description": "Jian keyboard info repository ",
+  "fork": false,
+  "full_name": "KGOH/Jian-Info",
+  "parent": null,
+  "pushed_at": "2024-08-12T06:58:43Z",
+  "root": null,
+  "stargazers_count": 92
+ },
+ "kjeller/orbiter_keyboard": {
+  "archived": false,
+  "description": "Repo for my symmetrical 52-key split keyboard KiCad project",
+  "fork": false,
+  "full_name": "kjeller/orbiter_keyboard",
+  "parent": null,
+  "pushed_at": "2026-07-05T20:10:59Z",
+  "root": null,
+  "stargazers_count": 0
+ },
+ "kkatano/bakeneko-60-pcb": {
+  "error": "gh: Not Found (HTTP 404)"
+ },
+ "kkatano/bakeneko-65": {
+  "archived": false,
+  "description": "A simple 65% keyboard",
+  "fork": false,
+  "full_name": "kkatano/bakeneko-65",
+  "parent": null,
+  "pushed_at": "2022-04-19T04:43:08Z",
+  "root": null,
+  "stargazers_count": 309
+ },
+ "kkatano/bakeneko-80-pcb": {
+  "error": "gh: Not Found (HTTP 404)"
+ },
+ "kkatano/wallaby": {
+  "error": "gh: Not Found (HTTP 404)"
+ },
+ "kkatano/yurei": {
+  "archived": false,
+  "description": "A Tenkeyless PCB inspired by Phantom",
+  "fork": false,
+  "full_name": "kkatano/yurei",
+  "parent": null,
+  "pushed_at": "2020-11-22T14:54:53Z",
+  "root": null,
+  "stargazers_count": 38
+ },
+ "klackygears/eek_doc": {
+  "archived": false,
+  "description": "eek! Is a 36 key 90 degree keyboard suited for travel and up-close typing.",
+  "fork": false,
+  "full_name": "Klackygears/eek_doc",
+  "parent": null,
+  "pushed_at": "2024-01-13T03:43:11Z",
+  "root": null,
+  "stargazers_count": 20
+ },
+ "klausweiss/bolek": {
+  "archived": false,
+  "description": "\u2328\ufe0f 15mm high ergonomic travel keyboard. 36 keys, pro micro-based, designed for Kailh Chocs.",
+  "fork": false,
+  "full_name": "klausweiss/bolek",
+  "parent": null,
+  "pushed_at": "2021-03-23T16:04:45Z",
+  "root": null,
+  "stargazers_count": 5
+ },
+ "knaruo/barracuda": {
+  "archived": false,
+  "description": "barracuda (Thin Plate Keyboard)",
+  "fork": false,
+  "full_name": "knaruo/barracuda",
+  "parent": null,
+  "pushed_at": "2021-05-23T13:16:14Z",
+  "root": null,
+  "stargazers_count": 3
+ },
+ "knaruo/pisces": {
+  "archived": false,
+  "description": "Pisces - Tiny Split Keyboard",
+  "fork": false,
+  "full_name": "knaruo/pisces",
+  "parent": null,
+  "pushed_at": "2024-12-30T03:08:01Z",
+  "root": null,
+  "stargazers_count": 2
+ },
+ "komar007/gh60": {
+  "archived": false,
+  "description": "GH60 - an open-source mechanical keyboard PCB designed for the community at geekhack.org",
+  "fork": false,
+  "full_name": "komar007/gh60",
+  "parent": null,
+  "pushed_at": "2019-07-02T07:30:10Z",
+  "root": null,
+  "stargazers_count": 872
+ },
+ "kraken-jokes/pteron-pcb": {
+  "archived": false,
+  "description": "A continuation of FSund's pteron-keyboard project. Feel free to contribute, or use these files to make your own! Kits and PCBs are also available through my facebook page.",
+  "fork": false,
+  "full_name": "Kraken-Jokes/pteron-pcb",
+  "parent": null,
+  "pushed_at": "2021-12-17T22:55:40Z",
+  "root": null,
+  "stargazers_count": 31
+ },
+ "ktec-hq/ErgoDone": {
+  "archived": false,
+  "description": "ErgoDox using pro micro. Original work by Dox. Brainhole association present",
+  "fork": false,
+  "full_name": "ktec-hq/ErgoDone",
+  "parent": null,
+  "pushed_at": "2019-06-25T08:04:49Z",
+  "root": null,
+  "stargazers_count": 123
+ },
+ "kulmajaba/tunks-keyboard": {
+  "archived": false,
+  "description": null,
+  "fork": false,
+  "full_name": "kulmajaba/tunks-keyboard",
+  "parent": null,
+  "pushed_at": "2022-03-09T09:45:35Z",
+  "root": null,
+  "stargazers_count": 0
+ },
+ "kumaokobo/pico-keyboard": {
+  "archived": false,
+  "description": "Tiny pitch split keyboard.",
+  "fork": false,
+  "full_name": "kumaokobo/pico-keyboard",
+  "parent": null,
+  "pushed_at": "2019-12-16T06:39:22Z",
+  "root": null,
+  "stargazers_count": 3
+ },
+ "kuriatsu/tsubasa": {
+  "archived": false,
+  "description": "Hotswap row-staggered split keyboard with LCD and rotary encoder",
+  "fork": false,
+  "full_name": "kuriatsu/TSUBASA",
+  "parent": null,
+  "pushed_at": "2022-10-08T15:25:28Z",
+  "root": null,
+  "stargazers_count": 2
+ },
+ "kyleterry/spacetime-keyboard": {
+  "archived": false,
+  "description": "The Ergo Little Guy - A small split-design keyboard",
+  "fork": false,
+  "full_name": "kyleterry/spacetime-keyboard",
+  "parent": null,
+  "pushed_at": "2019-05-18T05:11:01Z",
+  "root": null,
+  "stargazers_count": 1
+ },
+ "kyrremann/bartlesplit": {
+  "archived": false,
+  "description": "An expensive Cheapino with centralised Pro Micro hub",
+  "fork": false,
+  "full_name": "Kyrremann/bartlesplit",
+  "parent": null,
+  "pushed_at": "2023-10-26T19:53:15Z",
+  "root": null,
+  "stargazers_count": 0
+ },
+ "kyrremann/index-tab": {
+  "archived": false,
+  "description": "Hot-swappable 6x13 ortho keyboard",
+  "fork": false,
+  "full_name": "Kyrremann/index-tab",
+  "parent": null,
+  "pushed_at": "2021-10-10T15:37:06Z",
+  "root": null,
+  "stargazers_count": 8
+ },
+ "ladniy/jiran": {
+  "archived": false,
+  "description": "Ergo Split Keyboard",
+  "fork": false,
+  "full_name": "Ladniy/jiran",
+  "parent": null,
+  "pushed_at": "2022-04-27T14:15:00Z",
+  "root": null,
+  "stargazers_count": 68
+ },
+ "latincompass/2-rotaryencoder-pad": {
+  "archived": false,
+  "description": "2 RotaryEncoder pad",
+  "fork": false,
+  "full_name": "latincompass/2-RotaryEncoder-pad",
+  "parent": null,
+  "pushed_at": "2022-01-26T02:29:42Z",
+  "root": null,
+  "stargazers_count": 1
+ },
+ "lendunistus/rpneko65": {
+  "archived": false,
+  "description": null,
+  "fork": false,
+  "full_name": "lendunistus/rpneko65",
+  "parent": null,
+  "pushed_at": "2023-10-13T17:53:01Z",
+  "root": null,
+  "stargazers_count": 1
+ },
+ "lighteningab/45keyboard_v1": {
+  "archived": false,
+  "description": "pcb design version one",
+  "fork": false,
+  "full_name": "lighteningAB/45keyboard_v1",
+  "parent": null,
+  "pushed_at": "2025-01-16T17:00:43Z",
+  "root": null,
+  "stargazers_count": 0
+ },
+ "longnald/corin": {
+  "error": "gh: Not Found (HTTP 404)"
+ },
+ "lyso1/lck75": {
+  "archived": false,
+  "description": "a 75% through-hole keyboard designed by myself with inspiration from the CFTKB Discipline and Yiancar Gingham",
+  "fork": false,
+  "full_name": "lyso1/LCK75",
+  "parent": null,
+  "pushed_at": "2023-03-03T09:36:14Z",
+  "root": null,
+  "stargazers_count": 45
+ },
+ "makenova/omega": {
+  "archived": false,
+  "description": "A keybaord with inspiration from the zlant and alpha 28",
+  "fork": false,
+  "full_name": "makenova/omega",
+  "parent": null,
+  "pushed_at": "2022-08-09T06:14:22Z",
+  "root": null,
+  "stargazers_count": 8
+ },
+ "makotokurauchi/helix": {
+  "archived": false,
+  "description": "A compact split ortholinear keyboard.",
+  "fork": false,
+  "full_name": "MakotoKurauchi/helix",
+  "parent": null,
+  "pushed_at": "2022-11-20T22:01:11Z",
+  "root": null,
+  "stargazers_count": 997
+ },
+ "manna-harbour/xmk": {
+  "archived": false,
+  "description": "Use programmable keyboard firmware with any keyboard.",
+  "fork": false,
+  "full_name": "manna-harbour/xmk",
+  "parent": null,
+  "pushed_at": "2023-03-08T11:48:23Z",
+  "root": null,
+  "stargazers_count": 191
+ },
+ "manoshu/baredev": {
+  "archived": false,
+  "description": "ABNT2-based 70% keyboard, with a sandwich case and display stand",
+  "fork": false,
+  "full_name": "ManoShu/BareDev",
+  "parent": null,
+  "pushed_at": "2022-03-07T03:02:59Z",
+  "root": null,
+  "stargazers_count": 1
+ },
+ "marcocampione/Hem-keyboard": {
+  "archived": false,
+  "description": "A 65% ANSI keyboard PCB with an RP2040 on the board",
+  "fork": false,
+  "full_name": "marcocampione/Hem-keyboard",
+  "parent": null,
+  "pushed_at": "2026-10-13T21:07:01Z",
+  "root": null,
+  "stargazers_count": 0
+ },
+ "marksard/keyboards": {
+  "archived": false,
+  "description": "This repository is warehouse of my keyboard architecture.",
+  "fork": false,
+  "full_name": "marksard/Keyboards",
+  "parent": null,
+  "pushed_at": "2024-08-17T00:02:05Z",
+  "root": null,
+  "stargazers_count": 191
+ },
+ "marvfpv/adalyn": {
+  "archived": false,
+  "description": "36key QAZ-like handwired keyboard",
+  "fork": false,
+  "full_name": "Marbelymarble/Adalyn",
+  "parent": null,
+  "pushed_at": "2022-02-09T09:57:19Z",
+  "root": null,
+  "stargazers_count": 54
+ },
+ "marvfpv/friedrich": {
+  "archived": false,
+  "description": "50% 3D printed keyboard designed to be printable on regular sized 3d printers.",
+  "fork": false,
+  "full_name": "Marbelymarble/Friedrich",
+  "parent": null,
+  "pushed_at": "2021-08-23T13:47:16Z",
+  "root": null,
+  "stargazers_count": 13
+ },
+ "mattdibi/redox-keyboard": {
+  "archived": false,
+  "description": "Ergonomic split mechanical keyboard",
+  "fork": false,
+  "full_name": "mattdibi/redox-keyboard",
+  "parent": null,
+  "pushed_at": "2026-05-26T18:15:22Z",
+  "root": null,
+  "stargazers_count": 1984
+ },
+ "matthewdias/m3n3van": {
+  "archived": false,
+  "description": "A minivan case compatible PCB with 2x3u split space",
+  "fork": false,
+  "full_name": "matthewdias/m3n3van",
+  "parent": null,
+  "pushed_at": "2022-01-17T00:30:38Z",
+  "root": null,
+  "stargazers_count": 20
+ },
+ "matthewdias/minim": {
+  "archived": false,
+  "description": "A symmetrical 50% keyboard",
+  "fork": false,
+  "full_name": "matthewdias/minim",
+  "parent": null,
+  "pushed_at": "2020-11-15T21:46:45Z",
+  "root": null,
+  "stargazers_count": 11
+ },
+ "mattmcca/heliotrope": {
+  "error": "gh: Not Found (HTTP 404)"
+ },
+ "mattmcca/the-black-hellebore": {
+  "error": "gh: Not Found (HTTP 404)"
+ },
+ "maxr1998/phoebe_keyboard": {
+  "archived": false,
+  "description": "Design files for PCB, plate and case of the Phoebe Mechanical Keyboard",
+  "fork": false,
+  "full_name": "Maxr1998/Phoebe_Keyboard",
+  "parent": null,
+  "pushed_at": "2024-12-09T23:04:53Z",
+  "root": null,
+  "stargazers_count": 12
+ },
+ "maxr1998/pulse_4k": {
+  "archived": false,
+  "description": null,
+  "fork": false,
+  "full_name": "Maxr1998/Pulse_4k",
+  "parent": null,
+  "pushed_at": "2019-05-02T17:20:23Z",
+  "root": null,
+  "stargazers_count": 21
+ },
+ "minibois/elixivy": {
+  "archived": false,
+  "description": "Repository of my project 'eLiXiVy'. A 65% mechanical keyboard PCB, which had the working title of 'mini-65'.",
+  "fork": false,
+  "full_name": "minibois/eLiXiVy",
+  "parent": null,
+  "pushed_at": "2021-11-17T12:51:18Z",
+  "root": null,
+  "stargazers_count": 10
+ },
+ "minibois/ten-key-plus": {
+  "archived": false,
+  "description": "Simple numpad",
+  "fork": false,
+  "full_name": "minibois/ten-key-plus",
+  "parent": null,
+  "pushed_at": "2022-01-03T00:26:09Z",
+  "root": null,
+  "stargazers_count": 1
+ },
+ "misonoworks/chocolate-bar": {
+  "archived": false,
+  "description": "A low-profile 50% keyboard, with less ergonomics than expected!",
+  "fork": false,
+  "full_name": "misonoworks/chocolate-bar",
+  "parent": null,
+  "pushed_at": "2021-09-28T20:12:35Z",
+  "root": null,
+  "stargazers_count": 16
+ },
+ "mizma/slimdash": {
+  "archived": false,
+  "description": "ErgoDash inspired low-profile key switch keyboard with embedded RP2040",
+  "fork": false,
+  "full_name": "mizma/SlimDash",
+  "parent": null,
+  "pushed_at": "2025-05-04T16:07:23Z",
+  "root": null,
+  "stargazers_count": 0
+ },
+ "mjohns/dactyl-cc": {
+  "archived": false,
+  "description": "A Dactyl like 3d printed keyboard written in C++",
+  "fork": false,
+  "full_name": "mjohns/dactyl-cc",
+  "parent": null,
+  "pushed_at": "2026-02-26T18:17:01Z",
+  "root": null,
+  "stargazers_count": 543
+ },
+ "mjohns/tracer": {
+  "archived": false,
+  "description": "Dactly Tracer 3d printed keyboard",
+  "fork": false,
+  "full_name": "mjohns/tracer",
+  "parent": null,
+  "pushed_at": "2026-02-26T18:12:22Z",
+  "root": null,
+  "stargazers_count": 56
+ },
+ "mkdl/unix60": {
+  "archived": false,
+  "description": "HHKB Layouted and QMK compatible keyboard built from FR4",
+  "fork": false,
+  "full_name": "mkdl/Unix60",
+  "parent": null,
+  "pushed_at": "2021-09-17T12:48:08Z",
+  "root": null,
+  "stargazers_count": 60
+ },
+ "mmccoyd/hillside": {
+  "archived": false,
+  "description": "Family of split ergonomic keyboards with three rows of six or five keys and a generous thumb arc",
+  "fork": false,
+  "full_name": "mmccoyd/hillside",
+  "parent": null,
+  "pushed_at": "2025-07-13T01:58:04Z",
+  "root": null,
+  "stargazers_count": 441
+ },
+ "mohoyt/lagom": {
+  "archived": false,
+  "description": "Lagom is an easy to build 65% keyboard using a discrete microcontroller and only through hole components",
+  "fork": false,
+  "full_name": "mohoyt/lagom",
+  "parent": null,
+  "pushed_at": "2025-07-25T16:47:16Z",
+  "root": null,
+  "stargazers_count": 143
+ },
+ "mohoyt/litl": {
+  "archived": false,
+  "description": "Litl is an easy to build 40% keyboard using only through hole components.",
+  "fork": false,
+  "full_name": "mohoyt/litl",
+  "parent": null,
+  "pushed_at": "2025-03-21T09:48:21Z",
+  "root": null,
+  "stargazers_count": 75
+ },
+ "monksoffunk/zinc": {
+  "error": "gh: Not Found (HTTP 404)"
+ },
+ "mrninhvn/meow65-pcb": {
+  "archived": false,
+  "description": "Meow65 Hotswap PCB, compatible with Meow65 & Bakeneko65 V3 Keyboard",
+  "fork": false,
+  "full_name": "mrninhvn/meow65-pcb",
+  "parent": null,
+  "pushed_at": "2021-11-30T03:37:55Z",
+  "root": null,
+  "stargazers_count": 13
+ },
+ "mymakercorner/phoenix_project_no1": {
+  "archived": false,
+  "description": "A collection of replacement PCBs and plates for the M65-A keyboard",
+  "fork": false,
+  "full_name": "mymakercorner/Phoenix_Project_No1",
+  "parent": null,
+  "pushed_at": "2024-07-13T18:15:07Z",
+  "root": null,
+  "stargazers_count": 3
+ },
+ "mythosmann/tg4x": {
+  "archived": false,
+  "description": "A cheap, open source 45% keyboard",
+  "fork": false,
+  "full_name": "MythosMann/tg4x",
+  "parent": null,
+  "pushed_at": "2019-08-28T14:28:48Z",
+  "root": null,
+  "stargazers_count": 80
+ },
+ "na-cly/UA62": {
+  "archived": false,
+  "description": "A Universal PCB for the atreus62",
+  "fork": false,
+  "full_name": "Na-Cly/UA62",
+  "parent": null,
+  "pushed_at": "2019-11-11T21:49:44Z",
+  "root": null,
+  "stargazers_count": 2
+ },
+ "na-cly/juliet": {
+  "archived": false,
+  "description": "A Romeo 40% with an ugly pro micro instead of the fancy on board components. ",
+  "fork": true,
+  "full_name": "Na-Cly/juliet",
+  "parent": "coseyfannitutti/romeo",
+  "pushed_at": "2020-05-01T20:39:21Z",
+  "root": "coseyfannitutti/romeo",
+  "stargazers_count": 3
+ },
+ "na-cly/splitreus62": {
+  "archived": false,
+  "description": "A Split version of the Atreus62",
+  "fork": false,
+  "full_name": "Na-Cly/splitreus62",
+  "parent": null,
+  "pushed_at": "2022-03-18T13:26:25Z",
+  "root": null,
+  "stargazers_count": 37
+ },
+ "narinari/xenon-keyboard": {
+  "archived": false,
+  "description": "Xenon is 60% columnar staggered keyboard.",
+  "fork": false,
+  "full_name": "narinari/xenon-keyboard",
+  "parent": null,
+  "pushed_at": "2019-09-16T03:17:13Z",
+  "root": null,
+  "stargazers_count": 37
+ },
+ "ncwhale/keyboard_design": {
+  "archived": false,
+  "description": "My keyboard designs for myself. Free to use it in your project.",
+  "fork": false,
+  "full_name": "ncwhale/Keyboard_Design",
+  "parent": null,
+  "pushed_at": "2020-06-27T01:23:14Z",
+  "root": null,
+  "stargazers_count": 5
+ },
+ "nglgzz/42": {
+  "archived": false,
+  "description": "42 keys ergonomic keyboard",
+  "fork": false,
+  "full_name": "nglgzz/42",
+  "parent": null,
+  "pushed_at": "2026-07-15T16:50:12Z",
+  "root": null,
+  "stargazers_count": 41
+ },
+ "ngrigoriev/dactyl-manuform-5x7_2_6": {
+  "archived": false,
+  "description": "My build of Dactyl Manuform 5x7 keyboard with 6-key thumb cluster and 2 keys in the last row",
+  "fork": false,
+  "full_name": "ngrigoriev/dactyl-manuform-5x7_2_6",
+  "parent": null,
+  "pushed_at": "2024-08-05T19:10:22Z",
+  "root": null,
+  "stargazers_count": 1
+ },
+ "nickolaij/Abacus_Rev2": {
+  "archived": false,
+  "description": "A Mechanical Keyboard PCB design supported by QMK",
+  "fork": false,
+  "full_name": "nickolaij/Abacus_Rev2",
+  "parent": null,
+  "pushed_at": "2020-08-11T00:34:54Z",
+  "root": null,
+  "stargazers_count": 8
+ },
+ "nilokr/cantor-remix": {
+  "archived": false,
+  "description": "Cantor keyboard by diepala with minor changes",
+  "fork": true,
+  "full_name": "nilokr/cantor-remix",
+  "parent": "diepala/cantor",
+  "pushed_at": "2022-06-03T11:41:54Z",
+  "root": "diepala/cantor",
+  "stargazers_count": 122
+ },
+ "niltea/palette1202": {
+  "archived": false,
+  "description": null,
+  "fork": false,
+  "full_name": "niltea/Palette1202",
+  "parent": null,
+  "pushed_at": "2022-12-14T05:35:20Z",
+  "root": null,
+  "stargazers_count": 4
+ },
+ "nomis/keyboard-pcb-rpi-pico-25x1": {
+  "archived": false,
+  "description": "PCB for a 25x1 keyboard connected to a Raspberry Pi Pico",
+  "fork": false,
+  "full_name": "nomis/keyboard-pcb-rpi-pico-25x1",
+  "parent": null,
+  "pushed_at": "2026-06-07T19:07:19Z",
+  "root": null,
+  "stargazers_count": 0
+ },
+ "nopunin10did/kastenwagen": {
+  "archived": false,
+  "description": "Kastenwagen 1840 Keyboard",
+  "fork": false,
+  "full_name": "nopunin10did/kastenwagen",
+  "parent": null,
+  "pushed_at": "2024-09-11T18:34:18Z",
+  "root": null,
+  "stargazers_count": 19
+ },
+ "nrtkbb/keyboards": {
+  "archived": false,
+  "description": null,
+  "fork": false,
+  "full_name": "nrtkbb/Keyboards",
+  "parent": null,
+  "pushed_at": "2021-02-01T02:04:31Z",
+  "root": null,
+  "stargazers_count": 3
+ },
+ "null-ll/basketweave": {
+  "archived": false,
+  "description": "Through-hole Alice-style keyboard with arrow keys and a rotary encoder",
+  "fork": false,
+  "full_name": "null-ll/basketweave",
+  "parent": null,
+  "pushed_at": "2022-06-18T22:50:41Z",
+  "root": null,
+  "stargazers_count": 129
+ },
+ "nut1414/np12": {
+  "archived": false,
+  "description": "yet another 12 keys macro pad",
+  "fork": false,
+  "full_name": "nut1414/np12",
+  "parent": null,
+  "pushed_at": "2021-04-08T10:50:15Z",
+  "root": null,
+  "stargazers_count": 2
+ },
+ "nwhirschfeld/technicpad": {
+  "archived": false,
+  "description": "A macropad designed to connect with your favorite building brick _Technic_ beams.",
+  "fork": false,
+  "full_name": "nwhirschfeld/TechnicPad",
+  "parent": null,
+  "pushed_at": "2024-03-07T21:53:44Z",
+  "root": null,
+  "stargazers_count": 0
+ },
+ "nyhxis/keyboard-resources": {
+  "archived": false,
+  "description": null,
+  "fork": false,
+  "full_name": "Nyhxis/keyboard-resources",
+  "parent": null,
+  "pushed_at": "2022-07-12T15:55:16Z",
+  "root": null,
+  "stargazers_count": 0
+ },
+ "obosob/steal_this_keyboard": {
+  "archived": false,
+  "description": "free to use 34-key split ergonomic keyboard",
+  "fork": false,
+  "full_name": "obosob/steal_this_keyboard",
+  "parent": null,
+  "pushed_at": "2021-05-14T16:56:10Z",
+  "root": null,
+  "stargazers_count": 19
+ },
+ "oliviahanley/wren-keyboard": {
+  "archived": false,
+  "description": "A split ergonomic keyboard with options for numpad, nav cluster, and more.",
+  "fork": false,
+  "full_name": "oliviahanley/wren-keyboard",
+  "parent": null,
+  "pushed_at": "2024-10-31T01:26:39Z",
+  "root": null,
+  "stargazers_count": 92
+ },
+ "omkbd/ergodash": {
+  "archived": false,
+  "description": "keyboard",
+  "fork": false,
+  "full_name": "omkbd/ErgoDash",
+  "parent": null,
+  "pushed_at": "2022-05-15T01:51:39Z",
+  "root": null,
+  "stargazers_count": 725
+ },
+ "pablojimenezmateo/classic48": {
+  "archived": false,
+  "description": "This is my custom keyboard",
+  "fork": false,
+  "full_name": "pablojimenezmateo/classic48",
+  "parent": null,
+  "pushed_at": "2025-07-31T19:04:42Z",
+  "root": null,
+  "stargazers_count": 0
+ },
+ "peej/for-science-keyboard": {
+  "archived": false,
+  "description": "A split ergo 4x5 keyboard with 3 thumb keys where each half is smaller than the 100x100mm cheap PCB production size.",
+  "fork": false,
+  "full_name": "peej/for-science-keyboard",
+  "parent": null,
+  "pushed_at": "2021-02-27T16:06:48Z",
+  "root": null,
+  "stargazers_count": 100
+ },
+ "peej/lumberjack-keyboard": {
+  "archived": false,
+  "description": "5x12 ortholinear through-hole component keyboard PCB for standard 60% cases",
+  "fork": false,
+  "full_name": "peej/lumberjack-keyboard",
+  "parent": null,
+  "pushed_at": "2025-09-28T18:23:50Z",
+  "root": null,
+  "stargazers_count": 401
+ },
+ "peej/rosaline-keyboard": {
+  "archived": false,
+  "description": "40% staggered through-hole component keyboard PCB for standard 60% cases",
+  "fork": false,
+  "full_name": "peej/rosaline-keyboard",
+  "parent": null,
+  "pushed_at": "2021-10-10T07:48:52Z",
+  "root": null,
+  "stargazers_count": 52
+ },
+ "peej/tripel-keyboard": {
+  "archived": false,
+  "description": "Ortholinear 60% 3-part keyboard PCB",
+  "fork": false,
+  "full_name": "peej/tripel-keyboard",
+  "parent": null,
+  "pushed_at": "2020-09-18T19:38:24Z",
+  "root": null,
+  "stargazers_count": 54
+ },
+ "percyjw-2/split65": {
+  "archived": false,
+  "description": "Split 65 Percent Keyboard",
+  "fork": false,
+  "full_name": "PercyJW-2/Split65",
+  "parent": null,
+  "pushed_at": "2022-12-07T16:32:42Z",
+  "root": null,
+  "stargazers_count": 2
+ },
+ "ph-design/PH60": {
+  "archived": false,
+  "description": "A printable 60% multi-layout wireless keyboard suite.",
+  "fork": false,
+  "full_name": "ph-design/PH60",
+  "parent": null,
+  "pushed_at": "2026-05-30T09:40:56Z",
+  "root": null,
+  "stargazers_count": 154
+ },
+ "pierrechevalier83/ferris": {
+  "archived": false,
+  "description": "A low profile split keyboard designed to satisfy one single use case elegantly",
+  "fork": false,
+  "full_name": "pierrechevalier83/ferris",
+  "parent": null,
+  "pushed_at": "2024-04-07T20:44:18Z",
+  "root": null,
+  "stargazers_count": 1267
+ },
+ "pietptr/microdox-pcb": {
+  "archived": false,
+  "description": "PCB for the Microdox keyboard.",
+  "fork": false,
+  "full_name": "PietPtr/Microdox-PCB",
+  "parent": null,
+  "pushed_at": "2016-10-02T10:32:26Z",
+  "root": null,
+  "stargazers_count": 8
+ },
+ "pimentoso/touhoupad_v2": {
+  "archived": false,
+  "description": "Mechanical gamepad to play Touhou Project games. New version with pcb.",
+  "fork": false,
+  "full_name": "Pimentoso/TouhouPad_v2",
+  "parent": null,
+  "pushed_at": "2021-08-10T16:29:40Z",
+  "root": null,
+  "stargazers_count": 16
+ },
+ "pje66/hummingbird": {
+  "archived": false,
+  "description": "Hummingbird keyboard using Seeeduino XIAO controller",
+  "fork": false,
+  "full_name": "PJE66/hummingbird",
+  "parent": null,
+  "pushed_at": "2021-05-20T23:02:49Z",
+  "root": null,
+  "stargazers_count": 175
+ },
+ "polarityworks/crbn-featherlight": {
+  "archived": false,
+  "description": null,
+  "fork": false,
+  "full_name": "PolarityWorks/CRBN-Featherlight",
+  "parent": null,
+  "pushed_at": "2024-11-01T17:17:01Z",
+  "root": null,
+  "stargazers_count": 25
+ },
+ "powerlemming/kbdclack": {
+  "error": "gh: Not Found (HTTP 404)"
+ },
+ "profet23/atreus62": {
+  "archived": false,
+  "description": "Design files for the atreus62 keyboard",
+  "fork": false,
+  "full_name": "profet23/atreus62",
+  "parent": null,
+  "pushed_at": "2021-11-17T16:03:30Z",
+  "root": null,
+  "stargazers_count": 240
+ },
+ "psuieee/pluto12": {
+  "archived": true,
+  "description": null,
+  "fork": false,
+  "full_name": "psuieee/pluto12",
+  "parent": null,
+  "pushed_at": "2021-12-01T04:17:51Z",
+  "root": null,
+  "stargazers_count": 1
+ },
+ "ramonimbao/Herringbone": {
+  "archived": false,
+  "description": null,
+  "fork": false,
+  "full_name": "ramonimbao/Herringbone",
+  "parent": null,
+  "pushed_at": "2020-11-28T15:15:30Z",
+  "root": null,
+  "stargazers_count": 3
+ },
+ "rarepotato8de/3x3macropad": {
+  "archived": false,
+  "description": "Simple DIY macropad with OLED \ud83d\ude0e",
+  "fork": false,
+  "full_name": "rarepotato8de/3x3macropad",
+  "parent": null,
+  "pushed_at": "2024-08-21T17:36:57Z",
+  "root": null,
+  "stargazers_count": 85
+ },
+ "reversebias/mitosis-hardware": {
+  "archived": false,
+  "description": "Mechanical design files for the Mitosis keyboard",
+  "fork": false,
+  "full_name": "reversebias/mitosis-hardware",
+  "parent": null,
+  "pushed_at": "2017-12-01T23:06:26Z",
+  "root": null,
+  "stargazers_count": 332
+ },
+ "robcmills/karn-keyboard": {
+  "archived": false,
+  "description": "Custom, low profile, split, ortholinear, wireless, 38 key keyboard",
+  "fork": false,
+  "full_name": "robcmills/karn-keyboard",
+  "parent": null,
+  "pushed_at": "2025-05-16T05:55:03Z",
+  "root": null,
+  "stargazers_count": 9
+ },
+ "rtitmuss/torn": {
+  "archived": false,
+  "description": "Torn keyboard",
+  "fork": false,
+  "full_name": "rtitmuss/torn",
+  "parent": null,
+  "pushed_at": "2022-05-31T06:34:37Z",
+  "root": null,
+  "stargazers_count": 690
+ },
+ "ryanchomistek/lefty": {
+  "archived": false,
+  "description": null,
+  "fork": false,
+  "full_name": "RyanChomistek/lefty",
+  "parent": null,
+  "pushed_at": "2025-05-28T05:08:59Z",
+  "root": null,
+  "stargazers_count": 0
+ },
+ "ryanstevensmith/atlas-65": {
+  "error": "gh: Not Found (HTTP 404)"
+ },
+ "sadeeed/soup10": {
+  "archived": false,
+  "description": "Yet another macropad",
+  "fork": false,
+  "full_name": "Sadeeed/soup10",
+  "parent": null,
+  "pushed_at": "2024-10-03T16:02:21Z",
+  "root": null,
+  "stargazers_count": 0
+ },
+ "sakurachari/yosino58": {
+  "archived": false,
+  "description": null,
+  "fork": false,
+  "full_name": "sakurachari/yosino58",
+  "parent": null,
+  "pushed_at": "2019-05-22T01:52:17Z",
+  "root": null,
+  "stargazers_count": 5
+ },
+ "samgowland/gowla-macro-board": {
+  "archived": false,
+  "description": "Gowla Macro Boards are PCB designs for use with QMK to build DIY Reprogrammable Macro Keyboards for use with a computer.",
+  "fork": false,
+  "full_name": "SamGowland/Gowla-Macro-Boards",
+  "parent": null,
+  "pushed_at": "2023-04-24T13:48:22Z",
+  "root": null,
+  "stargazers_count": 44
+ },
+ "sanfeps/mithril_kb": {
+  "archived": false,
+  "description": "mithril keyboard, a split keyboard with 4x6 column ortholinear staggered keys and 3 thumb keys. ",
+  "fork": false,
+  "full_name": "sanfeps/mithril_kb",
+  "parent": null,
+  "pushed_at": "2026-05-15T14:17:57Z",
+  "root": null,
+  "stargazers_count": 1
+ },
+ "satorusaka/15k-macropad": {
+  "archived": false,
+  "description": "a diy 3d-printed 15k macropad",
+  "fork": false,
+  "full_name": "satorusaka/15k-macropad",
+  "parent": null,
+  "pushed_at": "2022-09-09T19:35:15Z",
+  "root": null,
+  "stargazers_count": 0
+ },
+ "schwarzer-geiger/edinburgh41": {
+  "archived": false,
+  "description": null,
+  "fork": false,
+  "full_name": "schwarzer-geiger/Edinburgh41",
+  "parent": null,
+  "pushed_at": "2022-03-02T08:36:04Z",
+  "root": null,
+  "stargazers_count": 2
+ },
+ "seityaya/kepler-33": {
+  "archived": false,
+  "description": "Kepler-33 [QMK]",
+  "fork": false,
+  "full_name": "seityaya/kepler-33",
+  "parent": null,
+  "pushed_at": "2022-10-17T14:59:14Z",
+  "root": null,
+  "stargazers_count": 0
+ },
+ "sekigon-gonnoc/grs-70ec-doc": {
+  "archived": false,
+  "description": "The build guide of GRS-70EC",
+  "fork": false,
+  "full_name": "sekigon-gonnoc/GRS-70EC-doc",
+  "parent": null,
+  "pushed_at": "2021-04-12T08:26:26Z",
+  "root": null,
+  "stargazers_count": 7
+ },
+ "sendyyeah/bevi": {
+  "archived": false,
+  "description": "Inspired by Vortex Vibe and Wyvern, so here is Vibe Southpaw",
+  "fork": false,
+  "full_name": "sendyyeah/bevi",
+  "parent": null,
+  "pushed_at": "2021-04-16T23:51:21Z",
+  "root": null,
+  "stargazers_count": 22
+ },
+ "sendz/pix": {
+  "archived": false,
+  "description": "A simple macropad with screen and rotary encoder",
+  "fork": false,
+  "full_name": "sendz/pix",
+  "parent": null,
+  "pushed_at": "2021-06-09T00:03:39Z",
+  "root": null,
+  "stargazers_count": 23
+ },
+ "shinoharata/keyboards": {
+  "archived": false,
+  "description": null,
+  "fork": false,
+  "full_name": "ShinoharaTa/keyboards",
+  "parent": null,
+  "pushed_at": "2022-12-13T02:06:20Z",
+  "root": null,
+  "stargazers_count": 8
+ },
+ "sho-keebs/vagrant-10": {
+  "archived": true,
+  "description": null,
+  "fork": false,
+  "full_name": "Sho-Keebs/Vagrant-10",
+  "parent": null,
+  "pushed_at": "2022-10-27T08:51:34Z",
+  "root": null,
+  "stargazers_count": 0
+ },
+ "shuguet/split89": {
+  "archived": false,
+  "description": "split89 keyboard",
+  "fork": true,
+  "full_name": "shuguet/split89",
+  "parent": "jurassic73/split89",
+  "pushed_at": "2023-01-26T16:04:59Z",
+  "root": "jurassic73/split89",
+  "stargazers_count": 0
+ },
+ "sithlord121/slz40": {
+  "archived": false,
+  "description": "PCB and keymap files for the SLZ40, a 40s style keyboard with numbers for Zhuyin input.",
+  "fork": false,
+  "full_name": "sithlord121/slz40",
+  "parent": null,
+  "pushed_at": "2024-06-24T22:49:21Z",
+  "root": null,
+  "stargazers_count": 3
+ },
+ "skarrmann/cata": {
+  "archived": false,
+  "description": "34 key ortholinear keyboard with self-encasing PCB",
+  "fork": false,
+  "full_name": "skarrmann/cata",
+  "parent": null,
+  "pushed_at": "2025-09-11T04:00:55Z",
+  "root": null,
+  "stargazers_count": 7
+ },
+ "skarrmann/horizon": {
+  "archived": false,
+  "description": "52 key ortholinear keyboard, no special features.",
+  "fork": false,
+  "full_name": "skarrmann/horizon",
+  "parent": null,
+  "pushed_at": "2024-09-28T17:35:18Z",
+  "root": null,
+  "stargazers_count": 177
+ },
+ "skarrmann/janus": {
+  "archived": false,
+  "description": "34 key split keyboard with self-encasing PCB.",
+  "fork": false,
+  "full_name": "skarrmann/janus",
+  "parent": null,
+  "pushed_at": "2025-08-09T22:44:11Z",
+  "root": null,
+  "stargazers_count": 55
+ },
+ "skarrmann/morizon": {
+  "archived": false,
+  "description": "Horizon + More keys = Morizon. 5 rows, 66 keys, no special features.",
+  "fork": false,
+  "full_name": "skarrmann/morizon",
+  "parent": null,
+  "pushed_at": "2023-12-20T17:55:58Z",
+  "root": null,
+  "stargazers_count": 20
+ },
+ "skarrmann/sha": {
+  "archived": false,
+  "description": "50 key ortholinear keyboard with self-encasing PCB.",
+  "fork": false,
+  "full_name": "skarrmann/sha",
+  "parent": null,
+  "pushed_at": "2024-10-12T01:17:04Z",
+  "root": null,
+  "stargazers_count": 11
+ },
+ "skeletonkbd/Frost68": {
+  "archived": false,
+  "description": null,
+  "fork": false,
+  "full_name": "skeletonkbd/Frost68",
+  "parent": null,
+  "pushed_at": "2023-06-13T17:46:34Z",
+  "root": null,
+  "stargazers_count": 5
+ },
+ "skeletonkbd/skeletonnumpad": {
+  "archived": false,
+  "description": null,
+  "fork": false,
+  "full_name": "skeletonkbd/SkeletonNumPad",
+  "parent": null,
+  "pushed_at": "2023-09-14T13:07:39Z",
+  "root": null,
+  "stargazers_count": 1
+ },
+ "smores56/clog": {
+  "archived": false,
+  "description": "A split 34-key board with pinky clusters",
+  "fork": false,
+  "full_name": "smores56/clog",
+  "parent": null,
+  "pushed_at": "2022-10-20T06:51:06Z",
+  "root": null,
+  "stargazers_count": 12
+ },
+ "smores56/osprette": {
+  "archived": false,
+  "description": "34-key unibody keyboard with pinky clusters",
+  "fork": false,
+  "full_name": "smores56/osprette",
+  "parent": null,
+  "pushed_at": "2023-04-22T03:03:41Z",
+  "root": null,
+  "stargazers_count": 62
+ },
+ "smssmssms/pos78": {
+  "archived": false,
+  "description": "QMK firmware to convert a 1980-90's 78 key ortholinear Point-Of-Sale keyboard into a mechanical USB keyboard.",
+  "fork": false,
+  "full_name": "smssmssms/pos78",
+  "parent": null,
+  "pushed_at": "2020-11-24T21:36:39Z",
+  "root": null,
+  "stargazers_count": 0
+ },
+ "softplus/3keyecosystem": {
+  "archived": false,
+  "description": "A tiny hobby ecosystem of computer keyboards. It's more than 3 keyboards, mostly with more than 3 keys, but 3 is a good number too.",
+  "fork": false,
+  "full_name": "softplus/3keyecosystem-hw",
+  "parent": null,
+  "pushed_at": "2022-04-03T19:49:00Z",
+  "root": null,
+  "stargazers_count": 0
+ },
+ "sol/chord-zero": {
+  "archived": false,
+  "description": "CHORD ZERO Stenographic Keyboard",
+  "fork": false,
+  "full_name": "stenobase/chord-zero",
+  "parent": null,
+  "pushed_at": "2022-08-27T07:30:35Z",
+  "root": null,
+  "stargazers_count": 4
+ },
+ "sotoba/contender": {
+  "archived": false,
+  "description": null,
+  "fork": false,
+  "full_name": "sotoba/contender",
+  "parent": null,
+  "pushed_at": "2021-12-04T15:57:27Z",
+  "root": null,
+  "stargazers_count": 0
+ },
+ "sotoba/craftwalk": {
+  "archived": false,
+  "description": "keyboard pcb for crafters",
+  "fork": false,
+  "full_name": "sotoba/craftwalk",
+  "parent": null,
+  "pushed_at": "2021-06-13T12:59:20Z",
+  "root": null,
+  "stargazers_count": 3
+ },
+ "spaceboards/spaceboardshardware": {
+  "archived": false,
+  "description": "A collection of open source hardware that has been designed by Spaceboards",
+  "fork": false,
+  "full_name": "Spaceboards/SpaceboardsHardware",
+  "parent": null,
+  "pushed_at": "2026-04-12T15:29:41Z",
+  "root": null,
+  "stargazers_count": 144
+ },
+ "squalius-cephalus/silakka54": {
+  "archived": false,
+  "description": "54-key column staggered split keyboard ",
+  "fork": false,
+  "full_name": "Squalius-cephalus/silakka54",
+  "parent": null,
+  "pushed_at": "2026-05-20T07:55:29Z",
+  "root": null,
+  "stargazers_count": 594
+ },
+ "stevennguyen/framework": {
+  "archived": false,
+  "description": "Ortholinear keyboard with a knob",
+  "fork": false,
+  "full_name": "stevennguyen/framework",
+  "parent": null,
+  "pushed_at": "2023-02-08T16:57:11Z",
+  "root": null,
+  "stargazers_count": 131
+ },
+ "stoutieee/macropad-workshop": {
+  "archived": false,
+  "description": "A 10 key macropad for a macropad workshop",
+  "fork": false,
+  "full_name": "StoutIEEE/macropad-workshop",
+  "parent": null,
+  "pushed_at": "2020-12-01T01:21:12Z",
+  "root": null,
+  "stargazers_count": 7
+ },
+ "str-dst/67mk_E": {
+  "archived": false,
+  "description": "A simple \"no frills\" drop-in replacement PCB for the KBDfans 67mkII / 67lite",
+  "fork": false,
+  "full_name": "str-dst/67mk_E",
+  "parent": null,
+  "pushed_at": "2021-11-12T08:18:56Z",
+  "root": null,
+  "stargazers_count": 29
+ },
+ "str-dst/QEZ": {
+  "archived": false,
+  "description": "A seamless, gasketmounted QAZ-like 40% keyboard",
+  "fork": false,
+  "full_name": "str-dst/QEZ",
+  "parent": null,
+  "pushed_at": "2023-12-10T18:43:21Z",
+  "root": null,
+  "stargazers_count": 110
+ },
+ "subrezon/la_nc": {
+  "archived": false,
+  "description": null,
+  "fork": false,
+  "full_name": "subrezon/la_nc",
+  "parent": null,
+  "pushed_at": "2023-05-08T14:42:29Z",
+  "root": null,
+  "stargazers_count": 20
+ },
+ "subrezon/lancer": {
+  "archived": false,
+  "description": null,
+  "fork": false,
+  "full_name": "subrezon/lancer",
+  "parent": null,
+  "pushed_at": "2023-09-28T11:23:32Z",
+  "root": null,
+  "stargazers_count": 28
+ },
+ "suikagiken/suika15tone": {
+  "archived": false,
+  "description": "suika15tone is a piano type macro keypad with 1 octave range. ",
+  "fork": false,
+  "full_name": "suikagiken/suika15tone",
+  "parent": null,
+  "pushed_at": "2025-03-23T16:38:24Z",
+  "root": null,
+  "stargazers_count": 0
+ },
+ "suikagiken/suika27melo": {
+  "archived": false,
+  "description": "suika27melo is a piano type macro keypad with 2 octave range.",
+  "fork": false,
+  "full_name": "suikagiken/suika27melo",
+  "parent": null,
+  "pushed_at": "2025-05-24T13:25:00Z",
+  "root": null,
+  "stargazers_count": 1
+ },
+ "suikagiken/suika83opti": {
+  "archived": false,
+  "description": "suika83opti is a row-staggered ergonomic keyboard with 83 keys. ",
+  "fork": false,
+  "full_name": "suikagiken/suika83opti",
+  "parent": null,
+  "pushed_at": "2025-05-24T11:57:11Z",
+  "root": null,
+  "stargazers_count": 0
+ },
+ "suikagiken/suika85ergo": {
+  "archived": false,
+  "description": "suika85ergo is a column-staggered ergonomic keyboard with 85 keys.",
+  "fork": false,
+  "full_name": "suikagiken/suika85ergo",
+  "parent": null,
+  "pushed_at": "2026-03-27T17:18:33Z",
+  "root": null,
+  "stargazers_count": 0
+ },
+ "swanmatch/silverbullet44": {
+  "archived": false,
+  "description": "Metalical Keyboard",
+  "fork": false,
+  "full_name": "swanmatch/silverbullet44",
+  "parent": null,
+  "pushed_at": "2024-04-18T14:09:54Z",
+  "root": null,
+  "stargazers_count": 6
+ },
+ "swiftrax/Pandamic": {
+  "archived": false,
+  "description": null,
+  "fork": false,
+  "full_name": "swiftrax/Pandamic",
+  "parent": null,
+  "pushed_at": "2020-09-13T20:10:33Z",
+  "root": null,
+  "stargazers_count": 5
+ },
+ "swiftrax/unsplit": {
+  "archived": false,
+  "description": "Ergo 40% mechanical keyboard with all components on the top with diodes arranged in an array",
+  "fork": false,
+  "full_name": "swiftrax/UnSplit",
+  "parent": null,
+  "pushed_at": "2020-11-17T17:40:59Z",
+  "root": null,
+  "stargazers_count": 68
+ },
+ "syenasweta/syenakeyboards": {
+  "error": "gh: Not Found (HTTP 404)"
+ },
+ "takagi/plum47_buildguide": {
+  "archived": false,
+  "description": "\u81ea\u4f5c\u30ad\u30fc\u30dc\u30fc\u30c9\u30ad\u30c3\u30c8\u300cPlum47\u300d\u306e\u30d3\u30eb\u30c9\u30ac\u30a4\u30c9\u3067\u3059\u3002",
+  "fork": false,
+  "full_name": "takagi/plum47_buildguide",
+  "parent": null,
+  "pushed_at": "2025-04-04T14:10:02Z",
+  "root": null,
+  "stargazers_count": 2
+ },
+ "takashicompany/compacx": {
+  "archived": false,
+  "description": "Single hand & split keyboard",
+  "fork": false,
+  "full_name": "takashicompany/compacx",
+  "parent": null,
+  "pushed_at": "2021-10-21T11:50:25Z",
+  "root": null,
+  "stargazers_count": 1
+ },
+ "takashicompany/dogtag": {
+  "archived": false,
+  "description": null,
+  "fork": false,
+  "full_name": "takashicompany/dogtag",
+  "parent": null,
+  "pushed_at": "2023-08-02T02:04:49Z",
+  "root": null,
+  "stargazers_count": 17
+ },
+ "takashicompany/endzone34": {
+  "archived": false,
+  "description": null,
+  "fork": false,
+  "full_name": "takashicompany/endzone34",
+  "parent": null,
+  "pushed_at": "2024-09-06T03:43:24Z",
+  "root": null,
+  "stargazers_count": 16
+ },
+ "takashicompany/goat51": {
+  "archived": false,
+  "description": "DIY Keyboard",
+  "fork": false,
+  "full_name": "takashicompany/goat51",
+  "parent": null,
+  "pushed_at": "2022-10-24T04:50:23Z",
+  "root": null,
+  "stargazers_count": 4
+ },
+ "takashicompany/klec_01": {
+  "archived": false,
+  "description": null,
+  "fork": false,
+  "full_name": "takashicompany/klec_01",
+  "parent": null,
+  "pushed_at": "2024-11-04T16:47:56Z",
+  "root": null,
+  "stargazers_count": 2
+ },
+ "takashicompany/minizone": {
+  "archived": false,
+  "description": null,
+  "fork": false,
+  "full_name": "takashicompany/minizone",
+  "parent": null,
+  "pushed_at": "2024-03-01T13:18:59Z",
+  "root": null,
+  "stargazers_count": 12
+ },
+ "takashicompany/palmbrain": {
+  "archived": false,
+  "description": null,
+  "fork": false,
+  "full_name": "takashicompany/palmbrain",
+  "parent": null,
+  "pushed_at": "2025-09-05T09:49:53Z",
+  "root": null,
+  "stargazers_count": 0
+ },
+ "takashicompany/palmslave": {
+  "archived": false,
+  "description": null,
+  "fork": false,
+  "full_name": "takashicompany/palmslave",
+  "parent": null,
+  "pushed_at": "2026-10-02T16:19:39Z",
+  "root": null,
+  "stargazers_count": 5
+ },
+ "takashicompany/qoolee": {
+  "archived": false,
+  "description": null,
+  "fork": false,
+  "full_name": "takashicompany/qoolee",
+  "parent": null,
+  "pushed_at": "2022-05-13T12:25:06Z",
+  "root": null,
+  "stargazers_count": 1
+ },
+ "takashicompany/radialex": {
+  "archived": false,
+  "description": null,
+  "fork": false,
+  "full_name": "takashicompany/radialex",
+  "parent": null,
+  "pushed_at": "2024-05-22T15:11:52Z",
+  "root": null,
+  "stargazers_count": 14
+ },
+ "takashicompany/rookey": {
+  "archived": false,
+  "description": null,
+  "fork": false,
+  "full_name": "takashicompany/rookey",
+  "parent": null,
+  "pushed_at": "2024-01-25T15:48:50Z",
+  "root": null,
+  "stargazers_count": 10
+ },
+ "takashicompany/spreadwriter": {
+  "archived": false,
+  "description": null,
+  "fork": false,
+  "full_name": "takashicompany/spreadwriter",
+  "parent": null,
+  "pushed_at": "2022-07-24T14:54:09Z",
+  "root": null,
+  "stargazers_count": 5
+ },
+ "takishim/mikeneko65": {
+  "archived": false,
+  "description": "Mikeneko65 is a 65% custom mechanical keyboard forked from Bakeneko65 (v3). ",
+  "fork": false,
+  "full_name": "takishim/mikeneko65",
+  "parent": null,
+  "pushed_at": "2025-02-08T08:01:31Z",
+  "root": null,
+  "stargazers_count": 20
+ },
+ "tamanishi/Pinky3": {
+  "archived": false,
+  "description": "A split 3 x 7 vertically staggered keys and 4 thumb keys keyboard.",
+  "fork": false,
+  "full_name": "tamanishi/Pinky3",
+  "parent": null,
+  "pushed_at": "2022-06-26T10:05:47Z",
+  "root": null,
+  "stargazers_count": 83
+ },
+ "tamanishi/Pinky4": {
+  "archived": false,
+  "description": "A split 4 x 7 vertically staggered keys and 4 thumb keys keyboard.",
+  "fork": false,
+  "full_name": "tamanishi/Pinky4",
+  "parent": null,
+  "pushed_at": "2022-06-26T10:04:18Z",
+  "root": null,
+  "stargazers_count": 119
+ },
+ "tapioki/cephalopoda": {
+  "archived": false,
+  "description": "Low profile split ergonomic mechanical keyboards",
+  "fork": false,
+  "full_name": "tapioki/cephalopoda",
+  "parent": null,
+  "pushed_at": "2023-11-07T05:34:15Z",
+  "root": null,
+  "stargazers_count": 240
+ },
+ "tarneaux/supersplit": {
+  "archived": false,
+  "description": "A 4x6 split keyboard with a 9-key thumb cluster",
+  "fork": false,
+  "full_name": "tarneaux/supersplit",
+  "parent": null,
+  "pushed_at": "2024-03-15T17:21:45Z",
+  "root": null,
+  "stargazers_count": 3
+ },
+ "telzo2000/cool836a": {
+  "archived": false,
+  "description": null,
+  "fork": false,
+  "full_name": "telzo2000/cool836A",
+  "parent": null,
+  "pushed_at": "2021-10-09T12:23:48Z",
+  "root": null,
+  "stargazers_count": 4
+ },
+ "tenstad/keyboard": {
+  "archived": false,
+  "description": "Hand-soldered ergonomic split 3x6 keyboard with 5 thumb keys",
+  "fork": false,
+  "full_name": "tenstad/keyboard",
+  "parent": null,
+  "pushed_at": "2024-12-25T18:05:36Z",
+  "root": null,
+  "stargazers_count": 0
+ },
+ "thatfellarobin/axon": {
+  "archived": false,
+  "description": "A custom 40% keyboard with through-hole components",
+  "fork": false,
+  "full_name": "thatfellarobin/axon",
+  "parent": null,
+  "pushed_at": "2022-04-02T13:47:20Z",
+  "root": null,
+  "stargazers_count": 62
+ },
+ "the-royal/the_royal_open-source-projects": {
+  "archived": false,
+  "description": "A Master Repository For All things Royal Made",
+  "fork": false,
+  "full_name": "The-Royal/The_Royal_Open-Source-Projects",
+  "parent": null,
+  "pushed_at": "2021-05-05T21:07:13Z",
+  "root": null,
+  "stargazers_count": 159
+ },
+ "theroyalsweatshirt/soap": {
+  "error": "gh: Not Found (HTTP 404)"
+ },
+ "theroyalsweatshirt/the_ropro": {
+  "error": "gh: Not Found (HTTP 404)"
+ },
+ "theroyalsweatshirt/the_royal_projects": {
+  "archived": false,
+  "description": "A Master Repository For All things Royal Made",
+  "fork": false,
+  "full_name": "The-Royal/The_Royal_Open-Source-Projects",
+  "parent": null,
+  "pushed_at": "2021-05-05T21:07:13Z",
+  "root": null,
+  "stargazers_count": 157
+ },
+ "tokageitlab/varanidae": {
+  "archived": false,
+  "description": "Varanidae the left-side pad 110 keys keyboard for creators powered by Elite-C",
+  "fork": false,
+  "full_name": "TokageItLab/Varanidae",
+  "parent": null,
+  "pushed_at": "2023-08-08T22:31:51Z",
+  "root": null,
+  "stargazers_count": 0
+ },
+ "tompi/cheapino": {
+  "archived": false,
+  "description": "An affordable split 36 keys keyboard",
+  "fork": false,
+  "full_name": "tompi/cheapino",
+  "parent": null,
+  "pushed_at": "2026-09-25T21:25:24Z",
+  "root": null,
+  "stargazers_count": 1176
+ },
+ "tomsaleeba/ergoslab": {
+  "archived": false,
+  "description": "Design files for a 52-key, split, columnar staggered mechanical keyboard",
+  "fork": false,
+  "full_name": "tomsaleeba/ergoslab",
+  "parent": null,
+  "pushed_at": "2022-02-03T17:31:47Z",
+  "root": null,
+  "stargazers_count": 17
+ },
+ "trojanpinata/model-b": {
+  "archived": false,
+  "description": "A 75% keyboard based on the RP2040 - with hotswappable switches, OLED display and rotary encoder",
+  "fork": false,
+  "full_name": "TrojanPinata/Model-B",
+  "parent": null,
+  "pushed_at": "2024-12-21T02:43:14Z",
+  "root": null,
+  "stargazers_count": 3
+ },
+ "tszaboo/ortho4exent": {
+  "archived": false,
+  "description": "Ortholinear keyboard for Exent case",
+  "fork": false,
+  "full_name": "tszaboo/Ortho4Exent",
+  "parent": null,
+  "pushed_at": "2021-04-22T09:02:32Z",
+  "root": null,
+  "stargazers_count": 1
+ },
+ "tweetydabird/lotus58": {
+  "archived": false,
+  "description": "A split ergo linear keyboard derived from the Lily58 family",
+  "fork": true,
+  "full_name": "TweetyDaBird/Lotus-58-Classic",
+  "parent": "qtkb/Lily58-Glow",
+  "pushed_at": "2025-08-01T12:39:15Z",
+  "root": "kata0510/Lily58",
+  "stargazers_count": 387
+ },
+ "tyraelwastaken/equanimity": {
+  "archived": false,
+  "description": "Equanimity, a 65%, gasket mounted, alice style keyboard with a knob",
+  "fork": false,
+  "full_name": "TyraelWasTaken/Equanimity",
+  "parent": null,
+  "pushed_at": "2024-06-19T12:37:21Z",
+  "root": null,
+  "stargazers_count": 2
+ },
+ "tzarc/djinn": {
+  "archived": false,
+  "description": "@tzarc's custom keyboard designs.",
+  "fork": false,
+  "full_name": "tzarc/keyboards",
+  "parent": null,
+  "pushed_at": "2025-04-16T06:54:09Z",
+  "root": null,
+  "stargazers_count": 980
+ },
+ "tzarc/ghoul": {
+  "archived": true,
+  "description": "Ghoul Planck-like MicroMod keyboard",
+  "fork": false,
+  "full_name": "tzarc/ghoul",
+  "parent": null,
+  "pushed_at": "2024-02-17T11:25:53Z",
+  "root": null,
+  "stargazers_count": 75
+ },
+ "tzarc/keyboards": {
+  "archived": false,
+  "description": "@tzarc's custom keyboard designs.",
+  "fork": false,
+  "full_name": "tzarc/keyboards",
+  "parent": null,
+  "pushed_at": "2025-04-16T06:54:09Z",
+  "root": null,
+  "stargazers_count": 980
+ },
+ "v3lmx/cornifi": {
+  "archived": false,
+  "description": "Split keyboard based on the corne with more stagger",
+  "fork": false,
+  "full_name": "v3lmx/cornifi",
+  "parent": null,
+  "pushed_at": "2025-12-17T13:33:58Z",
+  "root": null,
+  "stargazers_count": 7
+ },
+ "vaarai/cornia": {
+  "archived": false,
+  "description": "Cornia is a split keyboard with 3x6 column strongly staggered keys and 3 thumb keys",
+  "fork": false,
+  "full_name": "Vaarai/Cornia",
+  "parent": null,
+  "pushed_at": "2024-09-29T19:18:38Z",
+  "root": null,
+  "stargazers_count": 11
+ },
+ "vattern/grandiceps": {
+  "archived": false,
+  "description": null,
+  "fork": false,
+  "full_name": "vattern/grandiceps",
+  "parent": null,
+  "pushed_at": "2022-05-24T08:56:32Z",
+  "root": null,
+  "stargazers_count": 19
+ },
+ "vattern/stoutgat": {
+  "archived": false,
+  "description": null,
+  "fork": false,
+  "full_name": "vattern/stoutgat",
+  "parent": null,
+  "pushed_at": "2020-07-26T14:33:25Z",
+  "root": null,
+  "stargazers_count": 1
+ },
+ "vattern/stoutgatv2": {
+  "archived": false,
+  "description": null,
+  "fork": false,
+  "full_name": "vattern/stoutgatv2",
+  "parent": null,
+  "pushed_at": "2021-02-21T19:42:47Z",
+  "root": null,
+  "stargazers_count": 1
+ },
+ "veikman/dactyl-keyboard": {
+  "archived": false,
+  "description": "Programmatic keyboard CAD",
+  "fork": true,
+  "full_name": "veikman/dactyl-keyboard",
+  "parent": "tshort/dactyl-keyboard",
+  "pushed_at": "2026-03-16T20:16:06Z",
+  "root": "adereth/dactyl-keyboard",
+  "stargazers_count": 279
+ },
+ "vladantrhlik/vt-40": {
+  "archived": false,
+  "description": "40% ortholinear mechanical keyboard powered by KMK firmware",
+  "fork": false,
+  "full_name": "vladantrhlik/VT-40",
+  "parent": null,
+  "pushed_at": "2026-01-26T10:48:45Z",
+  "root": null,
+  "stargazers_count": 34
+ },
+ "vlkv/avalanche": {
+  "archived": false,
+  "description": null,
+  "fork": false,
+  "full_name": "vlkv/avalanche",
+  "parent": null,
+  "pushed_at": "2024-09-26T16:46:13Z",
+  "root": null,
+  "stargazers_count": 182
+ },
+ "vlkv/chocofly": {
+  "archived": false,
+  "description": "Ergonomic monosplit keyboard on kailh choc switches",
+  "fork": false,
+  "full_name": "vlkv/chocofly",
+  "parent": null,
+  "pushed_at": "2026-05-10T16:09:51Z",
+  "root": null,
+  "stargazers_count": 75
+ },
+ "vuhopkep/pcb": {
+  "archived": false,
+  "description": null,
+  "fork": false,
+  "full_name": "vuhopkep/PCB",
+  "parent": null,
+  "pushed_at": "2020-12-31T17:04:05Z",
+  "root": null,
+  "stargazers_count": 0
+ },
+ "westfoxtrot/ccd60": {
+  "archived": false,
+  "description": null,
+  "fork": false,
+  "full_name": "westfoxtrot/ccd60",
+  "parent": null,
+  "pushed_at": "2021-07-26T18:39:58Z",
+  "root": null,
+  "stargazers_count": 13
+ },
+ "westfoxtrot/cyclops_pcb": {
+  "archived": false,
+  "description": "Custom 66% Mechanical Keyboard PCB for AEK2 Keycaps",
+  "fork": false,
+  "full_name": "westfoxtrot/cyclops_pcb",
+  "parent": null,
+  "pushed_at": "2020-08-09T19:42:13Z",
+  "root": null,
+  "stargazers_count": 12
+ },
+ "westfoxtrot/cypher_pcb": {
+  "archived": false,
+  "description": "Custom mechanical keyboard PCB",
+  "fork": false,
+  "full_name": "westfoxtrot/cypher_pcb",
+  "parent": null,
+  "pushed_at": "2022-08-06T10:41:19Z",
+  "root": null,
+  "stargazers_count": 20
+ },
+ "weteor/3w6": {
+  "archived": false,
+  "description": "a small compact 3x5+3 split ortho keyboard",
+  "fork": false,
+  "full_name": "weteor/3W6",
+  "parent": null,
+  "pushed_at": "2022-12-12T09:07:30Z",
+  "root": null,
+  "stargazers_count": 485
+ },
+ "wongjingping/k34": {
+  "archived": false,
+  "description": "k34 keyboard design",
+  "fork": false,
+  "full_name": "wongjingping/k34",
+  "parent": null,
+  "pushed_at": "2022-05-14T15:21:56Z",
+  "root": null,
+  "stargazers_count": 6
+ },
+ "worldspawn00/SL40": {
+  "archived": false,
+  "description": null,
+  "fork": false,
+  "full_name": "worldspawn00/SL40",
+  "parent": null,
+  "pushed_at": "2020-09-23T00:38:20Z",
+  "root": null,
+  "stargazers_count": 4
+ },
+ "yanfali/fruity60": {
+  "archived": false,
+  "description": "fruits are good for you",
+  "fork": false,
+  "full_name": "yanfali/fruity60",
+  "parent": null,
+  "pushed_at": "2021-11-10T23:59:32Z",
+  "root": null,
+  "stargazers_count": 3
+ },
+ "yanghu/unicorne": {
+  "archived": false,
+  "description": "A one-piece 40% ortho keyboard design inspired by crkbd, Kyria and Ferris.",
+  "fork": false,
+  "full_name": "yanghu/unicorne",
+  "parent": null,
+  "pushed_at": "2021-05-24T20:23:27Z",
+  "root": null,
+  "stargazers_count": 63
+ },
+ "yangpicui/ergonomicverticalkeyboard": {
+  "archived": false,
+  "description": "An ergonomic vertical keyboard to maximize typing pleasure",
+  "fork": false,
+  "full_name": "YangPiCui/ErgonomicComputerKeyboard",
+  "parent": null,
+  "pushed_at": "2025-11-03T11:46:38Z",
+  "root": null,
+  "stargazers_count": 15
+ },
+ "yatara-cc/drink-me": {
+  "archived": false,
+  "description": "4% ergo macropad",
+  "fork": false,
+  "full_name": "yatara-cc/drink-me",
+  "parent": null,
+  "pushed_at": "2020-06-02T08:11:52Z",
+  "root": null,
+  "stargazers_count": 9
+ },
+ "yiancar/gingham_pcb": {
+  "archived": false,
+  "description": "A 60% throughole keyboard inspired by the Plaid",
+  "fork": false,
+  "full_name": "yiancar/gingham_pcb",
+  "parent": null,
+  "pushed_at": "2020-06-18T11:38:13Z",
+  "root": null,
+  "stargazers_count": 85
+ },
+ "yoichiro/lunakey": {
+  "archived": false,
+  "description": "Lunakey - This is a brand for keyboards designed by Yoichiro Tanaka.",
+  "fork": false,
+  "full_name": "yoichiro/lunakey",
+  "parent": null,
+  "pushed_at": "2022-10-03T06:29:59Z",
+  "root": null,
+  "stargazers_count": 42
+ },
+ "yossiyossy/majistic": {
+  "archived": false,
+  "description": "Magic keyboard\u30e9\u30a4\u30af\u306a\u65e5\u672c\u8a9e\u914d\u5217\u306e\u5206\u5272\u30ad\u30fc\u30dc\u30fc\u30c9",
+  "fork": false,
+  "full_name": "yossiyossy/maJIStic",
+  "parent": null,
+  "pushed_at": "2021-02-17T16:43:23Z",
+  "root": null,
+  "stargazers_count": 0
+ },
+ "zigotica/mechanical-keyboards": {
+  "archived": false,
+  "description": "Own designed mechanical keyboards repository, includes gerber files and images of the final products. Currently includes a 12 keys micropad with 2 rotary encoders, and a 34 keys split keyboard.",
+  "fork": false,
+  "full_name": "zigotica/mechanical-keyboards",
+  "parent": null,
+  "pushed_at": "2023-12-07T14:03:10Z",
+  "root": null,
+  "stargazers_count": 3
+ },
+ "zk-phi/1x2x3-keyboard": {
+  "archived": false,
+  "description": "DIY keyboard for everyone",
+  "fork": false,
+  "full_name": "zk-phi/1x2x3-keyboard",
+  "parent": null,
+  "pushed_at": "2023-07-12T07:48:08Z",
+  "root": null,
+  "stargazers_count": 12
+ },
+ "zmkfirmware/zmk-uno": {
+  "archived": false,
+  "description": "ZMK Test Shield for Arduino Uno Rev3 Compatible Boards",
+  "fork": false,
+  "full_name": "zmkfirmware/zmk-uno",
+  "parent": null,
+  "pushed_at": "2025-01-14T00:22:43Z",
+  "root": null,
+  "stargazers_count": 20
+ },
+ "zykrah/fuyu": {
+  "archived": false,
+  "description": "F12 TKL PCB for the Geon F1-8K",
+  "fork": false,
+  "full_name": "zykrah/fuyu",
+  "parent": null,
+  "pushed_at": "2023-06-24T15:16:25Z",
+  "root": null,
+  "stargazers_count": 28
+ },
+ "zykrah/slime88": {
+  "archived": false,
+  "description": "A F13 TKL Multi-Layout Hotswap H88-Compat Type-C PCB",
+  "fork": false,
+  "full_name": "zykrah/slime88",
+  "parent": null,
+  "pushed_at": "2023-05-02T08:30:24Z",
+  "root": null,
+  "stargazers_count": 29
+ },
+ "zzeneg/pica40": {
+  "archived": false,
+  "description": "Split wired/wireless keyboard with 40 keys",
+  "fork": false,
+  "full_name": "zzeneg/pica40",
+  "parent": null,
+  "pushed_at": "2024-04-15T22:09:03Z",
+  "root": null,
+  "stargazers_count": 177
+ },
+ "zzeneg/stront": {
+  "archived": false,
+  "description": "Split keyboards with 38 or 40 keys, LCD display and Cirque trackpad",
+  "fork": false,
+  "full_name": "zzeneg/stront",
+  "parent": null,
+  "pushed_at": "2024-11-06T06:19:25Z",
+  "root": null,
+  "stargazers_count": 348
+ }
+}

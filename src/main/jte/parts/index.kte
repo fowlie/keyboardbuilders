@@ -1,0 +1,68 @@
+@import net.keyboardbuilders.keyboardbuilders.web.Head
+@import net.keyboardbuilders.keyboardbuilders.web.PartsIndexPage
+@import net.keyboardbuilders.keyboardbuilders.web.SiteUrl
+@param page: PartsIndexPage
+@param head: Head
+@param site: SiteUrl
+
+<%-- NO BACKTICKS IN THIS FILE: the whole template is wrapped in a Kotlin raw string and
+     one backtick closes the content block, with an error naming a line far from the real
+     one. See devBoard.kte's own note. --%>
+
+@template.layout(head = head, site = site, content = @`
+    <h1 class="lede">${page.total} controller boards</h1>
+    <p class="lede-sub">Grouped by the footprint they plug into. Pick the one you have.</p>
+
+    <%-- STATED ONCE, HERE, RATHER THAN ON EVERY ROW. The counts below are "designs
+         nothing rules out", not "designs proven to work", and they are only strictly
+         comparable between two boards whose chips are both recorded -- which is why the
+         list is alphabetical rather than ranked by them. --%>
+    <p class="summary unrecorded">
+        The counts are designs nothing rules out, so they are an upper bound: a board
+        whose chip no source names cannot be checked against one at all.
+    </p>
+
+    <%-- GROUPED, NOT A FLAT 34. Two boards are alternatives to each other only if they
+         fit the same connector, so the footprint is the fact worth grouping on -- the
+         same reasoning Door B's own controller list uses. --%>
+    @for(group in page.footprints)
+        <h2>${group.label}</h2>
+        <ul class="parts-list">
+            @for(board in group.boards)
+                <li>
+                    <a class="parts-card" href="/parts/dev-board/${board.slug}">
+                        <span class="parts-name">${board.name}</span>
+                        <span class="facts">
+                            <span>@if(board.wireless)wireless@else wired@endif</span>
+                            <%-- Absent for the boards whose chip no source names. The
+                                 chip is what the rule-outs on the board's own page are
+                                 argued from, so where we have it, it is shown. --%>
+                            @if(board.mcuFamilyLabel != null)
+                                <span>${board.mcuFamilyLabel}</span>
+                            @endif
+                            @for(family in board.firmware)
+                                <span>${family}</span>
+                            @endfor
+                        </span>
+                        <%-- "Builds N", never ux.md 114's own "used by N designs" --
+                             nothing records which board a design's author picked, only
+                             which footprint it sockets (backlog #59). This number is the
+                             board page's own top tier, so the two cannot disagree. --%>
+                        <span class="parts-count">
+                            builds ${board.buildable} design@if(board.buildable != 1)s@endif
+                        </span>
+                    </a>
+                </li>
+            @endfor
+        </ul>
+    @endfor
+
+    <%-- STATES WHAT THIS INDEX IS NOT. ux.md names six part kinds; five have no
+         catalogue behind them, and PartsController's own rule is that a route this build
+         cannot back is not wired. Saying so is cheaper than a reader wondering whether
+         switches are missing or merely elsewhere. --%>
+    <p class="summary unrecorded">
+        Dev boards are the only part kind cataloged so far. Switches, keycap profiles and
+        MCUs are recorded per design, but have no pages of their own yet.
+    </p>
+`)

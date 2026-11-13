@@ -1,0 +1,112 @@
+@import net.keyboardbuilders.keyboardbuilders.web.Head
+@import net.keyboardbuilders.keyboardbuilders.web.LearnPage
+@import net.keyboardbuilders.keyboardbuilders.web.SiteUrl
+@param page: LearnPage
+@param head: Head
+@param site: SiteUrl
+
+<%--
+    /learn/hotswap. NO BACKTICKS anywhere in this file -- one closes the raw string this
+    page is written in, and jte then reports the error on the wrong line.
+
+    SOURCES, checked 2026-10-03:
+      - Kailh's MX hotswap socket (CPG151101S11) is a surface-mount part: LCSC's listing of
+        Kailh's datasheet.
+      - Mill-Max: Keebio's guide "How to make your keyboard hotswappable with Mill-Max
+        sockets" (blog.keeb.io, linked from the page; rechecked 2026-10-04): the sockets
+        are soldered into the switch holes from the underside, after
+        being set on the switch's legs; "Mill-Max sockets can fit onto Choc switches,
+        however, most PCBs designed for Chocs have switch pad holes that are too small for
+        the sockets to fit into them."
+      - What a design takes is read off its own pads by scripts/measure_switch_pads.py
+        (domain SwitchMount), never off footprint names, so "solder only" is a measured
+        answer and an unread board is its own count.
+    The diagram is a cross-section sketch, NOT to scale.
+--%>
+@template.layout(head = head, site = site, content = @`
+    <script type="application/ld+json">$unsafe{page.articleLd}</script>
+    <script type="application/ld+json">$unsafe{page.breadcrumbLd}</script>
+    <article class="learn">
+        <p class="crumb"><a href="/learn">&larr; Learn</a></p>
+        <h1>Hotswap sockets, Mill-Max or solder</h1>
+
+        <p class="learn-answer">
+            A hotswap keyboard lets you push switches in and pull them out without
+            soldering. It does that with sockets, either Kailh hotswap sockets or Mill-Max
+            sockets. A board with neither needs every switch soldered in.
+        </p>
+
+        <figure class="learn-figure">
+            <svg viewBox="0 0 150 48" role="img"
+                 aria-label="Three side views of a switch on a PCB. Soldered: the switch's two pins pass through the board and are soldered underneath. Kailh hotswap socket: a socket is soldered to the underside of the board and the switch's pins push into it. Mill-Max: a metal sleeve is soldered into each hole and the switch's pins push into the sleeves.">
+                <rect class="lf-part" x="13" y="12" width="18" height="10" rx="1"/>
+                <rect class="lf-part" x="19" y="8" width="6" height="4"/>
+                <rect class="lf-part" x="12" y="22" width="20" height="4"/>
+                <rect class="lf-board" x="4" y="26" width="36" height="4"/>
+                <path class="lf-line" d="M17 26V32.5"/>
+                <path class="lf-mark" d="M15.4 30H18.6L17.3 32.2H16.7Z"/>
+                <path class="lf-line" d="M26 26V32.5"/>
+                <path class="lf-mark" d="M24.4 30H27.6L26.3 32.2H25.7Z"/>
+                <text class="lf-label" x="22" y="40" text-anchor="middle">Soldered</text>
+                <text class="lf-note" x="22" y="44.5" text-anchor="middle">pins soldered to the board</text>
+                <rect class="lf-part" x="63" y="12" width="18" height="10" rx="1"/>
+                <rect class="lf-part" x="69" y="8" width="6" height="4"/>
+                <rect class="lf-part" x="62" y="22" width="20" height="4"/>
+                <rect class="lf-board" x="54" y="26" width="36" height="4"/>
+                <rect class="lf-sock" x="64" y="30" width="16" height="3.4" rx="0.5"/>
+                <rect class="lf-mark" x="61.5" y="30" width="2.5" height="1.2"/>
+                <rect class="lf-mark" x="80" y="30" width="2.5" height="1.2"/>
+                <path class="lf-line" d="M67 26V32.4"/>
+                <path class="lf-line" d="M76 26V32.4"/>
+                <text class="lf-label" x="72" y="40" text-anchor="middle">Kailh hotswap socket</text>
+                <text class="lf-note" x="72" y="44.5" text-anchor="middle">socket soldered under the board</text>
+                <rect class="lf-part" x="113" y="12" width="18" height="10" rx="1"/>
+                <rect class="lf-part" x="119" y="8" width="6" height="4"/>
+                <rect class="lf-part" x="112" y="22" width="20" height="4"/>
+                <rect class="lf-board" x="104" y="26" width="36" height="4"/>
+                <rect class="lf-sock" x="115.9" y="25" width="2.2" height="6.5" rx="0.3"/>
+                <path class="lf-mark" d="M115.2 30H118.8L118.1 31.6H115.9Z"/>
+                <path class="lf-line" d="M117 26V30.5"/>
+                <rect class="lf-sock" x="124.9" y="25" width="2.2" height="6.5" rx="0.3"/>
+                <path class="lf-mark" d="M124.2 30H127.8L127.1 31.6H124.9Z"/>
+                <path class="lf-line" d="M126 26V30.5"/>
+                <text class="lf-label" x="122" y="40" text-anchor="middle">Mill-Max sockets</text>
+                <text class="lf-note" x="122" y="44.5" text-anchor="middle">one soldered into each hole</text>
+            </svg>
+            <figcaption>
+                Not to scale. Solder is in the accent color, sockets are outlined in it.
+            </figcaption>
+        </figure>
+
+        <ul>
+            <li>
+                <strong>Kailh hotswap sockets</strong> are small plastic parts with two metal
+                contacts, soldered to pads under the board. The switch pins go through the
+                holes and into the socket. There is one shape for MX and one for Choc, and
+                ${page.count("bothSockets")} designs have pads for both. Gateron also makes one for MX.
+            </li>
+            <li>
+                <strong>Mill-Max sockets</strong> are tiny metal sleeves that go in the switch
+                holes. <a href="https://blog.keeb.io/how-to-make-your-keyboard-hotswappable-with-mill-max-sockets/">Keebio's guide</a>: put one on each leg of a switch, push it into the board,
+                solder the sleeves from underneath. After that the switch pulls out and the
+                sleeves stay. Keebio says most Choc boards have holes too small for them.
+            </li>
+            <li>
+                <strong>Soldered</strong> is the simplest board with the fewest parts. Some
+                boards take either a socket or solder, and the Hotswap line on the design
+                page says so.
+            </li>
+        </ul>
+        <p>
+            From each board's pads:
+            <a class="learn-all" href="/designs?hotswap=kailh">${page.count("kailh")} designs</a> take Kailh sockets,
+            <a class="learn-all" href="/designs?hotswap=gateron">${page.count("gateron")} designs</a> Gateron's,
+            <a class="learn-all" href="/designs?hotswap=millmax">${page.count("millmax")} designs</a> Mill-Max, and
+            <a class="learn-all" href="/designs?hotswap=no">${page.count("no")} designs</a> are solder only.
+            For ${page.count("unread")} designs the pads haven't been read yet.
+        </p>
+        @template.learn.list(list = page.list("kailh"))
+        @template.learn.list(list = page.list("millmax"))
+        @template.learn.list(list = page.list("solder"))
+    </article>
+`)

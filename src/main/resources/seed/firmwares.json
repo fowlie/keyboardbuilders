@@ -1,0 +1,52 @@
+[
+ {
+  "family": "qmk",
+  "name": "QMK",
+  "mcu_families_supported": [
+   "avr8",
+   "rp2040",
+   "stm32"
+  ],
+  "mcu_families_excluded": [
+   "nrf52"
+  ],
+  "wireless": "yes",
+  "source": "https://raw.githubusercontent.com/qmk/qmk_firmware/master/docs/features/wireless.md"
+ },
+ {
+  "family": "zmk",
+  "name": "ZMK",
+  "mcu_families_supported": [
+   "nrf52",
+   "rp2040",
+   "stm32",
+   "samd21"
+  ],
+  "mcu_families_excluded": [
+   "avr8"
+  ],
+  "wireless": "yes",
+  "source": "https://raw.githubusercontent.com/zmkfirmware/zmk/main/docs/docs/faq.md"
+ },
+ {
+  "family": "kmk",
+  "name": "KMK",
+  "mcu_families_supported": [
+   "nrf52",
+   "rp2040"
+  ],
+  "mcu_families_excluded": [],
+  "wireless": "yes",
+  "source": "https://raw.githubusercontent.com/KMKfw/kmk_firmware/main/docs/en/Officially_Supported_Microcontrollers.md"
+ },
+ {
+  "family": "bluemicro",
+  "name": "BlueMicro",
+  "mcu_families_supported": [
+   "nrf52"
+  ],
+  "mcu_families_excluded": [],
+  "wireless": "unknown",
+  "source": "https://bluemicro.jpconstantineau.com"
+ }
+]

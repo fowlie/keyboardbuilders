@@ -1,0 +1,5479 @@
+# seed/boards.toml -- which board file in a repo belongs to which firmware row.
+# Drafted by scripts/draft_boards.py. Keyed (tree, id), like seed/sources.toml --
+# four designs carry both a ZMK shield and a QMK record, so an id alone names two rows.
+#
+#   drafted    a machine proposed it, nobody has ruled -- EXCLUDED from the build
+#   confirmed  settled, use it
+#
+# A row with `signal = "human"` was ruled by a PERSON and is copied through every
+# re-draft untouched -- this file is regenerated from scratch, and without that the
+# review queue's output would be eaten by the next run. The machine's own
+# `confirmed` is not protected: it is a proposal a better signal may overturn.
+#   no_board   no switch-placing .kicad_pcb survives to be attributed, so this
+#              row produces no design (ticket 48). A finding, not a shrug --
+#              and `signal` says which step emptied the repo: `scan` if it holds
+#              no such board, `filtered` if the path filter set every one aside.
+#
+# `signal` says WHY: `sole` one board one row, `path` the human's own subdirectory,
+# `exact` the id's tail equals the board's name, `token` every id token appears in
+# the path, `ratio` fuzzy only -- which never auto-confirms. `tied` means several
+# candidates scored the same AND agree on every fact the build reads, so the choice
+# between them cannot change the published record -- the row takes them all.
+# `filtered` is the one signal that names OUR mistake rather than the repo's shape:
+# the note lists the boards the path filter dropped, so a reviewer can overrule it.
+#
+# `name` is the DESIGN's name, read from the board's own directory -- ticket 44's
+# rule, and the reason the site is not named by the firmware id. It is a first
+# draft: the machine cannot capitalise `Sofle_v2_soldered` into `Sofle v2 Soldered`,
+# so normalising it is part of confirming the row. The slug follows the name, and
+# ticket 07 decision 8 makes a rename cheap -- old slugs keep resolving.
+
+[[entry]]
+tree     = "zmk"
+id       = "a_dux"
+source   = "tapioki/cephalopoda"
+boards   = ["Architeuthis dux/architeuthis_dux.kicad_pcb"]
+name     = "architeuthis dux"
+verdict  = "confirmed"
+signal   = "token"
+note     = "10 designs' worth of boards in the repo; matched on token"
+
+[[entry]]
+tree     = "zmk"
+id       = "bfo9000"
+source   = "keebio/bfo9000-pcb"
+boards   = ["bfo9000.kicad_pcb"]
+name     = "BFO-9000"
+verdict  = "confirmed"
+signal   = "human"
+note     = "one board in the repo, one row -- nothing to choose, so the attribution is the drafter's. The NAME is normalised: the board sits at the repo root so the drafter fell back to the filename and proposed \"bfo9000\", and the ZMK shield's own `name` field says \"BFO-9000\", which is Keebio's spelling. Ruled by the agent under the owner's standing AFK authorisation, 2026-09-02"
+
+[[entry]]
+tree     = "zmk"
+id       = "clog"
+source   = "smores56/clog"
+boards   = ["pcb/clog.kicad_pcb"]
+name     = "clog"
+verdict  = "confirmed"
+signal   = "shared"
+note     = "2 records want the repo's one design and none supersedes another -- they agree on key count and splitness, and differ by variant rather than version (clog, clog), so all of them run on it"
+
+[[entry]]
+tree     = "zmk"
+id       = "contra"
+source   = "ai03-2725/contra"
+boards   = ["Contra.kicad_pcb"]
+name     = "Contra"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "zmk"
+id       = "corne"
+source   = "foostan/crkbd"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "token"
+note     = "2 designs, best token match 'pcbs/corne-cherry/hotswap/corne-cherry.kicad_pcb' (3.00) but runner-up scores 3.00 -- too close to call"
+
+[[entry]]
+tree     = "zmk"
+id       = "cradio"
+source   = "davidphilipbarr/sweep"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "none"
+note     = "7 designs' worth of boards in the repo, none resembling this id: Sweep Bling LP/pcb/sweepbling-lp__pcb.kicad_pcb, Sweep Bling MX/pcb/sweep-bling-mx__pcb.kicad_pcb, Sweep High M/sweep-high.kicad_pcb, Sweep High/sweep-high.kicad_pcb"
+
+[[entry]]
+tree     = "zmk"
+id       = "crbn"
+source   = "polarityworks/crbn-featherlight"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "zmk"
+id       = "eek"
+source   = "klackygears/eek_doc"
+boards   = ["eek_pcb/eek.kicad_pcb"]
+name     = "eek"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "zmk"
+id       = "elephant42"
+source   = "illness072/elephant42"
+boards   = ["pcb/elephant42.kicad_pcb"]
+name     = "elephant42"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "zmk"
+id       = "ergodash"
+source   = "omkbd/ergodash"
+boards   = ["PCB/Rev.1.1/ergodash.kicad_pcb", "PCB/Rev.1/ergodash.kicad_pcb", "PCB/Rev1.2/ergodash.kicad_pcb", "mini/PCB/ergodash.kicad_pcb"]
+name     = "ergodash"
+verdict  = "confirmed"
+signal   = "tied"
+note     = "4 candidates tie at 4.00 and agree on every fact the build reads, so the choice between them cannot change the record; all 4 taken as one design's revisions"
+
+[[entry]]
+tree     = "zmk"
+id       = "eternal_keypad"
+source   = "duckyb/eternal-keypad"
+boards   = ["pcb-kicad/eternal-keypad.kicad_pcb"]
+name     = "eternal keypad"
+verdict  = "confirmed"
+signal   = "shared"
+note     = "3 records want the repo's one design and none supersedes another -- they agree on key count and splitness, and differ by variant rather than version (eternal_keypad, eternal_keypad, eternal_keypad_lefty), so all of them run on it"
+
+[[entry]]
+tree     = "zmk"
+id       = "eternal_keypad_lefty"
+source   = "duckyb/eternal-keypad"
+boards   = ["pcb-kicad/eternal-keypad.kicad_pcb"]
+name     = "eternal keypad"
+verdict  = "confirmed"
+signal   = "shared"
+note     = "3 records want the repo's one design and none supersedes another -- they agree on key count and splitness, and differ by variant rather than version (eternal_keypad, eternal_keypad, eternal_keypad_lefty), so all of them run on it"
+
+[[entry]]
+tree     = "zmk"
+id       = "fourier"
+source   = "keebio/fourier"
+boards   = ["fourier/fourier-left/fourier-left.kicad_pcb", "fourier/fourier-right/fourier-right.kicad_pcb"]
+name     = "fourier"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "zmk"
+id       = "helix"
+source   = "makotokurauchi/helix"
+boards   = ["PCB/beta/helix.kicad_pcb"]
+name     = "helix"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "zmk"
+id       = "hummingbird"
+source   = "pje66/hummingbird"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "zmk"
+id       = "jian"
+source   = "kgoh/jian-info"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "zmk"
+id       = "jiran"
+source   = "ladniy/jiran"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "token"
+note     = "3 designs, best token match 'jiran-cherry/jiran-cherry.kicad_pcb' (3.00) but runner-up scores 3.00 -- too close to call"
+
+[[entry]]
+tree     = "zmk"
+id       = "jorne"
+source   = "joric/jorne"
+boards   = ["corne-cherry/pcb_v3/corne-cherry.kicad_pcb"]
+name     = "Jorne Cherry 3.0"
+verdict  = "confirmed"
+signal   = "human"
+note     = "CORRECTED 2026-09-11: the repo's default branch is `jorne`, not `master` -- reading `master`'s README first read as generic 'Corne keyboard' and cost this note a wrong premise. The `jorne` branch's own README is headed '# Jorne keyboard' and names three PCB revisions: Jorne Classic 2.1, Jorne Cherry 2.1, Jorne Cherry 3.0 -- this repo IS Jorne-specific, not a bare Corne mirror. No file is literally named 'jorne', but ZMK's own devicetree defines a real, distinct 44-key layout for the shield (joric_jorne_full_layout, 'Full (with pinky)', one column more than standard 42-key Corne). This is Cherry 3.0: 'non-reversible PCB with kailh hotswap sockets and south facing switches' per the README, 44 switches in one file, no hand-mirroring needed. See seed/names.toml for Classic 2.1 and qmk:jorne/rev1 for Cherry 2.1 -- three distinct designs, one repo. corne-chocolate (21/hand=42) and corne-light (42 in one file) are the ones that really are plain, unmodified Corne (foostan/crkbd), correctly excluded by build_seed.py's is_ancestors_board. Verified 2026-09-10/11 during #89."
+
+[[entry]]
+tree     = "zmk"
+id       = "lily58"
+source   = "kata0510/lily58"
+boards   = ["pcb/Lily58.kicad_pcb"]
+name     = "Lily58"
+verdict  = "confirmed"
+signal   = "exact"
+note     = "4 designs' worth of boards in the repo; matched on exact"
+
+[[entry]]
+tree     = "zmk"
+id       = "lotus58"
+source   = "tweetydabird/lotus58"
+boards   = ["Lotus 58 TRRS/v1.11/Lotus58_Glow_111.kicad_pcb", "Lotus 58 TRRS/v1.23/Lotus58_Glow_123.kicad_pcb", "Lotus 58 TRRS/v1.24/Lotus58_Glow_124.kicad_pcb", "Lotus 58 TRRS/v1.25/Lotus58_Glow_125.kicad_pcb", "Lotus 58 TRRS/v1.26/Lotus58_Glow_126.kicad_pcb", "Lotus 58 TRRS/v1.27/Lotus58_Glow_127.kicad_pcb", "Lotus 58 TRRS/v1.28/Lotus58_Glow_128.kicad_pcb", "Lotus 58 TRRS/v1.29/Lotus58_Glow_129.kicad_pcb", "Lotus 58 TRRS/v1.30/Lotus58_Glow_130.kicad_pcb", "Lotus 58 USB-C/v1.30/Lotus58_Glow_130.kicad_pcb", "Lotus 58 USB-C/v1.31/Lotus58_Glow_131.kicad_pcb", "Lotus 58 USB-C/v1.32/Lotus58_Glow_132.kicad_pcb", "Lotus 58 USB-C/v1.33/Lotus58_Glow_133.kicad_pcb", "Lotus 58 USB-C/v1.40/Lotus58_Glow_140.kicad_pcb", "Lotus 58 USB-C/v1.41/Lotus58_Glow_141.kicad_pcb", "Lotus 58 USB-C/v1.42/Lotus58_Glow_142.kicad_pcb", "Lotus 58 USB-C/v1.50/Lotus58_Glow_150.kicad_pcb", "Lotus 58 USB-C/v1.51/Lotus58_Glow_151.kicad_pcb"]
+name     = "lotus58"
+verdict  = "confirmed"
+signal   = "tied"
+note     = "18 candidates tie at 3.00 and agree on every fact the build reads, so the choice between them cannot change the record; all 18 taken as one design's revisions"
+
+[[entry]]
+tree     = "zmk"
+id       = "osprette"
+source   = "smores56/osprette"
+boards   = ["pcb/osprette.kicad_pcb"]
+name     = "osprette"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "zmk"
+id       = "pancake"
+source   = "spaceboards/spaceboardshardware"
+boards   = ["Keyboards/Pancake/V1/kicad/dropin.kicad_pcb"]
+name     = "dropin V1"
+verdict  = "confirmed"
+signal   = "token"
+note     = "7 designs' worth of boards in the repo; matched on token"
+
+[[entry]]
+tree     = "zmk"
+id       = "quefrency"
+source   = "keebio/quefrency-rev1-pcb"
+boards   = ["quefrency-right-65/quefrency-right-65.kicad_pcb", "spectrogram-left/quefrency-left-macro.kicad_pcb"]
+name     = "quefrency rev1"
+verdict  = "confirmed"
+signal   = "tied"
+note     = "2 candidates tie at 3.00 and agree on every fact the build reads, so the choice between them cannot change the record; all 2 taken as one design's revisions"
+
+[[entry]]
+tree     = "zmk"
+id       = "redox"
+source   = "mattdibi/redox-keyboard"
+boards   = ["redox/pcb/rev1.0/kicad_files/redox_rev1.kicad_pcb"]
+name     = "redox rev1"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "zmk"
+id       = "reviung34"
+source   = "gtips/reviung"
+boards   = ["reviung34/pcb/reviung34.kicad_pcb"]
+name     = "reviung34"
+verdict  = "confirmed"
+signal   = "exact"
+note     = "14 designs' worth of boards in the repo; matched on exact"
+
+[[entry]]
+tree     = "zmk"
+id       = "reviung41"
+source   = "gtips/reviung"
+boards   = ["reviung41/pcb/ver1.2/reviung41.kicad_pcb", "reviung41/pcb/ver1.3/reviung41.kicad_pcb", "reviung41/pcb/ver1.4/reviung41.kicad_pcb"]
+name     = "reviung41"
+verdict  = "confirmed"
+signal   = "tied"
+note     = "3 candidates tie at 4.00 and agree on every fact the build reads, so the choice between them cannot change the record; all 3 taken as one design's revisions"
+
+[[entry]]
+tree     = "zmk"
+id       = "reviung5"
+source   = "gtips/reviung"
+boards   = ["reviung5/pcb/ver1.0/reviung5.kicad_pcb"]
+name     = "reviung5"
+verdict  = "confirmed"
+signal   = "exact"
+note     = "14 designs' worth of boards in the repo; matched on exact"
+
+[[entry]]
+tree     = "zmk"
+id       = "reviung53"
+source   = "gtips/reviung"
+boards   = ["reviung53/pcb/main-pcb/reviung53-ver1.0/reviung53.kicad_pcb"]
+name     = "reviung53"
+verdict  = "confirmed"
+signal   = "exact"
+note     = "14 designs' worth of boards in the repo; matched on exact"
+
+[[entry]]
+tree     = "zmk"
+id       = "sofle"
+source   = "josefadamcik/soflekeyboard"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "exact"
+note     = "6 designs, best exact match 'Sofle_Choc/PCB/SofleKeyboard.kicad_pcb' (4.00) but runner-up scores 4.00 -- too close to call"
+
+[[entry]]
+tree     = "zmk"
+id       = "splitreus62"
+source   = "na-cly/splitreus62"
+boards   = ["splitreus.kicad_pcb"]
+name     = "splitreus"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "zmk"
+id       = "tg4x"
+source   = "mythosmann/tg4x"
+boards   = ["KiCad/TG4x.kicad_pcb"]
+name     = "TG4x"
+verdict  = "confirmed"
+signal   = "exact"
+note     = "2 designs' worth of boards in the repo; matched on exact"
+
+[[entry]]
+tree     = "zmk"
+id       = "two_percent_milk"
+source   = "spaceboards/spaceboardshardware"
+boards   = ["Keyboards/2% Milk/kicad/milk.kicad_pcb"]
+name     = "milk"
+verdict  = "confirmed"
+signal   = "token"
+note     = "7 designs' worth of boards in the repo; matched on token"
+
+[[entry]]
+tree     = "zmk"
+id       = "zmk_uno"
+source   = "zmkfirmware/zmk-uno"
+boards   = ["zmk-uno.kicad_pcb"]
+name     = "zmk uno"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "zmk"
+id       = "zodiark"
+source   = "Aleblazer/Zodiark"
+boards   = ["ZodiarkSplit/ZodiarkSplit.kicad_pcb"]
+name     = "Zodiark"
+verdict  = "confirmed"
+signal   = "human"
+note     = "one board in the repo, one row -- nothing to choose, so the attribution is the drafter's; the repo's two other .kicad_pcb are its plates and the artefact filter had already set them aside. The NAME is normalised: the directory is `ZodiarkSplit` so the drafter proposed \"Zodiark Split\", and `body` already states split/2 -- putting it in the name says the same fact twice. The ZMK shield's own `name` field is \"Zodiark\". Ruled by the agent under the owner's standing AFK authorisation, 2026-09-02"
+
+[[entry]]
+tree     = "qmk"
+id       = "0xcb/splaytoraid/32u4"
+source   = "freya-irl/splaytoraid40"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "0xcb/splaytoraid/rp2040_ce"
+source   = "freya-irl/splaytoraid40"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "10bleoledhub"
+source   = "haierwangwei2005/10ble-oled-hub"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "3keyecosystem/2key2"
+source   = "softplus/3keyecosystem"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "3w6/rev1"
+source   = "weteor/3w6"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "contended"
+note     = "2 rows contend for the repo's one design (pcb/3w6/3W6.kicad_pcb) -- they may be controller or revision variants of it, and a row whose own board was never committed owns nothing at all"
+
+[[entry]]
+tree     = "qmk"
+id       = "3w6/rev2"
+source   = "weteor/3w6"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "contended"
+note     = "2 rows contend for the repo's one design (pcb/3w6/3W6.kicad_pcb) -- they may be controller or revision variants of it, and a row whose own board was never committed owns nothing at all"
+
+[[entry]]
+tree     = "qmk"
+id       = "4by3"
+source   = "eliassjogreen/4by3"
+boards   = ["pcb/4by3.kicad_pcb"]
+name     = "4by3"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "4pplet/eagle_viper_rep/rev_a"
+source   = "4pplet/eagle_viper_rep"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "4pplet/eagle_viper_rep/rev_b"
+source   = "4pplet/eagle_viper_rep"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "4pplet/steezy60/rev_a"
+source   = "4pplet/steezy60"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "4pplet/steezy60/rev_b"
+source   = "4pplet/steezy60"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "4pplet/unextended_std/rev_a"
+source   = "4pplet/unextended"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "4pplet/waffling60/rev_a"
+source   = "4pplet/waffling60"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "4pplet/waffling60/rev_b"
+source   = "4pplet/waffling60"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "4pplet/waffling60/rev_c"
+source   = "4pplet/waffling60"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "4pplet/waffling60/rev_d"
+source   = "4pplet/waffling60"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "4pplet/waffling60/rev_d_ansi"
+source   = "4pplet/waffling60"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "4pplet/waffling60/rev_d_iso"
+source   = "4pplet/waffling60"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "4pplet/waffling60/rev_e"
+source   = "4pplet/waffling60"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "4pplet/waffling60/rev_e_ansi"
+source   = "4pplet/waffling60"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "4pplet/waffling60/rev_e_iso"
+source   = "4pplet/waffling60"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "8pack/rev11"
+source   = "cgarcia2097/8-pack"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "contended"
+note     = "2 rows all match 'keypad/8keysimplev3/8pack.kicad_pcb' within 0.5 (8pack/rev11, 8pack/rev12) -- one board, one owner"
+
+[[entry]]
+tree     = "qmk"
+id       = "8pack/rev12"
+source   = "cgarcia2097/8-pack"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "contended"
+note     = "2 rows all match 'keypad/8keysimplev3/8pack.kicad_pcb' within 0.5 (8pack/rev11, 8pack/rev12) -- one board, one owner"
+
+[[entry]]
+tree     = "qmk"
+id       = "a_dux"
+source   = "tapioki/cephalopoda"
+boards   = ["Architeuthis dux/architeuthis_dux.kicad_pcb"]
+name     = "architeuthis dux"
+verdict  = "confirmed"
+signal   = "token"
+note     = "10 designs' worth of boards in the repo; matched on token"
+
+[[entry]]
+tree     = "qmk"
+id       = "adelheid"
+source   = "floookay/adelheid"
+boards   = ["pcb/adelheid.kicad_pcb"]
+name     = "adelheid"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "adpenrose/kintsugi"
+source   = "adpenrose/kintsugi_keeb"
+boards   = ["kintsugi.kicad_pcb"]
+name     = "kintsugi"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "ai03/jp60"
+source   = "ai03-2725/jp60"
+boards   = ["JP60.kicad_pcb"]
+name     = "JP60"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "ai03/orbit"
+source   = "ai03-2725/orbit"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "exact"
+note     = "3 designs, best exact match 'Orbit-Choc-PCB/Orbit.kicad_pcb' (4.00) but runner-up scores 4.00 -- too close to call"
+
+[[entry]]
+tree     = "qmk"
+id       = "ai03/soyuz"
+source   = "ai03-2725/soyuz"
+boards   = ["Soyuz.kicad_pcb"]
+name     = "Soyuz"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "ai03/voyager60_alps"
+source   = "ai03-2725/voyager60"
+boards   = ["Voyager60.kicad_pcb"]
+name     = "Voyager60"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "anavi/arrows"
+source   = "anavitechnology/anavi-arrows"
+boards   = ["anavi-arrows.kicad_pcb"]
+name     = "anavi arrows"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "anavi/macropad10"
+source   = "anavitechnology/anavi-macro-pad-10"
+boards   = ["anavi-macro-pad-10.kicad_pcb"]
+name     = "anavi macro pad 10"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "anavi/macropad12"
+source   = "anavitechnology/anavi-macro-pad-12"
+boards   = ["anavi-macro-pad-12.kicad_pcb"]
+name     = "anavi macro pad 12"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "andean_condor"
+source   = "guidoism/andean-condor"
+boards   = ["andean-condor.kicad_pcb"]
+name     = "andean condor"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "arisu"
+source   = "fatenozomi/arisu-pcb"
+boards   = ["arisu.kicad_pcb"]
+name     = "arisu"
+verdict  = "confirmed"
+signal   = "shared"
+note     = "2 records want the repo's one design and none supersedes another -- they agree on key count and splitness, and differ by variant rather than version (arisu, nightly_boards/ph_arisu), so all of them run on it"
+
+[[entry]]
+tree     = "qmk"
+id       = "atreyu/rev1"
+source   = "climent/atreyu"
+boards   = ["pcb/v1/atreyu-pcb2.kicad_pcb", "pcb/v2/atreyu-pcb2.kicad_pcb"]
+name     = "atreyu"
+verdict  = "confirmed"
+signal   = "human"
+note     = "owner-ruled 2026-09-06, re-cut along the layout. v1 and v2 are BYTE-IDENTICAL in switch positions -- every one of the 60 coordinates matches -- so they are one design's revisions, and publishing them as two rows published one keyboard twice. v0.1 is a DIFFERENT keyboard and was dropped: 58 switches, columns at 13.6 degrees against v1's 18, thumbs at 46.4 against v1's 4/32/42. It rode on this record because no QMK record describes a 58-key Atreyu -- rev1 and rev2 declare identical 60-key layouts and differ only in matrix pins, encoder pins and USB device version -- so it leaves the corpus rather than sit under a row declaring 60. Measured over the 14 rows holding two or more whole-keyboard boards, this was the only one whose boards disagreed: 0.46u of drift where the next-widest is 0.18 and ten of the fourteen are 0.00."
+
+[[entry]]
+tree     = "qmk"
+id       = "atreyu/rev2"
+source   = "climent/atreyu"
+boards   = ["pcb/v2-choc/v2-choc.kicad_pcb"]
+name     = "atreyu v2 choc"
+verdict  = "confirmed"
+signal   = "human"
+note     = "owner-ruled 2026-09-06. The Choc board was already publishing -- Half B minted it from the one board nothing had claimed -- but under the name its PATH gave it, `v2 choc`, which reads on the site as a keyboard called that and says nothing about the Atreyu. Ticket 44's naming rule anticipates exactly this: the directory is normalised by the human confirming the row. rev2 is the right record for it by the repo's own README -- \"There are 3 different revisions: handwired, rev1 and rev2, depending of the board you are building\" -- and rev2 is free to describe it because rev1 holds the MX pair. It stays a SEPARATE ROW from `atreyu`: same 60-key layout, but Choc against MX is a switch-footprint difference and a different pitch, which are facets the site filters on."
+
+[[entry]]
+tree     = "qmk"
+id       = "avalanche/v1"
+source   = "vlkv/avalanche"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "contended"
+note     = "4 rows contend for the repo's one design (pcb/avalanche-hotswap.kicad_pcb) -- they may be controller or revision variants of it, and a row whose own board was never committed owns nothing at all. Separately, same defect as #23: the repo's own README describes it as break-off -- '4x6 (or 3x6 if you break off the digits row)' plus an independently break-off-able pinky key -- so the published 64-key layout is one of several, named only in prose. Owner-reported 2026-09-16."
+
+[[entry]]
+tree     = "qmk"
+id       = "avalanche/v2"
+source   = "vlkv/avalanche"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "contended"
+note     = "4 rows contend for the repo's one design (pcb/avalanche-hotswap.kicad_pcb) -- they may be controller or revision variants of it, and a row whose own board was never committed owns nothing at all. Separately, same defect as #23: the repo's own README describes it as break-off -- '4x6 (or 3x6 if you break off the digits row)' plus an independently break-off-able pinky key -- so the published 64-key layout is one of several, named only in prose. Owner-reported 2026-09-16."
+
+[[entry]]
+tree     = "qmk"
+id       = "avalanche/v3"
+source   = "vlkv/avalanche"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "contended"
+note     = "4 rows contend for the repo's one design (pcb/avalanche-hotswap.kicad_pcb) -- they may be controller or revision variants of it, and a row whose own board was never committed owns nothing at all. Separately, same defect as #23: the repo's own README describes it as break-off -- '4x6 (or 3x6 if you break off the digits row)' plus an independently break-off-able pinky key -- so the published 64-key layout is one of several, named only in prose. Owner-reported 2026-09-16."
+
+[[entry]]
+tree     = "qmk"
+id       = "avalanche/v4"
+source   = "vlkv/avalanche"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "contended"
+note     = "4 rows contend for the repo's one design (pcb/avalanche-hotswap.kicad_pcb) -- they may be controller or revision variants of it, and a row whose own board was never committed owns nothing at all. Separately, same defect as #23: the repo's own README describes it as break-off -- '4x6 (or 3x6 if you break off the digits row)' plus an independently break-off-able pinky key -- so the published 64-key layout is one of several, named only in prose. Owner-reported 2026-09-16."
+
+[[entry]]
+tree     = "qmk"
+id       = "aya"
+source   = "dannixon/aya"
+boards   = ["hardware/aya.kicad_pcb"]
+name     = "aya"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "b_sides/rev41lp"
+source   = "cyril279/keyboards"
+boards   = ["revlp/41_1350/41_1350_pcb/41_1350_pcb.kicad_pcb"]
+name     = "41 1350"
+verdict  = "confirmed"
+signal   = "token"
+note     = "5 designs' worth of boards in the repo; matched on token"
+
+[[entry]]
+tree     = "qmk"
+id       = "barracuda"
+source   = "knaruo/barracuda"
+boards   = ["pcb/barracuda/barracuda.kicad_pcb"]
+name     = "barracuda"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "basketweave"
+source   = "null-ll/basketweave"
+boards   = ["basketweave/basketweave.kicad_pcb"]
+name     = "basketweave"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "bastardkb/charybdis/3x5/blackpill"
+source   = "bastardkb/charybdis"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "bastardkb/charybdis/3x5/elitec"
+source   = "bastardkb/charybdis"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "bastardkb/charybdis/3x6/blackpill"
+source   = "bastardkb/charybdis"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "bastardkb/charybdis/3x6/elitec"
+source   = "bastardkb/charybdis"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "bastardkb/charybdis/4x6/blackpill"
+source   = "bastardkb/charybdis"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "bastardkb/charybdis/4x6/elitec"
+source   = "bastardkb/charybdis"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "bastardkb/scylla/blackpill"
+source   = "bastardkb/scylla"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "bastardkb/scylla/promicro"
+source   = "bastardkb/scylla"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "bastardkb/skeletyl/blackpill"
+source   = "bastardkb/skeletyl"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "bastardkb/skeletyl/promicro"
+source   = "bastardkb/skeletyl"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "bastardkb/tbkmini/blackpill"
+source   = "bastardkb/tbk-mini"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "bastardkb/tbkmini/promicro"
+source   = "bastardkb/tbk-mini"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "bbrfkr/dynamis"
+source   = "bbrfkr/keyboards"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "none"
+note     = "4 designs' worth of boards in the repo, none resembling this id: atom/atom.kicad_pcb, molecule/molecule.kicad_pcb, quantum/quantum.kicad_pcb, scatter42/scatter42.kicad_pcb"
+
+[[entry]]
+tree     = "qmk"
+id       = "beekeeb/piantor"
+source   = "beekeeb/piantor"
+boards   = ["pcb/left/keyboard_pcb.kicad_pcb", "pcb/right/keyboard_pcb.kicad_pcb"]
+name     = "piantor"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "bemeier/bmek/rev1"
+source   = "bemeier/bmek"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "contended"
+note     = "3 rows all match 'pcb/kicad/projects/BMEK_Hotswap/BMEK_Hotswap.kicad_pcb' within 0.5 (bemeier/bmek/rev1, bemeier/bmek/rev2, bemeier/bmek/rev3) -- one board, one owner"
+
+[[entry]]
+tree     = "qmk"
+id       = "bemeier/bmek/rev2"
+source   = "bemeier/bmek"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "contended"
+note     = "3 rows all match 'pcb/kicad/projects/BMEK_Hotswap/BMEK_Hotswap.kicad_pcb' within 0.5 (bemeier/bmek/rev1, bemeier/bmek/rev2, bemeier/bmek/rev3) -- one board, one owner"
+
+[[entry]]
+tree     = "qmk"
+id       = "bemeier/bmek/rev3"
+source   = "bemeier/bmek"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "contended"
+note     = "3 rows all match 'pcb/kicad/projects/BMEK_Hotswap/BMEK_Hotswap.kicad_pcb' within 0.5 (bemeier/bmek/rev1, bemeier/bmek/rev2, bemeier/bmek/rev3) -- one board, one owner"
+
+[[entry]]
+tree     = "qmk"
+id       = "blu/vimclutch"
+source   = "blu006/vimclutch_hw"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "bluebell/swoop"
+source   = "jimmerricks/swoop"
+boards   = ["pcbs/swoop-mx/swoop-mx.kicad_pcb"]
+name     = "swoop mx"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "bop"
+source   = "blewis308/bop-keyboard"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "boston"
+source   = "bluepylons/boston"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "token"
+note     = "13 designs, best token match 'Boston - Current design/PCB/Older PCB revisions/V0.5.2/Boston-keyboard-S.kicad_pcb' (3.00) but runner-up scores 3.00 -- too close to call"
+
+[[entry]]
+tree     = "qmk"
+id       = "bschwind/key_ripper"
+source   = "bschwind/key-ripper"
+boards   = ["pcb/key-ripper.kicad_pcb"]
+name     = "key ripper"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "buildakb/potato65"
+source   = "aeonstrife/potato65"
+boards   = ["hotswap pcb/potato-65-hotswap.kicad_pcb", "solder pcb mount/potato-65-solderable-platemount.kicad_pcb", "solder pcb/potato-65-solderable.kicad_pcb"]
+name     = "potato65"
+verdict  = "confirmed"
+signal   = "tied"
+note     = "3 candidates tie at 2.67 and agree on every fact the build reads, so the choice between them cannot change the record; all 3 taken as one design's revisions"
+
+[[entry]]
+tree     = "qmk"
+id       = "buzzard/rev1"
+source   = "crehmann/buzzard"
+boards   = ["PCB/Buzzard/Buzzard.kicad_pcb"]
+name     = "Buzzard"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "cablecardesigns/cypher/rev6"
+source   = "westfoxtrot/cypher_pcb"
+boards   = ["cypher.kicad_pcb"]
+name     = "cypher"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "cantor"
+source   = "diepala/cantor"
+boards   = ["Cantor_Classic/keyboard_pcb-rounded.kicad_pcb", "Cantor_Classic/keyboard_pcb.kicad_pcb"]
+name     = "Cantor"
+verdict  = "confirmed"
+signal   = "human"
+note     = "owner 2026-08-29: 'The Cantor Classic uses choc switches with choc spacing. Therefore, only MBK keycaps can be used. The Cantor MX uses either choc V1, choc V2, or MX switches with the slightly larger MX spacing.' So the repo holds two designs, not one ambiguous one. The QMK record 'cantor' is the original, i.e. the Classic; its two board files are the square and rounded outlines of one PCB. Cantor MX has no firmware record and is a Half B design."
+
+[[entry]]
+tree     = "qmk"
+id       = "cata"
+source   = "skarrmann/cata"
+boards   = ["kicad/ks-33/cata-ks-33.kicad_pcb"]
+name     = "cata ks 33"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "chavdai40/rev1"
+source   = "dvorak55/chavdai40"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "contended"
+note     = "2 rows contend for the repo's one design (chavdai40.kicad_pcb) -- they may be controller or revision variants of it, and a row whose own board was never committed owns nothing at all"
+
+[[entry]]
+tree     = "qmk"
+id       = "chavdai40/rev2"
+source   = "dvorak55/chavdai40"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "contended"
+note     = "2 rows contend for the repo's one design (chavdai40.kicad_pcb) -- they may be controller or revision variants of it, and a row whose own board was never committed owns nothing at all"
+
+[[entry]]
+tree     = "qmk"
+id       = "chill/ghoul"
+source   = "chillkb/ghoultkl"
+boards   = ["ghoulTKL.kicad_pcb"]
+name     = "ghoul TKL"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "chocofly/v1"
+source   = "vlkv/chocofly"
+boards   = ["pcb/chocofly.kicad_pcb", "pcb/chocofly_fz.kicad_pcb", "pcb/chocofly_roundtracks_filledzones.kicad_pcb"]
+name     = "chocofly"
+verdict  = "confirmed"
+signal   = "tied"
+note     = "3 candidates tie at 2.50 and agree on every fact the build reads, so the choice between them cannot change the record; all 3 taken as one design's revisions"
+
+[[entry]]
+tree     = "qmk"
+id       = "chocv"
+source   = "brickbots/chocv"
+boards   = ["kicad/chocV/chocV.kicad_pcb"]
+name     = "choc V"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "chord/zero"
+source   = "sol/chord-zero"
+boards   = ["zero.kicad_pcb"]
+name     = "zero"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "chouchou"
+source   = "dlip/chouchou"
+boards   = ["kicad/chouchou.kicad_pcb"]
+name     = "chouchou"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "chromatonemini"
+source   = "3araht/chromatonemini"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "clog"
+source   = "smores56/clog"
+boards   = ["pcb/clog.kicad_pcb"]
+name     = "clog"
+verdict  = "confirmed"
+signal   = "shared"
+note     = "2 records want the repo's one design and none supersedes another -- they agree on key count and splitness, and differ by variant rather than version (clog, clog), so all of them run on it"
+
+[[entry]]
+tree     = "qmk"
+id       = "contender"
+source   = "sotoba/contender"
+boards   = ["contender.kicad_pcb"]
+name     = "contender"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "converter/xmk"
+source   = "manna-harbour/xmk"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "cool836a"
+source   = "telzo2000/cool836a"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "cornia/v0_6"
+source   = "vaarai/cornia"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "contended"
+note     = "2 rows contend for the repo's one design (PCB/cornia.kicad_pcb) -- they may be controller or revision variants of it, and a row whose own board was never committed owns nothing at all"
+
+[[entry]]
+tree     = "qmk"
+id       = "cornia/v1"
+source   = "vaarai/cornia"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "contended"
+note     = "2 rows contend for the repo's one design (PCB/cornia.kicad_pcb) -- they may be controller or revision variants of it, and a row whose own board was never committed owns nothing at all"
+
+[[entry]]
+tree     = "qmk"
+id       = "cornifi"
+source   = "v3lmx/cornifi"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "coseyfannitutti/discipad"
+source   = "coseyfannitutti/discipad"
+boards   = ["discipad-pcb.kicad_pcb"]
+name     = "discipad"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "coseyfannitutti/discipline"
+source   = "coseyfannitutti/discipline"
+boards   = ["discipline-pcb.kicad_pcb"]
+name     = "discipline"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "coseyfannitutti/mysterium"
+source   = "coseyfannitutti/mysterium"
+boards   = ["mysterium-pcb.kicad_pcb"]
+name     = "mysterium"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "coseyfannitutti/romeo"
+source   = "coseyfannitutti/romeo"
+boards   = ["romeo-pcb.kicad_pcb"]
+name     = "romeo"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "cozykeys/bloomer/v2"
+source   = "cozykeys/bloomer"
+boards   = ["pcb/bloomer.kicad_pcb"]
+name     = "bloomer"
+verdict  = "confirmed"
+signal   = "human"
+note     = "87 keys; the root pcb/ board, with v3 taking the v3.0/ folder"
+
+[[entry]]
+tree     = "qmk"
+id       = "cozykeys/bloomer/v3"
+source   = "cozykeys/bloomer"
+boards   = ["v3.0/pcb/bloomer.kicad_pcb"]
+name     = "bloomer v3.0"
+verdict  = "confirmed"
+signal   = "human"
+note     = "90 keys; the v3.0/ folder names itself"
+
+[[entry]]
+tree     = "qmk"
+id       = "cozykeys/speedo/v2"
+source   = "cozykeys/speedo"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "contended"
+note     = "2 rows contend for the repo's one design (pcb/speedo.kicad_pcb) -- they may be controller or revision variants of it, and a row whose own board was never committed owns nothing at all"
+
+[[entry]]
+tree     = "qmk"
+id       = "cozykeys/speedo/v3"
+source   = "cozykeys/speedo"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "contended"
+note     = "2 rows contend for the repo's one design (pcb/speedo.kicad_pcb) -- they may be controller or revision variants of it, and a row whose own board was never committed owns nothing at all"
+
+[[entry]]
+tree     = "qmk"
+id       = "cradio"
+source   = "davidphilipbarr/36keys"
+boards   = ["34Keys/Cradio S/cradio.kicad_pcb", "34Keys/Cradio/cradio.kicad_pcb"]
+name     = "cradio"
+verdict  = "confirmed"
+signal   = "tied"
+note     = "9 candidates tie at 4.00 and agree on every fact the build reads, so the choice between them cannot change the record; all 2 taken as one design's revisions"
+
+[[entry]]
+tree     = "qmk"
+id       = "craftwalk"
+source   = "sotoba/craftwalk"
+boards   = ["craftwalk.kicad_pcb"]
+name     = "craftwalk"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "crkbd/r2g"
+source   = "foostan/crkbd"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "none"
+note     = "2 designs' worth of boards in the repo, none resembling this id: pcbs/corne-cherry/hotswap/corne-cherry.kicad_pcb, pcbs/corne-chocolate/hotswap/corne-chocolate.kicad_pcb"
+
+[[entry]]
+tree     = "qmk"
+id       = "crkbd/rev1"
+source   = "foostan/crkbd"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "none"
+note     = "2 designs' worth of boards in the repo, none resembling this id: pcbs/corne-cherry/hotswap/corne-cherry.kicad_pcb, pcbs/corne-chocolate/hotswap/corne-chocolate.kicad_pcb"
+
+[[entry]]
+tree     = "qmk"
+id       = "crkbd/rev4_0/mini"
+source   = "foostan/crkbd"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "none"
+note     = "2 designs' worth of boards in the repo, none resembling this id: pcbs/corne-cherry/hotswap/corne-cherry.kicad_pcb, pcbs/corne-chocolate/hotswap/corne-chocolate.kicad_pcb"
+
+[[entry]]
+tree     = "qmk"
+id       = "crkbd/rev4_0/standard"
+source   = "foostan/crkbd"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "none"
+note     = "2 designs' worth of boards in the repo, none resembling this id: pcbs/corne-cherry/hotswap/corne-cherry.kicad_pcb, pcbs/corne-chocolate/hotswap/corne-chocolate.kicad_pcb"
+
+[[entry]]
+tree     = "qmk"
+id       = "crkbd/rev4_1/mini"
+source   = "foostan/crkbd"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "none"
+note     = "2 designs' worth of boards in the repo, none resembling this id: pcbs/corne-cherry/hotswap/corne-cherry.kicad_pcb, pcbs/corne-chocolate/hotswap/corne-chocolate.kicad_pcb"
+
+[[entry]]
+tree     = "qmk"
+id       = "crkbd/rev4_1/standard"
+source   = "foostan/crkbd"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "none"
+note     = "2 designs' worth of boards in the repo, none resembling this id: pcbs/corne-cherry/hotswap/corne-cherry.kicad_pcb, pcbs/corne-chocolate/hotswap/corne-chocolate.kicad_pcb"
+
+[[entry]]
+tree     = "qmk"
+id       = "cybergear/macro25"
+source   = "cybergear/mk-macro-01"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "dcpedit/masonry"
+source   = "dcpedit/masonry"
+boards   = ["pcb/pcb.kicad_pcb"]
+name     = "masonry"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "dcpedit/redherring"
+source   = "dcpedit/redherring"
+boards   = ["pcb-hotswap/redherring.kicad_pcb", "pcb/redherring.kicad_pcb", "solenoid/redherring.kicad_pcb"]
+name     = "redherring"
+verdict  = "confirmed"
+signal   = "tied"
+note     = "3 candidates tie at 4.00 and agree on every fact the build reads, so the choice between them cannot change the record; all 3 taken as one design's revisions"
+
+[[entry]]
+tree     = "qmk"
+id       = "decent/numpad"
+source   = "bleroy/3d-junkyard"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "token"
+note     = "25 designs, best token match 'DecenTKL/Keyboard/DecentUSB.kicad_pcb' (2.50) but runner-up scores 2.50 -- too close to call"
+
+[[entry]]
+tree     = "qmk"
+id       = "decent/tkl"
+source   = "bleroy/3d-junkyard"
+boards   = ["DecenTKL/Keyboard/DecentUSB.kicad_pcb", "DecenTKL/NumPad/DecentNumPad.kicad_pcb"]
+name     = "Decen TKL"
+verdict  = "confirmed"
+signal   = "tied"
+note     = "20 candidates tie at 3.00 and agree on every fact the build reads, so the choice between them cannot change the record; all 2 taken as one design's revisions"
+
+[[entry]]
+tree     = "qmk"
+id       = "dinofizz/fnrow/v1"
+source   = "dinofizz/fnrow-pcb"
+boards   = ["fnrow/fnrow.kicad_pcb"]
+name     = "fnrow"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "dm9records/plaid"
+source   = "hsgw/plaid"
+boards   = ["pcb/plaid.kicad_pcb"]
+name     = "plaid"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "dm9records/tartan"
+source   = "hsgw/tartan"
+boards   = ["pcb/tartan.kicad_pcb"]
+name     = "tartan"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "dnlnm/cloak"
+source   = "dnlnm/cloak-xt-stm32"
+boards   = ["cloak-xt.kicad_pcb"]
+name     = "cloak xt"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "dumbpad/v0x"
+source   = "imchipwood/dumbpad"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "contended"
+note     = "8 rows all match 'combo_low_profile_oled/dumbpad.kicad_pcb' within 0.5 (dumbpad/v0x, dumbpad/v0x_dualencoder, dumbpad/v0x_right, dumbpad/v1x, dumbpad/v1x_dualencoder, dumbpad/v1x_oled, dumbpad/v1x_right, dumbpad/v3x) -- one board, one owner"
+
+[[entry]]
+tree     = "qmk"
+id       = "dumbpad/v0x_dualencoder"
+source   = "imchipwood/dumbpad"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "contended"
+note     = "8 rows all match 'combo_low_profile_oled/dumbpad.kicad_pcb' within 0.5 (dumbpad/v0x, dumbpad/v0x_dualencoder, dumbpad/v0x_right, dumbpad/v1x, dumbpad/v1x_dualencoder, dumbpad/v1x_oled, dumbpad/v1x_right, dumbpad/v3x) -- one board, one owner"
+
+[[entry]]
+tree     = "qmk"
+id       = "dumbpad/v0x_right"
+source   = "imchipwood/dumbpad"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "contended"
+note     = "8 rows all match 'combo_low_profile_oled/dumbpad.kicad_pcb' within 0.5 (dumbpad/v0x, dumbpad/v0x_dualencoder, dumbpad/v0x_right, dumbpad/v1x, dumbpad/v1x_dualencoder, dumbpad/v1x_oled, dumbpad/v1x_right, dumbpad/v3x) -- one board, one owner"
+
+[[entry]]
+tree     = "qmk"
+id       = "dumbpad/v1x"
+source   = "imchipwood/dumbpad"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "contended"
+note     = "8 rows all match 'combo_low_profile_oled/dumbpad.kicad_pcb' within 0.5 (dumbpad/v0x, dumbpad/v0x_dualencoder, dumbpad/v0x_right, dumbpad/v1x, dumbpad/v1x_dualencoder, dumbpad/v1x_oled, dumbpad/v1x_right, dumbpad/v3x) -- one board, one owner"
+
+[[entry]]
+tree     = "qmk"
+id       = "dumbpad/v1x_dualencoder"
+source   = "imchipwood/dumbpad"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "contended"
+note     = "8 rows all match 'combo_low_profile_oled/dumbpad.kicad_pcb' within 0.5 (dumbpad/v0x, dumbpad/v0x_dualencoder, dumbpad/v0x_right, dumbpad/v1x, dumbpad/v1x_dualencoder, dumbpad/v1x_oled, dumbpad/v1x_right, dumbpad/v3x) -- one board, one owner"
+
+[[entry]]
+tree     = "qmk"
+id       = "dumbpad/v1x_oled"
+source   = "imchipwood/dumbpad"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "contended"
+note     = "8 rows all match 'combo_low_profile_oled/dumbpad.kicad_pcb' within 0.5 (dumbpad/v0x, dumbpad/v0x_dualencoder, dumbpad/v0x_right, dumbpad/v1x, dumbpad/v1x_dualencoder, dumbpad/v1x_oled, dumbpad/v1x_right, dumbpad/v3x) -- one board, one owner"
+
+[[entry]]
+tree     = "qmk"
+id       = "dumbpad/v1x_right"
+source   = "imchipwood/dumbpad"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "contended"
+note     = "8 rows all match 'combo_low_profile_oled/dumbpad.kicad_pcb' within 0.5 (dumbpad/v0x, dumbpad/v0x_dualencoder, dumbpad/v0x_right, dumbpad/v1x, dumbpad/v1x_dualencoder, dumbpad/v1x_oled, dumbpad/v1x_right, dumbpad/v3x) -- one board, one owner"
+
+[[entry]]
+tree     = "qmk"
+id       = "dumbpad/v3x"
+source   = "imchipwood/dumbpad"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "contended"
+note     = "8 rows all match 'combo_low_profile_oled/dumbpad.kicad_pcb' within 0.5 (dumbpad/v0x, dumbpad/v0x_dualencoder, dumbpad/v0x_right, dumbpad/v1x, dumbpad/v1x_dualencoder, dumbpad/v1x_oled, dumbpad/v1x_right, dumbpad/v3x) -- one board, one owner"
+
+[[entry]]
+tree     = "qmk"
+id       = "dyz/dyz40"
+source   = "dayatz/mechanical-keyboards"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "dyz/dyz60"
+source   = "dayatz/mechanical-keyboards"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "dyz/dyz60_hs"
+source   = "dayatz/mechanical-keyboards"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "dyz/dyz_tkl"
+source   = "dayatz/mechanical-keyboards"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "dyz/selka40"
+source   = "dayatz/mechanical-keyboards"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "dyz/synthesis60"
+source   = "dayatz/mechanical-keyboards"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "ealdin/quadrant"
+source   = "ealdin/keyboards"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "earth_rover"
+source   = "bigwheel/earth_rover"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "ebastler/isometria_75/rev1"
+source   = "ebastler/isometria-75"
+boards   = ["isometria-75-pcb-iso/isometria-75-pcb-iso.kicad_pcb"]
+name     = "isometria 75 iso"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "edinburgh41"
+source   = "schwarzer-geiger/edinburgh41"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "eggsworks/egg58"
+source   = "eggsworks/egg58"
+boards   = ["egg58bt/egg58v2.kicad_pcb", "egg58v2/egg58v2.kicad_pcb"]
+name     = "egg58v2"
+verdict  = "confirmed"
+signal   = "tied"
+note     = "2 candidates tie at 2.67 and agree on every fact the build reads, so the choice between them cannot change the record; all 2 taken as one design's revisions"
+
+[[entry]]
+tree     = "qmk"
+id       = "elcantorhs"
+source   = "azhizhinov/elcantorhs"
+boards   = ["ELCANTORHS.kicad_pcb"]
+name     = "ELCANTORHS"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "emajesty/eiri"
+source   = "emajesty/eiri"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "enochchau/dropout"
+source   = "enochchau/dropout-numpad"
+boards   = ["pcb/dropout.kicad_pcb"]
+name     = "dropout"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "ergoslab/rev1"
+source   = "tomsaleeba/ergoslab"
+boards   = ["pcb/ergoslab.kicad_pcb"]
+name     = "ergoslab"
+verdict  = "confirmed"
+signal   = "token"
+note     = "4 designs' worth of boards in the repo; matched on token"
+
+[[entry]]
+tree     = "qmk"
+id       = "ergotravel/rev1"
+source   = "jpconstantineau/ergotravel"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "ratio"
+note     = "4 designs, best ratio match 'PCB/ErgoTravel.kicad_pcb' (0.57) but runner-up scores 0.51 -- too close to call"
+
+[[entry]]
+tree     = "qmk"
+id       = "ericrlau/numdiscipline/rev1"
+source   = "ericrlau/numdiscipline"
+boards   = ["NumDiscipline-pcb.kicad_pcb"]
+name     = "Num Discipline"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "eternal_keypad"
+source   = "duckyb/eternal-keypad"
+boards   = ["pcb-kicad/eternal-keypad.kicad_pcb"]
+name     = "eternal keypad"
+verdict  = "confirmed"
+signal   = "shared"
+note     = "3 records want the repo's one design and none supersedes another -- they agree on key count and splitness, and differ by variant rather than version (eternal_keypad, eternal_keypad, eternal_keypad_lefty), so all of them run on it"
+
+[[entry]]
+tree     = "qmk"
+id       = "etiennecollin/wave"
+source   = "etiennecollin/wave"
+boards   = ["pcbs/main/rounded/wave_pcb-rounded.kicad_pcb"]
+name     = "Wave"
+verdict  = "confirmed"
+signal   = "exact"
+note     = "2026-09-29, the owner's call: the ROUNDED board, which the README shows as the Wave PCB (resources/images/wave_pcb_rounded.svg). The repo's two boards share one outline and footprints; only the rounded one routes its traces with arcs (294 of them). The plain board is declined in seed/board-declines.toml."
+
+[[entry]]
+tree     = "qmk"
+id       = "evyd13/gh80_1800"
+source   = "evyd13/gh80-series"
+boards   = ["GH80-1800/PCB/gh80-1800.kicad_pcb"]
+name     = "gh80 1800"
+verdict  = "confirmed"
+signal   = "exact"
+note     = "4 designs' worth of boards in the repo; matched on exact"
+
+[[entry]]
+tree     = "qmk"
+id       = "evyd13/gh80_3700"
+source   = "evyd13/gh80-series"
+boards   = ["GH80-3700/PCB/gh80-3700.kicad_pcb"]
+name     = "gh80 3700"
+verdict  = "confirmed"
+signal   = "exact"
+note     = "4 designs' worth of boards in the repo; matched on exact"
+
+[[entry]]
+tree     = "qmk"
+id       = "evyd13/gud70"
+source   = "evyd13/gud70-pcb"
+boards   = ["pcb-files/gud70.kicad_pcb"]
+name     = "gud70"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "evyd13/mx5160"
+source   = "evyd13/mx-5160"
+boards   = ["mx-5160/mx-5160.kicad_pcb"]
+name     = "mx 5160"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "evyd13/nt210"
+source   = "evyd13/nt-series"
+boards   = ["nt-210/nt210.kicad_pcb"]
+name     = "nt210"
+verdict  = "confirmed"
+signal   = "exact"
+note     = "4 designs' worth of boards in the repo; matched on exact"
+
+[[entry]]
+tree     = "qmk"
+id       = "evyd13/nt750"
+source   = "evyd13/nt-series"
+boards   = ["nt-750/nt750.kicad_pcb"]
+name     = "nt750"
+verdict  = "confirmed"
+signal   = "exact"
+note     = "4 designs' worth of boards in the repo; matched on exact"
+
+[[entry]]
+tree     = "qmk"
+id       = "evyd13/solheim68"
+source   = "evyd13/solheim68"
+boards   = ["solheim68.kicad_pcb"]
+name     = "solheim68"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "eyeohdesigns/sprh"
+source   = "joedinkle/eyeohdesigns"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "none"
+note     = "3 designs' worth of boards in the repo, none resembling this id: keyboards/theboulevard/pcb-files/main-pcb/theboulevard.kicad_pcb, keyboards/theboulevard/pcb-files/top-pcb-smd-rgb/blvdtopsmd.kicad_pcb, keyboards/theboulevard/pcb-files/top-pcb-tht-rgb/blvdtop.kicad_pcb"
+
+[[entry]]
+tree     = "qmk"
+id       = "fearherbs1/blue_team_pad"
+source   = "fearherbs1/blue-team-pad"
+boards   = ["PCB/BlueTeamPad/BlueTeamPad.kicad_pcb"]
+name     = "Blue Team Pad"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "ferris/0_1"
+source   = "pierrechevalier83/ferris"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "contended"
+note     = "2 rows all match '0.1/base/ferris.kicad_pcb' within 0.5 (ferris/0_1, ferris/0_2/base) -- one board, one owner"
+
+[[entry]]
+tree     = "qmk"
+id       = "ferris/0_2/base"
+source   = "pierrechevalier83/ferris"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "contended"
+note     = "2 rows all match '0.1/base/ferris.kicad_pcb' within 0.5 (ferris/0_1, ferris/0_2/base) -- one board, one owner"
+
+[[entry]]
+tree     = "qmk"
+id       = "ferris/0_2/bling"
+source   = "pierrechevalier83/ferris"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "contended"
+note     = "6 rows all match '0.2/bling/ferris.kicad_pcb' within 0.5 (ferris/0_1, ferris/0_2/base, ferris/0_2/bling, ferris/0_2/compact, ferris/0_2/high, ferris/0_2/mini) -- one board, one owner"
+
+[[entry]]
+tree     = "qmk"
+id       = "ferris/0_2/compact"
+source   = "pierrechevalier83/ferris"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "contended"
+note     = "6 rows all match '0.2/compact/ferris.kicad_pcb' within 0.5 (ferris/0_1, ferris/0_2/base, ferris/0_2/bling, ferris/0_2/compact, ferris/0_2/high, ferris/0_2/mini) -- one board, one owner"
+
+[[entry]]
+tree     = "qmk"
+id       = "ferris/0_2/high"
+source   = "pierrechevalier83/ferris"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "contended"
+note     = "6 rows all match '0.2/high/ferris.kicad_pcb' within 0.5 (ferris/0_1, ferris/0_2/base, ferris/0_2/bling, ferris/0_2/compact, ferris/0_2/high, ferris/0_2/mini) -- one board, one owner"
+
+[[entry]]
+tree     = "qmk"
+id       = "ferris/0_2/mini"
+source   = "pierrechevalier83/ferris"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "contended"
+note     = "6 rows all match '0.2/mini/ferris.kicad_pcb' within 0.5 (ferris/0_1, ferris/0_2/base, ferris/0_2/bling, ferris/0_2/compact, ferris/0_2/high, ferris/0_2/mini) -- one board, one owner"
+
+[[entry]]
+tree     = "qmk"
+id       = "ferris/sweep"
+source   = "pierrechevalier83/ferris"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "contended"
+note     = "2 rows all match '0.1/base/ferris.kicad_pcb' within 0.5 (ferris/0_1, ferris/0_2/base) -- one board, one owner"
+
+[[entry]]
+tree     = "qmk"
+id       = "for_science"
+source   = "peej/for-science-keyboard"
+boards   = ["for-science.kicad_pcb"]
+name     = "for science"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "fr4/southpaw75"
+source   = "kelvinhall05/southpaw75"
+boards   = ["ISO PCB/southpawpcb.kicad_pcb", "PCB/southpawpcb.kicad_pcb"]
+name     = "southpawpcb"
+verdict  = "confirmed"
+signal   = "tied"
+note     = "2 candidates tie at 0.46 and agree on every fact the build reads, so the choice between them cannot change the record; all 2 taken as one design's revisions -- NAME UNVOUCHED: nothing outside the board path supports 'southpawpcb'; the firmware record is 'fr4/southpaw75' and they share no token. Ticket 44 names a design by its board's directory, which is wrong when the directory names a version, a switch type or a template"
+
+[[entry]]
+tree     = "qmk"
+id       = "fr4/unix60"
+source   = "mkdl/unix60"
+boards   = ["PCB/unix60pcb.kicad_pcb"]
+name     = "unix60pcb"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "friedrich"
+source   = "marvfpv/friedrich"
+boards   = ["PCB/FriedrichPCB.kicad_pcb"]
+name     = "Friedrich"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "frobiac/blackbowl"
+source   = "frobiac/adnw"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "frobiac/blackflat"
+source   = "frobiac/adnw"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "frobiac/hypernano"
+source   = "frobiac/adnw"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "frobiac/redtilt"
+source   = "frobiac/adnw"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "galile0/glyphkbd_v2"
+source   = "galile0-designs/glyphkbd"
+boards   = ["v2/PCB/glyph-rounded.kicad_pcb", "v2/PCB/glyph.kicad_pcb"]
+name     = "glyphkbd"
+verdict  = "confirmed"
+signal   = "tied"
+note     = "2 candidates tie at 2.25 and agree on every fact the build reads, so the choice between them cannot change the record; all 2 taken as one design's revisions"
+
+[[entry]]
+tree     = "qmk"
+id       = "geigeigeist/klor"
+source   = "geigeigeist/klor"
+boards   = ["PCB/klor1_3/klor1_3.kicad_pcb"]
+name     = "KLOR"
+verdict  = "confirmed"
+signal   = "human"
+note     = "agent 2026-08-29, owner-reported. The design is called KLOR -- its own README opens \"# KLOR SPLIT KEYBOARD\". `klor1 3` was the BOARD DIRECTORY `PCB/klor1_3/`, which ticket 44's rule reads as the design name; right for most repos and wrong here, because that directory is VERSIONED (klor v1.3) rather than named. signal=human so the next re-draft copies this through instead of re-deriving `klor1 3` from the path. A separate defect stays open: the README says \"36-42 key ... four different layouts, through break-off parts\" -- polydactyl, konrad, yubitsume, saegewerk -- and this record carries a single layout of 44."
+
+[[entry]]
+tree     = "qmk"
+id       = "gkeyboard/gpad8_2r"
+source   = "gkeyboard/gpad8-2r"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "gkeyboard/greatpad"
+source   = "gkeyboard/greatpad"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "gowla"
+source   = "samgowland/gowla-macro-board"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "gregandcin/teaqueen"
+source   = "gregandcin/teaqueen"
+boards   = ["keyboard.kicad_pcb"]
+name     = "teaqueen"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "gummykey"
+source   = "gumorr/gummykey"
+boards   = ["pcbs/left/GummyKey_Left.kicad_pcb", "pcbs/right/GummyKey_Right.kicad_pcb"]
+name     = "Gummy Key"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "handwired/6key"
+source   = "bratzworth/6key"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "handwired/aball"
+source   = "brickbots/aball"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "handwired/aim65"
+source   = "bonnee/aim-65_keyboard"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "handwired/angel"
+source   = "jamessa/angel"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "none"
+note     = "2 designs' worth of boards in the repo, none resembling this id: Charming/Charming.kicad_pcb, ProMicroKit/Charming.kicad_pcb"
+
+[[entry]]
+tree     = "qmk"
+id       = "handwired/at101ish"
+source   = "henrikosorensen/keyboard_pcbs"
+boards   = ["at101_pcb/keyboard.kicad_pcb"]
+name     = "at101"
+verdict  = "confirmed"
+signal   = "token"
+note     = "2 designs' worth of boards in the repo; matched on token"
+
+[[entry]]
+tree     = "qmk"
+id       = "handwired/axon"
+source   = "thatfellarobin/axon"
+boards   = ["axon_pcb/axon_pcb.kicad_pcb"]
+name     = "axon"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "handwired/baredev/rev1"
+source   = "manoshu/baredev"
+boards   = ["kicad/rev1/keyboard.kicad_pcb"]
+name     = "baredev rev1"
+verdict  = "confirmed"
+signal   = "token"
+note     = "3 designs' worth of boards in the repo; matched on token"
+
+[[entry]]
+tree     = "qmk"
+id       = "handwired/battleship_gamepad"
+source   = "abraini-nascent/battleship_gamepad"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "handwired/bolek"
+source   = "klausweiss/bolek"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "handwired/cans12erv2"
+source   = "canbaytok/cans12erv2"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "handwired/co60/rev1"
+source   = "jmdaly/co60"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "contended"
+note     = "3 rows contend for the repo's one design (co60.kicad_pcb) -- they may be controller or revision variants of it, and a row whose own board was never committed owns nothing at all"
+
+[[entry]]
+tree     = "qmk"
+id       = "handwired/co60/rev6"
+source   = "jmdaly/co60"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "contended"
+note     = "3 rows contend for the repo's one design (co60.kicad_pcb) -- they may be controller or revision variants of it, and a row whose own board was never committed owns nothing at all"
+
+[[entry]]
+tree     = "qmk"
+id       = "handwired/co60/rev7"
+source   = "jmdaly/co60"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "contended"
+note     = "3 rows contend for the repo's one design (co60.kicad_pcb) -- they may be controller or revision variants of it, and a row whose own board was never committed owns nothing at all"
+
+[[entry]]
+tree     = "qmk"
+id       = "handwired/dactyl_cc"
+source   = "mjohns/dactyl-cc"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "handwired/dactyl_lightcycle"
+source   = "adereth/dactyl-keyboard"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "handwired/dactyl_manuform/4x6_4_3"
+source   = "joshreve/dactyl-keyboard"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "handwired/dactyl_manuform/5x6_6"
+source   = "fgoodwin/dactyl-manuform-5x6_6"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "handwired/dactyl_manuform/5x7_2_6"
+source   = "ngrigoriev/dactyl-manuform-5x7_2_6"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "handwired/dactyl_manuform_pi_pico"
+source   = "gustawxyz/dactyl_manuform_pi_pico"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "handwired/dactyl_tracer"
+source   = "mjohns/tracer"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "handwired/dmote"
+source   = "veikman/dactyl-keyboard"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "handwired/erikpeyronson/erkbd"
+source   = "erikpeyronson/erkbd"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "handwired/evk/v1_3"
+source   = "yangpicui/ergonomicverticalkeyboard"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "handwired/frankie_macropad"
+source   = "eric-wood/macro-pad"
+boards   = ["macropad.kicad_pcb"]
+name     = "Frankie Macropad"
+verdict  = "confirmed"
+signal   = "human"
+note     = "RENAMED off the board's own name. `macropad.kicad_pcb` drafted to \"macropad\", and so did guidoism/madjax_macropad -- two keyboards fighting over /d/macropad, which build_seed.py refuses. The discriminator is the firmware record, `handwired/frankie_macropad`; QMK's readme adds nothing but the slug and the maintainer (Eric Wood). Ruled by the agent under the owner's standing AFK authorisation, 2026-09-02, not by the owner."
+
+[[entry]]
+tree     = "qmk"
+id       = "handwired/franky36"
+source   = "avdyushin/franky36"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "handwired/fruity60"
+source   = "yanfali/fruity60"
+boards   = ["fruity60/fruity60.kicad_pcb"]
+name     = "fruity60"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "handwired/hnah40"
+source   = "vuhopkep/pcb"
+boards   = ["Hnah40-Atmega328p/PCB_V1/PCB/PCB.kicad_pcb"]
+name     = "Hnah40 Atmega328p V1"
+verdict  = "confirmed"
+signal   = "token"
+note     = "3 designs' worth of boards in the repo; matched on token"
+
+[[entry]]
+tree     = "qmk"
+id       = "handwired/ic45_v2"
+source   = "lighteningab/45keyboard_v1"
+boards   = ["45_keyboard/45_keyboard.kicad_pcb"]
+name     = "45"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "handwired/jopr"
+source   = "joelproko/keyboard_layout_jopr"
+boards   = ["keyboard_layout_jopr.kicad_pcb"]
+name     = "layout jopr"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "handwired/juliet"
+source   = "na-cly/juliet"
+boards   = ["juliet-pcb.kicad_pcb"]
+name     = "juliet"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "handwired/lagrange"
+source   = "dpapavas/lagrange-keyboard"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "handwired/macro3"
+source   = "davidphilipbarr/macropads"
+boards   = ["macro3/macro3.kicad_pcb"]
+name     = "macro3"
+verdict  = "confirmed"
+signal   = "exact"
+note     = "7 designs' worth of boards in the repo; matched on exact"
+
+[[entry]]
+tree     = "qmk"
+id       = "handwired/mutepad"
+source   = "joshwjb/mutepad"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "handwired/phantagom/baragon"
+source   = "dkruyt/mk"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "handwired/phantagom/varan"
+source   = "dkruyt/mk"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "handwired/pill60/blackpill_f401"
+source   = "iktas/pill60"
+boards   = ["Pill60.kicad_pcb"]
+name     = "Pill60"
+verdict  = "confirmed"
+signal   = "shared"
+note     = "3 records want the repo's one design and none supersedes another -- they agree on key count and splitness, and differ by variant rather than version (handwired/pill60/blackpill_f401, handwired/pill60/blackpill_f411, handwired/pill60/bluepill), so all of them run on it"
+
+[[entry]]
+tree     = "qmk"
+id       = "handwired/pill60/blackpill_f411"
+source   = "iktas/pill60"
+boards   = ["Pill60.kicad_pcb"]
+name     = "Pill60"
+verdict  = "confirmed"
+signal   = "shared"
+note     = "3 records want the repo's one design and none supersedes another -- they agree on key count and splitness, and differ by variant rather than version (handwired/pill60/blackpill_f401, handwired/pill60/blackpill_f411, handwired/pill60/bluepill), so all of them run on it"
+
+[[entry]]
+tree     = "qmk"
+id       = "handwired/pill60/bluepill"
+source   = "iktas/pill60"
+boards   = ["Pill60.kicad_pcb"]
+name     = "Pill60"
+verdict  = "confirmed"
+signal   = "shared"
+note     = "3 records want the repo's one design and none supersedes another -- they agree on key count and splitness, and differ by variant rather than version (handwired/pill60/blackpill_f401, handwired/pill60/blackpill_f411, handwired/pill60/bluepill), so all of them run on it"
+
+[[entry]]
+tree     = "qmk"
+id       = "handwired/prkl30/feather"
+source   = "erkhal/prkl30"
+boards   = ["PRKL30.kicad_pcb"]
+name     = "PRKL30"
+verdict  = "confirmed"
+signal   = "shared"
+note     = "2 records want the repo's one design and none supersedes another -- they agree on key count and splitness, and differ by variant rather than version (handwired/prkl30/feather, handwired/prkl30/promicro), so all of them run on it"
+
+[[entry]]
+tree     = "qmk"
+id       = "handwired/prkl30/promicro"
+source   = "erkhal/prkl30"
+boards   = ["PRKL30.kicad_pcb"]
+name     = "PRKL30"
+verdict  = "confirmed"
+signal   = "shared"
+note     = "2 records want the repo's one design and none supersedes another -- they agree on key count and splitness, and differ by variant rather than version (handwired/prkl30/feather, handwired/prkl30/promicro), so all of them run on it"
+
+[[entry]]
+tree     = "qmk"
+id       = "handwired/selene"
+source   = "bpendragon/selene-keyboard"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "handwired/split65/promicro"
+source   = "percyjw-2/split65"
+boards   = ["Split65Left.kicad_pcb", "Split65Right.kicad_pcb"]
+name     = "Split65"
+verdict  = "confirmed"
+signal   = "shared"
+note     = "2 records want the repo's one design and none supersedes another -- they agree on key count and splitness, and differ by variant rather than version (handwired/split65/promicro, handwired/split65/stm32), so all of them run on it"
+
+[[entry]]
+tree     = "qmk"
+id       = "handwired/split65/stm32"
+source   = "percyjw-2/split65"
+boards   = ["Split65Left.kicad_pcb", "Split65Right.kicad_pcb"]
+name     = "Split65"
+verdict  = "confirmed"
+signal   = "shared"
+note     = "2 records want the repo's one design and none supersedes another -- they agree on key count and splitness, and differ by variant rather than version (handwired/split65/promicro, handwired/split65/stm32), so all of them run on it"
+
+[[entry]]
+tree     = "qmk"
+id       = "handwired/split89"
+source   = "jurassic73/split89"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "handwired/technicpad"
+source   = "nwhirschfeld/technicpad"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "handwired/tennie"
+source   = "stoutieee/macropad-workshop"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "handwired/tenstad"
+source   = "tenstad/keyboard"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "handwired/tsubasa"
+source   = "kuriatsu/tsubasa"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "handwired/unk/rev1"
+source   = "herpiko/unk"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "hazel/bad_wings_v2"
+source   = "hazels-garage/bad-wings"
+boards   = ["v2/source/bw2.kicad_pcb"]
+name     = "bw2 v2"
+verdict  = "confirmed"
+signal   = "token"
+note     = "5 designs' worth of boards in the repo; matched on token"
+
+[[entry]]
+tree     = "qmk"
+id       = "hifumi"
+source   = "zk-phi/1x2x3-keyboard"
+boards   = ["pcb/surfboard.kicad_pcb"]
+name     = "surfboard"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose -- NAME UNVOUCHED: nothing outside the board path supports 'surfboard'; the firmware record is 'hifumi' and they share no token. Ticket 44 names a design by its board's directory, which is wrong when the directory names a version, a switch type or a template"
+
+[[entry]]
+tree     = "qmk"
+id       = "hillside/46/0_1"
+source   = "mmccoyd/hillside"
+boards   = ["hillside46/hillside46.kicad_pcb"]
+name     = "Hillside 46"
+verdict  = "confirmed"
+signal   = "human"
+note     = "46 keys, board named hillside46 -- key count and name agree independently"
+
+[[entry]]
+tree     = "qmk"
+id       = "hillside/48/0_1"
+source   = "mmccoyd/hillside"
+boards   = ["hillside48/hillside.kicad_pcb"]
+name     = "Hillside 48"
+verdict  = "confirmed"
+signal   = "human"
+note     = "48 keys; the board is the plain 'hillside' inside hillside48/, so the name takes the 48. Same defect as #23 (KLOR): the family readme's own table gives a 'trimmed layout' of 3x5+1+5 (42 keys) via break-off outer pinky columns, but qmk:hillside/48 defines only one LAYOUT macro (checked 0_1/keyboard.json), so the record itself carries just the 48; the 42 is added by seed/layout_names.toml (2026-09-27). Second confirmed break-off-layout instance beyond KLOR; owner-reported 2026-09-16."
+
+[[entry]]
+tree     = "qmk"
+id       = "hillside/52/0_1"
+source   = "mmccoyd/hillside"
+boards   = ["hillside52/hillside52.kicad_pcb"]
+name     = "Hillside 52"
+verdict  = "confirmed"
+signal   = "human"
+note     = "52 keys, board named hillside52"
+
+[[entry]]
+tree     = "qmk"
+id       = "horizon"
+source   = "skarrmann/horizon"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "token"
+note     = "2 designs, best token match 'kicad/choc/horizon-choc.kicad_pcb' (3.00) but runner-up scores 3.00 -- too close to call"
+
+[[entry]]
+tree     = "qmk"
+id       = "horrortroll/paws60"
+source   = "horrortroll/keebproj"
+boards   = ["paws60/pcb/rev1/paws-60-pcb.kicad_pcb"]
+name     = "paws60"
+verdict  = "confirmed"
+signal   = "human"
+note     = "2026-10-02, owner's ruling (backlog #106): rev1 only. The drafted `tied` row took rev1 and rev2 as one design on the claim that they agree on every fact the build reads, and they do not: rev1 places an ATmega32U4, rev2 an RP2040. This record is rev1's (its readme: \"Hardware Supported: Atmega32u4\"). rev2 is declined in seed/board-declines.toml."
+
+[[entry]]
+tree     = "qmk"
+id       = "huytbt/h50"
+source   = "huytbt/h50-keyboard"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "ianklug/grooveboard"
+source   = "ianklug/grooveboard"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "token"
+note     = "9 designs, best token match 'grooveboard-atmel-au/grooveboard-atmel-au.kicad_pcb' (2.50) but runner-up scores 2.50 -- too close to call"
+
+[[entry]]
+tree     = "qmk"
+id       = "ibnuda/alicia_cook"
+source   = "ibnuda/alicia-cook"
+boards   = ["switch-hole.kicad_pcb"]
+name     = "switch hole"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose -- NAME UNVOUCHED: nothing outside the board path supports 'switch hole'; the firmware record is 'ibnuda/alicia_cook' and they share no token. Ticket 44 names a design by its board's directory, which is wrong when the directory names a version, a switch type or a template"
+
+[[entry]]
+tree     = "qmk"
+id       = "ibnuda/gurindam"
+source   = "ibnuda/gurindam"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "filtered"
+note     = "the scan found 1 switch-placing .kicad_pcb here and the path filter set every one aside: gurindam-switch-plate.kicad_pcb (part, 63 switches) -- if any of those is the design, this row is wrong"
+
+[[entry]]
+tree     = "qmk"
+id       = "ibnuda/squiggle/rev1"
+source   = "ibnuda/squiggle"
+boards   = ["lopro/squiggle-lopro.kicad_pcb"]
+name     = "Squiggle Low Profile"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "named 2026-09-26 as the README heads it, `### Low Profile`, with the family in front, like its siblings; was `squiggle lopro`, from the board path. The owner ruled the old URL needs no redirect (\"few users now\"). The only board the scan could read when this was drafted, so nothing to choose. Since 2026-09-26, when extract_switch_footprints learnt ibnuda's `*-dual` MX/Alps footprints, the repo reads seven: the other README variants are their own designs (rows below, and Half B for Standard and 36 Keys), and `no-diode`/`nodiodes` are declined in seed/board-declines.toml."
+
+[[entry]]
+tree     = "squiggle-minimalist"
+id       = "squiggle_minimalist"
+source   = "ibnuda/squiggle"
+boards   = ["minimalist/squiggle-minimalist.kicad_pcb"]
+name     = "Squiggle Minimalist"
+verdict  = "confirmed"
+signal   = "human"
+note     = "2026-09-26. The README's Minimalist section, and the only board with one Pro Micro and no TRRS jack: 34 switches with both halves in one file, a column of `hole-four` breakaway holes at x 136-140 mm between them, and a `connector-shrouded` header either side of the break for the 10-wire cable."
+
+[[entry]]
+tree     = "hardware"
+id       = "squiggle-goldberg"
+source   = "ibnuda/squiggle"
+boards   = ["goldberg/squiggle-goldberg.kicad_pcb"]
+name     = "Squiggle Goldberg"
+verdict  = "confirmed"
+signal   = "human"
+note     = "2026-09-26. The README's Goldberg section and its directory: one hand of 21 footprints, the lopro/standard layout plus four 1u thumb footprints laid over the two 2u ones."
+
+[[entry]]
+tree     = "qmk"
+id       = "idank/spankbd"
+source   = "idank/spankbd"
+boards   = ["pcb/span.kicad_pcb"]
+name     = "span"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "idank/sweeq"
+source   = "idank/keyboards"
+boards   = ["sweeq/sweeq.kicad_pcb"]
+name     = "sweeq"
+verdict  = "confirmed"
+signal   = "exact"
+note     = "19 designs' worth of boards in the repo; matched on exact"
+
+[[entry]]
+tree     = "qmk"
+id       = "ivndbt/late9/rev1"
+source   = "ivndbt/late-9"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "ivndbt/neopad/rev1"
+source   = "ivndbt/neopad"
+boards   = ["Neopad.kicad_pcb"]
+name     = "Neopad"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "janus"
+source   = "skarrmann/janus"
+boards   = ["kicad/mx/janus.kicad_pcb"]
+name     = "janus"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "jcpm2"
+source   = "jeremyscook/jc-pro-macro-2"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "jlw/bruce_le_clavier"
+source   = "josh-l-wang/bruce-the-keyboard-the-resources"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "jlw/bruce_the_keyboard"
+source   = "josh-l-wang/bruce-the-keyboard-the-resources"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "jones/v03"
+source   = "jpskenn/jones"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "contended"
+note     = "3 rows contend for the repo's one design (PCB/Jones.kicad_pcb) -- they may be controller or revision variants of it, and a row whose own board was never committed owns nothing at all"
+
+[[entry]]
+tree     = "qmk"
+id       = "jones/v03_1"
+source   = "jpskenn/jones"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "contended"
+note     = "3 rows contend for the repo's one design (PCB/Jones.kicad_pcb) -- they may be controller or revision variants of it, and a row whose own board was never committed owns nothing at all"
+
+[[entry]]
+tree     = "qmk"
+id       = "jones/v1"
+source   = "jpskenn/jones"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "contended"
+note     = "3 rows contend for the repo's one design (PCB/Jones.kicad_pcb) -- they may be controller or revision variants of it, and a row whose own board was never committed owns nothing at all"
+
+[[entry]]
+tree     = "qmk"
+id       = "jorne/rev1"
+source   = "joric/jorne"
+boards   = ["corne-cherry/pcb/corne-cherry.kicad_pcb"]
+name     = "Jorne Cherry 2.1"
+verdict  = "confirmed"
+signal   = "human"
+note     = "The repo's own README (jorne branch) names three PCB revisions: Jorne Classic 2.1, Jorne Cherry 2.1, Jorne Cherry 3.0. This is Cherry 2.1 -- the hotswap version with the separate breakoff plate (pcb_top/pcb_bottom carry the breakoff cut), one hand at 22 switches (44 doubled, matching both this id's own QMK layout and the ZMK jorne shield's declared count). Distinct from corne-cherry/pcb_v3 (Cherry 3.0, already zmk:jorne) and from corne-classic (Classic 2.1, seed/names.toml). Given its own (tree, id) row specifically so it never drafts to the same slug as foostan/crkbd's own corne-cherry (42-key, unrelated design) -- the two collided under Half B before this row existed. Verified 2026-09-11 during #89."
+
+[[entry]]
+tree     = "qmk"
+id       = "joshajohnson/hub20"
+source   = "joshajohnson/hub20"
+boards   = ["hardware/0.1/Hub20.kicad_pcb", "hardware/0.2/Hub20.kicad_pcb", "hardware/1.0.1/Hub20.kicad_pcb", "hardware/1.0/Hub20.kicad_pcb"]
+name     = "Hub20"
+verdict  = "confirmed"
+signal   = "tied"
+note     = "4 candidates tie at 4.00 and agree on every fact the build reads, so the choice between them cannot change the record; all 4 taken as one design's revisions"
+
+[[entry]]
+tree     = "qmk"
+id       = "jpe230/big_knob"
+source   = "jpe230/big_knob"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "junco/rev1"
+source   = "daneski13/junco"
+boards   = ["PCB/Junco.kicad_pcb"]
+name     = "Junco"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "k34"
+source   = "wongjingping/k34"
+boards   = ["k34/k34.kicad_pcb"]
+name     = "k34"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "kaly/kaly42"
+source   = "dwctor/kaly"
+boards   = ["KalyPCB/KalyPCB.kicad_pcb", "KalyPCB/Steps/EdgesKalyPcb.kicad_pcb", "KalyPCB/Steps/ErgogenKalyPcb.kicad_pcb", "KalyPCB/Steps/MascotEvolution.kicad_pcb"]
+name     = "Kaly"
+verdict  = "confirmed"
+signal   = "tied"
+note     = "4 candidates tie at 2.67 and agree on every fact the build reads, so the choice between them cannot change the record; all 4 taken as one design's revisions"
+
+[[entry]]
+tree     = "qmk"
+id       = "kapl/rev1"
+source   = "keyzog/kapl"
+boards   = ["pcb/Kapl.kicad_pcb"]
+name     = "Kapl"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "karn"
+source   = "robcmills/karn-keyboard"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "token"
+note     = "3 designs, best token match 'pcbs/karn-2/karn-2.kicad_pcb' (3.00) but runner-up scores 3.00 -- too close to call"
+
+[[entry]]
+tree     = "qmk"
+id       = "kb58"
+source   = "beanaccle/kb58_pico"
+boards   = ["pcb/kb58_pico.kicad_pcb"]
+name     = "kb58 pico"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "kb_elmo/aek2_usb"
+source   = "kb-elmo/aek2_usb"
+boards   = ["aek2_usb.kicad_pcb"]
+name     = "aek2 usb"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "kb_elmo/bm42"
+source   = "kb-elmo/bm42"
+boards   = ["pcb/bm42.kicad_pcb"]
+name     = "bm42"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "kb_elmo/dizzy40"
+source   = "kb-elmo/dizzy40"
+boards   = ["pcb/dizzy40.kicad_pcb"]
+name     = "dizzy40"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "kb_elmo/eliza"
+source   = "kb-elmo/eliza"
+boards   = ["pcb/Eliza.kicad_pcb"]
+name     = "Eliza"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "kb_elmo/elmopad"
+source   = "kb-elmo/numpad"
+boards   = ["numpad.kicad_pcb"]
+name     = "numpad"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose -- NAME UNVOUCHED: nothing outside the board path supports 'numpad'; the firmware record is 'kb_elmo/elmopad' and they share no token. Ticket 44 names a design by its board's directory, which is wrong when the directory names a version, a switch type or a template"
+
+[[entry]]
+tree     = "qmk"
+id       = "kb_elmo/gamehand"
+source   = "kb-elmo/gamehand"
+boards   = ["pcb/GameHand.kicad_pcb"]
+name     = "Game Hand"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "kb_elmo/m0110a_usb"
+source   = "kb-elmo/m0110a_usb"
+boards   = ["m0110a_qmk.kicad_pcb"]
+name     = "m0110a qmk"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "kb_elmo/m0116_usb"
+source   = "kb-elmo/m0116_usb"
+boards   = ["m0116_usb.kicad_pcb"]
+name     = "m0116 usb"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "kb_elmo/noah_avr"
+source   = "kb-elmo/noah_avr"
+boards   = ["noah.kicad_pcb"]
+name     = "noah"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "kb_elmo/sesame"
+source   = "kb-elmo/sesame"
+boards   = ["sesame.kicad_pcb"]
+name     = "sesame"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "kb_elmo/twelvekey"
+source   = "kb-elmo/twelvekey"
+boards   = ["pcb/twelvekey.kicad_pcb"]
+name     = "twelvekey"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "keaboard/rev1"
+source   = "keawade/keaboard"
+boards   = ["PCB/keaboard_rev1/keaboard_rev1.kicad_pcb"]
+name     = "keaboard rev1"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "kepler_33/proto"
+source   = "seityaya/kepler-33"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "keyhive/absinthe"
+source   = "cfbender/keyboards"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "none"
+note     = "4 designs' worth of boards in the repo, none resembling this id: fernet/pcb/fernet/fernet.kicad_pcb, nightmare/pcb/CK50.kicad_pcb, opus/pcb/opus.kicad_pcb, southpole/designFiles/SouthPole.kicad_pcb"
+
+[[entry]]
+tree     = "qmk"
+id       = "kkatano/bakeneko65/rev2"
+source   = "kkatano/bakeneko-65"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "contended"
+note     = "2 rows contend for the repo's one design (pcb/bakeneko-65-pcb.kicad_pcb) -- they may be controller or revision variants of it, and a row whose own board was never committed owns nothing at all"
+
+[[entry]]
+tree     = "qmk"
+id       = "kkatano/bakeneko65/rev3"
+source   = "kkatano/bakeneko-65"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "contended"
+note     = "2 rows contend for the repo's one design (pcb/bakeneko-65-pcb.kicad_pcb) -- they may be controller or revision variants of it, and a row whose own board was never committed owns nothing at all"
+
+[[entry]]
+tree     = "qmk"
+id       = "kkatano/yurei"
+source   = "kkatano/yurei"
+boards   = ["yurei.kicad_pcb"]
+name     = "yurei"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "koca58"
+source   = "hardware7253/koca58"
+boards   = ["PCB/Koca58.kicad_pcb"]
+name     = "Koca58"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "kraken_jones/pteron56"
+source   = "kraken-jokes/pteron-pcb"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "token"
+note     = "2 designs, best token match 'KiCAD and GERBER/EXPERIMENTAL/Pteron56v04-NN-palm-E.kicad_pcb' (2.50) but runner-up scores 2.50 -- too close to call"
+
+[[entry]]
+tree     = "qmk"
+id       = "kumaokobo/pico/65keys"
+source   = "kumaokobo/pico-keyboard"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "contended"
+note     = "2 rows contend for the repo's one design (kicad_files/pico.kicad_pcb) -- they may be controller or revision variants of it, and a row whose own board was never committed owns nothing at all"
+
+[[entry]]
+tree     = "qmk"
+id       = "kumaokobo/pico/70keys"
+source   = "kumaokobo/pico-keyboard"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "contended"
+note     = "2 rows contend for the repo's one design (kicad_files/pico.kicad_pcb) -- they may be controller or revision variants of it, and a row whose own board was never committed owns nothing at all"
+
+[[entry]]
+tree     = "qmk"
+id       = "large_lad"
+source   = "hyphen-ated/large-lad-keyboard"
+boards   = ["largelad.kicad_pcb"]
+name     = "largelad"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "latincompass/latinpad"
+source   = "latincompass/2-rotaryencoder-pad"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "latincompass/latinpadble"
+source   = "latincompass/2-rotaryencoder-pad"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "leftpaw"
+source   = "ryanchomistek/lefty"
+boards   = ["lefty.kicad_pcb"]
+name     = "lefty"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose -- NAME UNVOUCHED: nothing outside the board path supports 'lefty'; the firmware record is 'leftpaw' and they share no token. Ticket 44 names a design by its board's directory, which is wrong when the directory names a version, a switch type or a template"
+
+[[entry]]
+tree     = "qmk"
+id       = "lendunistus/rpneko65/rev1"
+source   = "lendunistus/rpneko65"
+boards   = ["pcb/rp2040-bakeneko65.kicad_pcb"]
+name     = "rp2040 bakeneko65"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "lime/rev1"
+source   = "hellsingcoder/limekeyboard"
+boards   = ["kicad/LimeKeyboard.kicad_pcb"]
+name     = "Lime"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "lizard_trick/tenkey_plusplus"
+source   = "jonbobcar/tenkey_plusplus"
+boards   = ["kicad/tenkey_plusplus.kicad_pcb"]
+name     = "tenkey plusplus"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "lyso1/lck75"
+source   = "lyso1/lck75"
+boards   = ["LCK75gerbers&parts/LCK75.kicad_pcb"]
+name     = "LCK75"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "macrocat"
+source   = "catmunch/macrocat"
+boards   = ["pcb/macrocat.kicad_pcb"]
+name     = "macrocat"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "madjax_macropad"
+source   = "guidoism/madjax_macropad"
+boards   = ["kicad/macropad.kicad_pcb"]
+name     = "MadJax Macropad"
+verdict  = "confirmed"
+signal   = "human"
+note     = "RENAMED, the other half of the /d/macropad collision. The capitalisation is the author's own: QMK's readme.md for this record opens \"# MadJax Macropad\", so this is quoted rather than styled. Ruled by the agent under the owner's standing AFK authorisation, 2026-09-02, not by the owner."
+
+[[entry]]
+tree     = "qmk"
+id       = "majistic"
+source   = "yossiyossy/majistic"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "makenova/omega/omega4"
+source   = "makenova/omega"
+boards   = ["omega_hotswap/omega.kicad_pcb", "omega_soldered/omega_4_solder.kicad_pcb", "omega_soldered/omega_solder.kicad_pcb"]
+name     = "omega"
+verdict  = "confirmed"
+signal   = "tied"
+note     = "3 candidates tie at 2.75 and agree on every fact the build reads, so the choice between them cannot change the record; all 3 taken as one design's revisions"
+
+[[entry]]
+tree     = "qmk"
+id       = "marksard/leftover30"
+source   = "marksard/keyboards"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "contended"
+note     = "4 rows all match 'stonehenge30/pcb/rev0.1/Stonehenge30.kicad_pcb' within 0.5 (marksard/leftover30, marksard/rhymestone/rev1, marksard/treadstone32/rev1, marksard/treadstone48/rev1) -- one board, one owner"
+
+[[entry]]
+tree     = "qmk"
+id       = "marksard/rhymestone/rev1"
+source   = "marksard/keyboards"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "contended"
+note     = "3 rows all match 'rhymestone/pcb/rev1.0/Rhymestone.kicad_pcb' within 0.5 (marksard/rhymestone/rev1, marksard/treadstone32/rev1, marksard/treadstone48/rev1) -- one board, one owner"
+
+[[entry]]
+tree     = "qmk"
+id       = "marksard/treadstone32/lite"
+source   = "marksard/keyboards"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "contended"
+note     = "4 rows all match 'treadstone32/pcb/rev1.1/Treadstone32.kicad_pcb' within 0.5 (marksard/rhymestone/rev1, marksard/treadstone32/lite, marksard/treadstone32/rev1, marksard/treadstone48/rev1) -- one board, one owner"
+
+[[entry]]
+tree     = "qmk"
+id       = "marksard/treadstone32/rev1"
+source   = "marksard/keyboards"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "contended"
+note     = "4 rows all match 'treadstone32/pcb/rev1.1/Treadstone32.kicad_pcb' within 0.5 (marksard/rhymestone/rev1, marksard/treadstone32/lite, marksard/treadstone32/rev1, marksard/treadstone48/rev1) -- one board, one owner"
+
+[[entry]]
+tree     = "qmk"
+id       = "marksard/treadstone48/rev1"
+source   = "marksard/keyboards"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "contended"
+note     = "4 rows all match 'treadstone48/pcb/rev1.2/Treadstone48.kicad_pcb' within 0.5 (marksard/rhymestone/rev1, marksard/treadstone32/rev1, marksard/treadstone48/rev1, marksard/treadstone48/rev2) -- one board, one owner"
+
+[[entry]]
+tree     = "qmk"
+id       = "marksard/treadstone48/rev2"
+source   = "marksard/keyboards"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "contended"
+note     = "4 rows all match 'treadstone48/pcb/rev1.2/Treadstone48.kicad_pcb' within 0.5 (marksard/rhymestone/rev1, marksard/treadstone32/rev1, marksard/treadstone48/rev1, marksard/treadstone48/rev2) -- one board, one owner"
+
+[[entry]]
+tree     = "qmk"
+id       = "matthewdias/m3n3van"
+source   = "matthewdias/m3n3van"
+boards   = ["rev2/m3n3van.kicad_pcb"]
+name     = "m3n3van rev2"
+verdict  = "confirmed"
+signal   = "exact"
+note     = "2 designs' worth of boards in the repo; matched on exact"
+
+[[entry]]
+tree     = "qmk"
+id       = "matthewdias/minim"
+source   = "matthewdias/minim"
+boards   = ["PCB/minim.kicad_pcb"]
+name     = "minim"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "maxr1998/phoebe"
+source   = "maxr1998/phoebe_keyboard"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "none"
+note     = "2 designs' worth of boards in the repo, none resembling this id: pcb/pcb.kicad_pcb, pcb_v2/pcb.kicad_pcb"
+
+[[entry]]
+tree     = "qmk"
+id       = "maxr1998/pulse4k"
+source   = "maxr1998/pulse_4k"
+boards   = ["pcb/pcb.kicad_pcb"]
+name     = "pulse 4k"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "mechllama/g35/v1"
+source   = "kaylynb/mechllama-g35"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "contended"
+note     = "2 rows contend for the repo's one design (PCB/G35.kicad_pcb) -- they may be controller or revision variants of it, and a row whose own board was never committed owns nothing at all"
+
+[[entry]]
+tree     = "qmk"
+id       = "mechllama/g35/v2"
+source   = "kaylynb/mechllama-g35"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "contended"
+note     = "2 rows contend for the repo's one design (PCB/G35.kicad_pcb) -- they may be controller or revision variants of it, and a row whose own board was never committed owns nothing at all"
+
+[[entry]]
+tree     = "qmk"
+id       = "meow65"
+source   = "mrninhvn/meow65-pcb"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "mikeneko65"
+source   = "takishim/mikeneko65"
+boards   = ["pcb/kicad/mikeneko-65-pcb.kicad_pcb"]
+name     = "mikeneko 65"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "millipad"
+source   = "glozares/millipad"
+boards   = ["millipad/millipad.kicad_pcb"]
+name     = "millipad"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "mini_elixivy"
+source   = "minibois/elixivy"
+boards   = ["mini-eLiXiVy.kicad_pcb"]
+name     = "mini e Li Xi Vy"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "mini_ten_key_plus"
+source   = "minibois/ten-key-plus"
+boards   = ["mini-ten-key-plus.kicad_pcb"]
+name     = "mini ten key plus"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "minimon/bartlesplit"
+source   = "kyrremann/bartlesplit"
+boards   = ["bartlepslit.kicad_pcb"]
+name     = "bartlepslit"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose -- NAME UNVOUCHED: nothing outside the board path supports 'bartlepslit'; the firmware record is 'minimon/bartlesplit' and they share no token. Ticket 44 names a design by its board's directory, which is wrong when the directory names a version, a switch type or a template"
+
+[[entry]]
+tree     = "qmk"
+id       = "minimon/index_tab"
+source   = "kyrremann/index-tab"
+boards   = ["kicad/index-tab.kicad_pcb"]
+name     = "index tab"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "misonoworks/chocolatebar"
+source   = "misonoworks/chocolate-bar"
+boards   = ["v2_kicad/chocolatebar.kicad_pcb"]
+name     = "chocolatebar"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "misonoworks/karina"
+source   = "autumnisacutie/karina"
+boards   = ["KiCad-PCB/keyboard.kicad_pcb"]
+name     = "karina"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "molecule"
+source   = "bbrfkr/keyboards"
+boards   = ["molecule/molecule.kicad_pcb"]
+name     = "molecule"
+verdict  = "confirmed"
+signal   = "exact"
+note     = "4 designs' worth of boards in the repo; matched on exact"
+
+[[entry]]
+tree     = "qmk"
+id       = "morizon"
+source   = "skarrmann/morizon"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "token"
+note     = "2 designs, best token match 'kicad/choc/morizon-choc.kicad_pcb' (3.00) but runner-up scores 3.00 -- too close to call"
+
+[[entry]]
+tree     = "qmk"
+id       = "mzmkb/slimdash/rev1"
+source   = "mizma/slimdash"
+boards   = ["hardware-rev1/design_data/SlimDash-rev1-kicad/SlimDash-rev1-kicad-rounded.kicad_pcb", "hardware-rev1/design_data/SlimDash-rev1-kicad/SlimDash-rev1-kicad.kicad_pcb", "hardware-rev1/ergogen/build/pcbs/slimdash.kicad_pcb"]
+name     = "slimdash"
+verdict  = "confirmed"
+signal   = "tied"
+note     = "3 candidates tie at 2.67 and agree on every fact the build reads, so the choice between them cannot change the record; all 3 taken as one design's revisions"
+
+[[entry]]
+tree     = "qmk"
+id       = "nack"
+source   = "farfalleflickan/nack"
+boards   = ["nack_v1/hardware/nack.kicad_pcb", "nack_v2/hardware/nack.kicad_pcb"]
+name     = "nack"
+verdict  = "confirmed"
+signal   = "tied"
+note     = "2 candidates tie at 4.00 and agree on every fact the build reads, so the choice between them cannot change the record; all 2 taken as one design's revisions"
+
+[[entry]]
+tree     = "qmk"
+id       = "nightly_boards/ph_arisu"
+source   = "fatenozomi/arisu-pcb"
+boards   = ["arisu.kicad_pcb"]
+name     = "arisu"
+verdict  = "confirmed"
+signal   = "shared"
+note     = "2 records want the repo's one design and none supersedes another -- they agree on key count and splitness, and differ by variant rather than version (arisu, nightly_boards/ph_arisu), so all of them run on it"
+
+[[entry]]
+tree     = "qmk"
+id       = "np12"
+source   = "nut1414/np12"
+boards   = ["np12.kicad_pcb"]
+name     = "np12"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "nyhxis/nfr_70"
+source   = "nyhxis/keyboard-resources"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "obosob/steal_this_keyboard"
+source   = "obosob/steal_this_keyboard"
+boards   = ["steal_this_keyboard.kicad_pcb"]
+name     = "steal this"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "omnikeyish"
+source   = "henrikosorensen/keyboard_pcbs"
+boards   = ["omnikeyish_pcb/keyboard.kicad_pcb"]
+name     = "omnikeyish"
+verdict  = "confirmed"
+signal   = "token"
+note     = "2 designs' worth of boards in the repo; matched on token"
+
+[[entry]]
+tree     = "qmk"
+id       = "opendeck/32/rev1"
+source   = "cmdremily/opendeck"
+boards   = ["hardware/OpenDeck32/opendeck.kicad_pcb"]
+name     = "opendeck"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "ortho5by12"
+source   = "itsnoteasy/misc"
+boards   = ["keyb_quad/keyb.kicad_pcb"]
+name     = "keyb"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose -- NAME UNVOUCHED: nothing outside the board path supports 'keyb'; the firmware record is 'ortho5by12' and they share no token. Ticket 44 names a design by its board's directory, which is wrong when the directory names a version, a switch type or a template"
+
+[[entry]]
+tree     = "qmk"
+id       = "orthocode"
+source   = "jrodna/orthocode"
+boards   = ["orthoCode.kicad_pcb", "orthoCodeCase.kicad_pcb"]
+name     = "orthocode"
+verdict  = "confirmed"
+signal   = "tied"
+note     = "2 candidates tie at 0.69 and agree on every fact the build reads, so the choice between them cannot change the record; all 2 taken as one design's revisions"
+
+[[entry]]
+tree     = "qmk"
+id       = "palette1202"
+source   = "niltea/palette1202"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "token"
+note     = "2 designs, best token match 'pcb/palette1202-OB.kicad_pcb' (3.00) but runner-up scores 3.00 -- too close to call"
+
+[[entry]]
+tree     = "qmk"
+id       = "peej/lumberjack"
+source   = "peej/lumberjack-keyboard"
+boards   = ["lumberjack.kicad_pcb"]
+name     = "lumberjack"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "peej/rosaline/ortho"
+source   = "peej/rosaline-keyboard"
+boards   = ["rosaline-ortho.kicad_pcb"]
+name     = "rosaline ortho"
+verdict  = "confirmed"
+signal   = "human"
+note     = "the ortho record takes the ortho board; forced pairing 5.00 vs 4.67"
+
+[[entry]]
+tree     = "qmk"
+id       = "peej/rosaline/staggered"
+source   = "peej/rosaline-keyboard"
+boards   = ["rosaline.kicad_pcb"]
+name     = "rosaline"
+verdict  = "confirmed"
+signal   = "human"
+note     = "the staggered record takes the plain board, since the other is explicitly ortho"
+
+[[entry]]
+tree     = "qmk"
+id       = "peej/tripel/left"
+source   = "peej/tripel-keyboard"
+boards   = ["tripel.kicad_pcb"]
+name     = "tripel"
+verdict  = "confirmed"
+signal   = "shared"
+note     = "3 records want the repo's one design and none supersedes another -- they agree on key count and splitness, and differ by variant rather than version (peej/tripel/left, peej/tripel/middle, peej/tripel/right), so all of them run on it"
+
+[[entry]]
+tree     = "qmk"
+id       = "peej/tripel/middle"
+source   = "peej/tripel-keyboard"
+boards   = ["tripel.kicad_pcb"]
+name     = "tripel"
+verdict  = "confirmed"
+signal   = "shared"
+note     = "3 records want the repo's one design and none supersedes another -- they agree on key count and splitness, and differ by variant rather than version (peej/tripel/left, peej/tripel/middle, peej/tripel/right), so all of them run on it"
+
+[[entry]]
+tree     = "qmk"
+id       = "peej/tripel/right"
+source   = "peej/tripel-keyboard"
+boards   = ["tripel.kicad_pcb"]
+name     = "tripel"
+verdict  = "confirmed"
+signal   = "shared"
+note     = "3 records want the repo's one design and none supersedes another -- they agree on key count and splitness, and differ by variant rather than version (peej/tripel/left, peej/tripel/middle, peej/tripel/right), so all of them run on it"
+
+[[entry]]
+tree     = "qmk"
+id       = "piantoruv44"
+source   = "azhizhinov/piantoruv44"
+boards   = ["PIANTORUV44.kicad_pcb"]
+name     = "PIANTORUV44"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "pica40/rev1"
+source   = "zzeneg/pica40"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "contended"
+note     = "2 rows contend for the repo's one design (pcb/full.kicad_pcb) -- they may be controller or revision variants of it, and a row whose own board was never committed owns nothing at all"
+
+[[entry]]
+tree     = "qmk"
+id       = "pica40/rev2"
+source   = "zzeneg/pica40"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "contended"
+note     = "2 rows contend for the repo's one design (pcb/full.kicad_pcb) -- they may be controller or revision variants of it, and a row whose own board was never committed owns nothing at all"
+
+[[entry]]
+tree     = "qmk"
+id       = "pierce"
+source   = "durken1/pierce"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "exact"
+note     = "2 designs, best exact match 'pcb/wired/pierce.kicad_pcb' (4.00) but runner-up scores 4.00 -- too close to call"
+
+[[entry]]
+tree     = "qmk"
+id       = "pimentoso/touhoupad"
+source   = "pimentoso/touhoupad_v2"
+boards   = ["kicad/project.kicad_pcb"]
+name     = "touhoupad v2"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "pisces"
+source   = "knaruo/pisces"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "exact"
+note     = "2 designs, best exact match 'pcb/pisces/pisces.kicad_pcb' (4.00) but runner-up scores 4.00 -- too close to call"
+
+[[entry]]
+tree     = "qmk"
+id       = "pluckey"
+source   = "floookay/pluckey"
+boards   = ["pcb/pcb.kicad_pcb"]
+name     = "pluckey"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "plum47"
+source   = "takagi/plum47_buildguide"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "pos78"
+source   = "smssmssms/pos78"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "psuieee/pluto12"
+source   = "psuieee/pluto12"
+boards   = ["pluto12/pluto12.kicad_pcb"]
+name     = "pluto12"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "quokka"
+source   = "dlford/quokka"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "rarepotato8de/3x3macropad"
+source   = "rarepotato8de/3x3macropad"
+boards   = ["PCB-Files/PCB/PCB.kicad_pcb"]
+name     = "3x3macropad"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "reviung/reviung46"
+source   = "gtips/reviung"
+boards   = ["reviung46/pcb/reviung46_ver1_1/reviung46/reviung46.kicad_pcb"]
+name     = "reviung46"
+verdict  = "confirmed"
+signal   = "exact"
+note     = "14 designs' worth of boards in the repo; matched on exact"
+
+[[entry]]
+tree     = "qmk"
+id       = "reviung/reviung61"
+source   = "gtips/reviung"
+boards   = ["reviung61/pcb/reviung61.kicad_pcb"]
+name     = "reviung61"
+verdict  = "confirmed"
+signal   = "exact"
+note     = "14 designs' worth of boards in the repo; matched on exact"
+
+[[entry]]
+tree     = "qmk"
+id       = "rico/phoenix_project_no1"
+source   = "mymakercorner/phoenix_project_no1"
+boards   = ["kicad_projects/typeH/Phoenix_Project_No1-TypeH.kicad_pcb", "kicad_projects/typeS/Phoenix_Project_No1-TypeS.kicad_pcb"]
+name     = "phoenix no1"
+verdict  = "confirmed"
+signal   = "tied"
+note     = "2 candidates tie at 2.80 and agree on every fact the build reads, so the choice between them cannot change the record; all 2 taken as one design's revisions"
+
+[[entry]]
+tree     = "qmk"
+id       = "rura66/rev1"
+source   = "shinoharata/keyboards"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "contended"
+note     = "2 rows contend for the repo's one design (Shiro/pcb/Shiro/shiro.kicad_pcb) -- they may be controller or revision variants of it, and a row whose own board was never committed owns nothing at all"
+
+[[entry]]
+tree     = "qmk"
+id       = "scatter42"
+source   = "bbrfkr/keyboards"
+boards   = ["scatter42/scatter42.kicad_pcb"]
+name     = "scatter42"
+verdict  = "confirmed"
+signal   = "exact"
+note     = "4 designs' worth of boards in the repo; matched on exact"
+
+[[entry]]
+tree     = "qmk"
+id       = "sdrakbs/sdrakb00"
+source   = "drabaioli/sdrakb00"
+boards   = ["KiCad_PCB/SdraKb00.kicad_pcb"]
+name     = "Sdra Kb00"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "sekigon/grs_70ec"
+source   = "sekigon-gonnoc/grs-70ec-doc"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "sendyyeah/75pixels"
+source   = "sendyyeah/bevi"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "contended"
+note     = "2 rows contend for the repo's one design (bevi.kicad_pcb) -- they may be controller or revision variants of it, and a row whose own board was never committed owns nothing at all"
+
+[[entry]]
+tree     = "qmk"
+id       = "sendyyeah/bevi"
+source   = "sendyyeah/bevi"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "contended"
+note     = "2 rows contend for the repo's one design (bevi.kicad_pcb) -- they may be controller or revision variants of it, and a row whose own board was never committed owns nothing at all"
+
+[[entry]]
+tree     = "qmk"
+id       = "sendyyeah/pix"
+source   = "sendz/pix"
+boards   = ["pix.kicad_pcb"]
+name     = "pix"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "sha"
+source   = "skarrmann/sha"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "token"
+note     = "2 designs, best token match 'kicad/choc/sha-choc.kicad_pcb' (3.00) but runner-up scores 3.00 -- too close to call"
+
+[[entry]]
+tree     = "qmk"
+id       = "shiro"
+source   = "shinoharata/keyboards"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "contended"
+note     = "2 rows contend for the repo's one design (Shiro/pcb/Shiro/shiro.kicad_pcb) -- they may be controller or revision variants of it, and a row whose own board was never committed owns nothing at all"
+
+[[entry]]
+tree     = "qmk"
+id       = "shoc"
+source   = "jannikb5825/shoc"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "shuguet/shu89"
+source   = "shuguet/split89"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "silakka54"
+source   = "squalius-cephalus/silakka54"
+boards   = ["kicad/silakka54.kicad_pcb"]
+name     = "silakka54"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "skeletonkbd/skeletonnumpad"
+source   = "skeletonkbd/skeletonnumpad"
+boards   = ["SkeletonNumPad.kicad_pcb"]
+name     = "Skeleton Num Pad"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "skmt/15k"
+source   = "satorusaka/15k-macropad"
+boards   = ["Source/15k-macropad/15k-macropad.kicad_pcb"]
+name     = "15k macropad"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "slimorta"
+source   = "ashijanken/slimorta"
+boards   = ["PCB/Slimorta_main_board/Slimorta_main_board.kicad_pcb"]
+name     = "Slimorta"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "slz40"
+source   = "sithlord121/slz40"
+boards   = ["PCB-files/PCB/SithZhuyin40.kicad_pcb"]
+name     = "Sith Zhuyin40"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "sofle/rev1"
+source   = "josefadamcik/soflekeyboard"
+boards   = ["Sofle_v1/PCB/SofleKeyboard.kicad_pcb"]
+name     = "Sofle v1"
+verdict  = "confirmed"
+signal   = "token"
+note     = "6 designs' worth of boards in the repo; matched on token"
+
+[[entry]]
+tree     = "qmk"
+id       = "sofle_choc"
+source   = "josefadamcik/soflekeyboard"
+boards   = ["Sofle_Choc/PCB/SofleKeyboard.kicad_pcb"]
+name     = "Sofle Choc"
+verdict  = "confirmed"
+signal   = "token"
+note     = "6 designs' worth of boards in the repo; matched on token"
+
+[[entry]]
+tree     = "qmk"
+id       = "sofle_pico"
+source   = "jellytitan/sofle-pico"
+boards   = ["Sofle_Pico/PCB/Sofle_Pico.kicad_pcb"]
+name     = "Sofle Pico"
+verdict  = "confirmed"
+signal   = "exact"
+note     = "2 designs' worth of boards in the repo; matched on exact"
+
+[[entry]]
+tree     = "qmk"
+id       = "somei70"
+source   = "gzowski/somei70"
+boards   = ["PCB/somei70.kicad_pcb"]
+name     = "somei70"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "soup10"
+source   = "sadeeed/soup10"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "spacetime/rev1"
+source   = "kyleterry/spacetime-keyboard"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "contended"
+note     = "2 rows all match 'spacetime.kicad_pcb' within 0.5 (spacetime/rev1, spacetime/rev2) -- one board, one owner"
+
+[[entry]]
+tree     = "qmk"
+id       = "spacetime/rev2"
+source   = "kyleterry/spacetime-keyboard"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "contended"
+note     = "2 rows all match 'spacetime.kicad_pcb' within 0.5 (spacetime/rev1, spacetime/rev2) -- one board, one owner"
+
+[[entry]]
+tree     = "qmk"
+id       = "sparrow62"
+source   = "74th/sparrow62-buildguide"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "spleeb"
+source   = "chrishoage/spleeb"
+boards   = ["spleeb/pcbs/spleeb.kicad_pcb"]
+name     = "spleeb"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "sporewoh/banime40"
+source   = "chrischrislolo/banime40"
+boards   = ["pcb/banime40/banime40.kicad_pcb"]
+name     = "banime40"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "sthlmkb/lagom"
+source   = "mohoyt/lagom"
+boards   = ["PCB/lagom.kicad_pcb"]
+name     = "lagom"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "sthlmkb/litl"
+source   = "mohoyt/litl"
+boards   = ["PCB/litl.kicad_pcb"]
+name     = "litl"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "stront"
+source   = "zzeneg/stront"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "none"
+note     = "3 designs' worth of boards in the repo, none resembling this id: pcb/choc/pcb.kicad_pcb, pcb/mx/pcb.kicad_pcb, pcb/mx40/pcb.kicad_pcb"
+
+[[entry]]
+tree     = "qmk"
+id       = "subrezon/la_nc"
+source   = "subrezon/la_nc"
+boards   = ["pcb/la_nc.kicad_pcb"]
+name     = "la nc"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "subrezon/lancer"
+source   = "subrezon/lancer"
+boards   = ["pcb-hotswap/lancer-hotswap.kicad_pcb"]
+name     = "lancer hotswap"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "suikagiken/suika15tone"
+source   = "suikagiken/suika15tone"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "suikagiken/suika27melo"
+source   = "suikagiken/suika27melo"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "suikagiken/suika83opti"
+source   = "suikagiken/suika83opti"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "suikagiken/suika85ergo"
+source   = "suikagiken/suika85ergo"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "supersplit"
+source   = "tarneaux/supersplit"
+boards   = ["output/pcbs/board.kicad_pcb"]
+name     = "supersplit"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "takashicompany/compacx"
+source   = "takashicompany/compacx"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "takashicompany/dogtag"
+source   = "takashicompany/dogtag"
+boards   = ["kicad/dogtag.kicad_pcb"]
+name     = "dogtag"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "takashicompany/endzone34"
+source   = "takashicompany/endzone34"
+boards   = ["kicad/endzone34.kicad_pcb"]
+name     = "endzone34"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "takashicompany/goat51"
+source   = "takashicompany/goat51"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "takashicompany/minizone"
+source   = "takashicompany/minizone"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "takashicompany/palmbrain"
+source   = "takashicompany/palmbrain"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "takashicompany/qoolee"
+source   = "takashicompany/qoolee"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "takashicompany/radialex"
+source   = "takashicompany/radialex"
+boards   = ["kicad/kbd-template.kicad_pcb"]
+name     = "kbd template"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose -- NAME UNVOUCHED: nothing outside the board path supports 'kbd template'; the firmware record is 'takashicompany/radialex' and they share no token. Ticket 44 names a design by its board's directory, which is wrong when the directory names a version, a switch type or a template"
+
+[[entry]]
+tree     = "qmk"
+id       = "takashicompany/rookey"
+source   = "takashicompany/rookey"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "takashicompany/spreadwriter"
+source   = "takashicompany/spreadwriter"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "the_royal/schwann"
+source   = "theroyalsweatshirt/the_royal_projects"
+boards   = ["02 - PCBs/Schwann_PCB/PCB Documentation/Schwann_Rev0.5b.kicad_pcb"]
+name     = "Schwann Rev0.5b"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "tkw/grandiceps/rev1"
+source   = "vattern/grandiceps"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "contended"
+note     = "2 rows all match 'grandiceps.kicad_pcb' within 0.5 (tkw/grandiceps/rev1, tkw/grandiceps/rev2) -- one board, one owner"
+
+[[entry]]
+tree     = "qmk"
+id       = "tkw/grandiceps/rev2"
+source   = "vattern/grandiceps"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "contended"
+note     = "2 rows all match 'grandiceps.kicad_pcb' within 0.5 (tkw/grandiceps/rev1, tkw/grandiceps/rev2) -- one board, one owner"
+
+[[entry]]
+tree     = "qmk"
+id       = "tkw/stoutgat/v1"
+source   = "vattern/stoutgat"
+boards   = ["stoutgat-pcb.kicad_pcb"]
+name     = "stoutgat"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "tkw/stoutgat/v2/f411"
+source   = "vattern/stoutgatv2"
+boards   = ["stoutgatv2.kicad_pcb"]
+name     = "stoutgatv2"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "tominabox1/adalyn"
+source   = "marvfpv/adalyn"
+boards   = ["PCB/Adalyn.kicad_pcb"]
+name     = "Adalyn"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "torn"
+source   = "rtitmuss/torn"
+boards   = ["torn_left/torn_left.kicad_pcb", "torn_right/torn_right.kicad_pcb"]
+name     = "torn"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "trojan_pinata/model_b/rev0"
+source   = "trojanpinata/model-b"
+boards   = ["pcb/model-b/model-b.kicad_pcb"]
+name     = "model b"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "tszaboo/ortho4exent"
+source   = "tszaboo/ortho4exent"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "tunks/ergo33"
+source   = "kulmajaba/tunks-keyboard"
+boards   = ["ergo33/ergo33.kicad_pcb"]
+name     = "ergo33"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "tyraelwastaken/equanimity"
+source   = "tyraelwastaken/equanimity"
+boards   = ["Kicad Files/Alice Keyboard.kicad_pcb"]
+name     = "Equanimity"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose -- CORRECTED 2026-09-23: the drafted name 'Alice' came from the board's own path ('Alice Keyboard.kicad_pcb'), but 'Alice' names the LAYOUT TYPE this board uses, not the design. The design is 'Equanimity', the firmware record's own name (tyraelwastaken/equanimity), owner-confirmed. See seed/renames.toml for the slug redirect."
+
+[[entry]]
+tree     = "qmk"
+id       = "tzarc/djinn/rev1"
+source   = "tzarc/djinn"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "contended"
+note     = "2 rows all match 'Djinn/Rev1/Djinn.kicad_pcb' within 0.5 (tzarc/djinn/rev1, tzarc/djinn/rev2) -- one board, one owner"
+
+[[entry]]
+tree     = "qmk"
+id       = "tzarc/djinn/rev2"
+source   = "tzarc/djinn"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "contended"
+note     = "2 rows all match 'Djinn/Rev2a/Djinn.kicad_pcb' within 0.5 (tzarc/djinn/rev1, tzarc/djinn/rev2) -- one board, one owner"
+
+[[entry]]
+tree     = "qmk"
+id       = "tzarc/ghoul/rev1/rp2040"
+source   = "tzarc/ghoul"
+boards   = ["v1.0/ghoul.kicad_pcb"]
+name     = "ghoul"
+verdict  = "confirmed"
+signal   = "shared"
+note     = "2 records want the repo's one design and none supersedes another -- they agree on key count and splitness, and differ by variant rather than version (tzarc/ghoul/rev1/rp2040, tzarc/ghoul/rev1/stm32), so all of them run on it"
+
+[[entry]]
+tree     = "qmk"
+id       = "tzarc/ghoul/rev1/stm32"
+source   = "tzarc/ghoul"
+boards   = ["v1.0/ghoul.kicad_pcb"]
+name     = "ghoul"
+verdict  = "confirmed"
+signal   = "shared"
+note     = "2 records want the repo's one design and none supersedes another -- they agree on key count and splitness, and differ by variant rather than version (tzarc/ghoul/rev1/rp2040, tzarc/ghoul/rev1/stm32), so all of them run on it"
+
+[[entry]]
+tree     = "qmk"
+id       = "tzarc/kobold/r1"
+source   = "tzarc/keyboards"
+boards   = ["Kobold/R1/Kobold.kicad_pcb"]
+name     = "Kobold"
+verdict  = "confirmed"
+signal   = "token"
+note     = "4 designs' worth of boards in the repo; matched on token"
+
+[[entry]]
+tree     = "qmk"
+id       = "unison/v04"
+source   = "jpskenn/unison"
+boards   = ["PCB/Unison.kicad_pcb"]
+name     = "Unison"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "uzu42/rev1"
+source   = "nrtkbb/keyboards"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "v4n4g0rth0n/v1"
+source   = "jpuerto96/v4n4g0rth0n"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "contended"
+note     = "2 rows contend for the repo's one design (V4N4G0RTH0N.kicad_pcb) -- they may be controller or revision variants of it, and a row whose own board was never committed owns nothing at all"
+
+[[entry]]
+tree     = "qmk"
+id       = "v4n4g0rth0n/v2"
+source   = "jpuerto96/v4n4g0rth0n"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "contended"
+note     = "2 rows contend for the repo's one design (V4N4G0RTH0N.kicad_pcb) -- they may be controller or revision variants of it, and a row whose own board was never committed owns nothing at all"
+
+[[entry]]
+tree     = "qmk"
+id       = "vagrant_10"
+source   = "sho-keebs/vagrant-10"
+boards   = ["pcb/vagrant.kicad_pcb"]
+name     = "vagrant"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "varanidae"
+source   = "tokageitlab/varanidae"
+boards   = ["pcb/kicad/Varanidae.kicad_pcb"]
+name     = "Varanidae"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "vt40"
+source   = "vladantrhlik/vt-40"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "whale/sk/v3"
+source   = "ncwhale/keyboard_design"
+boards   = ["Splite-Keyboard-v2/Keyboar-layout.kicad_pcb"]
+name     = "Keyboar layout"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose -- NAME UNVOUCHED: nothing outside the board path supports 'Keyboar layout'; the firmware record is 'whale/sk/v3' and they share no token. Ticket 44 names a design by its board's directory, which is wrong when the directory names a version, a switch type or a template"
+
+[[entry]]
+tree     = "qmk"
+id       = "xenon"
+source   = "narinari/xenon-keyboard"
+boards   = ["xenon-e/xenon-e.kicad_pcb"]
+name     = "xenon e"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "yanghu/unicorne/f411"
+source   = "yanghu/unicorne"
+boards   = ["unicorn-mx/unicorn-f072/unicorn.kicad_pcb"]
+name     = "unicorn f072"
+verdict  = "confirmed"
+signal   = "token"
+note     = "3 designs' worth of boards in the repo; matched on token"
+
+[[entry]]
+tree     = "qmk"
+id       = "yosino58/rev1"
+source   = "sakurachari/yosino58"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "token"
+note     = "3 designs, best token match 'cherry/yosino58_cherry.kicad_pcb' (2.67) but runner-up scores 2.67 -- too close to call"
+
+[[entry]]
+tree     = "qmk"
+id       = "zigotica/z12"
+source   = "zigotica/mechanical-keyboards"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "zigotica/z34"
+source   = "zigotica/mechanical-keyboards"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "zykrah/fuyu"
+source   = "zykrah/fuyu"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "contended"
+note     = "2 rows contend for the repo's one design (fuyu.kicad_pcb) -- they may be controller or revision variants of it, and a row whose own board was never committed owns nothing at all"
+
+[[entry]]
+tree     = "qmk"
+id       = "zykrah/fuyu_hs"
+source   = "zykrah/fuyu"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "contended"
+note     = "2 rows contend for the repo's one design (fuyu.kicad_pcb) -- they may be controller or revision variants of it, and a row whose own board was never committed owns nothing at all"
+
+[[entry]]
+tree     = "qmk"
+id       = "zykrah/slime88"
+source   = "zykrah/slime88"
+boards   = ["slime88.kicad_pcb"]
+name     = "slime88"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "handwired/scottokeebs/scotto108"
+source   = "joe-scotto/scottokeebs"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "elsewhere"
+note     = "the switch source is a .shapr CAD file, not a .kicad_pcb -- ticket 44's CAD-source branch. The row count is ticket 46's and waits on ticket 47"
+
+[[entry]]
+tree     = "qmk"
+id       = "handwired/scottokeebs/scotto34"
+source   = "joe-scotto/scottokeebs"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "elsewhere"
+note     = "the switch source is a .shapr CAD file, not a .kicad_pcb -- ticket 44's CAD-source branch. The row count is ticket 46's and waits on ticket 47"
+
+[[entry]]
+tree     = "qmk"
+id       = "handwired/scottokeebs/scotto36"
+source   = "joe-scotto/scottokeebs"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "elsewhere"
+note     = "the switch source is a .shapr CAD file, not a .kicad_pcb -- ticket 44's CAD-source branch. The row count is ticket 46's and waits on ticket 47"
+
+[[entry]]
+tree     = "qmk"
+id       = "handwired/scottokeebs/scotto37"
+source   = "joe-scotto/scottokeebs"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "elsewhere"
+note     = "the switch source is a .shapr CAD file, not a .kicad_pcb -- ticket 44's CAD-source branch. The row count is ticket 46's and waits on ticket 47"
+
+[[entry]]
+tree     = "qmk"
+id       = "handwired/scottokeebs/scotto40"
+source   = "joe-scotto/scottokeebs"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "elsewhere"
+note     = "the switch source is a .shapr CAD file, not a .kicad_pcb -- ticket 44's CAD-source branch. The row count is ticket 46's and waits on ticket 47"
+
+[[entry]]
+tree     = "qmk"
+id       = "handwired/scottokeebs/scotto61"
+source   = "joe-scotto/scottokeebs"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "elsewhere"
+note     = "the switch source is a .shapr CAD file, not a .kicad_pcb -- ticket 44's CAD-source branch. The row count is ticket 46's and waits on ticket 47"
+
+[[entry]]
+tree     = "qmk"
+id       = "handwired/scottokeebs/scotto9"
+source   = "joe-scotto/scottokeebs"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "elsewhere"
+note     = "the switch source is a .shapr CAD file, not a .kicad_pcb -- ticket 44's CAD-source branch. The row count is ticket 46's and waits on ticket 47"
+
+[[entry]]
+tree     = "qmk"
+id       = "handwired/scottokeebs/scottoalp"
+source   = "joe-scotto/scottokeebs"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "elsewhere"
+note     = "the switch source is a .shapr CAD file, not a .kicad_pcb -- ticket 44's CAD-source branch. The row count is ticket 46's and waits on ticket 47"
+
+[[entry]]
+tree     = "qmk"
+id       = "handwired/scottokeebs/scottocmd"
+source   = "joe-scotto/scottokeebs"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "elsewhere"
+note     = "the switch source is a .shapr CAD file, not a .kicad_pcb -- ticket 44's CAD-source branch. The row count is ticket 46's and waits on ticket 47"
+
+[[entry]]
+tree     = "qmk"
+id       = "handwired/scottokeebs/scottodeck"
+source   = "joe-scotto/scottokeebs"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "elsewhere"
+note     = "the switch source is a .shapr CAD file, not a .kicad_pcb -- ticket 44's CAD-source branch. The row count is ticket 46's and waits on ticket 47"
+
+[[entry]]
+tree     = "qmk"
+id       = "handwired/scottokeebs/scottoergo"
+source   = "joe-scotto/scottokeebs"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "elsewhere"
+note     = "the switch source is a .shapr CAD file, not a .kicad_pcb -- ticket 44's CAD-source branch. The row count is ticket 46's and waits on ticket 47"
+
+[[entry]]
+tree     = "qmk"
+id       = "handwired/scottokeebs/scottofly"
+source   = "joe-scotto/scottokeebs"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "elsewhere"
+note     = "the switch source is a .shapr CAD file, not a .kicad_pcb -- ticket 44's CAD-source branch. The row count is ticket 46's and waits on ticket 47"
+
+[[entry]]
+tree     = "qmk"
+id       = "handwired/scottokeebs/scottofrog"
+source   = "joe-scotto/scottokeebs"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "elsewhere"
+note     = "the switch source is a .shapr CAD file, not a .kicad_pcb -- ticket 44's CAD-source branch. The row count is ticket 46's and waits on ticket 47"
+
+[[entry]]
+tree     = "qmk"
+id       = "handwired/scottokeebs/scottogame"
+source   = "joe-scotto/scottokeebs"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "elsewhere"
+note     = "the switch source is a .shapr CAD file, not a .kicad_pcb -- ticket 44's CAD-source branch. The row count is ticket 46's and waits on ticket 47"
+
+[[entry]]
+tree     = "qmk"
+id       = "handwired/scottokeebs/scottohazard"
+source   = "joe-scotto/scottokeebs"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "elsewhere"
+note     = "the switch source is a .shapr CAD file, not a .kicad_pcb -- ticket 44's CAD-source branch. The row count is ticket 46's and waits on ticket 47"
+
+[[entry]]
+tree     = "qmk"
+id       = "handwired/scottokeebs/scottoinvader"
+source   = "joe-scotto/scottokeebs"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "elsewhere"
+note     = "the switch source is a .shapr CAD file, not a .kicad_pcb -- ticket 44's CAD-source branch. The row count is ticket 46's and waits on ticket 47"
+
+[[entry]]
+tree     = "qmk"
+id       = "handwired/scottokeebs/scottokatana"
+source   = "joe-scotto/scottokeebs"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "elsewhere"
+note     = "the switch source is a .shapr CAD file, not a .kicad_pcb -- ticket 44's CAD-source branch. The row count is ticket 46's and waits on ticket 47"
+
+[[entry]]
+tree     = "qmk"
+id       = "handwired/scottokeebs/scottolong"
+source   = "joe-scotto/scottokeebs"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "elsewhere"
+note     = "the switch source is a .shapr CAD file, not a .kicad_pcb -- ticket 44's CAD-source branch. The row count is ticket 46's and waits on ticket 47"
+
+[[entry]]
+tree     = "qmk"
+id       = "handwired/scottokeebs/scottomacrodeck"
+source   = "joe-scotto/scottokeebs"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "elsewhere"
+note     = "the switch source is a .shapr CAD file, not a .kicad_pcb -- ticket 44's CAD-source branch. The row count is ticket 46's and waits on ticket 47"
+
+[[entry]]
+tree     = "qmk"
+id       = "handwired/scottokeebs/scottomouse"
+source   = "joe-scotto/scottokeebs"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "elsewhere"
+note     = "the switch source is a .shapr CAD file, not a .kicad_pcb -- ticket 44's CAD-source branch. The row count is ticket 46's and waits on ticket 47"
+
+[[entry]]
+tree     = "qmk"
+id       = "handwired/scottokeebs/scottonum"
+source   = "joe-scotto/scottokeebs"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "elsewhere"
+note     = "the switch source is a .shapr CAD file, not a .kicad_pcb -- ticket 44's CAD-source branch. The row count is ticket 46's and waits on ticket 47"
+
+[[entry]]
+tree     = "qmk"
+id       = "handwired/scottokeebs/scottoslant"
+source   = "joe-scotto/scottokeebs"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "elsewhere"
+note     = "the switch source is a .shapr CAD file, not a .kicad_pcb -- ticket 44's CAD-source branch. The row count is ticket 46's and waits on ticket 47"
+
+[[entry]]
+tree     = "qmk"
+id       = "handwired/scottokeebs/scottosplit"
+source   = "joe-scotto/scottokeebs"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "elsewhere"
+note     = "the switch source is a .shapr CAD file, not a .kicad_pcb -- ticket 44's CAD-source branch. The row count is ticket 46's and waits on ticket 47"
+
+[[entry]]
+tree     = "qmk"
+id       = "handwired/scottokeebs/scottostarter"
+source   = "joe-scotto/scottokeebs"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "elsewhere"
+note     = "the switch source is a .shapr CAD file, not a .kicad_pcb -- ticket 44's CAD-source branch. The row count is ticket 46's and waits on ticket 47"
+
+[[entry]]
+tree     = "qmk"
+id       = "handwired/scottokeebs/scottowing"
+source   = "joe-scotto/scottokeebs"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "elsewhere"
+note     = "the switch source is a .shapr CAD file, not a .kicad_pcb -- ticket 44's CAD-source branch. The row count is ticket 46's and waits on ticket 47"
+
+[[entry]]
+tree     = "hardware"
+id       = "cantor-remix"
+source   = "nilokr/cantor-remix"
+boards   = ["pcb/keyboard_pcb.kicad_pcb"]
+name     = "Cantor Remix"
+verdict  = "confirmed"
+signal   = "human"
+note     = "agent 2026-08-29, ruled on evidence rather than inference. The repo ships two board files and the grouper sees two designs. `pcb/keyboard_pcb-rounded.kicad_pcb` is MD5-identical to `diepala/cantor`'s `Cantor_Classic/keyboard_pcb-rounded.kicad_pcb` (44bc339a75dbfbe1853ecbe06379b83a) -- an inherited copy the fork never touched, still placing 21 switches a hand, i.e. Cantor's 42. Only `pcb/keyboard_pcb.kicad_pcb` was edited, to 18 a hand, which is the 36-key Remix. Taking both would union 36 and 42 and publish a keyboard that does not exist. The rounded file is a leftover of the fork, not a variant of this design."
+
+[[entry]]
+tree     = "qmk"
+id       = "abacus"
+source   = "nickolaij/Abacus_Rev2"
+boards   = ["AbacusPCB/AbacusPCB.kicad_pcb"]
+name     = "Abacus"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "adkb96/rev1"
+source   = "bit-trade-one/ADKB96-hardware"
+boards   = ["ADKB96-PCB/BTO_Layout.kicad_pcb"]
+name     = "BTO Layout"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "ai03/duet"
+source   = "ai03-2725/duet-switch-tester"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "filtered"
+note     = "the scan found 1 switch-placing .kicad_pcb here and the path filter set every one aside: Duet-MainPCB/Duet-Switch-Tester.kicad_pcb (artefact, 108 switches) -- if any of those is the design, this row is wrong"
+
+[[entry]]
+tree     = "qmk"
+id       = "aidansmithdotdev/fine40"
+source   = "Aidan-OS/Mochi40"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "none"
+note     = "2 designs' worth of boards in the repo, none resembling this id: PCB/Hotswap PCB.kicad_pcb, PCB/PCB.kicad_pcb"
+
+[[entry]]
+tree     = "qmk"
+id       = "aidansmithdotdev/sango"
+source   = "Aidan-OS/Sango"
+boards   = ["PCB/Sango/Sango.kicad_pcb"]
+name     = "Sango"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "archerkeyboard/desire65"
+source   = "akyp/desire65-pcb"
+boards   = ["kicad8/desire65.kicad_pcb"]
+name     = "desire65"
+verdict  = "confirmed"
+signal   = "exact"
+note     = "2 designs' worth of boards in the repo; matched on exact"
+
+[[entry]]
+tree     = "qmk"
+id       = "bastardkb/dilemma/3x5_2/assembled"
+source   = "Bastardkb/Dilemma"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "contended"
+note     = "3 rows all match '3x5_2/dilemma.kicad_pcb' within 0.5 (bastardkb/dilemma/3x5_2/assembled, bastardkb/dilemma/3x5_2/promicro, bastardkb/dilemma/3x5_3) -- one board, one owner"
+
+[[entry]]
+tree     = "qmk"
+id       = "bastardkb/dilemma/3x5_2/promicro"
+source   = "Bastardkb/Dilemma"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "contended"
+note     = "3 rows all match '3x5_2/dilemma.kicad_pcb' within 0.5 (bastardkb/dilemma/3x5_2/assembled, bastardkb/dilemma/3x5_2/promicro, bastardkb/dilemma/3x5_3) -- one board, one owner"
+
+[[entry]]
+tree     = "qmk"
+id       = "bastardkb/dilemma/3x5_3"
+source   = "Bastardkb/Dilemma"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "contended"
+note     = "3 rows all match '3x5_2/dilemma.kicad_pcb' within 0.5 (bastardkb/dilemma/3x5_2/assembled, bastardkb/dilemma/3x5_2/promicro, bastardkb/dilemma/3x5_3) -- one board, one owner"
+
+[[entry]]
+tree     = "qmk"
+id       = "bastardkb/dilemma/4x6_4"
+source   = "Bastardkb/Dilemma"
+boards   = ["4x6_4/dilemma.kicad_pcb"]
+name     = "4x6 4 dilemma"
+verdict  = "confirmed"
+signal   = "token"
+note     = "4 designs' worth of boards in the repo; matched on token"
+
+[[entry]]
+tree     = "qmk"
+id       = "dk60"
+source   = "Dbroqua/DK60"
+boards   = ["DK60/Kicad/DK60.kicad_pcb"]
+name     = "DK60"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "enviousdesign/60f"
+source   = "Envious-Data/Env-KB60F"
+boards   = ["KiCad Files/MainPCB_MX_HS/Env-KB60MXHS.kicad_pcb"]
+name     = "Env KB60 MXHS"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "enviousdesign/65m"
+source   = "Envious-Data/Env-KB65M"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "token"
+note     = "3 designs, best token match 'MainPCB-ChocV2/EnvKB65.kicad_pcb' (2.33) but runner-up scores 2.33 -- too close to call"
+
+[[entry]]
+tree     = "qmk"
+id       = "enviousdesign/delirium/rev0"
+source   = "Envious-Data/Env-KB"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "none"
+note     = "3 designs' worth of boards in the repo, none resembling this id: KiCad Files/MainPCB/ENV_KB.kicad_pcb, KiCad Files/MainPCB_HS/EnvKB_HS.kicad_pcb, KiCad Files/MainPCB_RGB-HS/ENV_KB_RGB.kicad_pcb"
+
+[[entry]]
+tree     = "qmk"
+id       = "enviousdesign/delirium/rev1"
+source   = "Envious-Data/Env-KB"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "none"
+note     = "3 designs' worth of boards in the repo, none resembling this id: KiCad Files/MainPCB/ENV_KB.kicad_pcb, KiCad Files/MainPCB_HS/EnvKB_HS.kicad_pcb, KiCad Files/MainPCB_RGB-HS/ENV_KB_RGB.kicad_pcb"
+
+[[entry]]
+tree     = "qmk"
+id       = "enviousdesign/delirium/rgb"
+source   = "Envious-Data/Env-KB"
+boards   = ["KiCad Files/MainPCB_RGB-HS/ENV_KB_RGB.kicad_pcb"]
+name     = "ENV RGB"
+verdict  = "confirmed"
+signal   = "token"
+note     = "3 designs' worth of boards in the repo; matched on token"
+
+[[entry]]
+tree     = "qmk"
+id       = "enviousdesign/mcro/rev1"
+source   = "Envious-Data/Env-MCRO"
+boards   = ["MainPCB_MX/EnvMCRO.kicad_pcb", "MainPCB_ULP/EnvMCRO.kicad_pcb"]
+name     = "Env MCRO"
+verdict  = "confirmed"
+signal   = "tied"
+note     = "2 candidates tie at 2.33 and agree on every fact the build reads, so the choice between them cannot change the record; all 2 taken as one design's revisions"
+
+[[entry]]
+tree     = "qmk"
+id       = "evyd13/atom47/rev2"
+source   = "evyd13/atom47"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "contended"
+note     = "4 rows all match 'pcb-files/rev4/atom47.kicad_pcb' within 0.5 (evyd13/atom47/rev2, evyd13/atom47/rev3, evyd13/atom47/rev4, evyd13/atom47/rev5) -- one board, one owner"
+
+[[entry]]
+tree     = "qmk"
+id       = "evyd13/atom47/rev3"
+source   = "evyd13/atom47"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "contended"
+note     = "4 rows all match 'pcb-files/rev4/atom47.kicad_pcb' within 0.5 (evyd13/atom47/rev2, evyd13/atom47/rev3, evyd13/atom47/rev4, evyd13/atom47/rev5) -- one board, one owner"
+
+[[entry]]
+tree     = "qmk"
+id       = "evyd13/atom47/rev4"
+source   = "evyd13/atom47"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "contended"
+note     = "4 rows all match 'pcb-files/rev4/atom47.kicad_pcb' within 0.5 (evyd13/atom47/rev2, evyd13/atom47/rev3, evyd13/atom47/rev4, evyd13/atom47/rev5) -- one board, one owner"
+
+[[entry]]
+tree     = "qmk"
+id       = "evyd13/atom47/rev5"
+source   = "evyd13/atom47"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "contended"
+note     = "4 rows all match 'pcb-files/rev5-c/atom47-rev5-c.kicad_pcb' within 0.5 (evyd13/atom47/rev2, evyd13/atom47/rev3, evyd13/atom47/rev4, evyd13/atom47/rev5) -- one board, one owner"
+
+[[entry]]
+tree     = "qmk"
+id       = "evyd13/fin_pad"
+source   = "evyd13/fin-pad"
+boards   = ["dolphin.kicad_pcb"]
+name     = "dolphin"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose -- NAME UNVOUCHED: nothing outside the board path supports 'dolphin'; the firmware record is 'evyd13/fin_pad' and they share no token. Ticket 44 names a design by its board's directory, which is wrong when the directory names a version, a switch type or a template"
+
+[[entry]]
+tree     = "qmk"
+id       = "evyd13/plain60"
+source   = "evyd13/plain60-c"
+boards   = ["plain60-c.kicad_pcb"]
+name     = "plain60 c"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "frooastboard/nano"
+source   = "Frooastside/Frooastboard"
+boards   = ["Frooastboard Nano/KiCad Project/Frooastboard Nano.kicad_pcb"]
+name     = "Frooastboard Nano"
+verdict  = "confirmed"
+signal   = "token"
+note     = "3 designs' worth of boards in the repo; matched on token"
+
+[[entry]]
+tree     = "qmk"
+id       = "frooastboard/walnut"
+source   = "Frooastside/Frooastboard"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "token"
+note     = "3 designs, best token match 'Frooastboard Walnut Modular/KiCad Project/Frooastboard Walnut Modular.kicad_pcb' (3.00) but runner-up scores 3.00 -- too close to call"
+
+[[entry]]
+tree     = "qmk"
+id       = "gl516/xr63gl"
+source   = "gachiham/XR63GL"
+boards   = ["XR63GL.kicad_pcb"]
+name     = "XR63 GL"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "handwired/42"
+source   = "nglgzz/42"
+boards   = ["pcb/kicad/pcb.kicad_pcb"]
+name     = "42"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "handwired/swiftrax/pandamic"
+source   = "swiftrax/Pandamic"
+boards   = ["PCB/Pandamic/Pandamic.kicad_pcb"]
+name     = "Pandamic"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "handwired/swiftrax/unsplit"
+source   = "swiftrax/unsplit"
+boards   = ["Hardware/FullGroundPlane/UnSplit.kicad_pcb", "Hardware/MCUGNDPlane/UnSplit.kicad_pcb"]
+name     = "Un Split"
+verdict  = "confirmed"
+signal   = "tied"
+note     = "2 candidates tie at 0.41 and agree on every fact the build reads, so the choice between them cannot change the record; all 2 taken as one design's revisions"
+
+[[entry]]
+tree     = "qmk"
+id       = "jiran/rev1"
+source   = "Ladniy/jiran"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "jiran/rev2"
+source   = "Ladniy/jiran"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "karlb/kbic65"
+source   = "b-karl/KBIC65"
+boards   = ["kicad/pcb/kbic65.kicad_pcb"]
+name     = "kbic65"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "kb_elmo/67mk_e"
+source   = "str-dst/67mk_E"
+boards   = ["pcb/67_E.kicad_pcb"]
+name     = "67 E"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "kb_elmo/qez"
+source   = "str-dst/QEZ"
+boards   = ["pcb/qez.kicad_pcb"]
+name     = "qez"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "kuro/kuro65"
+source   = "0x544D/kuro65"
+boards   = ["kusabimaru/kuro65.kicad_pcb"]
+name     = "kuro65"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "manta60"
+source   = "KamoNanban/Manta60"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "filtered"
+note     = "the scan found 2 switch-placing .kicad_pcb here and the path filter set every one aside: MidPlate/Manta60_Mid_Left.kicad_pcb (part, 37 switches); MidPlate/Manta60_Mid_Right.kicad_pcb (part, 37 switches) -- if any of those is the design, this row is wrong"
+
+[[entry]]
+tree     = "qmk"
+id       = "meson"
+source   = "PyrooL/Meson"
+boards   = ["PCB/meson.kicad_pcb"]
+name     = "meson"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "nacly/ua62"
+source   = "na-cly/UA62"
+boards   = ["pcb/UA62.kicad_pcb"]
+name     = "UA62"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "p3d/eu_isolation"
+source   = "TuckTuckFloof/EUISO-pcb"
+boards   = ["EUISOpcb.kicad_pcb"]
+name     = "EUISOpcb"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose -- NAME UNVOUCHED: nothing outside the board path supports 'EUISOpcb'; the firmware record is 'p3d/eu_isolation' and they share no token. Ticket 44 names a design by its board's directory, which is wrong when the directory names a version, a switch type or a template"
+
+[[entry]]
+tree     = "qmk"
+id       = "pdxkbc"
+source   = "fharding1/pdxkbc-badge"
+boards   = ["badge/badge.kicad_pcb"]
+name     = "badge"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose -- NAME UNVOUCHED: nothing outside the board path supports 'badge'; the firmware record is 'pdxkbc' and they share no token. Ticket 44 names a design by its board's directory, which is wrong when the directory names a version, a switch type or a template"
+
+[[entry]]
+tree     = "qmk"
+id       = "phdesign/ph60/multi"
+source   = "ph-design/PH60"
+boards   = ["PCB_Rev3/ANSI/PH60_Rev3.kicad_pcb", "PCB_Rev3/Multi/PH60_Rev3.kicad_pcb"]
+name     = "PH60 Rev3"
+verdict  = "confirmed"
+signal   = "tied"
+note     = "2 candidates tie at 2.75 and agree on every fact the build reads, so the choice between them cannot change the record; all 2 taken as one design's revisions"
+
+[[entry]]
+tree     = "qmk"
+id       = "pinky/3"
+source   = "tamanishi/Pinky3"
+boards   = ["pcb/Pinky3.kicad_pcb"]
+name     = "Pinky3"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "pinky/4"
+source   = "tamanishi/Pinky4"
+boards   = ["pcb/Pinky4.kicad_pcb"]
+name     = "Pinky4"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "rmi_kb/herringbone/pro"
+source   = "ramonimbao/Herringbone"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "contended"
+note     = "2 rows contend for the repo's one design (TH75.kicad_pcb) -- they may be controller or revision variants of it, and a row whose own board was never committed owns nothing at all"
+
+[[entry]]
+tree     = "qmk"
+id       = "rmi_kb/herringbone/v1"
+source   = "ramonimbao/Herringbone"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "contended"
+note     = "2 rows contend for the repo's one design (TH75.kicad_pcb) -- they may be controller or revision variants of it, and a row whose own board was never committed owns nothing at all"
+
+[[entry]]
+tree     = "qmk"
+id       = "salicylic_acid3/ajisai74"
+source   = "Salicylic-acid3/PCB_Data"
+boards   = ["AJisai74/BM_L/AJ_BM_L.kicad_pcb", "AJisai74/BM_R/AJ_BM_R.kicad_pcb", "AJisai74/Mid_L/AJ_Mid_L.kicad_pcb", "AJisai74/Mid_R/AJ_Mid_R.kicad_pcb"]
+name     = "AJisai74"
+verdict  = "confirmed"
+signal   = "tied"
+note     = "2 candidates tie at 2.40 and agree on every fact the build reads, so the choice between them cannot change the record; all 4 taken as one design's revisions"
+
+[[entry]]
+tree     = "qmk"
+id       = "salicylic_acid3/getta25/rev1"
+source   = "Salicylic-acid3/PCB_Data"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "token"
+note     = "14 designs, best token match 'Getta25/v2/Kicad/Assemble/Getta25.kicad_pcb' (2.33) but runner-up scores 2.33 -- too close to call"
+
+[[entry]]
+tree     = "qmk"
+id       = "salicylic_acid3/guide68"
+source   = "Salicylic-acid3/PCB_Data"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "token"
+note     = "14 designs, best token match 'Guide68/Assemble_L/Guide68_Assemble_L.kicad_pcb' (2.40) but runner-up scores 2.40 -- too close to call"
+
+[[entry]]
+tree     = "qmk"
+id       = "salicylic_acid3/nafuda"
+source   = "Salicylic-acid3/PCB_Data"
+boards   = ["Nafuda/v1/Kicad/Assemble/Nafuda.kicad_pcb"]
+name     = "Nafuda"
+verdict  = "confirmed"
+signal   = "exact"
+note     = "14 designs' worth of boards in the repo; matched on exact"
+
+[[entry]]
+tree     = "qmk"
+id       = "salicylic_acid3/naked60/rev1"
+source   = "Salicylic-acid3/PCB_Data"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "token"
+note     = "14 designs, best token match 'Naked60BMP/Assemble/Naked60.kicad_pcb' (2.33) but runner-up scores 2.17 -- too close to call"
+
+[[entry]]
+tree     = "qmk"
+id       = "salicylic_acid3/setta21/rev1"
+source   = "Salicylic-acid3/PCB_Data"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "contended"
+note     = "3 rows all match 'Setta21/v1/Kicad/Assemble/Setta21.kicad_pcb' within 0.5 (salicylic_acid3/getta25/rev1, salicylic_acid3/naked60/rev1, salicylic_acid3/setta21/rev1) -- one board, one owner"
+
+[[entry]]
+tree     = "qmk"
+id       = "skeletonkbd/frost68"
+source   = "skeletonkbd/Frost68"
+boards   = ["PCB/Skeleton68rev2.kicad_pcb"]
+name     = "Skeleton68rev2"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "spaceman/2_milk"
+source   = "Spaceboards/SpaceboardsHardware"
+boards   = []
+name     = ""
+verdict  = "no_board"
+signal   = "scan"
+note     = "the scan read this repo and found no switch-placing .kicad_pcb at all; the design dies at the gate"
+
+[[entry]]
+tree     = "qmk"
+id       = "tanuki"
+source   = "SethSenpai/Tanuki"
+boards   = ["Pcb/Kicad files/tanuki_pcb3.kicad_pcb"]
+name     = "tanuki pcb3"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "tweetydabird/chameleon"
+source   = "TweetyDaBird/Fat-Chameleon"
+boards   = ["PCB/v1.20/Chameleon.kicad_pcb"]
+name     = "Chameleon"
+verdict  = "confirmed"
+signal   = "exact"
+note     = "5 designs' worth of boards in the repo; matched on exact. Same defect class as #23: the README says 'two optional layouts in one single PCB', 5x12 (58-60 keys) or 4x12 (46-48 keys) via break-off bottom row. Not as bad as KLOR/hillside here -- the `chameleon` design itself already carries the full 46-60 range across six layout entries, geometry evidently caught it -- but the other 4 published designs this row backs (chameleon-v1-0-v1-00, chameleon-v1-0-v1-01, chameleon-v1-10, chameleon-v1-11) each carry only a single 60-key layout, so the break-off range is missing on those. Owner-reported 2026-09-16."
+
+[[entry]]
+tree     = "qmk"
+id       = "tweetydabird/lbs4"
+source   = "TweetyDaBird/Little-Big-Scroll"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "token"
+note     = "2 designs, best token match 'Little Big Scroll 4/v1.00/PCB/Little_Big_Scroll_4.kicad_pcb' (2.33) but runner-up scores 2.33 -- too close to call"
+
+[[entry]]
+tree     = "qmk"
+id       = "tweetydabird/lbs6"
+source   = "TweetyDaBird/Little-Big-Scroll"
+boards   = []
+name     = ""
+verdict  = "drafted"
+signal   = "none"
+note     = "2 designs' worth of boards in the repo, none resembling this id: Little Big Scroll 4/v1.00/PCB/Little_Big_Scroll_4.kicad_pcb, Little Big Scroll 4/v2.00/PCB/Little_Big_Scroll_4.kicad_pcb"
+
+[[entry]]
+tree     = "qmk"
+id       = "westfoxtrot/cyclops"
+source   = "westfoxtrot/cyclops_pcb"
+boards   = ["cyclops.kicad_pcb"]
+name     = "cyclops"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "westfoxtrot/prophet"
+source   = "westfoxtrot/ccd60"
+boards   = ["ccd60.kicad_pcb"]
+name     = "ccd60"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose -- NAME UNVOUCHED: nothing outside the board path supports 'ccd60'; the firmware record is 'westfoxtrot/prophet' and they share no token. Ticket 44 names a design by its board's directory, which is wrong when the directory names a version, a switch type or a template"
+
+[[entry]]
+tree     = "qmk"
+id       = "wren"
+source   = "oliviahanley/wren-keyboard"
+boards   = ["PCBs/legacy/wren-nav/wren-nav.kicad_pcb", "PCBs/legacy/wren-numpad/wren-numpad.kicad_pcb", "PCBs/legacy/wren-plain/wren-plain.kicad_pcb", "PCBs/wren-universal-lemo-left/wren-universal.kicad_pcb", "PCBs/wren-universal-lemo-right/wren-universal.kicad_pcb", "PCBs/wren-universal/wren-universal.kicad_pcb"]
+name     = "wren"
+verdict  = "confirmed"
+signal   = "tied"
+note     = "5 candidates tie at 3.00 and agree on every fact the build reads, so the choice between them cannot change the record; all 6 taken as one design's revisions"
+
+[[entry]]
+tree     = "qmk"
+id       = "wsk/sl40"
+source   = "worldspawn00/SL40"
+boards   = ["SL40.kicad_pcb"]
+name     = "SL40"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "qmk"
+id       = "zwerg"
+source   = "floookay/zwerg"
+boards   = ["pcb/zwerg.kicad_pcb"]
+name     = "zwerg"
+verdict  = "confirmed"
+signal   = "sole"
+note     = "one board in the repo, one row -- nothing to choose"
+
+[[entry]]
+tree     = "cheapino-vial"
+id       = "cheapino"
+source   = "tompi/cheapino"
+boards   = ["pcb/cheapino.kicad_pcb"]
+name     = "Cheapino"
+verdict  = "confirmed"
+signal   = "human"
+note     = "the drafter had this right as `sole` -- one board in the repo, one row, nothing to choose -- and it is `human` only to NORMALISE THE CASE, ticket 44's rule that a board's directory drafts the name and a person settles it. The repo's README titles it \"Cheapino\" and its own GitHub description reads \"An affordable split 36 keys keyboard\". The two `plates/` files are correctly set aside: `pcb-bottom` places no switch, and `pcb-top` places 18 `pcb-top:Switch_Hole` cutouts, which is a plate the footprint lexicon does not name -- neither is a design of its own"
+
+[[entry]]
+tree     = "pando"
+id       = "jyap808/pando"
+source   = "jyap808/pando"
+boards   = ["kicad/left/pando_left.kicad_pcb", "kicad/right/pando_right.kicad_pcb"]
+name     = "Pando"
+verdict  = "confirmed"
+signal   = "human"
+note     = "2026-09-29. One board per hand, 29 `SW_Hotswap_Kailh_MX` each -- 58, the record's LAYOUT. The left carries the STM32G0B1 (LQFP-32), the right the PCA9555 expander (TSSOP-24). `kicad/plate/pando_plate.kicad_pcb` is the plate and set aside."
+
+[[entry]]
+tree     = "qmk"
+id       = "jyap808/pando58"
+source   = "jyap808/pando58"
+boards   = ["ergogen/output/pcbs/pando58_left.kicad_pcb", "ergogen/output/pcbs/pando58_right.kicad_pcb"]
+name     = "Pando58"
+verdict  = "confirmed"
+signal   = "human"
+note     = "2026-09-29. GENERATED, not committed: scripts/generate_ergogen.py runs the repo's ergogen/config.yaml (engine 4.1.0) and these are two of its four outputs. 29 `ceoloide:switch_mx` per hand, 58, the record's count; each hand carries an RP2040-Zero and an RJ45. `pando58_bottom` and `pando58_plate` place no switch and are set aside. The drafter's own answer was `sole` with these two -- `human` only to normalise the name."
+
+[[entry]]
+tree     = "hem"
+id       = "hem"
+source   = "marcocampione/Hem-keyboard"
+boards   = ["pcb/kicad/hem.kicad_pcb"]
+name     = "Hem"
+verdict  = "confirmed"
+signal   = "human"
+note     = "2026-11-09. The repo's one board: 67 switch footprints (56 `SW_Cherry_MX_1.00u_PCB` plus the wider keys), 67 diodes, an RP2040 -- the record's 67 on `LAYOUT_65_ansi`."

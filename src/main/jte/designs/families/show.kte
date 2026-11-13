@@ -1,0 +1,62 @@
+@import net.keyboardbuilders.keyboardbuilders.web.FamilyPage
+@import net.keyboardbuilders.keyboardbuilders.web.Head
+@import net.keyboardbuilders.keyboardbuilders.web.SiteUrl
+@param family: FamilyPage
+@param head: Head
+@param site: SiteUrl
+@param itemListLd: String
+
+<%-- NO BACKTICKS IN THIS FILE: the whole template is wrapped in a Kotlin raw string and
+     one backtick closes the content block, with an error naming a line far from the real
+     one. --%>
+
+@template.layout(head = head, site = site, content = @`
+    <%-- The designs as a list, for search engines. Built by JsonLd, never templated. --%>
+    <script type="application/ld+json">$unsafe{itemListLd}</script>
+    <p class="crumb"><a href="/designs">&larr; All designs</a></p>
+
+    <h1>${family.name}</h1>
+    <%-- Built in Family.kt from facts every variant records, and nothing else. --%>
+    <p class="family-lead">${family.lead}</p>
+    <%-- THE CITED SOURCE, SAID AS WHAT IT IS (seed/families.toml). Usually the author's
+         account, which never calls the boards one keyboard, so the words say the grouping
+         is this site's; for Sweep, the README's own list of its types. See sourceIntro in
+         Family.kt. --%>
+    <p class="family-source">${family.sourceIntro}
+        <a class="external" href="${family.source}" rel="nofollow noopener" target="_blank" title="Opens in a new tab">${family.sourceLabel}<svg class="ext" viewBox="0 0 24 24" width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6"/><path d="M20 4 10 14"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>.
+    </p>
+
+    <%-- THE COMPARE PAGE'S TABLE, one column per variant instead of two: the same
+         scroller, the same pinned label column, and a gap rendered the way every other
+         page renders one -- never as "no". --%>
+    <h2>The designs, side by side</h2>
+    <div class="compare-scroll" tabindex="0" aria-label="${family.name} designs, fact by fact">
+        <table class="compare">
+            <thead>
+                <tr><td></td>@for(variant in family.variants)<th scope="col"><a href="${variant.href}">${variant.name}</a></th>@endfor</tr>
+            </thead>
+            <tbody>
+                @for(row in family.rows)
+                    <tr>
+                        <th scope="row">${row.label}</th>
+                        @for(cell in row.cells)
+                            @if(cell.recorded)
+                                <td title="${cell.hint}">${cell.value}</td>
+                            @else
+                                <td class="unrecorded">&mdash; ${cell.value} &mdash;</td>
+                            @endif
+                        @endfor
+                    </tr>
+                @endfor
+            </tbody>
+        </table>
+    </div>
+
+    <%-- The same card every other list of designs uses (designs/card.kte). --%>
+    <h2 class="strip-head related-head">The boards</h2>
+    <ul class="strip">
+        @for(card in family.cards)
+            <li>@template.designs.card(card = card, cls = "strip-card")</li>
+        @endfor
+    </ul>
+`)
