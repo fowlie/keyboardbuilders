@@ -1773,3 +1773,6 @@ table.build-grid ul.offers li.excluded { color: var(--muted); }
     table.build-grid tbody th { min-width: 6rem; max-width: 7rem; }
     table.build-grid td:has(details.pick[open]) { min-width: 14rem; }
 }
+
+/* The source link's GitHub mark (Octicons mark-github, MIT), sitting on the text's line. */
+.site-foot .source-link .gh { margin-right: 0.35em; vertical-align: -0.12em; }

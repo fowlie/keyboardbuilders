@@ -40,6 +40,20 @@ class AboutTest {
         assertTrue("""href="/about"""" in page("/designs").contentAsString)
     }
 
+    /** AGPL §13: a site running AGPL code offers its users the source. Every page, so the
+     *  offer is wherever a reader happens to be. */
+    @Test
+    fun `the footer links to the source code on GitHub`() {
+        val link = Regex("""<a class="source-link external" href="https://github\.com/fowlie/keyboardbuilders"[^>]*>(.*?)</a>""",
+            RegexOption.DOT_MATCHES_ALL)
+        for (path in listOf("/", "/designs", "/about")) {
+            val a = link.find(page(path).contentAsString)?.groupValues?.get(1)
+            assertTrue(a != null, "no source link in the footer of $path")
+            assertTrue("Source code" in a, "the link says what it is: $a")
+            assertTrue(Regex("""<svg class="gh"[^>]*aria-hidden="true"""").containsMatchIn(a), "GitHub mark, hidden from screen readers")
+        }
+    }
+
     @Test
     fun `the about page is in the sitemap`() {
         assertTrue("<loc>https://keyboardbuilders.net/about</loc>" in page("/sitemap.xml").contentAsString)
