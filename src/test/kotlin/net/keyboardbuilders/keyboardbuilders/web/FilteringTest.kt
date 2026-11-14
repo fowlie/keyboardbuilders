@@ -356,7 +356,9 @@ class FilteringTest {
 
     @Test
     fun `a filtered page is in ranking order too, not alphabetical`() {
+        // Only the first page is rendered; choc outgrew one page on 2026-11-14 (57 designs).
         val expected = queries.slugsMatching(Facets.parse(mapOf("pitch" to listOf("choc"))))!!
+            .take(Page.DEFAULT_SIZE)
 
         assertEquals(expected, slugs(page("?pitch=choc").contentAsString))
     }
