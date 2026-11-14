@@ -650,6 +650,46 @@
   ]
  },
  {
+  "slug": "clog-v1",
+  "hardest": "through_hole",
+  "driven_by": [
+   "connector"
+  ],
+  "footprints": [
+   "mj-4pp-9"
+  ]
+ },
+ {
+  "slug": "clog-v2",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "diode"
+  ],
+  "footprints": [
+   "smd-diode"
+  ]
+ },
+ {
+  "slug": "clog-v3",
+  "hardest": "through_hole",
+  "driven_by": [
+   "connector"
+  ],
+  "footprints": [
+   "trrs"
+  ]
+ },
+ {
+  "slug": "clog-v4",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "diode"
+  ],
+  "footprints": [
+   "smd-diode"
+  ]
+ },
+ {
   "slug": "contender",
   "hardest": "smd_fine",
   "driven_by": [
@@ -2622,6 +2662,46 @@
   ],
   "footprints": [
    "d_sod-123"
+  ]
+ },
+ {
+  "slug": "osprette-mx",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "other"
+  ],
+  "footprints": [
+   "d3_smd_v2"
+  ]
+ },
+ {
+  "slug": "osprette-v1",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "diode"
+  ],
+  "footprints": [
+   "d_sod-123"
+  ]
+ },
+ {
+  "slug": "osprette-v2",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "diode"
+  ],
+  "footprints": [
+   "smd-diode"
+  ]
+ },
+ {
+  "slug": "osprette-v3",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "diode"
+  ],
+  "footprints": [
+   "smd-diode"
   ]
  },
  {

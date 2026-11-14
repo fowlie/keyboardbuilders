@@ -190,6 +190,22 @@
   "qmk",
   "zmk"
  ],
+ "clog-v1": [
+  "zmk",
+  "qmk"
+ ],
+ "clog-v2": [
+  "zmk",
+  "qmk"
+ ],
+ "clog-v3": [
+  "zmk",
+  "qmk"
+ ],
+ "clog-v4": [
+  "zmk",
+  "qmk"
+ ],
  "contender": [
   "qmk"
  ],
@@ -702,6 +718,18 @@
   "qmk"
  ],
  "osprette": [
+  "zmk"
+ ],
+ "osprette-mx": [
+  "zmk"
+ ],
+ "osprette-v1": [
+  "zmk"
+ ],
+ "osprette-v2": [
+  "zmk"
+ ],
+ "osprette-v3": [
   "zmk"
  ],
  "pancake-v1": [

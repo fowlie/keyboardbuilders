@@ -4199,6 +4199,77 @@
       {
         "url": "https://raw.githubusercontent.com/smores56/osprette/main/osprangle/images/osprangle-1.jpg",
         "alt": "The Osprangle, the newest Osprette"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/smores56/osprette/main/mx/images/osprette-mx-1.jpg",
+        "alt": "",
+        "path": "mx/images/osprette-mx-1.jpg"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/smores56/osprette/main/v1/images/osprette-1.jpg",
+        "alt": "",
+        "path": "v1/images/osprette-1.jpg"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/smores56/osprette/main/v2/images/osprette-v2-1.jpg",
+        "alt": "",
+        "path": "v2/images/osprette-v2-1.jpg"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/smores56/osprette/main/v3/images/osprette-v3-1.jpg",
+        "alt": "",
+        "path": "v3/images/osprette-v3-1.jpg"
+      }
+    ]
+  },
+  "osprette-mx": {
+    "repo": "https://github.com/smores56/osprette",
+    "images": [
+      {
+        "url": "https://raw.githubusercontent.com/smores56/osprette/main/osprangle/images/osprangle-1.jpg",
+        "alt": "The Osprangle, the newest Osprette"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/smores56/osprette/main/mx/images/osprette-mx-1.jpg",
+        "alt": "",
+        "path": "mx/images/osprette-mx-1.jpg"
+      }
+    ]
+  },
+  "osprette-v1": {
+    "repo": "https://github.com/smores56/osprette",
+    "images": [
+      {
+        "url": "https://raw.githubusercontent.com/smores56/osprette/main/osprangle/images/osprangle-1.jpg",
+        "alt": "The Osprangle, the newest Osprette"
+      }
+    ]
+  },
+  "osprette-v2": {
+    "repo": "https://github.com/smores56/osprette",
+    "images": [
+      {
+        "url": "https://raw.githubusercontent.com/smores56/osprette/main/osprangle/images/osprangle-1.jpg",
+        "alt": "The Osprangle, the newest Osprette"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/smores56/osprette/main/v2/images/osprette-v2-1.jpg",
+        "alt": "",
+        "path": "v2/images/osprette-v2-1.jpg"
+      }
+    ]
+  },
+  "osprette-v3": {
+    "repo": "https://github.com/smores56/osprette",
+    "images": [
+      {
+        "url": "https://raw.githubusercontent.com/smores56/osprette/main/osprangle/images/osprangle-1.jpg",
+        "alt": "The Osprangle, the newest Osprette"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/smores56/osprette/main/v3/images/osprette-v3-1.jpg",
+        "alt": "",
+        "path": "v3/images/osprette-v3-1.jpg"
       }
     ]
   },

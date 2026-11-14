@@ -8348,6 +8348,111 @@
   },
   "unnamed": {}
  },
+ "smores56/clog\tv1/pcb/clog.kicad_pcb": {
+  "accepts": {
+   "keyswitches:Kailh_socket_PG1350_optional_reversible\tchoc+solder": 17
+  },
+  "drills": {
+   "ChocV1 1.27": 51
+  },
+  "kinds": {
+   "either": 17
+  },
+  "names": {
+   "keyswitches:Kailh_socket_PG1350_optional_reversible\teither\tsmd+thru_hole\tchoc": 17
+  },
+  "positions": {
+   "choc+solder": 17
+  },
+  "sockets": {
+   "choc": 17
+  },
+  "unnamed": {}
+ },
+ "smores56/clog\tv2/pcb/clog-v2.kicad_pcb": {
+  "accepts": {
+   "footprints:choc-switch-solder-only\tsolder": 17
+  },
+  "drills": {
+   "ChocV1 1.27": 51
+  },
+  "kinds": {
+   "solder": 17
+  },
+  "names": {
+   "footprints:choc-switch-solder-only\tsolder\tthru_hole\t-": 17
+  },
+  "positions": {
+   "solder": 17
+  },
+  "sockets": {
+   "-": 17
+  },
+  "unnamed": {}
+ },
+ "smores56/clog\tv3/pcb/clog-v3.kicad_pcb": {
+  "accepts": {
+   "footprints:choc-switch-socket-only\tchoc": 17
+  },
+  "drills": {},
+  "kinds": {
+   "socket": 17
+  },
+  "names": {
+   "footprints:choc-switch-socket-only\tsocket\tsmd\tchoc": 17
+  },
+  "positions": {
+   "choc": 17
+  },
+  "sockets": {
+   "choc": 17
+  },
+  "unnamed": {
+   "footprints:power-switch\t-": 2
+  }
+ },
+ "smores56/clog\tv4/pcb/clog-v4.kicad_pcb": {
+  "accepts": {
+   "footprints:choc-switch-socket-only\tchoc": 17
+  },
+  "drills": {},
+  "kinds": {
+   "socket": 17
+  },
+  "names": {
+   "footprints:choc-switch-socket-only\tsocket\tsmd\tchoc": 17
+  },
+  "positions": {
+   "choc": 17
+  },
+  "sockets": {
+   "choc": 17
+  },
+  "unnamed": {
+   "footprints:power-switch\t-": 2
+  }
+ },
+ "smores56/osprette\tmx/pcb/osprette-mx.kicad_pcb": {
+  "accepts": {
+   "keyswitches:Kailh_socket_MX_optional\tmillmax+mx+solder": 34
+  },
+  "drills": {
+   "MX 1.5": 68
+  },
+  "kinds": {
+   "either": 34
+  },
+  "names": {
+   "keyswitches:Kailh_socket_MX_optional\teither\tsmd+thru_hole\tmx": 34
+  },
+  "positions": {
+   "millmax+mx+solder": 34
+  },
+  "sockets": {
+   "mx": 34
+  },
+  "unnamed": {}
+ },
  "smores56/osprette\tpcb/osprette.kicad_pcb": {
   "accepts": {
    "keyswitches:Kailh_socket_PG1350_optional\tchoc+solder": 34
@@ -8368,6 +8473,73 @@
    "choc": 34
   },
   "unnamed": {}
+ },
+ "smores56/osprette\tv1/pcb/osprette.kicad_pcb": {
+  "accepts": {
+   "keyswitches:Kailh_socket_PG1350_optional\tchoc+solder": 34
+  },
+  "drills": {
+   "ChocV1 1.27": 68
+  },
+  "kinds": {
+   "either": 34
+  },
+  "names": {
+   "keyswitches:Kailh_socket_PG1350_optional\teither\tsmd+thru_hole\tchoc": 34
+  },
+  "positions": {
+   "choc+solder": 34
+  },
+  "sockets": {
+   "choc": 34
+  },
+  "unnamed": {}
+ },
+ "smores56/osprette\tv2/pcb/osprette-v2.kicad_pcb": {
+  "accepts": {
+   "footprints:choc-switch\tchoc+solder": 34
+  },
+  "drills": {
+   "ChocV1 1.27": 68
+  },
+  "kinds": {
+   "either": 34
+  },
+  "names": {
+   "footprints:choc-switch\teither\tsmd+thru_hole\tchoc": 34
+  },
+  "positions": {
+   "choc+solder": 34
+  },
+  "sockets": {
+   "choc": 34
+  },
+  "unnamed": {
+   "footprints:power-switch\t-": 1
+  }
+ },
+ "smores56/osprette\tv3/pcb/osprette_v3.kicad_pcb": {
+  "accepts": {
+   "footprints:choc-switch-one-sided\tsolder": 34
+  },
+  "drills": {
+   "ChocV1 1.27": 68
+  },
+  "kinds": {
+   "solder": 34
+  },
+  "names": {
+   "footprints:choc-switch-one-sided\tsolder\tthru_hole\t-": 34
+  },
+  "positions": {
+   "solder": 34
+  },
+  "sockets": {
+   "-": 34
+  },
+  "unnamed": {
+   "footprints:power-switch\t-": 1
+  }
  },
  "sol/chord-zero\tzero.kicad_pcb": {
   "accepts": {

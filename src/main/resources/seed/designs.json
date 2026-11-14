@@ -4907,8 +4907,7 @@
    {
     "family": "qmk",
     "path": "clog",
-    "shield": null,
-    "targetMcu": "atmega32u4"
+    "shield": null
    },
    {
     "family": "zmk",
@@ -4977,6 +4976,295 @@
    "heightMm": 78.0,
    "copperLayers": 2
   }
+ },
+ {
+  "name": "clog v1",
+  "slug": "clog-v1",
+  "sources": [
+   "https://github.com/smores56/clog"
+  ],
+  "firmware": [
+   {
+    "family": "zmk",
+    "path": null,
+    "shield": "clog"
+   },
+   {
+    "family": "qmk",
+    "path": "clog",
+    "shield": null
+   }
+  ],
+  "layouts": [
+   {
+    "keys": 34
+   }
+  ],
+  "switches": [
+   {
+    "kind": "choc_v1"
+   }
+  ],
+  "buildMethod": {
+   "kind": "pcb"
+  },
+  "hardestComponent": {
+   "parts": [
+    "connector"
+   ],
+   "tier": "through_hole"
+  },
+  "controller": {
+   "kind": "socket",
+   "footprints": [
+    "pro_micro"
+   ]
+  },
+  "body": {
+   "kind": "split",
+   "halves": 2,
+   "reversible": null,
+   "link": [
+    "trrs"
+   ]
+  },
+  "licensing": {
+   "hardware": [],
+   "firmware": [],
+   "documentation": []
+  },
+  "pitch": {
+   "kind": "choc_18x17",
+   "mm": 17.0
+  },
+  "hostPort": null,
+  "wiring": {
+   "kind": "direct_pin",
+   "pins": 17
+  },
+  "switchMounts": [
+   "choc_socket",
+   "solder"
+  ],
+  "splay": false,
+  "stagger": "column",
+  "powerSwitch": true
+ },
+ {
+  "name": "clog v2",
+  "slug": "clog-v2",
+  "sources": [
+   "https://github.com/smores56/clog"
+  ],
+  "firmware": [
+   {
+    "family": "zmk",
+    "path": null,
+    "shield": "clog"
+   },
+   {
+    "family": "qmk",
+    "path": "clog",
+    "shield": null
+   }
+  ],
+  "layouts": [
+   {
+    "keys": 34
+   }
+  ],
+  "switches": [
+   {
+    "kind": "choc_v1"
+   }
+  ],
+  "buildMethod": {
+   "kind": "pcb"
+  },
+  "hardestComponent": {
+   "parts": [
+    "diode"
+   ],
+   "tier": "smd_hand"
+  },
+  "controller": {
+   "kind": "socket",
+   "footprints": [
+    "seeed_xiao"
+   ]
+  },
+  "body": {
+   "kind": "split",
+   "halves": 2,
+   "reversible": null,
+   "link": []
+  },
+  "licensing": {
+   "hardware": [],
+   "firmware": [],
+   "documentation": []
+  },
+  "pitch": {
+   "kind": "choc_18x17",
+   "mm": 17.0
+  },
+  "hostPort": null,
+  "wiring": {
+   "kind": "direct_pin",
+   "pins": 17
+  },
+  "switchMounts": [
+   "solder"
+  ],
+  "splay": true,
+  "stagger": "column",
+  "exposedComponents": false,
+  "powerSwitch": true
+ },
+ {
+  "name": "clog v3",
+  "slug": "clog-v3",
+  "sources": [
+   "https://github.com/smores56/clog"
+  ],
+  "firmware": [
+   {
+    "family": "zmk",
+    "path": null,
+    "shield": "clog"
+   },
+   {
+    "family": "qmk",
+    "path": "clog",
+    "shield": null
+   }
+  ],
+  "layouts": [
+   {
+    "keys": 34
+   }
+  ],
+  "switches": [
+   {
+    "kind": "choc_v1"
+   }
+  ],
+  "buildMethod": {
+   "kind": "pcb"
+  },
+  "hardestComponent": {
+   "parts": [
+    "connector"
+   ],
+   "tier": "through_hole"
+  },
+  "controller": {
+   "kind": "socket",
+   "footprints": [
+    "pro_micro"
+   ]
+  },
+  "body": {
+   "kind": "split",
+   "halves": 2,
+   "reversible": null,
+   "link": [
+    "trrs"
+   ]
+  },
+  "licensing": {
+   "hardware": [],
+   "firmware": [],
+   "documentation": []
+  },
+  "pitch": {
+   "kind": "choc_18x17",
+   "mm": 17.0
+  },
+  "hostPort": null,
+  "wiring": {
+   "kind": "direct_pin",
+   "pins": 17
+  },
+  "switchMounts": [
+   "choc_socket"
+  ],
+  "splay": true,
+  "stagger": "column",
+  "powerSwitch": false
+ },
+ {
+  "name": "clog v4",
+  "slug": "clog-v4",
+  "sources": [
+   "https://github.com/smores56/clog"
+  ],
+  "firmware": [
+   {
+    "family": "zmk",
+    "path": null,
+    "shield": "clog"
+   },
+   {
+    "family": "qmk",
+    "path": "clog",
+    "shield": null
+   }
+  ],
+  "layouts": [
+   {
+    "keys": 34
+   }
+  ],
+  "switches": [
+   {
+    "kind": "choc_v1"
+   }
+  ],
+  "buildMethod": {
+   "kind": "pcb"
+  },
+  "hardestComponent": {
+   "parts": [
+    "diode"
+   ],
+   "tier": "smd_hand"
+  },
+  "controller": {
+   "kind": "socket",
+   "footprints": [
+    "seeed_xiao"
+   ]
+  },
+  "body": {
+   "kind": "split",
+   "halves": 2,
+   "reversible": null,
+   "link": [
+    "trrs"
+   ]
+  },
+  "licensing": {
+   "hardware": [],
+   "firmware": [],
+   "documentation": []
+  },
+  "pitch": {
+   "kind": "choc_18x17",
+   "mm": 17.0
+  },
+  "hostPort": null,
+  "wiring": {
+   "kind": "direct_pin",
+   "pins": 17
+  },
+  "switchMounts": [
+   "choc_socket"
+  ],
+  "splay": true,
+  "stagger": "column",
+  "exposedComponents": false,
+  "powerSwitch": false
  },
  {
   "name": "contender",
@@ -18902,6 +19190,294 @@
    "heightMm": 103.67,
    "copperLayers": 2
   }
+ },
+ {
+  "name": "osprette mx",
+  "slug": "osprette-mx",
+  "sources": [
+   "https://github.com/smores56/osprette"
+  ],
+  "firmware": [
+   {
+    "family": "zmk",
+    "path": null,
+    "shield": "osprette"
+   }
+  ],
+  "layouts": [
+   {
+    "keys": 34
+   }
+  ],
+  "switches": [
+   {
+    "kind": "mx"
+   }
+  ],
+  "buildMethod": {
+   "kind": "pcb"
+  },
+  "hardestComponent": {
+   "parts": [
+    "other"
+   ],
+   "tier": "smd_hand"
+  },
+  "controller": {
+   "kind": "socket",
+   "footprints": [
+    "pro_micro"
+   ]
+  },
+  "body": {
+   "kind": "unibody"
+  },
+  "licensing": {
+   "hardware": [
+    "MIT"
+   ],
+   "firmware": [
+    "MIT"
+   ],
+   "documentation": [
+    "MIT"
+   ]
+  },
+  "pitch": {
+   "kind": "mx_19.05",
+   "mm": 19.0
+  },
+  "hostPort": null,
+  "wiring": {
+   "kind": "matrix",
+   "rows": 4,
+   "cols": 10,
+   "diodes": "row_to_col"
+  },
+  "switchMounts": [
+   "millmax",
+   "mx_socket",
+   "solder"
+  ],
+  "splay": false,
+  "stagger": "column",
+  "exposedComponents": false,
+  "powerSwitch": true
+ },
+ {
+  "name": "osprette v1",
+  "slug": "osprette-v1",
+  "sources": [
+   "https://github.com/smores56/osprette"
+  ],
+  "firmware": [
+   {
+    "family": "zmk",
+    "path": null,
+    "shield": "osprette"
+   }
+  ],
+  "layouts": [
+   {
+    "keys": 34
+   }
+  ],
+  "switches": [
+   {
+    "kind": "choc_v1"
+   }
+  ],
+  "buildMethod": {
+   "kind": "pcb"
+  },
+  "hardestComponent": {
+   "parts": [
+    "diode"
+   ],
+   "tier": "smd_hand"
+  },
+  "controller": {
+   "kind": "socket",
+   "footprints": [
+    "pro_micro"
+   ]
+  },
+  "body": {
+   "kind": "unibody"
+  },
+  "licensing": {
+   "hardware": [
+    "MIT"
+   ],
+   "firmware": [
+    "MIT"
+   ],
+   "documentation": [
+    "MIT"
+   ]
+  },
+  "pitch": {
+   "kind": "choc_18x17",
+   "mm": 17.0
+  },
+  "hostPort": null,
+  "wiring": {
+   "kind": "matrix",
+   "rows": 4,
+   "cols": 10,
+   "diodes": "row_to_col"
+  },
+  "switchMounts": [
+   "choc_socket",
+   "solder"
+  ],
+  "splay": false,
+  "stagger": "column",
+  "exposedComponents": false,
+  "powerSwitch": true
+ },
+ {
+  "name": "osprette v2",
+  "slug": "osprette-v2",
+  "sources": [
+   "https://github.com/smores56/osprette"
+  ],
+  "firmware": [
+   {
+    "family": "zmk",
+    "path": null,
+    "shield": "osprette"
+   }
+  ],
+  "layouts": [
+   {
+    "keys": 34
+   }
+  ],
+  "switches": [
+   {
+    "kind": "choc_v1"
+   }
+  ],
+  "buildMethod": {
+   "kind": "pcb"
+  },
+  "hardestComponent": {
+   "parts": [
+    "diode"
+   ],
+   "tier": "smd_hand"
+  },
+  "controller": {
+   "kind": "socket",
+   "footprints": [
+    "pro_micro"
+   ]
+  },
+  "body": {
+   "kind": "unibody"
+  },
+  "licensing": {
+   "hardware": [
+    "MIT"
+   ],
+   "firmware": [
+    "MIT"
+   ],
+   "documentation": [
+    "MIT"
+   ]
+  },
+  "pitch": {
+   "kind": "choc_18x17",
+   "mm": 17.0
+  },
+  "hostPort": null,
+  "wiring": {
+   "kind": "matrix",
+   "rows": 4,
+   "cols": 10,
+   "diodes": "row_to_col"
+  },
+  "switchMounts": [
+   "choc_socket",
+   "solder"
+  ],
+  "splay": true,
+  "stagger": "column",
+  "exposedComponents": false,
+  "powerSwitch": false
+ },
+ {
+  "name": "osprette v3",
+  "slug": "osprette-v3",
+  "sources": [
+   "https://github.com/smores56/osprette"
+  ],
+  "firmware": [
+   {
+    "family": "zmk",
+    "path": null,
+    "shield": "osprette"
+   }
+  ],
+  "layouts": [
+   {
+    "keys": 34
+   }
+  ],
+  "switches": [
+   {
+    "kind": "choc_v1"
+   }
+  ],
+  "buildMethod": {
+   "kind": "pcb"
+  },
+  "hardestComponent": {
+   "parts": [
+    "diode"
+   ],
+   "tier": "smd_hand"
+  },
+  "controller": {
+   "kind": "socket",
+   "footprints": [
+    "pro_micro"
+   ]
+  },
+  "body": {
+   "kind": "unibody"
+  },
+  "licensing": {
+   "hardware": [
+    "MIT"
+   ],
+   "firmware": [
+    "MIT"
+   ],
+   "documentation": [
+    "MIT"
+   ]
+  },
+  "pitch": {
+   "kind": "choc_18x17",
+   "mm": 17.0
+  },
+  "hostPort": null,
+  "wiring": {
+   "kind": "matrix",
+   "rows": 4,
+   "cols": 10,
+   "diodes": "row_to_col"
+  },
+  "switchMounts": [
+   "solder"
+  ],
+  "splay": true,
+  "stagger": "column",
+  "exposedComponents": false,
+  "powerSwitch": false
  },
  {
   "name": "Pancake v1",

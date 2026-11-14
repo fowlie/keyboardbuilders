@@ -91,6 +91,12 @@
  "clog": [
   "hotswap"
  ],
+ "clog-v1": [
+  "hotswap"
+ ],
+ "clog-v2": [],
+ "clog-v3": [],
+ "clog-v4": [],
  "contender": [
   "hotswap"
  ],
@@ -383,6 +389,14 @@
  "osprette": [
   "hotswap"
  ],
+ "osprette-mx": [
+  "hotswap"
+ ],
+ "osprette-v1": [
+  "hotswap"
+ ],
+ "osprette-v2": [],
+ "osprette-v3": [],
  "pancake-v1": [],
  "pancake-v2": [],
  "pandamic": [],

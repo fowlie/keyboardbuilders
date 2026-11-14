@@ -454,6 +454,34 @@
    "keys": 17
   }
  },
+ "clog-v1": {
+  "v1/pcb/clog.kicad_pcb": {
+   "diodes": 0,
+   "exposed": 0,
+   "keys": 17
+  }
+ },
+ "clog-v2": {
+  "v2/pcb/clog-v2.kicad_pcb": {
+   "diodes": 18,
+   "exposed": 0,
+   "keys": 17
+  }
+ },
+ "clog-v3": {
+  "v3/pcb/clog-v3.kicad_pcb": {
+   "diodes": 0,
+   "exposed": 0,
+   "keys": 17
+  }
+ },
+ "clog-v4": {
+  "v4/pcb/clog-v4.kicad_pcb": {
+   "diodes": 17,
+   "exposed": 0,
+   "keys": 17
+  }
+ },
  "contender": {
   "contender.kicad_pcb": {
    "diodes": 26,
@@ -1859,6 +1887,34 @@
  },
  "osprette": {
   "pcb/osprette.kicad_pcb": {
+   "diodes": 34,
+   "exposed": 0,
+   "keys": 34
+  }
+ },
+ "osprette-mx": {
+  "mx/pcb/osprette-mx.kicad_pcb": {
+   "diodes": 34,
+   "exposed": 0,
+   "keys": 34
+  }
+ },
+ "osprette-v1": {
+  "v1/pcb/osprette.kicad_pcb": {
+   "diodes": 34,
+   "exposed": 0,
+   "keys": 34
+  }
+ },
+ "osprette-v2": {
+  "v2/pcb/osprette-v2.kicad_pcb": {
+   "diodes": 34,
+   "exposed": 0,
+   "keys": 34
+  }
+ },
+ "osprette-v3": {
+  "v3/pcb/osprette_v3.kicad_pcb": {
    "diodes": 34,
    "exposed": 0,
    "keys": 34

@@ -2027,8 +2027,56 @@
   "mm": 17.0,
   "pitch": "choc_18x17"
  },
+ "smores56/clog\tv1/pcb/clog.kicad_pcb": {
+  "confidence": 0.88,
+  "keys": 17,
+  "mm": 17.0,
+  "pitch": "choc_18x17"
+ },
+ "smores56/clog\tv2/pcb/clog-v2.kicad_pcb": {
+  "confidence": 0.82,
+  "keys": 17,
+  "mm": 17.0,
+  "pitch": "choc_18x17"
+ },
+ "smores56/clog\tv3/pcb/clog-v3.kicad_pcb": {
+  "confidence": 0.82,
+  "keys": 17,
+  "mm": 17.0,
+  "pitch": "choc_18x17"
+ },
+ "smores56/clog\tv4/pcb/clog-v4.kicad_pcb": {
+  "confidence": 0.82,
+  "keys": 17,
+  "mm": 17.0,
+  "pitch": "choc_18x17"
+ },
+ "smores56/osprette\tmx/pcb/osprette-mx.kicad_pcb": {
+  "confidence": 0.82,
+  "keys": 34,
+  "mm": 19.0,
+  "pitch": "mx_19.05"
+ },
  "smores56/osprette\tpcb/osprette.kicad_pcb": {
   "confidence": 0.71,
+  "keys": 34,
+  "mm": 17.0,
+  "pitch": "choc_18x17"
+ },
+ "smores56/osprette\tv1/pcb/osprette.kicad_pcb": {
+  "confidence": 0.71,
+  "keys": 34,
+  "mm": 17.0,
+  "pitch": "choc_18x17"
+ },
+ "smores56/osprette\tv2/pcb/osprette-v2.kicad_pcb": {
+  "confidence": 0.82,
+  "keys": 34,
+  "mm": 17.0,
+  "pitch": "choc_18x17"
+ },
+ "smores56/osprette\tv3/pcb/osprette_v3.kicad_pcb": {
+  "confidence": 0.82,
   "keys": 34,
   "mm": 17.0,
   "pitch": "choc_18x17"

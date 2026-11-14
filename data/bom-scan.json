@@ -5531,6 +5531,42 @@
    }
   ]
  },
+ "smores56/clog\tsteel-toe/pcb/steel-toe.kicad_pcb": {
+  "bom": "steel-toe/pcb/production/bom.csv",
+  "column": "value",
+  "parts": [
+   {
+    "designator": "+1, -1",
+    "footprint": "single-pin",
+    "part": "MountingHole_Pad"
+   },
+   {
+    "designator": "J0",
+    "footprint": "trrs",
+    "part": "AudioJack4dpb"
+   },
+   {
+    "designator": "SW1, SW10, SW11, SW12, SW13, SW14, SW15, SW16, SW17, SW2, SW3, SW4, SW5, SW6, SW7, SW8, SW9",
+    "footprint": "choc-switch-socket-only",
+    "part": "SW_Push"
+   },
+   {
+    "designator": "SW18, SW21",
+    "footprint": "smd_rst_sw",
+    "part": "SW_Push"
+   },
+   {
+    "designator": "SW19, SW20",
+    "footprint": "power-switch",
+    "part": "SW_SPDT"
+   },
+   {
+    "designator": "U1",
+    "footprint": "ProMicro_facedown_new_dual",
+    "part": "ProMicro_r"
+   }
+  ]
+ },
  "str-dst/67mk_E\tpcb/67_E.kicad_pcb": {
   "bom": "pcb/fab/67_E_bom_jlc.csv",
   "column": "comment",

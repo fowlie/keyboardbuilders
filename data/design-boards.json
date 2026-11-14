@@ -366,6 +366,30 @@
   ],
   "repo": "smores56/clog"
  },
+ "clog-v1": {
+  "paths": [
+   "v1/pcb/clog.kicad_pcb"
+  ],
+  "repo": "smores56/clog"
+ },
+ "clog-v2": {
+  "paths": [
+   "v2/pcb/clog-v2.kicad_pcb"
+  ],
+  "repo": "smores56/clog"
+ },
+ "clog-v3": {
+  "paths": [
+   "v3/pcb/clog-v3.kicad_pcb"
+  ],
+  "repo": "smores56/clog"
+ },
+ "clog-v4": {
+  "paths": [
+   "v4/pcb/clog-v4.kicad_pcb"
+  ],
+  "repo": "smores56/clog"
+ },
  "contender": {
   "paths": [
    "contender.kicad_pcb"
@@ -1427,6 +1451,30 @@
  "osprette": {
   "paths": [
    "pcb/osprette.kicad_pcb"
+  ],
+  "repo": "smores56/osprette"
+ },
+ "osprette-mx": {
+  "paths": [
+   "mx/pcb/osprette-mx.kicad_pcb"
+  ],
+  "repo": "smores56/osprette"
+ },
+ "osprette-v1": {
+  "paths": [
+   "v1/pcb/osprette.kicad_pcb"
+  ],
+  "repo": "smores56/osprette"
+ },
+ "osprette-v2": {
+  "paths": [
+   "v2/pcb/osprette-v2.kicad_pcb"
+  ],
+  "repo": "smores56/osprette"
+ },
+ "osprette-v3": {
+  "paths": [
+   "v3/pcb/osprette_v3.kicad_pcb"
   ],
   "repo": "smores56/osprette"
  },
