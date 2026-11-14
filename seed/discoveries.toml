@@ -1,0 +1,157 @@
+# seed/discoveries.toml -- repos found on GitHub that the owner ruled on.
+# Written by scripts/intake_answer.py from his reply to an `intake/discovery`
+# issue (backlog #105); read by scripts/intake_ask.py so nothing is asked twice.
+#
+#   design       an open keyboard design: queued for importing
+#   not_design   not one (a keymap, a tool, a case only, ...): never asked again
+#
+# The build reads nothing here yet. A `design` row publishes nothing by itself;
+# it is the queue #105's step 2 (reading firmware inside the repo) works from.
+#
+# `issue = 0` marks an answer given in a chat session, not on a GitHub issue
+# (2026-11-14, while the bot account was hidden).
+
+[[entry]]
+repo = "Meisterschulen-am-Ostbahnhof-Munchen/JC8012P4A1C_I_W_Y_CAN"
+verdict = "not_design"
+issue = 0
+
+[[entry]]
+repo = "bsakel/dsky-ha-terminal"
+verdict = "not_design"
+issue = 0
+
+[[entry]]
+repo = "kninose/kbd-controller"
+verdict = "not_design"
+issue = 0
+
+[[entry]]
+repo = "mattnkrueger/KeyboardMatrixAndGPIOExpansionBoard"
+verdict = "design"
+issue = 0
+
+[[entry]]
+repo = "GavynDracula/GyreNano"
+verdict = "design"
+issue = 0
+
+[[entry]]
+repo = "liorknafo/totem-aluminum-case"
+verdict = "not_design"
+issue = 0
+
+[[entry]]
+repo = "AndreaGiulianini/lira"
+verdict = "design"
+issue = 0
+
+[[entry]]
+repo = "AuthorsWisdom/ssp-wedge-keyboard"
+verdict = "design"
+issue = 0
+
+[[entry]]
+repo = "Cypherico/Hojicha44"
+verdict = "design"
+issue = 0
+
+[[entry]]
+repo = "konstantindenerz/k0d3ball35"
+verdict = "design"
+issue = 0
+
+[[entry]]
+repo = "kwistof/javier"
+verdict = "design"
+issue = 0
+
+[[entry]]
+repo = "rafaelromao/prisma"
+verdict = "design"
+issue = 0
+
+[[entry]]
+repo = "w0rxbend/worxboard"
+verdict = "design"
+issue = 0
+
+[[entry]]
+repo = "w0rxbend/worxboard-ergo"
+verdict = "design"
+issue = 0
+
+[[entry]]
+repo = "6mil-Labs/remake"
+verdict = "design"
+issue = 0
+
+[[entry]]
+repo = "yyy006006006/ergoSHIFT-ChocV2"
+verdict = "not_design"
+issue = 0
+
+[[entry]]
+repo = "milindmadhukar/keygen"
+verdict = "design"
+issue = 0
+
+[[entry]]
+repo = "nullaroni/flatwell"
+verdict = "design"
+issue = 0
+
+[[entry]]
+repo = "MaryTennyson/Embaxus_Steno_Keyboard"
+verdict = "design"
+issue = 0
+
+[[entry]]
+repo = "isaac-v-m/steno-keyboard"
+verdict = "design"
+issue = 0
+
+[[entry]]
+repo = "jhovannyLinares/code70"
+verdict = "design"
+issue = 0
+
+[[entry]]
+repo = "skagon/HelioMax"
+verdict = "design"
+issue = 0
+
+[[entry]]
+repo = "soundsewcrazy/Scarab"
+verdict = "design"
+issue = 0
+
+[[entry]]
+repo = "seancaulfield/ISOish87wkl"
+verdict = "design"
+issue = 0
+
+[[entry]]
+repo = "oleksandrmaslov/wafer-keyboard"
+verdict = "design"
+issue = 0
+
+[[entry]]
+repo = "FBIopeningUPP/corne-ulp"
+verdict = "design"
+issue = 0
+
+[[entry]]
+repo = "deSales327/corne-pg1316s"
+verdict = "design"
+issue = 0
+
+[[entry]]
+repo = "deSales327/corne-x"
+verdict = "design"
+issue = 0
+
+[[entry]]
+repo = "disarmyouwitha/zenR4-pcb"
+verdict = "design"
+issue = 0
