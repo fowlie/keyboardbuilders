@@ -1,9 +1,14 @@
 {
- "fetchedAt": "2026-11-15T19:36:00Z",
+ "fetchedAt": "2026-11-15T20:02:05Z",
  "repos": {
   "0x544D/kuro65": {
    "stars": 2,
    "lastPush": "2023-03-14T16:44:23Z",
+   "archived": false
+  },
+  "AYM1607/swept-crkbd": {
+   "stars": 162,
+   "lastPush": "2024-03-11T19:26:57Z",
    "archived": false
   },
   "Aidan-OS/Sango": {
@@ -49,6 +54,11 @@
   "Frooastside/Frooastboard": {
    "stars": 1,
    "lastPush": "2026-06-16T21:26:53Z",
+   "archived": false
+  },
+  "GEIGEIGEIST/TOTEM": {
+   "stars": 2085,
+   "lastPush": "2025-05-02T16:37:21Z",
    "archived": false
   },
   "MangoIV/dracuLad": {
@@ -322,6 +332,11 @@
   "duckyb/eternal-keypad": {
    "stars": 195,
    "lastPush": "2025-07-10T09:34:39Z",
+   "archived": false
+  },
+  "duckyb/urchin": {
+   "stars": 610,
+   "lastPush": "2026-10-02T21:44:10Z",
    "archived": false
   },
   "durken1/pierce": {

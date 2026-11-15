@@ -995,6 +995,12 @@
  "sweeq-mx": [
   "qmk"
  ],
+ "swept-corne-3x5": [
+  "zmk"
+ ],
+ "swept-corne-3x6": [
+  "zmk"
+ ],
  "swoop-mx": [
   "qmk"
  ],
@@ -1021,6 +1027,9 @@
  ],
  "torn": [
   "qmk"
+ ],
+ "totem": [
+  "totem"
  ],
  "touhoupad-v2": [
   "qmk"
@@ -1052,6 +1061,9 @@
  ],
  "unix60pcb": [
   "qmk"
+ ],
+ "urchin": [
+  "urchin"
  ],
  "vagrant": [
   "qmk"

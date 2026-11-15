@@ -5497,3 +5497,43 @@ name     = "Chocofi"
 verdict  = "confirmed"
 signal   = "human"
 note     = "2026-11-15. One reversible PCB for both halves (README: \"pcb can be used as left or right half\"): 18 `Kailh_socket_PG1350_reversible` and 18 diodes, the row's 36 keys on 2 x 18. `pcb/chocofi-topplate.kicad_pcb` is the plate."
+
+[[entry]]
+tree     = "totem"
+id       = "totem"
+source   = "GEIGEIGEIST/TOTEM"
+boards   = ["PCB/totem_0-3/totem_0_3.kicad_pcb"]
+name     = "TOTEM"
+verdict  = "confirmed"
+signal   = "human"
+note     = "2026-11-15. The repo's one board, revision 0.3: 38 `Kailh_socket_PG1350_optional` and 38 diodes, both halves in one file, two XIAO cutouts -- the shield's 38 keys."
+
+[[entry]]
+tree     = "urchin"
+id       = "urchin"
+source   = "duckyb/urchin"
+boards   = ["main.kicad_pcb"]
+name     = "Urchin"
+verdict  = "confirmed"
+signal   = "human"
+note     = "2026-11-15. main.kicad_pcb: 34 Choc hotswap sockets and 34 diodes, both halves in one file -- the shield's 34 keys. plate-case/*.kicad_pcb are the switch and base plates, not boards."
+
+[[entry]]
+tree     = "hardware"
+id       = "swept-corne-3x5"
+source   = "AYM1607/swept-crkbd"
+boards   = ["Swept_3x5/Swept_3x5.kicad_pcb"]
+name     = "Swept Corne 3x5"
+verdict  = "confirmed"
+signal   = "human"
+note     = "2026-11-15. 36 `Kailh_socket_PG1350_optional`, 36 diodes, two ProMicro footprints: both halves in one file."
+
+[[entry]]
+tree     = "hardware"
+id       = "swept-corne-3x6"
+source   = "AYM1607/swept-crkbd"
+boards   = ["Swept_3x6/Swept_3x6.kicad_pcb"]
+name     = "Swept Corne 3x6"
+verdict  = "confirmed"
+signal   = "human"
+note     = "2026-11-15. 42 `Kailh_socket_PG1350_optional`, 42 diodes, two ProMicro footprints: both halves in one file."

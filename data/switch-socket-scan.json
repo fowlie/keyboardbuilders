@@ -559,6 +559,12 @@
  "sweeq-mx": [
   "hotswap"
  ],
+ "swept-corne-3x5": [
+  "hotswap"
+ ],
+ "swept-corne-3x6": [
+  "hotswap"
+ ],
  "swoop-mx": [],
  "tanuki-pcb3": [],
  "tartan": [],
@@ -574,6 +580,9 @@
  "tg4x": [],
  "th75": [],
  "torn": [
+  "hotswap"
+ ],
+ "totem": [
   "hotswap"
  ],
  "touhoupad-v2": [],
@@ -592,6 +601,9 @@
  ],
  "unison": [],
  "unix60pcb": [],
+ "urchin": [
+  "hotswap"
+ ],
  "vagrant": [],
  "varanidae": [],
  "voyager60": [],

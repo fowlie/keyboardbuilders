@@ -177,3 +177,30 @@ documentation = ["CERN-OHL-P-2.0"]
 verdict       = "confirmed"
 signal        = "human"
 note          = "Read 2026-11-15: one root LICENSE.txt, CERN-OHL-P v2 (GitHub reports `other`). The repo holds no firmware; the design runs Corne's, whose licence is Corne's, so this repo's firmware slot is Unstated."
+
+[[entry]]
+repo          = "GEIGEIGEIST/TOTEM"
+hardware      = ["CERN-OHL-P-2.0"]
+firmware      = []
+documentation = ["CERN-OHL-P-2.0"]
+verdict       = "confirmed"
+signal        = "human"
+note          = "Read 2026-11-15: root LICENSE.md, \"Copyright (c) 2022 GEIST\", CERN-OHL-P v2 (GitHub reports `other`). The firmware the build reads is GEIGEIGEIST/zmk-config-totem, which states no licence, so firmware is Unstated."
+
+[[entry]]
+repo          = "duckyb/urchin"
+hardware      = ["MIT"]
+firmware      = ["MIT"]
+documentation = ["MIT"]
+verdict       = "confirmed"
+signal        = "human"
+note          = "Read 2026-11-15: root LICENSE, MIT, \"Copyright (c) 2022 duckyb\". The firmware is duckyb/urchin-zmk-module, also MIT by its own LICENSE."
+
+[[entry]]
+repo          = "AYM1607/swept-crkbd"
+hardware      = ["Solderpad-2.1"]
+firmware      = []
+documentation = []
+verdict       = "confirmed"
+signal        = "human"
+note          = "Read 2026-11-15: root LICENSE has one section, \"# Hardware\", Solderpad Hardware License 2.1. Nothing for documentation. No firmware in the repo: it runs Corne's, whose licence is Corne's, so firmware is Unstated (as for chocofi)."

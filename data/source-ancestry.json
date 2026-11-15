@@ -75,6 +75,16 @@
   "root": null,
   "stargazers_count": 13
  },
+ "AYM1607/swept-crkbd": {
+  "archived": false,
+  "description": "swept corne - a small promicro based keyboard inspired by the Ferris, the Sweep and the Corne",
+  "fork": true,
+  "full_name": "AYM1607/swept-crkbd",
+  "parent": "davidphilipbarr/Sweep",
+  "pushed_at": "2024-03-11T19:26:57Z",
+  "root": "davidphilipbarr/Sweep",
+  "stargazers_count": 162
+ },
  "Aidan-OS/Mochi40": {
   "archived": false,
   "description": "A 40% keyboard with an OLED and rotary encoder",
@@ -204,6 +214,16 @@
   "pushed_at": "2026-06-16T21:26:53Z",
   "root": null,
   "stargazers_count": 1
+ },
+ "GEIGEIGEIST/TOTEM": {
+  "archived": false,
+  "description": "TOTEM is a 38 keys column-staggered split keyboard. It meant to be used with a SEEED XIAO BLE or RP2040",
+  "fork": false,
+  "full_name": "GEIGEIGEIST/TOTEM",
+  "parent": null,
+  "pushed_at": "2025-05-02T16:37:21Z",
+  "root": null,
+  "stargazers_count": 2085
  },
  "KamoNanban/Manta60": {
   "archived": false,
@@ -1174,6 +1194,16 @@
   "pushed_at": "2025-07-10T09:34:39Z",
   "root": null,
   "stargazers_count": 191
+ },
+ "duckyb/urchin": {
+  "archived": false,
+  "description": "34 key ZMK keyboard, nice!view, nice!nano & hotswap supported.",
+  "fork": false,
+  "full_name": "duckyb/urchin",
+  "parent": null,
+  "pushed_at": "2026-10-02T21:44:10Z",
+  "root": null,
+  "stargazers_count": 610
  },
  "durken1/pierce": {
   "archived": false,

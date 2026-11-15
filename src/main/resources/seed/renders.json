@@ -2078,6 +2078,20 @@
   "path": "sweeq mx/sweeq mx.kicad_pcb",
   "png": "0fa68eef1adb741a7cc53ce55574075d"
  },
+ "swept-corne-3x5": {
+  "alternates": 0,
+  "glb": "7fc8376a8d70844e95f5673f239514e5",
+  "glbBytes": 7397348,
+  "path": "Swept_3x5/Swept_3x5.kicad_pcb",
+  "png": "98803e34e2e5c2609e2d597ad18b00d3"
+ },
+ "swept-corne-3x6": {
+  "alternates": 0,
+  "glb": "d8081124e4f522e44cee8d5ca33f851e",
+  "glbBytes": 8451116,
+  "path": "Swept_3x6/Swept_3x6.kicad_pcb",
+  "png": "1d8ec57d6b77bcdb971093f4ad2cc53c"
+ },
  "swoop-mx": {
   "alternates": 0,
   "glb": "fb7f9950c46da92916bf9a7f36d7fa09",
@@ -2140,6 +2154,13 @@
   "glbBytes": 6659828,
   "path": "torn_left/torn_left.kicad_pcb",
   "png": "678373a172a8bfbe7228f3ff7981e972"
+ },
+ "totem": {
+  "alternates": 0,
+  "glb": "0ca6fe1af310ad010cb908c1be77936a",
+  "glbBytes": 10321848,
+  "path": "PCB/totem_0-3/totem_0_3.kicad_pcb",
+  "png": "82630d50e8bda831570a83d0b4f3ba3d"
  },
  "touhoupad-v2": {
   "alternates": 0,
@@ -2210,6 +2231,13 @@
   "glbBytes": 6920252,
   "path": "PCB/unix60pcb.kicad_pcb",
   "png": "f54a1d1377e4d2fe43b7a8ed4d5c9919"
+ },
+ "urchin": {
+  "alternates": 0,
+  "glb": "fa6f00541a97538e8972636dc8f52a89",
+  "glbBytes": 7450348,
+  "path": "main.kicad_pcb",
+  "png": "f55ec78c5cb15156e275423a8eafa606"
  },
  "vagrant": {
   "alternates": 0,

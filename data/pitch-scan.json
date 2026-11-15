@@ -5,6 +5,18 @@
   "mm": 19.05,
   "pitch": "mx_19.05"
  },
+ "AYM1607/swept-crkbd\tSwept_3x5/Swept_3x5.kicad_pcb": {
+  "confidence": 0.42,
+  "keys": 36,
+  "mm": 17.1,
+  "pitch": "choc_18x17"
+ },
+ "AYM1607/swept-crkbd\tSwept_3x6/Swept_3x6.kicad_pcb": {
+  "confidence": 0.43,
+  "keys": 42,
+  "mm": 17.1,
+  "pitch": "choc_18x17"
+ },
  "Aidan-OS/Sango\tPCB/Sango/Sango.kicad_pcb": {
   "confidence": 0.89,
   "keys": 70,
@@ -76,6 +88,12 @@
   "keys": 12,
   "mm": 19.05,
   "pitch": "mx_19.05"
+ },
+ "GEIGEIGEIST/TOTEM\tPCB/totem_0-3/totem_0_3.kicad_pcb": {
+  "confidence": 0.76,
+  "keys": 38,
+  "mm": 17.0,
+  "pitch": "choc_18x17"
  },
  "MangoIV/dracuLad\tkicad/split_3x.kicad_pcb": {
   "confidence": 0.83,
@@ -634,6 +652,12 @@
   "keys": 36,
   "mm": 19.05,
   "pitch": "mx_19.05"
+ },
+ "duckyb/urchin\tmain.kicad_pcb": {
+  "confidence": 0.88,
+  "keys": 34,
+  "mm": 17.0,
+  "pitch": "choc_18x17"
  },
  "durken1/pierce\tpcb/wired/pierce.kicad_pcb": {
   "confidence": 0.83,

@@ -44,6 +44,53 @@
   "plate_footprints": 0,
   "switches": 69
  },
+ "AYM1607/swept-crkbd\tSwept_3x5/Swept_3x5.kicad_pcb": {
+  "bytes": 716183,
+  "chips": [],
+  "families": [
+   "ChocV1"
+  ],
+  "footprints": 88,
+  "kind": "board",
+  "names": {
+   "Button_Switch_SMD:SW_SPDT_PCM12": 2,
+   "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical": 2,
+   "Duckyb-Parts:mouse-bite-5mm-slot-with-space-for-track": 2,
+   "kbd:1pin_conn": 4,
+   "kbd:D3_SMD_v2": 36,
+   "kbd:ProMicro_v3": 2,
+   "kbd:ResetSW": 2,
+   "kbd:Tenting_Puck2": 2,
+   "keyswitches:Kailh_socket_PG1350_optional": 36
+  },
+  "path": "Swept_3x5/Swept_3x5.kicad_pcb",
+  "plate_footprints": 0,
+  "switches": 36
+ },
+ "AYM1607/swept-crkbd\tSwept_3x6/Swept_3x6.kicad_pcb": {
+  "bytes": 815634,
+  "chips": [],
+  "families": [
+   "ChocV1"
+  ],
+  "footprints": 110,
+  "kind": "board",
+  "names": {
+   "": 10,
+   "Button_Switch_SMD:SW_SPDT_PCM12": 2,
+   "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical": 2,
+   "Duckyb-Parts:mouse-bite-5mm-slot-with-space-for-track": 2,
+   "kbd:1pin_conn": 4,
+   "kbd:D3_SMD_v2": 42,
+   "kbd:ProMicro_v3": 2,
+   "kbd:ResetSW": 2,
+   "kbd:Tenting_Puck2": 2,
+   "keyswitches:Kailh_socket_PG1350_optional": 42
+  },
+  "path": "Swept_3x6/Swept_3x6.kicad_pcb",
+  "plate_footprints": 0,
+  "switches": 42
+ },
  "Aidan-OS/Mochi40\tPCB/Hotswap PCB.kicad_pcb": {
   "bytes": 2269573,
   "chips": [],
@@ -955,6 +1002,29 @@
   "path": "Frooastboard Walnut/KiCad Project/Frooastboard Walnut.kicad_pcb",
   "plate_footprints": 0,
   "switches": 73
+ },
+ "GEIGEIGEIST/TOTEM\tPCB/totem_0-3/totem_0_3.kicad_pcb": {
+  "bytes": 13705268,
+  "chips": [],
+  "families": [
+   "ChocV1"
+  ],
+  "footprints": 100,
+  "kind": "board",
+  "names": {
+   "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad": 8,
+   "TOTEMlib:BatteryPad": 4,
+   "TOTEMlib:Diode_SOD123": 38,
+   "TOTEMlib:Kailh_socket_PG1350_optional": 38,
+   "TOTEMlib:MJ-4PP-9_1side": 2,
+   "TOTEMlib:MSK12C02": 2,
+   "TOTEMlib:SKHLLCA010": 2,
+   "TOTEMlib:xiao-ble-smd-cutout": 2,
+   "marbastlib-various:mousebites_2.5mm": 4
+  },
+  "path": "PCB/totem_0-3/totem_0_3.kicad_pcb",
+  "plate_footprints": 0,
+  "switches": 38
  },
  "KamoNanban/Manta60\tBottomPlate/Manta60BLE_Bottom.kicad_pcb": {
   "bytes": 56996,
@@ -9487,6 +9557,80 @@
   "path": "switch-plate-kicad/eternal-keypad-plate.kicad_pcb",
   "plate_footprints": 37,
   "switches": 0
+ },
+ "duckyb/urchin\tmain.kicad_pcb": {
+  "bytes": 3325563,
+  "chips": [],
+  "families": [
+   "ChocV1"
+  ],
+  "footprints": 122,
+  "kind": "board",
+  "names": {
+   "* duckyb-collection:SW_RESET": 2,
+   "LOGO": 3,
+   "Symbol:OSHW-Symbol_6.7x6mm_SilkScreen": 1,
+   "chocolad:M2_hole_3.5mm": 4,
+   "kibuzzard-6361375E": 2,
+   "kibuzzard-63658823": 1,
+   "kibuzzard-63658830": 1,
+   "kibuzzard-6365884B": 1,
+   "kibuzzard-63658865": 1,
+   "kibuzzard-636588C8": 2,
+   "kibuzzard-63659296": 1,
+   "kibuzzard-636592CC": 1,
+   "kibuzzard-63659328": 1,
+   "kibuzzard-63659465": 1,
+   "kibuzzard-63659477": 1,
+   "kibuzzard-6365950B": 1,
+   "kibuzzard-6365951E": 1,
+   "kibuzzard-67E186E9": 1,
+   "swoop:M2_hole_3.5mm": 4,
+   "swoop:M2_hole_4.2mm": 10,
+   "urchin-footprints:1pin_Battery": 4,
+   "urchin-footprints:SMD_Diode_Tiny": 34,
+   "urchin-footprints:SW_Hotswap_Kailh_Choc_V1_tweaked": 34,
+   "urchin-footprints:Tenting_Puck2_no_pads": 2,
+   "urchin-footprints:mouse-bite-5mm-slot-with-space-for-track": 2,
+   "urchin-footprints:nice_nano": 2,
+   "urchin-footprints:nice_view": 2,
+   "urchin-footprints:smt-slider-switch": 2
+  },
+  "path": "main.kicad_pcb",
+  "plate_footprints": 0,
+  "switches": 38
+ },
+ "duckyb/urchin\tplate-case/base-plate/base-plate.kicad_pcb": {
+  "bytes": 63676,
+  "chips": [],
+  "families": [],
+  "footprints": 5,
+  "kind": "no-switch",
+  "names": {
+   "Library:M2_hole_3.5mm_2mm": 5
+  },
+  "path": "plate-case/base-plate/base-plate.kicad_pcb",
+  "plate_footprints": 0,
+  "switches": 0
+ },
+ "duckyb/urchin\tplate-case/switch-plate/switch-plate.kicad_pcb": {
+  "bytes": 326686,
+  "chips": [],
+  "families": [
+   "ChocV1"
+  ],
+  "footprints": 25,
+  "kind": "board",
+  "names": {
+   "Library:urchin logo": 1,
+   "Library:urchin logo back": 1,
+   "Library:urchin logo background 2": 1,
+   "lib:Hole_SW_Hotswap_Kailh_Choc_V1_tweaked": 17,
+   "lib:M2_hole_3.5mm_2mm": 5
+  },
+  "path": "plate-case/switch-plate/switch-plate.kicad_pcb",
+  "plate_footprints": 0,
+  "switches": 17
  },
  "durken1/pierce\tpcb/reciever/pierce.kicad_pcb": {
   "families": [],

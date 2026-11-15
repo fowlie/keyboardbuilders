@@ -1,5 +1,7 @@
 {
  "0x544D/kuro65\tkusabimaru/kuro65.kicad_pcb": 69,
+ "AYM1607/swept-crkbd\tSwept_3x5/Swept_3x5.kicad_pcb": 36,
+ "AYM1607/swept-crkbd\tSwept_3x6/Swept_3x6.kicad_pcb": 42,
  "Aidan-OS/Mochi40\tPCB/Hotswap PCB.kicad_pcb": 46,
  "Aidan-OS/Mochi40\tPCB/PCB.kicad_pcb": 46,
  "Aidan-OS/Sango\tPCB/Sango/Sango.kicad_pcb": 39,
@@ -22,6 +24,7 @@
  "Frooastside/Frooastboard\tFrooastboard Nano/KiCad Project/Frooastboard Nano.kicad_pcb": 2,
  "Frooastside/Frooastboard\tFrooastboard Walnut Modular/KiCad Project/Frooastboard Walnut Modular.kicad_pcb": 117,
  "Frooastside/Frooastboard\tFrooastboard Walnut/KiCad Project/Frooastboard Walnut.kicad_pcb": 73,
+ "GEIGEIGEIST/TOTEM\tPCB/totem_0-3/totem_0_3.kicad_pcb": 38,
  "MangoIV/dracuLad\tkicad/split_3x.kicad_pcb": 18,
  "Pekaso/fortitude60\tfortitude.kicad_pcb": 30,
  "PyrooL/Alpha\tPCB_kicad/alpha_pro_micro.kicad_pcb": 28,
@@ -233,6 +236,7 @@
  "drabaioli/sdrakb00\tKiCad_PCB/SdraKb00.kicad_pcb": 24,
  "dsanchezseco/punk75\tpunk75.kicad_pcb": 79,
  "duckyb/eternal-keypad\tpcb-kicad/eternal-keypad.kicad_pcb": 36,
+ "duckyb/urchin\tmain.kicad_pcb": 34,
  "durken1/pierce\tpcb/wired/pierce.kicad_pcb": 18,
  "durken1/pierce\tpcb/wireless/pierce.kicad_pcb": 18,
  "dvorak55/chavdai40\tchavdai40.kicad_pcb": 41,

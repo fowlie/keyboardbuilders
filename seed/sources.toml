@@ -7273,3 +7273,52 @@ stated   = "https://github.com/pashutk/chocofi"
 signal   = "dev-seed"
 verdict  = "confirmed"
 note     = "No firmware of its own. The author, in pashutk/chocofi#6: \"corne firmware is the way to go. Schematic for chocofi is basically the same as fifi and fifi is using corne firmware too\" -- `crkbd` for QMK, `corne` for ZMK. README: 3 rows, 5 columns, 3 thumbs per half, so 36 keys on Corne's 36-key arrangement."
+
+# FROM TEMPER'S "SIMILAR KEYBOARDS", 2026-11-15, on the owner's request.
+[[entry]]
+tree     = "totem"
+id       = "totem"
+name     = "TOTEM"
+source   = "GEIGEIGEIST/TOTEM"
+path     = false
+stated   = "https://github.com/GEIGEIGEIST/TOTEM"
+signal   = "dev-seed"
+verdict  = "confirmed"
+note     = "Firmware: the `totem` shield in GEIGEIGEIST/zmk-config-totem (38 keys, split), linked from the TOTEM README. The hardware repo holds the PCB (PCB/totem_0-3), the README and the LICENSE."
+
+[[entry]]
+tree     = "urchin"
+id       = "urchin"
+name     = "Urchin"
+source   = "duckyb/urchin"
+path     = false
+stated   = "https://github.com/duckyb/urchin"
+signal   = "dev-seed"
+verdict  = "confirmed"
+note     = "Firmware: the `urchin` shield in duckyb/urchin-zmk-module (34 keys, split), which the README's duckyb/zmk-urchin config builds. The hardware repo holds the PCB and the LICENSE."
+
+[[entry]]
+tree     = "hardware"
+id       = "swept-corne-3x5"
+name     = "Swept Corne 3x5"
+source   = "AYM1607/swept-crkbd"
+firmware = "zmk:corne"
+keys     = 36
+path     = false
+stated   = "https://github.com/AYM1607/swept-crkbd"
+signal   = "dev-seed"
+verdict  = "confirmed"
+note     = "No firmware of its own. README, Firmware section: \"Firmware for zmk and nice!nano is called Corne\"; the author's AYM1607/corne-zmk-config builds `corne_left`/`corne_right`. Swept_3x5 places 36 switches across both halves in one file."
+
+[[entry]]
+tree     = "hardware"
+id       = "swept-corne-3x6"
+name     = "Swept Corne 3x6"
+source   = "AYM1607/swept-crkbd"
+firmware = "zmk:corne"
+keys     = 42
+path     = false
+stated   = "https://github.com/AYM1607/swept-crkbd"
+signal   = "dev-seed"
+verdict  = "confirmed"
+note     = "As swept-corne-3x5: Corne's ZMK firmware, per the README. Swept_3x6 places 42 switches across both halves in one file, Corne's 42-key arrangement."

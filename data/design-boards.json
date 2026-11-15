@@ -2009,6 +2009,18 @@
   ],
   "repo": "idank/keyboards"
  },
+ "swept-corne-3x5": {
+  "paths": [
+   "Swept_3x5/Swept_3x5.kicad_pcb"
+  ],
+  "repo": "AYM1607/swept-crkbd"
+ },
+ "swept-corne-3x6": {
+  "paths": [
+   "Swept_3x6/Swept_3x6.kicad_pcb"
+  ],
+  "repo": "AYM1607/swept-crkbd"
+ },
  "swoop-mx": {
   "paths": [
    "pcbs/swoop-mx/swoop-mx.kicad_pcb"
@@ -2063,6 +2075,12 @@
    "torn_right/torn_right.kicad_pcb"
   ],
   "repo": "rtitmuss/torn"
+ },
+ "totem": {
+  "paths": [
+   "PCB/totem_0-3/totem_0_3.kicad_pcb"
+  ],
+  "repo": "GEIGEIGEIST/TOTEM"
  },
  "touhoupad-v2": {
   "paths": [
@@ -2124,6 +2142,12 @@
    "PCB/unix60pcb.kicad_pcb"
   ],
   "repo": "mkdl/unix60"
+ },
+ "urchin": {
+  "paths": [
+   "main.kicad_pcb"
+  ],
+  "repo": "duckyb/urchin"
  },
  "vagrant": {
   "paths": [

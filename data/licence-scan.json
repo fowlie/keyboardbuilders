@@ -89,6 +89,20 @@
   "status": "ok",
   "truncated": false
  },
+ "AYM1607/swept-crkbd": {
+  "files": [
+   {
+    "first_line": "# Hardware",
+    "licence": "Solderpad-2.1",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "AYM1607/swept-crkbd",
+  "status": "ok",
+  "truncated": false
+ },
  "Aidan-OS/Mochi40": {
   "files": [
    {
@@ -268,6 +282,20 @@
    }
   ],
   "repo": "Frooastside/Frooastboard",
+  "status": "ok",
+  "truncated": false
+ },
+ "GEIGEIGEIST/TOTEM": {
+  "files": [
+   {
+    "first_line": "Copyright (c) 2022 GEIST",
+    "licence": "CERN-OHL-S-2.0",
+    "path": "LICENSE.md",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "GEIGEIGEIST/TOTEM",
   "status": "ok",
   "truncated": false
  },
@@ -1614,6 +1642,20 @@
    }
   ],
   "repo": "duckyb/eternal-keypad",
+  "status": "ok",
+  "truncated": false
+ },
+ "duckyb/urchin": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "duckyb/urchin",
   "status": "ok",
   "truncated": false
  },

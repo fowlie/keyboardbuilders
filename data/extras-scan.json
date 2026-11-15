@@ -551,6 +551,8 @@
  "sweep-high-m": [],
  "sweeq": [],
  "sweeq-mx": [],
+ "swept-corne-3x5": [],
+ "swept-corne-3x6": [],
  "swoop-mx": [
   "encoder",
   "display"
@@ -568,6 +570,7 @@
   "encoder",
   "display"
  ],
+ "totem": [],
  "touhoupad-v2": [],
  "treadstone32": [],
  "tripel": [],
@@ -589,6 +592,7 @@
   "speaker"
  ],
  "unix60pcb": [],
+ "urchin": [],
  "vagrant": [],
  "varanidae": [
   "encoder"

@@ -905,6 +905,12 @@
     "height": 900,
     "sourceUrl": "https://github.com/mythosmann/tg4x"
   },
+  "totem": {
+    "jpg": "1cc0ca71341a3b055102075ec7c3868f",
+    "width": 1600,
+    "height": 1067,
+    "sourceUrl": "https://github.com/GEIGEIGEIST/TOTEM"
+  },
   "treadstone32": {
     "jpg": "83aea3b100fa32316627617402c7ce90",
     "width": 1600,
@@ -940,6 +946,12 @@
     "width": 1600,
     "height": 1067,
     "sourceUrl": "https://github.com/mkdl/unix60"
+  },
+  "urchin": {
+    "jpg": "13f1a275f303191b1e43d4fdb683f9b4",
+    "width": 1600,
+    "height": 1067,
+    "sourceUrl": "https://github.com/duckyb/urchin"
   },
   "vagrant": {
     "jpg": "5a504c3755da6ed80563eaedcd78fad1",

@@ -124,3 +124,21 @@ ref     = "main"
 local   = "~/code/raeedcho-temper-zmk-config"
 records = "boards/shields"
 note    = "2026-11-15, added on the owner's request. Temper's ZMK shield was never submitted upstream; it lives in the designer's own config repo at boards/shields/temper, so the tree names that folder outright (`records`), the ZMK twin of `hem`. Head ff0778e (2025-08-08)."
+
+[[entry]]
+id      = "totem"
+reader  = "zmk"
+url     = "https://github.com/GEIGEIGEIST/zmk-config-totem"
+ref     = "master"
+local   = "~/code/geigeigeist-zmk-config-totem"
+records = "config/boards/shields"
+note    = "2026-11-15, owner's request (from Temper's list of similar keyboards). TOTEM's ZMK shield lives in the designer's own config repo. Chosen over the QMK/Vial record in GEIGEIGEIST/TOTEM because that keyboard.json sets `split.serial` without `split.enabled`, so it reads unibody; the shield's `siblings` say split. Head 8325195 (2023-05-16)."
+
+[[entry]]
+id      = "urchin"
+reader  = "zmk"
+url     = "https://github.com/duckyb/urchin-zmk-module"
+ref     = "main"
+local   = "~/code/duckyb-urchin-zmk-module"
+records = "boards/shields"
+note    = "2026-11-15, owner's request (from Temper's list of similar keyboards). Urchin's shield is a ZMK module in the designer's own repo; duckyb/zmk-urchin, the user config, pulls it in through west.yml. Head a3ab64f (2024-11-14)."

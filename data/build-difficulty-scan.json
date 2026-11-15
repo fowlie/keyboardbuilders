@@ -3649,6 +3649,26 @@
   ]
  },
  {
+  "slug": "swept-corne-3x5",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "other"
+  ],
+  "footprints": [
+   "d3_smd_v2"
+  ]
+ },
+ {
+  "slug": "swept-corne-3x6",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "other"
+  ],
+  "footprints": [
+   "d3_smd_v2"
+  ]
+ },
+ {
   "slug": "swoop-mx",
   "hardest": "smd_hand",
   "driven_by": [
@@ -3740,6 +3760,16 @@
   ],
   "footprints": [
    "usb_c_gct_usb4085"
+  ]
+ },
+ {
+  "slug": "totem",
+  "hardest": "through_hole",
+  "driven_by": [
+   "connector"
+  ],
+  "footprints": [
+   "mj-4pp-9_1side"
   ]
  },
  {
@@ -3855,6 +3885,16 @@
   "footprints": [
    "pinsocket_1x04_p2.54mm_vertical",
    "d_sod123_axial-dual"
+  ]
+ },
+ {
+  "slug": "urchin",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "diode"
+  ],
+  "footprints": [
+   "smd_diode_tiny"
   ]
  },
  {

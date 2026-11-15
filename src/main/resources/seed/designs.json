@@ -26705,6 +26705,138 @@
   "family": "Sweeq"
  },
  {
+  "name": "Swept Corne 3x5",
+  "slug": "swept-corne-3x5",
+  "sources": [
+   "https://github.com/AYM1607/swept-crkbd"
+  ],
+  "firmware": [
+   {
+    "family": "zmk",
+    "path": null,
+    "shield": "corne"
+   }
+  ],
+  "layouts": [
+   {
+    "keys": 36,
+    "name": "5 Column"
+   }
+  ],
+  "switches": [
+   {
+    "kind": "choc_v1"
+   }
+  ],
+  "pitch": {
+   "kind": "choc_18x17",
+   "mm": 17.1
+  },
+  "buildMethod": {
+   "kind": "pcb"
+  },
+  "hardestComponent": {
+   "parts": [
+    "other"
+   ],
+   "tier": "smd_hand"
+  },
+  "controller": {
+   "kind": "socket",
+   "footprints": [
+    "pro_micro"
+   ]
+  },
+  "body": {
+   "kind": "split",
+   "halves": 2,
+   "reversible": null,
+   "link": []
+  },
+  "licensing": {
+   "hardware": [
+    "Solderpad-2.1"
+   ],
+   "firmware": [],
+   "documentation": []
+  },
+  "hostPort": null,
+  "switchMounts": [
+   "choc_socket",
+   "solder"
+  ],
+  "splay": false,
+  "stagger": "column",
+  "exposedComponents": false,
+  "powerSwitch": true
+ },
+ {
+  "name": "Swept Corne 3x6",
+  "slug": "swept-corne-3x6",
+  "sources": [
+   "https://github.com/AYM1607/swept-crkbd"
+  ],
+  "firmware": [
+   {
+    "family": "zmk",
+    "path": null,
+    "shield": "corne"
+   }
+  ],
+  "layouts": [
+   {
+    "keys": 42,
+    "name": "6 Column"
+   }
+  ],
+  "switches": [
+   {
+    "kind": "choc_v1"
+   }
+  ],
+  "pitch": {
+   "kind": "choc_18x17",
+   "mm": 17.1
+  },
+  "buildMethod": {
+   "kind": "pcb"
+  },
+  "hardestComponent": {
+   "parts": [
+    "other"
+   ],
+   "tier": "smd_hand"
+  },
+  "controller": {
+   "kind": "socket",
+   "footprints": [
+    "pro_micro"
+   ]
+  },
+  "body": {
+   "kind": "split",
+   "halves": 2,
+   "reversible": null,
+   "link": []
+  },
+  "licensing": {
+   "hardware": [
+    "Solderpad-2.1"
+   ],
+   "firmware": [],
+   "documentation": []
+  },
+  "hostPort": null,
+  "switchMounts": [
+   "choc_socket",
+   "solder"
+  ],
+  "splay": false,
+  "stagger": "column",
+  "exposedComponents": false,
+  "powerSwitch": true
+ },
+ {
   "name": "swoop mx",
   "slug": "swoop-mx",
   "sources": [
@@ -27452,6 +27584,80 @@
     "copperLayers": 2
    }
   ]
+ },
+ {
+  "name": "TOTEM",
+  "slug": "totem",
+  "sources": [
+   "https://github.com/GEIGEIGEIST/TOTEM"
+  ],
+  "firmware": [
+   {
+    "family": "zmk",
+    "path": null,
+    "shield": "totem"
+   }
+  ],
+  "layouts": [
+   {
+    "keys": 38
+   }
+  ],
+  "switches": [
+   {
+    "kind": "choc_v1"
+   }
+  ],
+  "pitch": {
+   "kind": "choc_18x17",
+   "mm": 17.0
+  },
+  "buildMethod": {
+   "kind": "pcb"
+  },
+  "hardestComponent": {
+   "parts": [
+    "connector"
+   ],
+   "tier": "through_hole"
+  },
+  "controller": {
+   "kind": "socket",
+   "footprints": [
+    "seeed_xiao"
+   ]
+  },
+  "body": {
+   "kind": "split",
+   "halves": 2,
+   "reversible": null,
+   "link": [
+    "trrs"
+   ]
+  },
+  "licensing": {
+   "hardware": [
+    "CERN-OHL-P-2.0"
+   ],
+   "firmware": [],
+   "documentation": [
+    "CERN-OHL-P-2.0"
+   ]
+  },
+  "hostPort": null,
+  "wiring": {
+   "kind": "matrix",
+   "rows": 4,
+   "cols": 5,
+   "diodes": "col_to_row"
+  },
+  "switchMounts": [
+   "choc_socket",
+   "solder"
+  ],
+  "splay": true,
+  "stagger": "column",
+  "powerSwitch": true
  },
  {
   "name": "touhoupad v2",
@@ -28282,6 +28488,80 @@
     "copperLayers": 2
    }
   ]
+ },
+ {
+  "name": "Urchin",
+  "slug": "urchin",
+  "sources": [
+   "https://github.com/duckyb/urchin"
+  ],
+  "firmware": [
+   {
+    "family": "zmk",
+    "path": null,
+    "shield": "urchin"
+   }
+  ],
+  "layouts": [
+   {
+    "keys": 34
+   }
+  ],
+  "switches": [
+   {
+    "kind": "choc_v1"
+   }
+  ],
+  "pitch": {
+   "kind": "choc_18x17",
+   "mm": 17.0
+  },
+  "buildMethod": {
+   "kind": "pcb"
+  },
+  "hardestComponent": {
+   "parts": [
+    "diode"
+   ],
+   "tier": "smd_hand"
+  },
+  "controller": {
+   "kind": "socket",
+   "footprints": [
+    "pro_micro"
+   ]
+  },
+  "body": {
+   "kind": "split",
+   "halves": 2,
+   "reversible": null,
+   "link": []
+  },
+  "licensing": {
+   "hardware": [
+    "MIT"
+   ],
+   "firmware": [
+    "MIT"
+   ],
+   "documentation": [
+    "MIT"
+   ]
+  },
+  "hostPort": null,
+  "wiring": {
+   "kind": "matrix",
+   "rows": 4,
+   "cols": 5,
+   "diodes": "col_to_row"
+  },
+  "switchMounts": [
+   "choc_socket"
+  ],
+  "splay": false,
+  "stagger": "column",
+  "exposedComponents": false,
+  "powerSwitch": true
  },
  {
   "name": "vagrant",

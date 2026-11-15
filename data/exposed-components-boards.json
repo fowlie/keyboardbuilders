@@ -2604,6 +2604,20 @@
    "keys": 34
   }
  },
+ "swept-corne-3x5": {
+  "Swept_3x5/Swept_3x5.kicad_pcb": {
+   "diodes": 18,
+   "exposed": 0,
+   "keys": 36
+  }
+ },
+ "swept-corne-3x6": {
+  "Swept_3x6/Swept_3x6.kicad_pcb": {
+   "diodes": 21,
+   "exposed": 0,
+   "keys": 42
+  }
+ },
  "swoop-mx": {
   "pcbs/swoop-mx/swoop-mx.kicad_pcb": {
    "diodes": 18,
@@ -2670,6 +2684,13 @@
    "diodes": 22,
    "exposed": 22,
    "keys": 22
+  }
+ },
+ "totem": {
+  "PCB/totem_0-3/totem_0_3.kicad_pcb": {
+   "diodes": 0,
+   "exposed": 0,
+   "keys": 38
   }
  },
  "touhoupad-v2": {
@@ -2745,6 +2766,13 @@
    "diodes": 63,
    "exposed": 0,
    "keys": 65
+  }
+ },
+ "urchin": {
+  "main.kicad_pcb": {
+   "diodes": 34,
+   "exposed": 1,
+   "keys": 34
   }
  },
  "vagrant": {

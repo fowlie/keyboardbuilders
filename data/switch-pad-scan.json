@@ -32,6 +32,48 @@
   },
   "unnamed": {}
  },
+ "AYM1607/swept-crkbd\tSwept_3x5/Swept_3x5.kicad_pcb": {
+  "accepts": {
+   "keyswitches:Kailh_socket_PG1350_optional\tchoc+solder": 36
+  },
+  "drills": {
+   "ChocV1 1.27": 72
+  },
+  "kinds": {
+   "either": 36
+  },
+  "names": {
+   "keyswitches:Kailh_socket_PG1350_optional\teither\tsmd+thru_hole\tchoc": 36
+  },
+  "positions": {
+   "choc+solder": 36
+  },
+  "sockets": {
+   "choc": 36
+  },
+  "unnamed": {}
+ },
+ "AYM1607/swept-crkbd\tSwept_3x6/Swept_3x6.kicad_pcb": {
+  "accepts": {
+   "keyswitches:Kailh_socket_PG1350_optional\tchoc+solder": 42
+  },
+  "drills": {
+   "ChocV1 1.27": 84
+  },
+  "kinds": {
+   "either": 42
+  },
+  "names": {
+   "keyswitches:Kailh_socket_PG1350_optional\teither\tsmd+thru_hole\tchoc": 42
+  },
+  "positions": {
+   "choc+solder": 42
+  },
+  "sockets": {
+   "choc": 42
+  },
+  "unnamed": {}
+ },
  "Aidan-OS/Sango\tPCB/Sango/Sango.kicad_pcb": {
   "accepts": {
    "KiSwitch_Kailh_Hotswap:SW_Hotswap_Kailh_Choc_V1_1.00u\tchoc": 70,
@@ -336,6 +378,27 @@
   },
   "sockets": {
    "-": 2
+  },
+  "unnamed": {}
+ },
+ "GEIGEIGEIST/TOTEM\tPCB/totem_0-3/totem_0_3.kicad_pcb": {
+  "accepts": {
+   "TOTEMlib:Kailh_socket_PG1350_optional\tchoc+solder": 38
+  },
+  "drills": {
+   "ChocV1 1.27": 76
+  },
+  "kinds": {
+   "either": 38
+  },
+  "names": {
+   "TOTEMlib:Kailh_socket_PG1350_optional\teither\tsmd+thru_hole\tchoc": 38
+  },
+  "positions": {
+   "choc+solder": 38
+  },
+  "sockets": {
+   "choc": 38
   },
   "unnamed": {}
  },
@@ -2559,6 +2622,27 @@
    "mx": 36
   },
   "unnamed": {}
+ },
+ "duckyb/urchin\tmain.kicad_pcb": {
+  "accepts": {
+   "urchin-footprints:SW_Hotswap_Kailh_Choc_V1_tweaked\tchoc": 34
+  },
+  "drills": {},
+  "kinds": {
+   "socket": 34
+  },
+  "names": {
+   "urchin-footprints:SW_Hotswap_Kailh_Choc_V1_tweaked\tsocket\tsmd\tchoc": 34
+  },
+  "positions": {
+   "choc": 34
+  },
+  "sockets": {
+   "choc": 34
+  },
+  "unnamed": {
+   "chocolad:M2_hole_3.5mm\t-": 4
+  }
  },
  "durken1/pierce\tpcb/wired/pierce.kicad_pcb": {
   "accepts": {
