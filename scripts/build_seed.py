@@ -61,6 +61,7 @@ import sys
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 import board_fills
 import qmk_metadata
+import extract_zmk_shields
 import zmk_wiring
 import trees as tree_registry
 from check_source_reachability import parse
@@ -924,6 +925,27 @@ def licence_slots(repo, scanned, rulings):
 qmk_facts = qmk_metadata.facts
 
 
+def zmk_shields(reg):
+    """Every ZMK tree's shields, as `{tree: {shield_id: shield}}`.
+
+    PER TREE, because a shield id is only unique within one tree. Until Temper every
+    ZMK row read upstream, so one flat dict was enough; a designer's own config repo
+    can name a shield `corne` too, and a flat dict would hand one tree's reading to
+    the other's row. A tree that isn't checked out reads as no shields, so its rows
+    defer like any other unreadable record instead of stopping the build.
+    """
+    upstream = next(reg.local(t) for t in reg.ids()
+                    if reg.reader(t) == "zmk" and reg.upstream(t))
+    out = {}
+    for tree in reg.ids():
+        if reg.reader(tree) != "zmk":
+            continue
+        root, local = reg.root(tree), reg.local(tree)
+        out[tree] = ({s["id"]: s for s in extract_zmk_shields.extract(root, local, upstream)}
+                     if root and root.is_dir() else {})
+    return out
+
+
 def main():
     ap = argparse.ArgumentParser()
     # Written into the app's resources, not into seed/: `seed/` holds what humans
@@ -1004,10 +1026,11 @@ def main():
                    for row in json.loads(difficulty_file.read_text()) if row.get("hardest")}
                   if difficulty_file.exists() else {})
 
-    zmk = {s["id"]: s for s in json.loads(subprocess.run(
-        [sys.executable, str(REPO/"scripts/extract_zmk_shields.py"),
-         "--zmk", str(reg.local("zmk")), "--json"],
-        capture_output=True, text=True, check=True).stdout)}
+    zmk = zmk_shields(reg)
+
+    def shield_of(tree, sid):
+        """The shield `sid` in `tree`, or None. Never another tree's shield of that id."""
+        return zmk.get(tree, {}).get(sid)
 
     rows_per_repo = collections.Counter(r["source"] for r in rows if r.get("source"))
     # How many DESIGNS the repo holds, not how many board files: draft_boards groups a
@@ -1340,7 +1363,7 @@ def main():
                 if not known:
                     defer("hardware row: borrowed record not in the local QMK tree", row); continue
             else:
-                shield = zmk.get(fw["id"])
+                shield = shield_of(fw["tree"], fw["id"])
                 if not shield or not shield["keyboard"]:
                     defer("hardware row: borrowed shield not a keyboard", row); continue
                 split = shield["split"]
@@ -1352,7 +1375,7 @@ def main():
                 defer("not in the local QMK tree", row); continue
             counts = without_encoder_positions(counts, found, split)
         else:
-            shield = zmk.get(row["id"])
+            shield = shield_of(row["tree"], row["id"])
             if not shield or not shield["keyboard"]:
                 defer("not a keyboard shield in the ZMK tree", row); continue
             counts, split = shield["key_counts"], shield["split"]
@@ -1563,7 +1586,7 @@ def main():
                     if not known:
                         continue
                 else:
-                    shield = zmk.get(row["id"])
+                    shield = shield_of(row["tree"], row["id"])
                     if not shield or not shield["keyboard"]:
                         continue
                     counts, split = shield["key_counts"], shield["split"]
@@ -1610,7 +1633,7 @@ def main():
                         if not known:
                             continue
                     else:
-                        shield = zmk.get(other["id"])
+                        shield = shield_of(other["tree"], other["id"])
                         if not shield or not shield["keyboard"]:
                             continue
                         cs, sp = shield["key_counts"], shield["split"]
@@ -2025,12 +2048,12 @@ def main():
         split = d["body"]["kind"] == "split"
         resolved = None
         for ref in d["firmware"]:
-            shield = zmk.get(ref.get("shield") or "") if ref["family"] == "zmk" else None
-            # Upstream ZMK only: `zmk` was extracted from that one checkout, so a
-            # shield id resolves to a directory there and nowhere else.
-            if not shield or not shield.get("dir") or reg.local(ref["_tree"]) != reg.local("zmk"):
+            shield = shield_of(ref["_tree"], ref.get("shield") or "") if ref["family"] == "zmk" else None
+            # A shield's `dir` is relative to the checkout of the tree it was read
+            # from, so it is resolved there and nowhere else.
+            if not shield or not shield.get("dir"):
                 continue
-            where = reg.local("zmk")/shield["dir"]
+            where = reg.local(ref["_tree"])/shield["dir"]
             found = (zmk_wiring.split_wiring(where, shield["id"]) if split else
                      zmk_wiring.wiring(where))
             if found is None:

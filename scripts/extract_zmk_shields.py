@@ -132,17 +132,14 @@ def key_counts(shield_dir, zmk_root):
     return sorted(set(counts), reverse=True)
 
 
-def main():
-    ap = argparse.ArgumentParser()
-    ap.add_argument("--zmk", default=os.path.expanduser("~/code/zmk"))
-    ap.add_argument("--json", action="store_true")
-    args = ap.parse_args()
+def extract(shields_dir, tree_root, zmk_root):
+    """Every shield under `shields_dir`, as dicts.
 
-    zmk = pathlib.Path(args.zmk)
-    shields_dir = zmk/"app"/"boards"/"shields"
-    if not shields_dir.is_dir():
-        raise SystemExit(f"no shields under {shields_dir}")
-
+    THREE ROOTS, because a shield need not live in upstream ZMK. `shields_dir` is where
+    to look; `tree_root` is the checkout it belongs to, which `dir` is relative to (so
+    `local(tree)/dir` finds it again); `zmk_root` is upstream ZMK, which an out-of-tree
+    shield still `#include`s its layouts from. For upstream all three are one checkout.
+    """
     out = []
     for meta_path in sorted(shields_dir.rglob("*.zmk.yml")):
         meta = yaml_ish(meta_path.read_text(errors="ignore"))
@@ -154,7 +151,7 @@ def main():
             "id": meta.get("id"),
             "name": meta.get("name"),
             "url": meta.get("url"),
-            "dir": str(shield_dir.relative_to(zmk)),
+            "dir": str(shield_dir.relative_to(tree_root)),
             "requires": meta.get("requires") or [],
             "features": meta.get("features") or [],
             # `features: [keys]` is ZMK's own word for "this is a keyboard".
@@ -164,8 +161,27 @@ def main():
             "keyboard": "keys" in (meta.get("features") or []),
             "split": bool(siblings),
             "halves": len(siblings) if siblings else None,
-            "key_counts": key_counts(shield_dir, zmk),
+            "key_counts": key_counts(shield_dir, zmk_root),
         })
+    return out
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--zmk", default=os.path.expanduser("~/code/zmk"),
+                    help="upstream ZMK: where `#include <layouts/...>` resolves")
+    ap.add_argument("--shields", help="the folder to read shields from "
+                    "(default: <zmk>/app/boards/shields)")
+    ap.add_argument("--tree-root", help="the checkout those shields belong to, which "
+                    "`dir` is relative to (default: --zmk)")
+    ap.add_argument("--json", action="store_true")
+    args = ap.parse_args()
+
+    zmk = pathlib.Path(args.zmk)
+    shields_dir = pathlib.Path(args.shields) if args.shields else zmk/"app"/"boards"/"shields"
+    if not shields_dir.is_dir():
+        raise SystemExit(f"no shields under {shields_dir}")
+    out = extract(shields_dir, pathlib.Path(args.tree_root) if args.tree_root else zmk, zmk)
 
     if args.json:
         print(json.dumps(out, indent=1, sort_keys=True))

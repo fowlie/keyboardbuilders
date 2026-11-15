@@ -174,5 +174,53 @@ measured_on = 2026-10-04
         self.assertEqual(build_seed.board_sizes("/nonexistent/board-sizes.toml"), ({}, {}))
 
 
+class ZmkShieldsPerTree(unittest.TestCase):
+    """A shield is looked up in its OWN tree: Temper's lives in its config repo."""
+
+    def setUp(self):
+        import pathlib, tempfile
+        from trees import Registry
+        self.tmp = tempfile.TemporaryDirectory()
+        base = pathlib.Path(self.tmp.name)
+
+        def shield(root, sid, keys):
+            d = root/sid
+            d.mkdir(parents=True)
+            (d/f"{sid}.zmk.yml").write_text(
+                f"id: {sid}\ntype: shield\nfeatures:\n  - keys\n")
+            (d/f"{sid}.dtsi").write_text(
+                'compatible = "zmk,matrix-transform"; map = <'
+                + " RC(0,0)" * keys + " >;")
+
+        upstream, fork = base/"zmk", base/"temper-zmk-config"
+        shield(upstream/"app/boards/shields", "corne", 42)
+        shield(fork/"boards/shields", "temper", 36)
+        shield(fork/"boards/shields", "corne", 34)  # same id as upstream's, on purpose
+        entries = [
+            {"id": "zmk", "reader": "zmk", "upstream": True, "_local": upstream},
+            {"id": "temper", "reader": "zmk", "records": "boards/shields", "_local": fork},
+            {"id": "gone", "reader": "zmk", "records": "boards/shields",
+             "_local": base/"never-cloned"},
+            {"id": "qmk", "reader": "qmk", "_local": base/"qmk"},
+        ]
+        self.shields = build_seed.zmk_shields(Registry(entries))
+
+    def tearDown(self):
+        self.tmp.cleanup()
+
+    def test_a_fork_tree_shield_is_found_in_that_tree(self):
+        self.assertEqual(self.shields["temper"]["temper"]["key_counts"], [36])
+
+    def test_the_same_id_in_two_trees_does_not_collide(self):
+        self.assertEqual(self.shields["zmk"]["corne"]["key_counts"], [42])
+        self.assertEqual(self.shields["temper"]["corne"]["key_counts"], [34])
+
+    def test_a_tree_not_checked_out_gives_no_shields_rather_than_a_crash(self):
+        self.assertEqual(self.shields["gone"], {})
+
+    def test_only_zmk_trees_are_read(self):
+        self.assertNotIn("qmk", self.shields)
+
+
 if __name__ == "__main__":
     unittest.main()
