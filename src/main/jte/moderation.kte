@@ -48,6 +48,19 @@
                         <button type="submit" name="reply" value="${choice.reply}" class="settings-save">${choice.label}</button>
                     @endfor
                 </form>
+                @if(question.takesUrl)
+                    <form method="post" action="/moderation/answer" class="moderate-url">
+                        <input type="hidden" name="${csrf.parameterName}" value="${csrf.token}">
+                        <input type="hidden" name="id" value="${question.id}">
+                        <label>None of these? Photo URL
+                            <input type="url" name="image" required pattern="https://.*" placeholder="https://...">
+                        </label>
+                        <label>Credit page, if it isn't the design's repo (optional)
+                            <input type="url" name="page" pattern="https://.*" placeholder="https://...">
+                        </label>
+                        <button type="submit" class="settings-save">Use this photo</button>
+                    </form>
+                @endif
                 <nav class="moderate-step">
                     @if(prev != null)<a rel="prev" href="${prev}">Previous</a>@endif
                     @if(next != null)<a rel="next" href="${next}">Next</a>@endif

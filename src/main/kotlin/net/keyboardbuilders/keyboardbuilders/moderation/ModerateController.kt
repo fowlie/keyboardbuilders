@@ -14,12 +14,18 @@ import org.springframework.web.bind.annotation.RequestParam
 import org.springframework.web.server.ResponseStatusException
 
 /** The question as the page shows it: the body already rendered, safely. */
-data class QuestionView(val id: String, val title: String, val bodyHtml: String, val choices: List<Choice>)
+data class QuestionView(
+    val id: String, val title: String, val bodyHtml: String, val choices: List<Choice>,
+    /** Photo questions also take a URL, for when none of the candidates is right. */
+    val takesUrl: Boolean,
+)
 
 /** One row of the queue under the question: every open question links to itself. */
 data class QueueItem(val title: String, val kind: String, val href: String, val current: Boolean)
 
 private fun href(id: String) = "/moderation?id=$id"
+
+private val HTTPS = Regex("""https://[^\s<>"`]+""")
 
 /**
  * Backlog #117: moderators answer the intake bot's questions, one at a time.
@@ -59,7 +65,7 @@ class ModerateController(
         val at = open.indexOfFirst { it.id == id }.takeIf { it >= 0 } ?: 0
         val current = open.getOrNull(at)
         model.addAttribute("question", current?.let {
-            QuestionView(it.id, it.title, markdown.html(it.body), it.choices)
+            QuestionView(it.id, it.title, markdown.html(it.body), it.choices, takesUrl = it.kind == "photo")
         })
         model.addAttribute("prev", open.getOrNull(at - 1)?.let { href(it.id) })
         model.addAttribute("next", open.getOrNull(at + 1)?.let { href(it.id) })
@@ -76,22 +82,43 @@ class ModerateController(
     fun answer(
         @AuthenticationPrincipal user: OAuth2User,
         @RequestParam id: String,
-        @RequestParam reply: String,
+        @RequestParam(required = false) reply: String?,
+        @RequestParam(required = false) image: String?,
+        @RequestParam(required = false) page: String?,
     ): String {
         val login = requireModerator(user)
         val question = questions.all().firstOrNull { it.id == id }
             ?: throw ResponseStatusException(HttpStatus.BAD_REQUEST, "no open question '$id'")
-        if (question.choices.none { it.reply == reply }) {
-            throw ResponseStatusException(HttpStatus.BAD_REQUEST, "'$reply' is not an answer to '$id'")
-        }
+        // A typed photo URL, or one of the question's own buttons. Nothing else.
+        val answer = if (!image.isNullOrBlank()) photoUrl(question, image, page)
+            else reply?.takeIf { r -> question.choices.any { it.reply == r } }
+                ?: throw ResponseStatusException(HttpStatus.BAD_REQUEST, "'$reply' is not an answer to '$id'")
         val before = open().map { it.id }
-        answers.record(id, reply, by = login)
+        answers.record(id, answer, by = login)
         // ON TO THE ONE AFTER IT, wrapping to the first still open: a moderator working
         // down the list stays where they were rather than being sent back to the top.
         val after = open().map { it.id }
         val at = before.indexOf(id)
-        val next = (before.drop(at + 1) + before.take(at)).firstOrNull { it in after }
+        // Already answered (a second tab): it wasn't in the open list, so start from the top.
+        val next = if (at < 0) after.firstOrNull()
+            else (before.drop(at + 1) + before.take(at)).firstOrNull { it in after }
         return "redirect:" + (next?.let { href(it) } ?: "/moderation")
+    }
+
+    /**
+     * A photo given by URL, as the reply the bot's `parse_photo` reads: `IMAGE` or
+     * `IMAGE PAGE`. Photo questions only, https only -- the bot downloads it, and a
+     * moderator's typo should fail here, not on the server at the next poll.
+     */
+    private fun photoUrl(question: Question, image: String, page: String?): String {
+        if (question.kind != "photo") {
+            throw ResponseStatusException(HttpStatus.BAD_REQUEST, "only a photo question takes a URL")
+        }
+        val parts = listOfNotNull(image.trim(), page?.trim()?.ifEmpty { null })
+        if (parts.any { !HTTPS.matches(it) }) {
+            throw ResponseStatusException(HttpStatus.BAD_REQUEST, "a photo and its credit page must be https:// addresses")
+        }
+        return parts.joinToString(" ")
     }
 
     private fun open(): List<Question> {

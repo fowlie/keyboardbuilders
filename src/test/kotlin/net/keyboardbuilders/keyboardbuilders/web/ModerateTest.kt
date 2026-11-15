@@ -81,6 +81,43 @@ class ModerateTest {
         answer("photo:temper:def456", "y").andExpect { status { isBadRequest() } }
     }
 
+    // -- a photo by URL --------------------------------------------------------------------
+
+    private fun photoByUrl(id: String, image: String, page: String? = null) = mockMvc.post("/moderation/answer") {
+        with(moderator); with(csrf()); param("id", id); param("image", image)
+        if (page != null) param("page", page)
+    }
+
+    private fun stored(id: String) = db.sql("SELECT reply FROM moderation_answer WHERE question_id = ?")
+        .param(id).query(String::class.java).optional().orElse(null)
+
+    @Test
+    fun `a photo question offers a URL field, other questions do not`() {
+        assertTrue("name=\"image\"" in page("photo:temper:def456"))
+        assertFalse("name=\"image\"" in page("discovery:raeedcho/example:abc123"))
+    }
+
+    @Test
+    fun `a photo URL is stored as the reply the bot reads, with its credit page if given`() {
+        photoByUrl("photo:temper:def456", "https://example.com/temper.jpg").andExpect { status { is3xxRedirection() } }
+        assertEquals("https://example.com/temper.jpg", stored("photo:temper:def456"))
+
+        photoByUrl("photo:temper:def456", "https://example.com/b.jpg", "https://reddit.com/r/x/1").andExpect { status { is3xxRedirection() } }
+        assertEquals("https://example.com/b.jpg https://reddit.com/r/x/1", stored("photo:temper:def456"))
+    }
+
+    @Test
+    fun `a photo URL must be https`() {
+        photoByUrl("photo:temper:def456", "not a url").andExpect { status { isBadRequest() } }
+        photoByUrl("photo:temper:def456", "http://example.com/a.jpg").andExpect { status { isBadRequest() } }
+        photoByUrl("photo:temper:def456", "https://example.com/a.jpg", "javascript:alert(1)").andExpect { status { isBadRequest() } }
+    }
+
+    @Test
+    fun `a URL is not an answer to anything but a photo question`() {
+        photoByUrl("discovery:raeedcho/example:abc123", "https://example.com/a.jpg").andExpect { status { isBadRequest() } }
+    }
+
     @Test
     fun `an answer to a question the file does not hold is refused`() {
         answer("discovery:nobody/nothing:000", "y").andExpect { status { isBadRequest() } }
