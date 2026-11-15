@@ -159,3 +159,12 @@ documentation = ["MIT"]
 verdict       = "confirmed"
 signal        = "human"
 note          = "Read 2026-11-09: one root LICENSE, MIT, and the README's License section says \"MIT, see `LICENSE`\" for the whole repo. The OpenStreetMap art on the PCB's back is ODbL data, credited in the README; it is artwork, not a licence on the design."
+
+[[entry]]
+repo          = "raeedcho/temper"
+hardware      = ["CERN-OHL-P-2.0"]
+firmware      = []
+documentation = ["CERN-OHL-P-2.0"]
+verdict       = "confirmed"
+signal        = "human"
+note          = "Read 2026-11-15: one root LICENSE, CERN-OHL-P v2, covering the repo, which holds the PCB, case and README. The firmware is not in this repo: it is the shield in raeedcho/temper-zmk-config, which states no licence, so firmware is Unstated."

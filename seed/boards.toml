@@ -5477,3 +5477,13 @@ name     = "Hem"
 verdict  = "confirmed"
 signal   = "human"
 note     = "2026-11-09. The repo's one board: 67 switch footprints (56 `SW_Cherry_MX_1.00u_PCB` plus the wider keys), 67 diodes, an RP2040 -- the record's 67 on `LAYOUT_65_ansi`."
+
+[[entry]]
+tree     = "temper"
+id       = "temper"
+source   = "raeedcho/temper"
+boards   = ["pcb/temper.kicad_pcb"]
+name     = "Temper"
+verdict  = "confirmed"
+signal   = "human"
+note     = "2026-11-15. One reversible PCB used for both halves: 18 `Kailh_socket_PG1350_reversible` footprints and 18 diodes, the shield's 36 keys on 2 x 18. `case/top-plate/temper-topplate.kicad_pcb` is a plate, not a board."

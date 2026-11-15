@@ -2625,6 +2625,13 @@
    "keys": 64
   }
  },
+ "temper": {
+  "pcb/temper.kicad_pcb": {
+   "diodes": 18,
+   "exposed": 0,
+   "keys": 18
+  }
+ },
  "tenkey-plusplus": {
   "kicad/tenkey_plusplus.kicad_pcb": {
    "diodes": 21,

@@ -2027,6 +2027,12 @@
   ],
   "repo": "gregandcin/teaqueen"
  },
+ "temper": {
+  "paths": [
+   "pcb/temper.kicad_pcb"
+  ],
+  "repo": "raeedcho/temper"
+ },
  "tenkey-plusplus": {
   "paths": [
    "kicad/tenkey_plusplus.kicad_pcb"

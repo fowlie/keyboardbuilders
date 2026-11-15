@@ -1871,6 +1871,12 @@
   "mm": 19.05,
   "pitch": "mx_19.05"
  },
+ "raeedcho/temper\tpcb/temper.kicad_pcb": {
+  "confidence": 0.83,
+  "keys": 18,
+  "mm": 17.0,
+  "pitch": "choc_18x17"
+ },
  "ramonimbao/Herringbone\tTH75.kicad_pcb": {
   "confidence": 0.96,
   "keys": 73,

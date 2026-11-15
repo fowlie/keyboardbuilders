@@ -115,3 +115,12 @@ ref     = "main"
 local   = "~/code/marcocampione-hem-keyboard"
 records = "firmware"
 note    = "2026-11-09, found by discover_repos.py (backlog #105) and added on the owner's go-ahead. The hardware repo carries its own QMK definition at firmware/hem/keyboard.json with no `keyboards/` folder above it, so the tree names its record folder outright (`records`). Head 3e37f69 (2026-10-13)."
+
+[[entry]]
+id      = "temper"
+reader  = "zmk"
+url     = "https://github.com/raeedcho/temper-zmk-config"
+ref     = "main"
+local   = "~/code/raeedcho-temper-zmk-config"
+records = "boards/shields"
+note    = "2026-11-15, added on the owner's request. Temper's ZMK shield was never submitted upstream; it lives in the designer's own config repo at boards/shields/temper, so the tree names that folder outright (`records`), the ZMK twin of `hem`. Head ff0778e (2025-08-08)."

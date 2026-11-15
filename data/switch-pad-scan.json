@@ -7722,6 +7722,25 @@
   },
   "unnamed": {}
  },
+ "raeedcho/temper\tpcb/temper.kicad_pcb": {
+  "accepts": {
+   "dumta:Kailh_socket_PG1350_reversible\tchoc": 18
+  },
+  "drills": {},
+  "kinds": {
+   "socket": 18
+  },
+  "names": {
+   "dumta:Kailh_socket_PG1350_reversible\tsocket\tsmd\tchoc": 18
+  },
+  "positions": {
+   "choc": 18
+  },
+  "sockets": {
+   "choc": 18
+  },
+  "unnamed": {}
+ },
  "ramonimbao/Herringbone\tTH75.kicad_pcb": {
   "accepts": {
    "MX_Only:MXOnly-1.25U-NoLED\tmillmax+solder": 5,

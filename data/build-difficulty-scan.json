@@ -3683,6 +3683,16 @@
   ]
  },
  {
+  "slug": "temper",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "diode"
+  ],
+  "footprints": [
+   "d_smd_th"
+  ]
+ },
+ {
   "slug": "tenkey-plusplus",
   "hardest": "smd_fine",
   "driven_by": [

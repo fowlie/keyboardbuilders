@@ -7246,3 +7246,16 @@ stated   = "https://github.com/marcocampione/Hem-keyboard"
 signal   = "dev-seed"
 verdict  = "confirmed"
 note     = "Found on GitHub by discover_repos.py, created 2026-10-13; the owner said go ahead in a dev session. The record is `firmware/hem` in the hardware repo itself: 67 keys on `LAYOUT_65_ansi`, RP2040, COL2ROW. Its `manufacturer`/`maintainer` read `b4ym4x`, not the repo owner; the README, LICENSE (\"Copyright (c) 2026 Marco Campione\") and board are all in this repo, so it is the source either way."
+
+# TEMPER, 2026-11-15: the first ZMK design whose shield lives outside upstream ZMK, in
+# the designer's own config repo (seed/trees.toml `temper`).
+[[entry]]
+tree     = "temper"
+id       = "temper"
+name     = "Temper"
+source   = "raeedcho/temper"
+path     = false
+stated   = "https://github.com/raeedcho/temper"
+signal   = "dev-seed"
+verdict  = "confirmed"
+note     = "Added on the owner's request. The firmware is the `temper` shield in raeedcho/temper-zmk-config (36 keys, split, requires pro_micro); the hardware repo raeedcho/temper holds the PCB, the README and the LICENSE, so it is the source. The README calls it a chocofi modification: power switch, battery pads, nice!view footprint, no TRRS."
