@@ -65,3 +65,247 @@ ancestors = [{kind = "held", slug = "chocofi"}]
 verdict   = "confirmed"
 signal    = "human"
 note      = "raeedcho/temper's README, first line: \"a split, wireless-only mechanical keyboard fashioned after the chocofi keyboard\", with a section \"List of changes from original chocofi\". Owner asked for the edge 2026-11-15."
+
+# README credits, 2026-11-15: found by a phrase scan of data/readme-scan.json, each read by
+# the agent; the owner approved the batch without reviewing row by row ("users will report
+# if wrong"). Where the README links a repo holding several held designs, every one is credited.
+
+[[entry]]
+slug      = "atreyu"
+name      = "atreyu"
+ancestors = [{kind = "external", name = "Atreis", url = "https://github.com/dekonnection/atreis"}]
+verdict   = "confirmed"
+signal    = "human"
+note      = "climent/atreyu README: \"Based on Dekonnection's Atreis keyboard design files.\" Atreis is not in the corpus."
+
+[[entry]]
+slug      = "atreyu-v2-choc"
+name      = "atreyu v2 choc"
+ancestors = [{kind = "external", name = "Atreis", url = "https://github.com/dekonnection/atreis"}]
+verdict   = "confirmed"
+signal    = "human"
+note      = "climent/atreyu README: \"Based on Dekonnection's Atreis keyboard design files.\" Atreis is not in the corpus."
+
+[[entry]]
+slug      = "bartlepslit"
+name      = "bartlepslit"
+ancestors = [{kind = "held", slug = "cheapino"}]
+verdict   = "confirmed"
+signal    = "human"
+note      = "README: \"Bartlesplit is based on Cheapino by Tompi\" (links tompi/cheapino)."
+
+[[entry]]
+slug      = "choc-v"
+name      = "choc V"
+ancestors = [{kind = "held", slug = "horizon-choc"}, {kind = "held", slug = "horizon-mx"}]
+verdict   = "confirmed"
+signal    = "human"
+note      = "README: \"based on the Horizon construction\" (links skarrmann/horizon, which holds both Horizon boards)."
+
+[[entry]]
+slug      = "corne-cherry-v4"
+name      = "Corne Cherry v4"
+ancestors = [{kind = "held", slug = "helix"}]
+verdict   = "confirmed"
+signal    = "human"
+note      = "foostan/crkbd README: \"based on Helix\" (links MakotoKurauchi/helix)."
+
+[[entry]]
+slug      = "corne-chocolate-v4"
+name      = "Corne Chocolate v4"
+ancestors = [{kind = "held", slug = "helix"}]
+verdict   = "confirmed"
+signal    = "human"
+note      = "foostan/crkbd README: \"based on Helix\" (links MakotoKurauchi/helix)."
+
+[[entry]]
+slug      = "elcantorhs"
+name      = "ELCANTORHS"
+ancestors = [{kind = "held", slug = "cantor"}]
+verdict   = "confirmed"
+signal    = "human"
+note      = "README: \"It is based on the popular cantor\" (links diepala/cantor)."
+
+[[entry]]
+slug      = "jiran-cherry"
+name      = "jiran cherry"
+ancestors = [{kind = "external", name = "Jian", url = "https://github.com/KGOH/Jian-Info"}]
+verdict   = "confirmed"
+signal    = "human"
+note      = "ladniy/jiran README: \"Based on the Jian keyboard.\" Jian is not in the corpus."
+
+[[entry]]
+slug      = "jiran-classic"
+name      = "jiran classic"
+ancestors = [{kind = "external", name = "Jian", url = "https://github.com/KGOH/Jian-Info"}]
+verdict   = "confirmed"
+signal    = "human"
+note      = "ladniy/jiran README: \"Based on the Jian keyboard.\" Jian is not in the corpus."
+
+[[entry]]
+slug      = "jiran-hotswap"
+name      = "jiran hotswap"
+ancestors = [{kind = "external", name = "Jian", url = "https://github.com/KGOH/Jian-Info"}]
+verdict   = "confirmed"
+signal    = "human"
+note      = "ladniy/jiran README: \"Based on the Jian keyboard.\" Jian is not in the corpus."
+
+[[entry]]
+slug      = "klor"
+name      = "KLOR"
+ancestors = [{kind = "held", slug = "sofle-v1"}, {kind = "held", slug = "sofle-choc"}]
+verdict   = "confirmed"
+signal    = "human"
+note      = "README, CREDITS: \"The KLORs hardware is based on the Sofle by Josef Adamcik\" (links josefadamcik/SofleKeyboard, which holds sofle-v1 and sofle-choc)."
+
+[[entry]]
+slug      = "lancer-hotswap"
+name      = "lancer hotswap"
+ancestors = [{kind = "held", slug = "la-nc"}]
+verdict   = "confirmed"
+signal    = "human"
+note      = "README: \"It is a direct successor to la_nc\" (links subrezon/la_nc)."
+
+[[entry]]
+slug      = "lime"
+name      = "Lime"
+ancestors = [{kind = "held", slug = "lily58"}, {kind = "held", slug = "lily58-lite-rev3"}, {kind = "held", slug = "lily58-pro"}, {kind = "held", slug = "corne-cherry-v4"}, {kind = "held", slug = "corne-chocolate-v4"}, {kind = "held", slug = "helix"}, {kind = "held", slug = "sofle-v1"}, {kind = "held", slug = "sofle-choc"}]
+verdict   = "confirmed"
+signal    = "human"
+note      = "README: \"Based on Lily58, Corne, Helix and Sofle keyboards.\" (each linked)."
+
+[[entry]]
+slug      = "mikeneko-65"
+name      = "mikeneko 65"
+ancestors = [{kind = "held", slug = "bakeneko-65"}]
+verdict   = "confirmed"
+signal    = "human"
+note      = "README: \"This project was forked from kkatano's Bakeneko65.\""
+
+[[entry]]
+slug      = "morizon-choc"
+name      = "morizon choc"
+ancestors = [{kind = "held", slug = "horizon-choc"}, {kind = "held", slug = "horizon-mx"}]
+verdict   = "confirmed"
+signal    = "human"
+note      = "README: \"This project is a direct modification of the Horizon project.\""
+
+[[entry]]
+slug      = "morizon-mx"
+name      = "morizon mx"
+ancestors = [{kind = "held", slug = "horizon-choc"}, {kind = "held", slug = "horizon-mx"}]
+verdict   = "confirmed"
+signal    = "human"
+note      = "README: \"This project is a direct modification of the Horizon project.\""
+
+[[entry]]
+slug      = "num-discipline"
+name      = "Num Discipline"
+ancestors = [{kind = "held", slug = "discipline"}]
+verdict   = "confirmed"
+signal    = "human"
+note      = "README: \"A modified version of the great looking Discipline through hole keyboard design by coseyfannitutti\"."
+
+[[entry]]
+slug      = "piantor"
+name      = "piantor"
+ancestors = [{kind = "held", slug = "cantor"}]
+verdict   = "confirmed"
+signal    = "human"
+note      = "README: \"It is based on the Cantor Keyboard\" (links diepala/cantor)."
+
+[[entry]]
+slug      = "rhymestone"
+name      = "Rhymestone"
+ancestors = [{kind = "held", slug = "corne-cherry-v4"}, {kind = "held", slug = "corne-chocolate-v4"}, {kind = "held", slug = "helix"}]
+verdict   = "confirmed"
+signal    = "human"
+note      = "marksard/keyboards README, Rhymestone section: \"It is based on The crkbd and The Helix keyboard.\""
+
+[[entry]]
+slug      = "sofle-choc"
+name      = "Sofle Choc"
+ancestors = [{kind = "held", slug = "lily58"}, {kind = "held", slug = "lily58-lite-rev3"}, {kind = "held", slug = "lily58-pro"}, {kind = "held", slug = "corne-cherry-v4"}, {kind = "held", slug = "corne-chocolate-v4"}, {kind = "held", slug = "helix"}]
+verdict   = "confirmed"
+signal    = "human"
+note      = "josefadamcik/SofleKeyboard README: \"Based on Lily58, Corne and Helix keyboards.\" Same repo as sofle-v1."
+
+[[entry]]
+slug      = "sofle-pico"
+name      = "Sofle Pico"
+ancestors = [{kind = "held", slug = "sofle-choc"}]
+verdict   = "confirmed"
+signal    = "human"
+note      = "README: \"The Sofle Pico is based on the excellent Sofle Choc designed by Brian Low.\""
+
+[[entry]]
+slug      = "sofle-v1"
+name      = "Sofle v1"
+ancestors = [{kind = "held", slug = "lily58"}, {kind = "held", slug = "lily58-lite-rev3"}, {kind = "held", slug = "lily58-pro"}, {kind = "held", slug = "corne-cherry-v4"}, {kind = "held", slug = "corne-chocolate-v4"}, {kind = "held", slug = "helix"}]
+verdict   = "confirmed"
+signal    = "human"
+note      = "josefadamcik/SofleKeyboard README: \"Based on Lily58, Corne and Helix keyboards.\""
+
+[[entry]]
+slug      = "spacetime"
+name      = "spacetime"
+ancestors = [{kind = "held", slug = "helix"}]
+verdict   = "confirmed"
+signal    = "human"
+note      = "README: \"based on the Half n Half, ErgoDox and Helix\". Only Helix is held; Half n Half and ErgoDox carry no link in the sentence."
+
+[[entry]]
+slug      = "sweep-2"
+name      = "Sweep 2"
+ancestors = [{kind = "held", slug = "ferris-0-1-base"}, {kind = "held", slug = "ferris-0-1-compact"}, {kind = "held", slug = "ferris-0-1-high"}, {kind = "held", slug = "ferris-0-1-low"}, {kind = "held", slug = "ferris-0-2-bling"}, {kind = "held", slug = "ferris-0-2-compact"}, {kind = "held", slug = "ferris-0-2-high"}, {kind = "held", slug = "ferris-0-2-mini"}]
+verdict   = "confirmed"
+signal    = "human"
+note      = "davidphilipbarr/Sweep README: \"Sweep is a version of the more fabulous Ferris\" (links pierrechevalier83/ferris, which holds all eight Ferris boards)."
+
+[[entry]]
+slug      = "sweep-bling-lp"
+name      = "Sweep Bling LP"
+ancestors = [{kind = "held", slug = "ferris-0-1-base"}, {kind = "held", slug = "ferris-0-1-compact"}, {kind = "held", slug = "ferris-0-1-high"}, {kind = "held", slug = "ferris-0-1-low"}, {kind = "held", slug = "ferris-0-2-bling"}, {kind = "held", slug = "ferris-0-2-compact"}, {kind = "held", slug = "ferris-0-2-high"}, {kind = "held", slug = "ferris-0-2-mini"}]
+verdict   = "confirmed"
+signal    = "human"
+note      = "davidphilipbarr/Sweep README: \"Sweep is a version of the more fabulous Ferris\" (links pierrechevalier83/ferris, which holds all eight Ferris boards)."
+
+[[entry]]
+slug      = "sweep-bling-mx"
+name      = "Sweep Bling MX"
+ancestors = [{kind = "held", slug = "ferris-0-1-base"}, {kind = "held", slug = "ferris-0-1-compact"}, {kind = "held", slug = "ferris-0-1-high"}, {kind = "held", slug = "ferris-0-1-low"}, {kind = "held", slug = "ferris-0-2-bling"}, {kind = "held", slug = "ferris-0-2-compact"}, {kind = "held", slug = "ferris-0-2-high"}, {kind = "held", slug = "ferris-0-2-mini"}]
+verdict   = "confirmed"
+signal    = "human"
+note      = "davidphilipbarr/Sweep README: \"Sweep is a version of the more fabulous Ferris\" (links pierrechevalier83/ferris, which holds all eight Ferris boards)."
+
+[[entry]]
+slug      = "sweep-half-swept"
+name      = "Sweep Half Swept"
+ancestors = [{kind = "held", slug = "ferris-0-1-base"}, {kind = "held", slug = "ferris-0-1-compact"}, {kind = "held", slug = "ferris-0-1-high"}, {kind = "held", slug = "ferris-0-1-low"}, {kind = "held", slug = "ferris-0-2-bling"}, {kind = "held", slug = "ferris-0-2-compact"}, {kind = "held", slug = "ferris-0-2-high"}, {kind = "held", slug = "ferris-0-2-mini"}]
+verdict   = "confirmed"
+signal    = "human"
+note      = "davidphilipbarr/Sweep README: \"Sweep is a version of the more fabulous Ferris\" (links pierrechevalier83/ferris, which holds all eight Ferris boards)."
+
+[[entry]]
+slug      = "sweep-high"
+name      = "Sweep High"
+ancestors = [{kind = "held", slug = "ferris-0-1-base"}, {kind = "held", slug = "ferris-0-1-compact"}, {kind = "held", slug = "ferris-0-1-high"}, {kind = "held", slug = "ferris-0-1-low"}, {kind = "held", slug = "ferris-0-2-bling"}, {kind = "held", slug = "ferris-0-2-compact"}, {kind = "held", slug = "ferris-0-2-high"}, {kind = "held", slug = "ferris-0-2-mini"}]
+verdict   = "confirmed"
+signal    = "human"
+note      = "davidphilipbarr/Sweep README: \"Sweep is a version of the more fabulous Ferris\" (links pierrechevalier83/ferris, which holds all eight Ferris boards)."
+
+[[entry]]
+slug      = "sweep-high-m"
+name      = "Sweep High M"
+ancestors = [{kind = "held", slug = "ferris-0-1-base"}, {kind = "held", slug = "ferris-0-1-compact"}, {kind = "held", slug = "ferris-0-1-high"}, {kind = "held", slug = "ferris-0-1-low"}, {kind = "held", slug = "ferris-0-2-bling"}, {kind = "held", slug = "ferris-0-2-compact"}, {kind = "held", slug = "ferris-0-2-high"}, {kind = "held", slug = "ferris-0-2-mini"}]
+verdict   = "confirmed"
+signal    = "human"
+note      = "davidphilipbarr/Sweep README: \"Sweep is a version of the more fabulous Ferris\" (links pierrechevalier83/ferris, which holds all eight Ferris boards)."
+
+[[entry]]
+slug      = "swoop-mx"
+name      = "swoop mx"
+ancestors = [{kind = "held", slug = "sweep-2"}, {kind = "held", slug = "sweep-bling-lp"}, {kind = "held", slug = "sweep-bling-mx"}, {kind = "held", slug = "sweep-half-swept"}, {kind = "held", slug = "sweep-high"}, {kind = "held", slug = "sweep-high-m"}]
+verdict   = "confirmed"
+signal    = "human"
+note      = "README: \"A WIP fork of David Barr's Sweep\" (links davidphilipbarr/Sweep, which holds all six Sweeps)."

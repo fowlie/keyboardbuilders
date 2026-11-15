@@ -2020,6 +2020,13 @@
    "heightMm": 145.34,
    "copperLayers": 2
   },
+  "basedOn": [
+   {
+    "kind": "external",
+    "name": "Atreis",
+    "url": "https://github.com/dekonnection/atreis"
+   }
+  ],
   "family": "Atreyu"
  },
  {
@@ -2103,6 +2110,13 @@
    "heightMm": 138.77,
    "copperLayers": 2
   },
+  "basedOn": [
+   {
+    "kind": "external",
+    "name": "Atreis",
+    "url": "https://github.com/dekonnection/atreis"
+   }
+  ],
   "family": "Atreyu"
  },
  {
@@ -2962,7 +2976,13 @@
   "pcb": {
    "drawn": "both halves",
    "copperLayers": 2
-  }
+  },
+  "basedOn": [
+   {
+    "kind": "held",
+    "slug": "cheapino"
+   }
+  ]
  },
  {
   "name": "basketweave",
@@ -4574,7 +4594,17 @@
    "widthMm": 212.5,
    "heightMm": 78.72,
    "copperLayers": 2
-  }
+  },
+  "basedOn": [
+   {
+    "kind": "held",
+    "slug": "horizon-choc"
+   },
+   {
+    "kind": "held",
+    "slug": "horizon-mx"
+   }
+  ]
  },
  {
   "name": "Choc V2 Env KB65",
@@ -5591,6 +5621,12 @@
    "drawn": "both halves",
    "copperLayers": 2
   },
+  "basedOn": [
+   {
+    "kind": "held",
+    "slug": "helix"
+   }
+  ],
   "family": "Corne"
  },
  {
@@ -5700,6 +5736,12 @@
    "drawn": "both halves",
    "copperLayers": 2
   },
+  "basedOn": [
+   {
+    "kind": "held",
+    "slug": "helix"
+   }
+  ],
   "family": "Corne"
  },
  {
@@ -8538,7 +8580,13 @@
    "widthMm": 153.68,
    "heightMm": 103.84,
    "copperLayers": 2
-  }
+  },
+  "basedOn": [
+   {
+    "kind": "held",
+    "slug": "cantor"
+   }
+  ]
  },
  {
   "name": "elephant42",
@@ -13209,6 +13257,13 @@
    "heightMm": 104.73,
    "copperLayers": 2
   },
+  "basedOn": [
+   {
+    "kind": "external",
+    "name": "Jian",
+    "url": "https://github.com/KGOH/Jian-Info"
+   }
+  ],
   "family": "Jiran"
  },
  {
@@ -13301,6 +13356,13 @@
    "heightMm": 104.73,
    "copperLayers": 2
   },
+  "basedOn": [
+   {
+    "kind": "external",
+    "name": "Jian",
+    "url": "https://github.com/KGOH/Jian-Info"
+   }
+  ],
   "family": "Jiran"
  },
  {
@@ -13385,6 +13447,13 @@
    "heightMm": 104.73,
    "copperLayers": 2
   },
+  "basedOn": [
+   {
+    "kind": "external",
+    "name": "Jian",
+    "url": "https://github.com/KGOH/Jian-Info"
+   }
+  ],
   "family": "Jiran"
  },
  {
@@ -15105,7 +15174,17 @@
    "widthMm": 159.97,
    "heightMm": 118.19,
    "copperLayers": 2
-  }
+  },
+  "basedOn": [
+   {
+    "kind": "held",
+    "slug": "sofle-v1"
+   },
+   {
+    "kind": "held",
+    "slug": "sofle-choc"
+   }
+  ]
  },
  {
   "name": "Kobold",
@@ -15642,6 +15721,12 @@
     "widthMm": 209.55,
     "heightMm": 76.2,
     "copperLayers": 2
+   }
+  ],
+  "basedOn": [
+   {
+    "kind": "held",
+    "slug": "la-nc"
    }
   ]
  },
@@ -16256,7 +16341,41 @@
    "widthMm": 134.64,
    "heightMm": 109.92,
    "copperLayers": 2
-  }
+  },
+  "basedOn": [
+   {
+    "kind": "held",
+    "slug": "lily58"
+   },
+   {
+    "kind": "held",
+    "slug": "lily58-lite-rev3"
+   },
+   {
+    "kind": "held",
+    "slug": "lily58-pro"
+   },
+   {
+    "kind": "held",
+    "slug": "corne-cherry-v4"
+   },
+   {
+    "kind": "held",
+    "slug": "corne-chocolate-v4"
+   },
+   {
+    "kind": "held",
+    "slug": "helix"
+   },
+   {
+    "kind": "held",
+    "slug": "sofle-v1"
+   },
+   {
+    "kind": "held",
+    "slug": "sofle-choc"
+   }
+  ]
  },
  {
   "name": "litl",
@@ -17305,6 +17424,12 @@
     "heightMm": 95.28,
     "copperLayers": 2
    }
+  ],
+  "basedOn": [
+   {
+    "kind": "held",
+    "slug": "bakeneko-65"
+   }
   ]
  },
  {
@@ -17952,6 +18077,16 @@
    "heightMm": 85.0,
    "copperLayers": 2
   },
+  "basedOn": [
+   {
+    "kind": "held",
+    "slug": "horizon-choc"
+   },
+   {
+    "kind": "held",
+    "slug": "horizon-mx"
+   }
+  ],
   "family": "Morizon"
  },
  {
@@ -18031,6 +18166,16 @@
    "heightMm": 95.0,
    "copperLayers": 2
   },
+  "basedOn": [
+   {
+    "kind": "held",
+    "slug": "horizon-choc"
+   },
+   {
+    "kind": "held",
+    "slug": "horizon-mx"
+   }
+  ],
   "family": "Morizon"
  },
  {
@@ -18845,7 +18990,13 @@
    "widthMm": 371.57,
    "heightMm": 127.57,
    "copperLayers": 2
-  }
+  },
+  "basedOn": [
+   {
+    "kind": "held",
+    "slug": "discipline"
+   }
+  ]
  },
  {
   "name": "numpad",
@@ -20120,7 +20271,13 @@
    "widthMm": 138.8,
    "heightMm": 89.91,
    "copperLayers": 2
-  }
+  },
+  "basedOn": [
+   {
+    "kind": "held",
+    "slug": "cantor"
+   }
+  ]
  },
  {
   "name": "Pica40",
@@ -22429,7 +22586,21 @@
    "widthMm": 95.26,
    "heightMm": 95.25,
    "copperLayers": 2
-  }
+  },
+  "basedOn": [
+   {
+    "kind": "held",
+    "slug": "corne-cherry-v4"
+   },
+   {
+    "kind": "held",
+    "slug": "corne-chocolate-v4"
+   },
+   {
+    "kind": "held",
+    "slug": "helix"
+   }
+  ]
  },
  {
   "name": "Romac Macropad",
@@ -24176,6 +24347,32 @@
    "heightMm": 111.75,
    "copperLayers": 2
   },
+  "basedOn": [
+   {
+    "kind": "held",
+    "slug": "lily58"
+   },
+   {
+    "kind": "held",
+    "slug": "lily58-lite-rev3"
+   },
+   {
+    "kind": "held",
+    "slug": "lily58-pro"
+   },
+   {
+    "kind": "held",
+    "slug": "corne-cherry-v4"
+   },
+   {
+    "kind": "held",
+    "slug": "corne-chocolate-v4"
+   },
+   {
+    "kind": "held",
+    "slug": "helix"
+   }
+  ],
   "family": "Sofle"
  },
  {
@@ -24266,7 +24463,13 @@
    "widthMm": 145.42,
    "heightMm": 116.3,
    "copperLayers": 2
-  }
+  },
+  "basedOn": [
+   {
+    "kind": "held",
+    "slug": "sofle-choc"
+   }
+  ]
  },
  {
   "name": "Sofle v1",
@@ -24359,6 +24562,32 @@
    "heightMm": 109.25,
    "copperLayers": 2
   },
+  "basedOn": [
+   {
+    "kind": "held",
+    "slug": "lily58"
+   },
+   {
+    "kind": "held",
+    "slug": "lily58-lite-rev3"
+   },
+   {
+    "kind": "held",
+    "slug": "lily58-pro"
+   },
+   {
+    "kind": "held",
+    "slug": "corne-cherry-v4"
+   },
+   {
+    "kind": "held",
+    "slug": "corne-chocolate-v4"
+   },
+   {
+    "kind": "held",
+    "slug": "helix"
+   }
+  ],
   "family": "Sofle"
  },
  {
@@ -24693,7 +24922,13 @@
    "widthMm": 158.0,
    "heightMm": 114.82,
    "copperLayers": 2
-  }
+  },
+  "basedOn": [
+   {
+    "kind": "held",
+    "slug": "helix"
+   }
+  ]
  },
  {
   "name": "span",
@@ -26151,6 +26386,40 @@
    "drawn": "both halves",
    "copperLayers": 2
   },
+  "basedOn": [
+   {
+    "kind": "held",
+    "slug": "ferris-0-1-base"
+   },
+   {
+    "kind": "held",
+    "slug": "ferris-0-1-compact"
+   },
+   {
+    "kind": "held",
+    "slug": "ferris-0-1-high"
+   },
+   {
+    "kind": "held",
+    "slug": "ferris-0-1-low"
+   },
+   {
+    "kind": "held",
+    "slug": "ferris-0-2-bling"
+   },
+   {
+    "kind": "held",
+    "slug": "ferris-0-2-compact"
+   },
+   {
+    "kind": "held",
+    "slug": "ferris-0-2-high"
+   },
+   {
+    "kind": "held",
+    "slug": "ferris-0-2-mini"
+   }
+  ],
   "family": "Sweep"
  },
  {
@@ -26225,6 +26494,40 @@
    "drawn": "both halves",
    "copperLayers": 2
   },
+  "basedOn": [
+   {
+    "kind": "held",
+    "slug": "ferris-0-1-base"
+   },
+   {
+    "kind": "held",
+    "slug": "ferris-0-1-compact"
+   },
+   {
+    "kind": "held",
+    "slug": "ferris-0-1-high"
+   },
+   {
+    "kind": "held",
+    "slug": "ferris-0-1-low"
+   },
+   {
+    "kind": "held",
+    "slug": "ferris-0-2-bling"
+   },
+   {
+    "kind": "held",
+    "slug": "ferris-0-2-compact"
+   },
+   {
+    "kind": "held",
+    "slug": "ferris-0-2-high"
+   },
+   {
+    "kind": "held",
+    "slug": "ferris-0-2-mini"
+   }
+  ],
   "family": "Sweep"
  },
  {
@@ -26301,6 +26604,40 @@
    "heightMm": 95.15,
    "copperLayers": 2
   },
+  "basedOn": [
+   {
+    "kind": "held",
+    "slug": "ferris-0-1-base"
+   },
+   {
+    "kind": "held",
+    "slug": "ferris-0-1-compact"
+   },
+   {
+    "kind": "held",
+    "slug": "ferris-0-1-high"
+   },
+   {
+    "kind": "held",
+    "slug": "ferris-0-1-low"
+   },
+   {
+    "kind": "held",
+    "slug": "ferris-0-2-bling"
+   },
+   {
+    "kind": "held",
+    "slug": "ferris-0-2-compact"
+   },
+   {
+    "kind": "held",
+    "slug": "ferris-0-2-high"
+   },
+   {
+    "kind": "held",
+    "slug": "ferris-0-2-mini"
+   }
+  ],
   "family": "Sweep"
  },
  {
@@ -26378,6 +26715,40 @@
    "heightMm": 86.86,
    "copperLayers": 2
   },
+  "basedOn": [
+   {
+    "kind": "held",
+    "slug": "ferris-0-1-base"
+   },
+   {
+    "kind": "held",
+    "slug": "ferris-0-1-compact"
+   },
+   {
+    "kind": "held",
+    "slug": "ferris-0-1-high"
+   },
+   {
+    "kind": "held",
+    "slug": "ferris-0-1-low"
+   },
+   {
+    "kind": "held",
+    "slug": "ferris-0-2-bling"
+   },
+   {
+    "kind": "held",
+    "slug": "ferris-0-2-compact"
+   },
+   {
+    "kind": "held",
+    "slug": "ferris-0-2-high"
+   },
+   {
+    "kind": "held",
+    "slug": "ferris-0-2-mini"
+   }
+  ],
   "family": "Sweep"
  },
  {
@@ -26458,6 +26829,40 @@
    "drawn": "both halves",
    "copperLayers": 2
   },
+  "basedOn": [
+   {
+    "kind": "held",
+    "slug": "ferris-0-1-base"
+   },
+   {
+    "kind": "held",
+    "slug": "ferris-0-1-compact"
+   },
+   {
+    "kind": "held",
+    "slug": "ferris-0-1-high"
+   },
+   {
+    "kind": "held",
+    "slug": "ferris-0-1-low"
+   },
+   {
+    "kind": "held",
+    "slug": "ferris-0-2-bling"
+   },
+   {
+    "kind": "held",
+    "slug": "ferris-0-2-compact"
+   },
+   {
+    "kind": "held",
+    "slug": "ferris-0-2-high"
+   },
+   {
+    "kind": "held",
+    "slug": "ferris-0-2-mini"
+   }
+  ],
   "family": "Sweep"
  },
  {
@@ -26535,6 +26940,40 @@
    "heightMm": 95.15,
    "copperLayers": 2
   },
+  "basedOn": [
+   {
+    "kind": "held",
+    "slug": "ferris-0-1-base"
+   },
+   {
+    "kind": "held",
+    "slug": "ferris-0-1-compact"
+   },
+   {
+    "kind": "held",
+    "slug": "ferris-0-1-high"
+   },
+   {
+    "kind": "held",
+    "slug": "ferris-0-1-low"
+   },
+   {
+    "kind": "held",
+    "slug": "ferris-0-2-bling"
+   },
+   {
+    "kind": "held",
+    "slug": "ferris-0-2-compact"
+   },
+   {
+    "kind": "held",
+    "slug": "ferris-0-2-high"
+   },
+   {
+    "kind": "held",
+    "slug": "ferris-0-2-mini"
+   }
+  ],
   "family": "Sweep"
  },
  {
@@ -26945,6 +27384,32 @@
     "widthMm": 108.22,
     "heightMm": 97.79,
     "copperLayers": 2
+   }
+  ],
+  "basedOn": [
+   {
+    "kind": "held",
+    "slug": "sweep-2"
+   },
+   {
+    "kind": "held",
+    "slug": "sweep-bling-lp"
+   },
+   {
+    "kind": "held",
+    "slug": "sweep-bling-mx"
+   },
+   {
+    "kind": "held",
+    "slug": "sweep-half-swept"
+   },
+   {
+    "kind": "held",
+    "slug": "sweep-high"
+   },
+   {
+    "kind": "held",
+    "slug": "sweep-high-m"
    }
   ]
  },
