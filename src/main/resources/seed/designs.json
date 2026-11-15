@@ -3933,10 +3933,6 @@
   },
   "hostPort": null,
   "summary": "This is a modified version of the Cantor keyboard, designed by diepala.",
-  "wiring": {
-   "kind": "direct_pin",
-   "pins": 21
-  },
   "switchMounts": [
    "solder"
   ],
@@ -4719,12 +4715,6 @@
    ]
   },
   "hostPort": null,
-  "wiring": {
-   "kind": "matrix",
-   "rows": 4,
-   "cols": 6,
-   "diodes": "col_to_row"
-  },
   "extensions": [
    "display"
   ],
@@ -25231,12 +25221,6 @@
    ]
   },
   "hostPort": null,
-  "wiring": {
-   "kind": "matrix",
-   "rows": 4,
-   "cols": 5,
-   "diodes": "col_to_row"
-  },
   "switchMounts": [
    "millmax",
    "solder"

@@ -552,6 +552,18 @@ def firmware_ref(reg, row, with_url):
     return ref
 
 
+def wiring_is_its_own(ref):
+    """May this firmware ref's matrix be published as the design's own wiring?
+
+    NOT WHEN IT IS BORROWED. A `hardware` row runs another design's record (Forgejo
+    #22), and that record's `matrix_pins` or `kscan` describe the DONOR's board.
+    Chocofi runs Corne's ZMK shield, which scans 4 x 6; Chocofi's own PCB wires 5
+    columns, and published as 4 x 6 until 2026-11-15. The firmware still runs, so the
+    ref stays; only the wiring reading stops. `_borrowed` is joinery like `_tree`.
+    """
+    return not ref.get("_borrowed")
+
+
 def stated_keys(row, found):
     """A person's key count for this design, and the board's verdict on it.
 
@@ -1476,7 +1488,8 @@ def main():
             "sources": [f"https://github.com/{repo}"],
             # `fw`, not `row`: a hardware row publishes the firmware it borrows, so
             # `family` stays qmk/zmk and no consumer learns the word "hardware".
-            "firmware": [firmware_ref(reg, fw, args.firmware_url)],
+            "firmware": [dict(firmware_ref(reg, fw, args.firmware_url),
+                              **({"_borrowed": True} if fw is not row else {}))],
             "layouts": [{"keys": n} for n in counts],
             "switches": [SWITCH[f] for f in sorted(families) if f in SWITCH],
             # `null` where nothing could be measured. It is the one fact here that is
@@ -1991,7 +2004,7 @@ def main():
     for d in designs:
         resolved = None
         for ref in d["firmware"]:
-            if ref["family"] != "qmk" or not ref.get("path"):
+            if ref["family"] != "qmk" or not ref.get("path") or not wiring_is_its_own(ref):
                 continue
             found = qmk_metadata.wiring(ref["path"], reg.root(ref["_tree"]))
             if found is None:
@@ -2051,7 +2064,7 @@ def main():
             shield = shield_of(ref["_tree"], ref.get("shield") or "") if ref["family"] == "zmk" else None
             # A shield's `dir` is relative to the checkout of the tree it was read
             # from, so it is resolved there and nowhere else.
-            if not shield or not shield.get("dir"):
+            if not shield or not shield.get("dir") or not wiring_is_its_own(ref):
                 continue
             where = reg.local(ref["_tree"])/shield["dir"]
             found = (zmk_wiring.split_wiring(where, shield["id"]) if split else
@@ -2446,6 +2459,7 @@ def main():
         d.pop("board_repo", None)
         for ref in d["firmware"]:
             ref.pop("_tree", None)
+            ref.pop("_borrowed", None)
 
     out = REPO/args.out
     out.parent.mkdir(parents=True, exist_ok=True)

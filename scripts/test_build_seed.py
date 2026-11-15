@@ -174,6 +174,20 @@ measured_on = 2026-10-04
         self.assertEqual(build_seed.board_sizes("/nonexistent/board-sizes.toml"), ({}, {}))
 
 
+class BorrowedFirmwareWiring(unittest.TestCase):
+    """A design that borrows another's firmware does not inherit that board's wiring.
+
+    Chocofi runs Corne's ZMK shield, which scans 6 columns; Chocofi's own board wires 5.
+    """
+
+    def test_a_design_running_its_own_record_reads_its_wiring(self):
+        self.assertTrue(build_seed.wiring_is_its_own({"family": "zmk", "shield": "temper"}))
+
+    def test_a_borrowed_record_says_nothing_about_this_boards_wiring(self):
+        self.assertFalse(build_seed.wiring_is_its_own(
+            {"family": "zmk", "shield": "corne", "_borrowed": True}))
+
+
 class ZmkShieldsPerTree(unittest.TestCase):
     """A shield is looked up in its OWN tree: Temper's lives in its config repo."""
 
