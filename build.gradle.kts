@@ -60,6 +60,9 @@ dependencies {
 	implementation("io.github.wimdeblauwe:htmx-spring-boot:5.1.0")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("tools.jackson.module:jackson-module-kotlin")
+	// Backlog #117: the bot's questions are Markdown (the same text the GitHub issues held).
+	// HTML in them is escaped, since they quote READMEs written by strangers.
+	implementation("org.commonmark:commonmark:0.24.0")
 	developmentOnly("org.springframework.boot:spring-boot-devtools")
 	// Lets jte compile .kte templates at runtime under the `dev` profile, so a
 	// template edit is a browser refresh instead of a rebuild. `developmentOnly`

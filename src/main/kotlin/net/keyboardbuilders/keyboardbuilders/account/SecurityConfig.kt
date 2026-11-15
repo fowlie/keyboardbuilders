@@ -26,9 +26,13 @@ class SecurityConfig {
         val account = PathPatternRequestMatcher.withDefaults().matcher("/account/**")
         val accountRoot = PathPatternRequestMatcher.withDefaults().matcher("/account")
         val logout = PathPatternRequestMatcher.withDefaults().matcher("/logout")
+        // Backlog #117: the moderator queue. Signed in here; being a moderator is checked
+        // in ModerateController against the configured list.
+        val moderate = PathPatternRequestMatcher.withDefaults().matcher("/moderate")
+        val moderateAny = PathPatternRequestMatcher.withDefaults().matcher("/moderate/**")
         http
             .authorizeHttpRequests {
-                it.requestMatchers(accountRoot, account).authenticated()
+                it.requestMatchers(accountRoot, account, moderate, moderateAny).authenticated()
                 it.anyRequest().permitAll()
             }
             // Straight to GitHub, not Spring's own "choose a provider" page: there is one.
@@ -40,7 +44,7 @@ class SecurityConfig {
             // CSRF ONLY WHERE A SESSION MAKES A REQUEST POWERFUL. The heart buttons and the
             // /settings form are anonymous and write nothing tied to a person, and they post
             // without a token today; checking them would break them for no protection.
-            .csrf { it.requireCsrfProtectionMatcher { r -> r.method == "POST" && (account.matches(r) || logout.matches(r)) } }
+            .csrf { it.requireCsrfProtectionMatcher { r -> r.method == "POST" && (account.matches(r) || logout.matches(r) || moderateAny.matches(r)) } }
             // NO `no-store` ON EVERY RESPONSE. Spring Security's default would stop browsers
             // keeping /app.css, which is served without Cache-Control on purpose (Head.kt),
             // and it would override nothing the asset controllers set themselves.

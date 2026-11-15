@@ -1,0 +1,40 @@
+@import net.keyboardbuilders.keyboardbuilders.web.Head
+@import net.keyboardbuilders.keyboardbuilders.web.SiteUrl
+@import net.keyboardbuilders.keyboardbuilders.moderation.QuestionView
+@import org.springframework.security.web.csrf.CsrfToken
+@param head: Head
+@param site: SiteUrl
+@param question: QuestionView?
+@param remaining: Int
+@param csrf: CsrfToken
+
+<%--
+    Backlog #117: the intake bot's questions, one at a time (ModerateController). Same
+    frame as /account. bodyHtml is rendered by QuestionMarkdown with every raw HTML tag
+    escaped, which is why it may go out unescaped here. NO BACKTICKS anywhere in this
+    file -- one closes the raw string the page is written in.
+--%>
+@template.layout(head = head, site = site, content = @`
+    <article class="settings moderate">
+        <h1>Moderate</h1>
+        @if(question == null)
+            <section class="settings-card">
+                <h2>Nothing to answer</h2>
+                <p class="settings-q">The bot asks again after its next run.</p>
+            </section>
+        @else
+            <p class="settings-lede">${remaining} open</p>
+            <section class="settings-card">
+                <h2>${question.title}</h2>
+                <div class="moderate-body">$unsafe{question.bodyHtml}</div>
+                <form method="post" action="/moderate/answer" class="moderate-choices">
+                    <input type="hidden" name="${csrf.parameterName}" value="${csrf.token}">
+                    <input type="hidden" name="id" value="${question.id}">
+                    @for(choice in question.choices)
+                        <button type="submit" name="reply" value="${choice.reply}" class="settings-save">${choice.label}</button>
+                    @endfor
+                </form>
+            </section>
+        @endif
+    </article>
+`)

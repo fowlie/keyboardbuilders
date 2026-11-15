@@ -1,0 +1,12 @@
+{
+ "questions": [
+  {"id": "discovery:raeedcho/example:abc123", "kind": "discovery", "slug": "raeedcho/example",
+   "title": "Found: is raeedcho/example a keyboard design?",
+   "body": "**Is [raeedcho/example](https://github.com/raeedcho/example) a keyboard design the site should have?**\n\n> A split <script>alert(1)</script> keyboard\n\nCreated 2026-11-01",
+   "choices": [{"reply": "y", "label": "Yes"}, {"reply": "n", "label": "No"}]},
+  {"id": "photo:temper:def456", "kind": "photo", "slug": "temper",
+   "title": "Photo for Temper",
+   "body": "Which is an assembled Temper?\n\n![1](https://example.com/1.jpg)",
+   "choices": [{"reply": "1", "label": "1"}, {"reply": "none", "label": "None of these"}, {"reply": "skip", "label": "Skip"}]}
+ ]
+}
