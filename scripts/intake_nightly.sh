@@ -13,7 +13,7 @@
 #   4c. discover      GitHub repos created lately that hold a KiCad board and are not in
 #                     the corpus (discover_repos.py, backlog #105): tomorrow's questions
 #   5. commit         the derived files, and ONLY derived files, then push
-#   6. ask            open the day's questions (intake_ask.py, capped)
+#   6. ask            queue the day's questions on /moderate (intake_ask.py, capped)
 #
 # THE COMMIT IS DERIVED OUTPUT ONLY. Rulings arrive through intake_answer.py; this run
 # regenerates what follows from them. Anything else showing up in `git status` means a
@@ -103,9 +103,10 @@ main() {
     what="nothing changed, $designs_after designs"
   fi
 
-  asked=$(python3 scripts/intake_ask.py 2>>"$log" | tail -1) || {
+  # Backlog #117: the questions go to the site's moderator queue, not GitHub issues.
+  asked=$(python3 scripts/intake_ask.py --site-queue /var/lib/keyboardbuilders/moderation/questions.json 2>>"$log" | tail -1) || {
     notify high "Intake nightly FAILED at ask" "$(grep -v "^[[:space:]]*$" "$log" | tail -n 4 | cut -c1-160)"; exit 1; }
 
-  notify default "Intake nightly" "$what. $asked."
+  notify default "Intake nightly" "$what. $asked. https://keyboardbuilders.net/moderate"
 }
 main "$@"; exit
