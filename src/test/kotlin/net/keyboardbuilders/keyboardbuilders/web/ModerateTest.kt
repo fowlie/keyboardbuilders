@@ -31,24 +31,19 @@ class ModerateTest {
 
     @AfterEach fun clear() { db.sql("DELETE FROM moderation_answer").update() }
 
-    private fun page() = mockMvc.get("/moderate") { with(moderator) }
+    private fun page() = mockMvc.get("/moderation") { with(moderator) }
         .andExpect { status { isOk() } }.andReturn().response.contentAsString
 
-    private fun answer(id: String, reply: String) = mockMvc.post("/moderate/answer") {
+    private fun answer(id: String, reply: String) = mockMvc.post("/moderation/answer") {
         with(moderator); with(csrf()); param("id", id); param("reply", reply)
     }
 
     @Test
     fun `a visitor who is not signed in is sent to GitHub`() {
-        mockMvc.get("/moderate").andExpect {
+        mockMvc.get("/moderation").andExpect {
             status { is3xxRedirection() }
             redirectedUrl("/oauth2/authorization/github")
         }
-    }
-
-    @Test
-    fun `a signed-in user who is not a moderator is refused`() {
-        mockMvc.get("/moderate") { with(stranger) }.andExpect { status { isForbidden() } }
     }
 
     @Test
@@ -93,38 +88,47 @@ class ModerateTest {
 
     @Test
     fun `a stranger cannot answer`() {
-        mockMvc.post("/moderate/answer") {
+        mockMvc.post("/moderation/answer") {
             with(stranger); with(csrf()); param("id", "discovery:raeedcho/example:abc123"); param("reply", "y")
         }.andExpect { status { isForbidden() } }
     }
 
-    // -- the menu link ---------------------------------------------------------------------
+    // -- the footer link and the invitation ---------------------------------------------
 
     private fun home(vararg login: org.springframework.test.web.servlet.request.RequestPostProcessor) =
         mockMvc.get("/") { login.forEach { with(it) } }.andReturn().response.contentAsString
 
     @Test
-    fun `a moderator gets a Moderate link in the top menu`() {
-        assertTrue("href=\"/moderate\"" in home(moderator))
+    fun `every visitor gets a Moderation link in the footer, and no top-menu link`() {
+        for (html in listOf(home(), home(stranger), home(moderator))) {
+            val footer = html.substringAfter("<footer")
+            val top = html.substringBefore("<footer")
+            assertTrue("href=\"/moderation\"" in footer, "footer link")
+            assertFalse("href=\"/moderation\"" in top, "no top-menu link")
+        }
     }
 
     @Test
-    fun `nobody else does`() {
-        assertFalse("href=\"/moderate\"" in home(stranger), "a signed-in non-moderator")
-        assertFalse("href=\"/moderate\"" in home(), "a visitor")
+    fun `a signed-in user who is not a moderator is invited, not shown questions`() {
+        val html = mockMvc.get("/moderation") { with(stranger) }
+            .andExpect { status { isOk() } }.andReturn().response.contentAsString
+
+        assertTrue("invite-only" in html, html)
+        assertTrue("hello@keyboardbuilders.net" in html)
+        assertFalse("raeedcho/example" in html, "no question leaks to a non-moderator")
     }
 
     // -- browsing ------------------------------------------------------------------------
 
-    private fun page(id: String) = mockMvc.get("/moderate") { with(moderator); param("id", id) }
+    private fun page(id: String) = mockMvc.get("/moderation") { with(moderator); param("id", id) }
         .andExpect { status { isOk() } }.andReturn().response.contentAsString
 
     @Test
     fun `every open question is listed, linking to it`() {
         val html = page()
 
-        assertTrue("href=\"/moderate?id=discovery:raeedcho/example:abc123\"" in html, html)
-        assertTrue("href=\"/moderate?id=photo:temper:def456\"" in html, html)
+        assertTrue("href=\"/moderation?id=discovery:raeedcho/example:abc123\"" in html, html)
+        assertTrue("href=\"/moderation?id=photo:temper:def456\"" in html, html)
     }
 
     @Test
@@ -140,21 +144,21 @@ class ModerateTest {
         val first = page()
         val second = page("photo:temper:def456")
 
-        assertTrue("rel=\"next\" href=\"/moderate?id=photo:temper:def456\"" in first, first)
-        assertTrue("rel=\"prev\" href=\"/moderate?id=discovery:raeedcho/example:abc123\"" in second, second)
+        assertTrue("rel=\"next\" href=\"/moderation?id=photo:temper:def456\"" in first, first)
+        assertTrue("rel=\"prev\" href=\"/moderation?id=discovery:raeedcho/example:abc123\"" in second, second)
     }
 
     @Test
     fun `answering moves on to the question after it, not back to the top`() {
         answer("discovery:raeedcho/example:abc123", "y").andExpect {
-            redirectedUrl("/moderate?id=photo:temper:def456")
+            redirectedUrl("/moderation?id=photo:temper:def456")
         }
     }
 
     @Test
     fun `answering the last question goes back to the first one still open`() {
         answer("photo:temper:def456", "skip").andExpect {
-            redirectedUrl("/moderate?id=discovery:raeedcho/example:abc123")
+            redirectedUrl("/moderation?id=discovery:raeedcho/example:abc123")
         }
     }
 

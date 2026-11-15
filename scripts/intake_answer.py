@@ -261,7 +261,7 @@ class Run:
         tree, rid = choice["row"]["tree"], choice["row"]["id"]
         row = next(e for e in self.boards if e["tree"] == tree and e["id"] == rid)
         note = (f"the owner's reply to GitHub #{issue['number']} (intake bot, backlog #104)"
-                if issue["number"] else "a moderator on /moderate (intake bot, backlog #117)")
+                if issue["number"] else "a moderator on /moderation (intake bot, backlog #117)")
         if answer == "none":
             row.update(boards=[], name="", verdict="no_board", signal="human", note=note)
             self.answered.append((issue["number"], "recorded that its board isn't in "
@@ -296,7 +296,7 @@ class Run:
         tree, rid = key.split(":", 1)
         pre, bs = blocks(self.sources)
         said = (f"owner, GitHub #{issue['number']} (intake bot, backlog #104)"
-                if issue["number"] else "a moderator on /moderate (intake bot, backlog #117)")
+                if issue["number"] else "a moderator on /moderation (intake bot, backlog #117)")
         for i, b in enumerate(bs):
             if (field(b, "tree"), field(b, "id")) != (tree, rid):
                 continue
@@ -545,7 +545,7 @@ def main_site(args):
     run = Run(NoTracker())
     ok, failed = site_answers(run, args.questions_file, args.answers_db, args.applied)
     if ok:
-        sha = commit_answers(run, f"Record {len(ok)} moderator answer(s) from /moderate",
+        sha = commit_answers(run, f"Record {len(ok)} moderator answer(s) from /moderation",
                              args.push)
         mark_applied(args.applied, ok)
         print(f"committed {sha}: {len(ok)} answer(s)" + ("" if args.push else " -- not pushed"))

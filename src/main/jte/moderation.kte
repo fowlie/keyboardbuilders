@@ -11,6 +11,7 @@
 @param prev: String?
 @param next: String?
 @param csrf: CsrfToken
+@param invited: Boolean
 
 <%--
     Backlog #117: the intake bot's questions, one at a time (ModerateController). Same
@@ -20,8 +21,17 @@
 --%>
 @template.layout(head = head, site = site, content = @`
     <article class="settings moderate">
-        <h1>Moderate</h1>
-        @if(question == null)
+        <h1>Moderation</h1>
+        @if(!invited)
+            <section class="settings-card">
+                <h2>Moderation is invite-only for now</h2>
+                <p class="settings-q">
+                    Moderators check the bot's findings (photos, boards, new designs) before
+                    they go on the site. It's in private testing. If you'd like to help, email
+                    <a href="mailto:hello@keyboardbuilders.net?subject=Moderation">hello@keyboardbuilders.net</a>.
+                </p>
+            </section>
+        @elseif(question == null)
             <section class="settings-card">
                 <h2>Nothing to answer</h2>
                 <p class="settings-q">The bot asks again after its next run.</p>
@@ -31,7 +41,7 @@
             <section class="settings-card">
                 <h2>${question.title}</h2>
                 <div class="moderate-body">$unsafe{question.bodyHtml}</div>
-                <form method="post" action="/moderate/answer" class="moderate-choices">
+                <form method="post" action="/moderation/answer" class="moderate-choices">
                     <input type="hidden" name="${csrf.parameterName}" value="${csrf.token}">
                     <input type="hidden" name="id" value="${question.id}">
                     @for(choice in question.choices)

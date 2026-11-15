@@ -19,7 +19,7 @@ data class QuestionView(val id: String, val title: String, val bodyHtml: String,
 /** One row of the queue under the question: every open question links to itself. */
 data class QueueItem(val title: String, val kind: String, val href: String, val current: Boolean)
 
-private fun href(id: String) = "/moderate?id=$id"
+private fun href(id: String) = "/moderation?id=$id"
 
 /**
  * Backlog #117: moderators answer the intake bot's questions, one at a time.
@@ -34,14 +34,26 @@ class ModerateController(
     private val site: SiteUrl,
 ) {
 
-    @GetMapping("/moderate")
+    @GetMapping("/moderation")
     fun show(
         @AuthenticationPrincipal user: OAuth2User,
         @RequestParam(required = false) id: String?,
         csrf: CsrfToken,
         model: Model,
     ): String {
-        requireModerator(user)
+        // NOT A MODERATOR: an invitation, not an error. The footer links here for everyone
+        // (owner, 2026-11-15), and the queue itself is never shown.
+        if (!moderators.includes(user.getAttribute<String>("login"))) {
+            model.addAttribute("invited", false)
+            model.addAttribute("question", null)
+            model.addAttribute("prev", null); model.addAttribute("next", null)
+            model.addAttribute("queue", emptyList<QueueItem>())
+            model.addAttribute("remaining", 0)
+            model.addAttribute("csrf", csrf)
+            model.addAttribute("head", Head(title = "Moderation", indexable = false))
+            model.addAttribute("site", site)
+            return "moderation"
+        }
         val open = open()
         // An id that is answered or gone falls back to the first open question.
         val at = open.indexOfFirst { it.id == id }.takeIf { it >= 0 } ?: 0
@@ -54,12 +66,13 @@ class ModerateController(
         model.addAttribute("queue", open.map { QueueItem(it.title, it.kind, href(it.id), it.id == current?.id) })
         model.addAttribute("remaining", open.size)
         model.addAttribute("csrf", csrf)
-        model.addAttribute("head", Head(title = "Moderate", indexable = false))
+        model.addAttribute("invited", true)
+        model.addAttribute("head", Head(title = "Moderation", indexable = false))
         model.addAttribute("site", site)
-        return "moderate"
+        return "moderation"
     }
 
-    @PostMapping("/moderate/answer")
+    @PostMapping("/moderation/answer")
     fun answer(
         @AuthenticationPrincipal user: OAuth2User,
         @RequestParam id: String,
@@ -78,7 +91,7 @@ class ModerateController(
         val after = open().map { it.id }
         val at = before.indexOf(id)
         val next = (before.drop(at + 1) + before.take(at)).firstOrNull { it in after }
-        return "redirect:" + (next?.let { href(it) } ?: "/moderate")
+        return "redirect:" + (next?.let { href(it) } ?: "/moderation")
     }
 
     private fun open(): List<Question> {

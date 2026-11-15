@@ -28,8 +28,8 @@ class SecurityConfig {
         val logout = PathPatternRequestMatcher.withDefaults().matcher("/logout")
         // Backlog #117: the moderator queue. Signed in here; being a moderator is checked
         // in ModerateController against the configured list.
-        val moderate = PathPatternRequestMatcher.withDefaults().matcher("/moderate")
-        val moderateAny = PathPatternRequestMatcher.withDefaults().matcher("/moderate/**")
+        val moderate = PathPatternRequestMatcher.withDefaults().matcher("/moderation")
+        val moderateAny = PathPatternRequestMatcher.withDefaults().matcher("/moderation/**")
         http
             .authorizeHttpRequests {
                 it.requestMatchers(accountRoot, account, moderate, moderateAny).authenticated()

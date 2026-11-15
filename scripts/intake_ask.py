@@ -420,7 +420,7 @@ def main():
         # given still matches it. The cap still keeps a night's work bounded.
         todo = questions[:args.cap]
         write_questions_file(args.site_queue, [for_site(q) for q in todo])
-        print(f"queued {len(todo)} question(s) on /moderate; "
+        print(f"queued {len(todo)} question(s) on /moderation; "
               f"{len(questions) - len(todo)} more waiting")
         return 0
 

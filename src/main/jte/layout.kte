@@ -115,13 +115,13 @@
         </svg>
         <span>keyboardbuilders</span>
     </a>
-    <nav class="bar-links"><a href="/designs">Designs</a> <a href="/favorites">Favorites</a> <a href="/settings">Settings</a>@if(site.moderator) <a href="/moderate">Moderate</a>@endif</nav>
+    <nav class="bar-links"><a href="/designs">Designs</a> <a href="/favorites">Favorites</a> <a href="/settings">Settings</a></nav>
     <%-- THE SAME LINKS BEHIND A MENU on a narrow screen, where they wrapped onto a second
          line (owner, 2026-10-02). A details element, so it opens without JavaScript;
          app.css shows exactly one of the two. --%>
     <details class="menu">
         <summary aria-label="Menu">&#9776;</summary>
-        <nav><a href="/designs">Designs</a> <a href="/favorites">Favorites</a> <a href="/settings">Settings</a>@if(site.moderator) <a href="/moderate">Moderate</a>@endif</nav>
+        <nav><a href="/designs">Designs</a> <a href="/favorites">Favorites</a> <a href="/settings">Settings</a></nav>
     </details>
     <%-- CLOSED BY A TAP OUTSIDE IT OR BY ESCAPE, as a menu is expected to (reader-reported,
          2026-10-04). `pageshow` closes it too: Back restores a page from the cache with the
@@ -186,6 +186,7 @@
             <p class="foot-label">Support</p>
             <a class="support-link external" href="https://ko-fi.com/keyboardbuilders" rel="noopener" target="_blank">Buy me a beer 🍺<svg class="ext" viewBox="0 0 24 24" width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6"/><path d="M20 4 10 14"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
             <span class="foot-fine">or share the site with a friend</span>
+            <a href="/moderation">Moderation</a>
         </div>
     </div>
 </footer>
