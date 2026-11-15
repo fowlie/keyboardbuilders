@@ -5,6 +5,7 @@ import net.keyboardbuilders.keyboardbuilders.domain.Body
 import net.keyboardbuilders.keyboardbuilders.domain.Controller
 import net.keyboardbuilders.keyboardbuilders.domain.Design
 import net.keyboardbuilders.keyboardbuilders.domain.Extension
+import net.keyboardbuilders.keyboardbuilders.domain.Slug
 import net.keyboardbuilders.keyboardbuilders.domain.KeyPitch
 import net.keyboardbuilders.keyboardbuilders.domain.SwitchFootprint
 import net.keyboardbuilders.keyboardbuilders.domain.knownOrNull
@@ -54,13 +55,15 @@ class RelatedDesigns(private val catalog: DesignCatalog) {
     private val extensionCounts: Map<Extension, Int> =
         all.flatMap { it.extras.extensions.knownOrNull().orEmpty() }.groupingBy { it }.eachCount()
 
-    /** Up to [limit] other designs, ranked by weighted facet overlap, richest match first. */
+    /** Up to [limit] other designs, ranked by weighted facet overlap, richest match first.
+     *  [exclude] drops designs the page already shows elsewhere ("Derived from X"), BEFORE
+     *  the limit, so the strip stays full rather than losing a card to the duplicate. */
     // CANDIDATES ARE READ PER CALL, the weights once: an author can unpublish a design
     // while the app runs (#116), and a stale weight is harmless where a stale candidate
     // links to a page that answers 410.
-    fun similarTo(design: Design, limit: Int = 3): List<RelatedDesign> =
+    fun similarTo(design: Design, limit: Int = 3, exclude: Set<Slug> = emptySet()): List<RelatedDesign> =
         catalog.all().asSequence()
-            .filter { it.core.slug != design.core.slug }
+            .filter { it.core.slug != design.core.slug && it.core.slug !in exclude }
             .map { candidate -> candidate to score(design, candidate) }
             .filter { (_, scored) -> scored.weight > 0.0 }
             .sortedWith(

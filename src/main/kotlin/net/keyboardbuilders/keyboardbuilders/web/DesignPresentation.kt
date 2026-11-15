@@ -331,10 +331,17 @@ data class DesignPage(
      * field), not a gap to apologise for on every page.
      */
     val basedOn: List<AncestorView> = emptyList(),
+    /**
+     * The reverse of [basedOn], backlog #110 step 4: the held designs whose own confirmed
+     * credit names this one. Read off their records, never stored here, so it can't
+     * disagree with the credit it mirrors. Shown as cards above "Similar designs",
+     * the same card; empty, and no section, for the common case.
+     */
+    val derivedFromThis: List<DesignCard> = emptyList(),
     /** Backlog #107: the keyboard this board is one PCB of, with every board in it. Null
      *  for a design in no recorded family -- the page says nothing, like [basedOn]. */
     val family: FamilyView? = null,
-    /** "Boards like this" -- ux.md §3.6. Empty when nothing shares a weighted facet,
+    /** "Similar designs" (was "Boards like this") -- ux.md §3.6. Empty when nothing shares a weighted facet,
      *  which a design with an unusual combination of Unknowns can genuinely reach. */
     val related: List<RelatedDesignView> = emptyList(),
     /** Backlog #46: "how well is this design represented" -- ux.md §5.3's single stat
@@ -531,6 +538,14 @@ private fun Set<Ancestor>.toAncestorViews(catalog: DesignCatalog?): List<Ancesto
         }
     }.sortedBy { it.name.lowercase() }
 
+/** Every held design whose confirmed `basedOn` names this one, sorted by name. */
+private fun Design.derivedFromThis(catalog: DesignCatalog?): List<Design> {
+    val me = Ancestor.Held(core.slug)
+    return catalog?.all().orEmpty()
+        .filter { me in it.extras.basedOn.knownOrNull().orEmpty() }
+        .sortedBy { it.core.name.value.lowercase() }
+}
+
 /** Shapes the placeholder when geometry is missing but splitness is known. */
 private fun Design.halvesOrOne() =
     (core.body as? Body.Split)?.halves?.value ?: 1
@@ -574,12 +589,17 @@ fun Design.toPage(
         cap = Silhouettes.DETAIL_CAP,
         halves = halvesOrOne(),
     )
+    val derived = derivedFromThis(catalog)
     return DesignPage(
         name = core.name.value,
         slug = core.slug.value,
         basedOn = extras.basedOn.knownOrNull().orEmpty().toAncestorViews(catalog),
+        derivedFromThis = derived.let { children ->
+            val counts = hearts?.forDesigns(children).orEmpty()
+            children.map { it.toCard(it.toRow(silhouettes, activity, hearts = counts[it.core.slug.value]), photos, silhouettes) }
+        },
         family = catalog?.let { familyOf(this, it) },
-        related = related?.similarTo(this)?.let { similar ->
+        related = related?.similarTo(this, exclude = derived.map { it.core.slug }.toSet())?.let { similar ->
             val counts = hearts?.forDesigns(similar.map { it.design }).orEmpty()
             similar.map {
                 RelatedDesignView(it.design.toCard(it.design.toRow(silhouettes, activity, hearts = counts[it.design.core.slug.value]), photos, silhouettes), it.reason)

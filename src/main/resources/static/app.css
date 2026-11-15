@@ -1248,7 +1248,12 @@ table.compare tr.same td { color: var(--muted); }
    does. Restores the plain <h2> rule's 2rem rather than changing `.strip-head` itself,
    which would double the gap on the home page. Reported directly: no space between
    "Sources" and this heading, unlike every other section break on the page. */
-.related-head { margin-top: 2rem; }
+.related-head, .derived-head { margin-top: 2rem; }
+
+/* AUTO-FILL, NOT `.strip`'s AUTO-FIT. Usually one or two cards: auto-fit collapses the
+   empty tracks and stretches a lone card across the whole page (Chocofi's one, Temper,
+   reported 2026-11-15); auto-fill keeps the empty tracks, so it stays card-sized. */
+.derived-strip { grid-template-columns: repeat(auto-fill, minmax(var(--card-min), 1fr)); }
 
 /* Backlog #24. The one line "boards like this" cards add over the home page's
    shop window -- ux.md 3.6 is explicit that an unlabelled related-items strip is

@@ -28,7 +28,7 @@
     </form>
 
     @if(chooser.q.isEmpty())
-        <h2 class="strip-head related-head">Boards like this</h2>
+        <h2 class="strip-head related-head">Similar designs</h2>
     @else
         <h2 class="strip-head">Names matching &ldquo;${chooser.q}&rdquo;</h2>
     @endif
@@ -40,7 +40,7 @@
             <p class="summary unrecorded">No board&rsquo;s name matches &ldquo;${chooser.q}&rdquo;.</p>
         @endif
     @else
-        <%-- The same card as "Boards like this" on the design page, leading here instead
+        <%-- The same card as "Similar designs" on the design page, leading here instead
              of to the design, so a reader already knows how to read it. --%>
         <ul class="strip">
             @for(item in chooser.candidates)

@@ -915,15 +915,28 @@
     <%-- BOARDS LIKE THIS -- ux.md 3.6, backlog #24's sibling gap. Empty for a design
          whose recorded facets are too sparse or too unusual to weight-match anything,
          which is a real state and not an error -- no section renders rather than an
-         empty "Boards like this" heading with nothing under it.
+         empty "Similar designs" heading with nothing under it.
 
          SAME CARD AS THE HOME PAGE'S SHOP WINDOW (card.kte, strip-card), deliberately: a
          reader who has already seen that pattern once should not have to learn a
          second one for the same kind of link-to-a-design-with-a-picture. The reason
          line is the one thing the shop window does not have, because RelatedDesigns
          is the only place a reason exists to give. --%>
+    <%-- DERIVED FROM THIS, backlog #110 step 4: the designs whose own confirmed based_on
+         names this one -- the "derived from" line under their titles, read the other way.
+         Same card as "Similar designs" below it, without a reason line: the heading is
+         the reason. No section when nothing credits this design. --%>
+    @if(!design.derivedFromThis.isEmpty())
+        <h2 class="strip-head derived-head">Derived from ${design.name}</h2>
+        <ul class="strip derived-strip">
+            @for(card in design.derivedFromThis)
+                <li>@template.designs.card(card = card, cls = "strip-card")</li>
+            @endfor
+        </ul>
+    @endif
+
     @if(!design.related.isEmpty())
-        <h2 class="strip-head related-head">Boards like this</h2>
+        <h2 class="strip-head related-head">Similar designs</h2>
         <ul class="strip">
             @for(item in design.related)
                 <li>@template.designs.card(card = item.card, cls = "strip-card", reason = item.reason)</li>

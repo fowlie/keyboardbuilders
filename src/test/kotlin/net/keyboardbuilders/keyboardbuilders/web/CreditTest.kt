@@ -68,4 +68,33 @@ class CreditTest {
         assertTrue("Designed by" !in html, "the credit overclaims")
         assertTrue("Author" !in html, "the credit overclaims")
     }
+
+    /** Backlog #110 step 4, against the real seed: Temper credits Chocofi. */
+    @Test
+    fun `an ancestor's page links the designs derived from it`() {
+        val html = mockMvc.get("/designs/chocofi").andReturn().response.contentAsString
+        val section = html.substringAfter("derived-head", "").substringBefore("related-head")
+
+        assertTrue("Derived from Chocofi" in section, section.take(300))
+        assertTrue("href=\"/designs/temper\"" in section, section.take(300))
+        assertTrue(html.indexOf("derived-head") < html.indexOf("related-head"), "above Similar designs")
+    }
+
+    @Test
+    fun `a design nothing credits shows no such line`() {
+        val html = mockMvc.get("/designs/3w6").andReturn().response.contentAsString
+
+        assertTrue("derived-head" !in html)
+    }
+
+    /** A design already shown under "Derived from X" is not shown again as similar. */
+    @Test
+    fun `a derived design is not repeated under similar designs`() {
+        val html = mockMvc.get("/designs/cantor").andReturn().response.contentAsString
+        val derived = html.substringAfter("derived-head", "").substringBefore("related-head")
+        val similar = html.substringAfter("related-head", "").substringBefore("</ul>")
+
+        assertTrue("href=\"/designs/cantor-remix\"" in derived, derived.take(300))
+        assertTrue("href=\"/designs/cantor-remix\"" !in similar, similar.take(600))
+    }
 }

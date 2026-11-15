@@ -1380,6 +1380,44 @@ class DesignPresentationTest {
         override fun bySlug(slug: String) = designs.firstOrNull { it.core.slug.value == slug }
     }
 
+    // -- the reverse: designs derived from this one, backlog #110 step 4 ---------------
+
+    private fun named(name: String, slug: String, basedOn: Set<Ancestor>? = null) = design(
+        extras = basedOn?.let { DesignExtras(basedOn = Recorded.Known(it)) } ?: DesignExtras(),
+    ).let { it.copy(core = it.core.copy(name = DesignName(name), slug = Slug(slug))) }
+
+    @Test
+    fun `a design lists the designs that credit it as their ancestor, by name`() {
+        val chocofi = named("Chocofi", "chocofi")
+        val temper = named("Temper", "temper", setOf(Ancestor.Held(Slug("chocofi"))))
+        val alpha = named("Alpha", "alpha", setOf(Ancestor.Held(Slug("chocofi")),
+            Ancestor.External("Fifi", "https://github.com/raychengy/fifi_split_keeb")))
+        val unrelated = named("Corne", "corne")
+
+        val page = chocofi.toPage(silhouettes, catalog = catalogOf(chocofi, temper, alpha, unrelated))
+
+        assertEquals(listOf("alpha", "temper"), page.derivedFromThis.map { it.row.slug })
+    }
+
+    @Test
+    fun `a design nothing credits lists nothing`() {
+        val chocofi = named("Chocofi", "chocofi")
+        val page = chocofi.toPage(silhouettes, catalog = catalogOf(chocofi, named("Corne", "corne")))
+
+        assertTrue(page.derivedFromThis.isEmpty())
+    }
+
+    @Test
+    fun `the descendant's own credit still points up, not down`() {
+        val chocofi = named("Chocofi", "chocofi")
+        val temper = named("Temper", "temper", setOf(Ancestor.Held(Slug("chocofi"))))
+
+        val page = temper.toPage(silhouettes, catalog = catalogOf(chocofi, temper))
+
+        assertTrue(page.derivedFromThis.isEmpty())
+        assertEquals(listOf(AncestorView("Chocofi", "/designs/chocofi", external = false)), page.basedOn)
+    }
+
     @Test
     fun `no credited ancestor is absent, not empty text`() {
         val page = design().toPage(silhouettes)

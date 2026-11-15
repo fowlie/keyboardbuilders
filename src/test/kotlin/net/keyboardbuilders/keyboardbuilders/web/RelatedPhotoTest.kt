@@ -25,7 +25,7 @@ class RelatedPhotoTest {
     @Autowired lateinit var photos: Photos
 
     private fun strip(html: String) =
-        html.substringAfter("Boards like this</h2>").substringBefore("</ul>")
+        html.substringAfter("Similar designs</h2>").substringBefore("</ul>")
 
     @Test
     fun `a photographed board in the strip shows its photo`() {
@@ -39,7 +39,7 @@ class RelatedPhotoTest {
         assertTrue(url in strip, "/designs/$page shows $neighbour without its photo $url:\n$strip")
     }
 
-    /** The compare chooser's own "Boards like this" is the same card, leading to the pair. */
+    /** The compare chooser's own "Similar designs" is the same card, leading to the pair. */
     @Test
     fun `the compare chooser shows the photo too, and still leads to the pair`() {
         val (page, neighbour) = catalog.all().firstNotNullOf { design ->
