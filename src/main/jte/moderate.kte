@@ -53,6 +53,13 @@
                 document.head.appendChild(link);
             });
         }
+        // A photo's title is the heading just above it in the question
+        // ("1 -- alt text: ..."), so the caption says which number to press.
+        function titleOf(img) {
+            const block = img.closest("p") || img;
+            const before = block.previousElementSibling;
+            return before && /^H[1-6]$/.test(before.tagName) ? before.textContent.trim() : img.alt;
+        }
         async function open(index) {
             if (!lightbox) {
                 const [{ default: PhotoSwipeLightbox }] = await Promise.all([
@@ -61,10 +68,26 @@
                 ]);
                 lightbox = new PhotoSwipeLightbox({
                     dataSource: images.map((img) => ({
-                        src: img.src, alt: img.alt,
+                        src: img.src, alt: img.alt, caption: titleOf(img),
                         width: img.naturalWidth || 1600, height: img.naturalHeight || 1200,
                     })),
                     pswpModule: () => import("/vendor/photoswipe-5.4.4.esm.min.js"),
+                });
+                // The design page's caption, the same class and placement.
+                lightbox.on("uiRegister", () => {
+                    lightbox.pswp.ui.registerElement({
+                        name: "caption", order: 9, isButton: false, appendTo: "root",
+                        onInit: (el, pswp) => {
+                            el.className = "pswp-caption";
+                            const update = () => {
+                                const data = pswp.currSlide && pswp.currSlide.data;
+                                el.textContent = (data && data.caption) || "";
+                                el.hidden = !el.textContent;
+                            };
+                            pswp.on("change", update);
+                            update();
+                        },
+                    });
                 });
                 lightbox.init();
             }
