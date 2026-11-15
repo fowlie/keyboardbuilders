@@ -81,3 +81,6 @@ docs/research/parts-picker-ux.md
 .claude/
 skills-lock.json
 .termdbms/
+
+# Backlog #117: the moderator queue a local intake_ask.py --site-queue run writes.
+data/moderation/

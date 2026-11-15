@@ -60,6 +60,7 @@ import argparse
 import json
 import pathlib
 import re
+import sqlite3
 import subprocess
 import sys
 import traceback
@@ -259,7 +260,8 @@ class Run:
             return None
         tree, rid = choice["row"]["tree"], choice["row"]["id"]
         row = next(e for e in self.boards if e["tree"] == tree and e["id"] == rid)
-        note = f"the owner's reply to GitHub #{issue['number']} (intake bot, backlog #104)"
+        note = (f"the owner's reply to GitHub #{issue['number']} (intake bot, backlog #104)"
+                if issue["number"] else "a moderator on /moderate (intake bot, backlog #117)")
         if answer == "none":
             row.update(boards=[], name="", verdict="no_board", signal="human", note=note)
             self.answered.append((issue["number"], "recorded that its board isn't in "
@@ -293,7 +295,8 @@ class Run:
             self.sources = SOURCES.read_text(encoding="utf-8")
         tree, rid = key.split(":", 1)
         pre, bs = blocks(self.sources)
-        said = f"owner, GitHub #{issue['number']} (intake bot, backlog #104)"
+        said = (f"owner, GitHub #{issue['number']} (intake bot, backlog #104)"
+                if issue["number"] else "a moderator on /moderate (intake bot, backlog #117)")
         for i, b in enumerate(bs):
             if (field(b, "tree"), field(b, "id")) != (tree, rid):
                 continue
@@ -338,12 +341,91 @@ class Run:
             BOARDS.write_text(render(self.boards), encoding="utf-8")
 
 
+# -- Answers from the site's moderator queue, backlog #117 ------------------------------
+
+class NoTracker:
+    """Stands in for GitHubIssues when an answer came from the site: there is no issue
+    to comment on or close. A stale question is simply not applied; the next nightly
+    asks it afresh if it still needs asking."""
+
+    def comment(self, number, body):
+        pass
+
+    def close(self, number):
+        pass
+
+
+def read_answers(db):
+    """`{question_id: (reply, login)}` from the site's database, opened READ-ONLY: the
+    site is the only writer. No database yet is no answers."""
+    db = pathlib.Path(db)
+    if not db.exists():
+        return {}
+    con = sqlite3.connect(f"file:{db}?mode=ro", uri=True)
+    try:
+        return {qid: (reply, login) for qid, reply, login in
+                con.execute("SELECT question_id, reply, by_login FROM moderation_answer")}
+    finally:
+        con.close()
+
+
+def site_answers(run, questions_file, db, applied_file):
+    """Apply every answer not applied before. Returns `(applied ids, failures)`.
+
+    `applied_file` is the bot's own memory of what it has written, so nothing is applied
+    twice. An answer whose question is no longer in the file is left alone: tonight's
+    queue no longer holds it, so nothing describes what it answered.
+    """
+    applied_file = pathlib.Path(applied_file)
+    done = set(json.loads(applied_file.read_text())) if applied_file.exists() else set()
+    questions_file = pathlib.Path(questions_file)
+    by_id = ({q["id"]: q for q in json.loads(questions_file.read_text())["questions"]}
+             if questions_file.exists() else {})
+    run.tracker = run.tracker or NoTracker()
+    ok, failed = [], []
+    for qid, (reply, login) in sorted(read_answers(db).items()):
+        if qid in done or qid not in by_id:
+            continue
+        q = by_id[qid]
+        kind, key, fp = qid.split(":", 2)
+        issue = {"number": 0, "body": q["body"]}
+        try:
+            problem = getattr(run, kind)(issue, key, fp, {"body": reply}, False)
+        except Exception:  # noqa: BLE001 -- one bad answer must not sink the run
+            traceback.print_exc()
+            problem = "crashed, see the log"
+        if problem:
+            failed.append(f"{qid}: {problem}")
+        else:
+            ok.append(qid)
+    return ok, failed
+
+
+def mark_applied(applied_file, ids):
+    """Remember `ids` as written. Called only AFTER the commit, so a failed commit or push
+    leaves them to be applied again rather than silently lost."""
+    applied_file = pathlib.Path(applied_file)
+    done = set(json.loads(applied_file.read_text())) if applied_file.exists() else set()
+    applied_file.parent.mkdir(parents=True, exist_ok=True)
+    applied_file.write_text(json.dumps(sorted(done | set(ids)), indent=1) + "\n")
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__,
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--push", action="store_true")
     ap.add_argument("--owner", default="fowlie")
+    ap.add_argument("--site", action="store_true",
+                    help="read answers from the site's moderator queue (#117), not GitHub")
+    ap.add_argument("--questions-file", type=pathlib.Path,
+                    default=pathlib.Path("/var/lib/keyboardbuilders/moderation/questions.json"))
+    ap.add_argument("--answers-db", type=pathlib.Path,
+                    default=pathlib.Path("/var/lib/keyboardbuilders/app.db"))
+    ap.add_argument("--applied", type=pathlib.Path,
+                    default=pathlib.Path("/var/lib/intake/applied-answers.json"))
     args = ap.parse_args()
+    if args.site:
+        return main_site(args)
 
     tracker = GitHubIssues.from_env()
     if tracker.whoami() == args.owner:
@@ -426,6 +508,52 @@ def main():
         print(crashed, file=sys.stderr)
         return 1
     return 0
+
+
+def refuse_dirty():
+    dirty = [p for p in ALLOWED if p.exists()
+             and git("status", "--porcelain", "--", str(p.relative_to(REPO)))]
+    if dirty:
+        raise SystemExit("uncommitted changes in files the bot writes, refusing: "
+                         + ", ".join(str(p.relative_to(REPO)) for p in dirty))
+
+
+def commit_answers(run, subject, push):
+    """Write, commit only the allowlisted files, push. Returns the short sha."""
+    run.write()
+    allowed = {str(p.relative_to(REPO)) for p in ALLOWED}
+    changed = [p for p in sorted(allowed)
+               if (REPO / p).exists() and git("status", "--porcelain", "--", p)]
+    git("add", "--", *changed)
+    git("commit", "--quiet", "-m", subject + "\n\n" + "\n".join(run.lines), "--", *changed)
+    landed = set(git("diff-tree", "--no-commit-id", "--name-only", "-r", "HEAD").split())
+    if landed - allowed:
+        git("reset", "--soft", "HEAD~1")
+        raise SystemExit(f"commit touched files outside the allowlist, undone: "
+                         f"{sorted(landed - allowed)}")
+    if push:
+        git("push", "--quiet", "origin", "HEAD:main")
+    return git("rev-parse", "--short", "HEAD")
+
+
+def main_site(args):
+    """Backlog #117: the same handlers, fed from the site's database instead of issues."""
+    refuse_dirty()
+    if args.push:
+        git("fetch", "--quiet", "origin")
+        git("merge", "--ff-only", "--quiet", "@{u}")
+    run = Run(NoTracker())
+    ok, failed = site_answers(run, args.questions_file, args.answers_db, args.applied)
+    if ok:
+        sha = commit_answers(run, f"Record {len(ok)} moderator answer(s) from /moderate",
+                             args.push)
+        mark_applied(args.applied, ok)
+        print(f"committed {sha}: {len(ok)} answer(s)" + ("" if args.push else " -- not pushed"))
+    else:
+        print("no new answers")
+    for f in failed:
+        print(f, file=sys.stderr)
+    return 1 if failed else 0
 
 
 if __name__ == "__main__":

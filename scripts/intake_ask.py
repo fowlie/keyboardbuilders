@@ -120,7 +120,7 @@ def photo_questions(site):
         siblings = [s for s in by_images[fingerprint([i["url"] for i in cand["images"]])]
                     if s != slug]
         questions.append({
-            "kind": "photo", "slug": slug, "fp": fp,
+            "kind": "photo", "slug": slug, "fp": fp, "n": len(shown),
             "title": f"Photo: {designs[slug]['name']} ({slug})",
             "body": photo_body(slug, designs[slug]["name"], cand, shown, siblings, fp, site,
                                used),
@@ -218,7 +218,7 @@ def board_questions():
         else:
             counts, rctrl, split = [], "(ZMK shield: see its own files)", False
         questions.append({
-            "kind": "board", "slug": key, "fp": c["fp"],
+            "kind": "board", "slug": key, "fp": c["fp"], "n": len(c["free"]),
             "title": f"Board: which board is {key}'s? ({c['repo']})",
             "body": board_body(key, c, counts, rctrl, split),
         })
@@ -359,17 +359,70 @@ def discovery_questions(found=None, ruled=None):
     return questions
 
 
+# -- The site's moderator queue, backlog #117 ------------------------------------------
+
+def choices_for(kind, n):
+    """The buttons for a question. Each `reply` is exactly what a reply on the old GitHub
+    issue said, so intake_answer's parsers read it unchanged. No free text (owner,
+    2026-11-15): a photo URL or a corrected repo is a dev session's job now."""
+    yes_no = [{"reply": "y", "label": "Yes"}, {"reply": "n", "label": "No"}]
+    numbered = [{"reply": str(i), "label": str(i)} for i in range(1, (n or 0) + 1)]
+    return {
+        "discovery": yes_no,
+        "source": [{"reply": "y", "label": "Yes, that's its repo"},
+                   {"reply": "n", "label": "No repo is known"}],
+        "photo": numbered + [{"reply": "none", "label": "None of these"},
+                             {"reply": "skip", "label": "Not sure, skip"}],
+        "board": numbered + [{"reply": "none", "label": "Its board isn't in the repo"}],
+    }[kind]
+
+
+def for_site(q):
+    """A question as the site reads it. The issue's footer (how to reply) and its hidden
+    marker go: the buttons replace both, and `id` carries what the marker did."""
+    body = q["body"]
+    cut = body.rfind("\n---\n")
+    if cut != -1:
+        body = body[:cut]
+    body = re.sub(r"\s*<!-- intake:.*?-->\s*", "\n", body).strip()
+    return {"id": f"{q['kind']}:{q['slug']}:{q['fp']}", "kind": q["kind"], "slug": q["slug"],
+            "title": q["title"], "body": body, "choices": choices_for(q["kind"], q.get("n"))}
+
+
+def write_questions_file(path, questions):
+    """Write the whole queue at once: to a temp file beside it, then a rename, so the
+    site never reads half a file."""
+    path = pathlib.Path(path)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    tmp = path.with_name(path.name + ".tmp")
+    tmp.write_text(json.dumps({"questions": questions}, indent=1, ensure_ascii=False) + "\n")
+    tmp.replace(path)
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__,
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--dry-run", type=pathlib.Path, metavar="DIR")
     ap.add_argument("--cap", type=int, default=20)
     ap.add_argument("--site", default="https://keyboardbuilders.net")
+    ap.add_argument("--site-queue", type=pathlib.Path, metavar="FILE",
+                    help="write the questions to the site's moderator queue (#117), "
+                         "not GitHub issues")
     args = ap.parse_args()
 
     questions = (photo_questions(args.site) + board_questions() + source_questions()
                  + discovery_questions())
     questions.sort(key=lambda q: KIND_ORDER.index(q["kind"]))
+
+    if args.site_queue:
+        # THE WHOLE QUEUE, REWRITTEN: a question ruled since last night is no longer
+        # generated, so it drops out; an unruled one keeps its id, so an answer already
+        # given still matches it. The cap still keeps a night's work bounded.
+        todo = questions[:args.cap]
+        write_questions_file(args.site_queue, [for_site(q) for q in todo])
+        print(f"queued {len(todo)} question(s) on /moderate; "
+              f"{len(questions) - len(todo)} more waiting")
+        return 0
 
     tracker = None if args.dry_run else GitHubIssues.from_env()
     open_now = set()
