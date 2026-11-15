@@ -609,5 +609,9 @@
   "osprette-v3": {
     "url": "https://raw.githubusercontent.com/smores56/osprette/main/v3/images/osprette-v3-1.jpg",
     "repo": "https://github.com/smores56/osprette"
+  },
+  "osprette-mx": {
+    "url": "https://raw.githubusercontent.com/smores56/osprette/main/mx/images/osprette-mx-1.jpg",
+    "repo": "https://github.com/smores56/osprette"
   }
 }

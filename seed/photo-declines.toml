@@ -368,3 +368,9 @@ slug = "arisu"
 verdict = "none"
 images = "72d548a97d5a"
 issue = 56
+
+[[entry]]
+slug = "hem"
+verdict = "none"
+images = "673b943d5569"
+issue = 0
