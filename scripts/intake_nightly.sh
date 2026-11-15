@@ -5,6 +5,8 @@
 #   1. pull           the checkout is the bot's whole state; the phone's answers are in it
 #   2. trees          QMK/ZMK and the registered forks, every clone at depth 1
 #   3. refresh        scripts/refresh_corpus.sh: repo scans, then build/measure to a fixpoint
+#   3b. renders       PCB renders for new or changed boards, uploaded (render_boards.py
+#                     --stale-only), then renders.json. A failed board notifies, never stops
 #   4. photos         re-read READMEs for photo candidates, since designs may be new
 #   4b. activity      GitHub stars, last push and archived flag (fetch_activity.py). Never
 #                     scheduled until 2026-09-29, so every design after 2026-09-10 had none
@@ -55,6 +57,17 @@ main() {
   step pull   git merge --ff-only --quiet '@{u}'
   step trees  python3 scripts/refresh_trees.py --shallow
   step refresh scripts/refresh_corpus.sh
+  # PCB RENDERS, backlog #117 (owner, 2026-11-15): until now only run by hand, so a design
+  # the bot unblocked went live with no 3D render. Only new or changed boards
+  # (--stale-only), uploaded to object storage; renders.json follows from the manifest.
+  # NOT A step: render_boards exits 1 if any one board fails, and one bad board file must
+  # not cost the night its commit. The ones that did render still ship.
+  echo "== renders" >&2
+  if ! python3 scripts/render_boards.py --all --stale-only --upload 2>&1 | tee -a "$log" >&2; then
+    notify default "Intake nightly: some PCB renders failed" \
+      "$(grep -E 'partial|FAILED|Failed' "$log" | tail -n 3 | cut -c1-160)"
+  fi
+  step render-seed python3 scripts/build_render_seed.py
   step photos python3 scripts/draft_photo_candidates.py
   step activity python3 scripts/fetch_activity.py
   step discover python3 scripts/discover_repos.py
