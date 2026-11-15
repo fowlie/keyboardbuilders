@@ -115,13 +115,13 @@
         </svg>
         <span>keyboardbuilders</span>
     </a>
-    <nav class="bar-links"><a href="/designs">Designs</a> <a href="/favorites">Favorites</a> <a href="/settings">Settings</a></nav>
+    <nav class="bar-links"><a href="/designs">Designs</a> <a href="/favorites">Favorites</a> <a href="/settings">Settings</a>@if(site.moderator) <a href="/moderate">Moderate</a>@endif</nav>
     <%-- THE SAME LINKS BEHIND A MENU on a narrow screen, where they wrapped onto a second
          line (owner, 2026-10-02). A details element, so it opens without JavaScript;
          app.css shows exactly one of the two. --%>
     <details class="menu">
         <summary aria-label="Menu">&#9776;</summary>
-        <nav><a href="/designs">Designs</a> <a href="/favorites">Favorites</a> <a href="/settings">Settings</a></nav>
+        <nav><a href="/designs">Designs</a> <a href="/favorites">Favorites</a> <a href="/settings">Settings</a>@if(site.moderator) <a href="/moderate">Moderate</a>@endif</nav>
     </details>
     <%-- CLOSED BY A TAP OUTSIDE IT OR BY ESCAPE, as a menu is expected to (reader-reported,
          2026-10-04). `pageshow` closes it too: Back restores a page from the cache with the

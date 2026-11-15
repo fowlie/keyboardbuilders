@@ -98,6 +98,22 @@ class ModerateTest {
         }.andExpect { status { isForbidden() } }
     }
 
+    // -- the menu link ---------------------------------------------------------------------
+
+    private fun home(vararg login: org.springframework.test.web.servlet.request.RequestPostProcessor) =
+        mockMvc.get("/") { login.forEach { with(it) } }.andReturn().response.contentAsString
+
+    @Test
+    fun `a moderator gets a Moderate link in the top menu`() {
+        assertTrue("href=\"/moderate\"" in home(moderator))
+    }
+
+    @Test
+    fun `nobody else does`() {
+        assertFalse("href=\"/moderate\"" in home(stranger), "a signed-in non-moderator")
+        assertFalse("href=\"/moderate\"" in home(), "a visitor")
+    }
+
     // -- browsing ------------------------------------------------------------------------
 
     private fun page(id: String) = mockMvc.get("/moderate") { with(moderator); param("id", id) }

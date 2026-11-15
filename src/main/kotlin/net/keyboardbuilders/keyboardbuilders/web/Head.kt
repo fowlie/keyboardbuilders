@@ -111,7 +111,21 @@ class SiteUrl(
      */
     @Value("\${keyboardbuilders.analytics-script:https://gc.zgo.at/count.js}")
     val analyticsScript: String,
+    private val moderators: net.keyboardbuilders.keyboardbuilders.moderation.Moderators,
 ) {
+    /**
+     * Is the person viewing THIS page a moderator? Backlog #117: the top menu links
+     * /moderate for them only. Read from the request's own sign-in each time it is asked,
+     * never stored, since this bean serves every request. Safe only because HTML pages are
+     * never publicly cached; a shared cache would hand one person's menu to another.
+     */
+    val moderator: Boolean
+        get() {
+            val user = org.springframework.security.core.context.SecurityContextHolder.getContext()
+                .authentication?.principal as? org.springframework.security.oauth2.core.user.OAuth2User
+            return moderators.includes(user?.getAttribute<String>("login"))
+        }
+
     /** `base` with no trailing slash, so callers can always append a rooted path. */
     private val root = base.trimEnd('/')
 
