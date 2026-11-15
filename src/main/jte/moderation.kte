@@ -2,6 +2,7 @@
 @import net.keyboardbuilders.keyboardbuilders.web.SiteUrl
 @import net.keyboardbuilders.keyboardbuilders.moderation.QuestionView
 @import net.keyboardbuilders.keyboardbuilders.moderation.QueueItem
+@import net.keyboardbuilders.keyboardbuilders.moderation.PendingAnswer
 @import org.springframework.security.web.csrf.CsrfToken
 @param head: Head
 @param site: SiteUrl
@@ -12,6 +13,8 @@
 @param next: String?
 @param csrf: CsrfToken
 @param invited: Boolean
+@param pending: List<PendingAnswer>
+@param checkNote: String?
 
 <%--
     Backlog #117: the intake bot's questions, one at a time (ModerateController). Same
@@ -73,6 +76,29 @@
                         <li class="${if (item.current) "current" else ""}"><span class="moderate-kind">${item.kind}</span> <a href="${item.href}">${item.title}</a></li>
                     @endfor
                 </ol>
+            </section>
+        @endif
+        @if(invited && (pending.isNotEmpty() || checkNote != null))
+            <section class="settings-card">
+                <h2>Waiting for the bot</h2>
+                <p class="settings-q">
+                    The bot picks up answers every ten minutes, and they're on the site a few
+                    minutes later. Until it does, you can undo one. ${checkNote}
+                </p>
+                @if(pending.isNotEmpty())
+                    <ul class="moderate-pending">
+                        @for(item in pending)
+                            <li>
+                                <form method="post" action="/moderation/undo">
+                                    <input type="hidden" name="${csrf.parameterName}" value="${csrf.token}">
+                                    <input type="hidden" name="id" value="${item.id}">
+                                    <span>${item.title}: <strong>${item.said}</strong></span>
+                                    <button type="submit">Undo</button>
+                                </form>
+                            </li>
+                        @endfor
+                    </ul>
+                @endif
             </section>
         @endif
     </article>

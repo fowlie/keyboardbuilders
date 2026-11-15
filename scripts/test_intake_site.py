@@ -12,7 +12,7 @@ from unittest import mock
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 import intake_answer  # noqa: E402
 from intake_ask import choices_for, discovery_questions, for_site, write_questions_file  # noqa: E402
-from intake_answer import read_answers, site_answers  # noqa: E402
+from intake_answer import read_answers, site_answers, write_checked  # noqa: E402
 
 FOUND = {"candidates": {
     "a/kbd": {"description": "a wireless split", "stars": 4, "licence": "MIT",
@@ -119,6 +119,28 @@ class Answers(unittest.TestCase):
                 site_answers(intake_answer.Run(None), questions, db, d / "applied.json")
                 again = site_answers(intake_answer.Run(None), questions, db, d / "applied.json")
         self.assertEqual(again, ([q["id"]], []))
+
+
+class Checked(unittest.TestCase):
+    """The site shows when the bot next looks, and lets an answer be undone until then."""
+
+    def test_the_time_of_the_check_is_written_beside_the_questions(self):
+        with tempfile.TemporaryDirectory() as d:
+            path = pathlib.Path(d) / "moderation" / "checked.json"
+            write_checked(path, "2026-11-16T10:20:30Z")
+            data = json.loads(path.read_text())
+            leftovers = [p.name for p in path.parent.iterdir() if p.name != "checked.json"]
+        self.assertEqual(data, {"at": "2026-11-16T10:20:30Z"})
+        self.assertEqual(leftovers, [], "no temp file left behind")
+
+    def test_a_check_stamps_the_time_it_read_the_answers(self):
+        with tempfile.TemporaryDirectory() as d:
+            d = pathlib.Path(d)
+            checked = d / "checked.json"
+            site_answers(intake_answer.Run(None), d / "questions.json", d / "app.db",
+                         d / "applied.json", checked=checked)
+            at = json.loads(checked.read_text())["at"]
+        self.assertRegex(at, r"^\d{4}-\d\d-\d\dT\d\d:\d\d:\d\dZ$")
 
 
 if __name__ == "__main__":

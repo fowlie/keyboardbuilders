@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestParam
 import org.springframework.web.server.ResponseStatusException
+import java.time.Duration
+import java.time.Instant
 
 /** The question as the page shows it: the body already rendered, safely. */
 data class QuestionView(
@@ -23,7 +25,28 @@ data class QuestionView(
 /** One row of the queue under the question: every open question links to itself. */
 data class QueueItem(val title: String, val kind: String, val href: String, val current: Boolean)
 
+/** An answer the bot hasn't read yet, so it can still be undone. */
+data class PendingAnswer(val id: String, val title: String, val said: String)
+
 private fun href(id: String) = "/moderation?id=$id"
+
+/** deploy/intake/intake-answer.timer: OnUnitActiveSec=10min. */
+private val CHECK_EVERY: Duration = Duration.ofMinutes(10)
+
+/**
+ * When the bot next looks, in words. The timer counts from the end of the last run and
+ * skips a run while the nightly holds the lock, so this is "about", and a late check is
+ * said plainly rather than counted down past zero.
+ */
+internal fun checkNote(last: Instant?, now: Instant): String? {
+    if (last == null) return null
+    val left = Duration.between(now, last + CHECK_EVERY)
+    return when {
+        left > Duration.ZERO -> "Next check in about ${(left.toSeconds() + 59) / 60} min."
+        left > Duration.ofMinutes(-2) -> "Next check any moment now."
+        else -> "The bot last checked ${Duration.between(last, now).toMinutes()} min ago."
+    }
+}
 
 private val HTTPS = Regex("""https://[^\s<>"`]+""")
 
@@ -38,6 +61,7 @@ class ModerateController(
     private val moderators: Moderators,
     private val markdown: QuestionMarkdown,
     private val site: SiteUrl,
+    private val lastCheck: LastCheck,
 ) {
 
     @GetMapping("/moderation")
@@ -47,6 +71,9 @@ class ModerateController(
         csrf: CsrfToken,
         model: Model,
     ): String {
+        model.addAttribute("csrf", csrf)
+        model.addAttribute("head", Head(title = "Moderation", indexable = false))
+        model.addAttribute("site", site)
         // NOT A MODERATOR: an invitation, not an error. The footer links here for everyone
         // (owner, 2026-11-15), and the queue itself is never shown.
         if (!moderators.includes(user.getAttribute<String>("login"))) {
@@ -55,9 +82,8 @@ class ModerateController(
             model.addAttribute("prev", null); model.addAttribute("next", null)
             model.addAttribute("queue", emptyList<QueueItem>())
             model.addAttribute("remaining", 0)
-            model.addAttribute("csrf", csrf)
-            model.addAttribute("head", Head(title = "Moderation", indexable = false))
-            model.addAttribute("site", site)
+            model.addAttribute("pending", emptyList<PendingAnswer>())
+            model.addAttribute("checkNote", null)
             return "moderation"
         }
         val open = open()
@@ -71,11 +97,42 @@ class ModerateController(
         model.addAttribute("next", open.getOrNull(at + 1)?.let { href(it.id) })
         model.addAttribute("queue", open.map { QueueItem(it.title, it.kind, href(it.id), it.id == current?.id) })
         model.addAttribute("remaining", open.size)
-        model.addAttribute("csrf", csrf)
+        model.addAttribute("pending", pending())
+        model.addAttribute("checkNote", checkNote(lastCheck.at(), Instant.now()))
         model.addAttribute("invited", true)
-        model.addAttribute("head", Head(title = "Moderation", indexable = false))
-        model.addAttribute("site", site)
         return "moderation"
+    }
+
+    /**
+     * Forget an answer the bot hasn't read, and open its question again. One it HAS read
+     * is refused: it may already be committed, and deleting the row would only make the
+     * page lie about it.
+     */
+    @PostMapping("/moderation/undo")
+    fun undo(@AuthenticationPrincipal user: OAuth2User, @RequestParam id: String): String {
+        requireModerator(user)
+        if (pending().none { it.id == id }) {
+            throw ResponseStatusException(HttpStatus.CONFLICT, "the bot has already read the answer to '$id'")
+        }
+        answers.delete(id)
+        return "redirect:" + href(id)
+    }
+
+    /**
+     * Answers given after the bot's last check, oldest first. Before its first check
+     * there is no stamp, and every answer counts. An answer to a question no longer in
+     * the file is left out: the bot ignores those too.
+     */
+    private fun pending(): List<PendingAnswer> {
+        val check = lastCheck.at()
+        val byId = questions.all().associateBy { it.id }
+        return answers.all()
+            .filter { check == null || it.at.isAfter(check) }
+            .mapNotNull { a ->
+                byId[a.questionId]?.let { q ->
+                    PendingAnswer(q.id, q.title, q.choices.firstOrNull { it.reply == a.reply }?.label ?: a.reply)
+                }
+            }
     }
 
     @PostMapping("/moderation/answer")

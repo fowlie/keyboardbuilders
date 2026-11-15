@@ -3,6 +3,7 @@ package net.keyboardbuilders.keyboardbuilders.web
 import org.junit.jupiter.api.AfterEach
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.beans.factory.annotation.Value
 import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.boot.webmvc.test.autoconfigure.AutoConfigureMockMvc
 import org.springframework.jdbc.core.simple.JdbcClient
@@ -13,6 +14,9 @@ import org.springframework.test.web.servlet.get
 import org.springframework.test.web.servlet.post
 import kotlin.test.assertEquals
 import kotlin.test.assertFalse
+import java.io.File
+import java.time.Instant
+import java.time.temporal.ChronoUnit
 import kotlin.test.assertTrue
 
 /**
@@ -29,7 +33,12 @@ class ModerateTest {
     private val moderator = oauth2Login().attributes { it["login"] = "fowlie" }
     private val stranger = oauth2Login().attributes { it["login"] = "someone-else" }
 
-    @AfterEach fun clear() { db.sql("DELETE FROM moderation_answer").update() }
+    @Value("\${keyboardbuilders.moderation.checked}") lateinit var checkedPath: String
+
+    @AfterEach fun clear() {
+        db.sql("DELETE FROM moderation_answer").update()
+        File(checkedPath).delete()
+    }
 
     private fun page() = mockMvc.get("/moderation") { with(moderator) }
         .andExpect { status { isOk() } }.andReturn().response.contentAsString
@@ -205,5 +214,90 @@ class ModerateTest {
         answer("photo:temper:def456", "skip")
 
         assertTrue("Nothing to answer" in page())
+    }
+
+    // -- undo, and when the bot next looks ------------------------------------------------
+
+    private fun stamp(t: Instant) = t.truncatedTo(ChronoUnit.SECONDS).toString()
+
+    /** The bot's stamp: when its last answer check read the answers. */
+    private fun checked(minutesAgo: Long) {
+        File(checkedPath).apply { parentFile.mkdirs() }
+            .writeText("""{"at": "${stamp(Instant.now().minus(minutesAgo, ChronoUnit.MINUTES))}"}""")
+    }
+
+    private fun answered(id: String, reply: String, minutesAgo: Long) {
+        db.sql("INSERT INTO moderation_answer (question_id, reply, by_login, at) VALUES (?, ?, 'fowlie', ?)")
+            .params(id, reply, stamp(Instant.now().minus(minutesAgo, ChronoUnit.MINUTES))).update()
+    }
+
+    private fun undo(id: String) = mockMvc.post("/moderation/undo") {
+        with(moderator); with(csrf()); param("id", id)
+    }
+
+    @Test
+    fun `an answer the bot has not read yet is listed with an undo button`() {
+        checked(minutesAgo = 5)
+        answered("discovery:raeedcho/example:abc123", "y", minutesAgo = 1)
+
+        val html = page()
+        val waiting = html.substringAfter("Waiting for the bot")
+        assertTrue("Found: is raeedcho/example a keyboard design?" in waiting, html)
+        assertTrue("Yes" in waiting, "the answer's label")
+        assertTrue("action=\"/moderation/undo\"" in waiting, html)
+    }
+
+    @Test
+    fun `undo forgets the answer and opens the question again`() {
+        checked(minutesAgo = 5)
+        answered("discovery:raeedcho/example:abc123", "y", minutesAgo = 1)
+
+        undo("discovery:raeedcho/example:abc123").andExpect {
+            redirectedUrl("/moderation?id=discovery:raeedcho/example:abc123")
+        }
+        assertEquals(null, stored("discovery:raeedcho/example:abc123"))
+        assertTrue("<h2>Found: is raeedcho/example a keyboard design?</h2>" in page())
+    }
+
+    @Test
+    fun `an answer the bot has already read cannot be undone`() {
+        answered("discovery:raeedcho/example:abc123", "y", minutesAgo = 6)
+        checked(minutesAgo = 5)
+
+        assertFalse("action=\"/moderation/undo\"" in page())
+        undo("discovery:raeedcho/example:abc123").andExpect { status { isConflict() } }
+        assertEquals("y", stored("discovery:raeedcho/example:abc123"))
+    }
+
+    @Test
+    fun `before the bot's first check every answer can be undone`() {
+        answered("discovery:raeedcho/example:abc123", "y", minutesAgo = 60)
+
+        undo("discovery:raeedcho/example:abc123").andExpect { status { is3xxRedirection() } }
+    }
+
+    @Test
+    fun `a stranger cannot undo`() {
+        answered("discovery:raeedcho/example:abc123", "y", minutesAgo = 1)
+
+        mockMvc.post("/moderation/undo") {
+            with(stranger); with(csrf()); param("id", "discovery:raeedcho/example:abc123")
+        }.andExpect { status { isForbidden() } }
+    }
+
+    @Test
+    fun `the page says when the bot next checks`() {
+        checked(minutesAgo = 3)
+
+        assertTrue("Next check in about 7 min" in page(), page())
+    }
+
+    @Test
+    fun `a late check is shown as late, not as a negative wait`() {
+        checked(minutesAgo = 25)
+
+        val html = page()
+        assertTrue("last checked 25 min ago" in html, html)
+        assertFalse("Next check in" in html)
     }
 }

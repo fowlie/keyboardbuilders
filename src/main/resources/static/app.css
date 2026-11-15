@@ -1797,6 +1797,9 @@ table.build-grid ul.offers li.excluded { color: var(--muted); }
 .moderate-queue { margin: 0; padding-left: 1.5rem; }
 .moderate-queue li { margin: 0.25rem 0; }
 .moderate-queue li.current { font-weight: 600; }
+.moderate-pending { margin: 0.75rem 0 0; padding: 0; list-style: none; }
+.moderate-pending li { margin: 0.4rem 0; }
+.moderate-pending form { display: flex; gap: 0.75rem; align-items: baseline; justify-content: space-between; }
 .moderate-kind {
     font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted);
 }

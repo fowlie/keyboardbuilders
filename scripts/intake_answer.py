@@ -57,6 +57,7 @@ Usage: intake_answer.py [--push] [--owner fowlie]
     commit stays local, which is how it is tested on a dev machine.
 """
 import argparse
+import datetime
 import json
 import pathlib
 import re
@@ -369,7 +370,7 @@ def read_answers(db):
         con.close()
 
 
-def site_answers(run, questions_file, db, applied_file):
+def site_answers(run, questions_file, db, applied_file, checked=None):
     """Apply every answer not applied before. Returns `(applied ids, failures)`.
 
     `applied_file` is the bot's own memory of what it has written, so nothing is applied
@@ -383,7 +384,15 @@ def site_answers(run, questions_file, db, applied_file):
              if questions_file.exists() else {})
     run.tracker = run.tracker or NoTracker()
     ok, failed = [], []
-    for qid, (reply, login) in sorted(read_answers(db).items()):
+    answers = read_answers(db)
+    # STAMPED RIGHT AFTER THE READ (#117). The site lets a moderator undo an answer given
+    # after this stamp. Stamping before the read would let one the bot just read be
+    # "undone" on the site but applied anyway; stamping after the slow work below would
+    # hide answers given meanwhile, though the next check still applies them.
+    if checked:
+        write_checked(checked, datetime.datetime.now(datetime.timezone.utc)
+                      .strftime("%Y-%m-%dT%H:%M:%SZ"))
+    for qid, (reply, login) in sorted(answers.items()):
         if qid in done or qid not in by_id:
             continue
         q = by_id[qid]
@@ -399,6 +408,17 @@ def site_answers(run, questions_file, db, applied_file):
         else:
             ok.append(qid)
     return ok, failed
+
+
+def write_checked(path, at):
+    """Stamp when this check read the answers, for the site (#117): it shows a moderator
+    when the next check comes, and lets an answer given AFTER this stamp be undone, since
+    no check has read it yet. Temp file and rename, like the questions file."""
+    path = pathlib.Path(path)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    tmp = path.with_name(path.name + ".tmp")
+    tmp.write_text(json.dumps({"at": at}) + "\n")
+    tmp.replace(path)
 
 
 def mark_applied(applied_file, ids):
@@ -543,7 +563,8 @@ def main_site(args):
         git("fetch", "--quiet", "origin")
         git("merge", "--ff-only", "--quiet", "@{u}")
     run = Run(NoTracker())
-    ok, failed = site_answers(run, args.questions_file, args.answers_db, args.applied)
+    ok, failed = site_answers(run, args.questions_file, args.answers_db, args.applied,
+                              checked=args.questions_file.with_name("checked.json"))
     if ok:
         sha = commit_answers(run, f"Record {len(ok)} moderator answer(s) from /moderation",
                              args.push)

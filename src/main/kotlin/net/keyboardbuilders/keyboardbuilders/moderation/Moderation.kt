@@ -7,6 +7,7 @@ import org.springframework.jdbc.core.simple.JdbcClient
 import org.springframework.stereotype.Component
 import tools.jackson.databind.ObjectMapper
 import java.io.File
+import java.time.Instant
 
 /** One button: `reply` is what a reply on the old GitHub issue would have said. */
 data class Choice(val reply: String, val label: String)
@@ -43,12 +44,43 @@ class Questions(
     }
 }
 
+/** One stored answer: `reply` is what the bot reads, `at` when it was given. */
+data class Answer(val questionId: String, val reply: String, val at: Instant)
+
+/**
+ * When the bot's last answer check READ the answers. The bot stamps it (scripts/
+ * intake_answer.py, `write_checked`); this only reads it. Missing before the bot's first
+ * check, and on a dev machine.
+ */
+@Component
+class LastCheck(
+    private val mapper: ObjectMapper,
+    @Value("\${keyboardbuilders.moderation.checked:data/moderation/checked.json}") private val path: String,
+) {
+    private data class Stamp(val at: String = "")
+
+    fun at(): Instant? {
+        val file = File(path)
+        if (!file.exists()) return null
+        return runCatching { Instant.parse(mapper.readValue(file, Stamp::class.java).at) }.getOrNull()
+    }
+}
+
 /** Moderators' answers, backlog #117. The app writes them; the bot reads them. */
 @Component
 class Answers(private val db: JdbcClient) {
 
     fun answeredIds(): Set<String> =
         db.sql("SELECT question_id FROM moderation_answer").query { rs, _ -> rs.getString(1) }.set()
+
+    fun all(): List<Answer> =
+        db.sql("SELECT question_id, reply, at FROM moderation_answer ORDER BY at, question_id")
+            .query { rs, _ -> Answer(rs.getString(1), rs.getString(2), Instant.parse(rs.getString(3))) }.list()
+
+    /** Forget an answer, so its question is open again. */
+    fun delete(questionId: String) {
+        db.sql("DELETE FROM moderation_answer WHERE question_id = ?").param(questionId).update()
+    }
 
     fun record(questionId: String, reply: String, by: String) {
         db.sql("""
