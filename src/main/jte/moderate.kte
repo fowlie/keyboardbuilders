@@ -1,11 +1,15 @@
 @import net.keyboardbuilders.keyboardbuilders.web.Head
 @import net.keyboardbuilders.keyboardbuilders.web.SiteUrl
 @import net.keyboardbuilders.keyboardbuilders.moderation.QuestionView
+@import net.keyboardbuilders.keyboardbuilders.moderation.QueueItem
 @import org.springframework.security.web.csrf.CsrfToken
 @param head: Head
 @param site: SiteUrl
 @param question: QuestionView?
 @param remaining: Int
+@param queue: List<QueueItem>
+@param prev: String?
+@param next: String?
 @param csrf: CsrfToken
 
 <%--
@@ -34,6 +38,18 @@
                         <button type="submit" name="reply" value="${choice.reply}" class="settings-save">${choice.label}</button>
                     @endfor
                 </form>
+                <nav class="moderate-step">
+                    @if(prev != null)<a rel="prev" href="${prev}">Previous</a>@endif
+                    @if(next != null)<a rel="next" href="${next}">Next</a>@endif
+                </nav>
+            </section>
+            <section class="settings-card">
+                <h2>All open questions</h2>
+                <ol class="moderate-queue">
+                    @for(item in queue)
+                        <li class="${if (item.current) "current" else ""}"><span class="moderate-kind">${item.kind}</span> <a href="${item.href}">${item.title}</a></li>
+                    @endfor
+                </ol>
             </section>
         @endif
     </article>

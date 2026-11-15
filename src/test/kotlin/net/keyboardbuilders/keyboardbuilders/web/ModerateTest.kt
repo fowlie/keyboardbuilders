@@ -72,9 +72,7 @@ class ModerateTest {
 
     @Test
     fun `answering stores the reply and moves on to the next question`() {
-        answer("discovery:raeedcho/example:abc123", "y").andExpect {
-            status { is3xxRedirection() }; redirectedUrl("/moderate")
-        }
+        answer("discovery:raeedcho/example:abc123", "y").andExpect { status { is3xxRedirection() } }
 
         val stored = db.sql("SELECT reply, by_login FROM moderation_answer WHERE question_id = ?")
             .param("discovery:raeedcho/example:abc123").query { rs, _ -> rs.getString(1) to rs.getString(2) }.single()
@@ -98,6 +96,50 @@ class ModerateTest {
         mockMvc.post("/moderate/answer") {
             with(stranger); with(csrf()); param("id", "discovery:raeedcho/example:abc123"); param("reply", "y")
         }.andExpect { status { isForbidden() } }
+    }
+
+    // -- browsing ------------------------------------------------------------------------
+
+    private fun page(id: String) = mockMvc.get("/moderate") { with(moderator); param("id", id) }
+        .andExpect { status { isOk() } }.andReturn().response.contentAsString
+
+    @Test
+    fun `every open question is listed, linking to it`() {
+        val html = page()
+
+        assertTrue("href=\"/moderate?id=discovery:raeedcho/example:abc123\"" in html, html)
+        assertTrue("href=\"/moderate?id=photo:temper:def456\"" in html, html)
+    }
+
+    @Test
+    fun `any open question can be opened directly`() {
+        val html = page("photo:temper:def456")
+
+        assertTrue("<h2>Photo for Temper</h2>" in html, html)
+        assertTrue("value=\"none\"" in html)
+    }
+
+    @Test
+    fun `previous and next step through the queue`() {
+        val first = page()
+        val second = page("photo:temper:def456")
+
+        assertTrue("rel=\"next\" href=\"/moderate?id=photo:temper:def456\"" in first, first)
+        assertTrue("rel=\"prev\" href=\"/moderate?id=discovery:raeedcho/example:abc123\"" in second, second)
+    }
+
+    @Test
+    fun `answering moves on to the question after it, not back to the top`() {
+        answer("discovery:raeedcho/example:abc123", "y").andExpect {
+            redirectedUrl("/moderate?id=photo:temper:def456")
+        }
+    }
+
+    @Test
+    fun `answering the last question goes back to the first one still open`() {
+        answer("photo:temper:def456", "skip").andExpect {
+            redirectedUrl("/moderate?id=discovery:raeedcho/example:abc123")
+        }
     }
 
     @Test
