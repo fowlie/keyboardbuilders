@@ -57,3 +57,11 @@ ancestors = [{kind = "external", name = "Corne (crkbd)", url = "https://github.c
 verdict   = "confirmed"
 signal    = "human"
 note      = "Same wiki statements as jorne-cherry-2-1's row; the credit is repo-wide (Jorne as a whole is called a Corne remix), not specific to one PCB revision."
+
+[[entry]]
+slug      = "temper"
+name      = "Temper"
+ancestors = [{kind = "held", slug = "chocofi"}]
+verdict   = "confirmed"
+signal    = "human"
+note      = "raeedcho/temper's README, first line: \"a split, wireless-only mechanical keyboard fashioned after the chocofi keyboard\", with a section \"List of changes from original chocofi\". Owner asked for the edge 2026-11-15."

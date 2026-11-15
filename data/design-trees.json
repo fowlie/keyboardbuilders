@@ -177,6 +177,9 @@
  "choc-v2-env-kb65": [
   "qmk"
  ],
+ "chocofi": [
+  "zmk"
+ ],
  "chocofly": [
   "qmk"
  ],

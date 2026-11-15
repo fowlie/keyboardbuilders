@@ -614,6 +614,16 @@
   ]
  },
  {
+  "slug": "chocofi",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "other"
+  ],
+  "footprints": [
+   "sw_spdt+h-msk12c01_hor(7pin_smd)"
+  ]
+ },
+ {
   "slug": "chocofly",
   "hardest": "through_hole",
   "driven_by": [

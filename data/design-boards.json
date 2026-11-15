@@ -340,6 +340,12 @@
   ],
   "repo": "Envious-Data/Env-KB65M"
  },
+ "chocofi": {
+  "paths": [
+   "pcb/chocofi.kicad_pcb"
+  ],
+  "repo": "pashutk/chocofi"
+ },
  "chocofly": {
   "paths": [
    "pcb/chocofly.kicad_pcb",

@@ -7354,6 +7354,25 @@
   },
   "unnamed": {}
  },
+ "pashutk/chocofi\tpcb/chocofi.kicad_pcb": {
+  "accepts": {
+   "keyswitches:Kailh_socket_PG1350_reversible\tchoc": 18
+  },
+  "drills": {},
+  "kinds": {
+   "socket": 18
+  },
+  "names": {
+   "keyswitches:Kailh_socket_PG1350_reversible\tsocket\tsmd\tchoc": 18
+  },
+  "positions": {
+   "choc": 18
+  },
+  "sockets": {
+   "choc": 18
+  },
+  "unnamed": {}
+ },
  "peej/for-science-keyboard\tfor-science.kicad_pcb": {
   "accepts": {
    "Keyboard:MX_DoubleSided\tmillmax+solder": 23

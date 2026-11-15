@@ -416,6 +416,13 @@
    "keys": 70
   }
  },
+ "chocofi": {
+  "pcb/chocofi.kicad_pcb": {
+   "diodes": 18,
+   "exposed": 0,
+   "keys": 18
+  }
+ },
  "chocofly": {
   "pcb/chocofly.kicad_pcb": {
    "diodes": 62,

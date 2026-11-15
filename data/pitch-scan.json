@@ -1763,6 +1763,12 @@
   "mm": 19.05,
   "pitch": "mx_19.05"
  },
+ "pashutk/chocofi\tpcb/chocofi.kicad_pcb": {
+  "confidence": 0.83,
+  "keys": 18,
+  "mm": 17.0,
+  "pitch": "choc_18x17"
+ },
  "peej/for-science-keyboard\tfor-science.kicad_pcb": {
   "confidence": 1.0,
   "keys": 18,

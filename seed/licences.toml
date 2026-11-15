@@ -168,3 +168,12 @@ documentation = ["CERN-OHL-P-2.0"]
 verdict       = "confirmed"
 signal        = "human"
 note          = "Read 2026-11-15: one root LICENSE, CERN-OHL-P v2, covering the repo, which holds the PCB, case and README. The firmware is not in this repo: it is the shield in raeedcho/temper-zmk-config, which states no licence, so firmware is Unstated."
+
+[[entry]]
+repo          = "pashutk/chocofi"
+hardware      = ["CERN-OHL-P-2.0"]
+firmware      = []
+documentation = ["CERN-OHL-P-2.0"]
+verdict       = "confirmed"
+signal        = "human"
+note          = "Read 2026-11-15: one root LICENSE.txt, CERN-OHL-P v2 (GitHub reports `other`). The repo holds no firmware; the design runs Corne's, whose licence is Corne's, so this repo's firmware slot is Unstated."

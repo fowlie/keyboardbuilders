@@ -7259,3 +7259,17 @@ stated   = "https://github.com/raeedcho/temper"
 signal   = "dev-seed"
 verdict  = "confirmed"
 note     = "Added on the owner's request. The firmware is the `temper` shield in raeedcho/temper-zmk-config (36 keys, split, requires pro_micro); the hardware repo raeedcho/temper holds the PCB, the README and the LICENSE, so it is the source. The README calls it a chocofi modification: power switch, battery pads, nice!view footprint, no TRRS."
+
+# CHOCOFI, 2026-11-15: added on the owner's request, alongside Temper (its modification).
+[[entry]]
+tree     = "hardware"
+id       = "chocofi"
+name     = "Chocofi"
+source   = "pashutk/chocofi"
+firmware = "zmk:corne"
+keys     = 36
+path     = false
+stated   = "https://github.com/pashutk/chocofi"
+signal   = "dev-seed"
+verdict  = "confirmed"
+note     = "No firmware of its own. The author, in pashutk/chocofi#6: \"corne firmware is the way to go. Schematic for chocofi is basically the same as fifi and fifi is using corne firmware too\" -- `crkbd` for QMK, `corne` for ZMK. README: 3 rows, 5 columns, 3 thumbs per half, so 36 keys on Corne's 36-key arrangement."

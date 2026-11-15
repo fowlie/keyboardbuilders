@@ -356,6 +356,13 @@
   "path": "MainPCB-ChocV2/EnvKB65.kicad_pcb",
   "png": "9e11722c443558a8b21600545d61e6ff"
  },
+ "chocofi": {
+  "alternates": 0,
+  "glb": "87966770bf5159e3d3c84215dfdcea65",
+  "glbBytes": 7035460,
+  "path": "pcb/chocofi.kicad_pcb",
+  "png": "f1e6336e560dcadbb98ea74cf7e61d22"
+ },
  "chocofly": {
   "alternates": 2,
   "glb": "faa0ee0b565539eea55e8f7f9091d30c",
@@ -1742,13 +1749,6 @@
   "path": "rosaline-ortho.kicad_pcb",
   "png": "e42677927eb3c63372a945800a941c95"
  },
- "rp2040-bakeneko65": {
-  "alternates": 0,
-  "glb": "4008c516b60722b1171c900310601b02",
-  "glbBytes": 11129744,
-  "path": "pcb/rp2040-bakeneko65.kicad_pcb",
-  "png": "95c47ea4aaf895e7ec2fa8f1647b7f0e"
- },
  "sango": {
   "alternates": 0,
   "glb": "78cf8250c6d6286f5b170e9ff8b233f2",
@@ -2105,6 +2105,13 @@
   "glbBytes": 8384548,
   "path": "keyboard.kicad_pcb",
   "png": "aaafadd1bf4656964dc0303f42e3d571"
+ },
+ "temper": {
+  "alternates": 0,
+  "glb": "5f6d196747226cacbc631bf3ba8f6501",
+  "glbBytes": 7354920,
+  "path": "pcb/temper.kicad_pcb",
+  "png": "13ad20da9efb18c4857d7caa69ad7e29"
  },
  "tenkey-plusplus": {
   "alternates": 0,

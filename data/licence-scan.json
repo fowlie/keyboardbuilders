@@ -4270,6 +4270,27 @@
   "status": "ok",
   "truncated": false
  },
+ "pashutk/chocofi": {
+  "files": [
+   {
+    "first_line": "CERN Open Hardware Licence Version 2 - Permissive",
+    "licence": "CERN-OHL-S-2.0",
+    "path": "LICENSE.txt",
+    "root": true,
+    "vendored": false
+   },
+   {
+    "first_line": "<a rel=\"license\" href=\"http://creativecommons.org/licenses/by-sa/4.0/\"><img alt=\"Creative ",
+    "licence": "CC-BY-SA-4.0",
+    "path": "pcb/keyswitches.pretty/LICENSE.md",
+    "root": false,
+    "vendored": true
+   }
+  ],
+  "repo": "pashutk/chocofi",
+  "status": "ok",
+  "truncated": false
+ },
  "peej/for-science-keyboard": {
   "files": [
    {

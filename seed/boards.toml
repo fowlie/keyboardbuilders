@@ -5487,3 +5487,13 @@ name     = "Temper"
 verdict  = "confirmed"
 signal   = "human"
 note     = "2026-11-15. One reversible PCB used for both halves: 18 `Kailh_socket_PG1350_reversible` footprints and 18 diodes, the shield's 36 keys on 2 x 18. `case/top-plate/temper-topplate.kicad_pcb` is a plate, not a board."
+
+[[entry]]
+tree     = "hardware"
+id       = "chocofi"
+source   = "pashutk/chocofi"
+boards   = ["pcb/chocofi.kicad_pcb"]
+name     = "Chocofi"
+verdict  = "confirmed"
+signal   = "human"
+note     = "2026-11-15. One reversible PCB for both halves (README: \"pcb can be used as left or right half\"): 18 `Kailh_socket_PG1350_reversible` and 18 diodes, the row's 36 keys on 2 x 18. `pcb/chocofi-topplate.kicad_pcb` is the plate."

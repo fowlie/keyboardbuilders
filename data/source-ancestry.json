@@ -3056,6 +3056,16 @@
   "root": null,
   "stargazers_count": 0
  },
+ "pashutk/chocofi": {
+  "archived": false,
+  "description": "Split 36-key keyboard",
+  "fork": false,
+  "full_name": "pashutk/chocofi",
+  "parent": null,
+  "pushed_at": "2023-12-10T21:23:39Z",
+  "root": null,
+  "stargazers_count": 787
+ },
  "peej/for-science-keyboard": {
   "archived": false,
   "description": "A split ergo 4x5 keyboard with 3 thumb keys where each half is smaller than the 100x100mm cheap PCB production size.",

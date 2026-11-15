@@ -4659,6 +4659,84 @@
   }
  },
  {
+  "name": "Chocofi",
+  "slug": "chocofi",
+  "sources": [
+   "https://github.com/pashutk/chocofi"
+  ],
+  "firmware": [
+   {
+    "family": "zmk",
+    "path": null,
+    "shield": "corne"
+   }
+  ],
+  "layouts": [
+   {
+    "keys": 36,
+    "name": "5 Column"
+   }
+  ],
+  "switches": [
+   {
+    "kind": "choc_v1"
+   }
+  ],
+  "pitch": {
+   "kind": "choc_18x17",
+   "mm": 17.0
+  },
+  "buildMethod": {
+   "kind": "pcb"
+  },
+  "hardestComponent": {
+   "parts": [
+    "other"
+   ],
+   "tier": "smd_hand"
+  },
+  "controller": {
+   "kind": "socket",
+   "footprints": [
+    "pro_micro"
+   ]
+  },
+  "body": {
+   "kind": "split",
+   "halves": 2,
+   "reversible": null,
+   "link": [
+    "trrs"
+   ]
+  },
+  "licensing": {
+   "hardware": [
+    "CERN-OHL-P-2.0"
+   ],
+   "firmware": [],
+   "documentation": [
+    "CERN-OHL-P-2.0"
+   ]
+  },
+  "hostPort": null,
+  "wiring": {
+   "kind": "matrix",
+   "rows": 4,
+   "cols": 6,
+   "diodes": "col_to_row"
+  },
+  "extensions": [
+   "display"
+  ],
+  "switchMounts": [
+   "choc_socket"
+  ],
+  "splay": false,
+  "stagger": "column",
+  "exposedComponents": false,
+  "powerSwitch": true
+ },
+ {
   "name": "chocofly",
   "slug": "chocofly",
   "sources": [
@@ -27065,7 +27143,13 @@
   "splay": false,
   "stagger": "column",
   "exposedComponents": false,
-  "powerSwitch": true
+  "powerSwitch": true,
+  "basedOn": [
+   {
+    "kind": "held",
+    "slug": "chocofi"
+   }
+  ]
  },
  {
   "name": "tenkey plusplus",
