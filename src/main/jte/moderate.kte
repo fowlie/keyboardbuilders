@@ -37,4 +37,39 @@
             </section>
         @endif
     </article>
+    <%-- PHOTOS AS THUMBNAILS, opened in the same PhotoSwipe the design pages use: click to
+         see one full size, zoom, and step through the question's other photos. Each
+         image's real size is read once it has loaded, since PhotoSwipe scales a picture
+         to the size it is told. --%>
+    <script type="module">
+        const images = Array.from(document.querySelectorAll(".moderate-body img"));
+        let lightbox = null;
+        function stylesheet(href) {
+            return new Promise((resolve) => {
+                const link = document.createElement("link");
+                link.rel = "stylesheet";
+                link.href = href;
+                link.onload = resolve;
+                document.head.appendChild(link);
+            });
+        }
+        async function open(index) {
+            if (!lightbox) {
+                const [{ default: PhotoSwipeLightbox }] = await Promise.all([
+                    import("/vendor/photoswipe-lightbox-5.4.4.esm.min.js"),
+                    stylesheet("/vendor/photoswipe-5.4.4.css"),
+                ]);
+                lightbox = new PhotoSwipeLightbox({
+                    dataSource: images.map((img) => ({
+                        src: img.src, alt: img.alt,
+                        width: img.naturalWidth || 1600, height: img.naturalHeight || 1200,
+                    })),
+                    pswpModule: () => import("/vendor/photoswipe-5.4.4.esm.min.js"),
+                });
+                lightbox.init();
+            }
+            lightbox.loadAndOpen(index);
+        }
+        images.forEach((img, i) => img.addEventListener("click", () => open(i)));
+    </script>
 `)

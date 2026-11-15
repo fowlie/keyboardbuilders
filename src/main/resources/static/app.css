@@ -1781,3 +1781,14 @@ table.build-grid ul.offers li.excluded { color: var(--muted); }
 
 /* The source link's GitHub mark (Octicons mark-github, MIT), sitting on the text's line. */
 .site-foot .source-link .gh { margin-right: 0.35em; vertical-align: -0.12em; }
+
+/* Backlog #117: the moderator queue's photos are thumbnails; a click opens PhotoSwipe. */
+.moderate-body img {
+    display: block;
+    max-width: 100%;
+    max-height: 200px;
+    width: auto;
+    border-radius: 8px;
+    border: 1px solid var(--edge);
+    cursor: zoom-in;
+}
