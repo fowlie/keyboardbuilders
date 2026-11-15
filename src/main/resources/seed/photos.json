@@ -994,5 +994,17 @@
     "width": 1600,
     "height": 648,
     "sourceUrl": "https://github.com/floookay/zwerg"
+  },
+  "osprette-v2": {
+    "jpg": "f8fa617fa7e29d55f1d28d39d9171074",
+    "width": 1600,
+    "height": 900,
+    "sourceUrl": "https://github.com/smores56/osprette"
+  },
+  "osprette-v3": {
+    "jpg": "12b5a6cabe7454daa3e8b50f19313909",
+    "width": 1600,
+    "height": 900,
+    "sourceUrl": "https://github.com/smores56/osprette"
   }
 }

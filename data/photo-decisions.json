@@ -601,5 +601,13 @@
   "alpha": {
     "url": "https://raw.githubusercontent.com/PyrooL/Alpha/master/photos/instructions/switches.jpg",
     "repo": "https://github.com/PyrooL/Alpha"
+  },
+  "osprette-v2": {
+    "url": "https://raw.githubusercontent.com/smores56/osprette/main/v2/images/osprette-v2-1.jpg",
+    "repo": "https://github.com/smores56/osprette"
+  },
+  "osprette-v3": {
+    "url": "https://raw.githubusercontent.com/smores56/osprette/main/v3/images/osprette-v3-1.jpg",
+    "repo": "https://github.com/smores56/osprette"
   }
 }
