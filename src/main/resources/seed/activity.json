@@ -1,5 +1,5 @@
 {
- "fetchedAt": "2026-11-14T02:54:29Z",
+ "fetchedAt": "2026-11-15T19:36:00Z",
  "repos": {
   "0x544D/kuro65": {
    "stars": 2,
@@ -67,12 +67,12 @@
    "archived": false
   },
   "Salicylic-acid3/PCB_Data": {
-   "stars": 51,
+   "stars": 52,
    "lastPush": "2026-10-02T13:31:26Z",
    "archived": false
   },
   "SethSenpai/Tanuki": {
-   "stars": 286,
+   "stars": 287,
    "lastPush": "2022-07-30T12:13:27Z",
    "archived": false
   },
@@ -325,17 +325,17 @@
    "archived": false
   },
   "durken1/pierce": {
-   "stars": 171,
+   "stars": 170,
    "lastPush": "2024-09-14T18:46:33Z",
    "archived": false
   },
   "dwctor/kaly": {
-   "stars": 234,
+   "stars": 235,
    "lastPush": "2023-10-27T17:13:07Z",
    "archived": false
   },
   "ebastler/isometria-75": {
-   "stars": 228,
+   "stars": 229,
    "lastPush": "2020-12-17T07:08:56Z",
    "archived": false
   },
@@ -450,8 +450,8 @@
    "archived": false
   },
   "foostan/crkbd": {
-   "stars": 7743,
-   "lastPush": "2025-05-10T16:33:06Z",
+   "stars": 7748,
+   "lastPush": "2026-11-14T14:36:39Z",
    "archived": false
   },
   "gachiham/XR63GL": {
@@ -572,7 +572,7 @@
    "archived": false
   },
   "imchipwood/dumbpad": {
-   "stars": 519,
+   "stars": 520,
    "lastPush": "2026-03-04T01:52:59Z",
    "archived": false
   },
@@ -582,7 +582,7 @@
    "archived": false
   },
   "jellytitan/sofle-pico": {
-   "stars": 119,
+   "stars": 120,
    "lastPush": "2026-10-12T02:07:27Z",
    "archived": false
   },
@@ -607,7 +607,7 @@
    "archived": false
   },
   "josefadamcik/soflekeyboard": {
-   "stars": 2570,
+   "stars": 2572,
    "lastPush": "2026-02-20T00:18:10Z",
    "archived": false
   },
@@ -632,8 +632,8 @@
    "archived": false
   },
   "jyap808/pando": {
-   "stars": 13,
-   "lastPush": "2026-10-07T20:44:39Z",
+   "stars": 14,
+   "lastPush": "2026-11-14T09:50:13Z",
    "archived": false
   },
   "jyap808/pando58": {
@@ -870,7 +870,7 @@
    "archived": false
   },
   "mmccoyd/hillside": {
-   "stars": 449,
+   "stars": 450,
    "lastPush": "2025-07-13T01:58:04Z",
    "archived": false
   },
@@ -954,6 +954,11 @@
    "lastPush": "2022-05-15T01:51:39Z",
    "archived": false
   },
+  "pashutk/chocofi": {
+   "stars": 787,
+   "lastPush": "2023-12-10T21:23:39Z",
+   "archived": false
+  },
   "peej/for-science-keyboard": {
    "stars": 101,
    "lastPush": "2021-02-27T16:06:48Z",
@@ -975,7 +980,7 @@
    "archived": false
   },
   "pierrechevalier83/ferris": {
-   "stars": 1272,
+   "stars": 1273,
    "lastPush": "2024-04-07T20:44:18Z",
    "archived": false
   },
@@ -993,6 +998,11 @@
    "stars": 1,
    "lastPush": "2021-12-01T04:17:51Z",
    "archived": true
+  },
+  "raeedcho/temper": {
+   "stars": 490,
+   "lastPush": "2026-06-25T17:48:45Z",
+   "archived": false
   },
   "ramonimbao/Herringbone": {
    "stars": 3,
@@ -1045,7 +1055,7 @@
    "archived": false
   },
   "skarrmann/janus": {
-   "stars": 55,
+   "stars": 56,
    "lastPush": "2025-08-09T22:44:11Z",
    "archived": false
   },
@@ -1101,7 +1111,7 @@
    "archived": false
   },
   "squalius-cephalus/silakka54": {
-   "stars": 642,
+   "stars": 643,
    "lastPush": "2026-05-20T07:55:29Z",
    "archived": false
   },
