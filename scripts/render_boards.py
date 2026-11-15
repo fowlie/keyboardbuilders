@@ -134,9 +134,14 @@ def digest(renderer, repo, path, content_sha):
 
 
 def podman(args, mount, label):
-    """Run kicad-cli in the image, with the output directory mounted writable."""
+    """Run kicad-cli in the image, with the output directory mounted writable.
+
+    `--network=none`: a render reads one local board file and needs no network. Rootless
+    podman on the VPS also CAN'T set one up (no `pasta`), which is how the first server
+    test failed with exit 127 (2026-11-15); Ergogen's container already runs this way.
+    """
     cmd = [
-        "podman", "run", "--rm", "--userns=keep-id",
+        "podman", "run", "--rm", "--userns=keep-id", "--network=none",
         "-v", f"{mount}:/work:z", "-e", "HOME=/tmp", "-w", "/work", IMAGE,
     ] + args
     done = subprocess.run(cmd, capture_output=True, text=True, timeout=900)
