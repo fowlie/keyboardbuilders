@@ -109,8 +109,12 @@ SPACING_WORDS = re.compile(r"mx[_-]?spacing|choc[_-]?spacing", re.I)
 # here refused them: chocofly's board read 62 switches for 60 keys, 41-1350's 43 for 41.
 # Every name was read off the corpus by hand: MSK-12 and its JLCPCB number C128955, C&K
 # PCM12 and JS202011, SS-12D, Alps SSSS811101, EG1218, and swoop's bare `Power`.
+# `slider-switch` JOINED 2026-11-15 with Urchin, whose board names its MSK-12C02 (per its
+# BOM) `urchin-footprints:smt-slider-switch` and read "no power switch" until then. The
+# one footprint in the corpus with that name.
 POWER_SWITCH = re.compile(
-    r"msk-?12|c128955|pcm12|js[12]02011|ss-?12d|ssss8|eg1218|power_?switch|:power$",
+    r"msk-?12|c128955|pcm12|js[12]02011|ss-?12d|ssss8|eg1218|power_?switch|:power$"
+    r"|slider-switch",
     re.I,
 )
 # A one-position DIP slide switch can switch the battery or a boot mode, and its name does
