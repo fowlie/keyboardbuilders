@@ -49,6 +49,7 @@ Usage:
 import argparse
 import hashlib
 import json
+import os
 import pathlib
 import shutil
 import struct
@@ -139,13 +140,54 @@ def podman(args, mount, label):
     `--network=none`: a render reads one local board file and needs no network. Rootless
     podman on the VPS also CAN'T set one up (no `pasta`), which is how the first server
     test failed with exit 127 (2026-11-15); Ergogen's container already runs this way.
+
+    AND AS THE HOST USER, `--user`. The image's own user is uid 1000. That happens to be
+    the owner's uid on the laptop, so the mount was readable there; on the VPS `intake`
+    is 999, and every export failed with "Unable to open /work/board.kicad_pcb"
+    (2026-11-16). `--userns=keep-id:uid=1000` would also work, but podman then writes a
+    second chowned copy of the 6 GB image, and the disk does not have room for it.
     """
     cmd = [
-        "podman", "run", "--rm", "--userns=keep-id", "--network=none",
+        "podman", "run", "--rm", "--userns=keep-id", f"--user={os.getuid()}:{os.getgid()}",
+        "--network=none",
         "-v", f"{mount}:/work:z", "-e", "HOME=/tmp", "-w", "/work", IMAGE,
     ] + args
     done = subprocess.run(cmd, capture_output=True, text=True, timeout=900)
     return done.returncode, (done.stdout + done.stderr)
+
+
+def is_fresh(have, glb_key, png_key, out: pathlib.Path, upload: bool) -> bool:
+    """Whether `--stale-only` may skip this board file.
+
+    WITH --upload, "stale" ALSO MEANS "not fully uploaded yet" -- not just rendering
+    skips a board file this happily. Found the hard way: a run that crashed on a 504 left
+    190 board files rendered but only 183 uploaded, and a check that only looked at
+    glb/png keys and local files would have skipped those 7 forever.
+
+    And with --upload THE BUCKET IS THE COPY THAT COUNTS, not local disk. The assets are
+    content-addressed, so an upload under these keys is this exact render. Requiring the
+    local files too made the VPS, which had never held the laptop's renders, re-render
+    all 434 board files on its first night (2026-11-16).
+    """
+    if have.get("glb") != glb_key or have.get("png") != png_key:
+        return False
+    if upload:
+        return set(have.get("uploaded") or []) >= {"glb", "png"}
+    return (out/f"{glb_key}.glb").exists() and (out/f"{png_key}.png").exists()
+
+
+def entry_to_record(have, entry):
+    """The manifest entry to keep: the new one, unless it lost a render the old one had.
+
+    A FAILED EXPORT NEVER ERASES A GOOD RENDER. On 2026-11-16 the nightly's container
+    could not read its own mount, every one of 434 exports failed, the failures replaced
+    the manifest's entries, and renders.json went from 334 designs to 2. A failure that
+    says nothing about the board must not count as news about it. If the board changed,
+    the old render is of the previous revision, which is still a truer picture than none.
+    """
+    if not entry.get("glb") and have.get("glb"):
+        return have
+    return entry
 
 
 def save_manifest(path: pathlib.Path, manifest) -> None:
@@ -363,12 +405,7 @@ def main():
                 # would have skipped every one of those 7 forever on the next --stale-only
                 # run, silently leaving them unpublished with no error and no sign anything
                 # was wrong.
-                already_uploaded = not args.upload or set(have.get("uploaded") or []) >= {"glb", "png"}
-                if (args.stale_only and have.get("glb") == glb_key
-                        and have.get("png") == png_key
-                        and (args.out/f"{glb_key}.glb").exists()
-                        and (args.out/f"{png_key}.png").exists()
-                        and already_uploaded):
+                if args.stale_only and is_fresh(have, glb_key, png_key, args.out, args.upload):
                     skipped += 1
                     continue
 
@@ -427,7 +464,7 @@ def main():
                     failed += 1
                 else:
                     done += 1
-                manifest[key] = entry
+                manifest[key] = entry_to_record(have, entry)
                 save_manifest(args.manifest, manifest)
                 state = "ok" if not notes else "PARTIAL"
                 print(f"  {state:8} {slug:28} {path[:44]:44} "
