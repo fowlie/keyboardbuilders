@@ -1,6 +1,8 @@
-# seed/photo-declines.toml -- designs whose README photos the owner looked at
-# and did not pick one from. Written by scripts/intake_answer.py from his reply
-# to an `intake/photo` issue (backlog #104); read by scripts/intake_ask.py.
+# seed/photo-declines.toml -- designs whose README photos a moderator looked at
+# and did not pick one from. Written by scripts/intake_answer.py from an answer
+# on /moderation (backlog #104, #117); read by scripts/intake_ask.py.
+#
+# `moderator` is who ruled; `issue = N` is a reply to GitHub issue N, before /moderation.
 #
 #   none   no photo of this board among the images shown
 #   skip   not sure; don't ask again
@@ -373,10 +375,10 @@ issue = 56
 slug = "hem"
 verdict = "none"
 images = "673b943d5569"
-issue = 0
+moderator = "fowlie"
 
 [[entry]]
 slug = "swept-corne-3x5"
 verdict = "none"
 images = "15a57760813c"
-issue = 0
+moderator = "fowlie"
