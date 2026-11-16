@@ -6,8 +6,8 @@ The caller for `build_silhouettes.stagger_kind`, which `measure_stagger_candidat
 sampled 38 designs to fit: the owner ruled each by eye against a plot of its own key
 positions, and 37 of the 38 agree with the fitted rule (see that function's docstring
 for the two signals and their margins). The one disagreement, `choc-v`, is
-`seed/stagger-overrides.toml`'s, applied last exactly as `seed/splay-overrides.toml`
-is for the same reason -- a real, local exception the owner named himself, not grounds
+`seed/stagger-overrides.toml`'s, which build_seed.py applies over this script's raw scan
+(see measured_fields.py), exactly as `seed/splay-overrides.toml` is for the same reason -- a real, local exception the owner named himself, not grounds
 to move the rule for the rest of the corpus.
 
 READS `position-scan.json`, the same per-board `(x, y, r)` cache `measure_splay.py`
@@ -30,7 +30,6 @@ import argparse
 import json
 import pathlib
 import sys
-import tomllib
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 import board_fills
@@ -78,29 +77,15 @@ def verdict_for(design, boards):
     return None  # the design's own board files (or hands) disagree -- Unknown, never a guess
 
 
-def load_overrides(path):
-    """`seed/stagger-overrides.toml` -- owner corrections to what the measurement found.
-
-    Applied LAST, after every board file has had its say: this is a person overruling
-    the measurement for a specific design, not another vote in the same aggregation
-    `verdict_for` already does. See that file's own header for why it exists.
-    """
-    if not path.exists():
-        return {}
-    return {e["slug"]: e["stagger"] for e in tomllib.loads(path.read_text())["entry"]}
-
-
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--designs", default="src/main/resources/seed/designs.json")
     ap.add_argument("--positions", default="data/position-scan.json")
-    ap.add_argument("--overrides", default="seed/stagger-overrides.toml")
     ap.add_argument("--out", default="data/stagger-scan.json")
     args = ap.parse_args()
 
     designs = json.loads((REPO/args.designs).read_text())
     positions = json.loads((REPO/args.positions).read_text())
-    overrides = load_overrides(REPO/args.overrides)
 
     # A RULED FILL REPLACES ITS BOARD FILE'S MERGED POSITIONS: see board_fills.py.
     ruled = board_fills.ruled_positions(designs)
@@ -116,24 +101,6 @@ def main():
         if verdict is not None:
             verdicts[slug] = verdict
 
-    live = {d["slug"] for d in designs}
-    overridden = 0
-    for slug, stagger in overrides.items():
-        assert slug in live, (
-            f"{args.overrides}: {slug!r} names no design -- a stale override, since a "
-            f"rename leaves seed/renames.toml its own row rather than one here")
-        # `"unknown"` is not a fourth bucket -- it is an owner ruling that no bucket
-        # fits this design at all (a gamepad's individually rotated keys, not a
-        # keyboard grid), so it REMOVES the row rather than assigning one.
-        if stagger == "unknown":
-            if slug in verdicts:
-                overridden += 1
-                del verdicts[slug]
-            continue
-        if verdicts.get(slug) != stagger:
-            overridden += 1
-        verdicts[slug] = stagger
-
     counts = {}
     for v in verdicts.values():
         counts[v] = counts.get(v, 0) + 1
@@ -142,13 +109,11 @@ def main():
         print(f"  {kind:<8}              {counts.get(kind, 0):>4}   -> facet row `{kind}`")
     print(f"  no verdict           {len(designs) - len(verdicts):>4}   -> NO ROW "
           f"(Unknown, never a guess)")
-    if overrides:
-        print(f"  {len(overrides)} owner overrides applied ({overridden} changed the "
-              f"measured verdict) -> {args.overrides}")
 
     out = REPO/args.out
     out.write_text(json.dumps(verdicts, indent=1, sort_keys=True))
-    print(f"\n  {len(verdicts)} designs with a verdict -> {out.relative_to(REPO)}")
+    print(f"\n  {len(verdicts)} designs with a verdict -> {out.relative_to(REPO)} "
+          f"(the owner's seed/stagger-overrides.toml is applied by build_seed.py)")
     return 0
 
 

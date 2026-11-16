@@ -61,6 +61,7 @@ import sys
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 import board_fills
 import firmware_records
+import measured_fields
 import trees as tree_registry
 from check_source_reachability import parse
 from draft_boards import VERSION, id_tokens, load_boards, toks
@@ -2239,91 +2240,18 @@ def main():
             d["switchMounts"] = sorted(e["switch_mounts"])
     print(f"{len(overrides)} designs corrected by seed/switch-overrides.toml")
 
-    # -- splay, yes/no/unknown -----------------------------------------------------------
+    # -- measured fields: splay, stagger, exposed components, power switch -------------
     #
-    # The owner's request: "ignore thumb clusters for this detection, otherwise 90% will
-    # have splay." `measure_splay.py` is `build_silhouettes.has_splay` -- already scored
-    # against 21 of his own by-eye verdicts and agreeing with all 21 -- given a caller for
-    # the first time, dropping the thumb cluster's lowest three keys per hand exactly as
-    # his condition asked.
-    #
-    # A REAL THIRD VALUE, NOT "EVIDENCE ONLY" LIKE `extensions`/`switchSocket` ABOVE. Those
-    # two are regexes over footprint names that can prove presence and never prove
-    # absence, so silence has to mean `Unknown` for both of them. Splay is different: it
-    # is read off where a design's own attributed board places every switch, over the
-    # WHOLE board rather than a name lexicon that can always be one entry short, so a
-    # board that was actually measured and found not to fan is a genuine `false` --
-    # `measure_splay.py`'s own module doc has the aggregation rule (`True` wins if any
-    # attributed board shows it, `False` only where every usable board was actually
-    # judged). What is still `Unknown` is a design with no attributed board, or whose only
-    # board's key count matches no layout it publishes -- nobody has measured those at
-    # all, and this writes nothing for them rather than guessing.
-    splay_file = REPO/"data/splay-scan.json"
-    splay_verdicts = json.loads(splay_file.read_text()) if splay_file.exists() else {}
-    splayed = unsplayed = 0
-    for d in designs:
-        if d["slug"] in splay_verdicts:
-            verdict = splay_verdicts[d["slug"]]
-            d["splay"] = verdict
-            splayed += verdict
-            unsplayed += not verdict
-    print(f"{splayed} designs measured splayed, {unsplayed} measured not splayed "
-          f"({len(designs) - splayed - unsplayed} with no verdict either way)")
-
-    # -- stagger, fitted against 38 owner-ruled designs (2026-09-24) --------------------
-    #
-    # Same shape as splay just above: `measure_stagger.py` is `build_silhouettes
-    # .stagger_kind` given a caller, one verdict per design combined across its own
-    # attributed board files, `Unknown` wherever no usable file exists or the design's
-    # files disagree with each other. `stagger_kind`'s own docstring has the two fitted
-    # signals and their margins; `seed/stagger-overrides.toml` has the one owner
-    # correction (`choc-v`) applied on top.
-    stagger_file = REPO/"data/stagger-scan.json"
-    stagger_verdicts = json.loads(stagger_file.read_text()) if stagger_file.exists() else {}
-    stagger_counts = {}
-    for d in designs:
-        if d["slug"] in stagger_verdicts:
-            verdict = stagger_verdicts[d["slug"]]
-            d["stagger"] = verdict
-            stagger_counts[verdict] = stagger_counts.get(verdict, 0) + 1
-    print(f"{stagger_counts.get('ortho', 0)} designs measured ortho, "
-          f"{stagger_counts.get('row', 0)} row-staggered, "
-          f"{stagger_counts.get('column', 0)} column-staggered "
-          f"({len(designs) - sum(stagger_counts.values())} with no verdict either way)")
-
-    # -- exposed components, the owner's request 2026-10-04 -----------------------------
-    #
-    # Same shape as splay: `measure_exposed_components.py` writes one verdict per design,
-    # `True` where most of the switch diodes sit on top outside every keycap (Discipline,
-    # Mysterium, Un Split), and nothing at all where it could not find the diodes.
-    exposed_file = REPO/"data/exposed-components-scan.json"
-    exposed_verdicts = json.loads(exposed_file.read_text()) if exposed_file.exists() else {}
-    exposed = hidden = 0
-    for d in designs:
-        if d["slug"] in exposed_verdicts:
-            verdict = exposed_verdicts[d["slug"]]
-            d["exposedComponents"] = verdict
-            exposed += verdict
-            hidden += not verdict
-    print(f"{exposed} designs measured with exposed components, {hidden} without "
-          f"({len(designs) - exposed - hidden} with no verdict either way)")
-
-    # -- power switch, the owner's request 2026-10-04 -----------------------------------
-    #
-    # `measure_power_switch.py` reads the slide switch off the design's own board files by
-    # name, against a lexicon read off every switch-like name in the corpus; its module doc
-    # says why "no" is allowed here. Nothing is written where it cannot tell.
-    power_file = REPO/"data/power-switch-scan.json"
-    power_verdicts = json.loads(power_file.read_text()) if power_file.exists() else {}
-    switched = unswitched = 0
-    for d in designs:
-        if d["slug"] in power_verdicts:
-            verdict = power_verdicts[d["slug"]]
-            d["powerSwitch"] = verdict
-            switched += verdict
-            unswitched += not verdict
-    print(f"{switched} designs with a power switch on the board, {unswitched} without "
-          f"({len(designs) - switched - unswitched} with no verdict either way)")
+    # Each is measured off the design's own board files into data/<field>-scan.json by its
+    # measure_*.py, whose module doc has the rule; three have a seed/<field>-overrides.toml
+    # of owner corrections. `measured_fields` joins the two under one rule (the owner's
+    # ruling wins, a stale slug stops the build) and writes nothing where neither has a
+    # verdict -- Unknown, never a guess. Splay and stagger are a real third value, not
+    # evidence-only like `extensions`/`switchSocket` above: they are read off where the
+    # whole board places every switch, so a measured `false` is a genuine `false`.
+    for name, tally in measured_fields.apply(designs, measured_fields.fields(REPO)).items():
+        print(f"{name}: " + ", ".join(f"{v} {n}" for v, n in sorted(tally.items(), key=str))
+              + f" ({len(designs) - sum(tally.values())} with no verdict either way)")
 
     # -- board size and copper layers, the owner's call 2026-10-04 ----------------------
     #

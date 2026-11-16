@@ -6,7 +6,7 @@
 # review of the first corpus-wide run (2026-09-23, one day after the facet shipped in
 # 948549a) found eleven more it got wrong, none of the 21 it was fitted against. This
 # file is their correction, in the same shape as `seed/board-declines.toml`: a keyed
-# override a script reads and applies last, not a guess at a better general rule that
+# override build_seed.py applies over the raw scan (scripts/measured_fields.py), not a guess at a better general rule that
 # would move verdicts for the rest of the corpus without anyone having looked at them.
 #
 # Two distinct causes, both mis-shapes of the same "drop the lowest three keys as the

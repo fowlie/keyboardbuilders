@@ -1,5 +1,5 @@
 # seed/exposed-components-overrides.toml -- owner rulings on exposed components, applied
-# last by scripts/measure_exposed_components.py over what the diode measurement found.
+# by build_seed.py (scripts/measured_fields.py) over what the diode measurement found.
 #
 # `exposed` is the owner's verdict; `note` is why.
 

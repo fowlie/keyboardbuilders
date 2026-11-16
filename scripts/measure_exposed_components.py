@@ -42,7 +42,6 @@ import math
 import pathlib
 import re
 import sys
-import tomllib
 from concurrent.futures import ThreadPoolExecutor
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
@@ -105,20 +104,12 @@ def verdict_for(boards):
     return False if judged else None
 
 
-def load_overrides(path):
-    """`seed/exposed-components-overrides.toml` -- owner corrections, applied last."""
-    if not path.exists():
-        return {}
-    return {e["slug"]: e["exposed"] for e in tomllib.loads(path.read_text()).get("entry", [])}
-
-
 def main():
     ap = argparse.ArgumentParser(description=__doc__,
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--designs", default="data/design-boards.json")
     ap.add_argument("--boards", default="data/exposed-components-boards.json",
                     help="per-board cache; a cached design is not fetched again")
-    ap.add_argument("--overrides", default="seed/exposed-components-overrides.toml")
     ap.add_argument("--out", default="data/exposed-components-scan.json")
     ap.add_argument("--jobs", type=int, default=12)
     args = ap.parse_args()
@@ -147,10 +138,6 @@ def main():
         v = verdict_for(cache.get(slug, {}))
         if v is not None:
             verdicts[slug] = v
-    for slug, exposed in load_overrides(REPO/args.overrides).items():
-        if verdicts.get(slug) != exposed:
-            print(f"  override {slug}: {verdicts.get(slug)} -> {exposed}")
-        verdicts[slug] = exposed
 
     (REPO/args.out).write_text(json.dumps(verdicts, indent=1, sort_keys=True))
     yes = sorted(s for s, v in verdicts.items() if v)
