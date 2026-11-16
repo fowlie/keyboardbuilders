@@ -9,8 +9,8 @@ largest thing standing between the site and its target size. This file removes i
     seed/sources.toml   which REPO holds a row's hardware   (human-confirmed)
     seed/boards.toml    which BOARD FILE in it is this row's   <- this script
 
-Ticket 44, Half A. It attributes rows that already exist; the ~360 boards with no
-firmware record of their own are Half B and are deliberately not drafted here.
+Ticket 44, the firmware-first pass. It attributes rows that already exist; the ~360 boards with no
+firmware record of their own are left to the board-first pass and are deliberately not drafted here.
 
 WHY THIS IS DRAFTED AND NOT DERIVED, with the measurement that settles it.
 `josefadamcik/soflekeyboard` ships `Sofle_v1/PCB/SofleKeyboard.kicad_pcb` and
@@ -181,7 +181,7 @@ def kind(path):
 # A directory that files boards by how many keys they have: `34Keys/`, `30keys/`,
 # `36Keys/`. It says nothing about WHICH keyboard, so it is excluded from a name for the
 # same reason a bare version is. `shared_stem` already rejected it; this puts the rule in
-# the ordinary naming path too, where Half B surfaced `34 Keys Cradio Z`.
+# the ordinary naming path too, where the board-first pass surfaced `34 Keys Cradio Z`.
 BUCKET = re.compile(r"^\d+\s*keys?$", re.I)
 
 VERSION = re.compile(r"^(?:(?:v|ver|version|rev|mk|r)\d[\w.]*|\d+(?:[._]\d+)+)$", re.I)
@@ -753,7 +753,7 @@ def contention_is_free(rows, reg, shields):
 
       1. THEY PUBLISH THE SAME PAGE. Same key counts, same splitness -- so picking
          wrong between them cannot change a single field. `tie_is_free` applies this
-         to tied BOARDS; this is the mirror, tied RECORDS, and Half B already made a
+         to tied BOARDS; this is the mirror, tied RECORDS, and the board-first pass already made a
          design cite several records ("one firmware could cover multiple designs").
 
       2. THEY ARE NOT VERSIONS OF EACH OTHER. `Pill60` has three controller builds

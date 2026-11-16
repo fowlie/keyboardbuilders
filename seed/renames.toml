@@ -57,19 +57,19 @@ why  = "ddeb64d, 2026-09-02. `PCB/Slimorta_main_board/` -- a repo with ONE PCB c
 [[entry]]
 was  = "atreyu-pcb2-v2"
 now  = "atreyu"
-why  = "2026-09-06. A MERGE, the same shape as the `nack` pair above. `pcb/v1/atreyu-pcb2.kicad_pcb` and `pcb/v2/atreyu-pcb2.kicad_pcb` are BYTE-IDENTICAL in switch positions -- all 60 coordinates match -- so the repo's v1 and v2 are one keyboard's revisions, and Half B was publishing v2 a second time under a name read off its path. Both URLs now name that keyboard"
+why  = "2026-09-06. A MERGE, the same shape as the `nack` pair above. `pcb/v1/atreyu-pcb2.kicad_pcb` and `pcb/v2/atreyu-pcb2.kicad_pcb` are BYTE-IDENTICAL in switch positions -- all 60 coordinates match -- so the repo's v1 and v2 are one keyboard's revisions, and the board-first pass was publishing v2 a second time under a name read off its path. Both URLs now name that keyboard"
 
 [[entry]]
 was  = "v2-choc"
 now  = "atreyu-v2-choc"
-why  = "2026-09-06. A rename, not a merge: the Choc board was always its own row, but Half B named it off its own path -- `pcb/v2-choc/` -- and the site published a keyboard called `v2 choc` by climent with nothing on the page tying it to the Atreyu. Confirming it onto `atreyu/rev2` in seed/boards.toml moves it to Half A, where a human sets the name, which is ticket 44's rule working as written"
+why  = "2026-09-06. A rename, not a merge: the Choc board was always its own row, but the board-first pass named it off its own path -- `pcb/v2-choc/` -- and the site published a keyboard called `v2 choc` by climent with nothing on the page tying it to the Atreyu. Confirming it onto `atreyu/rev2` in seed/boards.toml moves it to the firmware-first pass, where a human sets the name, which is ticket 44's rule working as written"
 
 # -- Removals. `now = false`: the page was wrong, and a 404 is the right answer. --------
 
 [[entry]]
 was  = "corne-cherry-v3"
 now  = false
-why  = "bb3edf7, 2026-08-29. `joric/jorne` is a FORK of `foostan/crkbd` and still holds its parent's board files, so Half B was minting designs from boards their repo did not author. There is no Jorne v3 to redirect to and the Corne it copied is not this design"
+why  = "bb3edf7, 2026-08-29. `joric/jorne` is a FORK of `foostan/crkbd` and still holds its parent's board files, so the board-first pass was minting designs from boards their repo did not author. There is no Jorne v3 to redirect to and the Corne it copied is not this design"
 
 [[entry]]
 was  = "corne-classic"
@@ -264,7 +264,7 @@ why  = "2026-09-29. A KiCad template, not a keyboard -- its designer's own repor
 [[entry]]
 was  = "alpha-pro-micro"
 now  = "alpha"
-why  = "2026-09-29. The same PyrooL/Alpha PCB published twice; Half B no longer mints a board Half A already published."
+why  = "2026-09-29. The same PyrooL/Alpha PCB published twice; the board-first pass no longer mints a board the firmware-first pass already published."
 
 [[entry]]
 was  = "chameleon-v1-0-v1-00"

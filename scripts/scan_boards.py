@@ -212,7 +212,7 @@ def classify(slug, path):
         # This guard used to read `if not sw and len(text) >= CAP` -- it paid for the
         # whole file only when the cap had hidden EVERY switch, on the theory that the
         # thing to protect was the board/plate verdict. But the COUNT is load-bearing
-        # too: Half B joins a firmware record to a board by `placed in counts or
+        # too: the board-first pass joins a firmware record to a board by `placed in counts or
         # placed * 2 in counts`, so a truncated count silently fails the join and the
         # design is deferred with a plausible-looking reason.
         #

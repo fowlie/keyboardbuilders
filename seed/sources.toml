@@ -3500,7 +3500,7 @@ note     = ""
 # THE REST OF THE SQUIGGLE FAMILY, 2026-09-26, on the owner's ask ("maybe add the other
 # squiggle variants then?"). The README names five: Standard, Low Profile, 36 Keys,
 # Minimalist and Goldberg. Low Profile is the row above; Standard and 36 Keys need no
-# row, because upstream's record fits their boards by count and Half B mints them. These
+# row, because upstream's record fits their boards by count and the board-first pass mints them. These
 # two cannot be minted that way.
 #
 # MINIMALIST: one Pro Micro for both halves, joined by the README's "Amphenol 10 wire"
@@ -7001,7 +7001,7 @@ path     = "mini"
 stated   = ""
 signal   = "dev-seed"
 verdict  = "drafted"
-note     = "QMK's own record states no url; its readme names Yoichiro Tanaka (github.com/yoichiro) as maintainer, matching the repo owner. Confirmed at HEAD d3a36e247d: not a fork, 42 stars, 'Lunakey License' -- CC-BY-NC-SA-4.0 with commercial use by permission. The repo holds THREE designs (macro, mini, pico), so `path` scopes this row: mini/rev6/pcb/lunakey_mini.kicad_pcb places 44 MX/Choc hotswap footprints at 44 positions, both halves in one file, two Pro Micro; the record declares LAYOUT_split_3x6_4 44, which matches. Batch 2 set this repo aside for the multi-design attribution problem; `path` is the answer the Scotto rows use. Measured the same way: pico/rev1 and pico/rev2 ALSO place 44 (the Pico is the RP2040 sibling, QMK yoichiro/lunakey_pico, also 44), and macro/rev3 places 11 (yoichiro/lunakey_macro, 11) -- so watch that the Mini's record does not attach to the Pico's boards under Half B's count join."
+note     = "QMK's own record states no url; its readme names Yoichiro Tanaka (github.com/yoichiro) as maintainer, matching the repo owner. Confirmed at HEAD d3a36e247d: not a fork, 42 stars, 'Lunakey License' -- CC-BY-NC-SA-4.0 with commercial use by permission. The repo holds THREE designs (macro, mini, pico), so `path` scopes this row: mini/rev6/pcb/lunakey_mini.kicad_pcb places 44 MX/Choc hotswap footprints at 44 positions, both halves in one file, two Pro Micro; the record declares LAYOUT_split_3x6_4 44, which matches. Batch 2 set this repo aside for the multi-design attribution problem; `path` is the answer the Scotto rows use. Measured the same way: pico/rev1 and pico/rev2 ALSO place 44 (the Pico is the RP2040 sibling, QMK yoichiro/lunakey_pico, also 44), and macro/rev3 places 11 (yoichiro/lunakey_macro, 11) -- so watch that the Mini's record does not attach to the Pico's boards under the board-first pass's count join."
 
 # -- tree = "cheapino-vial" -----------------------------------------------------
 # A design whose FIRMWARE RECORD IS NOT UPSTREAM. Backlog #64, and the first row of

@@ -26,7 +26,7 @@ THE THREE SHAPES, printed as a heading so the queue can be worked by class:
   as many boards as rows   an assignment: every board takes exactly one record, so
                            the best total pairing is forced rather than chosen.
   more boards than rows    which of the N boards is this record's -- and the boards
-                           nobody claims are Half B's designs.
+                           nobody claims are the board-first pass's designs.
 
 WHAT THE BOARD FILE'S OWN COMMIT HISTORY SAYS, the owner's signal, 2026-09-01. Where
 the competing records are REVISIONS of one keyboard -- `speedo/v2` against `speedo/v3`
@@ -149,11 +149,11 @@ def forecast(boards, names, scan, entries):
 
     Ticket 44 opened on the row count: *"that restriction defers 200 rows -- 43% of the
     confirmed set -- and it is the single largest thing standing between the site and
-    its target size."* That was true when Half B did not exist. Half B publishes a board
+    its target size."* That was true when the board-first pass did not exist. The board-first pass publishes a board
     that no row claims, so it has been eating the queue from the other end, and a row
     whose repo has no unclaimed board left cannot add a design however it is ruled.
 
-    THE CEILING IS PER REPO, and it is `min(rows queued, board-sets Half A could still
+    THE CEILING IS PER REPO, and it is `min(rows queued, board-sets the firmware-first pass could still
     publish)` -- because eight `dumbpad` rows over two unclaimed board-sets is two
     designs, not eight. A board-set counts only if it could actually complete a record:
     it must place a switch family AND name a controller, which are the two facts

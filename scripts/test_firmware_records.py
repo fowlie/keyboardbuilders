@@ -121,7 +121,7 @@ class QmkKeyboard(Fixture):
         self.assertEqual((kb.key_counts, kb.split), ([58], True))
 
     def test_a_record_with_no_layouts_is_a_keyboard_of_no_stated_count(self):
-        # Half A defers it as "no key count", which is a different finding from a
+        # The firmware-first pass defers it as "no key count", which is a different finding from a
         # record that is not there at all.
         self.qmk("bare/keyboard.json", {"processor": "rp2040"})
         kb, why = self.records().of("qmk", "bare").keyboard()

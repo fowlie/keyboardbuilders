@@ -28,7 +28,7 @@ thumb clusters mean the switches do not sit on one grid, so fitting one would fa
 exactly the ergonomic boards this corpus is about. Nearest-neighbour needs no grid.
 
 WRITING THE CACHE. `--write` runs over every attributed board -- confirmed boards.toml
-rows AND the Half B boards `design-boards.json` names -- and stores the result as
+rows AND the board-first boards `design-boards.json` names -- and stores the result as
 `data/pitch-scan.json`, keyed `repo\tpath` exactly like `board-scan.json`
 so `build_seed.py` can join on it. Committed, like the other scans, because the corpus
 must be reproducible from source on every build without re-fetching 200 files.
@@ -181,11 +181,11 @@ DESIGN_BOARDS = REPO/"data/design-boards.json"
 def attributed_boards():
     """Every `(repo, path)` some published design is built from, confirmed rows first.
 
-    TWO SOURCES, because a design reaches `designs.json` by two routes. A Half A design
-    has a CONFIRMED `seed/boards.toml` row naming its board. A Half B design is built
+    TWO SOURCES, because a design reaches `designs.json` by two routes. A firmware-first design
+    has a CONFIRMED `seed/boards.toml` row naming its board. A board-first design is built
     from the board file itself, with no boards.toml row at all, and `design-boards.json`
     (written by `build_seed.py`) is the only place its board is named. This used to read
-    boards.toml alone, so no Half B design could ever get a pitch: `stront-choc` read
+    boards.toml alone, so no board-first design could ever get a pitch: `stront-choc` read
     "Key spacing -- not recorded" while its own board places every switch 17 mm apart.
     """
     import tomllib

@@ -4,13 +4,13 @@
 # `seed/declines.toml` rules out a firmware RECORD (a tree/id pair) before it ever gets
 # a sources.toml row -- the right shape for "this record names hardware that is not a
 # keyboard". It has no way to say "this ONE board file in an otherwise-good repo is not
-# its own design", because Half B does not mint from records at all -- it mints from
+# its own design", because the board-first pass does not mint from records at all -- it mints from
 # board-SETS, which have no (tree, id) to hang a ruling on.
 #
 # Backlog #89 is why this exists. `joric/jorne` holds three real Jorne PCB revisions
 # (Classic 2.1, Cherry 2.1, Cherry 3.0 -- see seed/boards.toml and seed/names.toml) and
 # one more board-set, `corne-cherry/pcb_wl/{left,right}` -- a wireless variant, real
-# hardware, matching Jorne's own declared 44-key count, that Half B independently mints
+# hardware, matching Jorne's own declared 44-key count, that the board-first pass independently mints
 # once `build_seed.py`'s fork-ancestor check stops wrongly refusing the whole repo. It
 # is not in the repo's own README's PCB list, and the owner's ruling was to decline it
 # rather than publish it under a guessed name -- not because it is fake, but because
@@ -33,7 +33,7 @@ note     = "Backlog #89, 2026-09-11. Real hardware, matches Jorne's declared 44-
 
 # ibnuda/squiggle, 2026-09-26. Two board files the README never names, both placing the
 # Standard's 17 footprints with NO DIODES (no-diode adds a reset button): a direct-wired
-# hand, which upstream's rev1 -- a 4x5 COL2ROW diode matrix -- cannot drive, so Half B's
+# hand, which upstream's rev1 -- a 4x5 COL2ROW diode matrix -- cannot drive, so the board-first pass's
 # count match would publish them with firmware and wiring they do not have. Declined on
 # #89's rule rather than published under a guessed name.
 [[entry]]
@@ -66,7 +66,7 @@ reason   = "not-in-the-readme"
 note     = "2026-09-28, the owner's call. A Ferris-style Choc split (STM32F072 left, MCP23017 right, TRRS, fabbed as one snap-apart panel) the README never names; it had published with the Unicorne's MX photo and F411 firmware."
 
 # joe-scotto/scottokeebs's ScottoModules is a KiCad TEMPLATE project on an STM32F072, not a
-# keyboard: its 6 switches are a demo macropad. Half B minted it and paired it with the
+# keyboard: its 6 switches are a demo macropad. The board-first pass minted it and paired it with the
 # ScottoMouse's QMK record, because both count 6 switches and "soldered" didn't contradict
 # -- so it published as a 6-key RP2040 macropad, with ScottoMouse's firmware on a board
 # that runs none. Reported publicly by the designer on the launch thread, 2026-09-29.
@@ -80,7 +80,7 @@ reason   = "not-a-keyboard"
 note     = "2026-09-29, the designer's own report (Reddit): a KiCad template on an STM32, no layout; the 6-key macropad is only its demo. Had published as a 6-key RP2040 board with ScottoMouse's firmware."
 
 # TweetyDaBird/Fat-Chameleon keeps every PCB revision side by side under PCB/v1.xx/, and
-# Half B minted each old one as its own design -- "Chameleon v1 0 v1.00", "v1 0 v1.01",
+# The board-first pass minted each old one as its own design -- "Chameleon v1 0 v1.00", "v1 0 v1.01",
 # "v1 10", "v1 11" -- beside `chameleon`, which already reads the newest, v1.20. The owner's
 # call 2026-09-29: list the newest revision only. A per-repo ruling, not an answer to
 # ticket 55's general revision question.

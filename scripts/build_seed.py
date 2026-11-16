@@ -545,7 +545,7 @@ def agreeing_with_board(fits, footprints, soldered, found, records, repo, boms):
     all kept, as before. Measured 2026-09-28 over the published corpus: 17 soldered
     designs carry a contradicting record, and 6 have nothing else (`grooveboard` x3,
     `paws60`, `cypher`, `dropin-v2`). Withholding those would be a different ruling
-    from this one. The build diff was 10 designs, all in Half B: Corne x2, and the
+    from this one. The build diff was 10 designs, all in the board-first pass: Corne x2, and the
     eight Ferris boards, which were wearing `ferris/sweep` (the Pro Micro Sweep). That
     record was also the only one to set their split flag and the direct-pin wiring, so
     seed/bodies.toml now rules them split. They keep no wiring, which is right: 0.1 and
@@ -611,7 +611,7 @@ def stated_keys(row, found):
     THE COUNT IS ASSERTED AND CHECKED, and the check is the whole of it. `keys` is a
     human's statement and the board is the falsifier: it must equal what the boards
     place, or twice it for a split board file holding one hand. The same
-    either-interpretation rule Half B uses -- and it cannot be derived alone, because a
+    either-interpretation rule the board-first pass uses -- and it cannot be derived alone, because a
     split design whose file holds BOTH hands already places the full count and doubling
     it would publish twice the keyboard.
 
@@ -706,7 +706,7 @@ def keys_per_file(repo, found):
 def two_pieces(ruled, record_says):
     """Is this design in two or more physical pieces?
 
-    The witness Half B's doubling needs. A person's ruling from `seed/bodies.toml` wins
+    The witness the board-first pass's doubling needs. A person's ruling from `seed/bodies.toml` wins
     where there is one -- in BOTH directions, so a `unibody` ruling refuses a doubling
     the record's flag would have allowed -- and the record answers where there is not.
 
@@ -906,8 +906,8 @@ def board_declines(path):
     """Board-sets a person has ruled are not a design, keyed by any one of their paths.
 
     `seed/declines.toml` rules out a firmware RECORD before it gets a sources.toml row;
-    Half B mints from board-SETS, which have no record to hang that ruling on. This is
-    the same idea at the grain Half B actually works in -- see seed/board-declines.toml.
+    The board-first pass mints from board-SETS, which have no record to hang that ruling on. This is
+    the same idea at the grain the board-first pass actually works in -- see seed/board-declines.toml.
 
     CONFIRMED ROWS ONLY, the same rule every other seed file takes.
     """
@@ -923,8 +923,8 @@ def licence_slots(repo, scanned, rulings):
 
     Both halves of the build ask this same question, and until this function existed
     they answered it with two copies of the same twenty lines. The copies had already
-    drifted: Half A deferred with "several licences at the repo root, needs a ruling"
-    and Half B with the same words minus the half that says what to do about it.
+    drifted: the firmware-first pass deferred with "several licences at the repo root, needs a ruling"
+    and the board-first pass with the same words minus the half that says what to do about it.
 
     A HUMAN RULING WINS OUTRIGHT and is never merged with the scan. The scan can see
     that `foostan/crkbd` holds CC-BY-4.0 and MIT; only a person can say which one covers
@@ -987,7 +987,7 @@ def main():
     ap.add_argument("--firmware-url", action="store_true",
                     help="emit FirmwareRef.url -- ONLY once the domain has the field")
     # EVERY DEFERRAL, NAMED. The summary counts them and the counts are what get
-    # quoted, but no measurement can start from a count: `157 half B: no firmware
+    # quoted, but no measurement can start from a count: `157 board-first: no firmware
     # record fits` says nothing about WHICH 157 boards, and the answer was being
     # re-derived by hand from board-scan.json every time anyone asked. Written only
     # when asked for, so the ordinary build is unchanged.
@@ -1021,8 +1021,8 @@ def main():
     # The human's answer where the scan cannot give one. Curated, so it lives in `seed/`
     # beside the other four ruling files rather than in `data/` with the scans.
     rulings = licence_rulings(REPO/"seed/licences.toml")
-    # Board-sets ruled not a design of their own -- Half B's counterpart to
-    # seed/declines.toml, at the grain Half B actually mints from.
+    # Board-sets ruled not a design of their own -- the board-first pass's counterpart to
+    # seed/declines.toml, at the grain the board-first pass actually mints from.
     declined_boards = board_declines(REPO/"seed/board-declines.toml")
     # Key pitch, measured off each board's own switch placements by
     # scripts/measure_key_pitch.py. Absent for a board with too few keys to average --
@@ -1068,7 +1068,7 @@ def main():
     board_sets, board_names, _, _ = load_boards(str(REPO/"data/board-scan.json"))
     designs_per_repo = {r: len(sets) for r, sets in board_sets.items()}
 
-    # A FORK STILL HOLDS ITS PARENT'S BOARD FILES, and Half B was minting designs from
+    # A FORK STILL HOLDS ITS PARENT'S BOARD FILES, and the board-first pass was minting designs from
     # them. Forgejo #30: six designs -- `corne-cherry`, `corne-chocolate`, `corne-classic`,
     # `corne-light`, `corne-cherry-v3`, `wl-corne-cherry` -- published from
     # `joric/jorne`, which GitHub reports as `fork: true, parent: foostan/crkbd` and
@@ -1174,7 +1174,7 @@ def main():
             if e["verdict"] == "no_board":
                 no_board.add((e["tree"], e["id"]))
 
-    # HALF B: a board no firmware record was attributed to still becomes a design.
+    # BOARD-FIRST: a board no firmware record was attributed to still becomes a design.
     # Ticket 19 decision 1 -- "the unit is the board, not the firmware entry" -- and the
     # owner's ruling 2026-08-29 that one firmware may cover several designs: "like Cantor
     # and Cantor Remix ... some guy forked Cantor and created a 36 key version".
@@ -1189,7 +1189,7 @@ def main():
     # Claimed by PATH, not by the exact tuple a row lists. A human may attribute two
     # files the grouper treats as two sets -- `Cantor_Classic`'s square and rounded
     # outlines are one design to a person and two board-sets to the grouping rule -- and
-    # matching tuples let Half B re-emit them, so `Cantor` and `cantor-classic` both
+    # matching tuples let the board-first pass re-emit them, so `Cantor` and `cantor-classic` both
     # published from the same PCB.
     # THE BOARD'S OWN SWITCH COUNT, READ A SECOND WAY. `extract_switch_footprints`
     # counts FOOTPRINTS, which double-counts a board that offers a choice at one
@@ -1203,7 +1203,7 @@ def main():
 
     # LOUD IF A CLAIMED PATH NAMES A DEAD ROW. Backlog #76: a `boards.toml` entry keyed
     # to a `(tree, id)` sources.toml never confirmed -- a hand-typed row, or an id that
-    # moved -- used to remove the board from Half B with no deferral at all, because
+    # moved -- used to remove the board from the board-first pass with no deferral at all, because
     # this set was built from EVERY confirmed boards.toml entry with nothing checking
     # its id is a live record. `by_key` is exactly that check and already exists by this
     # point in the build. Zero rows fail it today, so this costs nothing and turns the
@@ -1216,7 +1216,7 @@ def main():
             raise SystemExit(
                 f"seed/boards.toml confirms {e['tree']}:{e['id']}, which names no "
                 "confirmed row in seed/sources.toml -- backlog #76. Fix the id, or the "
-                "board silently drops out of Half B with no trace."
+                "board silently drops out of the board-first pass with no trace."
             )
         for path in e["boards"]:
             claimed_paths.add((e["source"], path))
@@ -1237,7 +1237,7 @@ def main():
 
     # A PERSON'S RULING ON ONE-PIECE-OR-TWO, loaded before either half runs. It is
     # applied to `body` further down, after the halves and before the merge, and that
-    # stays where it is -- but Half B's join needs it EARLIER, as the witness that lets
+    # stays where it is -- but the board-first pass's join needs it EARLIER, as the witness that lets
     # a hand's count be doubled. Same question, two uses.
     ruled_bodies = body_rulings(REPO/"seed/bodies.toml")
     ruled_reversible = reversible_rulings(REPO/"seed/bodies.toml")
@@ -1247,7 +1247,7 @@ def main():
     # of all of them at once. `mcu` is the fact that needs it: `fatenozomi/arisu-pcb` is
     # one PCB submitted to QMK twice, and the two submissions contradict each other --
     # `arisu` declares `processor: atmega32u4`, `nightly_boards/ph_arisu` declares
-    # `development_board: promicro`. Asked one row at a time, Half A built two designs
+    # `development_board: promicro`. Asked one row at a time, the firmware-first pass built two designs
     # differing only in `mcu`, and the merge below rightly refused to pick between them,
     # so the design vanished. Asked together, the board file breaks the tie: it places an
     # MCU package, so the chip is stated by one record and merely unstated by the other,
@@ -1262,7 +1262,7 @@ def main():
     unbuilt = []
 
     def defer(reason, row, **facts):
-        """A confirmed row Half A could not publish.
+        """A confirmed row the firmware-first pass could not publish.
 
         `facts` carries the board paths where the deferral is ABOUT the board rather
         than about the row -- "nothing names a controller" is a statement about a file,
@@ -1270,24 +1270,24 @@ def main():
         they can check it.
         """
         deferred[reason] += 1
-        unbuilt.append({"half": "A", "reason": reason, "id": row["id"],
+        unbuilt.append({"pass": "firmware-first", "reason": reason, "id": row["id"],
                         "tree": row.get("tree"), "repo": row.get("source"), **facts})
         if len(examples[reason]) < 3:
             examples[reason].append(row["id"])
 
     def deferB(reason, repo, bset, **facts):
-        """A board-set Half B could not publish, with what was measured off it.
+        """A board-set the board-first pass could not publish, with what was measured off it.
 
-        Half A defers a ROW and names it by its firmware id; Half B defers a BOARD,
+        The firmware-first pass defers a ROW and names it by its firmware id; the board-first pass defers a BOARD,
         which has no id of its own -- so the repo and its file paths are the identity,
         and `facts` carries the numbers the reason turns on. Without them a reader has
         to re-run the instruments to learn why 48 was not 42.
         """
-        deferred[f"half B: {reason}"] += 1
-        unbuilt.append({"half": "B", "reason": reason, "repo": repo,
+        deferred[f"board-first: {reason}"] += 1
+        unbuilt.append({"pass": "board-first", "reason": reason, "repo": repo,
                         "boards": sorted(bset), **facts})
-        if len(examples[f"half B: {reason}"]) < 3:
-            examples[f"half B: {reason}"].append(f"{repo}:{sorted(bset)[0]}")
+        if len(examples[f"board-first: {reason}"]) < 3:
+            examples[f"board-first: {reason}"].append(f"{repo}:{sorted(bset)[0]}")
 
     for row in unregistered:
         defer(f"tree {row.get('tree')!r} is not in seed/trees.toml", row)
@@ -1305,7 +1305,7 @@ def main():
         if key in no_board:
             defer("no board in the repo (measured)", row); continue
         # A board-decline holds whichever half would mint the board: `rpneko65`'s board
-        # is attributed to its own QMK record, so Half B's check below never sees it.
+        # is attributed to its own QMK record, so the board-first pass's check below never sees it.
         if mine and any((repo, path) in declined_boards for path in mine):
             defer("a person ruled this board-set is not a design of its own", row,
                   boards=sorted(mine)); continue
@@ -1443,7 +1443,8 @@ def main():
         #                                   holds a generation `rev1` does not describe.
         #   five Ferris boards              `ferris/0_1` and `0_2` declare nothing; the
         #                                   `promicro` came from `ferris/sweep`, which
-        #                                   Half B included because it fits the key count.
+        #                                   the board-first pass included because it
+        #                                   fits the key count.
         #                                   The 0.1 boards place `TQFP-44` and the 0.2s a
         #                                   `Dual_MCU_QFP_QFN_48`. Soldered, and the Sweep
         #                                   is a different keyboard that takes a nice!nano.
@@ -1530,8 +1531,8 @@ def main():
             "licensing": licensing,
         })
 
-    # -- Half B: boards nothing was attributed to ------------------------------------
-    # A BOARD HALF A PUBLISHED IS CLAIMED, whether or not a boards.toml row names it. A
+    # -- Board-first: boards nothing was attributed to --------------------------------------------
+    # A BOARD THE FIRMWARE-FIRST PASS PUBLISHED IS CLAIMED, whether or not a boards.toml row names it. A
     # single-board repo's row reads its board with no attribution at all, so the board
     # was never in `claimed_paths` -- and `PyrooL/Alpha` published twice from one PCB,
     # as `alpha` and `alpha-pro-micro`, the night its source row was confirmed.
@@ -1555,7 +1556,7 @@ def main():
                 continue
             name = board_names[(repo, tuple(bset))]
             # The ruling that decides whether this board may be read as one hand. Looked
-            # up by the slug the design will publish under, which Half B knows here.
+            # up by the slug the design will publish under, which the board-first pass knows here.
             ruled = ruled_bodies.get(slugify(name))
 
             licensing, why = licence_slots(repo, licences.get(repo), rulings)
@@ -1674,7 +1675,7 @@ def main():
             # the board keeps `Unknown` rather than taking whichever record sorted first.
             #
             # BOTH TREES, since 2026-11-16 (owner's ruling): a ZMK shield's `requires` is
-            # the same signal as QMK's `development_board`, and Half A already read it.
+            # the same signal as QMK's `development_board`, and the firmware-first pass already read it.
             # Measured the day it changed: no design moved.
             if not footprints and not soldered:
                 declared = {records.of(r["tree"], r["id"]).built_for().socket
@@ -1822,7 +1823,7 @@ def main():
 
     # -- Firmware the board contradicts is dropped, in both halves (#106) -------------
     #
-    # A KEY-COUNT MATCH IS NOT A PAIRING. Half B attaches every record whose layout fits a
+    # A KEY-COUNT MATCH IS NOT A PAIRING. The board-first pass attaches every record whose layout fits a
     # board's switch count, and `agreeing_with_board` only narrows, never empties; a Half
     # A row a machine confirmed on a name token does no better. Measured 2026-10-02 over
     # the 133 published soldered designs: 6 carried firmware for another chip, all live.
@@ -1936,7 +1937,7 @@ def main():
     # README is headed "Sweep Half Swept". Only a person reading the README can tell.
     #
     # `seed/boards.toml` has carried a `name` for this since it existed, and it reaches
-    # HALF A only -- a Half B design is built from a board no record was attributed to, so
+    # FIRMWARE-FIRST only -- a board-first design is built from a board no record was attributed to, so
     # there is no `(tree, id)` to key an override on. This file closes that gap for both.
     #
     # THE KEY IS THE DRAFTED SLUG, not the published one. They differ for exactly these

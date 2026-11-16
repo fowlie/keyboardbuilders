@@ -766,7 +766,7 @@ boards   = ["pcb/v2-choc/v2-choc.kicad_pcb"]
 name     = "atreyu v2 choc"
 verdict  = "confirmed"
 signal   = "human"
-note     = "owner-ruled 2026-09-06. The Choc board was already publishing -- Half B minted it from the one board nothing had claimed -- but under the name its PATH gave it, `v2 choc`, which reads on the site as a keyboard called that and says nothing about the Atreyu. Ticket 44's naming rule anticipates exactly this: the directory is normalised by the human confirming the row. rev2 is the right record for it by the repo's own README -- \"There are 3 different revisions: handwired, rev1 and rev2, depending of the board you are building\" -- and rev2 is free to describe it because rev1 holds the MX pair. It stays a SEPARATE ROW from `atreyu`: same 60-key layout, but Choc against MX is a switch-footprint difference and a different pitch, which are facets the site filters on."
+note     = "owner-ruled 2026-09-06. The Choc board was already publishing -- the board-first pass minted it from the one board nothing had claimed -- but under the name its PATH gave it, `v2 choc`, which reads on the site as a keyboard called that and says nothing about the Atreyu. Ticket 44's naming rule anticipates exactly this: the directory is normalised by the human confirming the row. rev2 is the right record for it by the repo's own README -- \"There are 3 different revisions: handwired, rev1 and rev2, depending of the board you are building\" -- and rev2 is free to describe it because rev1 holds the MX pair. It stays a SEPARATE ROW from `atreyu`: same 60-key layout, but Choc against MX is a switch-footprint difference and a different pitch, which are facets the site filters on."
 
 [[entry]]
 tree     = "qmk"
@@ -1106,7 +1106,7 @@ boards   = ["Cantor_Classic/keyboard_pcb-rounded.kicad_pcb", "Cantor_Classic/key
 name     = "Cantor"
 verdict  = "confirmed"
 signal   = "human"
-note     = "owner 2026-08-29: 'The Cantor Classic uses choc switches with choc spacing. Therefore, only MBK keycaps can be used. The Cantor MX uses either choc V1, choc V2, or MX switches with the slightly larger MX spacing.' So the repo holds two designs, not one ambiguous one. The QMK record 'cantor' is the original, i.e. the Classic; its two board files are the square and rounded outlines of one PCB. Cantor MX has no firmware record and is a Half B design."
+note     = "owner 2026-08-29: 'The Cantor Classic uses choc switches with choc spacing. Therefore, only MBK keycaps can be used. The Cantor MX uses either choc V1, choc V2, or MX switches with the slightly larger MX spacing.' So the repo holds two designs, not one ambiguous one. The QMK record 'cantor' is the original, i.e. the Classic; its two board files are the square and rounded outlines of one PCB. Cantor MX has no firmware record and is a board-first design."
 
 [[entry]]
 tree     = "qmk"
@@ -2726,7 +2726,7 @@ boards   = ["lopro/squiggle-lopro.kicad_pcb"]
 name     = "Squiggle Low Profile"
 verdict  = "confirmed"
 signal   = "sole"
-note     = "named 2026-09-26 as the README heads it, `### Low Profile`, with the family in front, like its siblings; was `squiggle lopro`, from the board path. The owner ruled the old URL needs no redirect (\"few users now\"). The only board the scan could read when this was drafted, so nothing to choose. Since 2026-09-26, when extract_switch_footprints learnt ibnuda's `*-dual` MX/Alps footprints, the repo reads seven: the other README variants are their own designs (rows below, and Half B for Standard and 36 Keys), and `no-diode`/`nodiodes` are declined in seed/board-declines.toml."
+note     = "named 2026-09-26 as the README heads it, `### Low Profile`, with the family in front, like its siblings; was `squiggle lopro`, from the board path. The owner ruled the old URL needs no redirect (\"few users now\"). The only board the scan could read when this was drafted, so nothing to choose. Since 2026-09-26, when extract_switch_footprints learnt ibnuda's `*-dual` MX/Alps footprints, the repo reads seven: the other README variants are their own designs (rows below, and the board-first pass for Standard and 36 Keys), and `no-diode`/`nodiodes` are declined in seed/board-declines.toml."
 
 [[entry]]
 tree     = "squiggle-minimalist"
@@ -2866,7 +2866,7 @@ boards   = ["corne-cherry/pcb/corne-cherry.kicad_pcb"]
 name     = "Jorne Cherry 2.1"
 verdict  = "confirmed"
 signal   = "human"
-note     = "The repo's own README (jorne branch) names three PCB revisions: Jorne Classic 2.1, Jorne Cherry 2.1, Jorne Cherry 3.0. This is Cherry 2.1 -- the hotswap version with the separate breakoff plate (pcb_top/pcb_bottom carry the breakoff cut), one hand at 22 switches (44 doubled, matching both this id's own QMK layout and the ZMK jorne shield's declared count). Distinct from corne-cherry/pcb_v3 (Cherry 3.0, already zmk:jorne) and from corne-classic (Classic 2.1, seed/names.toml). Given its own (tree, id) row specifically so it never drafts to the same slug as foostan/crkbd's own corne-cherry (42-key, unrelated design) -- the two collided under Half B before this row existed. Verified 2026-09-11 during #89."
+note     = "The repo's own README (jorne branch) names three PCB revisions: Jorne Classic 2.1, Jorne Cherry 2.1, Jorne Cherry 3.0. This is Cherry 2.1 -- the hotswap version with the separate breakoff plate (pcb_top/pcb_bottom carry the breakoff cut), one hand at 22 switches (44 doubled, matching both this id's own QMK layout and the ZMK jorne shield's declared count). Distinct from corne-cherry/pcb_v3 (Cherry 3.0, already zmk:jorne) and from corne-classic (Classic 2.1, seed/names.toml). Given its own (tree, id) row specifically so it never drafts to the same slug as foostan/crkbd's own corne-cherry (42-key, unrelated design) -- the two collided under the board-first pass before this row existed. Verified 2026-09-11 during #89."
 
 [[entry]]
 tree     = "qmk"

@@ -7,9 +7,9 @@
 # README says one thing and their directory says another, and only a person reading the
 # README can tell which.
 #
-# `seed/boards.toml` already carries a `name` for this, and it only reaches HALF A --
+# `seed/boards.toml` already carries a `name` for this, and it only reaches the firmware-first pass --
 # designs built from an attributed firmware record. A design built from a board that no
-# record was attributed to (Half B) has no `(tree, id)` key to hang a name on, so it had
+# record was attributed to (the board-first pass) has no `(tree, id)` key to hang a name on, so it had
 # no override at all until this file. That is the gap this closes, and it is why the key
 # here is a slug rather than a record id.
 #
@@ -127,7 +127,7 @@ source   = "https://github.com/joric/jorne"
 verdict  = "confirmed"
 note     = "Backlog #89. `joric/jorne`'s default branch is `jorne`, whose own README names three PCB revisions -- Jorne Classic 2.1, Jorne Cherry 2.1, Jorne Cherry 3.0 -- none of them literally named `jorne`, so the drafter reads `corne-classic` off the path `corne-classic/pcb/corne-classic.kicad_pcb`. Measured 22 switches spanning 128.8mm on X -- one hand, not a whole board -- doubling to 44, which is Jorne's own declared key count and not the 42 of plain, unmodified Corne. Verified 2026-09-11."
 
-# ibnuda/squiggle's two Half B variants, 2026-09-26. Drafted from the board paths
+# ibnuda/squiggle's two board-first variants, 2026-09-26. Drafted from the board paths
 # `standard/squiggle-standard` and `36/squiggle-36`; named as the README heads them
 # ("Standard", "36 Keys") with the family in front and capitalised as a proper noun, as
 # the Stront rows above are. The slugs do not change, so no renames.toml row.
