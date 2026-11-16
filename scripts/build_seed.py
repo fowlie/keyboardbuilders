@@ -61,8 +61,6 @@ import sys
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 import board_fills
 import firmware_records
-import qmk_metadata
-import zmk_wiring
 import trees as tree_registry
 from check_source_reachability import parse
 from draft_boards import VERSION, id_tokens, load_boards, toks
@@ -576,9 +574,9 @@ def firmware_ref(reg, row, with_url):
     gates emitting it at all: `SeedDesignCatalog` parses this file, and a field the
     domain has no member for breaks the build. See [main]'s `--firmware-url`.
 
-    `_tree` is build-time joinery, not a fact about a design -- the wiring pass needs to
-    know which tree to read a record's `matrix_pins` from. Popped before the seed is
-    written, like `board_key` and `board_paths`.
+    `_tree` is build-time joinery, not a fact about a design -- the later passes need it
+    to ask `records.of(...)` about the record again, and design-trees.json lists it.
+    Popped before the seed is written, like `board_key` and `board_paths`.
     """
     reader = reg.reader(row["tree"])
     ref = {"family": reader,
@@ -1051,7 +1049,6 @@ def main():
                   if difficulty_file.exists() else {})
 
     records = firmware_records.FirmwareRecords(reg)
-    shield_of = records.shield
 
     def built_for(rows):
         """`built_for()` of each confirmed row, for `soldered_chip`."""
@@ -2023,28 +2020,38 @@ def main():
     # is printed rather than silently resolved OR passed to `defer` -- `defer` means
     # "could not publish", and wiring is an extra, so a design still publishes with
     # `wiring` left unset rather than losing the whole record over one non-gate field.
-    applied, disagreements = 0, []
-    for d in designs:
+    def own_wiring(d, family):
+        """The one reading `d`'s own refs of `family` agree on, "disagreement", or None.
+
+        Borrowed refs are skipped (`wiring_is_its_own`); a ref that reads nothing is
+        skipped; the first two readings that differ end it."""
         resolved = None
         for ref in d["firmware"]:
-            if ref["family"] != "qmk" or not ref.get("path") or not wiring_is_its_own(ref):
+            if ref["family"] != family or not wiring_is_its_own(ref):
                 continue
-            found = qmk_metadata.wiring(ref["path"], reg.root(ref["_tree"]))
+            found = ref_record(ref).wiring(split=d["body"]["kind"] == "split")
             if found is None:
                 continue
             if resolved is not None and found != resolved:
-                disagreements.append(d["slug"])
-                resolved = "disagreement"
-                break
+                return "disagreement"
             resolved = found
+        return resolved
+
+    def as_wiring(reading):
+        """A reader's tuple as the seed's `wiring` object."""
+        kind, *rest = reading
+        return ({"kind": "direct_pin", "pins": rest[0]} if kind == "direct" else
+                {"kind": "matrix", "rows": rest[0], "cols": rest[1],
+                 "diodes": "col_to_row" if rest[2] == "COL2ROW" else "row_to_col"})
+
+    applied, disagreements = 0, []
+    for d in designs:
+        resolved = own_wiring(d, "qmk")
+        if resolved == "disagreement":
+            disagreements.append(d["slug"])
         if resolved in (None, "disagreement"):
             continue
-        kind, *rest = resolved
-        d["wiring"] = (
-            {"kind": "direct_pin", "pins": rest[0]} if kind == "direct" else
-            {"kind": "matrix", "rows": rest[0], "cols": rest[1],
-             "diodes": "col_to_row" if rest[2] == "COL2ROW" else "row_to_col"}
-        )
+        d["wiring"] = as_wiring(resolved)
         applied += 1
     print(f"{applied} designs given a wiring fact read from their own QMK metadata")
     if disagreements:
@@ -2081,34 +2088,13 @@ def main():
     for d in designs:
         if d.get("wiring") or d["body"]["kind"] not in ("unibody", "split"):
             continue
-        split = d["body"]["kind"] == "split"
-        resolved = None
-        for ref in d["firmware"]:
-            shield = shield_of(ref["_tree"], ref.get("shield") or "") if ref["family"] == "zmk" else None
-            # A shield's `dir` is relative to the checkout of the tree it was read
-            # from, so it is resolved there and nowhere else.
-            if not shield or not shield.get("dir") or not wiring_is_its_own(ref):
-                continue
-            where = reg.local(ref["_tree"])/shield["dir"]
-            found = (zmk_wiring.split_wiring(where, shield["id"]) if split else
-                     zmk_wiring.wiring(where))
-            if found is None:
-                continue
-            if resolved is not None and found != resolved:
-                resolved = "disagreement"
-                break
-            resolved = found
+        resolved = own_wiring(d, "zmk")
         if resolved in (None, "disagreement"):
             continue
-        if split and not split_reading_holds(resolved, d["layouts"]):
+        if d["body"]["kind"] == "split" and not split_reading_holds(resolved, d["layouts"]):
             too_small.append(d["slug"])
             continue
-        kind, *rest = resolved
-        d["wiring"] = (
-            {"kind": "direct_pin", "pins": rest[0]} if kind == "direct" else
-            {"kind": "matrix", "rows": rest[0], "cols": rest[1],
-             "diodes": "col_to_row" if rest[2] == "COL2ROW" else "row_to_col"}
-        )
+        d["wiring"] = as_wiring(resolved)
         from_zmk += 1
     print(f"{from_zmk} designs given a wiring fact read from their own ZMK shield's kscan node")
     if too_small:

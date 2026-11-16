@@ -16,6 +16,7 @@ import unittest
 
 import firmware_records
 import trees
+from test_zmk_wiring import ROWS_5, cols, dtsi, half
 
 
 def transform(keys):
@@ -76,13 +77,16 @@ class Fixture(unittest.TestCase):
         f.parent.mkdir(parents=True, exist_ok=True)
         f.write_text(json.dumps(data))
 
-    def shield(self, sid, keys=None, tree="zmk", within="app/boards/shields", **meta):
-        """Write a shield folder `<tree>/<within>/<sid>`."""
+    def shield(self, sid, keys=None, tree="zmk", within="app/boards/shields", files=None,
+               **meta):
+        """Write a shield folder `<tree>/<within>/<sid>`, plus any `files` by name."""
         d = self.base/tree/within/sid
         d.mkdir(parents=True, exist_ok=True)
         (d/f"{sid}.zmk.yml").write_text(shield_meta(sid, **meta))
         if keys:
             (d/f"{sid}.overlay").write_text(transform(keys))
+        for name, text in (files or {}).items():
+            (d/name).write_text(text)
 
     def records(self):
         toml = self.base/"trees.toml"
@@ -258,6 +262,76 @@ class ZmkBuiltFor(Fixture):
 
     def test_even_an_unreadable_shield_is_a_shield(self):
         self.assertTrue(self.records().of("zmk", "nowhere").built_for().needs_separate_controller)
+
+
+class QmkWiring(Fixture):
+    """QMK states its wiring as `matrix_pins` and `diode_direction`."""
+
+    def test_a_diode_matrix(self):
+        self.qmk("planck/keyboard.json", {
+            "matrix_pins": {"rows": ["D0", "D5", "B5", "B6"], "cols": ["F1"] * 12},
+            "diode_direction": "COL2ROW"})
+        self.assertEqual(self.records().of("qmk", "planck").wiring(split=False),
+                         ("matrix", 4, 12, "COL2ROW"))
+
+    def test_direct_pins_count_only_real_wires(self):
+        # QMK pads a direct table with null for unused slots; those are not wires.
+        self.qmk("sweep/keyboard.json",
+                 {"matrix_pins": {"direct": [["D7", "E6", None], ["B4", None, None]]}})
+        self.assertEqual(self.records().of("qmk", "sweep").wiring(split=True), ("direct", 3))
+
+    def test_pins_and_diodes_inherit_separately(self):
+        self.qmk("lily58/info.json", {"diode_direction": "COL2ROW"})
+        self.qmk("lily58/rev1/keyboard.json",
+                 {"matrix_pins": {"rows": ["C6", "D7", "B1", "B5", "B4"], "cols": ["F6"] * 6}})
+        self.assertEqual(self.records().of("qmk", "lily58/rev1").wiring(split=True),
+                         ("matrix", 5, 6, "COL2ROW"))
+
+    def test_a_matrix_with_no_diode_direction_is_not_guessed(self):
+        self.qmk("odd/keyboard.json", {"matrix_pins": {"rows": ["D0"], "cols": ["F1"]}})
+        self.assertIsNone(self.records().of("qmk", "odd").wiring(split=False))
+
+
+class ZmkWiring(Fixture):
+    """ZMK states its wiring in a shield's `kscan` node; one reader per body."""
+
+    def unibody(self):
+        self.shield("reviung34", files={"reviung34.overlay": transform(34) + dtsi(
+            'diode-direction = "col2row";' + ROWS_5 + cols(7))})
+
+    def split(self, tree="zmk", within="app/boards/shields"):
+        self.shield("lily58", tree=tree, within=within, files={
+            "lily58.dtsi": dtsi('diode-direction = "col2row";' + ROWS_5),
+            "lily58_left.overlay": half("lily58", cols(6)),
+            "lily58_right.overlay": half("lily58", cols(6)),
+        }, siblings=("lily58_left", "lily58_right"))
+
+    def test_a_unibody_shield_read_as_a_unibody(self):
+        self.unibody()
+        self.assertEqual(self.records().of("zmk", "reviung34").wiring(split=False),
+                         ("matrix", 5, 7, "COL2ROW"))
+
+    def test_a_unibody_shield_does_not_speak_for_a_split_design(self):
+        # A shield shared by a unibody and a split design speaks only for the unibody.
+        self.unibody()
+        self.assertIsNone(self.records().of("zmk", "reviung34").wiring(split=True))
+
+    def test_a_split_shield_gives_one_halfs_scan(self):
+        self.split()
+        self.assertEqual(self.records().of("zmk", "lily58").wiring(split=True),
+                         ("matrix", 5, 6, "COL2ROW"))
+
+    def test_a_split_shield_does_not_speak_for_a_unibody_design(self):
+        self.split()
+        self.assertIsNone(self.records().of("zmk", "lily58").wiring(split=False))
+
+    def test_a_forks_shield_is_read_in_that_checkout(self):
+        self.fork("temper", "zmk", records="boards/shields")
+        self.split(tree="temper", within="boards/shields")
+        records = self.records()
+        self.assertEqual(records.of("temper", "lily58").wiring(split=True),
+                         ("matrix", 5, 6, "COL2ROW"))
+        self.assertIsNone(records.of("zmk", "lily58").wiring(split=True))
 
 
 if __name__ == "__main__":

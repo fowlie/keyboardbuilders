@@ -7,7 +7,10 @@ the same questions whichever reader understands it, so the QMK-or-ZMK branch liv
 here, once, and callers never write it:
 
     records = FirmwareRecords(reg)            # reg = trees.load(...)
-    kb, why = records.of("qmk", "crkbd/rev1").keyboard()
+    rec = records.of("qmk", "crkbd/rev1")
+    kb, why = rec.keyboard()                  # key counts, split, halves -- or why not
+    rec.built_for()                           # socket, chip, needs a separate controller
+    rec.wiring(split=True)                    # ("matrix", 4, 6, "COL2ROW"), or None
 
 The two readers are the adapters behind this module: `qmk_metadata` for a QMK tree,
 `extract_zmk_shields` for a ZMK one. A tree whose reader is neither (`hardware`, which
@@ -17,6 +20,7 @@ import collections
 
 import extract_zmk_shields
 import qmk_metadata
+import zmk_wiring
 from measure_controller_socket import DEV_BOARD, FOOTPRINT, PROCESSOR
 
 Keyboard = collections.namedtuple("Keyboard", "key_counts split halves")
@@ -72,16 +76,9 @@ class FirmwareRecords:
         if reader == "qmk":
             return _QmkRecord(record_id, self._reg.root(tree))
         if reader == "zmk":
-            return _ZmkRecord(self.shield(tree, record_id))
+            return _ZmkRecord(self._shields.get(tree, {}).get(record_id),
+                              self._reg.local(tree))
         return _NoRecord()
-
-    def shield(self, tree, sid):
-        """The shield `sid` in `tree` as `extract_zmk_shields` read it, or None.
-
-        For the wiring passes in `build_seed`, which still read a shield's folder
-        themselves; never another tree's shield of that id.
-        """
-        return self._shields.get(tree, {}).get(sid)
 
 
 class _QmkRecord:
@@ -100,10 +97,15 @@ class _QmkRecord:
                         PROCESSOR.get(qmk_metadata.processor(self._id, self._root)),
                         bool(board))
 
+    def wiring(self, split):
+        """`qmk_metadata.wiring`'s reading. QMK states its own matrix, so `split` is
+        not needed to read it."""
+        return qmk_metadata.wiring(self._id, self._root)
+
 
 class _ZmkRecord:
-    def __init__(self, shield):
-        self._shield = shield
+    def __init__(self, shield, local):
+        self._shield, self._local = shield, local
 
     def keyboard(self):
         s = self._shield
@@ -115,6 +117,17 @@ class _ZmkRecord:
         sockets = [r for r in (self._shield or {}).get("requires") or [] if r in FOOTPRINT]
         return BuiltFor(sockets[0] if sockets else None, None, True)
 
+    def wiring(self, split):
+        """The shield's `kscan` reading, by the reader the DESIGN's body picks: a
+        unibody reads `zmk_wiring.wiring`, a split `split_wiring` (one half's scan), and
+        each refuses the other's shape. A shield's `dir` is relative to the checkout of
+        the tree it was read from, so it is resolved there and nowhere else."""
+        s = self._shield
+        if not s or not s.get("dir"):
+            return None
+        where = self._local/s["dir"]
+        return zmk_wiring.split_wiring(where, s["id"]) if split else zmk_wiring.wiring(where)
+
 
 class _NoRecord:
     """What a `hardware` tree holds: nothing to read. Such a row borrows a record."""
@@ -124,3 +137,6 @@ class _NoRecord:
 
     def built_for(self):
         return BuiltFor(None, None, False)
+
+    def wiring(self, split):
+        return None
