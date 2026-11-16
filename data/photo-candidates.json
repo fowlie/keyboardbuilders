@@ -1071,6 +1071,35 @@
       }
     ]
   },
+  "chocofi": {
+    "repo": "https://github.com/pashutk/chocofi",
+    "images": [
+      {
+        "url": "https://raw.githubusercontent.com/pashutk/chocofi/main/images/IMG_7067.jpeg",
+        "alt": "Photo of a chocofi keyboard"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/pashutk/chocofi/main/images/IMG_7035.jpg",
+        "alt": "",
+        "path": "images/IMG_7035.jpg"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/pashutk/chocofi/main/images/IMG_7057.jpeg",
+        "alt": "",
+        "path": "images/IMG_7057.jpeg"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/pashutk/chocofi/main/images/IMG_7062.jpeg",
+        "alt": "",
+        "path": "images/IMG_7062.jpeg"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/pashutk/chocofi/main/images/IMG_7070.jpeg",
+        "alt": "",
+        "path": "images/IMG_7070.jpeg"
+      }
+    ]
+  },
   "chocofly": {
     "repo": "https://github.com/vlkv/chocofly",
     "images": [
@@ -6695,6 +6724,40 @@
       }
     ]
   },
+  "swept-corne-3x5": {
+    "repo": "https://github.com/AYM1607/swept-crkbd",
+    "images": [
+      {
+        "url": "https://raw.githubusercontent.com/AYM1607/swept-crkbd/main/gallery/IMG_7887.JPG",
+        "alt": "front of a built swept"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/AYM1607/swept-crkbd/main/gallery/IMG_7886.JPG",
+        "alt": "back of a built swept"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/AYM1607/swept-crkbd/main/gallery/sweptv0.1.png",
+        "alt": "swept v0.1 pcb"
+      }
+    ]
+  },
+  "swept-corne-3x6": {
+    "repo": "https://github.com/AYM1607/swept-crkbd",
+    "images": [
+      {
+        "url": "https://raw.githubusercontent.com/AYM1607/swept-crkbd/main/gallery/IMG_7887.JPG",
+        "alt": "front of a built swept"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/AYM1607/swept-crkbd/main/gallery/IMG_7886.JPG",
+        "alt": "back of a built swept"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/AYM1607/swept-crkbd/main/gallery/sweptv0.1.png",
+        "alt": "swept v0.1 pcb"
+      }
+    ]
+  },
   "swoop-mx": {
     "repo": "https://github.com/jimmerricks/swoop",
     "images": [
@@ -6794,6 +6857,28 @@
       }
     ]
   },
+  "temper": {
+    "repo": "https://github.com/raeedcho/temper",
+    "images": [
+      {
+        "url": "https://raw.githubusercontent.com/raeedcho/temper/main/images/temper-half.jpg",
+        "alt": "temper keyboard"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/raeedcho/temper/main/images/temper.jpg",
+        "alt": "temper keyboard"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/raeedcho/temper/main/images/solder.png",
+        "alt": "Soldered jumpers"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/raeedcho/temper/main/images/temper-schematic.png",
+        "alt": "",
+        "path": "images/temper-schematic.png"
+      }
+    ]
+  },
   "tg4x": {
     "repo": "https://github.com/mythosmann/tg4x",
     "images": [
@@ -6848,6 +6933,67 @@
         "url": "https://raw.githubusercontent.com/mythosmann/tg4x/master/flat%20sideview.jpg",
         "alt": "",
         "path": "flat sideview.jpg"
+      }
+    ]
+  },
+  "totem": {
+    "repo": "https://github.com/GEIGEIGEIST/TOTEM",
+    "images": [
+      {
+        "url": "https://raw.githubusercontent.com/GEIGEIGEIST/TOTEM/main/docs/images/TOTEM_black_perspective.jpg",
+        "alt": "TOTEM black resin"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/GEIGEIGEIST/TOTEM/main/docs/images/TOTEM_black_top.jpg",
+        "alt": "TOTEM black resin"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/GEIGEIGEIST/TOTEM/main/docs/images/TOTEM_black_bottom.jpg",
+        "alt": "TOTEM black resin"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/GEIGEIGEIST/TOTEM/main/docs/images/TOTEM_black_tenting_example.jpg",
+        "alt": "TOTEM black resin tenting"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/GEIGEIGEIST/TOTEM/main/docs/images/TOTEM_black_tenting_bottom.jpg",
+        "alt": "",
+        "path": "docs/images/TOTEM_black_tenting_bottom.jpg"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/GEIGEIGEIST/TOTEM/main/docs/images/TOTEM_clayrender_01.jpg",
+        "alt": "",
+        "path": "docs/images/TOTEM_clayrender_01.jpg"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/GEIGEIGEIST/TOTEM/main/docs/images/TOTEM_clayrender_02.jpg",
+        "alt": "",
+        "path": "docs/images/TOTEM_clayrender_02.jpg"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/GEIGEIGEIST/TOTEM/main/docs/images/buildguide/MCU_01.jpg",
+        "alt": "",
+        "path": "docs/images/buildguide/MCU_01.jpg"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/GEIGEIGEIST/TOTEM/main/docs/images/buildguide/MCU_02.jpg",
+        "alt": "",
+        "path": "docs/images/buildguide/MCU_02.jpg"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/GEIGEIGEIST/TOTEM/main/docs/images/buildguide/batt_face.jpg",
+        "alt": "",
+        "path": "docs/images/buildguide/batt_face.jpg"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/GEIGEIGEIST/TOTEM/main/docs/images/buildguide/battery_01.jpg",
+        "alt": "",
+        "path": "docs/images/buildguide/battery_01.jpg"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/GEIGEIGEIST/TOTEM/main/docs/images/buildguide/case_bottom_bump.jpg",
+        "alt": "",
+        "path": "docs/images/buildguide/case_bottom_bump.jpg"
       }
     ]
   },
@@ -7123,6 +7269,67 @@
       {
         "url": "https://raw.githubusercontent.com/mkdl/unix60/main/Pictures/12.jpg",
         "alt": "Image of soldered headers"
+      }
+    ]
+  },
+  "urchin": {
+    "repo": "https://github.com/duckyb/urchin",
+    "images": [
+      {
+        "url": "https://raw.githubusercontent.com/duckyb/urchin/main/gallery/case/coral/urchin-coral.jpg",
+        "alt": "Showcase Picture"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/duckyb/urchin/main/gallery/case/coral/coral-render.png",
+        "alt": "Coral Case"
+      },
+      {
+        "url": "https://user-images.githubusercontent.com/27895007/201170595-901a4723-b910-418c-b273-a5c9987ad1c8.png",
+        "alt": ""
+      },
+      {
+        "url": "https://user-images.githubusercontent.com/27895007/192096782-2ca086d8-54a3-42fd-a67b-0f1e25f1ffbc.png",
+        "alt": ""
+      },
+      {
+        "url": "https://raw.githubusercontent.com/duckyb/urchin/main/gallery/plate/fishbone.jpg",
+        "alt": "",
+        "path": "gallery/plate/fishbone.jpg"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/duckyb/urchin/main/gallery/plate/skeleton.jpg",
+        "alt": "",
+        "path": "gallery/plate/skeleton.jpg"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/duckyb/urchin/main/gallery/plate/standard.jpg",
+        "alt": "",
+        "path": "gallery/plate/standard.jpg"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/duckyb/urchin/main/gallery/case/carrefinho/urchin_case_1.jpg",
+        "alt": "",
+        "path": "gallery/case/carrefinho/urchin_case_1.jpg"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/duckyb/urchin/main/gallery/case/jadefalkner/printed-left.jpg",
+        "alt": "",
+        "path": "gallery/case/jadefalkner/printed-left.jpg"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/duckyb/urchin/main/gallery/case/rayreside/boxy.jpg",
+        "alt": "",
+        "path": "gallery/case/rayreside/boxy.jpg"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/duckyb/urchin/main/gallery/main/main-bottom.png",
+        "alt": "",
+        "path": "gallery/main/main-bottom.png"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/duckyb/urchin/main/gallery/main/main-top.png",
+        "alt": "",
+        "path": "gallery/main/main-top.png"
       }
     ]
   },

@@ -1121,6 +1121,282 @@
    }
   ]
  },
+ "bleroy/3d-junkyard\tDecent400/Plate/Decent400-plate.kicad_pcb": {
+  "bom": "Decent400/Plate/production/bom.csv",
+  "column": "value",
+  "parts": [
+   {
+    "designator": "SW0",
+    "footprint": "MX-1-00U-Hole-no-silk",
+    "part": "0"
+   },
+   {
+    "designator": "SW1",
+    "footprint": "MX-1-00U-Hole-no-silk",
+    "part": "1"
+   },
+   {
+    "designator": "SW2",
+    "footprint": "MX-1-00U-Hole-no-silk",
+    "part": "2"
+   },
+   {
+    "designator": "SW3",
+    "footprint": "MX-1-00U-Hole-no-silk",
+    "part": "3"
+   },
+   {
+    "designator": "SW4",
+    "footprint": "MX-1-00U-Hole-no-silk",
+    "part": "4"
+   },
+   {
+    "designator": "SW5",
+    "footprint": "MX-1-00U-Hole-no-silk",
+    "part": "5"
+   },
+   {
+    "designator": "SW6",
+    "footprint": "MX-1-00U-Hole-no-silk",
+    "part": "6"
+   },
+   {
+    "designator": "SW7",
+    "footprint": "MX-1-00U-Hole-no-silk",
+    "part": "7"
+   },
+   {
+    "designator": "SW8",
+    "footprint": "MX-1-00U-Hole-no-silk",
+    "part": "8"
+   },
+   {
+    "designator": "SW9",
+    "footprint": "MX-1-00U-Hole-no-silk",
+    "part": "9"
+   },
+   {
+    "designator": "SWA1",
+    "footprint": "MX-1-00U-Hole-no-silk",
+    "part": "A"
+   },
+   {
+    "designator": "SWB1",
+    "footprint": "MX-1-00U-Hole-no-silk",
+    "part": "B"
+   },
+   {
+    "designator": "SWBRK1",
+    "footprint": "MX-1-25U-Hole-no-silk",
+    "part": "Break"
+   },
+   {
+    "designator": "SWC1",
+    "footprint": "MX-1-00U-Hole-no-silk",
+    "part": "C"
+   },
+   {
+    "designator": "SWCOMMA1",
+    "footprint": "MX-1-00U-Hole-no-silk",
+    "part": "Comma"
+   },
+   {
+    "designator": "SWCPS1",
+    "footprint": "MX-1-00U-Hole-no-silk",
+    "part": "Caps"
+   },
+   {
+    "designator": "SWCTL1",
+    "footprint": "MX-1-25U-Hole-no-silk",
+    "part": "Control"
+   },
+   {
+    "designator": "SWD1",
+    "footprint": "MX-1-00U-Hole-no-silk",
+    "part": "D"
+   },
+   {
+    "designator": "SWDASH1",
+    "footprint": "MX-1-00U-Hole-no-silk",
+    "part": "Dash"
+   },
+   {
+    "designator": "SWDEL1",
+    "footprint": "MX-1-75U-Hole",
+    "part": "Del"
+   },
+   {
+    "designator": "SWE1",
+    "footprint": "MX-1-00U-Hole-no-silk",
+    "part": "E"
+   },
+   {
+    "designator": "SWEQUAL1",
+    "footprint": "MX-1-00U-Hole-no-silk",
+    "part": "Equal"
+   },
+   {
+    "designator": "SWESC1",
+    "footprint": "MX-1-00U-Hole-no-silk",
+    "part": "Esc"
+   },
+   {
+    "designator": "SWF1",
+    "footprint": "MX-1-00U-Hole-no-silk",
+    "part": "F"
+   },
+   {
+    "designator": "SWG1",
+    "footprint": "MX-1-00U-Hole-no-silk",
+    "part": "G"
+   },
+   {
+    "designator": "SWGT1",
+    "footprint": "MX-1-00U-Hole-no-silk",
+    "part": "GreaterThan"
+   },
+   {
+    "designator": "SWH1",
+    "footprint": "MX-1-00U-Hole-no-silk",
+    "part": "H"
+   },
+   {
+    "designator": "SWI1",
+    "footprint": "MX-1-00U-Hole-no-silk",
+    "part": "I"
+   },
+   {
+    "designator": "SWINV1",
+    "footprint": "MX-1-00U-Hole-no-silk",
+    "part": "Atari"
+   },
+   {
+    "designator": "SWJ1",
+    "footprint": "MX-1-00U-Hole-no-silk",
+    "part": "J"
+   },
+   {
+    "designator": "SWK1",
+    "footprint": "MX-1-00U-Hole-no-silk",
+    "part": "K"
+   },
+   {
+    "designator": "SWL1",
+    "footprint": "MX-1-00U-Hole-no-silk",
+    "part": "L"
+   },
+   {
+    "designator": "SWLT1",
+    "footprint": "MX-1-00U-Hole-no-silk",
+    "part": "LessThan"
+   },
+   {
+    "designator": "SWM1",
+    "footprint": "MX-1-00U-Hole-no-silk",
+    "part": "M"
+   },
+   {
+    "designator": "SWN1",
+    "footprint": "MX-1-00U-Hole-no-silk",
+    "part": "N"
+   },
+   {
+    "designator": "SWO1",
+    "footprint": "MX-1-00U-Hole-no-silk",
+    "part": "O"
+   },
+   {
+    "designator": "SWP1",
+    "footprint": "MX-1-00U-Hole-no-silk",
+    "part": "P"
+   },
+   {
+    "designator": "SWPERIOD1",
+    "footprint": "MX-1-00U-Hole-no-silk",
+    "part": "Period"
+   },
+   {
+    "designator": "SWPLUS1",
+    "footprint": "MX-1-00U-Hole-no-silk",
+    "part": "Plus"
+   },
+   {
+    "designator": "SWQ1",
+    "footprint": "MX-1-00U-Hole-no-silk",
+    "part": "Q"
+   },
+   {
+    "designator": "SWR1",
+    "footprint": "MX-1-00U-Hole-no-silk",
+    "part": "R"
+   },
+   {
+    "designator": "SWRET1",
+    "footprint": "MX-1-25U-Hole-no-silk",
+    "part": "Return"
+   },
+   {
+    "designator": "SWS1",
+    "footprint": "MX-1-00U-Hole-no-silk",
+    "part": "S"
+   },
+   {
+    "designator": "SWSEMI1",
+    "footprint": "MX-1-00U-Hole-no-silk",
+    "part": "Semicolon"
+   },
+   {
+    "designator": "SWSLASH1",
+    "footprint": "MX-1-00U-Hole-no-silk",
+    "part": "Slash"
+   },
+   {
+    "designator": "SWSTAR1",
+    "footprint": "MX-1-00U-Hole-no-silk",
+    "part": "Star"
+   },
+   {
+    "designator": "SWT1",
+    "footprint": "MX-1-00U-Hole-no-silk",
+    "part": "T"
+   },
+   {
+    "designator": "SWTAB1",
+    "footprint": "MX-1-25U-Hole-no-silk",
+    "part": "Tab"
+   },
+   {
+    "designator": "SWU1",
+    "footprint": "MX-1-00U-Hole-no-silk",
+    "part": "U"
+   },
+   {
+    "designator": "SWV1",
+    "footprint": "MX-1-00U-Hole-no-silk",
+    "part": "V"
+   },
+   {
+    "designator": "SWW1",
+    "footprint": "MX-1-00U-Hole-no-silk",
+    "part": "W"
+   },
+   {
+    "designator": "SWX1",
+    "footprint": "MX-1-00U-Hole-no-silk",
+    "part": "X"
+   },
+   {
+    "designator": "SWY1",
+    "footprint": "MX-1-00U-Hole-no-silk",
+    "part": "Y"
+   },
+   {
+    "designator": "SWZ1",
+    "footprint": "MX-1-00U-Hole-no-silk",
+    "part": "Z"
+   }
+  ]
+ },
  "bleroy/3d-junkyard\tDecent60/NavNumPad-plate/NavNumPad-plate.kicad_pcb": {
   "bom": "Decent60/NavNumPad-plate/production/bom.csv",
   "column": "value",
@@ -5252,6 +5528,42 @@
     "designator": "Y1",
     "footprint": "Crystal_SMD_3225-4Pin_3.2x2.5mm",
     "part": "12MHz"
+   }
+  ]
+ },
+ "smores56/clog\tsteel-toe/pcb/steel-toe.kicad_pcb": {
+  "bom": "steel-toe/pcb/production/bom.csv",
+  "column": "value",
+  "parts": [
+   {
+    "designator": "+1, -1",
+    "footprint": "single-pin",
+    "part": "MountingHole_Pad"
+   },
+   {
+    "designator": "J0",
+    "footprint": "trrs",
+    "part": "AudioJack4dpb"
+   },
+   {
+    "designator": "SW1, SW10, SW11, SW12, SW13, SW14, SW15, SW16, SW17, SW2, SW3, SW4, SW5, SW6, SW7, SW8, SW9",
+    "footprint": "choc-switch-socket-only",
+    "part": "SW_Push"
+   },
+   {
+    "designator": "SW18, SW21",
+    "footprint": "smd_rst_sw",
+    "part": "SW_Push"
+   },
+   {
+    "designator": "SW19, SW20",
+    "footprint": "power-switch",
+    "part": "SW_SPDT"
+   },
+   {
+    "designator": "U1",
+    "footprint": "ProMicro_facedown_new_dual",
+    "part": "ProMicro_r"
    }
   ]
  },
