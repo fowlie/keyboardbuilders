@@ -19269,6 +19269,63 @@
   }
  },
  {
+  "name": "Osprangle",
+  "slug": "osprangle",
+  "sources": [
+   "https://github.com/smores56/osprette"
+  ],
+  "firmware": [
+   {
+    "family": "zmk",
+    "path": null,
+    "shield": "osprette"
+   }
+  ],
+  "layouts": [
+   {
+    "keys": 34
+   }
+  ],
+  "switches": [
+   {
+    "kind": "choc_v1"
+   }
+  ],
+  "pitch": null,
+  "buildMethod": {
+   "kind": "pcb"
+  },
+  "hardestComponent": null,
+  "controller": {
+   "kind": "socket",
+   "footprints": [
+    "pro_micro"
+   ]
+  },
+  "body": {
+   "kind": "unibody"
+  },
+  "licensing": {
+   "hardware": [
+    "MIT"
+   ],
+   "firmware": [
+    "MIT"
+   ],
+   "documentation": [
+    "MIT"
+   ]
+  },
+  "hostPort": null,
+  "wiring": {
+   "kind": "matrix",
+   "rows": 4,
+   "cols": 10,
+   "diodes": "row_to_col"
+  },
+  "family": "Osprette"
+ },
+ {
   "name": "osprette mx",
   "slug": "osprette-mx",
   "sources": [
@@ -23126,6 +23183,65 @@
   }
  },
  {
+  "name": "Sephirette",
+  "slug": "sephirette",
+  "sources": [
+   "https://github.com/smores56/clog"
+  ],
+  "firmware": [
+   {
+    "family": "qmk",
+    "path": "clog",
+    "shield": null
+   },
+   {
+    "family": "zmk",
+    "path": null,
+    "shield": "clog"
+   }
+  ],
+  "layouts": [
+   {
+    "keys": 34
+   }
+  ],
+  "switches": [
+   {
+    "kind": "mx"
+   }
+  ],
+  "pitch": null,
+  "buildMethod": {
+   "kind": "pcb"
+  },
+  "hardestComponent": null,
+  "controller": {
+   "kind": "socket",
+   "footprints": [
+    "pro_micro"
+   ]
+  },
+  "body": {
+   "kind": "split",
+   "halves": 2,
+   "reversible": null,
+   "link": [
+    "trrs"
+   ]
+  },
+  "licensing": {
+   "hardware": [],
+   "firmware": [],
+   "documentation": []
+  },
+  "hostPort": null,
+  "wiring": {
+   "kind": "direct_pin",
+   "pins": 17
+  },
+  "family": "Clog"
+ },
+ {
   "name": "sepia officinalis",
   "slug": "sepia-officinalis",
   "sources": [
@@ -25670,6 +25786,65 @@
    "heightMm": 74.38,
    "copperLayers": 2
   }
+ },
+ {
+  "name": "Steel Toe",
+  "slug": "steel-toe",
+  "sources": [
+   "https://github.com/smores56/clog"
+  ],
+  "firmware": [
+   {
+    "family": "qmk",
+    "path": "clog",
+    "shield": null
+   },
+   {
+    "family": "zmk",
+    "path": null,
+    "shield": "clog"
+   }
+  ],
+  "layouts": [
+   {
+    "keys": 34
+   }
+  ],
+  "switches": [
+   {
+    "kind": "choc_v1"
+   }
+  ],
+  "pitch": null,
+  "buildMethod": {
+   "kind": "pcb"
+  },
+  "hardestComponent": null,
+  "controller": {
+   "kind": "socket",
+   "footprints": [
+    "pro_micro"
+   ]
+  },
+  "body": {
+   "kind": "split",
+   "halves": 2,
+   "reversible": null,
+   "link": [
+    "trrs"
+   ]
+  },
+  "licensing": {
+   "hardware": [],
+   "firmware": [],
+   "documentation": []
+  },
+  "hostPort": null,
+  "wiring": {
+   "kind": "direct_pin",
+   "pins": 17
+  },
+  "family": "Clog"
  },
  {
   "name": "stoutgat",

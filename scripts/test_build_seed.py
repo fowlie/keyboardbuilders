@@ -238,3 +238,44 @@ class ZmkShieldsPerTree(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class ReadAttributions(unittest.TestCase):
+    """seed/boards.toml: one firmware record may run on several boards, one row each."""
+
+    def row(self, boards, name="", verdict="confirmed", tree="zmk", rid="osprette"):
+        return {"tree": tree, "id": rid, "boards": boards, "name": name, "verdict": verdict}
+
+    def test_two_rows_for_one_record_are_two_designs(self):
+        # 2026-11-16: the osprette shield runs on v1 and on the Osprangle. Keyed by record
+        # alone, the second row silently replaced the first.
+        got = build_seed.read_attributions([
+            self.row(["v1/pcb/osprette.kicad_pcb"], "osprette v1"),
+            self.row(["osprangle/pcb/osprangle.kicad_pcb"], "Osprangle"),
+        ])
+        self.assertEqual(got[("zmk", "osprette")], [
+            ({"v1/pcb/osprette.kicad_pcb"}, "osprette v1"),
+            ({"osprangle/pcb/osprangle.kicad_pcb"}, "Osprangle"),
+        ])
+
+    def test_only_confirmed_rows_with_boards_count(self):
+        got = build_seed.read_attributions([
+            self.row(["a.kicad_pcb"], verdict="drafted"),
+            self.row([]),
+        ])
+        self.assertEqual(got, {})
+
+    def test_one_record_claiming_one_board_twice_stops_the_build(self):
+        with self.assertRaises(SystemExit):
+            build_seed.read_attributions([
+                self.row(["v1/pcb/osprette.kicad_pcb"], "a"),
+                self.row(["v1/pcb/osprette.kicad_pcb"], "b"),
+            ])
+
+    def test_two_records_may_share_a_board(self):
+        # qmk:clog and zmk:clog both run on Clog V1 -- that is one design, merged later.
+        got = build_seed.read_attributions([
+            self.row(["v1/pcb/clog.kicad_pcb"], "clog v1", tree="qmk", rid="clog"),
+            self.row(["v1/pcb/clog.kicad_pcb"], "clog v1", tree="zmk", rid="clog"),
+        ])
+        self.assertEqual(len(got), 2)

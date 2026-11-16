@@ -1448,6 +1448,12 @@
   ],
   "repo": "jrodna/orthocode"
  },
+ "osprangle": {
+  "paths": [
+   "osprangle/pcb/osprangle.kicad_pcb"
+  ],
+  "repo": "smores56/osprette"
+ },
  "osprette-mx": {
   "paths": [
    "mx/pcb/osprette-mx.kicad_pcb"
@@ -1738,6 +1744,12 @@
   ],
   "repo": "drabaioli/sdrakb00"
  },
+ "sephirette": {
+  "paths": [
+   "sephirette/pcb/sephirette.kicad_pcb"
+  ],
+  "repo": "smores56/clog"
+ },
  "sepia-officinalis": {
   "paths": [
    "Sepia officinalis/sepia_officinalis.kicad_pcb"
@@ -1912,6 +1924,12 @@
    "steal_this_keyboard.kicad_pcb"
   ],
   "repo": "obosob/steal_this_keyboard"
+ },
+ "steel-toe": {
+  "paths": [
+   "steel-toe/pcb/steel-toe.kicad_pcb"
+  ],
+  "repo": "smores56/clog"
  },
  "stoutgat": {
   "paths": [

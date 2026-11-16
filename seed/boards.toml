@@ -60,6 +60,26 @@ note     = "Owner, 2026-11-16: clog == clog v1. The repo moved pcb/clog.kicad_pc
 
 [[entry]]
 tree     = "zmk"
+id       = "clog"
+source   = "smores56/clog"
+boards   = ["steel-toe/pcb/steel-toe.kicad_pcb"]
+name     = "Steel Toe"
+verdict  = "confirmed"
+signal   = "human"
+note     = "README: \"The pro-micro boards (Clog, V3, Steel Toe and Sephirette) share a matrix, so they all run the same firmware: `clog` in QMK and the `clog` shield in ZMK.\" Owner, 2026-11-16: one record, several boards, one row each."
+
+[[entry]]
+tree     = "zmk"
+id       = "clog"
+source   = "smores56/clog"
+boards   = ["sephirette/pcb/sephirette.kicad_pcb"]
+name     = "Sephirette"
+verdict  = "confirmed"
+signal   = "human"
+note     = "README: \"The pro-micro boards (Clog, V3, Steel Toe and Sephirette) share a matrix, so they all run the same firmware: `clog` in QMK and the `clog` shield in ZMK.\" Owner, 2026-11-16: one record, several boards, one row each."
+
+[[entry]]
+tree     = "zmk"
 id       = "contra"
 source   = "ai03-2725/contra"
 boards   = ["Contra.kicad_pcb"]
@@ -237,6 +257,16 @@ name     = "osprette v1"
 verdict  = "confirmed"
 signal   = "human"
 note     = "Owner, 2026-11-16: osprette == osprette v1. The repo moved pcb/osprette.kicad_pcb to v1/pcb/osprette.kicad_pcb (same blob) and added mx, v2, v3; this row followed the old path, so the board published twice."
+
+[[entry]]
+tree     = "zmk"
+id       = "osprette"
+source   = "smores56/osprette"
+boards   = ["osprangle/pcb/osprangle.kicad_pcb"]
+name     = "Osprangle"
+verdict  = "confirmed"
+signal   = "human"
+note     = "README: \"They all share a matrix, so they all run the same firmware: `osprette` in QMK (once [this PR][qmk-pr] lands) and the `osprette` shield in ZMK.\" Owner, 2026-11-16: one record, several boards, one row each."
 
 [[entry]]
 tree     = "zmk"
@@ -1177,6 +1207,26 @@ name     = "clog v1"
 verdict  = "confirmed"
 signal   = "human"
 note     = "Owner, 2026-11-16: clog == clog v1. The repo moved pcb/clog.kicad_pcb to v1/pcb/clog.kicad_pcb (same blob) and added v2-v4; this row followed the old path, so the board published twice. Both records stay on v1, the board they were written for."
+
+[[entry]]
+tree     = "qmk"
+id       = "clog"
+source   = "smores56/clog"
+boards   = ["steel-toe/pcb/steel-toe.kicad_pcb"]
+name     = "Steel Toe"
+verdict  = "confirmed"
+signal   = "human"
+note     = "README: \"The pro-micro boards (Clog, V3, Steel Toe and Sephirette) share a matrix, so they all run the same firmware: `clog` in QMK and the `clog` shield in ZMK.\" Owner, 2026-11-16: one record, several boards, one row each."
+
+[[entry]]
+tree     = "qmk"
+id       = "clog"
+source   = "smores56/clog"
+boards   = ["sephirette/pcb/sephirette.kicad_pcb"]
+name     = "Sephirette"
+verdict  = "confirmed"
+signal   = "human"
+note     = "README: \"The pro-micro boards (Clog, V3, Steel Toe and Sephirette) share a matrix, so they all run the same firmware: `clog` in QMK and the `clog` shield in ZMK.\" Owner, 2026-11-16: one record, several boards, one row each."
 
 [[entry]]
 tree     = "qmk"

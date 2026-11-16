@@ -276,6 +276,33 @@ def version_stripped(record_id):
     return segs[-1]
 
 
+def read_attributions(entries):
+    """`(tree, id) -> [(board paths, name), ...]` from seed/boards.toml's confirmed rows.
+
+    A LIST, BECAUSE ONE FIRMWARE RECORD CAN RUN ON SEVERAL BOARDS, one row each. The
+    `osprette` shield runs on Osprette v1 and on the Osprangle; the README says so
+    ("They all share a matrix, so they all run the same firmware"). This was a dict of one
+    board-set per record until 2026-11-16, so a second row silently replaced the first.
+    Each row becomes its own design, named by its own row.
+
+    One record claiming the same board in two rows is two designs from one PCB, so it
+    stops the build. Two RECORDS on one board is normal -- qmk:clog and zmk:clog are one
+    keyboard, and the merge joins them by slug.
+    """
+    out = collections.defaultdict(list)
+    for e in entries:
+        if e["verdict"] != "confirmed" or not e["boards"]:
+            continue
+        key = (e["tree"], e["id"])
+        for have, _ in out[key]:
+            if have & set(e["boards"]):
+                raise SystemExit(
+                    f"seed/boards.toml: {e['tree']}:{e['id']} claims "
+                    f"{sorted(have & set(e['boards']))} in two rows -- one board, two designs")
+        out[key].append((set(e["boards"]), e.get("name") or ""))
+    return dict(out)
+
+
 def names_another_board(record_id, bset, all_sets):
     """Does this record's name point at a DIFFERENT board in the same repo?
 
@@ -1148,15 +1175,13 @@ def main():
     # seed/boards.toml. Drafted by scripts/draft_boards.py and confirmed by a human; a
     # `drafted` attribution is deliberately NOT read, so an unconfirmed guess can never
     # reach the site.
-    attributed, named, no_board = {}, {}, set()
+    no_board = set()
     bfile = REPO/"seed/boards.toml"
+    attributions = read_attributions(
+        tomllib.loads(bfile.read_text())["entry"] if bfile.exists() else [])
     if bfile.exists():
         for e in tomllib.loads(bfile.read_text())["entry"]:
-            if e["verdict"] == "confirmed" and e["boards"]:
-                attributed[(e["tree"], e["id"])] = set(e["boards"])
-                if e.get("name"):
-                    named[(e["tree"], e["id"])] = e["name"]
-            elif e["verdict"] == "no_board":
+            if e["verdict"] == "no_board":
                 no_board.add((e["tree"], e["id"]))
 
     # HALF B: a board no firmware record was attributed to still becomes a design.
@@ -1239,8 +1264,7 @@ def main():
     # which is not a contradiction.
     rows_for_board = collections.defaultdict(list)
     for row in rows:
-        paths = attributed.get((row["tree"], row["id"]))
-        if paths:
+        for paths, _ in attributions.get((row["tree"], row["id"]), []):
             rows_for_board[(row.get("source"), tuple(sorted(paths)))].append(row)
 
     designs, deferred = [], collections.Counter()
@@ -1278,12 +1302,16 @@ def main():
     for row in unregistered:
         defer(f"tree {row.get('tree')!r} is not in seed/trees.toml", row)
 
-    for row in rows:
+    # ONE UNIT PER (RECORD, BOARD ROW), not per record: a record seed/boards.toml puts on
+    # two boards is two designs. A record with no row is one unit with no boards, as before.
+    units = [(row, paths, name)
+             for row in rows
+             for paths, name in (attributions.get((row["tree"], row["id"])) or [(None, "")])]
+    for row, mine, ruled_name in units:
         repo = row.get("source")
         if not repo:
             defer("no repo known", row); continue
         key = (row["tree"], row["id"])
-        mine = attributed.get(key)
         if key in no_board:
             defer("no board in the repo (measured)", row); continue
         # A board-decline holds whichever half would mint the board: `rpneko65`'s board
@@ -1471,8 +1499,8 @@ def main():
         # `davidphilipbarr/36keys`, the other a board in `davidphilipbarr/sweep`, and
         # they were never one design. A row with no attribution keeps the firmware's
         # name, which is every single-board repo the drafter confirmed `sole`.
-        title = named.get(key) or row["name"]
-        slug_value = slugify(title if key in named else row["id"])
+        title = ruled_name or row["name"]
+        slug_value = slugify(title if ruled_name else row["id"])
         paths_value = sorted(mine) if mine else sorted(
             e["path"] for e in found if e.get("path"))
         designs.append({

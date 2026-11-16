@@ -447,7 +447,11 @@ RULINGS = "seed/boards.toml"
 
 
 def ruled(path):
-    """Rows a human has ruled on, keyed (tree, id) -- signal `human`, and never redrafted.
+    """Rows a human has ruled on, `(tree, id) -> [rows]` -- signal `human`, never redrafted.
+
+    A LIST because one record may run on several boards, one row each (2026-11-16: the
+    `osprette` shield on Osprette v1 and the Osprangle). Keyed to one row, a re-draft
+    kept whichever came last and dropped the rest.
 
     This file is regenerated from scratch on every run, so without this a re-draft eats
     the review queue's output. The machine's own `confirmed` is NOT protected: it is a
@@ -467,9 +471,11 @@ def ruled(path):
     """
     if not pathlib.Path(path).exists():
         return {}
-    return {(e["tree"], e["id"]): e
-            for e in tomllib.loads(pathlib.Path(path).read_text())["entry"]
-            if e.get("signal") == "human"}
+    out = collections.defaultdict(list)
+    for e in tomllib.loads(pathlib.Path(path).read_text())["entry"]:
+        if e.get("signal") == "human":
+            out[(e["tree"], e["id"])].append(e)
+    return dict(out)
 
 
 def name_is_unvouched(rid, name, boards):
@@ -547,7 +553,7 @@ def draft(seed, cache, keep=None, qmk=None, zmk=None):
     for r in rows:
         repo, rid = r["source"], r["id"]
         if (r["tree"], rid) in keep:
-            out.append(keep[(r["tree"], rid)])
+            out.extend(keep[(r["tree"], rid)])
             why["kept, a human ruled"] += 1
             continue
         cand = boards.get(repo, [])

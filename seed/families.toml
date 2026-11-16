@@ -70,7 +70,7 @@ note    = "`bw2-v2` added by hand: the `bad-wings` repo's own BW2, which the rul
 [[family]]
 name    = "Clog"
 source  = "https://github.com/smores56/clog"
-members = ["clog-v1", "clog-v2", "clog-v3", "clog-v4"]
+members = ["clog-v1", "clog-v2", "clog-v3", "clog-v4", "sephirette", "steel-toe"]
 verdict = "confirmed"
 
 [[family]]
@@ -164,7 +164,7 @@ verdict = "confirmed"
 [[family]]
 name    = "Osprette"
 source  = "https://github.com/smores56/osprette"
-members = ["osprette-mx", "osprette-v1", "osprette-v2", "osprette-v3"]
+members = ["osprangle", "osprette-mx", "osprette-v1", "osprette-v2", "osprette-v3"]
 verdict = "confirmed"
 
 [[family]]

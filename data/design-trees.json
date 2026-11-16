@@ -716,6 +716,9 @@
  "orthocode": [
   "qmk"
  ],
+ "osprangle": [
+  "zmk"
+ ],
  "osprette-mx": [
   "zmk"
  ],
@@ -856,6 +859,10 @@
  "sdra-kb00": [
   "qmk"
  ],
+ "sephirette": [
+  "qmk",
+  "zmk"
+ ],
  "sepia-officinalis": [
   "zmk",
   "qmk"
@@ -945,6 +952,10 @@
  ],
  "steal-this": [
   "qmk"
+ ],
+ "steel-toe": [
+  "qmk",
+  "zmk"
  ],
  "stoutgat": [
   "qmk"
