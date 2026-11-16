@@ -1,13 +1,19 @@
 #!/usr/bin/env python3
-"""Open the day's questions for the owner as GitHub issues -- backlog #104, piece 2.
+"""Queue the day's questions on the site's moderator page, /moderation -- backlogs #104, #117.
 
-The owner answers from his phone by replying to the issue; `intake_answer.py` reads the
-reply and writes it into the seed. This script only ASKS. It writes nothing to the repo
-and rules on nothing, so a run can never change what the site shows.
+A moderator answers by pressing a button; `intake_answer.py` reads the answer from the
+site's database and writes it into the seed. This script only ASKS. It writes nothing to
+the repo and rules on nothing, so a run can never change what the site shows.
+
+A QUESTION IS DATA. Each carries its `id` (`kind:key:fingerprint`), a `title` and a
+markdown `body` the page shows, its `choices` (the buttons), and whatever its answer needs
+to be applied -- a photo question its candidate image URLs and its repo -- so nothing has
+to be read back out of the body's markdown. Until 2026-11-16 the body was a GitHub issue's,
+and the answer side regex'd the images out of it.
 
 PHOTO. A design that `draft_photo_candidates.py` found repo images for,
 that has no photo in `photos.json`, no pick in `photo-decisions.json` and no "none" or
-"skip" in `seed/photo-declines.toml`, gets one issue: its silhouette from the live site
+"skip" in `seed/photo-declines.toml`, gets one question: its silhouette from the live site
 (`/designs/<slug>/thumbnail.png`, which is the silhouette for any design without a photo)
 above the numbered candidates. The silhouette is `photo_contact_sheet.py`'s safety device
 carried over: a photo of the wrong board is obvious next to the right board's own shape.
@@ -16,46 +22,39 @@ A DECLINE IS KEYED TO THE IMAGES IT SAW. `photo-declines.toml` stores a fingerpr
 the candidate list, so a README that later gains a photo is asked about again, and one
 that did not change is never asked twice.
 
-SHARED REPOS ARE NAMED IN THE ISSUE. Variants of one repo are offered the same README
-images (the Lily58 mistake, `aa9971a`), so an issue whose images another design is also
+SHARED REPOS ARE NAMED IN THE QUESTION. Variants of one repo are offered the same README
+images (the Lily58 mistake, `aa9971a`), so a question whose images another design is also
 offered says so, and says to pick a photo of THIS variant or answer none.
 
 BOARD. A repo with exactly ONE drafted `seed/boards.toml` row and at least one unclaimed
 board-set that could publish -- it places a switch AND names a controller, the two facts
 `build_seed.py` refuses to invent (the same test as `review_boards.py --forecast`) -- gets
-one issue: the firmware record's own facts above the numbered board-sets, each with the
+one question: the firmware record's own facts above the numbered board-sets, each with the
 evidence `review_boards.py --repo` prints. A repo with several queued rows is an
 ASSIGNMENT, not a choice, and stays a dev-session job; so does a repo whose boards can
 publish nothing however they are ruled.
 
 SOURCE. A drafted `seed/sources.toml` row -- a machine proposed which repo holds a
 firmware record's hardware, and its note already carries the checks (owner match, not a
-fork, licence) -- gets one yes/no issue. The row's verdict is the only thing missing.
+fork, licence) -- gets one yes/no question. The row's verdict is the only thing missing.
 
 DISCOVERY. A repo `discover_repos.py` found on GitHub -- created lately, holding a KiCad
 board, not in the corpus -- that has no answer in `seed/discoveries.toml` gets one yes/no
-issue (#105). `y` queues it for importing; `n` is final.
+question (#105). Yes queues it for importing; no is final.
 
-ASKED ALREADY means an OPEN issue carrying the same marker. GitHub is the state, not a
-file on the VPS: a closed issue has either been answered -- and its answer is in the
-seed, so the design drops out above -- or was closed by hand, which is a "not now" this
-run respects until the answer loop records it.
+THE WHOLE QUEUE IS REWRITTEN each run: a question ruled since last night is no longer
+generated, so it drops out; an unruled one keeps its id, so an answer already given still
+matches it.
 
-Usage: intake_ask.py [--dry-run DIR] [--cap 20] [--site https://keyboardbuilders.net]
-    --dry-run writes each issue as DIR/<kind>-<slug>.md and opens nothing; it needs no
-    token. Without it, GH_TOKEN must be the bot's (see github_issues.py).
+Usage: intake_ask.py [--site-queue FILE] [--cap 20] [--site https://keyboardbuilders.net]
 """
 import argparse
 import hashlib
 import json
 import pathlib
-import re
 import sys
 import tomllib
 from collections import defaultdict
-
-sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
-from github_issues import GitHubIssues  # noqa: E402
 
 REPO = pathlib.Path(__file__).resolve().parent.parent
 SCRATCH = REPO / "data"
@@ -75,9 +74,8 @@ MAX_IMAGES = 12
 # Photos first, per the owner (2026-09-27). Later kinds slot in after it.
 KIND_ORDER = ["photo", "board", "source", "discovery"]
 
-# kind, key, fingerprint. A key is a slug for a photo and `tree:id` for a board, so it may
-# hold colons and slashes; the greedy key backtracks to the 12-hex fingerprint's colon.
-MARKER = re.compile(r"<!-- intake:(\w+):(\S+):([0-9a-f]{12}) -->")
+# The site's copy of the queue, which it reads on every request (Moderation.kt).
+QUEUE = pathlib.Path("/var/lib/keyboardbuilders/moderation/questions.json")
 
 
 def fingerprint(urls):
@@ -113,22 +111,17 @@ def photo_questions(site):
         # A slug no longer published (renamed, declined) has no page to put a photo on.
         if slug not in designs or slug in photos or slug in decisions or not cand["images"]:
             continue
-        shown = cand["images"][:MAX_IMAGES]
-        fp = fingerprint([i["url"] for i in shown])
-        if declines.get(slug) == fp:
-            continue
         siblings = [s for s in by_images[fingerprint([i["url"] for i in cand["images"]])]
                     if s != slug]
-        questions.append({
-            "kind": "photo", "slug": slug, "fp": fp, "n": len(shown),
-            "title": f"Photo: {designs[slug]['name']} ({slug})",
-            "body": photo_body(slug, designs[slug]["name"], cand, shown, siblings, fp, site,
-                               used),
-        })
+        q = photo_question(slug, designs[slug]["name"], cand, siblings, site, used)
+        if declines.get(slug) != q["id"].rsplit(":", 1)[1]:
+            questions.append(q)
     return questions
 
 
-def photo_body(slug, name, cand, shown, siblings, fp, site, used):
+def photo_question(slug, name, cand, siblings, site, used):
+    shown = cand["images"][:MAX_IMAGES]
+    urls = [i["url"] for i in shown]
     lines = [
         f"**Which photo shows {name}?** Its silhouette, from the live site:",
         "",
@@ -138,7 +131,7 @@ def photo_body(slug, name, cand, shown, siblings, fp, site, used):
     ]
     if siblings:
         lines += ["", f"⚠️ The same images are offered to **{', '.join(sorted(siblings))}**. "
-                      f"Pick one only if it shows *this* variant; otherwise reply `none`."]
+                      f"Pick one only if it shows *this* variant; otherwise answer none."]
     lines += [""]
     for n, image in enumerate(shown, 1):
         alt = (f" — alt text: “{image['alt']}”" if image.get("alt")
@@ -148,17 +141,15 @@ def photo_body(slug, name, cand, shown, siblings, fp, site, used):
         lines += [f"### {n}{alt}{taken}", "", f"![{n}]({image['url']})", ""]
     rest = len(cand["images"]) - len(shown)
     if rest > 0:
-        lines += [f"*{rest} more image(s) in the repo are not shown here.*", ""]
-    lines += [
-        "---",
-        f"Reply with **`1`–`{len(shown)}`**, **`none`** (no photo of this board here), "
-        f"**`skip`** (don't ask again unless the repo's images change), or **an image URL** "
-        f"from somewhere else, optionally followed by the page to credit "
-        f"(`https://…/photo.jpg https://kbd.news/…`).",
-        "",
-        f"<!-- intake:photo:{slug}:{fp} -->",
-    ]
-    return "\n".join(lines)
+        lines += [f"*{rest} more image(s) in the repo are not shown here.*"]
+    return question("photo", slug, fingerprint(urls), f"Photo: {name} ({slug})", lines,
+                    n=len(shown), images=urls, repo=cand["repo"])
+
+
+def question(kind, key, fp, title, lines, n=None, **data):
+    """One question as the site reads it, plus what its answer needs (`data`)."""
+    return {"id": f"{kind}:{key}:{fp}", "kind": kind, "slug": key, "title": title,
+            "body": "\n".join(lines).strip(), "choices": choices_for(kind, n), **data}
 
 
 def board_choices():
@@ -217,17 +208,15 @@ def board_questions():
             counts, rctrl, split = record_facts(row["id"], reg.root(row["tree"]))
         else:
             counts, rctrl, split = [], "(ZMK shield: see its own files)", False
-        questions.append({
-            "kind": "board", "slug": key, "fp": c["fp"], "n": len(c["free"]),
-            "title": f"Board: which board is {key}'s? ({c['repo']})",
-            "body": board_body(key, c, counts, rctrl, split),
-        })
+        questions.append(question("board", key, c["fp"],
+                                  f"Board: which board is {key}'s? ({c['repo']})",
+                                  board_body(key, c, counts, rctrl, split), n=len(c["free"])))
     return questions
 
 
 def board_body(key, c, counts, rctrl, split):
     from review_boards import history
-    repo, row, free, scan, fp = c["repo"], c["row"], c["free"], c["scan"], c["fp"]
+    repo, row, free, scan = c["repo"], c["row"], c["free"], c["scan"]
     lines = [
         f"**Which board in [{repo}](https://github.com/{repo}) is the firmware record "
         f"`{key}`'s?**",
@@ -255,15 +244,7 @@ def board_body(key, c, counts, rctrl, split):
         ]
         commits, why = history(repo, bset[0], limit=3)
         lines += ["", f"History: {why}"] + [f"- {c}" for c in commits or []] + [""]
-    lines += [
-        "---",
-        f"Reply **`1`–`{len(free)}`** to confirm that board under its drafted name, "
-        f"**`2 Some Name`** to confirm it and name the design, or **`none`** if this "
-        f"record's board isn't in the repo.",
-        "",
-        f"<!-- intake:board:{key}:{fp} -->",
-    ]
-    return "\n".join(lines)
+    return lines
 
 
 def source_choices():
@@ -284,7 +265,7 @@ def source_questions():
         r = c["row"]
         where = f"https://github.com/{r['source']}" + (
             f"/tree/HEAD/{r['path']}" if r.get("path") else "")
-        body = "\n".join([
+        lines = [
             f"**Is [{r['source']}]({where}) the hardware for the firmware record `{key}`"
             + (f" ({r['name']})" if r.get("name") else "") + "?**",
             "",
@@ -292,16 +273,9 @@ def source_questions():
                                                    if r.get("path") else ""),
             "",
             f"> {r.get('note') or '(no note)'}",
-            "",
-            "---",
-            "Reply **`y`** to confirm, **`n`** if no repo is known for it, or "
-            "**`owner/repo`** to confirm a different repo.",
-            "",
-            f"<!-- intake:source:{key}:{c['fp']} -->",
-        ])
-        questions.append({"kind": "source", "slug": key, "fp": c["fp"],
-                          "title": f"Source: is {r['source']} {key}'s hardware?",
-                          "body": body})
+        ]
+        questions.append(question("source", key, c["fp"],
+                                  f"Source: is {r['source']} {key}'s hardware?", lines))
     return questions
 
 
@@ -346,25 +320,17 @@ def discovery_questions(found=None, ruled=None):
             "",
             "Firmware signs: " + (", ".join(c["firmware"]) or "none found (that proves "
                                   "nothing either way)"),
-            "",
-            "---",
-            "Reply **`y`** if it's an open keyboard design (it joins the queue for "
-            "importing), or **`n`** if not (never asked again).",
-            "",
-            f"<!-- intake:discovery:{repo}:{fp} -->",
         ]
-        questions.append({"kind": "discovery", "slug": repo, "fp": fp,
-                          "title": f"Found: is {repo} a keyboard design?",
-                          "body": "\n".join(lines)})
+        questions.append(question("discovery", repo, fp,
+                                  f"Found: is {repo} a keyboard design?", lines))
     return questions
 
 
 # -- The site's moderator queue, backlog #117 ------------------------------------------
 
 def choices_for(kind, n):
-    """The buttons for a question. Each `reply` is exactly what a reply on the old GitHub
-    issue said, so intake_answer's parsers read it unchanged. No free text (owner,
-    2026-11-15): a photo URL or a corrected repo is a dev session's job now."""
+    """The buttons for a question. `reply` is what the site stores and `intake_answer.choice`
+    reads back. No free text (owner, 2026-11-15) beyond a photo question's URL field."""
     yes_no = [{"reply": "y", "label": "Yes"}, {"reply": "n", "label": "No"}]
     numbered = [{"reply": str(i), "label": str(i)} for i in range(1, (n or 0) + 1)]
     return {
@@ -375,18 +341,6 @@ def choices_for(kind, n):
                              {"reply": "skip", "label": "Not sure, skip"}],
         "board": numbered + [{"reply": "none", "label": "Its board isn't in the repo"}],
     }[kind]
-
-
-def for_site(q):
-    """A question as the site reads it. The issue's footer (how to reply) and its hidden
-    marker go: the buttons replace both, and `id` carries what the marker did."""
-    body = q["body"]
-    cut = body.rfind("\n---\n")
-    if cut != -1:
-        body = body[:cut]
-    body = re.sub(r"\s*<!-- intake:.*?-->\s*", "\n", body).strip()
-    return {"id": f"{q['kind']}:{q['slug']}:{q['fp']}", "kind": q["kind"], "slug": q["slug"],
-            "title": q["title"], "body": body, "choices": choices_for(q["kind"], q.get("n"))}
 
 
 def write_questions_file(path, questions):
@@ -402,55 +356,20 @@ def write_questions_file(path, questions):
 def main():
     ap = argparse.ArgumentParser(description=__doc__,
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("--dry-run", type=pathlib.Path, metavar="DIR")
+    ap.add_argument("--site-queue", type=pathlib.Path, metavar="FILE", default=QUEUE,
+                    help="where the site reads the questions")
     ap.add_argument("--cap", type=int, default=20)
     ap.add_argument("--site", default="https://keyboardbuilders.net")
-    ap.add_argument("--site-queue", type=pathlib.Path, metavar="FILE",
-                    help="write the questions to the site's moderator queue (#117), "
-                         "not GitHub issues")
     args = ap.parse_args()
 
     questions = (photo_questions(args.site) + board_questions() + source_questions()
                  + discovery_questions())
     questions.sort(key=lambda q: KIND_ORDER.index(q["kind"]))
-
-    if args.site_queue:
-        # THE WHOLE QUEUE, REWRITTEN: a question ruled since last night is no longer
-        # generated, so it drops out; an unruled one keeps its id, so an answer already
-        # given still matches it. The cap still keeps a night's work bounded.
-        todo = questions[:args.cap]
-        write_questions_file(args.site_queue, [for_site(q) for q in todo])
-        print(f"queued {len(todo)} question(s) on /moderation; "
-              f"{len(questions) - len(todo)} more waiting")
-        return 0
-
-    tracker = None if args.dry_run else GitHubIssues.from_env()
-    open_now = set()
-    if tracker:
-        for kind in KIND_ORDER:
-            for issue in tracker.issues(f"intake/{kind}"):
-                m = MARKER.search(issue.get("body") or "")
-                if m:
-                    open_now.add((m[1], m[2]))
-    waiting = [q for q in questions if (q["kind"], q["slug"]) not in open_now]
-    todo = waiting[:args.cap]
-
-    if args.dry_run:
-        args.dry_run.mkdir(parents=True, exist_ok=True)
-        for q in todo:
-            safe = re.sub(r"[^A-Za-z0-9_.-]", "_", q["slug"])
-            (args.dry_run / f"{q['kind']}-{safe}.md").write_text(
-                f"# {q['title']}\n\n{q['body']}\n")
-    else:
-        labels = {k: tracker.label_id(f"intake/{k}") for k in KIND_ORDER}
-        for q in todo:
-            issue = tracker.open_issue(q["title"], q["body"], [labels[q["kind"]]])
-            print(f"  #{issue['number']}  {q['title']}")
-
-    # One line a notification can carry as it is.
-    verb = "would open" if args.dry_run else "opened"
-    print(f"{verb} {len(todo)} question(s); {len(waiting) - len(todo)} more waiting, "
-          f"{len(open_now)} already open")
+    # The cap keeps a night's work bounded.
+    todo = questions[:args.cap]
+    write_questions_file(args.site_queue, todo)
+    print(f"queued {len(todo)} question(s) on /moderation; "
+          f"{len(questions) - len(todo)} more waiting")
     return 0
 
 

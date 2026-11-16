@@ -9,7 +9,7 @@ import tools.jackson.databind.ObjectMapper
 import java.io.File
 import java.time.Instant
 
-/** One button: `reply` is what a reply on the old GitHub issue would have said. */
+/** One button: `reply` is what the bot reads back (`intake_answer.choice`), `label` what it says. */
 data class Choice(val reply: String, val label: String)
 
 /** One of the intake bot's questions. `id` is the bot's own `kind:slug:fingerprint`. */

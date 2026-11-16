@@ -22,7 +22,7 @@
 # THE TESTS GATE THE DEPLOY, NOT THIS SCRIPT. The push runs .github/workflows/deploy.yml,
 # which tests before it ships; a red build leaves the site on the previous version.
 #
-# Environment (systemd's EnvironmentFile=/etc/intake/env): GH_TOKEN (the bot's), NTFY_URL,
+# Environment (systemd's EnvironmentFile=/etc/intake/env): GH_TOKEN (the owner's, read-only), NTFY_URL,
 # KB_S3_* (photo uploads), QMK_DIR, ZMK_DIR.
 set -uo pipefail
 
@@ -103,8 +103,8 @@ main() {
     what="nothing changed, $designs_after designs"
   fi
 
-  # Backlog #117: the questions go to the site's moderator queue, not GitHub issues.
-  asked=$(python3 scripts/intake_ask.py --site-queue /var/lib/keyboardbuilders/moderation/questions.json 2>>"$log" | tail -1) || {
+  # The questions go to the site's moderator queue (#117).
+  asked=$(python3 scripts/intake_ask.py 2>>"$log" | tail -1) || {
     notify high "Intake nightly FAILED at ask" "$(grep -v "^[[:space:]]*$" "$log" | tail -n 4 | cut -c1-160)"; exit 1; }
 
   notify default "Intake nightly" "$what. $asked. https://keyboardbuilders.net/moderation"

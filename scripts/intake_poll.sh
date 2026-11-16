@@ -33,8 +33,8 @@ main() {
   # intake_answer.py's own merge to report.
   git fetch --quiet origin && git merge --ff-only --quiet '@{u}' 2>/dev/null
 
-  # Backlog #117: answers come from the site's moderator queue, not GitHub issues.
-  if ! out=$(python3 scripts/intake_answer.py --site --push 2>&1); then
+  # Answers from the site's moderator queue (#117).
+  if ! out=$(python3 scripts/intake_answer.py --push 2>&1); then
     echo "$out" >&2
     why=$(printf '%s\n' "$out" | grep -v '^[[:space:]]*$' | tail -n 4 | cut -c1-160)
     if [ "$(cat "$state" 2>/dev/null)" != "$why" ]; then

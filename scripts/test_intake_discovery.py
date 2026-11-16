@@ -7,8 +7,8 @@ import tomllib
 import unittest
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
-from intake_answer import append_discovery, parse_yes_no  # noqa: E402
-from intake_ask import MARKER, discovery_questions  # noqa: E402
+from intake_answer import append_discovery  # noqa: E402
+from intake_ask import discovery_questions  # noqa: E402
 
 FOUND = {"candidates": {
     "a/kbd": {"description": "a wireless split", "stars": 4, "licence": "MIT",
@@ -19,24 +19,11 @@ FOUND = {"candidates": {
 }}
 
 
-class ParseYesNo(unittest.TestCase):
-
-    def test_yes_and_no_in_any_case(self):
-        for text, want in [("y", "y"), (" Yes ", "y"), ("`n`", "n"), ("NO", "n")]:
-            self.assertEqual(parse_yes_no(text), want, text)
-
-    def test_anything_else_is_not_an_answer(self):
-        for text in ["maybe", "y n", "", "yes it is"]:
-            self.assertIsNone(parse_yes_no(text), text)
-
-
 class Questions(unittest.TestCase):
 
-    def test_one_question_per_candidate_with_a_marker_the_answer_loop_reads(self):
+    def test_one_question_per_candidate(self):
         qs = discovery_questions(FOUND, ruled=set())
         self.assertEqual([q["slug"] for q in qs], ["a/kbd", "b/pad"])
-        m = MARKER.search(qs[0]["body"])
-        self.assertEqual((m[1], m[2]), ("discovery", "a/kbd"))
 
     def test_the_body_names_what_the_scan_found(self):
         body = discovery_questions(FOUND, ruled=set())[0]["body"]
@@ -54,12 +41,12 @@ class AppendDiscovery(unittest.TestCase):
     def test_rulings_accumulate_as_entries(self):
         with tempfile.TemporaryDirectory() as d:
             path = pathlib.Path(d) / "discoveries.toml"
-            append_discovery(path, "a/kbd", "design", 101)
-            append_discovery(path, "b/pad", "not_design", 102)
+            append_discovery(path, "a/kbd", "design", "fowlie")
+            append_discovery(path, "b/pad", "not_design", "someone")
             rows = tomllib.loads(path.read_text())["entry"]
         self.assertEqual(rows, [
-            {"repo": "a/kbd", "verdict": "design", "issue": 101},
-            {"repo": "b/pad", "verdict": "not_design", "issue": 102},
+            {"repo": "a/kbd", "verdict": "design", "moderator": "fowlie"},
+            {"repo": "b/pad", "verdict": "not_design", "moderator": "someone"},
         ])
 
 
