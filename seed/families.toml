@@ -65,6 +65,13 @@ members = ["bad-wings-bold", "bad-wings-slim", "bw2-v2"]
 verdict = "confirmed"
 note    = "`bw2-v2` added by hand: the `bad-wings` repo's own BW2, which the rule can't see under the abbreviation."
 
+# Owner, 2026-11-16: all five are boards from the one smores56/clog repo.
+[[family]]
+name    = "Clog"
+source  = "https://github.com/smores56/clog"
+members = ["clog", "clog-v1", "clog-v2", "clog-v3", "clog-v4"]
+verdict = "confirmed"
+
 [[family]]
 name    = "Corne"
 source  = "https://github.com/foostan"

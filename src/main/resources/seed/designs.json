@@ -5073,7 +5073,8 @@
    "widthMm": 128.0,
    "heightMm": 78.0,
    "copperLayers": 2
-  }
+  },
+  "family": "Clog"
  },
  {
   "name": "clog v1",
@@ -5146,7 +5147,8 @@
   ],
   "splay": false,
   "stagger": "column",
-  "powerSwitch": true
+  "powerSwitch": true,
+  "family": "Clog"
  },
  {
   "name": "clog v2",
@@ -5217,7 +5219,8 @@
   "splay": true,
   "stagger": "column",
   "exposedComponents": false,
-  "powerSwitch": true
+  "powerSwitch": true,
+  "family": "Clog"
  },
  {
   "name": "clog v3",
@@ -5289,7 +5292,8 @@
   ],
   "splay": true,
   "stagger": "column",
-  "powerSwitch": false
+  "powerSwitch": false,
+  "family": "Clog"
  },
  {
   "name": "clog v4",
@@ -5362,7 +5366,8 @@
   "splay": true,
   "stagger": "column",
   "exposedComponents": false,
-  "powerSwitch": false
+  "powerSwitch": false,
+  "family": "Clog"
  },
  {
   "name": "contender",
