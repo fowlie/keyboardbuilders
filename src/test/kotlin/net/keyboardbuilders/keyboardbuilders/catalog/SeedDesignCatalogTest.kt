@@ -195,17 +195,18 @@ class SeedDesignCatalogTest {
     }
 
     /**
-     * THE EIGHTEEN, BY NAME. The guard above can only check that a shared record's target
+     * THE TWENTY, BY NAME. The guard above can only check that a shared record's target
      * equals the design's soldered MCU; it cannot see the build's stricter half, that the
      * design's own board (not a QMK fallback) is the witness for that MCU. That half is
      * tested only in scripts/test_build_seed.py, which nothing in this suite runs. So the
      * set it produced on 2026-10-03 is pinned here: a silent widening (a fallback MCU
      * agreeing with its own record, say) adds a slug and fails, and a narrowing drops one.
      * A new soldered design under a shared record is a legitimate reason to edit the list,
-     * after checking its chip was read from its own board.
+     * after checking its chip was read from its own board. Phoebe and Phoebe v2 joined
+     * 2026-11-16 (both boards place their own TQFP-44 ATmega32U4, `maxr1998/phoebe` targets it).
      */
     @Test
-    fun `exactly the eighteen soldered designs take a target from a shared QMK record`() {
+    fun `exactly the twenty soldered designs take a target from a shared QMK record`() {
         val owners = catalog.all()
             .flatMap { d -> d.core.firmware.knownOrNull().orEmpty().filterIsInstance<FirmwareRef.Qmk>()
                 .mapNotNull { it.keyboardPath }.map { it to d.core.slug.value } }
@@ -224,7 +225,7 @@ class SeedDesignCatalogTest {
                 "ferris-0-1-base", "ferris-0-1-compact", "ferris-0-1-high", "ferris-0-1-low",
                 "grooveboard-atmel-au", "grooveboard-atmel-mu", "grooveboard-choc-atmel-au",
                 "grooveboard-choc-atmel-mu", "grooveboard-mx-atmel-au", "grooveboard-mx-atmel-mu",
-                "pisces-v2",
+                "phoebe", "phoebe-v2", "pisces-v2",
             ),
             targeted,
         )

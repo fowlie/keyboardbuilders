@@ -3242,6 +3242,71 @@
   }
  },
  {
+  "name": "Ergo42",
+  "slug": "biacco42-ergo42-rev1",
+  "sources": [
+   "https://github.com/Biacco42/Ergo42"
+  ],
+  "firmware": [
+   {
+    "family": "qmk",
+    "path": "biacco42/ergo42/rev1",
+    "shield": null,
+    "targetMcu": "atmega32u4"
+   }
+  ],
+  "layouts": [
+   {
+    "keys": 56
+   }
+  ],
+  "switches": [
+   {
+    "kind": "choc_v1"
+   },
+   {
+    "kind": "mx"
+   }
+  ],
+  "pitch": null,
+  "buildMethod": {
+   "kind": "pcb"
+  },
+  "hardestComponent": null,
+  "controller": {
+   "kind": "socket",
+   "footprints": [
+    "pro_micro"
+   ]
+  },
+  "body": {
+   "kind": "split",
+   "halves": 2,
+   "reversible": null,
+   "link": [
+    "trrs"
+   ]
+  },
+  "licensing": {
+   "hardware": [
+    "MIT"
+   ],
+   "firmware": [
+    "MIT"
+   ],
+   "documentation": [
+    "MIT"
+   ]
+  },
+  "hostPort": null,
+  "wiring": {
+   "kind": "matrix",
+   "rows": 4,
+   "cols": 7,
+   "diodes": "col_to_row"
+  }
+ },
+ {
   "name": "Blue Team Pad",
   "slug": "blue-team-pad",
   "sources": [
@@ -8322,6 +8387,68 @@
     "copperLayers": 2
    }
   ]
+ },
+ {
+  "name": "eek",
+  "slug": "eek",
+  "sources": [
+   "https://github.com/klackygears/eek_doc"
+  ],
+  "firmware": [
+   {
+    "family": "zmk",
+    "path": null,
+    "shield": "eek"
+   }
+  ],
+  "layouts": [
+   {
+    "keys": 36
+   }
+  ],
+  "switches": [
+   {
+    "kind": "alps"
+   },
+   {
+    "kind": "choc_v1"
+   },
+   {
+    "kind": "mx"
+   }
+  ],
+  "pitch": null,
+  "buildMethod": {
+   "kind": "pcb"
+  },
+  "hardestComponent": null,
+  "controller": {
+   "kind": "socket",
+   "footprints": [
+    "pro_micro"
+   ]
+  },
+  "body": {
+   "kind": "unibody"
+  },
+  "licensing": {
+   "hardware": [
+    "MIT"
+   ],
+   "firmware": [
+    "MIT"
+   ],
+   "documentation": [
+    "MIT"
+   ]
+  },
+  "hostPort": null,
+  "wiring": {
+   "kind": "matrix",
+   "rows": 4,
+   "cols": 10,
+   "diodes": "col_to_row"
+  }
  },
  {
   "name": "egg58v2",
@@ -20136,6 +20263,104 @@
   }
  },
  {
+  "name": "phoebe",
+  "slug": "phoebe",
+  "sources": [
+   "https://github.com/maxr1998/phoebe_keyboard"
+  ],
+  "firmware": [
+   {
+    "family": "qmk",
+    "path": "maxr1998/phoebe",
+    "shield": null,
+    "targetMcu": "atmega32u4"
+   }
+  ],
+  "layouts": [
+   {
+    "keys": 59
+   }
+  ],
+  "switches": [
+   {
+    "kind": "mx"
+   }
+  ],
+  "buildMethod": {
+   "kind": "pcb"
+  },
+  "hardestComponent": null,
+  "controller": {
+   "kind": "soldered",
+   "mcu": "atmega32u4"
+  },
+  "body": {
+   "kind": "unibody"
+  },
+  "licensing": {
+   "hardware": [],
+   "firmware": [],
+   "documentation": []
+  },
+  "pitch": null,
+  "hostPort": "usb_c",
+  "wiring": {
+   "kind": "matrix",
+   "rows": 5,
+   "cols": 12,
+   "diodes": "col_to_row"
+  }
+ },
+ {
+  "name": "phoebe v2",
+  "slug": "phoebe-v2",
+  "sources": [
+   "https://github.com/maxr1998/phoebe_keyboard"
+  ],
+  "firmware": [
+   {
+    "family": "qmk",
+    "path": "maxr1998/phoebe",
+    "shield": null,
+    "targetMcu": "atmega32u4"
+   }
+  ],
+  "layouts": [
+   {
+    "keys": 59
+   }
+  ],
+  "switches": [
+   {
+    "kind": "mx"
+   }
+  ],
+  "buildMethod": {
+   "kind": "pcb"
+  },
+  "hardestComponent": null,
+  "controller": {
+   "kind": "soldered",
+   "mcu": "atmega32u4"
+  },
+  "body": {
+   "kind": "unibody"
+  },
+  "licensing": {
+   "hardware": [],
+   "firmware": [],
+   "documentation": []
+  },
+  "pitch": null,
+  "hostPort": "usb_c",
+  "wiring": {
+   "kind": "matrix",
+   "rows": 5,
+   "cols": 12,
+   "diodes": "col_to_row"
+  }
+ },
+ {
   "name": "piantor",
   "slug": "piantor",
   "sources": [
@@ -21484,6 +21709,55 @@
    "widthMm": 293.74,
    "heightMm": 153.98,
    "copperLayers": 2
+  }
+ },
+ {
+  "name": "pulse 4k",
+  "slug": "pulse-4k",
+  "sources": [
+   "https://github.com/maxr1998/pulse_4k"
+  ],
+  "firmware": [
+   {
+    "family": "qmk",
+    "path": "maxr1998/pulse4k",
+    "shield": null,
+    "targetMcu": "atmega32u4"
+   }
+  ],
+  "layouts": [
+   {
+    "keys": 4
+   }
+  ],
+  "switches": [
+   {
+    "kind": "mx"
+   }
+  ],
+  "pitch": null,
+  "buildMethod": {
+   "kind": "pcb"
+  },
+  "hardestComponent": null,
+  "controller": {
+   "kind": "soldered",
+   "mcu": "atmega32u4"
+  },
+  "body": {
+   "kind": "unibody"
+  },
+  "licensing": {
+   "hardware": [],
+   "firmware": [],
+   "documentation": []
+  },
+  "hostPort": "usb_c",
+  "wiring": {
+   "kind": "matrix",
+   "rows": 2,
+   "cols": 3,
+   "diodes": "col_to_row"
   }
  },
  {
@@ -25223,6 +25497,74 @@
     "copperLayers": 2
    }
   ]
+ },
+ {
+  "name": "Split65",
+  "slug": "split65",
+  "sources": [
+   "https://github.com/percyjw-2/split65"
+  ],
+  "firmware": [
+   {
+    "family": "qmk",
+    "path": "handwired/split65/promicro",
+    "shield": null,
+    "targetMcu": "atmega32u4"
+   },
+   {
+    "family": "qmk",
+    "path": "handwired/split65/stm32",
+    "shield": null,
+    "targetMcu": "stm32f303"
+   }
+  ],
+  "layouts": [
+   {
+    "keys": 70
+   }
+  ],
+  "switches": [
+   {
+    "kind": "mx"
+   }
+  ],
+  "pitch": null,
+  "buildMethod": {
+   "kind": "pcb"
+  },
+  "hardestComponent": null,
+  "controller": {
+   "kind": "socket",
+   "footprints": [
+    "pro_micro"
+   ]
+  },
+  "body": {
+   "kind": "split",
+   "halves": 2,
+   "reversible": null,
+   "link": [
+    "trrs"
+   ]
+  },
+  "licensing": {
+   "hardware": [
+    "MIT"
+   ],
+   "firmware": [
+    "MIT"
+   ],
+   "documentation": [
+    "MIT"
+   ]
+  },
+  "hostPort": null,
+  "wiring": {
+   "kind": "matrix",
+   "rows": 5,
+   "cols": 8,
+   "diodes": "col_to_row"
+  }
  },
  {
   "name": "splitreus",

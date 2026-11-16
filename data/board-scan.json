@@ -228,6 +228,7 @@
    "kbd:SW_Hole_TH": 34
   },
   "path": "ZodiarkSplit/Top Plate.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 35
  },
@@ -450,7 +451,10 @@
  "Biacco42/Ergo42\tergo42/ergo42.kicad_pcb": {
   "bytes": 680095,
   "chips": [],
-  "families": [],
+  "families": [
+   "ChocV1",
+   "MX"
+  ],
   "footprints": 69,
   "kind": "board",
   "names": {
@@ -465,6 +469,12 @@
    "promicro:ProMicroReversible": 1
   },
   "path": "ergo42/ergo42.kicad_pcb",
+  "pin_families": {
+   "library:key_switch": [
+    "ChocV1",
+    "MX"
+   ]
+  },
   "plate_footprints": 0,
   "switches": 28
  },
@@ -1082,6 +1092,7 @@
    "manta60:ProMicro": 1
   },
   "path": "MidPlate/Manta60_Mid_Left.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 37
  },
@@ -1114,6 +1125,7 @@
    "manta60:ProMicro": 1
   },
   "path": "MidPlate/Manta60_Mid_Right.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 37
  },
@@ -1508,6 +1520,7 @@
    "kbd_SW_Hole:SW_Hole_1u_JLC": 4
   },
   "path": "BeThirty/SW_Plate_Template/BeThirty_SW_Plate_Template.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 4
  },
@@ -1536,6 +1549,7 @@
    "random-keyboard-parts.pretty-master:Jumper-UserFriendly-Small": 1
   },
   "path": "ClickBoard Tenkey/Assemble Alps Silent/Assemble.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 19
  },
@@ -1564,6 +1578,7 @@
    "random-keyboard-parts.pretty-master:Jumper-UserFriendly-Small": 1
   },
   "path": "ClickBoard Tenkey/Assemble Omron Clickey/Assemble.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 19
  },
@@ -1694,6 +1709,7 @@
    "logos:sakurat": 1
   },
   "path": "Getta25/v2/Kicad/Top/Getta25.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 25
  },
@@ -1719,6 +1735,7 @@
    "logos:top2": 1
   },
   "path": "Getta25/v2/Kicad/Top_OLED-Cover/Getta25.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 25
  },
@@ -1757,6 +1774,7 @@
    "kbd_SW_Hole:SW_Hole_1u_JLC": 4
   },
   "path": "GoForty/SW_Plate_Template/GoForty_SW_Plate_Template.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 4
  },
@@ -1881,6 +1899,7 @@
    "kbd_SW_Hole_Public:SW_Hole_TH_2u": 1
   },
   "path": "Guide68/Top_L/Guide68_Top_L.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 29
  },
@@ -1896,6 +1915,7 @@
    "kbd_SW_Hole_Public:SW_Hole_TH_2.25u": 1
   },
   "path": "Guide68/Top_R/Guide68_Top_R.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 39
  },
@@ -1950,6 +1970,7 @@
    "kbd_SW_Hole:SW_Hole_2u_JLC": 2
   },
   "path": "J67G/Plate/J67G_Guide515.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 67
  },
@@ -1965,6 +1986,7 @@
    "kbd_SW_Hole:SW_Hole_2u_JLC": 2
   },
   "path": "J67G/Plate/J67G_Poker.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 67
  },
@@ -2014,6 +2036,7 @@
    "kbd_SW:Choc_v1_solder": 21
   },
   "path": "KeyFuda01/KeyFuda.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 22
  },
@@ -2699,6 +2722,7 @@
    "keyswitches:OLED_plate_placeholder": 1
   },
   "path": "Little Big Scroll 4/v1.00/Plate OLED/Little_Big_Scroll_OLED.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 3
  },
@@ -3535,6 +3559,7 @@
    "kbd_SW_Hole:SW_Hole_TH_1u": 54
   },
   "path": "PCB/Slimorta_switch_plate/Slimorta_switch_plate.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 58
  },
@@ -3604,7 +3629,9 @@
  },
  "azhizhinov/piantoruv44\tPIANTORUV44.kicad_pcb": {
   "chips": [],
-  "families": [],
+  "families": [
+   "ChocV1"
+  ],
   "footprints": 42,
   "kind": "board",
   "names": {
@@ -3620,6 +3647,11 @@
    "kibuzzard-654344A9": 2
   },
   "path": "PIANTORUV44.kicad_pcb",
+  "pin_families": {
+   "PIANTORUV44-footprints:PIANTORUV-KEYSWITCH": [
+    "ChocV1"
+   ]
+  },
   "plate_footprints": 0,
   "switches": 22
  },
@@ -3865,6 +3897,7 @@
    "Resistor_SMD:R_0603_1608Metric": 4
   },
   "path": "pcb/kicad/projects/BMEK_Hotswap/BMEK_Hotswap.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 73
  },
@@ -3893,6 +3926,7 @@
    "Resistor_SMD:R_0603_1608Metric": 7
   },
   "path": "pcb/kicad/projects/BMEK_Solder/BMEK_Solder.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 73
  },
@@ -4895,6 +4929,7 @@
    "easyeda2kicad:USB-C-SMD_TYPE-C-6PIN-2MD-073": 1
   },
   "path": "DecentUSB/DecentUSB2350/DecentUSB2350.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 3
  },
@@ -5298,6 +5333,7 @@
    "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal": 11
   },
   "path": "JoyKeyMX/AtariJoystickPaddleTester/AtariJoystickPaddleTester.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 1
  },
@@ -5313,6 +5349,7 @@
    "MountingHole:MountingHole_3.2mm_M3": 2
   },
   "path": "JoyKeyMX/JoyKeyMX-plate.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 7
  },
@@ -5353,6 +5390,7 @@
    "Symbol:KiCad-Logo2_5mm_SilkScreen": 1
   },
   "path": "JoyKeyMX/JoyKeyMini-plate.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 5
  },
@@ -6694,6 +6732,7 @@
    "logos:8packplate": 2
   },
   "path": "case/8-key-top-plate-1.2.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 4
  },
@@ -6970,6 +7009,7 @@
    "svg2mod": 1
   },
   "path": "spleeb/pcbs/spleeb.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 32
  },
@@ -7588,6 +7628,7 @@
    "Jumper:SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm": 20
   },
   "path": "PCB/Buzzard/Buzzard.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 21
  },
@@ -7686,6 +7727,7 @@
    "one42:one42_switchPlate": 1
   },
   "path": "one42/one42_switchPlate/switchPlate.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 1
  },
@@ -7720,6 +7762,7 @@
    "r3926lp:r3926lp_switchPlate_switches": 1
   },
   "path": "revlp/39_1350/39_1350_switchPlate/r39_switchPlate.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 2
  },
@@ -7761,6 +7804,7 @@
    "r3926lp:OSHW-Symbol_6.7x6mm_mask": 1
   },
   "path": "revlp/41_1350/41_1350_switchPlate/41_1350_switchPlate.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 1
  },
@@ -7795,6 +7839,7 @@
    "41_1353:edgecuts_r41l2_switchplate": 1
   },
   "path": "revlp/41_1353/41_1353_switchplate/41_1353_switchplate.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 1
  },
@@ -8491,6 +8536,7 @@
    "kbd:SW_SPST_B3U-1000P": 2
   },
   "path": "Sweep Bling LP/pcb/sweepbling-lp__pcb.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 35
  },
@@ -8526,6 +8572,7 @@
    "kbd:Tenting_Puck2": 1
   },
   "path": "Sweep Bling MX/pcb/sweep-bling-mx__pcb.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 19
  },
@@ -8543,6 +8590,7 @@
    "MountingHole:MountingHole_4.3mm_M4": 4
   },
   "path": "Sweep Bling MX/switch-plate/sweep-bling-mx__plate.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 18
  },
@@ -8578,6 +8626,7 @@
    "kbd:Tenting_Puck2": 1
   },
   "path": "Sweep High M/sweep-high.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 18
  },
@@ -8603,6 +8652,7 @@
    "kbd:Tenting_Puck2": 2
   },
   "path": "Sweep High/sweep-high.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 37
  },
@@ -8635,6 +8685,7 @@
    "kbd:ProMicro_v3": 1
   },
   "path": "Sweep Mini/sweep-mini.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 19
  },
@@ -8656,6 +8707,7 @@
    "kbd:Tenting_Puck2": 1
   },
   "path": "Sweep half-swept/half-swept.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 19
  },
@@ -8678,6 +8730,7 @@
    "kbd:Tenting_Puck2": 2
   },
   "path": "Sweep v2.2/sweepv2.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 37
  },
@@ -8709,6 +8762,7 @@
    "kbd:ProMicro_v2": 1
   },
   "path": "archive/Sweep Compact BLE/sweep-compact-ble.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 18
  },
@@ -8727,6 +8781,7 @@
    "kbd:ProMicro_v3": 1
   },
   "path": "archive/Sweep Compact/ferris-sweep-compact.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 18
  },
@@ -8745,6 +8800,7 @@
    "kbd:ProMicro_v3": 1
   },
   "path": "archive/Sweep34/sweep.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 18
  },
@@ -8768,6 +8824,7 @@
    "kbd:Tenting_Puck2": 2
   },
   "path": "archive/Sweepv2/sweepv2.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 37
  },
@@ -9038,6 +9095,7 @@
    "Cantor_MX:Tenting_Puck.kicad_mod": 1
   },
   "path": "Cantor_MX/Cantor_MX.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 24
  },
@@ -9199,6 +9257,7 @@
    "PCM_marbastlib-various:ROT_SKYLOONG_HS-Switch": 2
   },
   "path": "cloak-xt.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 6
  },
@@ -9597,6 +9656,7 @@
    "urchin-footprints:smt-slider-switch": 2
   },
   "path": "main.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 38
  },
@@ -10534,6 +10594,7 @@
    "footprints:logo": 1
   },
   "path": "GH80-3700/PCB/gh80-3700.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 33
  },
@@ -12374,6 +12435,7 @@
    "MountingHole:MountingHole_2.2mm_M2_Pad": 1
   },
   "path": "pocket/source/bad_wings_pocket.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 36
  },
@@ -12393,6 +12455,7 @@
    "bad-wings:D_SOD-123": 36
   },
   "path": "pocket2/source/bw2.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 36
  },
@@ -13238,6 +13301,7 @@
    "footprints:hole-switch": 23
   },
   "path": "left-plate.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 23
  },
@@ -13264,6 +13328,7 @@
    "footprints:hole-switch": 25
   },
   "path": "right-plate.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 25
  },
@@ -13280,6 +13345,7 @@
    "footprints:promicro": 1
   },
   "path": "switch-hole.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 50
  },
@@ -13295,6 +13361,7 @@
    "footprints:hole-switch-acrylic": 63
   },
   "path": "gurindam-switch-plate.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 63
  },
@@ -13496,6 +13563,7 @@
    "kbd:OLED": 1
   },
   "path": "TPS42/PCB/TPS42/TPS42.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 23
  },
@@ -13510,6 +13578,7 @@
    "kbd:corne-logo-horizontal-mask": 2
   },
   "path": "chocorne hotswap/chococorne hotswap plate.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 21
  },
@@ -13548,6 +13617,7 @@
    "kbd:corne-logo-horizontal-mask": 2
   },
   "path": "corne/choc/corne choc plate.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 21
  },
@@ -13838,6 +13908,7 @@
    "kbd:corne-logo-horizontal-mask": 2
   },
   "path": "corne/plates/top/corne-top-plate.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 21
  },
@@ -13917,6 +13988,7 @@
    "kbd:SW_Hole": 29
   },
   "path": "lily58/choc plates/lily58 choc plates.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 29
  },
@@ -14096,6 +14168,7 @@
    "pimoroni:pim447": 1
   },
   "path": "reviung/reviung41 choc/plate/reviung41 choc plate.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 41
  },
@@ -14131,6 +14204,7 @@
    "pimoroni:pim447": 1
   },
   "path": "reviung/reviung41 low profile/plate/reviung41 low profile plate.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 41
  },
@@ -14156,6 +14230,7 @@
    "kbd:Tenting_Puck2": 2
   },
   "path": "sweeq mx/panel.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 36
  },
@@ -14170,6 +14245,7 @@
    "kbd:SW_Hole": 17
   },
   "path": "sweeq mx/sweep mx plate.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 17
  },
@@ -14194,6 +14270,7 @@
    "kikit:Tab": 8
   },
   "path": "sweeq mx/sweeq mx.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 36
  },
@@ -14228,6 +14305,7 @@
    "keyswitches:Kailh_socket_PG1350_optional_oval_smaller_hotswap": 34
   },
   "path": "sweeq/sweeq.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 36
  },
@@ -14252,6 +14330,7 @@
    "keyswitches:Kailh_socket_PG1350_optional_oval_smaller_hotswap": 34
   },
   "path": "pcb/span.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 38
  },
@@ -14268,6 +14347,7 @@
    "mbk:Choc-2u-cutout": 1
   },
   "path": "plate/span.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 18
  },
@@ -14450,6 +14530,7 @@
    "rookiebwoy:RotaryEncoder_Alps_EC11E-Switch": 2
   },
   "path": "Neopad.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 5
  },
@@ -14898,6 +14979,11 @@
    "lizard_trick:lizard_trick": 1
   },
   "path": "kicad/tenkey_plusplus.kicad_pcb",
+  "pin_families": {
+   "carstens_custom_kicad:hotswap_keyswitch": [
+    "MX"
+   ]
+  },
   "plate_footprints": 0,
   "switches": 20
  },
@@ -14978,6 +15064,7 @@
    "kbd:SW_Hole": 22
   },
   "path": "corne-cherry/pcb_top/corne-top-plate-breakoff.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 22
  },
@@ -15162,6 +15249,7 @@
    "SofleKeyboard-footprint:HOLE_M2_TH": 5
   },
   "path": "Sofle_Choc/Case/PCBTop/SofleKeyboardTopPlate.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 29
  },
@@ -17061,6 +17149,7 @@
    "parts:TRRS-PJ-320A_reversible": 1
   },
   "path": "PCB/keaboard_rev1/keaboard_rev1.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 26
  },
@@ -17681,7 +17770,9 @@
  },
  "klackygears/eek_doc\teek_pcb/eek.kicad_pcb": {
   "chips": [],
-  "families": [],
+  "families": [
+   "ChocV1"
+  ],
   "footprints": 86,
   "kind": "board",
   "names": {
@@ -17693,6 +17784,11 @@
    "eek_Library:klackygear_logo_smallsolder": 1
   },
   "path": "eek_pcb/eek.kicad_pcb",
+  "pin_families": {
+   "eek_Library:UnivSwitch_SK6812-Mini-E": [
+    "ChocV1"
+   ]
+  },
   "plate_footprints": 0,
   "switches": 36
  },
@@ -18000,6 +18096,7 @@
    "pico_footprints:TRRS-PJ-320A": 1
   },
   "path": "kicad_files/pico.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 35
  },
@@ -18535,6 +18632,7 @@
    "SK6812MINI_rev": 1
   },
   "path": "PCB/beta/helix.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 33
  },
@@ -18615,6 +18713,7 @@
    "acheron_MX_soldermask:MX200R": 1
   },
   "path": "kicad/rev2b/BareDevRev2.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 61
  },
@@ -19167,7 +19266,9 @@
   "chips": [
    "atmega32u4"
   ],
-  "families": [],
+  "families": [
+   "MX"
+  ],
   "footprints": 154,
   "kind": "board",
   "names": {
@@ -19184,6 +19285,11 @@
    "keyswitches:MX_Stabilizer_2u": 1
   },
   "path": "pcb/pcb.kicad_pcb",
+  "pin_families": {
+   "keyswitches:Kailh_socket_plate_mount": [
+    "MX"
+   ]
+  },
   "plate_footprints": 0,
   "switches": 59
  },
@@ -19191,7 +19297,9 @@
   "chips": [
    "atmega32u4"
   ],
-  "families": [],
+  "families": [
+   "MX"
+  ],
   "footprints": 153,
   "kind": "board",
   "names": {
@@ -19208,6 +19316,11 @@
    "keyswitches:MX_Stabilizer_2u": 1
   },
   "path": "pcb_v2/pcb.kicad_pcb",
+  "pin_families": {
+   "keyswitches:Kailh_socket_plate_mount": [
+    "MX"
+   ]
+  },
   "plate_footprints": 0,
   "switches": 59
  },
@@ -19215,7 +19328,9 @@
   "chips": [
    "atmega32u4"
   ],
-  "families": [],
+  "families": [
+   "MX"
+  ],
   "footprints": 39,
   "kind": "board",
   "names": {
@@ -19232,6 +19347,11 @@
    "keyswitches:Kailh_socket_plate_mount": 4
   },
   "path": "pcb/pcb.kicad_pcb",
+  "pin_families": {
+   "keyswitches:Kailh_socket_plate_mount": [
+    "MX"
+   ]
+  },
   "plate_footprints": 0,
   "switches": 4
  },
@@ -19782,6 +19902,7 @@
    "mymakercorner:WS6812_Mini": 11
   },
   "path": "kicad_projects/typeH/Phoenix_Project_No1-TypeH.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 46
  },
@@ -19825,6 +19946,7 @@
    "mymakercorner:WS6812_Mini": 7
   },
   "path": "kicad_projects/typeS/Phoenix_Project_No1-TypeS.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 78
  },
@@ -20069,6 +20191,7 @@
    "logo:xenon_logo_front": 1
   },
   "path": "xenon-e/xenon-e.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 28
  },
@@ -21127,7 +21250,9 @@
  },
  "percyjw-2/split65\tSplit65Left.kicad_pcb": {
   "chips": [],
-  "families": [],
+  "families": [
+   "MX"
+  ],
   "footprints": 77,
   "kind": "board",
   "names": {
@@ -21147,12 +21272,31 @@
    "footprints:proton_c": 1
   },
   "path": "Split65Left.kicad_pcb",
+  "pin_families": {
+   "footprints:KailhSocket-1.25U": [
+    "MX"
+   ],
+   "footprints:KailhSocket-1.5U": [
+    "MX"
+   ],
+   "footprints:KailhSocket-1.75U": [
+    "MX"
+   ],
+   "footprints:KailhSocket-1U": [
+    "MX"
+   ],
+   "footprints:KailhSocket-2.75U": [
+    "MX"
+   ]
+  },
   "plate_footprints": 0,
   "switches": 30
  },
  "percyjw-2/split65\tSplit65Right.kicad_pcb": {
   "chips": [],
-  "families": [],
+  "families": [
+   "MX"
+  ],
   "footprints": 97,
   "kind": "board",
   "names": {
@@ -21172,6 +21316,23 @@
    "footprints:proton_c": 1
   },
   "path": "Split65Right.kicad_pcb",
+  "pin_families": {
+   "footprints:KailhSocket-1.75U": [
+    "MX"
+   ],
+   "footprints:KailhSocket-1U": [
+    "MX"
+   ],
+   "footprints:KailhSocket-2.25U": [
+    "MX"
+   ],
+   "footprints:KailhSocket-2U": [
+    "MX"
+   ],
+   "footprints:KailhSocket-ISO": [
+    "MX"
+   ]
+  },
   "plate_footprints": 0,
   "switches": 40
  },
@@ -22065,6 +22226,7 @@
    "kbd:SW_Hole_TH": 22
   },
   "path": "case/PCB Case/plate/torn_plate.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 22
  },
@@ -22182,6 +22344,7 @@
    "yosino58_cherry:spacer": 5
   },
   "path": "cherry/yosino58_cherry.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 118
  },
@@ -22215,6 +22378,7 @@
    "yosino58_chocolate:spacer": 5
   },
   "path": "chocolate/yosino58_chocolate.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 118
  },
@@ -22454,6 +22618,7 @@
    "cata-footprints:SW_KS33_Reverse_Cutout": 34
   },
   "path": "kicad/ks-33/cata-ks-33.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 34
  },
@@ -22745,6 +22910,7 @@
    "kbd:M2_HOLE_v3": 5
   },
   "path": "sephirette/pcb/sephirette-plate.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 17
  },
@@ -22793,6 +22959,7 @@
    "footprints:trrs": 1
   },
   "path": "steel-toe/pcb/steel-toe.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 21
  },
@@ -22879,6 +23046,7 @@
    "footprints:trrs": 1
   },
   "path": "v3/pcb/clog-v3.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 19
  },
@@ -22919,6 +23087,7 @@
    "footprints:xiao-ble": 1
   },
   "path": "v4/pcb/clog-v4.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 19
  },
@@ -22971,6 +23140,7 @@
    "footprints:smd-diode": 34
   },
   "path": "osprangle/pcb/osprangle.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 35
  },
@@ -23031,6 +23201,7 @@
    "footprints:smd-diode": 34
   },
   "path": "roadkill/pcb/roadkill.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 35
  },
@@ -23084,6 +23255,7 @@
    "footprints:switch-cutout": 17
   },
   "path": "v2/pcb/osprette-v2-switch-plate-left.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 17
  },
@@ -23099,6 +23271,7 @@
    "footprints:switch-cutout": 17
   },
   "path": "v2/pcb/osprette-v2-switch-plate-right.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 17
  },
@@ -23123,6 +23296,7 @@
    "footprints:smd-diode": 34
   },
   "path": "v2/pcb/osprette-v2.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 35
  },
@@ -23146,6 +23320,7 @@
    "footprints:smd-diode": 34
   },
   "path": "v3/pcb/osprette_v3.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 35
  },
@@ -23473,6 +23648,7 @@
    "panelization:mouse-bite-2mm-slot": 10
   },
   "path": "rev0/framework.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 61
  },
@@ -23641,6 +23817,7 @@
    "kbd:SW_Hole": 42
   },
   "path": "fr4-plate/la_nc-plate.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 42
  },
@@ -24549,6 +24726,7 @@
    "pcb-top:Switch_Hole": 18
   },
   "path": "plates/pcb-top/pcb-top.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 18
  },
@@ -24564,6 +24742,7 @@
    "footprints:switchplate-brace": 2
   },
   "path": "generated_pcb/base/base.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 2
  },
@@ -24571,7 +24750,8 @@
   "bytes": 1154847,
   "chips": [],
   "families": [
-   "ChocV1"
+   "ChocV1",
+   "MX"
   ],
   "footprints": 102,
   "kind": "board",
@@ -24596,6 +24776,11 @@
    "footprints:ws2812-strip": 2
   },
   "path": "generated_pcb/middle/middle.kicad_pcb",
+  "pin_families": {
+   "footprints:Kailh_socket_reversible": [
+    "MX"
+   ]
+  },
   "plate_footprints": 0,
   "switches": 36
  },
@@ -24609,6 +24794,7 @@
    "footprints:switchplate-brace": 8
   },
   "path": "generated_pcb/top/top.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 8
  },
@@ -24616,7 +24802,8 @@
   "bytes": 1167824,
   "chips": [],
   "families": [
-   "ChocV1"
+   "ChocV1",
+   "MX"
   ],
   "footprints": 102,
   "kind": "board",
@@ -24641,6 +24828,11 @@
    "footprints:ws2812-strip": 2
   },
   "path": "pcb/ergoslab.kicad_pcb",
+  "pin_families": {
+   "footprints:Kailh_socket_reversible": [
+    "MX"
+   ]
+  },
   "plate_footprints": 0,
   "switches": 36
  },
@@ -24703,6 +24895,7 @@
    "libraries:CustomTestPoint": 9
   },
   "path": "pcb/model-b/model-b.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 84
  },
@@ -24743,6 +24936,7 @@
    "libraries:CustomTestPoint": 9
   },
   "path": "pcb/panel/panel.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 84
  },
@@ -25438,6 +25632,7 @@
    "reversible-kicad-footprints:EC11_Switch_Cutout": 1
   },
   "path": "Djinn/Rev1/Board-DjinnPlate/Board-DjinnPlate.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 1
  },
@@ -25464,6 +25659,7 @@
    "reversible-kicad-footprints:TestPoint": 32
   },
   "path": "Djinn/Rev1/Djinn.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 61
  },
@@ -25506,6 +25702,7 @@
    "reversible-kicad-footprints:TestPoint": 54
   },
   "path": "Djinn/Rev2a/Djinn.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 33
  },
@@ -25541,6 +25738,7 @@
    "reversible-kicad-footprints:MX-1U-PlateCutout": 32
   },
   "path": "Djinn/Rev2a/ExtraBoard-Plate/ExtraBoard-Plate.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 33
  },
@@ -25632,6 +25830,7 @@
    "kibuzzard-677E6634": 1
   },
   "path": "Kobold/R1/Kobold.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 35
  },
@@ -25714,6 +25913,7 @@
    "reversible-kicad-footprints:EC11_Switch_Cutout": 1
   },
   "path": "Djinn/Rev1/Board-DjinnPlate/Board-DjinnPlate.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 1
  },
@@ -25762,6 +25962,7 @@
    "reversible-kicad-footprints:TestPoint": 45
   },
   "path": "Djinn/Rev1/Djinn.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 129
  },
@@ -25805,6 +26006,7 @@
    "reversible-kicad-footprints:TestPoint": 54
   },
   "path": "Djinn/Rev2a/Djinn.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 33
  },
@@ -25840,6 +26042,7 @@
    "reversible-kicad-footprints:MX-1U-PlateCutout": 32
   },
   "path": "Djinn/Rev2a/ExtraBoard-Plate/ExtraBoard-Plate.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 33
  },
@@ -25951,6 +26154,7 @@
    "kibuzzard-677E6634": 1
   },
   "path": "Kobold/R1/Kobold.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 35
  },
@@ -25980,6 +26184,7 @@
    "cornia-footprints:keyswitch_cherrymx_hotswap_reversible_1u": 21
   },
   "path": "PCB/cornia.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 23
  },
@@ -26080,6 +26285,7 @@
    "foostan:SW_Hole": 29
   },
   "path": "plate/plate.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 29
  },
@@ -26371,6 +26577,7 @@
    "footprints:Switch_Optional_Hole": 2
   },
   "path": "top_cover/top_cover.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 62
  },
@@ -26676,6 +26883,7 @@
    "kbd:Breakaway_Tabs": 8
   },
   "path": "pcb/3w6/3W6_Plate.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 1
  },
@@ -27072,6 +27280,7 @@
    "zmk-uno:zmk-uno-qr-code": 1
   },
   "path": "zmk-uno.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
   "switches": 7
  },

@@ -237,6 +237,12 @@
   ],
   "repo": "keebio/bfo9000-pcb"
  },
+ "biacco42-ergo42-rev1": {
+  "paths": [
+   "ergo42/ergo42.kicad_pcb"
+  ],
+  "repo": "Biacco42/Ergo42"
+ },
  "blue-team-pad": {
   "paths": [
    "PCB/BlueTeamPad/BlueTeamPad.kicad_pcb"
@@ -624,6 +630,12 @@
    "pcb/dropout.kicad_pcb"
   ],
   "repo": "enochchau/dropout-numpad"
+ },
+ "eek": {
+  "paths": [
+   "eek_pcb/eek.kicad_pcb"
+  ],
+  "repo": "klackygears/eek_doc"
  },
  "egg58v2": {
   "paths": [
@@ -1522,6 +1534,18 @@
   ],
   "repo": "horrortroll/keebproj"
  },
+ "phoebe": {
+  "paths": [
+   "pcb/pcb.kicad_pcb"
+  ],
+  "repo": "maxr1998/phoebe_keyboard"
+ },
+ "phoebe-v2": {
+  "paths": [
+   "pcb_v2/pcb.kicad_pcb"
+  ],
+  "repo": "maxr1998/phoebe_keyboard"
+ },
  "piantor": {
   "paths": [
    "pcb/left/keyboard_pcb.kicad_pcb",
@@ -1614,6 +1638,12 @@
    "KiCAD and GERBER/OLD versions/Pteron56v0.kicad_pcb"
   ],
   "repo": "kraken-jokes/pteron-pcb"
+ },
+ "pulse-4k": {
+  "paths": [
+   "pcb/pcb.kicad_pcb"
+  ],
+  "repo": "maxr1998/pulse_4k"
  },
  "punk75": {
   "paths": [
@@ -1888,6 +1918,13 @@
    "spleeb/pcbs/spleeb.kicad_pcb"
   ],
   "repo": "chrishoage/spleeb"
+ },
+ "split65": {
+  "paths": [
+   "Split65Left.kicad_pcb",
+   "Split65Right.kicad_pcb"
+  ],
+  "repo": "percyjw-2/split65"
  },
  "splitreus": {
   "paths": [

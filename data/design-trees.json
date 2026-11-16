@@ -126,6 +126,9 @@
  "bfo-9000": [
   "zmk"
  ],
+ "biacco42-ergo42-rev1": [
+  "qmk"
+ ],
  "blue-team-pad": [
   "qmk"
  ],
@@ -318,6 +321,9 @@
  ],
  "dropout": [
   "qmk"
+ ],
+ "eek": [
+  "zmk"
  ],
  "egg58v2": [
   "qmk"
@@ -742,6 +748,12 @@
  "paws60": [
   "qmk"
  ],
+ "phoebe": [
+  "qmk"
+ ],
+ "phoebe-v2": [
+  "qmk"
+ ],
  "piantor": [
   "qmk"
  ],
@@ -788,6 +800,9 @@
   "qmk"
  ],
  "pteron56v0": [
+  "qmk"
+ ],
+ "pulse-4k": [
   "qmk"
  ],
  "punk75": [
@@ -924,6 +939,10 @@
   "qmk"
  ],
  "spleeb": [
+  "qmk"
+ ],
+ "split65": [
+  "qmk",
   "qmk"
  ],
  "splitreus": [

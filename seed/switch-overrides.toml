@@ -14,3 +14,8 @@
 slug     = "ergoslab"
 switches = ["choc_v1", "mx"]
 note     = "README: \"Kailh hotswap sockets for all the MX-style switches (choc are soldered in)\", 42 MX and 10 Choc. The MX footprint, `Kailh_socket_reversible`, names no family, so the switch scan missed it; its holes are MX socket spacing."
+
+[[entry]]
+slug     = "eek"
+switches = ["alps", "choc_v1", "mx"]
+note     = "README: \"compatible with MX, Alps, and Choc style switches\", with a picture marking each family's legs in the one footprint, `eek_Library:UnivSwitch_SK6812-Mini-E`. Its name gives no family; the pin reader (2026-11-16) found the Choc v1 pins and side posts, and rightly nothing else: Alps has no centre post to read from, and the MX pins sit on compromise MX/Alps positions."
