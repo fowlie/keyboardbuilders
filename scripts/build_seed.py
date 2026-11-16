@@ -522,6 +522,32 @@ def contradicts_board(row, chip, reg):
     return bool(chip and declared and declared != chip)
 
 
+# QMK `development_board` values that ARE a Pro Micro footprint: the Pro Micro itself and
+# its pin-compatible drop-ins. ZMK says the same thing as `requires: [pro_micro]`.
+PRO_MICRO_DEV_BOARDS = {
+    "promicro", "elite_c", "promicro_rp2040", "kb2040", "sparkfun_pm2040", "blok",
+    "elite_pi", "helios", "liatris", "imera", "michi", "bit_c_pro", "stemcell", "svlinky",
+}
+
+
+def socket_contradicts(dev_board, requires, footprints):
+    """Is this record built for a Pro Micro, on a board with no Pro Micro socket?
+
+    The socketed counterpart of `contradicts_board`, and the board is again the witness:
+    the socket footprints it places. 2026-11-16: Clog V2 and V4 take a Seeed Xiao, and
+    carried `clog` from QMK (`elite_c`) and ZMK (`requires: [pro_micro]`) because their
+    key count fits. The README says V2 has its own config and V4 runs `geta`.
+
+    ONLY THE PRO MICRO FAMILY, where the footprint is unambiguous. Measured the same day
+    over every socketed design: this drops 6 refs on 4 designs (clog-v2, clog-v4, pica40's
+    rev1, lily58-lite-rev3's shield). A board that names no socket keeps its records --
+    silence is Unknown, never a disagreement.
+    """
+    if not footprints or "pro_micro" in footprints:
+        return False
+    return dev_board in PRO_MICRO_DEV_BOARDS or "pro_micro" in (requires or [])
+
+
 def agreeing_with_board(fits, footprints, soldered, found, reg, repo, boms):
     """The records that fit a board's key count, narrowed by its controller WHEN THAT
     DISCRIMINATES -- the same shape as `names_another_board`'s token rule.
@@ -1876,6 +1902,29 @@ def main():
     print(f"{len(dropped)} soldered designs lose firmware their board contradicts:", file=sys.stderr)
     for slug, chip, ids in dropped:
         print(f"  {slug}: board {chip or 'names no chip'}, dropped {', '.join(ids)}", file=sys.stderr)
+
+    # -- And a socketed board, by its socket (see `socket_contradicts`) ----------------
+    socket_dropped = []
+    for d in designs:
+        c = d.get("controller") or {}
+        if c.get("kind") != "socket" or not d["firmware"]:
+            continue
+        def wrong(ref):
+            if reg.reader(ref["_tree"]) == "qmk":
+                return socket_contradicts(
+                    ref.get("path") and qmk_metadata.dev_board(ref["path"], reg.root(ref["_tree"])),
+                    [], c.get("footprints"))
+            shield = shield_of(ref["_tree"], ref.get("shield")) or {}
+            return socket_contradicts(None, shield.get("requires"), c.get("footprints"))
+        gone = [r for r in d["firmware"] if wrong(r)]
+        if gone:
+            d["firmware"] = [r for r in d["firmware"] if r not in gone]
+            socket_dropped.append((d["slug"], c.get("footprints"),
+                                   sorted(r.get("path") or r.get("shield") for r in gone)))
+    print(f"{len(socket_dropped)} socketed designs lose Pro Micro firmware their socket "
+          "cannot take:", file=sys.stderr)
+    for slug, fps, ids in socket_dropped:
+        print(f"  {slug}: socket {', '.join(fps)}, dropped {', '.join(ids)}", file=sys.stderr)
     # -- What each QMK record is built for, from QMK ----------------------------------
     #
     # `Controller.Soldered` has always called QMK's `processor` "the honest second source"

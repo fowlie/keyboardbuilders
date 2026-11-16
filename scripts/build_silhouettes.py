@@ -1884,6 +1884,12 @@ def main():
         if firmware.get("family") != "qmk" or not record:
             key_count = max(l["keys"] for l in design["layouts"])
             record = borrow(firmware.get("shield") or design["slug"], key_count, index)
+            # THE FAMILY'S NAME, LAST. A design with no firmware of its own still has its
+            # family's layout: Lily58 Lite Rev3 was drawn from QMK `lily58` through a ZMK
+            # shield its RP2040-Zero socket cannot take, and lost its drawing when that
+            # shield was dropped (2026-11-16). `borrow` still demands the exact key count.
+            if not record and design.get("family"):
+                record = borrow(design["family"].lower(), key_count, index)
             if not record:
                 skipped.append((design["slug"],
                                 f"{firmware.get('family') or 'no firmware'}, and QMK has no matching board"))

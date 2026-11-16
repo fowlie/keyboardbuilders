@@ -279,3 +279,25 @@ class ReadAttributions(unittest.TestCase):
             self.row(["v1/pcb/clog.kicad_pcb"], "clog v1", tree="zmk", rid="clog"),
         ])
         self.assertEqual(len(got), 2)
+
+
+class SocketContradicts(unittest.TestCase):
+    """A record built for a Pro Micro does not run on a board with no Pro Micro socket."""
+
+    def test_clog_v2s_xiao_socket_refuses_the_pro_micro_shield(self):
+        # 2026-11-16: Clog V2 and V4 take a Xiao; the clog shield requires pro_micro.
+        self.assertTrue(build_seed.socket_contradicts(None, ["pro_micro"], ["seeed_xiao"]))
+
+    def test_a_qmk_elite_c_record_is_a_pro_micro_record(self):
+        self.assertTrue(build_seed.socket_contradicts("elite_c", [], ["seeed_xiao"]))
+
+    def test_a_pro_micro_socket_takes_it(self):
+        self.assertFalse(build_seed.socket_contradicts("promicro", [], ["pro_micro"]))
+        self.assertFalse(build_seed.socket_contradicts(None, ["pro_micro"], ["feather", "pro_micro"]))
+
+    def test_a_board_naming_no_socket_is_unknown_not_a_contradiction(self):
+        self.assertFalse(build_seed.socket_contradicts("promicro", [], []))
+
+    def test_a_record_naming_no_pro_micro_is_left_alone(self):
+        self.assertFalse(build_seed.socket_contradicts("blackpill_f401", [], ["pro_micro"]))
+        self.assertFalse(build_seed.socket_contradicts(None, [], ["seeed_xiao"]))

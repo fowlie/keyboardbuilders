@@ -193,18 +193,12 @@
   "qmk",
   "zmk"
  ],
- "clog-v2": [
-  "zmk",
-  "qmk"
- ],
+ "clog-v2": [],
  "clog-v3": [
   "zmk",
   "qmk"
  ],
- "clog-v4": [
-  "zmk",
-  "qmk"
- ],
+ "clog-v4": [],
  "contender": [
   "qmk"
  ],
@@ -602,9 +596,7 @@
  "lily58": [
   "zmk"
  ],
- "lily58-lite-rev3": [
-  "zmk"
- ],
+ "lily58-lite-rev3": [],
  "lily58-pro": [
   "zmk"
  ],
@@ -751,7 +743,6 @@
   "qmk"
  ],
  "pica40": [
-  "qmk",
   "qmk"
  ],
  "pill60": [

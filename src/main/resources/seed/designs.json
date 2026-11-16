@@ -5088,18 +5088,7 @@
   "sources": [
    "https://github.com/smores56/clog"
   ],
-  "firmware": [
-   {
-    "family": "zmk",
-    "path": null,
-    "shield": "clog"
-   },
-   {
-    "family": "qmk",
-    "path": "clog",
-    "shield": null
-   }
-  ],
+  "firmware": [],
   "layouts": [
    {
     "keys": 34
@@ -5141,10 +5130,6 @@
    "mm": 17.0
   },
   "hostPort": null,
-  "wiring": {
-   "kind": "direct_pin",
-   "pins": 17
-  },
   "switchMounts": [
    "solder"
   ],
@@ -5233,18 +5218,7 @@
   "sources": [
    "https://github.com/smores56/clog"
   ],
-  "firmware": [
-   {
-    "family": "zmk",
-    "path": null,
-    "shield": "clog"
-   },
-   {
-    "family": "qmk",
-    "path": "clog",
-    "shield": null
-   }
-  ],
+  "firmware": [],
   "layouts": [
    {
     "keys": 34
@@ -5288,10 +5262,6 @@
    "mm": 17.0
   },
   "hostPort": null,
-  "wiring": {
-   "kind": "direct_pin",
-   "pins": 17
-  },
   "switchMounts": [
    "choc_socket"
   ],
@@ -16019,13 +15989,7 @@
   "sources": [
    "https://github.com/kata0510/lily58"
   ],
-  "firmware": [
-   {
-    "family": "zmk",
-    "path": null,
-    "shield": "lily58"
-   }
-  ],
+  "firmware": [],
   "layouts": [
    {
     "keys": 58
@@ -16076,12 +16040,6 @@
    "mm": 19.05
   },
   "hostPort": null,
-  "wiring": {
-   "kind": "matrix",
-   "rows": 5,
-   "cols": 6,
-   "diodes": "col_to_row"
-  },
   "extensions": [
    "display"
   ],
@@ -20214,12 +20172,6 @@
   "firmware": [
    {
     "family": "qmk",
-    "path": "pica40/rev1",
-    "shield": null,
-    "targetMcu": "atmega32u4"
-   },
-   {
-    "family": "qmk",
     "path": "pica40/rev2",
     "shield": null,
     "targetMcu": "rp2040"
@@ -20279,6 +20231,12 @@
   },
   "hostPort": null,
   "summary": "Split keyboard with 40 keys using XIAO controllers.",
+  "wiring": {
+   "kind": "matrix",
+   "rows": 4,
+   "cols": 5,
+   "diodes": "col_to_row"
+  },
   "extensions": [
    "encoder"
   ],
