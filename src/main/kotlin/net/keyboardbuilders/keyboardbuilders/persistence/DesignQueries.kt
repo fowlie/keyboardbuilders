@@ -6,7 +6,7 @@ import net.keyboardbuilders.keyboardbuilders.domain.Facets
 import net.keyboardbuilders.keyboardbuilders.domain.Selection
 import net.keyboardbuilders.keyboardbuilders.domain.Sort
 import net.keyboardbuilders.keyboardbuilders.domain.Term
-import net.keyboardbuilders.keyboardbuilders.domain.bands
+import net.keyboardbuilders.keyboardbuilders.facet.facet
 import org.springframework.jdbc.core.simple.JdbcClient
 import org.springframework.stereotype.Component
 import kotlin.random.Random
@@ -278,8 +278,8 @@ class DesignQueries(private val db: JdbcClient) {
         val base = narrowedToText(slugIdsMatching(others), terms(text))
         val counted = countsWithin(key, base)
         val selected = facets.of(key).map { it.token }
-        val bands = key.bands
-        val offered = key.railValues
+        val bands = key.facet.bands
+        val offered = key.facet.railValues
         val options = buildList {
             if (bands.isEmpty() && offered.isEmpty()) {
                 (counted.keys + selected.filter { it != Facets.UNKNOWN })
