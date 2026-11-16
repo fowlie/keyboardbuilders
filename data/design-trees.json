@@ -189,13 +189,9 @@
  "chouchou": [
   "qmk"
  ],
- "clog": [
+ "clog-v1": [
   "qmk",
   "zmk"
- ],
- "clog-v1": [
-  "zmk",
-  "qmk"
  ],
  "clog-v2": [
   "zmk",

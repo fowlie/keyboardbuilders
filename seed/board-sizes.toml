@@ -573,13 +573,13 @@ paths          = ["kicad/chouchou.kicad_pcb"]
 measured_on    = 2026-10-04
 
 [[entry]]
-slug           = "clog"
+slug           = "clog-v1"
 repo           = "smores56/clog"
 drawn          = "half"
 width_mm       = 128.0
 height_mm      = 78.0
 layers         = 2
-paths          = ["pcb/clog.kicad_pcb"]
+paths          = ["v1/pcb/clog.kicad_pcb"]
 measured_on    = 2026-10-04
 
 [[entry]]

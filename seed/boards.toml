@@ -52,11 +52,11 @@ note     = "one board in the repo, one row -- nothing to choose, so the attribut
 tree     = "zmk"
 id       = "clog"
 source   = "smores56/clog"
-boards   = ["pcb/clog.kicad_pcb"]
-name     = "clog"
+boards   = ["v1/pcb/clog.kicad_pcb"]
+name     = "clog v1"
 verdict  = "confirmed"
-signal   = "shared"
-note     = "2 records want the repo's one design and none supersedes another -- they agree on key count and splitness, and differ by variant rather than version (clog, clog), so all of them run on it"
+signal   = "human"
+note     = "Owner, 2026-11-16: clog == clog v1. The repo moved pcb/clog.kicad_pcb to v1/pcb/clog.kicad_pcb (same blob) and added v2-v4; this row followed the old path, so the board published twice. Both records stay on v1, the board they were written for."
 
 [[entry]]
 tree     = "zmk"
@@ -1172,11 +1172,11 @@ note     = "the scan read this repo and found no switch-placing .kicad_pcb at al
 tree     = "qmk"
 id       = "clog"
 source   = "smores56/clog"
-boards   = ["pcb/clog.kicad_pcb"]
-name     = "clog"
+boards   = ["v1/pcb/clog.kicad_pcb"]
+name     = "clog v1"
 verdict  = "confirmed"
-signal   = "shared"
-note     = "2 records want the repo's one design and none supersedes another -- they agree on key count and splitness, and differ by variant rather than version (clog, clog), so all of them run on it"
+signal   = "human"
+note     = "Owner, 2026-11-16: clog == clog v1. The repo moved pcb/clog.kicad_pcb to v1/pcb/clog.kicad_pcb (same blob) and added v2-v4; this row followed the old path, so the board published twice. Both records stay on v1, the board they were written for."
 
 [[entry]]
 tree     = "qmk"

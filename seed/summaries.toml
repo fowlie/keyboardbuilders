@@ -328,7 +328,7 @@ signal   = "agent"
 note     = "read against the design and confirmed by an agent, not a person"
 
 [[entry]]
-slug     = "clog"
+slug     = "clog-v1"
 source   = "smores56/clog"
 summary  = "The Clog is a split 34-key keyboard with pinky clusters. It is the split version of the [Osprette][osprette], designed by me, which itself was inspired by"
 verdict  = "confirmed"

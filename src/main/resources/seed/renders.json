@@ -384,13 +384,6 @@
   "path": "kicad/chouchou.kicad_pcb",
   "png": "8c9c101d8ebbb4dcb0c69079c09c0b15"
  },
- "clog": {
-  "alternates": 0,
-  "glb": "62fba48618f95576bfd2e6a1704d0e96",
-  "glbBytes": 3168192,
-  "path": "pcb/clog.kicad_pcb",
-  "png": "6887e3d2351b91a0be83365f5a0b6845"
- },
  "contender": {
   "alternates": 0,
   "glb": "6dfc79ca008aeaabc52d5c7d1a701541",

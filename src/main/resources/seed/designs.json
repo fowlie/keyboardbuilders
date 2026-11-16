@@ -4996,8 +4996,8 @@
   }
  },
  {
-  "name": "clog",
-  "slug": "clog",
+  "name": "clog v1",
+  "slug": "clog-v1",
   "sources": [
    "https://github.com/smores56/clog"
   ],
@@ -5074,80 +5074,6 @@
    "heightMm": 78.0,
    "copperLayers": 2
   },
-  "family": "Clog"
- },
- {
-  "name": "clog v1",
-  "slug": "clog-v1",
-  "sources": [
-   "https://github.com/smores56/clog"
-  ],
-  "firmware": [
-   {
-    "family": "zmk",
-    "path": null,
-    "shield": "clog"
-   },
-   {
-    "family": "qmk",
-    "path": "clog",
-    "shield": null
-   }
-  ],
-  "layouts": [
-   {
-    "keys": 34
-   }
-  ],
-  "switches": [
-   {
-    "kind": "choc_v1"
-   }
-  ],
-  "buildMethod": {
-   "kind": "pcb"
-  },
-  "hardestComponent": {
-   "parts": [
-    "connector"
-   ],
-   "tier": "through_hole"
-  },
-  "controller": {
-   "kind": "socket",
-   "footprints": [
-    "pro_micro"
-   ]
-  },
-  "body": {
-   "kind": "split",
-   "halves": 2,
-   "reversible": null,
-   "link": [
-    "trrs"
-   ]
-  },
-  "licensing": {
-   "hardware": [],
-   "firmware": [],
-   "documentation": []
-  },
-  "pitch": {
-   "kind": "choc_18x17",
-   "mm": 17.0
-  },
-  "hostPort": null,
-  "wiring": {
-   "kind": "direct_pin",
-   "pins": 17
-  },
-  "switchMounts": [
-   "choc_socket",
-   "solder"
-  ],
-  "splay": false,
-  "stagger": "column",
-  "powerSwitch": true,
   "family": "Clog"
  },
  {

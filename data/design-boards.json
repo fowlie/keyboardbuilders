@@ -366,12 +366,6 @@
   ],
   "repo": "dlip/chouchou"
  },
- "clog": {
-  "paths": [
-   "pcb/clog.kicad_pcb"
-  ],
-  "repo": "smores56/clog"
- },
  "clog-v1": {
   "paths": [
    "v1/pcb/clog.kicad_pcb"
