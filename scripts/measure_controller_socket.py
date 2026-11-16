@@ -138,12 +138,29 @@ MCU_NAMED = re.compile(r"atmega\d|atmega32u|stm32|rp2040|nrf52|mdbt50q", re.I)
 #
 # Values outside it are NOT forced to the nearest member: ZMK's `arduino_uno` and
 # `makerdiary_nrf52840_m2` are not one of the domain's six, so a row naming one defers.
+#
+# ONE LIST, and `firmware_records.BuiltFor.socket` is the only reader. Until 2026-11-16
+# `build_seed.py` kept a second, `PRO_MICRO_DEV_BOARDS`, for the socket filter, and the
+# two disagreed: `proton_c` was only here, and the nine from `sparkfun_pm2040` down only
+# there. No QMK record in the corpus named any of the ten, so the merge changed nothing.
 DEV_BOARD = {
     "promicro": "pro_micro", "elite_c": "pro_micro", "proton_c": "pro_micro",
     "promicro_rp2040": "pro_micro", "kb2040": "pro_micro", "elite_pi": "pro_micro",
+    "sparkfun_pm2040": "pro_micro", "blok": "pro_micro", "helios": "pro_micro",
+    "liatris": "pro_micro", "imera": "pro_micro", "michi": "pro_micro",
+    "bit_c_pro": "pro_micro", "stemcell": "pro_micro", "svlinky": "pro_micro",
     "bluepill": "bluepill",
     "blackpill_f401": "blackpill", "blackpill_f411": "blackpill",
 }
+
+# Both trees name the socket; these are the six the domain enumerates, keyed by the
+# word `socket_of`, `DEV_BOARD` and a ZMK shield's `requires` use. Anything else --
+# ZMK's `arduino_uno`, `makerdiary_nrf52840_m2` -- is not one of the six, so the row is
+# deferred rather than forced into the nearest member.
+FOOTPRINT = {"pro_micro": "pro_micro", "seeed_xiao": "seeed_xiao",
+             "rp2040_zero": "rp2040_zero", "rpi_pico": "rpi_pico",
+             "blackpill": "black_pill", "bluepill": "blue_pill",
+             "feather": "feather"}
 
 # THE CHIP, once the board file has already established that there IS one. A different
 # question from `MCU_PACKAGE` above, and the difference is the whole reason both exist:

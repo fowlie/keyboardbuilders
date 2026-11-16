@@ -17,6 +17,7 @@ import collections
 
 import extract_zmk_shields
 import qmk_metadata
+from measure_controller_socket import DEV_BOARD, FOOTPRINT, PROCESSOR
 
 Keyboard = collections.namedtuple("Keyboard", "key_counts split halves")
 Keyboard.__doc__ = """What keyboard a record describes.
@@ -24,6 +25,17 @@ Keyboard.__doc__ = """What keyboard a record describes.
 `key_counts` is one count per layout the record declares, largest first, and may be
 empty: a record can be a keyboard and state no layout. `halves` is None where the
 record does not say -- a QMK split always reads as 2, since QMK states no more."""
+
+
+BuiltFor = collections.namedtuple("BuiltFor", "socket chip needs_separate_controller")
+BuiltFor.__doc__ = """What a record is built for, in the site's own words.
+
+`socket` is the form factor the record expects to be plugged into -- a key of
+`FOOTPRINT`, so `pro_micro` for an Elite-C or a `requires: [pro_micro]` shield -- or None
+where it names none, or one outside the domain. `chip` is a member of `PROCESSOR`, or
+None. `needs_separate_controller` is True where the record says the chip is NOT on the
+keyboard's own board: any QMK `development_board` at all, inside the domain or not, and
+every ZMK shield, which by ZMK's own definition sits on a separate controller board."""
 
 
 def _zmk_shields(reg):
@@ -82,6 +94,12 @@ class _QmkRecord:
             return None, "not in the local QMK tree"
         return Keyboard(counts, split, 2 if split else None), None
 
+    def built_for(self):
+        board = qmk_metadata.dev_board(self._id, self._root)
+        return BuiltFor(DEV_BOARD.get(board),
+                        PROCESSOR.get(qmk_metadata.processor(self._id, self._root)),
+                        bool(board))
+
 
 class _ZmkRecord:
     def __init__(self, shield):
@@ -93,9 +111,16 @@ class _ZmkRecord:
             return None, "not a keyboard shield in the ZMK tree"
         return Keyboard(s["key_counts"], s["split"], s["halves"]), None
 
+    def built_for(self):
+        sockets = [r for r in (self._shield or {}).get("requires") or [] if r in FOOTPRINT]
+        return BuiltFor(sockets[0] if sockets else None, None, True)
+
 
 class _NoRecord:
     """What a `hardware` tree holds: nothing to read. Such a row borrows a record."""
 
     def keyboard(self):
         return None, "no firmware record in this tree"
+
+    def built_for(self):
+        return BuiltFor(None, None, False)

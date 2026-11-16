@@ -181,5 +181,84 @@ class ZmkKeyboard(Fixture):
                          (None, "not a keyboard shield in the ZMK tree"))
 
 
+class QmkBuiltFor(Fixture):
+    """What a QMK record is built for: `development_board` or `processor`."""
+
+    def defaults(self, **boards):
+        """QMK's own `data/mappings/defaults.hjson`, which says what a dev board runs."""
+        f = self.base/"qmk/data/mappings/defaults.hjson"
+        f.parent.mkdir(parents=True, exist_ok=True)
+        f.write_text(json.dumps({"development_board": {
+            b: {"processor": chip} for b, chip in boards.items()}}))
+
+    def test_an_elite_c_record_is_built_for_a_pro_micro_and_its_chip(self):
+        self.defaults(elite_c="atmega32u4")
+        self.qmk("clog/keyboard.json", {"development_board": "elite_c"})
+        self.assertEqual(self.records().of("qmk", "clog").built_for(),
+                         firmware_records.BuiltFor("pro_micro", "atmega32u4", True))
+
+    def test_every_pro_micro_drop_in_is_a_pro_micro(self):
+        # One list, where the footprint fallback and the socket filter used to keep
+        # two that disagreed: `proton_c` was only in one, `liatris` only in the other.
+        for board in ("promicro", "proton_c", "liatris", "helios", "kb2040"):
+            with self.subTest(board):
+                self.qmk(f"{board}_kb/keyboard.json", {"development_board": board})
+                self.assertEqual(
+                    self.records().of("qmk", f"{board}_kb").built_for().socket, "pro_micro")
+
+    def test_a_black_pill_record_names_its_own_form_factor(self):
+        self.qmk("pill60/keyboard.json", {"development_board": "blackpill_f411"})
+        self.assertEqual(self.records().of("qmk", "pill60").built_for().socket, "blackpill")
+
+    def test_a_dev_board_outside_the_domain_still_needs_a_separate_controller(self):
+        # No nearest member: the socket stays unknown, and the record still says the
+        # chip is not on the keyboard's own board.
+        self.qmk("uno/keyboard.json", {"development_board": "arduino_uno"})
+        self.assertEqual(self.records().of("qmk", "uno").built_for(),
+                         firmware_records.BuiltFor(None, None, True))
+
+    def test_a_record_naming_its_processor_is_built_for_a_chip_on_the_board(self):
+        self.qmk("crkbd/rev4_0/keyboard.json", {"processor": "RP2040"})
+        self.assertEqual(self.records().of("qmk", "crkbd/rev4_0").built_for(),
+                         firmware_records.BuiltFor(None, "rp2040", False))
+
+    def test_a_chip_outside_the_domain_is_none_not_the_nearest(self):
+        self.qmk("odd/keyboard.json", {"processor": "STM32H743"})
+        self.assertIsNone(self.records().of("qmk", "odd").built_for().chip)
+
+    def test_the_most_specific_file_owns_the_dev_board(self):
+        # `kin80/blackpill401` and `kin80/blackpill411` are two dev boards under one
+        # parent; the parent's answer must not reach either.
+        self.qmk("kin80/info.json", {"development_board": "promicro"})
+        self.qmk("kin80/blackpill401/keyboard.json", {"development_board": "blackpill_f401"})
+        self.assertEqual(self.records().of("qmk", "kin80/blackpill401").built_for().socket,
+                         "blackpill")
+
+    def test_a_record_not_in_the_checkout_states_nothing(self):
+        self.assertEqual(self.records().of("qmk", "nowhere").built_for(),
+                         firmware_records.BuiltFor(None, None, False))
+
+
+class ZmkBuiltFor(Fixture):
+    """A shield, by ZMK's own definition, sits on a separate controller board."""
+
+    def test_a_pro_micro_shield(self):
+        self.shield("clog", keys=34, requires=("pro_micro",))
+        self.assertEqual(self.records().of("zmk", "clog").built_for(),
+                         firmware_records.BuiltFor("pro_micro", None, True))
+
+    def test_a_xiao_shield(self):
+        self.shield("osprette", keys=34, requires=("seeed_xiao",))
+        self.assertEqual(self.records().of("zmk", "osprette").built_for().socket, "seeed_xiao")
+
+    def test_a_board_outside_the_domain_leaves_the_socket_unknown(self):
+        self.shield("m2", keys=60, requires=("makerdiary_nrf52840_m2",))
+        self.assertEqual(self.records().of("zmk", "m2").built_for(),
+                         firmware_records.BuiltFor(None, None, True))
+
+    def test_even_an_unreadable_shield_is_a_shield(self):
+        self.assertTrue(self.records().of("zmk", "nowhere").built_for().needs_separate_controller)
+
+
 if __name__ == "__main__":
     unittest.main()

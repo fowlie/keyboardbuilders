@@ -66,7 +66,7 @@ import zmk_wiring
 import trees as tree_registry
 from check_source_reachability import parse
 from draft_boards import VERSION, id_tokens, load_boards, toks
-from measure_controller_socket import (socket_of, chip_of, chip_in_bom, DEV_BOARD,
+from measure_controller_socket import (socket_of, chip_of, chip_in_bom, DEV_BOARD, FOOTPRINT,
                                        PROCESSOR, MCU_PACKAGE, MCU_NAMED)
 # The encoder pattern is measure_extras' own, imported rather than restated so the two
 # instruments cannot drift apart on what an encoder is -- the rule scan_boards.py
@@ -86,13 +86,6 @@ SWITCH = {"MX": {"kind": "mx"}, "ChocV1": {"kind": "choc_v1"},
           "KailhX": {"kind": "kailh_x"},
           "ChocMini": {"kind": "choc_mini"}}
 
-# Both trees name the socket; these are the six the domain enumerates. Anything
-# else -- ZMK's `arduino_uno`, `makerdiary_nrf52840_m2` -- is not one of the six,
-# so the row is deferred rather than forced into the nearest member.
-FOOTPRINT = {"pro_micro": "pro_micro", "seeed_xiao": "seeed_xiao",
-             "rp2040_zero": "rp2040_zero", "rpi_pico": "rpi_pico",
-             "blackpill": "black_pill", "bluepill": "blue_pill",
-             "feather": "feather"}
 
 
 def sockets_on_board(found):
