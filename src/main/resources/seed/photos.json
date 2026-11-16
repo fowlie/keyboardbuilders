@@ -1012,5 +1012,12 @@
     "width": 1600,
     "height": 1067,
     "sourceUrl": "https://github.com/smores56/osprette"
+  },
+  "osprette-v1": {
+    "jpg": "a861f89cece5c24ecee6d08074ac3830",
+    "width": 1600,
+    "height": 1067,
+    "sourceUrl": "https://github.com/smores56/osprette/raw/main/v1/images/osprette-1.jpg",
+    "credit": "https://github.com/smores56/osprette/raw/main/v1/images/osprette-1.jpg"
   }
 }
