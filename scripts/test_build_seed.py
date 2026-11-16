@@ -11,6 +11,7 @@ can be stated as a case. Run from the repo root:
 import unittest
 
 import build_seed
+from firmware_records import BuiltFor
 
 
 class SplitReadingHoldsTheKeys(unittest.TestCase):
@@ -234,22 +235,55 @@ class ReadAttributions(unittest.TestCase):
 
 
 class SocketContradicts(unittest.TestCase):
-    """A record built for a Pro Micro does not run on a board with no Pro Micro socket."""
+    """A record built for a Pro Micro does not run on a board with no Pro Micro socket.
+
+    `built` is what `firmware_records` reads off the record: an Elite-C QMK record and a
+    `requires: [pro_micro]` shield both say `socket="pro_micro"`."""
+
+    PRO_MICRO_SHIELD = BuiltFor("pro_micro", None, True)
+    ELITE_C_RECORD = BuiltFor("pro_micro", "atmega32u4", True)
+    BLACK_PILL_RECORD = BuiltFor("blackpill", None, True)
+    NAMES_NO_SOCKET = BuiltFor(None, None, True)
 
     def test_clog_v2s_xiao_socket_refuses_the_pro_micro_shield(self):
         # 2026-11-16: Clog V2 and V4 take a Xiao; the clog shield requires pro_micro.
-        self.assertTrue(build_seed.socket_contradicts(None, ["pro_micro"], ["seeed_xiao"]))
+        self.assertTrue(build_seed.socket_contradicts(self.PRO_MICRO_SHIELD, ["seeed_xiao"]))
 
     def test_a_qmk_elite_c_record_is_a_pro_micro_record(self):
-        self.assertTrue(build_seed.socket_contradicts("elite_c", [], ["seeed_xiao"]))
+        self.assertTrue(build_seed.socket_contradicts(self.ELITE_C_RECORD, ["seeed_xiao"]))
 
     def test_a_pro_micro_socket_takes_it(self):
-        self.assertFalse(build_seed.socket_contradicts("promicro", [], ["pro_micro"]))
-        self.assertFalse(build_seed.socket_contradicts(None, ["pro_micro"], ["feather", "pro_micro"]))
+        self.assertFalse(build_seed.socket_contradicts(self.ELITE_C_RECORD, ["pro_micro"]))
+        self.assertFalse(build_seed.socket_contradicts(self.PRO_MICRO_SHIELD,
+                                                       ["feather", "pro_micro"]))
 
     def test_a_board_naming_no_socket_is_unknown_not_a_contradiction(self):
-        self.assertFalse(build_seed.socket_contradicts("promicro", [], []))
+        self.assertFalse(build_seed.socket_contradicts(self.ELITE_C_RECORD, []))
 
     def test_a_record_naming_no_pro_micro_is_left_alone(self):
-        self.assertFalse(build_seed.socket_contradicts("blackpill_f401", [], ["pro_micro"]))
-        self.assertFalse(build_seed.socket_contradicts(None, [], ["seeed_xiao"]))
+        self.assertFalse(build_seed.socket_contradicts(self.BLACK_PILL_RECORD, ["pro_micro"]))
+        self.assertFalse(build_seed.socket_contradicts(self.NAMES_NO_SOCKET, ["seeed_xiao"]))
+
+
+class ContradictsBoard(unittest.TestCase):
+    """On a board that solders its chip, a record for some other controller goes."""
+
+    def test_corne_v1s_pro_micro_record_is_not_corne_v4s(self):
+        # `crkbd/rev1` declares `promicro`; the v4 PCB places its own RP2040.
+        self.assertTrue(build_seed.contradicts_board(
+            BuiltFor("pro_micro", "atmega32u4", True), "rp2040"))
+
+    def test_a_record_for_another_chip_goes(self):
+        # `crkbd/r2g` is Mechboards' ATmega32U4 PCB, not foostan's RP2040 one.
+        self.assertTrue(build_seed.contradicts_board(BuiltFor(None, "atmega32u4", False), "rp2040"))
+
+    def test_a_shield_always_goes(self):
+        # A ZMK shield sits on a separate controller board by definition.
+        self.assertTrue(build_seed.contradicts_board(BuiltFor("pro_micro", None, True), None))
+
+    def test_a_record_for_this_chip_stays(self):
+        self.assertFalse(build_seed.contradicts_board(BuiltFor(None, "rp2040", False), "rp2040"))
+
+    def test_a_board_naming_no_chip_contradicts_nothing(self):
+        # Silence is Unknown, never a disagreement.
+        self.assertFalse(build_seed.contradicts_board(BuiltFor(None, "atmega32u4", False), None))

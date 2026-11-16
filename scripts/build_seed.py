@@ -66,8 +66,8 @@ import zmk_wiring
 import trees as tree_registry
 from check_source_reachability import parse
 from draft_boards import VERSION, id_tokens, load_boards, toks
-from measure_controller_socket import (socket_of, chip_of, chip_in_bom, DEV_BOARD, FOOTPRINT,
-                                       PROCESSOR, MCU_PACKAGE, MCU_NAMED)
+from measure_controller_socket import (socket_of, chip_of, chip_in_bom, FOOTPRINT,
+                                       MCU_PACKAGE, MCU_NAMED)
 # The encoder pattern is measure_extras' own, imported rather than restated so the two
 # instruments cannot drift apart on what an encoder is -- the rule scan_boards.py
 # already follows for switch families.
@@ -396,7 +396,7 @@ def _halves_of(body):
     return 1 if body["kind"] == "unibody" else body.get("halves") or 2
 
 
-def soldered_chip(found, records, reg, repo=None, boms=None):
+def soldered_chip(found, built, repo=None, boms=None):
     """Which chip is on this board, or None -- `Controller.Soldered.mcu`.
 
     Only ever asked once the board file has established that a chip IS on the board, so
@@ -415,7 +415,8 @@ def soldered_chip(found, records, reg, repo=None, boms=None):
        repos do (`Keeb_components:ATMEGA32U4-MU`, `rp2040:RP2040`). It is the design's
        own drawing.
     2. **QMK's `processor`** -- `Controller.Soldered`'s "honest second source", and this
-       is the separate pass it asks for.
+       is the separate pass it asks for. `built` is `built_for()` of each record the
+       design runs; a ZMK shield names no chip, so only QMK's ever speaks here.
 
     `Unknown` wherever the sources disagree or the chip is outside the domain's three.
     Measured over the 108 soldered designs in the 275: 15 from the board, 41 from QMK,
@@ -446,11 +447,7 @@ def soldered_chip(found, records, reg, repo=None, boms=None):
         return named.pop()
     if named:
         return None
-    # PER RECORD, not per tree. Two records in one repo may live in two different
-    # trees -- an upstream QMK entry and a fork-hosted one -- so the root comes from
-    # each record's own `tree` rather than from a single root threaded in. Backlog #64.
-    declared = {PROCESSOR.get(qmk_metadata.processor(r["id"], reg.root(r["tree"])))
-                for r in records if r and reg.reader(r["tree"]) == "qmk"}
+    declared = {b.chip for b in built}
     declared.discard(None)
     return declared.pop() if len(declared) == 1 else None
 
@@ -491,7 +488,7 @@ def shared_record_target(controller, board_chip, record_chip):
     return record_chip
 
 
-def contradicts_board(row, chip, reg):
+def contradicts_board(built, chip):
     """Does this record describe a controller the board visibly does not have?
 
     Asked only of a board that SOLDERS its chip and offers no socket, so the board's own
@@ -505,25 +502,16 @@ def contradicts_board(row, chip, reg):
 
     And a ZMK SHIELD, which by ZMK's own definition sits on a separate controller board;
     a keyboard with its chip on board is a ZMK `board`, never a shield.
+
+    `built` is the record's `built_for()`; the first and third are its
+    `needs_separate_controller`.
     """
-    if reg.reader(row["tree"]) != "qmk":
+    if built.needs_separate_controller:
         return True
-    root = reg.root(row["tree"])
-    if qmk_metadata.dev_board(row["id"], root):
-        return True
-    declared = PROCESSOR.get(qmk_metadata.processor(row["id"], root))
-    return bool(chip and declared and declared != chip)
+    return bool(chip and built.chip and built.chip != chip)
 
 
-# QMK `development_board` values that ARE a Pro Micro footprint: the Pro Micro itself and
-# its pin-compatible drop-ins. ZMK says the same thing as `requires: [pro_micro]`.
-PRO_MICRO_DEV_BOARDS = {
-    "promicro", "elite_c", "promicro_rp2040", "kb2040", "sparkfun_pm2040", "blok",
-    "elite_pi", "helios", "liatris", "imera", "michi", "bit_c_pro", "stemcell", "svlinky",
-}
-
-
-def socket_contradicts(dev_board, requires, footprints):
+def socket_contradicts(built, footprints):
     """Is this record built for a Pro Micro, on a board with no Pro Micro socket?
 
     The socketed counterpart of `contradicts_board`, and the board is again the witness:
@@ -535,13 +523,16 @@ def socket_contradicts(dev_board, requires, footprints):
     over every socketed design: this drops 6 refs on 4 designs (clog-v2, clog-v4, pica40's
     rev1, lily58-lite-rev3's shield). A board that names no socket keeps its records --
     silence is Unknown, never a disagreement.
+
+    `built` is the record's `built_for()`: an Elite-C record and a `requires: [pro_micro]`
+    shield both read `socket == "pro_micro"`, from one list in `DEV_BOARD`.
     """
     if not footprints or "pro_micro" in footprints:
         return False
-    return dev_board in PRO_MICRO_DEV_BOARDS or "pro_micro" in (requires or [])
+    return built.socket == "pro_micro"
 
 
-def agreeing_with_board(fits, footprints, soldered, found, reg, repo, boms):
+def agreeing_with_board(fits, footprints, soldered, found, records, repo, boms):
     """The records that fit a board's key count, narrowed by its controller WHEN THAT
     DISCRIMINATES -- the same shape as `names_another_board`'s token rule.
 
@@ -562,8 +553,9 @@ def agreeing_with_board(fits, footprints, soldered, found, reg, repo, boms):
     """
     if footprints or not soldered:
         return fits
-    chip = soldered_chip(found, [], reg, repo, boms)
-    agreeing = [f for f in fits if not contradicts_board(f[0], chip, reg)]
+    chip = soldered_chip(found, [], repo, boms)
+    agreeing = [f for f in fits
+                if not contradicts_board(records.of(f[0]["tree"], f[0]["id"]).built_for(), chip)]
     return agreeing or fits
 
 
@@ -1061,6 +1053,14 @@ def main():
     records = firmware_records.FirmwareRecords(reg)
     shield_of = records.shield
 
+    def built_for(rows):
+        """`built_for()` of each confirmed row, for `soldered_chip`."""
+        return [records.of(r["tree"], r["id"]).built_for() for r in rows if r]
+
+    def ref_record(ref):
+        """The record a published firmware ref names."""
+        return records.of(ref["_tree"], ref["path"] or ref["shield"])
+
     rows_per_repo = collections.Counter(r["source"] for r in rows if r.get("source"))
     # How many DESIGNS the repo holds, not how many board files: draft_boards groups a
     # design's several boards (`top-pcb` and `thumb-pcb`) and sets aside plates,
@@ -1400,11 +1400,13 @@ def main():
             counts, split, halves = kb.key_counts, kb.split, kb.halves
             if reader == "qmk":
                 counts = without_encoder_positions(counts, found, split)
-            # Still read off the shield itself until `built_for()` lands.
-            shield = shield_of(row["tree"], row["id"]) if reader == "zmk" else None
-            for req in (shield or {}).get("requires") or []:
-                if req in FOOTPRINT and not footprints:
-                    footprints = {req}
+            # A SHIELD'S `requires` OUTRANKS A SOLDERED-LOOKING BOARD; QMK's
+            # `development_board` below does not. Measured 2026-11-16: giving ZMK QMK's
+            # `not soldered` guard flips `romac` from its Pro Micro socket to a soldered
+            # atmega32u4 and drops its shield, and the RoMac is a Pro Micro macropad.
+            socket = records.of(row["tree"], row["id"]).built_for().socket
+            if reader == "zmk" and socket and not footprints:
+                footprints = {socket}
         # THE HUMAN OUTRANKS THE RECORD, backlog #65 and the owner's ruling on the
         # Cheapino. Applied AFTER the record has been read, so the board-falsifier in
         # [stated_keys] has the same `found` to check against that the record was
@@ -1456,8 +1458,7 @@ def main():
         # socketed board with no member to be, and forcing it to the nearest one would
         # be the default-fill this project refuses.
         if not footprints and not soldered and fw and reg.reader(fw["tree"]) == "qmk":
-            footprints = {DEV_BOARD.get(
-                qmk_metadata.dev_board(fw["id"], reg.root(fw["tree"])))} - {None}
+            footprints = {records.of(fw["tree"], fw["id"]).built_for().socket} - {None}
 
         if socket_controller(footprints):
             controller = socket_controller(footprints)
@@ -1466,7 +1467,7 @@ def main():
             # times -- but named where a source names it. See [soldered_chip].
             siblings = rows_for_board.get((repo, tuple(sorted(mine or [])))) or []
             controller = {"kind": "soldered",
-                          "mcu": soldered_chip(found, [fw] + siblings, reg,
+                          "mcu": soldered_chip(found, built_for([fw] + siblings),
                                                repo, boms)}
         else:
             defer("nothing names a controller", row, boards=sorted(mine or []),
@@ -1638,7 +1639,7 @@ def main():
                         two_pieces(ruled, split) and
                         any(n * 2 in counts for n in (placed, seen) if n)):
                     fits.append((row, counts, split))
-            fits = agreeing_with_board(fits, footprints, soldered, found, reg, repo, boms)
+            fits = agreeing_with_board(fits, footprints, soldered, found, records, repo, boms)
             if not fits:
                 # THE NUMBERS ARE THE FINDING, not the reason string. `declares` is every
                 # count every record in the repo states, so a reader can see at a glance
@@ -1672,8 +1673,7 @@ def main():
             # a single value, so two form factors over one board is a fact in dispute and
             # the board keeps `Unknown` rather than taking whichever record sorted first.
             if not footprints and not soldered:
-                declared = {DEV_BOARD.get(
-                                qmk_metadata.dev_board(r["id"], reg.root(r["tree"])))
+                declared = {records.of(r["tree"], r["id"]).built_for().socket
                             for r, _, _ in fits if reg.reader(r["tree"]) == "qmk"}
                 declared.discard(None)
                 if len(declared) == 1:
@@ -1682,8 +1682,8 @@ def main():
                 controller = socket_controller(footprints)
             elif soldered:
                 controller = {"kind": "soldered",
-                              "mcu": soldered_chip(found, [r for r, _, _ in fits],
-                                                   reg, repo, boms)}
+                              "mcu": soldered_chip(found, built_for(r for r, _, _ in fits),
+                                                   repo, boms)}
             else:
                 deferB("nothing names a controller", repo, bset, name=name,
                        placed=placed, seen=seen,
@@ -1837,14 +1837,16 @@ def main():
             continue
         repo, paths = d.get("board_repo"), set(d.get("board_paths") or [])
         found = [e for e in (boards.get(repo) or []) if e.get("path") in paths]
-        chip = soldered_chip(found, [], reg, repo, boms)
-        as_row = lambda ref: {"tree": ref["_tree"], "id": ref.get("path") or ref.get("shield")}
-        keep = [r for r in d["firmware"] if not contradicts_board(as_row(r), chip, reg)]
+        chip = soldered_chip(found, [], repo, boms)
+        keep = [r for r in d["firmware"]
+                if not contradicts_board(ref_record(r).built_for(), chip)]
         if len(keep) == len(d["firmware"]):
             continue
-        dropped.append((d["slug"], chip, sorted(as_row(r)["id"] for r in d["firmware"] if r not in keep)))
+        dropped.append((d["slug"], chip, sorted(r["path"] or r["shield"]
+                                                for r in d["firmware"] if r not in keep)))
         d["firmware"] = keep
-        d["controller"]["mcu"] = soldered_chip(found, [as_row(r) for r in keep], reg, repo, boms)
+        d["controller"]["mcu"] = soldered_chip(
+            found, [ref_record(r).built_for() for r in keep], repo, boms)
     print(f"{len(dropped)} soldered designs lose firmware their board contradicts:", file=sys.stderr)
     for slug, chip, ids in dropped:
         print(f"  {slug}: board {chip or 'names no chip'}, dropped {', '.join(ids)}", file=sys.stderr)
@@ -1855,14 +1857,8 @@ def main():
         c = d.get("controller") or {}
         if c.get("kind") != "socket" or not d["firmware"]:
             continue
-        def wrong(ref):
-            if reg.reader(ref["_tree"]) == "qmk":
-                return socket_contradicts(
-                    ref.get("path") and qmk_metadata.dev_board(ref["path"], reg.root(ref["_tree"])),
-                    [], c.get("footprints"))
-            shield = shield_of(ref["_tree"], ref.get("shield")) or {}
-            return socket_contradicts(None, shield.get("requires"), c.get("footprints"))
-        gone = [r for r in d["firmware"] if wrong(r)]
+        gone = [r for r in d["firmware"]
+                if socket_contradicts(ref_record(r).built_for(), c.get("footprints"))]
         if gone:
             d["firmware"] = [r for r in d["firmware"] if r not in gone]
             socket_dropped.append((d["slug"], c.get("footprints"),
@@ -1907,12 +1903,11 @@ def main():
         if (d.get("controller") or {}).get("kind") == "soldered":
             repo, paths = d.get("board_repo"), set(d.get("board_paths") or [])
             found = [e for e in (boards.get(repo) or []) if e.get("path") in paths]
-            board_chip = soldered_chip(found, [], reg, repo, boms)
+            board_chip = soldered_chip(found, [], repo, boms)
         for ref in d["firmware"]:
             if ref["family"] != "qmk" or not ref.get("path"):
                 continue
-            chip = PROCESSOR.get(
-                qmk_metadata.processor(ref["path"], reg.root(ref["_tree"])))
+            chip = ref_record(ref).built_for().chip
             if len(owners[ref["path"]]) > 1:
                 chip = shared_record_target(d.get("controller"), board_chip, chip)
                 if not chip:
