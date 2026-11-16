@@ -292,6 +292,13 @@
    "keys": 54
   }
  },
+ "biacco42-ergo42-rev1": {
+  "ergo42/ergo42.kicad_pcb": {
+   "diodes": 28,
+   "exposed": 28,
+   "keys": 0
+  }
+ },
  "blue-team-pad": {
   "PCB/BlueTeamPad/BlueTeamPad.kicad_pcb": {
    "diodes": 22,
@@ -788,6 +795,13 @@
    "diodes": 18,
    "exposed": 0,
    "keys": 18
+  }
+ },
+ "eek": {
+  "eek_pcb/eek.kicad_pcb": {
+   "diodes": 36,
+   "exposed": 36,
+   "keys": 0
   }
  },
  "egg58v2": {
@@ -1690,6 +1704,13 @@
    "keys": 16
   }
  },
+ "maple-computing-minidox-rev1": {
+  "MiniDox.kicad_pcb": {
+   "diodes": 18,
+   "exposed": 0,
+   "keys": 18
+  }
+ },
  "masonry": {
   "pcb/pcb.kicad_pcb": {
    "diodes": 44,
@@ -1892,6 +1913,13 @@
    "keys": 70
   }
  },
+ "osprangle": {
+  "osprangle/pcb/osprangle.kicad_pcb": {
+   "diodes": 34,
+   "exposed": 0,
+   "keys": 34
+  }
+ },
  "osprette": {
   "pcb/osprette.kicad_pcb": {
    "diodes": 34,
@@ -1977,6 +2005,20 @@
    "diodes": 63,
    "exposed": 0,
    "keys": 65
+  }
+ },
+ "phoebe": {
+  "pcb/pcb.kicad_pcb": {
+   "diodes": 59,
+   "exposed": 59,
+   "keys": 0
+  }
+ },
+ "phoebe-v2": {
+  "pcb_v2/pcb.kicad_pcb": {
+   "diodes": 59,
+   "exposed": 59,
+   "keys": 0
   }
  },
  "piantor": {
@@ -2097,6 +2139,13 @@
    "diodes": 56,
    "exposed": 0,
    "keys": 56
+  }
+ },
+ "pulse-4k": {
+  "pcb/pcb.kicad_pcb": {
+   "diodes": 6,
+   "exposed": 6,
+   "keys": 0
   }
  },
  "punk75": {
@@ -2298,6 +2347,13 @@
    "keys": 24
   }
  },
+ "sephirette": {
+  "sephirette/pcb/sephirette.kicad_pcb": {
+   "diodes": 0,
+   "exposed": 0,
+   "keys": 17
+  }
+ },
  "sepia-officinalis": {
   "Sepia officinalis/sepia_officinalis.kicad_pcb": {
    "diodes": 0,
@@ -2457,6 +2513,18 @@
    "keys": 31
   }
  },
+ "split65": {
+  "Split65Left.kicad_pcb": {
+   "diodes": 30,
+   "exposed": 0,
+   "keys": 0
+  },
+  "Split65Right.kicad_pcb": {
+   "diodes": 40,
+   "exposed": 0,
+   "keys": 0
+  }
+ },
  "splitreus": {
   "splitreus.kicad_pcb": {
    "diodes": 31,
@@ -2501,6 +2569,13 @@
  },
  "steal-this": {
   "steal_this_keyboard.kicad_pcb": {
+   "diodes": 0,
+   "exposed": 0,
+   "keys": 17
+  }
+ },
+ "steel-toe": {
+  "steel-toe/pcb/steel-toe.kicad_pcb": {
    "diodes": 0,
    "exposed": 0,
    "keys": 17

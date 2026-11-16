@@ -17251,7 +17251,8 @@
    "rows": 4,
    "cols": 5,
    "diodes": "col_to_row"
-  }
+  },
+  "exposedComponents": false
  },
  {
   "name": "masonry",
@@ -19471,6 +19472,7 @@
    "cols": 10,
    "diodes": "row_to_col"
   },
+  "exposedComponents": false,
   "family": "Osprette"
  },
  {
