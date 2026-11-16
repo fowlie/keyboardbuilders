@@ -3725,6 +3725,12 @@
     "heightMm": 100.92,
     "copperLayers": 2
    }
+  ],
+  "basedOn": [
+   {
+    "kind": "held",
+    "slug": "architeuthis-dux"
+   }
   ]
  },
  {

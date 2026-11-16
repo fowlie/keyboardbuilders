@@ -95,6 +95,14 @@ signal    = "human"
 note      = "README: \"Bartlesplit is based on Cheapino by Tompi\" (links tompi/cheapino)."
 
 [[entry]]
+slug      = "buzzard"
+name      = "Buzzard"
+ancestors = [{kind = "held", slug = "architeuthis-dux"}]
+verdict   = "confirmed"
+signal    = "human"
+note      = "Owner, 2026-11-16. README: \"The layout is inspired by the [Architeuthis dux](https://github.com/tapioki/cephalopoda/tree/main/Architeuthis%20dux) with pinky, ring, index, and inner columns splayed at 15, 5, 0, -5, -5 degrees. However, it as two additional pinky keys and a modified thumb cluster.\""
+
+[[entry]]
 slug      = "choc-v"
 name      = "choc V"
 ancestors = [{kind = "held", slug = "horizon-choc"}, {kind = "held", slug = "horizon-mx"}]
