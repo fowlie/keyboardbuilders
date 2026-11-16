@@ -1,9 +1,22 @@
 package net.keyboardbuilders.keyboardbuilders.facet
 
+import net.keyboardbuilders.keyboardbuilders.domain.Design
 import net.keyboardbuilders.keyboardbuilders.domain.FacetKey
+import net.keyboardbuilders.keyboardbuilders.domain.knownOrNull
 
 /** What a design makes room for -- `FacetKey.Ext` has why it is presence only. */
 object ExtFacet : Facet(FacetKey.Ext) {
+    // PRESENCE ONLY, and the "Not recorded" bucket that falls out of it is HONEST here in
+    // a way it briefly was not. This projected a `not_applicable` row for designs whose
+    // boards matched no footprint name, on the reading that they had been measured and
+    // found bare. They had not: the scan is a regex over footprint NAMES and proves
+    // presence only — 11 of those 223 designs are contradicted by their own QMK record,
+    // `bastardkb/dilemma` among them, which declares a Cirque trackpad our board scan
+    // cannot see because the module hangs off a generic pin header. So no evidence is
+    // ordinary ignorance and belongs in the gap.
+    override fun project(design: Design, catalogue: Catalogue) =
+        design.extras.extensions.knownOrNull().orEmpty().map { FacetRow(it.name.lowercase()) }
+
     // `ux.md` §2.4's own name for this group. It shipped for an afternoon as "Optional
     // hardware", which was not wrong but invented a second vocabulary for what "Switch
     // footprint" already names three groups up the same rail — a place a part can go.

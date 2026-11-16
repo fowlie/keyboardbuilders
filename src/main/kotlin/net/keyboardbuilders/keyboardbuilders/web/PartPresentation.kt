@@ -1,5 +1,6 @@
 package net.keyboardbuilders.keyboardbuilders.web
 
+import net.keyboardbuilders.keyboardbuilders.facet.ControllerFootprintFacet
 import net.keyboardbuilders.keyboardbuilders.catalog.ControllerBoard
 import net.keyboardbuilders.keyboardbuilders.catalog.DesignCatalog
 import net.keyboardbuilders.keyboardbuilders.domain.ControllerFit
@@ -96,7 +97,7 @@ fun ControllerBoard.toDevBoardPage(
     rules: FirmwareRules,
     hearts: net.keyboardbuilders.keyboardbuilders.persistence.Hearts? = null,
 ): DevBoardPage {
-    val facetValue = footprint.facetValue()
+    val facetValue = ControllerFootprintFacet.token(footprint)
     val designCount = queries.slugsMatching(
         Facets.parse(mapOf(FacetKey.ControllerFootprint.param to listOf(facetValue)))
     )?.size ?: queries.total()
@@ -189,21 +190,6 @@ fun McuFamily.describe(): String = when (this) {
     McuFamily.Nrf52 -> "nRF52"
     McuFamily.Stm32 -> "STM32"
     McuFamily.Samd21 -> "SAMD21"
-}
-
-/** Inverts `SeedDesignCatalog.kt`'s `toFootprint()` -- the facet string this exact enum
- *  value round-trips to, which is also what `SeedImporter.writeFacets` projects. An
- *  exhaustive `when` rather than a derived-from-`.name` transform, matching this file's
- *  neighbour `ControllerFootprint.describe()`: a compile error on a new member, not a
- *  silently-wrong string. */
-private fun ControllerFootprint.facetValue(): String = when (this) {
-    ControllerFootprint.ProMicro -> "pro_micro"
-    ControllerFootprint.SeeedXiao -> "seeed_xiao"
-    ControllerFootprint.Rp2040Zero -> "rp2040_zero"
-    ControllerFootprint.RpiPico -> "rpi_pico"
-    ControllerFootprint.BlackPill -> "black_pill"
-    ControllerFootprint.BluePill -> "blue_pill"
-    ControllerFootprint.Feather -> "feather"
 }
 
 /** Matches `ControllerBoard.firmware`'s own lexicon. Falls back to capitalising an

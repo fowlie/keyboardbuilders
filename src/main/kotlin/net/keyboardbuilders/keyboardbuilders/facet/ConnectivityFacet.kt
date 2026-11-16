@@ -1,9 +1,31 @@
 package net.keyboardbuilders.keyboardbuilders.facet
 
+import net.keyboardbuilders.keyboardbuilders.domain.Design
 import net.keyboardbuilders.keyboardbuilders.domain.FacetKey
+import net.keyboardbuilders.keyboardbuilders.domain.connectivityFor
+import net.keyboardbuilders.keyboardbuilders.domain.facetValue
 
 /** What link this keyboard can use -- `FacetKey.Connectivity` has why it is a join. */
 object ConnectivityFacet : Facet(FacetKey.Connectivity) {
+    /*
+     * THE ONE FACET THAT IS A JOIN, and the only one not read off a field of `design`.
+     *
+     * "Can this keyboard be wireless" is not a property of the design -- for a socketed
+     * design it is a property of the (design, controller) pair, and the builder picks the
+     * controller. `Design.kt` records that ticket 12's `RadioProof` tried to make it a
+     * field, ticket 50 removed `Mcu` from socketed designs, and "`Wireless` could never be
+     * a design-level value for the majority case". So it is computed against the
+     * catalogue and stored as an ordinary facet value -- which is what lets every
+     * existing rail, count, relaxation and URL mechanism work on it unchanged.
+     *
+     * NO ROW WHERE THE ANSWER IS NOT ESTABLISHED: `Connectivity.Unrecorded` projects null
+     * and the rail's `unknown` anti-join puts those designs below the divider. It first
+     * shipped storing a third `maybe` value (corrected 2026-09-10): a special case that
+     * existed only because the facet was named after a verdict rather than the thing.
+     */
+    override fun project(design: Design, catalogue: Catalogue) =
+        listOfNotNull(design.connectivityFor(catalogue.boards, catalogue.rules).facetValue()?.let { FacetRow(it) })
+
     override val heading = "Connectivity"
 
     /*

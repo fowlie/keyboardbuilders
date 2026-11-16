@@ -1,9 +1,13 @@
 package net.keyboardbuilders.keyboardbuilders.facet
 
+import net.keyboardbuilders.keyboardbuilders.domain.Design
 import net.keyboardbuilders.keyboardbuilders.domain.FacetKey
 import net.keyboardbuilders.keyboardbuilders.domain.Term
 
 object KeysFacet : Facet(FacetKey.Keys) {
+    override fun project(design: Design, catalogue: Catalogue) =
+        design.core.layouts.map { FacetRow(it.keys.value.toString(), it.keys.value) }
+
     override val heading = "Keys"
     override val openByDefault = true
 

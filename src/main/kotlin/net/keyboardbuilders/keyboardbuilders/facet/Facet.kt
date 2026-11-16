@@ -1,11 +1,15 @@
 package net.keyboardbuilders.keyboardbuilders.facet
 
+import net.keyboardbuilders.keyboardbuilders.domain.ControllerFacts
+import net.keyboardbuilders.keyboardbuilders.domain.Design
 import net.keyboardbuilders.keyboardbuilders.domain.FacetKey
+import net.keyboardbuilders.keyboardbuilders.domain.FirmwareRules
 import net.keyboardbuilders.keyboardbuilders.domain.Facets
 import net.keyboardbuilders.keyboardbuilders.domain.Term
 
 /**
- * One facet, whole: its URL key, and how the rail words, orders and opens it.
+ * One facet, whole: its URL key, the tokens it writes for a design, and how the rail
+ * words, orders and opens them.
  *
  * ONE FILE PER FACET. Power switch (c35b0e4) and exposed components (eb049bc) each touched
  * nine files, because a facet's tokens, its rail heading, its labels and its order lived
@@ -20,6 +24,14 @@ import net.keyboardbuilders.keyboardbuilders.domain.Term
  * object, exhaustively, so a new key does not compile until it has one.
  */
 abstract class Facet(val key: FacetKey) {
+    /**
+     * The rows this design answers with. EMPTY IS "NOT RECORDED": the rail counts that
+     * tier from the gap between a facet's rows and the corpus, so a facet never writes an
+     * explicit unknown (it would be counted twice) and writes nothing where it does not
+     * know. A measured `no` is a row; silence from a scan that only proves presence is not.
+     */
+    abstract fun project(design: Design, catalogue: Catalogue): List<FacetRow>
+
     /** The rail group's heading. */
     abstract val heading: String
 
@@ -58,6 +70,19 @@ abstract class Facet(val key: FacetKey) {
         else -> word(token)
     }
 }
+
+/** One row a facet writes: a token, and the number a numeric facet ranges over. */
+data class FacetRow(val token: String, val num: Int? = null)
+
+/**
+ * What a projection may read besides the design. Only [ConnectivityFacet] reads it: for a
+ * socketed design, wireless is a property of the (design, controller) pair, not the design.
+ */
+class Catalogue(val boards: List<ControllerFacts>, val rules: FirmwareRules)
+
+/** `ProMicro` -> `pro_micro`, so a facet value reads the way a URL should. */
+internal fun String.snake(): String =
+    replace(Regex("(?<=[a-z0-9])(?=[A-Z])"), "_").lowercase()
 
 val FacetKey.facet: Facet get() = when (this) {
     FacetKey.Body -> BodyFacet

@@ -1,9 +1,19 @@
 package net.keyboardbuilders.keyboardbuilders.facet
 
+import net.keyboardbuilders.keyboardbuilders.domain.Design
 import net.keyboardbuilders.keyboardbuilders.domain.FacetKey
+import net.keyboardbuilders.keyboardbuilders.domain.hotswapParts
+import net.keyboardbuilders.keyboardbuilders.domain.knownOrNull
 
 /** Which hotswap parts fit -- `FacetKey.Hotswap` has why these are parts, not pads. */
 object HotswapFacet : Facet(FacetKey.Hotswap) {
+    // THE PARTS THAT FIT, plus `any` for each board that takes one, and `no` for a
+    // solder-only board: the pads prove that, so it is a value and not the gap (#107).
+    override fun project(design: Design, catalogue: Catalogue) =
+        design.extras.switchMounts.knownOrNull()?.hotswapParts()?.let { parts ->
+            if (parts.isEmpty()) listOf("no") else parts.map { it.token } + "any"
+        }.orEmpty().map { FacetRow(it) }
+
     // The owner's word, 2026-10-02, with the parts under it: "Hotswap: Kailh socket".
     override val heading = "Hotswap"
 

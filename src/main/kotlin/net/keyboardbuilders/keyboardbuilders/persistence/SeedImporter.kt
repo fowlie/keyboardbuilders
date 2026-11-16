@@ -1,28 +1,17 @@
 package net.keyboardbuilders.keyboardbuilders.persistence
 
-import net.keyboardbuilders.keyboardbuilders.domain.SplitLink
-import net.keyboardbuilders.keyboardbuilders.domain.facetValue
-import net.keyboardbuilders.keyboardbuilders.domain.connectivityFor
 import net.keyboardbuilders.keyboardbuilders.domain.FirmwareRules
 import net.keyboardbuilders.keyboardbuilders.catalog.FirmwareCatalog
 import net.keyboardbuilders.keyboardbuilders.catalog.ControllerCatalog
 import net.keyboardbuilders.keyboardbuilders.catalog.ControllerBoard
 import net.keyboardbuilders.keyboardbuilders.catalog.SeedDesignCatalog
-import net.keyboardbuilders.keyboardbuilders.domain.Body
-import net.keyboardbuilders.keyboardbuilders.domain.BuildMethod
-import net.keyboardbuilders.keyboardbuilders.domain.Controller
 import net.keyboardbuilders.keyboardbuilders.domain.Design
 import net.keyboardbuilders.keyboardbuilders.domain.completeness
 import net.keyboardbuilders.keyboardbuilders.domain.FacetKey
-import net.keyboardbuilders.keyboardbuilders.domain.Facets
-import net.keyboardbuilders.keyboardbuilders.domain.FirmwareRef
-import net.keyboardbuilders.keyboardbuilders.domain.License
-import net.keyboardbuilders.keyboardbuilders.domain.KeyPitch
-import net.keyboardbuilders.keyboardbuilders.domain.LicenseState
+import net.keyboardbuilders.keyboardbuilders.facet.Catalogue
+import net.keyboardbuilders.keyboardbuilders.facet.FirmwareFacet
+import net.keyboardbuilders.keyboardbuilders.facet.facet
 import net.keyboardbuilders.keyboardbuilders.domain.knownOrNull
-import net.keyboardbuilders.keyboardbuilders.domain.smdRequired
-import net.keyboardbuilders.keyboardbuilders.domain.SwitchFootprint
-import net.keyboardbuilders.keyboardbuilders.domain.hotswapParts
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.core.io.Resource
 import org.springframework.jdbc.core.simple.JdbcClient
@@ -206,163 +195,11 @@ class SeedImporter(
         boards: List<ControllerBoard>,
         rules: FirmwareRules,
     ): Int {
-        val core = design.core
-        val rows = mutableListOf<Triple<String, String, Int?>>()
-
-        rows += when (val body = core.body) {
-            is Body.Unibody -> Triple(FacetKey.Body.param, "unibody", null)
-            is Body.Split -> Triple(FacetKey.Body.param, "split", body.halves.value)
-            // `num` carries the half count for a split, so "three-piece" is queryable
-            // without a second key. A one-hander has one half by definition, and which
-            // hand is procurement rather than a property of the design, so it is not
-            // folded into `split` — somebody filtering for a split does not want one.
-            is Body.OneHanded -> Triple(FacetKey.Body.param, "one_handed", 1)
-        }
-        // Every design answers -- see `FacetKey.Link`. A split whose link nobody could
-        // name projects nothing and lands in "Not recorded", which is honest about it.
-        when (val body = core.body) {
-            is Body.Split -> body.links.knownOrNull()?.forEach {
-                rows += Triple(FacetKey.Link.param, it.token(), null)
-            }
-            else -> rows += Triple(FacetKey.Link.param, "one_piece", null)
-        }
-        core.layouts.forEach { rows += Triple(FacetKey.Keys.param, it.keys.value.toString(), it.keys.value) }
-        core.switches.forEach {
-            rows += Triple(
-                FacetKey.SwitchFootprint.param,
-                when (it) {
-                    is SwitchFootprint.Mx -> "mx"
-                    is SwitchFootprint.ChocV1 -> "choc_v1"
-                    is SwitchFootprint.ChocV2 -> "choc_v2"
-                    is SwitchFootprint.Alps -> "alps"
-                    is SwitchFootprint.ChocMini -> "choc_mini"
-                    is SwitchFootprint.KailhX -> "kailh_x"
-                    // "Assigned by a human, never by the importer" — so the seed cannot
-                    // produce one today. Projected rather than refused, because the day a
-                    // human assigns one it must be selectable, and a `when` that threw
-                    // here would make that a code change instead of a data change.
-                    is SwitchFootprint.Bespoke -> "bespoke"
-                },
-                null,
-            )
-        }
-        rows += when (val controller = core.controller) {
-            // One row per footprint (#99): a PCB taking a Pro Micro or a Feather answers
-            // both filters, the way a design on two firmwares answers both.
-            is Controller.Socket -> controller.footprints.map {
-                Triple(FacetKey.ControllerFootprint.param, it.name.snake(), null)
-            }
-            // NOT_APPLICABLE, not "soldered". This facet asks WHICH DEV-BOARD FOOTPRINT
-            // the design takes, and a design with the chip on its own PCB does not take
-            // one — the question does not apply rather than having "soldered" as an
-            // answer. `contract.md` §3 makes that a first-class value above the divider,
-            // rendered in the facet's own words: "MCU soldered on".
-            //
-            // The distinction is not pedantry. `not_applicable` is a HARD non-match
-            // against every other value in its group, where a value called "soldered"
-            // reads as one option among the sockets and would invite a rail that offers
-            // "Pro Micro or soldered" as if those answered the same question.
-            is Controller.Soldered ->
-                listOf(Triple(FacetKey.ControllerFootprint.param, Facets.NOT_APPLICABLE, null))
-        }
-        rows += when (core.buildMethod) {
-            is BuildMethod.Pcb -> Triple(FacetKey.BuildMethod.param, "pcb", null)
-            is BuildMethod.Handwire -> Triple(FacetKey.BuildMethod.param, "handwire", null)
-        }
-        // Projected only when known, same discipline as `Pitch` below: a board the
-        // scanner found nothing solderable on is ordinary ignorance and belongs in the
-        // rail's "Not recorded" gap, not a fabricated `false`.
-        core.buildMethod.smdRequired.knownOrNull()?.let {
-            rows += Triple(FacetKey.SmdRequired.param, if (it) "yes" else "no", null)
-        }
-        // Projected only when measured. A design whose pitch could not be read is absent
-        // from this key rather than carrying an "unknown" value: the sidebar counts a
-        // "Not recorded" bucket from the gap between the facet's rows and the corpus,
-        // so an explicit unknown would be counted twice.
-        core.pitch.knownOrNull()?.let { measured ->
-            rows += Triple(FacetKey.Pitch.param, when (measured) {
-                KeyPitch.Mx -> "mx"
-                KeyPitch.Choc -> "choc"
-                is KeyPitch.Custom -> "other"
-            }, null)
-        }
-        // Projected only when known: no record is the rail's "Not recorded" gap (#106).
-        core.firmware.knownOrNull()?.forEach { rows += Triple(FacetKey.Firmware.param, it.familySlug(), null) }
-        // PRESENCE ONLY, and the "Not recorded" bucket that falls out of it is HONEST
-        // here in a way it briefly was not. This projected a `not_applicable` row for
-        // designs whose boards matched no footprint name, on the reading that they had
-        // been measured and found bare. They had not: the scan is a regex over footprint
-        // NAMES and proves presence only — 11 of those 223 designs are contradicted by
-        // their own QMK record, `bastardkb/dilemma` among them, which declares a Cirque
-        // trackpad our board scan cannot see because the module hangs off a generic
-        // pin header. So no evidence is ordinary ignorance and belongs in the gap.
-        design.extras.extensions.knownOrNull()?.forEach {
-            rows += Triple(FacetKey.Ext.param, it.name.lowercase(), null)
-        }
-        // THE PARTS THAT FIT, plus `any` for each board that takes one, and `no` for a
-        // solder-only board: the pads prove that, so it is a value and not the gap (#107).
-        design.extras.switchMounts.knownOrNull()?.hotswapParts()?.let { parts ->
-            val tokens = if (parts.isEmpty()) listOf("no") else parts.map { it.token } + "any"
-            tokens.forEach { rows += Triple(FacetKey.Hotswap.param, it, null) }
-        }
-        // Projected only when measured, same discipline as `SmdRequired` above -- but
-        // unlike `Ext` just above, `no` here is a genuine measured
-        // verdict rather than an absence of evidence, so it is written as an ordinary
-        // value rather than folded into the "Not recorded" gap. See
-        // `DesignExtras.splay`'s own doc comment for why the two facets differ.
-        design.extras.splay.knownOrNull()?.let {
-            rows += Triple(FacetKey.Splay.param, if (it) "yes" else "no", null)
-        }
-        // Same discipline as `splay` just above: a genuine measured verdict, not
-        // evidence-only, so it is written as an ordinary value rather than folded into
-        // the "Not recorded" gap. See `DesignExtras.stagger`'s own doc comment.
-        design.extras.stagger.knownOrNull()?.let {
-            rows += Triple(FacetKey.Stagger.param, it.name.lowercase(), null)
-        }
-        // Same discipline as `splay`: `no` is measured, so it is an ordinary value.
-        design.extras.exposedComponents.knownOrNull()?.let {
-            rows += Triple(FacetKey.ExposedComponents.param, if (it) "yes" else "no", null)
-        }
-        // Same discipline again: `measure_power_switch.py`'s `no` is measured.
-        design.extras.powerSwitch.knownOrNull()?.let {
-            rows += Triple(FacetKey.PowerSwitch.param, if (it) "yes" else "no", null)
-        }
-        rows += when (val licensing = core.licensing.hardware) {
-            is LicenseState.Unstated ->
-                // "all rights reserved" is a fact about the repo, so it is selectable
-                // rather than absent. An absent licence and an unreadable one are
-                // different, and only the first reaches here.
-                listOf(Triple(FacetKey.License.param, "unstated", null))
-            is LicenseState.Stated -> licensing.licenses.map {
-                Triple(FacetKey.License.param, it.slug(), null)
-            }
-        }
-
-        /*
-         * THE ONE FACET THAT IS A JOIN, and the first in this method not read off a field
-         * of `design`.
-         *
-         * "Can this keyboard be wireless" is not a property of the design -- for a
-         * socketed design it is a property of the (design, controller) pair, and the
-         * builder picks the controller. `Design.kt` records that ticket 12's `RadioProof`
-         * tried to make it a field, ticket 50 removed `Mcu` from socketed designs, and
-         * "`Wireless` could never be a design-level value for the majority case". So it is
-         * computed here, against the catalogue, and stored as an ordinary facet value --
-         * which is what lets every existing rail, count, relaxation and URL mechanism work
-         * on it unchanged.
-         *
-         * NO ROW WHERE THE ANSWER IS NOT ESTABLISHED, so this behaves like every other
-         * facet: `Connectivity.Unrecorded` projects null and the rail's `unknown`
-         * anti-join puts those designs below the divider.
-         *
-         * That is the 2026-09-10 correction. It first shipped storing a third `maybe`
-         * value and claiming no "Not recorded" tier -- a special case that existed only
-         * because the facet was named after a verdict ("can this be wireless") rather than
-         * after the thing. Renamed to `connectivity`, "maybe" stopped being a plausible
-         * value and the absence became the honest projection. Same shape as `ext` above.
-         */
-        design.connectivityFor(boards, rules).facetValue()?.let {
-            rows += Triple(FacetKey.Connectivity.param, it, null)
+        // Each facet projects its own rows -- `facet/`, one file per facet, has what
+        // each writes and why. `FacetKey.entries` is every facet, exhaustively.
+        val catalogue = Catalogue(boards, rules)
+        val rows = FacetKey.entries.flatMap { key ->
+            key.facet.project(design, catalogue).map { Triple(key.param, it.token, it.num) }
         }
 
         // Distinct because the PRIMARY KEY is (design_id, key, value): two layouts of the
@@ -407,7 +244,7 @@ class SeedImporter(
                 // and an empty haystack contributes nothing to bm25 rather than matching
                 // everything.
                 design.extras.summary.knownOrNull().orEmpty(),
-                (core.firmware.knownOrNull().orEmpty().map { it.familySlug() } + core.sources.map { it.url })
+                (core.firmware.knownOrNull().orEmpty().map { FirmwareFacet.familySlug(it) } + core.sources.map { it.url })
                     .joinToString(" "),
                 mapper.writeValueAsString(mapOf("keys" to core.layouts.map { it.keys.value })),
                 core.layouts.maxOf { it.keys.value },
@@ -431,41 +268,6 @@ class SeedImporter(
         /** `owner/name` from a source URL, matching how the fetch keys its output. */
         fun repoOf(url: String): String? =
             GITHUB.find(url)?.groupValues?.get(1)?.removeSuffix(".git")
-
-        /** `ProMicro` -> `pro_micro`, so a facet value reads the way a URL should. */
-        fun String.snake(): String =
-            replace(Regex("(?<=[a-z0-9])(?=[A-Z])"), "_").lowercase()
-
-        /**
-         * The FAMILY, not the reference. `qmk:sofle/rev1` and `qmk:crkbd/rev1` are the
-         * same facet value: somebody filtering by firmware wants "runs QMK", and the
-         * path is a fact about this design rather than something to select on.
-         */
-        fun FirmwareRef.familySlug(): String = when (this) {
-            is FirmwareRef.Qmk -> "qmk"
-            is FirmwareRef.Zmk -> "zmk"
-            is FirmwareRef.Kmk -> "kmk"
-            is FirmwareRef.Custom -> "custom"
-        }
-
-        /**
-         * `Licence` is a sealed interface rather than an enum, so the tail variant has
-         * to be spelled out: `Other` carries text nobody enumerated, and it is slugged
-         * as given rather than collapsed to "other", which would make two unrelated
-         * bespoke licences look like one facet value.
-         */
-        fun License.slug(): String = when (this) {
-            is License.Other -> spdxOrName.lowercase().replace(Regex("[^a-z0-9]+"), "-").trim('-')
-            else -> this::class.simpleName!!.snake()
-        }
     }
 }
 
-/** The URL's word for a link, the same token `designs.json` carries. */
-private fun SplitLink.token(): String = when (this) {
-    SplitLink.Trrs -> "trrs"
-    SplitLink.UsbC -> "usb_c"
-    SplitLink.Ethernet -> "ethernet"
-    SplitLink.MiniDin -> "mini_din"
-    SplitLink.Bridge -> "bridge"
-}
