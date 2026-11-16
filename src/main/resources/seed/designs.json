@@ -19263,86 +19263,6 @@
   }
  },
  {
-  "name": "osprette",
-  "slug": "osprette",
-  "sources": [
-   "https://github.com/smores56/osprette"
-  ],
-  "firmware": [
-   {
-    "family": "zmk",
-    "path": null,
-    "shield": "osprette"
-   }
-  ],
-  "layouts": [
-   {
-    "keys": 34
-   }
-  ],
-  "switches": [
-   {
-    "kind": "choc_v1"
-   }
-  ],
-  "pitch": {
-   "kind": "choc_18x17",
-   "mm": 17.0
-  },
-  "buildMethod": {
-   "kind": "pcb"
-  },
-  "hardestComponent": {
-   "parts": [
-    "diode"
-   ],
-   "tier": "smd_hand"
-  },
-  "controller": {
-   "kind": "socket",
-   "footprints": [
-    "pro_micro"
-   ]
-  },
-  "body": {
-   "kind": "unibody"
-  },
-  "licensing": {
-   "hardware": [
-    "MIT"
-   ],
-   "firmware": [
-    "MIT"
-   ],
-   "documentation": [
-    "MIT"
-   ]
-  },
-  "hostPort": null,
-  "summary": "The keyboard is a 34 key unibody that uses any pro-micro compatible daughterboard. It comes with bluetooth support by way of battery terminals and a power switch.",
-  "wiring": {
-   "kind": "matrix",
-   "rows": 4,
-   "cols": 10,
-   "diodes": "row_to_col"
-  },
-  "switchMounts": [
-   "choc_socket",
-   "solder"
-  ],
-  "splay": false,
-  "stagger": "column",
-  "exposedComponents": false,
-  "powerSwitch": true,
-  "pcb": {
-   "drawn": "board",
-   "widthMm": 266.8,
-   "heightMm": 103.67,
-   "copperLayers": 2
-  },
-  "family": "Osprette"
- },
- {
   "name": "osprette mx",
   "slug": "osprette-mx",
   "sources": [
@@ -19439,6 +19359,10 @@
     "kind": "choc_v1"
    }
   ],
+  "pitch": {
+   "kind": "choc_18x17",
+   "mm": 17.0
+  },
   "buildMethod": {
    "kind": "pcb"
   },
@@ -19468,11 +19392,8 @@
     "MIT"
    ]
   },
-  "pitch": {
-   "kind": "choc_18x17",
-   "mm": 17.0
-  },
   "hostPort": null,
+  "summary": "The keyboard is a 34 key unibody that uses any pro-micro compatible daughterboard. It comes with bluetooth support by way of battery terminals and a power switch.",
   "wiring": {
    "kind": "matrix",
    "rows": 4,
@@ -19487,6 +19408,12 @@
   "stagger": "column",
   "exposedComponents": false,
   "powerSwitch": true,
+  "pcb": {
+   "drawn": "board",
+   "widthMm": 266.8,
+   "heightMm": 103.67,
+   "copperLayers": 2
+  },
   "family": "Osprette"
  },
  {

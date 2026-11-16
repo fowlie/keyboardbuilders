@@ -295,3 +295,8 @@ why  = "2026-09-29. The same keyboard as wave -- one outline, the traces routed 
 was  = "clog"
 now  = "clog-v1"
 why  = "2026-11-16, owner: clog == clog v1. smores56 moved pcb/clog.kicad_pcb to v1/ (same file) and the nightly then published v1-v4 beside the old path. A merge: the firmware rows, summary and size moved to clog-v1."
+
+[[entry]]
+was  = "osprette"
+now  = "osprette-v1"
+why  = "2026-11-16, owner: same case as clog. smores56 moved pcb/osprette.kicad_pcb to v1/ (same file). A merge: the firmware row, summary and size moved to osprette-v1."

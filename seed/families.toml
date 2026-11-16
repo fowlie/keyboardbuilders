@@ -164,7 +164,7 @@ verdict = "confirmed"
 [[family]]
 name    = "Osprette"
 source  = "https://github.com/smores56/osprette"
-members = ["osprette", "osprette-mx", "osprette-v1", "osprette-v2", "osprette-v3"]
+members = ["osprette-mx", "osprette-v1", "osprette-v2", "osprette-v3"]
 verdict = "confirmed"
 
 [[family]]

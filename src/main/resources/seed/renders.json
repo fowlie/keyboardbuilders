@@ -1483,13 +1483,6 @@
   "path": "orthoCode.kicad_pcb",
   "png": "2ff3122560c497abb1b64b9225cd9ebe"
  },
- "osprette": {
-  "alternates": 0,
-  "glb": "d45a71525e7eb24162bcd987c644716a",
-  "glbBytes": 6139072,
-  "path": "pcb/osprette.kicad_pcb",
-  "png": "14ce63927fd0107e3b063970f50670f4"
- },
  "pancake-v1": {
   "alternates": 0,
   "glb": "c646e3b943c31e61854860f928e1eff4",

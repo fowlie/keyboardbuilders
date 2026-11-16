@@ -149,3 +149,10 @@ path     = "pcb/clog.kicad_pcb"
 verdict  = "confirmed"
 reason   = "moved"
 note     = "2026-11-16, owner: clog == clog v1. The file is gone from the repo; it lives on as v1/pcb/clog.kicad_pcb (same blob), which publishes as clog-v1. The cached scan still lists the old path, and unclaimed it published a second clog."
+
+[[entry]]
+repo     = "smores56/osprette"
+path     = "pcb/osprette.kicad_pcb"
+verdict  = "confirmed"
+reason   = "moved"
+note     = "2026-11-16, owner: osprette == osprette v1. The file is gone from the repo; it lives on as v1/pcb/osprette.kicad_pcb (same blob), which publishes as osprette-v1."

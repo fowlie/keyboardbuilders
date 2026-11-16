@@ -232,11 +232,11 @@ note     = "18 candidates tie at 3.00 and agree on every fact the build reads, s
 tree     = "zmk"
 id       = "osprette"
 source   = "smores56/osprette"
-boards   = ["pcb/osprette.kicad_pcb"]
-name     = "osprette"
+boards   = ["v1/pcb/osprette.kicad_pcb"]
+name     = "osprette v1"
 verdict  = "confirmed"
-signal   = "sole"
-note     = "one board in the repo, one row -- nothing to choose"
+signal   = "human"
+note     = "Owner, 2026-11-16: osprette == osprette v1. The repo moved pcb/osprette.kicad_pcb to v1/pcb/osprette.kicad_pcb (same blob) and added mx, v2, v3; this row followed the old path, so the board published twice."
 
 [[entry]]
 tree     = "zmk"

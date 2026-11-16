@@ -2179,13 +2179,13 @@ paths          = ["orthoCode.kicad_pcb", "orthoCodeCase.kicad_pcb"]
 measured_on    = 2026-10-04
 
 [[entry]]
-slug           = "osprette"
+slug           = "osprette-v1"
 repo           = "smores56/osprette"
 drawn          = "board"
 width_mm       = 266.8
 height_mm      = 103.67
 layers         = 2
-paths          = ["pcb/osprette.kicad_pcb"]
+paths          = ["v1/pcb/osprette.kicad_pcb"]
 measured_on    = 2026-10-04
 
 [[entry]]

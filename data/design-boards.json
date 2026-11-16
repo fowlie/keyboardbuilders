@@ -1448,12 +1448,6 @@
   ],
   "repo": "jrodna/orthocode"
  },
- "osprette": {
-  "paths": [
-   "pcb/osprette.kicad_pcb"
-  ],
-  "repo": "smores56/osprette"
- },
  "osprette-mx": {
   "paths": [
    "mx/pcb/osprette-mx.kicad_pcb"

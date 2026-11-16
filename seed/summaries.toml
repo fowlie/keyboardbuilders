@@ -976,7 +976,7 @@ signal   = "agent"
 note     = "same heading collision: 'designed by me The aim was to create...'"
 
 [[entry]]
-slug     = "osprette"
+slug     = "osprette-v1"
 source   = "smores56/osprette"
 summary  = "The keyboard is a 34 key unibody that uses any pro-micro compatible daughterboard. It comes with bluetooth support by way of battery terminals and a power switch."
 verdict  = "confirmed"
