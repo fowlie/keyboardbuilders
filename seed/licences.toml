@@ -204,3 +204,12 @@ documentation = []
 verdict       = "confirmed"
 signal        = "human"
 note          = "Read 2026-11-15: root LICENSE has one section, \"# Hardware\", Solderpad Hardware License 2.1. Nothing for documentation. No firmware in the repo: it runs Corne's, whose licence is Corne's, so firmware is Unstated (as for chocofi)."
+
+[[entry]]
+repo          = "Biacco42/Ergo42"
+hardware      = ["MIT"]
+firmware      = ["MIT"]
+documentation = ["MIT"]
+verdict       = "confirmed"
+signal        = "human"
+note          = "Owner's ruling 2026-11-16: the root LICENSE reads \"MIT License\", a 2017 copyright line, and a link to opensource.org/licenses/mit-license.php in place of the licence body -- so the scanner, which matches the body, called it unclassified. One file, one licence, all three slots."

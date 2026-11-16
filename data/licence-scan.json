@@ -457,7 +457,7 @@
   "files": [
    {
     "first_line": "DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE",
-    "licence": "unclassified",
+    "licence": "WTFPL",
     "path": "LICENSE.txt",
     "root": true,
     "vendored": false

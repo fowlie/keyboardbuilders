@@ -113,6 +113,8 @@ SIGNATURES = [
     ("Zlib",           (r"zlib\s+license"
                         r"|this\s+software\s+is\s+provided\s+'as-is'",)),
     ("Beerware",       (r"the\s+beer-?ware\s+license",)),
+    # Accepted by the owner 2026-11-16: FSF-free and as permissive as a licence gets.
+    ("WTFPL",          (r"do\s+what\s+the\s+fuck\s+you\s+want\s+to\s+public\s+licen[cs]e",)),
     ("ODbL-1.0",       (r"open\s+database\s+license\s+\(odbl\)|odc\s+open\s+database",)),
     ("MIT",            (r"permission\s+is\s+hereby\s+granted,\s+free\s+of\s+charge",)),
 ]

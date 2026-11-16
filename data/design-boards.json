@@ -1288,6 +1288,12 @@
   ],
   "repo": "guidoism/madjax_macropad"
  },
+ "maple-computing-minidox-rev1": {
+  "paths": [
+   "MiniDox.kicad_pcb"
+  ],
+  "repo": "That-Canadian/MiniDox_PCB"
+ },
  "masonry": {
   "paths": [
    "pcb/pcb.kicad_pcb"

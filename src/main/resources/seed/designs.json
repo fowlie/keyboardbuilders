@@ -17064,6 +17064,69 @@
   }
  },
  {
+  "name": "MiniDox",
+  "slug": "maple-computing-minidox-rev1",
+  "sources": [
+   "https://github.com/That-Canadian/MiniDox_PCB"
+  ],
+  "firmware": [
+   {
+    "family": "qmk",
+    "path": "maple_computing/minidox/rev1",
+    "shield": null,
+    "targetMcu": "atmega32u4"
+   }
+  ],
+  "layouts": [
+   {
+    "keys": 36
+   }
+  ],
+  "switches": [
+   {
+    "kind": "alps"
+   },
+   {
+    "kind": "mx"
+   }
+  ],
+  "pitch": null,
+  "buildMethod": {
+   "kind": "pcb"
+  },
+  "hardestComponent": null,
+  "controller": {
+   "kind": "socket",
+   "footprints": [
+    "pro_micro"
+   ]
+  },
+  "body": {
+   "kind": "split",
+   "halves": 2,
+   "reversible": null,
+   "link": []
+  },
+  "licensing": {
+   "hardware": [
+    "WTFPL"
+   ],
+   "firmware": [
+    "WTFPL"
+   ],
+   "documentation": [
+    "WTFPL"
+   ]
+  },
+  "hostPort": null,
+  "wiring": {
+   "kind": "matrix",
+   "rows": 4,
+   "cols": 5,
+   "diodes": "col_to_row"
+  }
+ },
+ {
   "name": "masonry",
   "slug": "masonry",
   "sources": [
