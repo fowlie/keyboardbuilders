@@ -71,6 +71,21 @@ prune_old_images() {
 
 cd "$COMPOSE_DIR"
 
+# PULL FIRST, WHILE THE OLD SERVER IS STILL SERVING. This is the slow step and the one
+# most likely to fail (a registry hiccup, a bad tag), so it must happen outside the
+# window. A pull failure here costs nothing: the unit is still up and the site is still
+# answering.
+#
+# AND BEFORE .env IS TOUCHED. The tag is handed to compose in the environment, which
+# outranks .env. Until 2026-11-16 .env was rewritten first, so a failed pull (a containerd
+# "failed commit on ref" that a retry cleared) left .env naming an image that never ran
+# while the script said "nothing was changed". The next deploy then recorded that tag as
+# the rollback, and prune_old_images deleted the real one.
+if ! KB_IMAGE="$IMAGE" docker compose pull; then
+  echo "FAILED to pull $IMAGE; nothing was changed" >&2
+  exit 1
+fi
+
 # THE PREVIOUS TAG IS RECORDED BEFORE IT IS REPLACED, and this is the rollback that today
 # does not really have one: the current scheme copies the old jar to /tmp, which clears on
 # reboot, and only if someone remembered to do it. Here the last-known-good tag is on disk
@@ -80,15 +95,6 @@ if [ -f .env ]; then
 fi
 
 printf 'KB_IMAGE=%s\n' "$IMAGE" > .env
-
-# PULL FIRST, WHILE THE OLD SERVER IS STILL SERVING. This is the slow step and the one
-# most likely to fail (a registry hiccup, a bad tag), so it must happen outside the
-# window. A pull failure here costs nothing: the unit is still up and the site is still
-# answering.
-if ! docker compose pull; then
-  echo "FAILED to pull $IMAGE; nothing was changed" >&2
-  exit 1
-fi
 
 if [ "$UNIT_WAS_UP" = yes ]; then
   echo "stopping the systemd unit to free 172.17.0.1:8080 (one-time cutover)" >&2
