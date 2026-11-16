@@ -22035,7 +22035,8 @@
    "widthMm": 214.33,
    "heightMm": 107.07,
    "copperLayers": 2
-  }
+  },
+  "family": "Reviung"
  },
  {
   "name": "reviung34 split",
@@ -22111,7 +22112,8 @@
    "widthMm": 100.0,
    "heightMm": 100.0,
    "copperLayers": 2
-  }
+  },
+  "family": "Reviung"
  },
  {
   "name": "reviung41",
@@ -22189,7 +22191,8 @@
    "widthMm": 253.34,
    "heightMm": 107.07,
    "copperLayers": 2
-  }
+  },
+  "family": "Reviung"
  },
  {
   "name": "reviung46",
@@ -22280,7 +22283,8 @@
    "widthMm": 285.5,
    "heightMm": 95.0,
    "copperLayers": 2
-  }
+  },
+  "family": "Reviung"
  },
  {
   "name": "reviung5",
@@ -22355,7 +22359,8 @@
    "widthMm": 99.68,
    "heightMm": 50.97,
    "copperLayers": 2
-  }
+  },
+  "family": "Reviung"
  },
  {
   "name": "reviung53",
@@ -22431,7 +22436,8 @@
    "widthMm": 262.05,
    "heightMm": 114.41,
    "copperLayers": 2
-  }
+  },
+  "family": "Reviung"
  },
  {
   "name": "reviung61",
@@ -22509,7 +22515,8 @@
    "widthMm": 285.5,
    "heightMm": 95.0,
    "copperLayers": 2
-  }
+  },
+  "family": "Reviung"
  },
  {
   "name": "Rhymestone",

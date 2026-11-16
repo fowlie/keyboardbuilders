@@ -37,7 +37,8 @@ verdict = "confirmed"
 #    lite, split, hotswap, rgb, ...). The family takes that word, capitalized.
 #
 #    The owner's earlier rulings win over the rule:
-#    - Reviung34 and Reviung34 split are two keyboards (2026-09-30): no row.
+#    - Reviung34 and Reviung34 split were two keyboards (2026-09-30), overruled 2026-11-16:
+#      every reviung* design is one family, Reviung below.
 #    - Dilemma is two keyboards by size, as bastardkb.com sells them: Dilemma below, and
 #      Dilemma MAX, which has one board in the corpus until MAX V3 is added (#107), so no
 #      row yet.
@@ -176,6 +177,13 @@ verdict = "confirmed"
 name    = "Pisces"
 source  = "https://github.com/knaruo"
 members = ["pisces", "pisces-v2"]
+verdict = "confirmed"
+
+# Owner, 2026-11-16: "reviung* designs is also a family". All seven are boards in gtips/reviung.
+[[family]]
+name    = "Reviung"
+source  = "https://github.com/gtips/reviung"
+members = ["reviung5", "reviung34", "reviung34-split", "reviung41", "reviung46", "reviung53", "reviung61"]
 verdict = "confirmed"
 
 [[family]]
