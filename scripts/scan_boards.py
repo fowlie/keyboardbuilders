@@ -41,6 +41,7 @@ from extract_switch_footprints import (ABSOLUTE_NOT_A_SWITCH, FAMILY_TOKENS,
                                        classify as classify_footprint,
                                        placed_names)
 from measure_controller_socket import SELF_NAMED_CHIP
+from switch_pins import footprints as pin_footprints, pin_families
 
 # A footprint's VALUE, in both KiCad spellings: `(fp_text value ATmega32U4-AU ...)` before
 # KiCad 6 and `(property "Value" "STM32F072CBT6" ...)` after. Both live only inside a
@@ -198,6 +199,32 @@ def fetch(slug, path, cap=CAP):
         return None, f"{type(e).__name__}: {e}"[:80], 0
 
 
+def switch_families(text, switch_names):
+    """The families a board's switch footprints take, and which of them the PINS gave.
+
+    The name is read first and, where it names a family, is the whole answer. Only a name
+    that names none is read by its pins (`switch_pins.py`), once, from its first placement:
+    `Biacco42/Ergo42` places 28 of `library:key_switch` and the name says nothing, while
+    the pins sit where MX and Choc v1 pins go. Returns `(families, {name: pin families})`,
+    the second only for names the pins actually filled, so the cache says which families
+    came from where."""
+    fam, by_pins = set(), {}
+    unnamed = set()
+    for f in switch_names:
+        named = families(f)
+        fam |= named
+        if not named:
+            unnamed.add(f)
+    if unnamed:
+        for name, block in pin_footprints(text):
+            if name in unnamed:
+                unnamed.discard(name)
+                if pins := pin_families(block):
+                    by_pins[name] = sorted(pins)
+                    fam |= pins
+    return fam, by_pins
+
+
 def classify(slug, path):
     """board / plate / no-switch, with the families and the counts behind it."""
     text, err, nbytes = fetch(slug, path)
@@ -228,9 +255,7 @@ def classify(slug, path):
             trusted = stabilizer_switch_names(Counter(fps))
             sw = [f for f in fps if is_switch(f) or f in trusted]
     plates = [f for f in fps if PLATE.search(f)]
-    fam = set()
-    for f in sw:
-        fam |= families(f)
+    fam, by_pins = switch_families(text, set(sw))
     kind = "board" if sw else ("plate" if plates else "no-switch")
     # Every distinct footprint name, with its count. Stored because the first
     # run of this scan asked the wrong question -- it required a footprint to
@@ -240,6 +265,7 @@ def classify(slug, path):
     return {"path": path, "kind": kind, "bytes": len(text), "switches": len(sw),
             "footprints": len(fps), "plate_footprints": len(plates),
             "families": sorted(fam),
+            "pin_families": by_pins,
             "chips": chips_in_values(text),
             "names": dict(Counter(fps).most_common(400))}
 
@@ -267,6 +293,11 @@ def main():
     # published soldered designs read "board names no chip" only because of this.
     ap.add_argument("--refresh-chips", action="store_true",
                     help="re-fetch every cached board file that has no `chips`, and record them")
+    # The pin reader (`switch_pins.py`) landed 2026-11-16, after the whole cache was
+    # written. This re-fetches only the boards with a switch-like name that names no
+    # family -- the only footprints the pins are ever asked about.
+    ap.add_argument("--read-pins", action="store_true",
+                    help="re-fetch cached boards with an unnamed switch footprint, read its pins")
     args = ap.parse_args()
 
     rows = [r for r in parse(args.seed) if r.get("verdict") == "confirmed"]
@@ -298,13 +329,31 @@ def main():
             plates = {f: n for f, n in names.items() if PLATE.search(f)}
             fam = set()
             for f in sw:
-                fam |= families(f)
+                # A name the lexicon now reads drops its pin reading: the name wins.
+                fam |= families(f) or set((res.get("pin_families") or {}).get(f, ()))
             res["switches"] = sum(sw.values())
             res["plate_footprints"] = sum(plates.values())
             res["families"] = sorted(fam)
             res["kind"] = "board" if sw else ("plate" if plates else "no-switch")
         pathlib.Path(args.cache).write_text(json.dumps(cache, indent=1, sort_keys=True))
         print(f"reclassified {len(cache)} files from cache", file=sys.stderr)
+    if args.read_pins:
+        stale = [k for k, v in cache.items() if "pin_families" not in v
+                 and any(is_switch(n) and not families(n) for n in (v.get("names") or {}))]
+        print(f"reading pins on {len(stale)} cached board files", file=sys.stderr)
+
+        def pins(key):
+            text, err, _ = fetch(*key.split("\t", 1), cap=0)
+            if text is None:
+                return None
+            sw = {n for n in cache[key]["names"] if is_switch(n)}
+            return switch_families(text, sw)
+        with ThreadPoolExecutor(max_workers=args.jobs) as pool:
+            for key, got in zip(stale, pool.map(pins, stale)):
+                if got is not None:
+                    cache[key]["families"] = sorted(set(cache[key]["families"]) | got[0])
+                    cache[key]["pin_families"] = got[1]
+        pathlib.Path(args.cache).write_text(json.dumps(cache, indent=1, sort_keys=True))
     if args.refresh_chips:
         stale = [k for k, v in cache.items() if v.get("kind") == "board" and "chips" not in v]
         print(f"reading values of {len(stale)} cached board files", file=sys.stderr)

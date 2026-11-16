@@ -45,14 +45,10 @@ from concurrent.futures import ThreadPoolExecutor
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 from extract_switch_footprints import classify as families  # noqa: E402
 from scan_boards import fetch, is_switch  # noqa: E402
+from switch_pins import all_pads, footprints  # noqa: E402
 
 REPO = pathlib.Path(__file__).resolve().parent.parent
 SCRATCH = REPO / "data"
-
-FOOTPRINT = re.compile(r'\((?:footprint|module)\s+(?:"([^"]*)"|([^\s()]+))')
-PAD = re.compile(r'\(pad\s+(?:"([^"]*)"|([^\s()]*))\s+(smd|thru_hole|np_thru_hole|connect)\b')
-DRILL = re.compile(r'\(drill\s+(?:oval\s+)?([\d.]+)(?:\s+([\d.]+))?')
-AT = re.compile(r'\(at\s+([-\d.]+)\s+([-\d.]+)')
 
 # KAILH SOCKET HOLES, read off the board rather than the name (#107 step 9.1). A Kailh
 # hotswap socket has two plastic posts that need two ~3 mm holes, and the two families put
@@ -77,36 +73,6 @@ MILLMAX_HOLE = (1.47, 1.65)
 SOCKET_HOLE = (2.9, 3.3)
 SOCKET_PAIR = {"mx": 6.84, "choc": 5.44}
 PAIR_TOLERANCE = 0.15
-
-
-def footprints(text):
-    """(name, block) for every footprint, the block running to the next footprint.
-
-    Footprints are not nested, and nothing between two of them (tracks, vias, zones) is a
-    `(pad`, so the slice needs no paren matching."""
-    starts = [(m.start(), m.group(1) if m.group(1) is not None else m.group(2) or "")
-              for m in FOOTPRINT.finditer(text)]
-    for i, (s, name) in enumerate(starts):
-        end = starts[i + 1][0] if i + 1 < len(starts) else len(text)
-        yield name, text[s:end]
-
-
-def all_pads(block):
-    """Every pad as (number, type, (x, y), drill-or-None), in footprint coordinates. A
-    pad's position and drill are read up to the next pad."""
-    out = []
-    hits = list(PAD.finditer(block))
-    for i, m in enumerate(hits):
-        number = m.group(1) if m.group(1) is not None else m.group(2)
-        seg = block[m.end(): hits[i + 1].start() if i + 1 < len(hits) else len(block)]
-        at = AT.search(seg)
-        xy = (float(at.group(1)), float(at.group(2))) if at else None
-        d = DRILL.search(seg)
-        drill = None
-        if d and m.group(3) in ("thru_hole", "np_thru_hole"):
-            drill = round(min(float(d.group(1)), float(d.group(2) or d.group(1))), 2)
-        out.append((number, m.group(3), xy, drill))
-    return out
 
 
 def pads_of(block):
