@@ -54,6 +54,21 @@ restore_unit() {
   fi
 }
 
+# KEEP TWO IMAGES OF OUR OWN: the one now running and the one in .env.previous, which is
+# the fast rollback. Anything older is a git revert and a fresh build away, and at ~550 MB
+# a tag and a dozen deploys a day, the weekly cron prune let the disk reach 90% on
+# 2026-11-16. Runs only after a HEALTHY deploy -- a failed one keeps everything for
+# diagnosis -- and never fails the deploy itself.
+prune_old_images() {
+  keep_prev=$(sed -n 's/^KB_IMAGE=//p' .env.previous 2>/dev/null || true)
+  docker images --format '{{.Repository}}:{{.Tag}}' \
+    | grep -E '^(ghcr\.io|forgejo\.keyboardbuilders\.net)/fowlie/keyboardbuilders:' \
+    | grep -vxF -e "$IMAGE" -e "${keep_prev:-$IMAGE}" \
+    | xargs -r docker rmi >/dev/null 2>&1 || true
+  docker image prune -f >/dev/null 2>&1 || true
+  echo "kept images: $IMAGE ${keep_prev:-(no previous)}"
+}
+
 cd "$COMPOSE_DIR"
 
 # THE PREVIOUS TAG IS RECORDED BEFORE IT IS REPLACED, and this is the rollback that today
@@ -111,7 +126,7 @@ i=0
 while [ $i -lt 60 ]; do
   state=$(docker inspect -f '{{.State.Health.Status}}' keyboardbuilders 2>/dev/null || echo starting)
   case "$state" in
-    healthy) echo "deployed $IMAGE"; exit 0 ;;
+    healthy) echo "deployed $IMAGE"; prune_old_images; exit 0 ;;
     unhealthy) break ;;
   esac
   i=$((i + 1)); sleep 5
