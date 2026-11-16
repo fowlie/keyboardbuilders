@@ -19408,7 +19408,8 @@
    "widthMm": 266.8,
    "heightMm": 103.67,
    "copperLayers": 2
-  }
+  },
+  "family": "Osprette"
  },
  {
   "name": "osprette mx",
@@ -19481,7 +19482,8 @@
   "splay": false,
   "stagger": "column",
   "exposedComponents": false,
-  "powerSwitch": true
+  "powerSwitch": true,
+  "family": "Osprette"
  },
  {
   "name": "osprette v1",
@@ -19553,7 +19555,8 @@
   "splay": false,
   "stagger": "column",
   "exposedComponents": false,
-  "powerSwitch": true
+  "powerSwitch": true,
+  "family": "Osprette"
  },
  {
   "name": "osprette v2",
@@ -19625,7 +19628,8 @@
   "splay": true,
   "stagger": "column",
   "exposedComponents": false,
-  "powerSwitch": false
+  "powerSwitch": false,
+  "family": "Osprette"
  },
  {
   "name": "osprette v3",
@@ -19696,7 +19700,8 @@
   "splay": true,
   "stagger": "column",
   "exposedComponents": false,
-  "powerSwitch": false
+  "powerSwitch": false,
+  "family": "Osprette"
  },
  {
   "name": "Pancake v1",

@@ -152,6 +152,13 @@ source  = "https://github.com/skarrmann"
 members = ["morizon-choc", "morizon-mx"]
 verdict = "confirmed"
 
+# Owner, 2026-11-16: all five are boards from the one smores56/osprette repo.
+[[family]]
+name    = "Osprette"
+source  = "https://github.com/smores56/osprette"
+members = ["osprette", "osprette-mx", "osprette-v1", "osprette-v2", "osprette-v3"]
+verdict = "confirmed"
+
 [[family]]
 name    = "Pancake"
 source  = "https://github.com/spaceboards"
