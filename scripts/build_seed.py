@@ -1672,9 +1672,13 @@ def main():
             # PCB -- `blackpill_f401`, `blackpill_f411`, `bluepill` -- and `controller` is
             # a single value, so two form factors over one board is a fact in dispute and
             # the board keeps `Unknown` rather than taking whichever record sorted first.
+            #
+            # BOTH TREES, since 2026-11-16 (owner's ruling): a ZMK shield's `requires` is
+            # the same signal as QMK's `development_board`, and Half A already read it.
+            # Measured the day it changed: no design moved.
             if not footprints and not soldered:
                 declared = {records.of(r["tree"], r["id"]).built_for().socket
-                            for r, _, _ in fits if reg.reader(r["tree"]) == "qmk"}
+                            for r, _, _ in fits}
                 declared.discard(None)
                 if len(declared) == 1:
                     footprints = {declared.pop()}
