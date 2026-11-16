@@ -60,11 +60,15 @@ class Fixture(unittest.TestCase):
     def tearDown(self):
         self._tmp.cleanup()
 
-    def fork(self, tree, reader):
-        """Another checkout of `reader`'s kind, registered as `tree`."""
-        sub = "keyboards" if reader == "qmk" else "app/boards/shields"
+    def fork(self, tree, reader, records=None):
+        """Another checkout of `reader`'s kind, registered as `tree`. `records` is the
+        registry's own override for where ids start, as Temper's config repo needs."""
+        sub = records or ("keyboards" if reader == "qmk" else "app/boards/shields")
         (self.base/tree/sub).mkdir(parents=True)
-        self.entries.append({"id": tree, "reader": reader, "local": str(self.base/tree)})
+        entry = {"id": tree, "reader": reader, "local": str(self.base/tree)}
+        if records:
+            entry["records"] = records
+        self.entries.append(entry)
 
     def qmk(self, path, data, tree="qmk"):
         """Write `data` as `<tree>/keyboards/<path>`."""
@@ -72,9 +76,9 @@ class Fixture(unittest.TestCase):
         f.parent.mkdir(parents=True, exist_ok=True)
         f.write_text(json.dumps(data))
 
-    def shield(self, sid, keys=None, tree="zmk", **meta):
-        """Write a shield folder `<tree>/app/boards/shields/<sid>`."""
-        d = self.base/tree/"app/boards/shields"/sid
+    def shield(self, sid, keys=None, tree="zmk", within="app/boards/shields", **meta):
+        """Write a shield folder `<tree>/<within>/<sid>`."""
+        d = self.base/tree/within/sid
         d.mkdir(parents=True, exist_ok=True)
         (d/f"{sid}.zmk.yml").write_text(shield_meta(sid, **meta))
         if keys:
@@ -163,9 +167,9 @@ class ZmkKeyboard(Fixture):
     def test_a_shield_id_belongs_to_its_own_tree(self):
         # Temper's own config repo could name a shield `corne` too; each tree answers
         # for its own.
-        self.fork("temper", "zmk")
+        self.fork("temper", "zmk", records="boards/shields")
         self.shield("corne", keys=42, siblings=("corne_left", "corne_right"))
-        self.shield("corne", keys=36, tree="temper")
+        self.shield("corne", keys=36, tree="temper", within="boards/shields")
         records = self.records()
         self.assertEqual(records.of("zmk", "corne").keyboard()[0].key_counts, [42])
         self.assertEqual(records.of("temper", "corne").keyboard()[0].key_counts, [36])

@@ -60,8 +60,8 @@ import sys
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 import board_fills
+import firmware_records
 import qmk_metadata
-import extract_zmk_shields
 import zmk_wiring
 import trees as tree_registry
 from check_source_reachability import parse
@@ -984,32 +984,6 @@ def licence_slots(repo, scanned, rulings):
     return {slot: list(stated) for slot in LICENCE_SLOTS}, None
 
 
-# Key counts and the split flag, from the local QMK tree. Moved into `qmk_metadata`
-# 2026-09-01 so `draft_boards.py` can read the record side too; kept under this name
-# because that is what this file's call sites read as.
-qmk_facts = qmk_metadata.facts
-
-
-def zmk_shields(reg):
-    """Every ZMK tree's shields, as `{tree: {shield_id: shield}}`.
-
-    PER TREE, because a shield id is only unique within one tree. Until Temper every
-    ZMK row read upstream, so one flat dict was enough; a designer's own config repo
-    can name a shield `corne` too, and a flat dict would hand one tree's reading to
-    the other's row. A tree that isn't checked out reads as no shields, so its rows
-    defer like any other unreadable record instead of stopping the build.
-    """
-    upstream = next(reg.local(t) for t in reg.ids()
-                    if reg.reader(t) == "zmk" and reg.upstream(t))
-    out = {}
-    for tree in reg.ids():
-        if reg.reader(tree) != "zmk":
-            continue
-        root, local = reg.root(tree), reg.local(tree)
-        out[tree] = ({s["id"]: s for s in extract_zmk_shields.extract(root, local, upstream)}
-                     if root and root.is_dir() else {})
-    return out
-
 
 def main():
     ap = argparse.ArgumentParser()
@@ -1091,11 +1065,8 @@ def main():
                    for row in json.loads(difficulty_file.read_text()) if row.get("hardest")}
                   if difficulty_file.exists() else {})
 
-    zmk = zmk_shields(reg)
-
-    def shield_of(tree, sid):
-        """The shield `sid` in `tree`, or None. Never another tree's shield of that id."""
-        return zmk.get(tree, {}).get(sid)
+    records = firmware_records.FirmwareRecords(reg)
+    shield_of = records.shield
 
     rows_per_repo = collections.Counter(r["source"] for r in rows if r.get("source"))
     # How many DESIGNS the repo holds, not how many board files: draft_boards groups a
@@ -1424,29 +1395,21 @@ def main():
             counts = [claimed]
             # Splitness comes from the borrowed record: the firmware knows whether it
             # drives one half or two, and a hardware fork does not change that.
-            if reg.reader(fw["tree"]) == "qmk":
-                _, split, known = qmk_facts(fw["id"], reg.root(fw["tree"]))
-                if not known:
-                    defer("hardware row: borrowed record not in the local QMK tree", row); continue
-            else:
-                shield = shield_of(fw["tree"], fw["id"])
-                if not shield or not shield["keyboard"]:
-                    defer("hardware row: borrowed shield not a keyboard", row); continue
-                split = shield["split"]
+            kb, why = records.of(fw["tree"], fw["id"]).keyboard()
+            if kb is None:
+                defer(f"hardware row: {why}", row); continue
+            split = kb.split
             halves = 2 if split else None
-        elif reader == "qmk":
-            counts, split, known = qmk_facts(row["id"], reg.root(row["tree"]))
-            halves = 2 if split else None
-            if not known:
-                defer("not in the local QMK tree", row); continue
-            counts = without_encoder_positions(counts, found, split)
         else:
-            shield = shield_of(row["tree"], row["id"])
-            if not shield or not shield["keyboard"]:
-                defer("not a keyboard shield in the ZMK tree", row); continue
-            counts, split = shield["key_counts"], shield["split"]
-            halves = shield["halves"]
-            for req in shield["requires"]:
+            kb, why = records.of(row["tree"], row["id"]).keyboard()
+            if kb is None:
+                defer(why, row); continue
+            counts, split, halves = kb.key_counts, kb.split, kb.halves
+            if reader == "qmk":
+                counts = without_encoder_positions(counts, found, split)
+            # Still read off the shield itself until `built_for()` lands.
+            shield = shield_of(row["tree"], row["id"]) if reader == "zmk" else None
+            for req in (shield or {}).get("requires") or []:
                 if req in FOOTPRINT and not footprints:
                     footprints = {req}
         # THE HUMAN OUTRANKS THE RECORD, backlog #65 and the owner's ruling on the
@@ -1648,15 +1611,10 @@ def main():
                 #                        name reaches the other.
                 if names_another_board(row["id"], bset, board_sets[repo]):
                     continue
-                if reg.reader(row["tree"]) == "qmk":
-                    counts, split, known = qmk_facts(row["id"], reg.root(row["tree"]))
-                    if not known:
-                        continue
-                else:
-                    shield = shield_of(row["tree"], row["id"])
-                    if not shield or not shield["keyboard"]:
-                        continue
-                    counts, split = shield["key_counts"], shield["split"]
+                kb, _ = records.of(row["tree"], row["id"]).keyboard()
+                if kb is None:
+                    continue
+                counts, split = kb.key_counts, kb.split
                 # EITHER READING, and the asymmetry is deliberate: this can only ever
                 # admit a board, never withhold one, and an admission still has to match
                 # a layout the record itself declares -- so nothing is invented, only
@@ -1695,15 +1653,10 @@ def main():
                 # the corpus holds no firmware for at all -- ticket 55's whole question.
                 declares = {}
                 for other in repo_rows:
-                    if reg.reader(other["tree"]) == "qmk":
-                        cs, sp, known = qmk_facts(other["id"], reg.root(other["tree"]))
-                        if not known:
-                            continue
-                    else:
-                        shield = shield_of(other["tree"], other["id"])
-                        if not shield or not shield["keyboard"]:
-                            continue
-                        cs, sp = shield["key_counts"], shield["split"]
+                    kb, _ = records.of(other["tree"], other["id"]).keyboard()
+                    if kb is None:
+                        continue
+                    cs, sp = kb.key_counts, kb.split
                     declares[other["id"]] = {
                         "counts": sorted(cs), "split": sp,
                         "names_another_board": names_another_board(
