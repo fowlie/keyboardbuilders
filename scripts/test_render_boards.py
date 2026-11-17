@@ -5,6 +5,9 @@ import tempfile
 import unittest
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+from unittest import mock  # noqa: E402
+
+import render_boards  # noqa: E402
 from render_boards import is_fresh, entry_to_record  # noqa: E402
 
 DONE = {"glb": "g1", "png": "p1", "uploaded": ["glb", "png"]}
@@ -49,6 +52,33 @@ class EntryToRecord(unittest.TestCase):
     def test_a_good_export_replaces_the_old_one(self):
         new = {"glb": "g2", "png": "p2", "uploaded": ["glb", "png"]}
         self.assertEqual(entry_to_record(DONE, new), new)
+
+
+class Podman(unittest.TestCase):
+
+    def run_podman(self):
+        mount = pathlib.Path(tempfile.mkdtemp())
+        done = mock.Mock(returncode=0, stdout="", stderr="")
+        with mock.patch.object(render_boards.subprocess, "run", return_value=done) as run:
+            render_boards.podman(["kicad-cli", "version"], mount, "board")
+        return mount, run.call_args
+
+    def test_the_container_has_a_memory_ceiling(self):
+        # 2026-11-17: one kicad-cli export grew to 1.5 GB on the 3.8 GB VPS and the
+        # kernel had to pick a process to kill. A ceiling makes the render the only
+        # thing that can fail, as one PARTIAL board.
+        _, call = self.run_podman()
+        cmd = call.args[0]
+        self.assertIn(f"--memory={render_boards.MEMORY}", cmd)
+        self.assertIn(f"--memory-swap={render_boards.MEMORY}", cmd)
+        self.assertLess(cmd.index("--memory-swap=" + render_boards.MEMORY),
+                        cmd.index(render_boards.IMAGE))
+
+    def test_podman_runs_in_the_scratch_directory_not_the_checkout(self):
+        # 2026-11-17: an out-of-memory kill left an empty `oom` file in podman's working
+        # directory, the repo root, and the nightly run stopped on the stray file.
+        mount, call = self.run_podman()
+        self.assertEqual(call.kwargs.get("cwd"), mount)
 
 
 if __name__ == "__main__":

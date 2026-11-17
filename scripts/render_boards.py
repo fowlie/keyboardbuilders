@@ -65,6 +65,9 @@ REPO = pathlib.Path(__file__).resolve().parent.parent
 SCRATCH = REPO/"data"
 
 IMAGE = "docker.io/kicad/kicad:10.0.5-full"
+# Per render container. The VPS has 3.8 GB, no swap, and the site's JVM holds ~1.2 GB;
+# measured 2026-11-17, ~1.4 GB was free at rest.
+MEMORY = "1g"
 MODELS = "/usr/share/kicad/3dmodels"
 
 # THE RENDERER ID IS PART OF THE CACHE KEY, which is what makes a settings change
@@ -146,13 +149,19 @@ def podman(args, mount, label):
     is 999, and every export failed with "Unable to open /work/board.kicad_pcb"
     (2026-11-16). `--userns=keep-id:uid=1000` would also work, but podman then writes a
     second chowned copy of the 6 GB image, and the disk does not have room for it.
+
+    A MEMORY CEILING, and podman started IN THE SCRATCH DIRECTORY. On 2026-11-17 one
+    export grew to 1.5 GB on the 3.8 GB, swapless VPS, the kernel's OOM killer had to
+    choose a victim beside the site's JVM, and the kill left an empty `oom` file in
+    podman's working directory -- the repo root, where the nightly run stopped on it as a
+    stray file. Capped, a board too big for the box fails alone, as one PARTIAL row.
     """
     cmd = [
         "podman", "run", "--rm", "--userns=keep-id", f"--user={os.getuid()}:{os.getgid()}",
-        "--network=none",
+        "--network=none", f"--memory={MEMORY}", f"--memory-swap={MEMORY}",
         "-v", f"{mount}:/work:z", "-e", "HOME=/tmp", "-w", "/work", IMAGE,
     ] + args
-    done = subprocess.run(cmd, capture_output=True, text=True, timeout=900)
+    done = subprocess.run(cmd, capture_output=True, text=True, timeout=900, cwd=mount)
     return done.returncode, (done.stdout + done.stderr)
 
 
