@@ -1025,5 +1025,11 @@
     "width": 1600,
     "height": 1200,
     "sourceUrl": "https://github.com/AYM1607/swept-crkbd"
+  },
+  "biacco42-ergo42-rev1": {
+    "jpg": "755a96579a35cdf6495ad9458f7fb693",
+    "width": 1600,
+    "height": 1200,
+    "sourceUrl": "https://github.com/Biacco42/Ergo42"
   }
 }
