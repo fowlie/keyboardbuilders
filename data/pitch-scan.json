@@ -161,6 +161,12 @@
   "mm": 19.05,
   "pitch": "mx_19.05"
  },
+ "That-Canadian/MiniDox_PCB\tMiniDox.kicad_pcb": {
+  "confidence": 0.88,
+  "keys": 17,
+  "mm": 19.05,
+  "pitch": "mx_19.05"
+ },
  "TuckTuckFloof/EUISO-pcb\tEUISOpcb.kicad_pcb": {
   "confidence": 0.94,
   "keys": 48,
@@ -2057,8 +2063,14 @@
   "mm": 19.05,
   "pitch": "mx_19.05"
  },
- "smores56/clog\tpcb/clog.kicad_pcb": {
-  "confidence": 0.88,
+ "smores56/clog\tsephirette/pcb/sephirette.kicad_pcb": {
+  "confidence": 0.65,
+  "keys": 17,
+  "mm": 19.0,
+  "pitch": "mx_19.05"
+ },
+ "smores56/clog\tsteel-toe/pcb/steel-toe.kicad_pcb": {
+  "confidence": 0.82,
   "keys": 17,
   "mm": 17.0,
   "pitch": "choc_18x17"
@@ -2093,11 +2105,11 @@
   "mm": 19.0,
   "pitch": "mx_19.05"
  },
- "smores56/osprette\tpcb/osprette.kicad_pcb": {
-  "confidence": 0.71,
+ "smores56/osprette\tosprangle/pcb/osprangle.kicad_pcb": {
+  "confidence": 0.82,
   "keys": 34,
-  "mm": 17.0,
-  "pitch": "choc_18x17"
+  "mm": 19.0,
+  "pitch": "mx_19.05"
  },
  "smores56/osprette\tv1/pcb/osprette.kicad_pcb": {
   "confidence": 0.71,

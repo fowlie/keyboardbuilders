@@ -727,6 +727,40 @@
       }
     ]
   },
+  "biacco42-ergo42-rev1": {
+    "repo": "https://github.com/Biacco42/Ergo42",
+    "images": [
+      {
+        "url": "https://raw.githubusercontent.com/Biacco42/Ergo42/readme/readme_image/ergo42_image.jpg",
+        "alt": "Ergo42"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/Biacco42/Ergo42/readme/readme_image/ergo42_rev2_diode_from_top.jpg",
+        "alt": "diodes_01"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/Biacco42/Ergo42/readme/readme_image/pro_micro_connector_through.jpg",
+        "alt": "Soldered pin header"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/Biacco42/Ergo42/readme/readme_image/pro_micro_THC_sides.jpg",
+        "alt": "Through hole connector directions and sides"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/Biacco42/Ergo42/readme/readme_image/ergo42_rev3_pro_micro_mount_line1.jpg",
+        "alt": "Soldered pin header"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/Biacco42/Ergo42/readme/readme_image/ergo42_rev3_pro_micro_mount_line2.jpg",
+        "alt": "Soldered pin header"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/Biacco42/Ergo42/master/ergo42_case/ergo42-case-3_0_0_elecrow.PNG",
+        "alt": "",
+        "path": "ergo42_case/ergo42-case-3_0_0_elecrow.PNG"
+      }
+    ]
+  },
   "blue-team-pad": {
     "repo": "https://github.com/fearherbs1/blue-team-pad",
     "images": [
@@ -1765,6 +1799,55 @@
       {
         "url": "https://raw.githubusercontent.com/enochchau/dropout-numpad/main/graphics/pcb-top-down.JPG",
         "alt": "rev0.1"
+      }
+    ]
+  },
+  "eek": {
+    "repo": "https://github.com/klackygears/eek_doc",
+    "images": [
+      {
+        "url": "https://raw.githubusercontent.com/Klackygears/eek_case/main/Photos/footprint_diode.jpg",
+        "alt": "diode_footprint"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/Klackygears/eek_case/main/Photos/LED_order.JPG",
+        "alt": "LED_order"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/Klackygears/eek_case/main/Photos/footprint_LED.jpg",
+        "alt": "LED_footprint"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/Klackygears/eek_case/main/Photos/footprint_switch.jpg",
+        "alt": "switch_footprint"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/Klackygears/eek_case/main/Photos/footprint_switch_types.jpg",
+        "alt": "switchtypes_footprint"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/Klackygears/eek_case/main/Photos/ProMicro_placement2.jpg",
+        "alt": "ProMicro_orientation"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/klackygears/eek_doc/main/Photos/LED_order.JPG",
+        "alt": "",
+        "path": "Photos/LED_order.JPG"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/klackygears/eek_doc/main/Photos/ProMicro_placement.jpg",
+        "alt": "",
+        "path": "Photos/ProMicro_placement.jpg"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/klackygears/eek_doc/main/Photos/ProMicro_placement2.jpg",
+        "alt": "",
+        "path": "Photos/ProMicro_placement2.jpg"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/klackygears/eek_doc/main/Photos/ProMicro_placement3.jpg",
+        "alt": "",
+        "path": "Photos/ProMicro_placement3.jpg"
       }
     ]
   },
@@ -4222,7 +4305,7 @@
       }
     ]
   },
-  "osprette": {
+  "osprangle": {
     "repo": "https://github.com/smores56/osprette",
     "images": [
       {
@@ -4230,24 +4313,49 @@
         "alt": "The Osprangle, the newest Osprette"
       },
       {
-        "url": "https://raw.githubusercontent.com/smores56/osprette/main/mx/images/osprette-mx-1.jpg",
+        "url": "https://raw.githubusercontent.com/smores56/osprette/main/osprangle/images/osprangle-2.jpg",
         "alt": "",
-        "path": "mx/images/osprette-mx-1.jpg"
+        "path": "osprangle/images/osprangle-2.jpg"
       },
       {
-        "url": "https://raw.githubusercontent.com/smores56/osprette/main/v1/images/osprette-1.jpg",
+        "url": "https://raw.githubusercontent.com/smores56/osprette/main/osprangle/art/all-front-art-highlight.png",
         "alt": "",
-        "path": "v1/images/osprette-1.jpg"
+        "path": "osprangle/art/all-front-art-highlight.png"
       },
       {
-        "url": "https://raw.githubusercontent.com/smores56/osprette/main/v2/images/osprette-v2-1.jpg",
+        "url": "https://raw.githubusercontent.com/smores56/osprette/main/osprangle/art/all-front-art-main.png",
         "alt": "",
-        "path": "v2/images/osprette-v2-1.jpg"
+        "path": "osprangle/art/all-front-art-main.png"
       },
       {
-        "url": "https://raw.githubusercontent.com/smores56/osprette/main/v3/images/osprette-v3-1.jpg",
+        "url": "https://raw.githubusercontent.com/smores56/osprette/main/osprangle/art/geode-cracking-front-art-highlight.png",
         "alt": "",
-        "path": "v3/images/osprette-v3-1.jpg"
+        "path": "osprangle/art/geode-cracking-front-art-highlight.png"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/smores56/osprette/main/osprangle/art/geode-cracking-front-art-main.png",
+        "alt": "",
+        "path": "osprangle/art/geode-cracking-front-art-main.png"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/smores56/osprette/main/osprangle/art/mining-front-art-highlight.png",
+        "alt": "",
+        "path": "osprangle/art/mining-front-art-highlight.png"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/smores56/osprette/main/osprangle/art/mining-front-art-main.png",
+        "alt": "",
+        "path": "osprangle/art/mining-front-art-main.png"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/smores56/osprette/main/osprangle/art/sleeping-smores-back-art-highlight.png",
+        "alt": "",
+        "path": "osprangle/art/sleeping-smores-back-art-highlight.png"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/smores56/osprette/main/osprangle/art/sleeping-smores-back-art-main.png",
+        "alt": "",
+        "path": "osprangle/art/sleeping-smores-back-art-main.png"
       }
     ]
   },

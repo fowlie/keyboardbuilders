@@ -209,6 +209,21 @@
   },
   "unnamed": {}
  },
+ "Biacco42/Ergo42\tergo42/ergo42.kicad_pcb": {
+  "accepts": {
+   "library:key_switch\tmillmax+solder": 28
+  },
+  "drills": {},
+  "kinds": {},
+  "names": {},
+  "positions": {
+   "millmax+solder": 28
+  },
+  "sockets": {},
+  "unnamed": {
+   "library:key_switch\t-": 28
+  }
+ },
  "Dbroqua/DK60\tDK60/Kicad/DK60.kicad_pcb": {
   "accepts": {
    "Footprint:MXST\t-": 9,
@@ -722,6 +737,29 @@
   },
   "sockets": {
    "-": 42
+  },
+  "unnamed": {}
+ },
+ "That-Canadian/MiniDox_PCB\tMiniDox.kicad_pcb": {
+  "accepts": {
+   "canadian_footprints:Mx_Alps_100-dualside\tmillmax+solder": 17,
+   "canadian_footprints:Mx_Alps_175-dualside\tmillmax+solder": 1
+  },
+  "drills": {
+   "Alps+MX 1.5": 72
+  },
+  "kinds": {
+   "solder": 18
+  },
+  "names": {
+   "canadian_footprints:Mx_Alps_100-dualside\tsolder\tnp_thru_hole+thru_hole\t-": 17,
+   "canadian_footprints:Mx_Alps_175-dualside\tsolder\tnp_thru_hole+thru_hole\t-": 1
+  },
+  "positions": {
+   "millmax+solder": 18
+  },
+  "sockets": {
+   "-": 18
   },
   "unnamed": {}
  },
@@ -6016,6 +6054,21 @@
   },
   "unnamed": {}
  },
+ "klackygears/eek_doc\teek_pcb/eek.kicad_pcb": {
+  "accepts": {
+   "eek_Library:UnivSwitch_SK6812-Mini-E\tmillmax+solder": 36
+  },
+  "drills": {},
+  "kinds": {},
+  "names": {},
+  "positions": {
+   "millmax+solder": 36
+  },
+  "sockets": {},
+  "unnamed": {
+   "eek_Library:UnivSwitch_SK6812-Mini-E\t-": 36
+  }
+ },
  "knaruo/barracuda\tpcb/barracuda/barracuda.kicad_pcb": {
   "accepts": {
    "kbd:ChocV1_V2_Hotswap\tchoc": 33
@@ -6634,6 +6687,51 @@
    "-": 41
   },
   "unnamed": {}
+ },
+ "maxr1998/phoebe_keyboard\tpcb/pcb.kicad_pcb": {
+  "accepts": {
+   "keyswitches:Kailh_socket_plate_mount\tmx": 59
+  },
+  "drills": {},
+  "kinds": {},
+  "names": {},
+  "positions": {
+   "mx": 59
+  },
+  "sockets": {},
+  "unnamed": {
+   "keyswitches:Kailh_socket_plate_mount\tmx": 59
+  }
+ },
+ "maxr1998/phoebe_keyboard\tpcb_v2/pcb.kicad_pcb": {
+  "accepts": {
+   "keyswitches:Kailh_socket_plate_mount\tmx": 59
+  },
+  "drills": {},
+  "kinds": {},
+  "names": {},
+  "positions": {
+   "mx": 59
+  },
+  "sockets": {},
+  "unnamed": {
+   "keyswitches:Kailh_socket_plate_mount\tmx": 59
+  }
+ },
+ "maxr1998/pulse_4k\tpcb/pcb.kicad_pcb": {
+  "accepts": {
+   "keyswitches:Kailh_socket_plate_mount\tmx": 4
+  },
+  "drills": {},
+  "kinds": {},
+  "names": {},
+  "positions": {
+   "mx": 4
+  },
+  "sockets": {},
+  "unnamed": {
+   "keyswitches:Kailh_socket_plate_mount\tmx": 4
+  }
  },
  "minibois/elixivy\tmini-eLiXiVy.kicad_pcb": {
   "accepts": {
@@ -7594,6 +7692,52 @@
   },
   "unnamed": {}
  },
+ "percyjw-2/split65\tSplit65Left.kicad_pcb": {
+  "accepts": {
+   "footprints:KailhSocket-1.25U\tmx": 4,
+   "footprints:KailhSocket-1.5U\tmx": 1,
+   "footprints:KailhSocket-1.75U\tmx": 1,
+   "footprints:KailhSocket-1U\tmx": 23,
+   "footprints:KailhSocket-2.75U\tmx": 1
+  },
+  "drills": {},
+  "kinds": {},
+  "names": {},
+  "positions": {
+   "mx": 30
+  },
+  "sockets": {},
+  "unnamed": {
+   "footprints:KailhSocket-1.25U\tmx": 4,
+   "footprints:KailhSocket-1.5U\tmx": 1,
+   "footprints:KailhSocket-1.75U\tmx": 1,
+   "footprints:KailhSocket-1U\tmx": 23,
+   "footprints:KailhSocket-2.75U\tmx": 1
+  }
+ },
+ "percyjw-2/split65\tSplit65Right.kicad_pcb": {
+  "accepts": {
+   "footprints:KailhSocket-1.75U\tmx": 1,
+   "footprints:KailhSocket-1U\tmx": 36,
+   "footprints:KailhSocket-2.25U\tmx": 1,
+   "footprints:KailhSocket-2U\tmx": 1,
+   "footprints:KailhSocket-ISO\tmx": 1
+  },
+  "drills": {},
+  "kinds": {},
+  "names": {},
+  "positions": {
+   "mx": 40
+  },
+  "sockets": {},
+  "unnamed": {
+   "footprints:KailhSocket-1.75U\tmx": 1,
+   "footprints:KailhSocket-1U\tmx": 36,
+   "footprints:KailhSocket-2.25U\tmx": 1,
+   "footprints:KailhSocket-2U\tmx": 1,
+   "footprints:KailhSocket-ISO\tmx": 1
+  }
+ },
  "pierrechevalier83/ferris\t0.1/base/ferris.kicad_pcb": {
   "accepts": {
    "switches:Choc_PG1350_MX_Spacing\tsolder": 34
@@ -8470,6 +8614,49 @@
   },
   "unnamed": {}
  },
+ "smores56/clog\tsephirette/pcb/sephirette.kicad_pcb": {
+  "accepts": {
+   "keyswitches:Kailh_socket_MX_optional_reversible\tmillmax+mx+solder": 17
+  },
+  "drills": {
+   "MX 1.5": 68
+  },
+  "kinds": {
+   "either": 17
+  },
+  "names": {
+   "keyswitches:Kailh_socket_MX_optional_reversible\teither\tsmd+thru_hole\tmx": 17
+  },
+  "positions": {
+   "millmax+mx+solder": 17
+  },
+  "sockets": {
+   "mx": 17
+  },
+  "unnamed": {}
+ },
+ "smores56/clog\tsteel-toe/pcb/steel-toe.kicad_pcb": {
+  "accepts": {
+   "footprints:choc-switch-socket-only\tchoc": 17
+  },
+  "drills": {},
+  "kinds": {
+   "socket": 17
+  },
+  "names": {
+   "footprints:choc-switch-socket-only\tsocket\tsmd\tchoc": 17
+  },
+  "positions": {
+   "choc": 17
+  },
+  "sockets": {
+   "choc": 17
+  },
+  "unnamed": {
+   "bs_lib:smd_rst_sw\t-": 2,
+   "footprints:power-switch\t-": 2
+  }
+ },
  "smores56/clog\tv1/pcb/clog.kicad_pcb": {
   "accepts": {
    "keyswitches:Kailh_socket_PG1350_optional_reversible\tchoc+solder": 17
@@ -8574,6 +8761,27 @@
    "mx": 34
   },
   "unnamed": {}
+ },
+ "smores56/osprette\tosprangle/pcb/osprangle.kicad_pcb": {
+  "accepts": {
+   "footprints:choc-v2-hotswap\tchoc": 34
+  },
+  "drills": {},
+  "kinds": {
+   "socket": 34
+  },
+  "names": {
+   "footprints:choc-v2-hotswap\tsocket\tsmd\tchoc": 34
+  },
+  "positions": {
+   "choc": 34
+  },
+  "sockets": {
+   "choc": 34
+  },
+  "unnamed": {
+   "footprints:power-switch\t-": 1
+  }
  },
  "smores56/osprette\tpcb/osprette.kicad_pcb": {
   "accepts": {

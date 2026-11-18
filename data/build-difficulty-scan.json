@@ -404,6 +404,16 @@
   ]
  },
  {
+  "slug": "biacco42-ergo42-rev1",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "other"
+  ],
+  "footprints": [
+   "jumper_smd_2dub"
+  ]
+ },
+ {
   "slug": "blue-team-pad",
   "hardest": "smd_fine",
   "driven_by": [
@@ -648,16 +658,6 @@
  {
   "slug": "chouchou",
   "hardest": null
- },
- {
-  "slug": "clog",
-  "hardest": "through_hole",
-  "driven_by": [
-   "connector"
-  ],
-  "footprints": [
-   "mj-4pp-9"
-  ]
  },
  {
   "slug": "clog-v1",
@@ -1153,6 +1153,16 @@
   "footprints": [
    "c_0805_2012metric_pad1.15x1.40mm_handsolder",
    "r_0805_2012metric_pad1.15x1.40mm_handsolder"
+  ]
+ },
+ {
+  "slug": "eek",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "led"
+  ],
+  "footprints": [
+   "univswitch_sk6812-mini-e"
   ]
  },
  {
@@ -2359,6 +2369,16 @@
   "hardest": null
  },
  {
+  "slug": "maple-computing-minidox-rev1",
+  "hardest": "through_hole",
+  "driven_by": [
+   "diode"
+  ],
+  "footprints": [
+   "d_sod123_axial-dual"
+  ]
+ },
+ {
   "slug": "masonry",
   "hardest": "smd_fine",
   "driven_by": [
@@ -2665,13 +2685,13 @@
   ]
  },
  {
-  "slug": "osprette",
+  "slug": "osprangle",
   "hardest": "smd_hand",
   "driven_by": [
    "diode"
   ],
   "footprints": [
-   "d_sod-123"
+   "smd-diode"
   ]
  },
  {
@@ -2772,6 +2792,26 @@
   ],
   "footprints": [
    "sot-23-6"
+  ]
+ },
+ {
+  "slug": "phoebe",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "usb"
+  ],
+  "footprints": [
+   "usb_c_receptacle_amphenol_12401548e4-2a"
+  ]
+ },
+ {
+  "slug": "phoebe-v2",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "usb"
+  ],
+  "footprints": [
+   "usb_c_receptacle_palconn_utc16-g"
   ]
  },
  {
@@ -2938,6 +2978,16 @@
   ],
   "footprints": [
    "d_do-35_sod27_p7.62mm_horizontal"
+  ]
+ },
+ {
+  "slug": "pulse-4k",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "usb"
+  ],
+  "footprints": [
+   "usb_c_receptacle_amphenol_12401548e4-2a"
   ]
  },
  {
@@ -3197,6 +3247,16 @@
   ]
  },
  {
+  "slug": "sephirette",
+  "hardest": "through_hole",
+  "driven_by": [
+   "connector"
+  ],
+  "footprints": [
+   "mj-4pp-9"
+  ]
+ },
+ {
   "slug": "sepia-officinalis",
   "hardest": "through_hole",
   "driven_by": [
@@ -3438,6 +3498,20 @@
   ]
  },
  {
+  "slug": "split65",
+  "hardest": "through_hole",
+  "driven_by": [
+   "connector",
+   "diode",
+   "passive"
+  ],
+  "footprints": [
+   "trrs_jack_mj4pp9",
+   "d_sod123_axial",
+   "r_1608_axial"
+  ]
+ },
+ {
   "slug": "splitreus",
   "hardest": "through_hole",
   "driven_by": [
@@ -3501,6 +3575,16 @@
   ],
   "footprints": [
    "trrs-pj-320a-dual-squished"
+  ]
+ },
+ {
+  "slug": "steel-toe",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "other"
+  ],
+  "footprints": [
+   "smd_rst_sw"
   ]
  },
  {

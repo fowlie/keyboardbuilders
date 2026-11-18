@@ -3272,7 +3272,12 @@
   "buildMethod": {
    "kind": "pcb"
   },
-  "hardestComponent": null,
+  "hardestComponent": {
+   "parts": [
+    "other"
+   ],
+   "tier": "smd_hand"
+  },
   "controller": {
    "kind": "socket",
    "footprints": [
@@ -3304,7 +3309,12 @@
    "rows": 4,
    "cols": 7,
    "diodes": "col_to_row"
-  }
+  },
+  "switchMounts": [
+   "millmax",
+   "solder"
+  ],
+  "powerSwitch": false
  },
  {
   "name": "Blue Team Pad",
@@ -8421,7 +8431,12 @@
   "buildMethod": {
    "kind": "pcb"
   },
-  "hardestComponent": null,
+  "hardestComponent": {
+   "parts": [
+    "led"
+   ],
+   "tier": "smd_hand"
+  },
   "controller": {
    "kind": "socket",
    "footprints": [
@@ -8448,7 +8463,12 @@
    "rows": 4,
    "cols": 10,
    "diodes": "col_to_row"
-  }
+  },
+  "switchMounts": [
+   "millmax",
+   "solder"
+  ],
+  "powerSwitch": false
  },
  {
   "name": "egg58v2",
@@ -17221,7 +17241,12 @@
   "buildMethod": {
    "kind": "pcb"
   },
-  "hardestComponent": null,
+  "hardestComponent": {
+   "parts": [
+    "diode"
+   ],
+   "tier": "through_hole"
+  },
   "controller": {
    "kind": "socket",
    "footprints": [
@@ -17252,7 +17277,14 @@
    "cols": 5,
    "diodes": "col_to_row"
   },
-  "exposedComponents": false
+  "switchMounts": [
+   "millmax",
+   "solder"
+  ],
+  "splay": false,
+  "stagger": "column",
+  "exposedComponents": false,
+  "powerSwitch": false
  },
  {
   "name": "masonry",
@@ -19440,11 +19472,19 @@
     "kind": "choc_v1"
    }
   ],
-  "pitch": null,
+  "pitch": {
+   "kind": "mx_19.05",
+   "mm": 19.0
+  },
   "buildMethod": {
    "kind": "pcb"
   },
-  "hardestComponent": null,
+  "hardestComponent": {
+   "parts": [
+    "diode"
+   ],
+   "tier": "smd_hand"
+  },
   "controller": {
    "kind": "socket",
    "footprints": [
@@ -19472,7 +19512,13 @@
    "cols": 10,
    "diodes": "row_to_col"
   },
+  "switchMounts": [
+   "choc_socket"
+  ],
+  "splay": false,
+  "stagger": "column",
   "exposedComponents": false,
+  "powerSwitch": false,
   "family": "Osprette"
  },
  {
@@ -20291,7 +20337,12 @@
   "buildMethod": {
    "kind": "pcb"
   },
-  "hardestComponent": null,
+  "hardestComponent": {
+   "parts": [
+    "usb"
+   ],
+   "tier": "smd_fine"
+  },
   "controller": {
    "kind": "soldered",
    "mcu": "atmega32u4"
@@ -20311,7 +20362,11 @@
    "rows": 5,
    "cols": 12,
    "diodes": "col_to_row"
-  }
+  },
+  "switchMounts": [
+   "mx_socket"
+  ],
+  "powerSwitch": false
  },
  {
   "name": "phoebe v2",
@@ -20340,7 +20395,12 @@
   "buildMethod": {
    "kind": "pcb"
   },
-  "hardestComponent": null,
+  "hardestComponent": {
+   "parts": [
+    "usb"
+   ],
+   "tier": "smd_fine"
+  },
   "controller": {
    "kind": "soldered",
    "mcu": "atmega32u4"
@@ -20360,7 +20420,11 @@
    "rows": 5,
    "cols": 12,
    "diodes": "col_to_row"
-  }
+  },
+  "switchMounts": [
+   "mx_socket"
+  ],
+  "powerSwitch": false
  },
  {
   "name": "piantor",
@@ -21741,7 +21805,12 @@
   "buildMethod": {
    "kind": "pcb"
   },
-  "hardestComponent": null,
+  "hardestComponent": {
+   "parts": [
+    "usb"
+   ],
+   "tier": "smd_fine"
+  },
   "controller": {
    "kind": "soldered",
    "mcu": "atmega32u4"
@@ -21760,7 +21829,14 @@
    "rows": 2,
    "cols": 3,
    "diodes": "col_to_row"
-  }
+  },
+  "extensions": [
+   "encoder"
+  ],
+  "switchMounts": [
+   "mx_socket"
+  ],
+  "powerSwitch": false
  },
  {
   "name": "punk75",
@@ -23507,11 +23583,19 @@
     "kind": "mx"
    }
   ],
-  "pitch": null,
+  "pitch": {
+   "kind": "mx_19.05",
+   "mm": 19.0
+  },
   "buildMethod": {
    "kind": "pcb"
   },
-  "hardestComponent": null,
+  "hardestComponent": {
+   "parts": [
+    "connector"
+   ],
+   "tier": "through_hole"
+  },
   "controller": {
    "kind": "socket",
    "footprints": [
@@ -23536,6 +23620,14 @@
    "kind": "direct_pin",
    "pins": 17
   },
+  "switchMounts": [
+   "millmax",
+   "mx_socket",
+   "solder"
+  ],
+  "splay": false,
+  "stagger": "column",
+  "powerSwitch": true,
   "family": "Clog"
  },
  {
@@ -25534,7 +25626,14 @@
   "buildMethod": {
    "kind": "pcb"
   },
-  "hardestComponent": null,
+  "hardestComponent": {
+   "parts": [
+    "connector",
+    "diode",
+    "passive"
+   ],
+   "tier": "through_hole"
+  },
   "controller": {
    "kind": "socket",
    "footprints": [
@@ -25566,7 +25665,14 @@
    "rows": 5,
    "cols": 8,
    "diodes": "col_to_row"
-  }
+  },
+  "extensions": [
+   "display"
+  ],
+  "switchMounts": [
+   "mx_socket"
+  ],
+  "powerSwitch": false
  },
  {
   "name": "splitreus",
@@ -26180,11 +26286,19 @@
     "kind": "choc_v1"
    }
   ],
-  "pitch": null,
+  "pitch": {
+   "kind": "choc_18x17",
+   "mm": 17.0
+  },
   "buildMethod": {
    "kind": "pcb"
   },
-  "hardestComponent": null,
+  "hardestComponent": {
+   "parts": [
+    "other"
+   ],
+   "tier": "smd_hand"
+  },
   "controller": {
    "kind": "socket",
    "footprints": [
@@ -26209,6 +26323,12 @@
    "kind": "direct_pin",
    "pins": 17
   },
+  "switchMounts": [
+   "choc_socket"
+  ],
+  "splay": true,
+  "stagger": "column",
+  "powerSwitch": false,
   "family": "Clog"
  },
  {

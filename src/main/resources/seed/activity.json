@@ -1,5 +1,5 @@
 {
- "fetchedAt": "2026-11-16T03:04:44Z",
+ "fetchedAt": "2026-11-18T02:47:33Z",
  "repos": {
   "0x544D/kuro65": {
    "stars": 2,
@@ -24,6 +24,11 @@
   "Bastardkb/Dilemma": {
    "stars": 591,
    "lastPush": "2026-10-27T13:36:06Z",
+   "archived": false
+  },
+  "Biacco42/Ergo42": {
+   "stars": 218,
+   "lastPush": "2022-12-14T14:25:36Z",
    "archived": false
   },
   "Dbroqua/DK60": {
@@ -57,7 +62,7 @@
    "archived": false
   },
   "GEIGEIGEIST/TOTEM": {
-   "stars": 2085,
+   "stars": 2084,
    "lastPush": "2025-05-02T16:37:21Z",
    "archived": false
   },
@@ -67,7 +72,7 @@
    "archived": false
   },
   "PyrooL/Alpha": {
-   "stars": 297,
+   "stars": 298,
    "lastPush": "2024-07-01T01:45:13Z",
    "archived": false
   },
@@ -82,8 +87,13 @@
    "archived": false
   },
   "SethSenpai/Tanuki": {
-   "stars": 287,
+   "stars": 286,
    "lastPush": "2022-07-30T12:13:27Z",
+   "archived": false
+  },
+  "That-Canadian/MiniDox_PCB": {
+   "stars": 169,
+   "lastPush": "2017-08-20T00:49:01Z",
    "archived": false
   },
   "TuckTuckFloof/EUISO-pcb": {
@@ -190,7 +200,7 @@
    "archived": false
   },
   "brickbots/chocv": {
-   "stars": 188,
+   "stars": 187,
    "lastPush": "2023-01-24T19:30:34Z",
    "archived": false
   },
@@ -465,7 +475,7 @@
    "archived": false
   },
   "foostan/crkbd": {
-   "stars": 7749,
+   "stars": 7756,
    "lastPush": "2026-11-14T14:36:39Z",
    "archived": false
   },
@@ -496,7 +506,7 @@
    "archived": false
   },
   "gtips/reviung": {
-   "stars": 517,
+   "stars": 518,
    "lastPush": "2024-09-25T02:20:29Z",
    "archived": false
   },
@@ -542,7 +552,7 @@
    "archived": false
   },
   "hsgw/plaid": {
-   "stars": 777,
+   "stars": 778,
    "lastPush": "2020-12-13T18:18:46Z",
    "archived": false
   },
@@ -587,7 +597,7 @@
    "archived": false
   },
   "imchipwood/dumbpad": {
-   "stars": 520,
+   "stars": 521,
    "lastPush": "2026-03-04T01:52:59Z",
    "archived": false
   },
@@ -622,7 +632,7 @@
    "archived": false
   },
   "josefadamcik/soflekeyboard": {
-   "stars": 2572,
+   "stars": 2575,
    "lastPush": "2026-02-20T00:18:10Z",
    "archived": false
   },
@@ -767,6 +777,11 @@
    "lastPush": "2022-04-19T04:43:08Z",
    "archived": false
   },
+  "klackygears/eek_doc": {
+   "stars": 21,
+   "lastPush": "2024-01-13T03:43:11Z",
+   "archived": false
+  },
   "knaruo/barracuda": {
    "stars": 3,
    "lastPush": "2021-05-23T13:16:14Z",
@@ -823,7 +838,7 @@
    "archived": false
   },
   "makotokurauchi/helix": {
-   "stars": 1008,
+   "stars": 1009,
    "lastPush": "2022-11-20T22:01:11Z",
    "archived": false
   },
@@ -864,6 +879,16 @@
    "lastPush": "2020-11-15T21:46:45Z",
    "archived": false
   },
+  "maxr1998/phoebe_keyboard": {
+   "stars": 12,
+   "lastPush": "2026-09-28T01:06:45Z",
+   "archived": false
+  },
+  "maxr1998/pulse_4k": {
+   "stars": 21,
+   "lastPush": "2019-05-02T17:20:23Z",
+   "archived": false
+  },
   "minibois/elixivy": {
    "stars": 10,
    "lastPush": "2021-11-17T12:51:18Z",
@@ -885,7 +910,7 @@
    "archived": false
   },
   "mmccoyd/hillside": {
-   "stars": 450,
+   "stars": 451,
    "lastPush": "2025-07-13T01:58:04Z",
    "archived": false
   },
@@ -992,6 +1017,11 @@
   "peej/tripel-keyboard": {
    "stars": 54,
    "lastPush": "2020-09-18T19:38:24Z",
+   "archived": false
+  },
+  "percyjw-2/split65": {
+   "stars": 2,
+   "lastPush": "2022-12-07T16:32:42Z",
    "archived": false
   },
   "pierrechevalier83/ferris": {
@@ -1191,7 +1221,7 @@
    "archived": false
   },
   "tamanishi/Pinky4": {
-   "stars": 120,
+   "stars": 121,
    "lastPush": "2022-06-26T10:04:18Z",
    "archived": false
   },
@@ -1227,7 +1257,7 @@
    "archived": false
   },
   "tompi/cheapino": {
-   "stars": 1196,
+   "stars": 1195,
    "lastPush": "2026-09-25T21:25:24Z",
    "archived": false
   },

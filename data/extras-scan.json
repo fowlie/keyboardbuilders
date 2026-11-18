@@ -63,6 +63,7 @@
  ],
  "bevi": [],
  "bfo-9000": [],
+ "biacco42-ergo42-rev1": [],
  "blue-team-pad": [
   "encoder",
   "display"
@@ -100,7 +101,6 @@
  ],
  "chocolatebar": [],
  "chouchou": [],
- "clog": [],
  "clog-v1": [],
  "clog-v2": [],
  "clog-v3": [],
@@ -172,6 +172,7 @@
  "dropout": [
   "encoder"
  ],
+ "eek": [],
  "egg58v2": [],
  "elcantorhs": [],
  "elephant42": [
@@ -360,6 +361,7 @@
  "madjax-macropad": [
   "encoder"
  ],
+ "maple-computing-minidox-rev1": [],
  "masonry": [],
  "meson": [],
  "mikeneko-65": [],
@@ -402,7 +404,7 @@
  "orthocode": [
   "encoder"
  ],
- "osprette": [],
+ "osprangle": [],
  "osprette-mx": [],
  "osprette-v1": [],
  "osprette-v2": [],
@@ -415,6 +417,8 @@
  "pando": [],
  "pando58": [],
  "paws60": [],
+ "phoebe": [],
+ "phoebe-v2": [],
  "piantor": [],
  "pica40": [
   "encoder"
@@ -443,6 +447,9 @@
   "encoder"
  ],
  "pteron56v0": [],
+ "pulse-4k": [
+  "encoder"
+ ],
  "punk75": [
   "encoder"
  ],
@@ -475,6 +482,7 @@
  "sdra-kb00": [
   "encoder"
  ],
+ "sephirette": [],
  "sepia-officinalis": [],
  "sesame": [],
  "setta21": [
@@ -514,6 +522,9 @@
   "encoder",
   "trackpad"
  ],
+ "split65": [
+  "display"
+ ],
  "splitreus": [],
  "squiggle-36": [],
  "squiggle-goldberg": [],
@@ -521,6 +532,7 @@
  "squiggle-minimalist": [],
  "squiggle-standard": [],
  "steal-this": [],
+ "steel-toe": [],
  "stoutgat": [
   "encoder"
  ],

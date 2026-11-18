@@ -60,6 +60,7 @@
  "basketweave": [],
  "bevi": [],
  "bfo-9000": [],
+ "biacco42-ergo42-rev1": [],
  "blue-team-pad": [],
  "bm42": [],
  "bto-layout": [],
@@ -91,9 +92,6 @@
  ],
  "chocolatebar": [],
  "chouchou": [],
- "clog": [
-  "hotswap"
- ],
  "clog-v1": [
   "hotswap"
  ],
@@ -156,6 +154,7 @@
  "drink-me-usb-micro": [],
  "drink-me-usb-mini": [],
  "dropout": [],
+ "eek": [],
  "egg58v2": [
   "hotswap"
  ],
@@ -345,6 +344,7 @@
   "hotswap"
  ],
  "madjax-macropad": [],
+ "maple-computing-minidox-rev1": [],
  "masonry": [
   "hotswap"
  ],
@@ -389,7 +389,7 @@
  ],
  "opendeck": [],
  "orthocode": [],
- "osprette": [
+ "osprangle": [
   "hotswap"
  ],
  "osprette-mx": [
@@ -408,6 +408,12 @@
  ],
  "pando58": [],
  "paws60": [
+  "hotswap"
+ ],
+ "phoebe": [
+  "hotswap"
+ ],
+ "phoebe-v2": [
   "hotswap"
  ],
  "piantor": [
@@ -441,6 +447,9 @@
  ],
  "prkl30": [],
  "pteron56v0": [],
+ "pulse-4k": [
+  "hotswap"
+ ],
  "punk75": [],
  "qez": [],
  "quefrency-rev1": [],
@@ -478,6 +487,9 @@
  ],
  "schwann-rev0-5b": [],
  "sdra-kb00": [
+  "hotswap"
+ ],
+ "sephirette": [
   "hotswap"
  ],
  "sepia-officinalis": [
@@ -522,6 +534,9 @@
  ],
  "speedo": [],
  "spleeb": [],
+ "split65": [
+  "hotswap"
+ ],
  "splitreus": [],
  "squiggle-36": [],
  "squiggle-goldberg": [],
@@ -529,6 +544,7 @@
  "squiggle-minimalist": [],
  "squiggle-standard": [],
  "steal-this": [],
+ "steel-toe": [],
  "stoutgat": [],
  "stoutgatv2": [],
  "stront-choc": [
