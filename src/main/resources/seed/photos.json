@@ -1031,5 +1031,11 @@
     "width": 1600,
     "height": 1200,
     "sourceUrl": "https://github.com/Biacco42/Ergo42"
+  },
+  "osprangle": {
+    "jpg": "0fe725fcb0fe1de68f78305967bc0f34",
+    "width": 1600,
+    "height": 1200,
+    "sourceUrl": "https://github.com/smores56/osprette"
   }
 }

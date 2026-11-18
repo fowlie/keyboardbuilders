@@ -626,5 +626,9 @@
   "biacco42-ergo42-rev1": {
     "url": "https://raw.githubusercontent.com/Biacco42/Ergo42/readme/readme_image/ergo42_image.jpg",
     "repo": "https://github.com/Biacco42/Ergo42"
+  },
+  "osprangle": {
+    "url": "https://raw.githubusercontent.com/smores56/osprette/main/osprangle/images/osprangle-1.jpg",
+    "repo": "https://github.com/smores56/osprette"
   }
 }
