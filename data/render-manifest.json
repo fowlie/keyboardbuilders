@@ -495,7 +495,7 @@
   "glb_bytes": 0,
   "glb_renderer": "kicad10.0.5-full/export-glb/mask-silk-tracks-opaquecore/3",
   "notes": [
-   "glb absent after exit 2: 02:38:29: Font 'a Another Tag' not found; substituting 'DejaVu Sans Book'."
+   "glb absent after exit 2: 02:41:04: Font 'a Another Tag' not found; substituting 'DejaVu Sans Book'."
   ],
   "path": "slim/source/bad_wings_slim.kicad_pcb",
   "png": "b568018013106c6ddabe0c3a4997cdc3",
