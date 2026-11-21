@@ -1,0 +1,31 @@
+name: Suggest a missing design
+description: A keyboard design you could not find on keyboardbuilders.net.
+title: "Add design: "
+labels: ["new design"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping the catalogue grow. Only the link is required; fill in the rest if you know it.
+  - type: input
+    id: name
+    attributes:
+      label: Design name
+      placeholder: e.g. Corne
+    validations:
+      required: true
+  - type: input
+    id: repo
+    attributes:
+      label: Link to the design
+      description: The GitHub (or GitLab, Codeberg, ...) repository, or the designer's page.
+      placeholder: https://github.com/...
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Anything else we should know?
+      description: Who designed it, whether it is open source, layout, switch type, controller.
+    validations:
+      required: false

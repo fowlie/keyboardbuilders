@@ -242,6 +242,17 @@ class FilteringTest {
         assertEquals(rows(bare.contentAsString), rows(spaces.contentAsString))
     }
 
+    /** Issue #33: an empty name search says how to get the design added. */
+    @Test
+    fun `an empty search suggests opening an issue for the missing design`() {
+        val body = mockMvc.get("/designs") { param("q", "zzzqqqnosuchboard") }
+            .andReturn().response.contentAsString
+        assertTrue("class=\"missing-design\"" in body, "no missing-design guidance")
+        assertTrue("issues/new?template=missing-design.yml" in body)
+        assertTrue("zzzqqqnosuchboard" in body)
+        assertFalse("class=\"missing-design\"" in page("").contentAsString)
+    }
+
     /** FTS5 MATCH is a query language; a search box is not. Neither may 500. */
     @Test
     fun `a query full of FTS operators is searched for, not executed`() {
