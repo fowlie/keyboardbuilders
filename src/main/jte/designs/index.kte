@@ -131,7 +131,26 @@
         </div>
     @elseif(rows.isEmpty())
         <p class="empty">Nothing here yet.</p>
-    @else
+    @endif
+
+    @if(rows.isEmpty() && !q.isBlank())
+        <%-- Issue #33: a search by name that finds nothing is where a reader learns the
+             design is missing, so say how to get it added. A GitHub issue is the lead
+             option because it needs no git; the form pre-fills the name they typed. The
+             issue form lives in .github/ISSUE_TEMPLATE/missing-design.yml. --%>
+        !{val issueUrl = "https://github.com/fowlie/keyboardbuilders/issues/new?template=missing-design.yml&title=" +
+            java.net.URLEncoder.encode("Add design: " + q.trim(), Charsets.UTF_8).replace("+", "%20")}
+        <div class="missing-design">
+            <p><strong>Can't find <em>${q.trim()}</em>?</strong> Help us add it.</p>
+            <p><a class="missing-design-cta" href="${issueUrl}" rel="noopener" target="_blank">Suggest this design on GitHub</a>
+                &mdash; it takes a minute and only needs a free GitHub account.</p>
+            <p class="missing-design-alt">Prefer not to use GitHub? Email
+                <a href="mailto:hello@keyboardbuilders.net?subject=Missing%20design">hello@keyboardbuilders.net</a>,
+                or open a pull request if you are comfortable with that.</p>
+        </div>
+    @endif
+
+    @if(!rows.isEmpty())
         <ul class="results">
             @for(card in cards)
                 <%-- THE WHOLE CARD IS ONE LINK, not just the name -- owner-reported, and

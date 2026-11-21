@@ -744,6 +744,13 @@ nav.pages .spent { color: var(--rule); }
 .recover li { margin: 0.25rem 0; }
 .recover em { font-style: normal; font-weight: 600; }
 
+.missing-design { border: 1px solid var(--rule); border-radius: 6px; padding: 1rem 1.2rem; margin-top: 1rem; }
+.missing-design p { margin: 0 0 0.6rem; }
+.missing-design p:last-child { margin-bottom: 0; }
+.missing-design em { font-style: normal; font-weight: 600; }
+.missing-design-cta { font-weight: 600; }
+.missing-design-alt { color: var(--muted); font-size: 0.9rem; }
+
 /* The filter rail. Two columns above 60rem, stacked below — ux.md §2.8 turns filters
    into their own page on mobile, which is a later issue; until then they stack. */
 .search { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
