@@ -42,6 +42,9 @@ DISCOVERY. A repo `discover_repos.py` found on GitHub -- created lately, holding
 board, not in the corpus -- that has no answer in `seed/discoveries.toml` gets one yes/no
 question (#105). Yes queues it for importing; no is final.
 
+THE CAP IS SHARED OUT ROUND-ROBIN across the kinds (pick), so a backlog of one kind
+cannot keep another off the queue.
+
 THE WHOLE QUEUE IS REWRITTEN each run: a question ruled since last night is no longer
 generated, so it drops out; an unruled one keeps its id, so an answer already given still
 matches it.
@@ -343,6 +346,30 @@ def choices_for(kind, n):
     }[kind]
 
 
+def pick(questions, cap):
+    """At most `cap` questions, shared out so that no kind is starved.
+
+    A single cap over a list sorted by kind let the earlier kinds fill the whole queue
+    for as long as they sat unanswered, so discovery questions -- the only way a new
+    design arrives -- were never shown. Each kind now gets an equal share, and what a
+    kind does not use goes to the others, still in KIND_ORDER. Within a kind the order
+    is the order generated. The result is grouped by kind, in KIND_ORDER.
+    """
+    by_kind = {k: [q for q in questions if q["kind"] == k] for k in KIND_ORDER}
+    taken = {k: 0 for k in KIND_ORDER}
+    left = cap
+    while left > 0:
+        progressed = False
+        for k in KIND_ORDER:
+            if left > 0 and taken[k] < len(by_kind[k]):
+                taken[k] += 1
+                left -= 1
+                progressed = True
+        if not progressed:
+            break
+    return [q for k in KIND_ORDER for q in by_kind[k][:taken[k]]]
+
+
 def write_questions_file(path, questions):
     """Write the whole queue at once: to a temp file beside it, then a rename, so the
     site never reads half a file."""
@@ -364,9 +391,8 @@ def main():
 
     questions = (photo_questions(args.site) + board_questions() + source_questions()
                  + discovery_questions())
-    questions.sort(key=lambda q: KIND_ORDER.index(q["kind"]))
     # The cap keeps a night's work bounded.
-    todo = questions[:args.cap]
+    todo = pick(questions, args.cap)
     write_questions_file(args.site_queue, todo)
     print(f"queued {len(todo)} question(s) on /moderation; "
           f"{len(questions) - len(todo)} more waiting")

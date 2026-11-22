@@ -8,7 +8,7 @@ import unittest
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 from intake_answer import append_discovery  # noqa: E402
-from intake_ask import discovery_questions  # noqa: E402
+from intake_ask import discovery_questions, pick  # noqa: E402
 
 FOUND = {"candidates": {
     "a/kbd": {"description": "a wireless split", "stars": 4, "licence": "MIT",
@@ -48,6 +48,32 @@ class AppendDiscovery(unittest.TestCase):
             {"repo": "a/kbd", "verdict": "design", "moderator": "fowlie"},
             {"repo": "b/pad", "verdict": "not_design", "moderator": "someone"},
         ])
+
+
+class Cap(unittest.TestCase):
+    """The cap is shared out across kinds, so a backlog cannot starve discovery."""
+
+    @staticmethod
+    def qs(**counts):
+        return [{"kind": k, "id": f"{k}{i}"} for k, n in counts.items() for i in range(n)]
+
+    def kinds(self, picked):
+        return {k: sum(q["kind"] == k for q in picked)
+                for k in ("photo", "board", "source", "discovery")}
+
+    def test_a_backlog_does_not_starve_discovery(self):
+        picked = pick(self.qs(photo=1, board=14, source=15, discovery=81), 20)
+        self.assertEqual(20, len(picked))
+        self.assertEqual({"photo": 1, "board": 6, "source": 6, "discovery": 7},
+                         self.kinds(picked))
+
+    def test_unused_share_goes_to_the_others(self):
+        picked = pick(self.qs(discovery=81), 20)
+        self.assertEqual(20, self.kinds(picked)["discovery"])
+
+    def test_fewer_than_the_cap_are_all_kept_in_kind_order(self):
+        picked = pick(self.qs(discovery=2, photo=1), 20)
+        self.assertEqual(["photo0", "discovery0", "discovery1"], [q["id"] for q in picked])
 
 
 if __name__ == "__main__":
