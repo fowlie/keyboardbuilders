@@ -62,18 +62,43 @@ class Cap(unittest.TestCase):
                 for k in ("photo", "board", "source", "discovery")}
 
     def test_a_backlog_does_not_starve_discovery(self):
-        picked = pick(self.qs(photo=1, board=14, source=15, discovery=81), 20)
-        self.assertEqual(20, len(picked))
-        self.assertEqual({"photo": 1, "board": 6, "source": 6, "discovery": 7},
-                         self.kinds(picked))
+        picked = pick(self.qs(photo=1, board=14, source=15, discovery=81), 30)
+        self.assertEqual(30, len(picked))
+        got = self.kinds(picked)
+        self.assertEqual(1, got["photo"])
+        self.assertGreater(got["discovery"], got["board"])
+        self.assertGreater(got["discovery"], got["source"])
+
+    def test_photos_get_the_largest_share_when_there_are_many(self):
+        got = self.kinds(pick(self.qs(photo=50, board=50, source=50, discovery=50), 30))
+        self.assertEqual({"photo": 14, "board": 4, "source": 4, "discovery": 8}, got)
 
     def test_unused_share_goes_to_the_others(self):
-        picked = pick(self.qs(discovery=81), 20)
-        self.assertEqual(20, self.kinds(picked)["discovery"])
+        picked = pick(self.qs(discovery=81), 30)
+        self.assertEqual(30, self.kinds(picked)["discovery"])
 
     def test_fewer_than_the_cap_are_all_kept_in_kind_order(self):
         picked = pick(self.qs(discovery=2, photo=1), 20)
         self.assertEqual(["photo0", "discovery0", "discovery1"], [q["id"] for q in picked])
+
+
+class AutoApprove(unittest.TestCase):
+    SAFE = {"licence": "MIT", "firmware": ["zmk"], "switches": 40, "description": "a split"}
+
+    def test_a_candidate_with_every_sign_is_safe(self):
+        from auto_approve_discoveries import is_safe
+        self.assertTrue(is_safe(self.SAFE))
+
+    def test_any_missing_sign_makes_it_unsafe(self):
+        from auto_approve_discoveries import is_safe
+        for key, bad in [("licence", None), ("licence", "NOASSERTION"), ("firmware", []),
+                         ("switches", 29), ("description", "  ")]:
+            self.assertFalse(is_safe({**self.SAFE, key: bad}), key)
+
+    def test_ruled_repos_are_left_alone(self):
+        from auto_approve_discoveries import safe_unruled
+        found = {"candidates": {"a/x": self.SAFE, "B/Y": self.SAFE}}
+        self.assertEqual(["a/x"], safe_unruled(found, {"b/y"}))
 
 
 if __name__ == "__main__":
