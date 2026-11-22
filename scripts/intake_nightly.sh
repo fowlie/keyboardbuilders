@@ -71,8 +71,11 @@ main() {
   step photos python3 scripts/draft_photo_candidates.py
   step activity python3 scripts/fetch_activity.py
   step discover python3 scripts/discover_repos.py
+  # The safe candidates are ruled `design` without a question (auto_approve_discoveries.py),
+  # before the commit so seed/discoveries.toml, allowed below, goes in with the night's files.
+  step auto-approve python3 scripts/auto_approve_discoveries.py
 
-  derived='^(data/[^/]+\.json|src/main/resources/seed/[^/]+\.json)$'
+  derived='^(data/[^/]+\.json|src/main/resources/seed/[^/]+\.json|seed/discoveries\.toml)$'
   changed=$(git status --porcelain | cut -c4-)
   stray=$(printf '%s\n' "$changed" | grep -vE "$derived" | grep -v '^$' || true)
   if [ -n "$stray" ]; then

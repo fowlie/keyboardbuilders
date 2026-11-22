@@ -42,14 +42,14 @@ DISCOVERY. A repo `discover_repos.py` found on GitHub -- created lately, holding
 board, not in the corpus -- that has no answer in `seed/discoveries.toml` gets one yes/no
 question (#105). Yes queues it for importing; no is final.
 
-THE CAP IS SHARED OUT ROUND-ROBIN across the kinds (pick), so a backlog of one kind
+THE CAP IS SHARED OUT BY WEIGHT across the kinds (pick), so a backlog of one kind
 cannot keep another off the queue.
 
 THE WHOLE QUEUE IS REWRITTEN each run: a question ruled since last night is no longer
 generated, so it drops out; an unruled one keeps its id, so an answer already given still
 matches it.
 
-Usage: intake_ask.py [--site-queue FILE] [--cap 20] [--site https://keyboardbuilders.net]
+Usage: intake_ask.py [--site-queue FILE] [--cap 30] [--site https://keyboardbuilders.net]
 """
 import argparse
 import hashlib
@@ -346,25 +346,32 @@ def choices_for(kind, n):
     }[kind]
 
 
+# How many of each kind one round hands out. Photos come first and most: a design with
+# no picture is the weakest page on the site, and a photo answer is the quickest to give.
+# Discovery is next, since it is the only way a new design arrives.
+WEIGHTS = {"photo": 3, "discovery": 2, "board": 1, "source": 1}
+
+
 def pick(questions, cap):
-    """At most `cap` questions, shared out so that no kind is starved.
+    """At most `cap` questions, shared out by WEIGHTS so that no kind is starved.
 
     A single cap over a list sorted by kind let the earlier kinds fill the whole queue
     for as long as they sat unanswered, so discovery questions -- the only way a new
-    design arrives -- were never shown. Each kind now gets an equal share, and what a
-    kind does not use goes to the others, still in KIND_ORDER. Within a kind the order
-    is the order generated. The result is grouped by kind, in KIND_ORDER.
+    design arrives -- were never shown. Each round now takes up to WEIGHTS[kind] of each
+    kind, and what a kind does not have goes to the others in later rounds. Within a
+    kind the order is the order generated. The result is grouped by kind, in KIND_ORDER.
     """
     by_kind = {k: [q for q in questions if q["kind"] == k] for k in KIND_ORDER}
     taken = {k: 0 for k in KIND_ORDER}
     left = cap
     while left > 0:
         progressed = False
-        for k in KIND_ORDER:
-            if left > 0 and taken[k] < len(by_kind[k]):
-                taken[k] += 1
-                left -= 1
-                progressed = True
+        for k in sorted(KIND_ORDER, key=lambda k: -WEIGHTS[k]):
+            for _ in range(WEIGHTS[k]):
+                if left > 0 and taken[k] < len(by_kind[k]):
+                    taken[k] += 1
+                    left -= 1
+                    progressed = True
         if not progressed:
             break
     return [q for k in KIND_ORDER for q in by_kind[k][:taken[k]]]
@@ -385,7 +392,7 @@ def main():
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--site-queue", type=pathlib.Path, metavar="FILE", default=QUEUE,
                     help="where the site reads the questions")
-    ap.add_argument("--cap", type=int, default=20)
+    ap.add_argument("--cap", type=int, default=30)
     ap.add_argument("--site", default="https://keyboardbuilders.net")
     args = ap.parse_args()
 
