@@ -212,22 +212,33 @@ def board_questions():
         else:
             counts, rctrl, split = [], "(ZMK shield: see its own files)", False
         questions.append(question("board", key, c["fp"],
-                                  f"Board: which board is {key}'s? ({c['repo']})",
+                                  f"Which PCB file is the {design_name(row, key)} keyboard? "
+                                  f"(in {c['repo']})",
                                   board_body(key, c, counts, rctrl, split), n=len(c["free"])))
     return questions
+
+
+def design_name(row, key):
+    """What a person calls the keyboard: the row's name, else the last part of its id
+    (`qmk:aidansmithdotdev/fine40` -> `fine40`)."""
+    return row.get("name") or key.split(":", 1)[-1].rsplit("/", 1)[-1]
 
 
 def board_body(key, c, counts, rctrl, split):
     from review_boards import history
     repo, row, free, scan = c["repo"], c["row"], c["free"], c["scan"]
+    name = design_name(row, key)
+    says = ", ".join(x for x in (
+        " or ".join(map(str, counts)) + " keys" if counts else "",
+        rctrl if rctrl and rctrl != "?" else "",
+        "split" if split else "") if x)
     lines = [
-        f"**Which board in [{repo}](https://github.com/{repo}) is the firmware record "
-        f"`{key}`'s?**",
+        f"**{name}: pick its PCB in [{repo}](https://github.com/{repo})**",
         "",
-        f"The record says: **{', '.join(map(str, counts)) or '?'} keys**, {rctrl}"
-        f"{', split' if split else ''}.",
+        f"That repo has several PCB files and we couldn't tell which one is the {name}."
+        + (f" Its firmware says: {says}." if says else ""),
         "",
-        f"The drafter couldn't call it: {row['note']}",
+        f"Why we couldn't tell: {row['note']}",
         "",
     ]
     for n, board in enumerate(free, 1):
@@ -243,10 +254,10 @@ def board_body(key, c, counts, rctrl, split):
             + (f" (+{len(bset) - 1} more file(s))" if len(bset) > 1 else ""),
             "",
             f"{', '.join(fams)} · {ctrl} · "
-            f"{'/'.join(map(str, switches)) or '?'} switch footprints",
+            f"{'/'.join(map(str, switches)) or '?'} switch spots on the board",
         ]
         commits, why = history(repo, bset[0], limit=3)
-        lines += ["", f"History: {why}"] + [f"- {c}" for c in commits or []] + [""]
+        lines += ["", f"Recent changes to it: {why}"] + [f"- {c}" for c in commits or []] + [""]
     return lines
 
 
@@ -269,16 +280,15 @@ def source_questions():
         where = f"https://github.com/{r['source']}" + (
             f"/tree/HEAD/{r['path']}" if r.get("path") else "")
         lines = [
-            f"**Is [{r['source']}]({where}) the hardware for the firmware record `{key}`"
-            + (f" ({r['name']})" if r.get("name") else "") + "?**",
+            f"**Is [{r['source']}]({where}) the repo with the PCB design for the "
+            f"{design_name(r, key)} keyboard?**",
             "",
-            f"Proposed by: `{r.get('signal')}`" + (f" · path `{r['path']}`"
-                                                   if r.get("path") else ""),
-            "",
-            f"> {r.get('note') or '(no note)'}",
+            f"Why we think so: {r.get('note') or '(no note)'}"
+            + (f" (folder `{r['path']}`)" if r.get("path") else ""),
         ]
         questions.append(question("source", key, c["fp"],
-                                  f"Source: is {r['source']} {key}'s hardware?", lines))
+                                  f"Is {r['source']} the repo for the {design_name(r, key)} keyboard?",
+                                  lines))
     return questions
 
 
@@ -342,7 +352,7 @@ def choices_for(kind, n):
                    {"reply": "n", "label": "No repo is known"}],
         "photo": numbered + [{"reply": "none", "label": "None of these"},
                              {"reply": "skip", "label": "Not sure, skip"}],
-        "board": numbered + [{"reply": "none", "label": "Its board isn't in the repo"}],
+        "board": numbered + [{"reply": "none", "label": "None of these"}],
     }[kind]
 
 
