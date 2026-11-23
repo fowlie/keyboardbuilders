@@ -9,7 +9,7 @@ queues the repo for importing. To undo one, change its verdict to `not_design`.
 
 SAFE MEANS ALL OF: a recognised open licence, firmware found in the repo, a board
 placing at least MIN_SWITCHES switches, and a description. Tuned on the 29 answers so
-far: of those, the rule would have passed 3, and all 3 were designs. It is deliberately
+far: of those, the rule would have passed 3 at both 30 and 20, and all 3 were designs. It is deliberately
 narrow -- a candidate that fails it is asked about as before. `NOASSERTION` is not a
 licence: it means GitHub found a licence file it could not name.
 
@@ -24,7 +24,7 @@ sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 from intake_answer import append_discovery  # noqa: E402
 from intake_ask import DISCOVERED, DISCOVERIES, ruled_discoveries  # noqa: E402
 
-MIN_SWITCHES = 30
+MIN_SWITCHES = 20
 BOT = "auto"
 
 
