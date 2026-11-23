@@ -157,3 +157,13 @@ moderator = "fowlie"
 repo = "disarmyouwitha/zenR4-pcb"
 verdict = "design"
 moderator = "fowlie"
+
+[[entry]]
+repo = "monstercameron/OmarKeyboard"
+verdict = "design"
+moderator = "auto"
+
+[[entry]]
+repo = "venc0r/mnhttn48-unibody"
+verdict = "design"
+moderator = "auto"
