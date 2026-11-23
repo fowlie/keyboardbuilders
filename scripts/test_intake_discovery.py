@@ -92,7 +92,7 @@ class AutoApprove(unittest.TestCase):
     def test_any_missing_sign_makes_it_unsafe(self):
         from auto_approve_discoveries import is_safe
         for key, bad in [("licence", None), ("licence", "NOASSERTION"), ("firmware", []),
-                         ("switches", 29), ("description", "  ")]:
+                         ("switches", 19), ("description", "  ")]:
             self.assertFalse(is_safe({**self.SAFE, key: bad}), key)
 
     def test_ruled_repos_are_left_alone(self):
