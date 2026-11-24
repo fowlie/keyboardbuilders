@@ -163,10 +163,19 @@ class BuildPhotosTest {
     }
 
     @Test
-    fun `nobody approves their own photo`() {
+    fun `a reviewer never approves their own photo, however many points`() {
         approvedFor("alice", 5)
         upload(bare[5], alice)
+        assertTrue("Someone else reviews it" in html("/moderation", alice))
         decide(uploads.waiting().single().id, alice, "yes").andExpect { status { isForbidden() } }
+    }
+
+    @Test
+    fun `a moderator can approve their own photo`() {
+        upload(bare[0], owner)
+        assertFalse("Someone else reviews it" in html("/moderation", owner))
+        decide(uploads.waiting().single().id, owner, "yes").andExpect { status { is3xxRedirection() } }
+        assertEquals("fowlie", uploads.approvedFor(bare[0])!!.login)
     }
 
     @Test

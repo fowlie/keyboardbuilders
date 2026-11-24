@@ -22,7 +22,7 @@ data class QuestionView(
     val takesUrl: Boolean,
 )
 
-/** A build photo waiting for a yes or no (owner, 2026-11-24). [mine] is the reviewer's own: they can't decide it. */
+/** A build photo waiting for a yes or no (owner, 2026-11-24). [mine]: the reviewer's own, which they can't decide unless they're a moderator. */
 data class WaitingPhoto(
     val id: Long, val slug: String, val name: String, val url: String,
     val width: Int, val height: Int, val by: String, val mine: Boolean,
@@ -130,7 +130,9 @@ class ModerateController(
         val login = user.getAttribute<String>("login")
         if (!contributors.canReview(login)) throw ResponseStatusException(HttpStatus.FORBIDDEN, "Reviewers only.")
         val upload = uploads.get(id) ?: throw ResponseStatusException(HttpStatus.NOT_FOUND, "no such photo")
-        if (upload.login.equals(login, ignoreCase = true)) {
+        // NOBODY APPROVES THEIR OWN, EXCEPT A MODERATOR (owner, 2026-11-24): points are
+        // what self-approval would game, and a moderator has nothing left to unlock.
+        if (upload.login.equals(login, ignoreCase = true) && !moderators.includes(login)) {
             throw ResponseStatusException(HttpStatus.FORBIDDEN, "Someone else has to review your own photo.")
         }
         when (decision) {
@@ -145,7 +147,8 @@ class ModerateController(
     private fun waitingPhotos(login: String): List<WaitingPhoto> = uploads.waiting().map {
         WaitingPhoto(
             it.id, it.slug, catalog.bySlug(it.slug)?.core?.name?.value ?: it.slug, "/photos/${it.jpg}.jpg",
-            it.width, it.height, it.login, mine = it.login.equals(login, ignoreCase = true),
+            it.width, it.height, it.login,
+            mine = it.login.equals(login, ignoreCase = true) && !moderators.includes(login),
         )
     }
 
