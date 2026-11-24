@@ -672,11 +672,11 @@ note     = "one board in the repo, one row -- nothing to choose"
 tree     = "qmk"
 id       = "ai03/orbit"
 source   = "ai03-2725/orbit"
-boards   = []
-name     = ""
-verdict  = "drafted"
-signal   = "exact"
-note     = "3 designs, best exact match 'Orbit-Choc-PCB/Orbit.kicad_pcb' (4.00) but runner-up scores 4.00 -- too close to call"
+boards   = ["Orbit-PCB/Orbit.kicad_pcb"]
+name     = "Orbit"
+verdict  = "confirmed"
+signal   = "human"
+note     = "a moderator (fowlie) on /moderation (intake bot, backlog #117)"
 
 [[entry]]
 tree     = "qmk"
@@ -974,9 +974,9 @@ id       = "bbrfkr/dynamis"
 source   = "bbrfkr/keyboards"
 boards   = []
 name     = ""
-verdict  = "drafted"
-signal   = "none"
-note     = "4 designs' worth of boards in the repo, none resembling this id: atom/atom.kicad_pcb, molecule/molecule.kicad_pcb, quantum/quantum.kicad_pcb, scatter42/scatter42.kicad_pcb"
+verdict  = "no_board"
+signal   = "human"
+note     = "a moderator (fowlie) on /moderation (intake bot, backlog #117)"
 
 [[entry]]
 tree     = "qmk"
@@ -3084,9 +3084,9 @@ id       = "keyhive/absinthe"
 source   = "cfbender/keyboards"
 boards   = []
 name     = ""
-verdict  = "drafted"
-signal   = "none"
-note     = "4 designs' worth of boards in the repo, none resembling this id: fernet/pcb/fernet/fernet.kicad_pcb, nightmare/pcb/CK50.kicad_pcb, opus/pcb/opus.kicad_pcb, southpole/designFiles/SouthPole.kicad_pcb"
+verdict  = "no_board"
+signal   = "human"
+note     = "a moderator (fowlie) on /moderation (intake bot, backlog #117)"
 
 [[entry]]
 tree     = "qmk"
@@ -4902,11 +4902,11 @@ note     = "the scan found 1 switch-placing .kicad_pcb here and the path filter 
 tree     = "qmk"
 id       = "aidansmithdotdev/fine40"
 source   = "Aidan-OS/Mochi40"
-boards   = []
-name     = ""
-verdict  = "drafted"
-signal   = "none"
-note     = "2 designs' worth of boards in the repo, none resembling this id: PCB/Hotswap PCB.kicad_pcb, PCB/PCB.kicad_pcb"
+boards   = ["PCB/PCB.kicad_pcb"]
+name     = "Mochi40"
+verdict  = "confirmed"
+signal   = "human"
+note     = "a moderator (fowlie) on /moderation (intake bot, backlog #117)"
 
 [[entry]]
 tree     = "qmk"
@@ -5112,11 +5112,11 @@ note     = "3 designs' worth of boards in the repo; matched on token"
 tree     = "qmk"
 id       = "frooastboard/walnut"
 source   = "Frooastside/Frooastboard"
-boards   = []
-name     = ""
-verdict  = "drafted"
-signal   = "token"
-note     = "3 designs, best token match 'Frooastboard Walnut Modular/KiCad Project/Frooastboard Walnut Modular.kicad_pcb' (3.00) but runner-up scores 3.00 -- too close to call"
+boards   = ["Frooastboard Walnut/KiCad Project/Frooastboard Walnut.kicad_pcb"]
+name     = "Frooastboard Walnut"
+verdict  = "confirmed"
+signal   = "human"
+note     = "a moderator (fowlie) on /moderation (intake bot, backlog #117)"
 
 [[entry]]
 tree     = "qmk"

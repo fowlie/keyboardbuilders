@@ -6967,8 +6967,8 @@ source   = "That-Canadian/Keyboard_Files"
 path     = false
 stated   = ""
 signal   = "dev-seed"
-verdict  = "drafted"
-note     = "QMK's own record states no url (manufacturer Bishop Keyboards; its readme names 'BishopKeyboards and That-Canadian' as maintainers, and the board's silkscreen places a Bishop Keyboards logo, so the repo owner matches). Confirmed at HEAD e8476548e9: not a fork, no licence file, 13 stars, one board file (ECO Keyboard/PCB Files/V2.1/Eco-Board.kicad_pcb, beside seven more files under PCB Files: its project, schematic, netlist, cache library, two fp-lib-tables and a one-footprint eco.pretty); the rest of the tree is two case DXFs (ECO Keyboard/Case Files) and the designer's KiCAD Libs footprint library. The board places 59 switch footprints at 59 positions (56 1u MX/Alps plus three 2u), the record declares LAYOUT 56 -- the 2u footprints read as alternates. The repo serves this one row, so the build imports it without a count join. rev2 rather than rev1, and checked against the board: the Pro Micro U1's pad nets on V2.1 give rows D7,B5,B4,E6 and cols D1,D0,D4,C6,B6,B2,B3,B1,F7,F6,F5,F4,D2,D3, eco/rev2's matrix_pins exactly; rev1's rows (B1,B6,B2,B3) are column pins on this board. QMK's readme still says 'Hardware Supported: ECO PCB rev1 Pro Micro', which is stale, not evidence for rev1. No licence file, so the licence reads Unstated (the silkscreen's OSHW logo is not a licence)."
+verdict  = "confirmed"
+note     = "QMK's own record states no url (manufacturer Bishop Keyboards; its readme names 'BishopKeyboards and That-Canadian' as maintainers, and the board's silkscreen places a Bishop Keyboards logo, so the repo owner matches). Confirmed at HEAD e8476548e9: not a fork, no licence file, 13 stars, one board file (ECO Keyboard/PCB Files/V2.1/Eco-Board.kicad_pcb, beside seven more files under PCB Files: its project, schematic, netlist, cache library, two fp-lib-tables and a one-footprint eco.pretty); the rest of the tree is two case DXFs (ECO Keyboard/Case Files) and the designer's KiCAD Libs footprint library. The board places 59 switch footprints at 59 positions (56 1u MX/Alps plus three 2u), the record declares LAYOUT 56 -- the 2u footprints read as alternates. The repo serves this one row, so the build imports it without a count join. rev2 rather than rev1, and checked against the board: the Pro Micro U1's pad nets on V2.1 give rows D7,B5,B4,E6 and cols D1,D0,D4,C6,B6,B2,B3,B1,F7,F6,F5,F4,D2,D3, eco/rev2's matrix_pins exactly; rev1's rows (B1,B6,B2,B3) are column pins on this board. QMK's readme still says 'Hardware Supported: ECO PCB rev1 Pro Micro', which is stale, not evidence for rev1. No licence file, so the licence reads Unstated (the silkscreen's OSHW logo is not a licence). Ruled: a moderator (fowlie) on /moderation (intake bot, backlog #117)."
 
 [[entry]]
 tree     = "qmk"
@@ -6978,8 +6978,8 @@ source   = "ktec-hq/ErgoDone"
 path     = false
 stated   = ""
 signal   = "dev-seed"
-verdict  = "drafted"
-note     = "QMK's own record states no url, only shop links in its readme (manufacturer K.T.E.C., matches the repo owner ktec-hq). Confirmed at HEAD 091d1d1232: not a fork, GPL-3.0, 123 stars, one board file (ErgoDone.kicad_pcb, beside the ErgoDOX.brd it was converted from). An ErgoDox derivative by its own description ('ErgoDox using pro micro'), one reversible PCB per hand: 42 switch footprints at 42 positions, Pro Micro plus an MCP23017 expander (U2, wired to the 23017 pinout: SCL 12, SDA 13, A0-A2 to GND). The firmware does not quite match that chip: ktec/ergodone drives an MCP23018 (rules.mk 'SRC += mcp23018.c'), and its readme describes K.T.E.C.'s pre-soldered ErgoDone v1.3, while this repo is a through-hole DIY board with a socketed Pro Micro -- possibly the open ancestor of the shipped v1.3 PCB rather than that PCB. The Pro Micro side DOES match the firmware's matrix.c: the seven pins it reads as columns (D3,D2,D4,C6,D7,E6,B4) sit on the board's COL nets and D1/D0 on the expander's SDA/SCL, so the attribution holds; six ROW nets also reach the Pro Micro, but its footprint numbers 28 pads, so which row lands on which pin is unchecked. Its mini-B receptacle J1 is not a host port: J1's data pads join no other pad (each data net is J1's two pad rows and nothing else), and the cable plugs into the Pro Micro's own micro-B. The record declares 76 and 80 (LAYOUT_ergodox, _80); 42 doubled is 84, the extra being alternates. TWO HALVES: the one reversible board places both the Pro Micro and the expander plus a 4-pin 3.5 mm jack, the ErgoDox mechanism (one chip, the far half scanned through the MCP23017) -- the Pando/3w6 shape, where QMK sets no split flag and the build reads one piece unless seed/bodies.toml says otherwise."
+verdict  = "confirmed"
+note     = "QMK's own record states no url, only shop links in its readme (manufacturer K.T.E.C., matches the repo owner ktec-hq). Confirmed at HEAD 091d1d1232: not a fork, GPL-3.0, 123 stars, one board file (ErgoDone.kicad_pcb, beside the ErgoDOX.brd it was converted from). An ErgoDox derivative by its own description ('ErgoDox using pro micro'), one reversible PCB per hand: 42 switch footprints at 42 positions, Pro Micro plus an MCP23017 expander (U2, wired to the 23017 pinout: SCL 12, SDA 13, A0-A2 to GND). The firmware does not quite match that chip: ktec/ergodone drives an MCP23018 (rules.mk 'SRC += mcp23018.c'), and its readme describes K.T.E.C.'s pre-soldered ErgoDone v1.3, while this repo is a through-hole DIY board with a socketed Pro Micro -- possibly the open ancestor of the shipped v1.3 PCB rather than that PCB. The Pro Micro side DOES match the firmware's matrix.c: the seven pins it reads as columns (D3,D2,D4,C6,D7,E6,B4) sit on the board's COL nets and D1/D0 on the expander's SDA/SCL, so the attribution holds; six ROW nets also reach the Pro Micro, but its footprint numbers 28 pads, so which row lands on which pin is unchecked. Its mini-B receptacle J1 is not a host port: J1's data pads join no other pad (each data net is J1's two pad rows and nothing else), and the cable plugs into the Pro Micro's own micro-B. The record declares 76 and 80 (LAYOUT_ergodox, _80); 42 doubled is 84, the extra being alternates. TWO HALVES: the one reversible board places both the Pro Micro and the expander plus a 4-pin 3.5 mm jack, the ErgoDox mechanism (one chip, the far half scanned through the MCP23017) -- the Pando/3w6 shape, where QMK sets no split flag and the build reads one piece unless seed/bodies.toml says otherwise. Ruled: a moderator (fowlie) on /moderation (intake bot, backlog #117)."
 
 [[entry]]
 tree     = "qmk"
@@ -6989,8 +6989,8 @@ source   = "nopunin10did/kastenwagen"
 path     = "kastenwagen-1840-pcb"
 stated   = ""
 signal   = "dev-seed"
-verdict  = "drafted"
-note     = "QMK's own record states no url (maintainer NoPunIn10Did, matches the repo owner). Confirmed at HEAD 6de9377408: not a fork, CC-BY-SA-4.0 by its LICENSE.md (GitHub reads it as NOASSERTION; it adds 'commercial reuse reserved'), 19 stars. The repo holds TWO designs, so `path` scopes this row: kastenwagen-1840-pcb/kastenwagen-1840-pcb.kicad_pcb places 64 MX footprints at 64 positions (with 2u/2.25u/2.75u/7u alternates), Elite-C, two encoders; the record declares LAYOUT_all 65 and LAYOUT_7u_space 62, and with two boards in the repo the build's count join decides -- 64 matches neither. Also in the tree: the Kastenwagen 48's own board (51 switches; QMK nopunin10did/kastenwagen48 declares 53 and 50, no row drafted) and a switch PLATE, kastenwagen-1840-plate/kastenwagen-plate.kicad_pcb, whose MX_plate_cutouts footprints the scanner reads as 60 switches (the 48's plate, kastenwagen-48-plate/kastenwagen-plate.kicad_pcb, likewise reads as 50) -- plates a board-decline should name before this repo is scanned. Two bottom plates complete the six .kicad_pcb files, kastenwagen-1840-plate/kastenwagen-bottom-plate.kicad_pcb and kastenwagen-48-plate/kastenwagen-48-bottom.kicad_pcb; both read as 0 switches, so they are harmless, but a declines ruling should cover all four non-board files."
+verdict  = "confirmed"
+note     = "QMK's own record states no url (maintainer NoPunIn10Did, matches the repo owner). Confirmed at HEAD 6de9377408: not a fork, CC-BY-SA-4.0 by its LICENSE.md (GitHub reads it as NOASSERTION; it adds 'commercial reuse reserved'), 19 stars. The repo holds TWO designs, so `path` scopes this row: kastenwagen-1840-pcb/kastenwagen-1840-pcb.kicad_pcb places 64 MX footprints at 64 positions (with 2u/2.25u/2.75u/7u alternates), Elite-C, two encoders; the record declares LAYOUT_all 65 and LAYOUT_7u_space 62, and with two boards in the repo the build's count join decides -- 64 matches neither. Also in the tree: the Kastenwagen 48's own board (51 switches; QMK nopunin10did/kastenwagen48 declares 53 and 50, no row drafted) and a switch PLATE, kastenwagen-1840-plate/kastenwagen-plate.kicad_pcb, whose MX_plate_cutouts footprints the scanner reads as 60 switches (the 48's plate, kastenwagen-48-plate/kastenwagen-plate.kicad_pcb, likewise reads as 50) -- plates a board-decline should name before this repo is scanned. Two bottom plates complete the six .kicad_pcb files, kastenwagen-1840-plate/kastenwagen-bottom-plate.kicad_pcb and kastenwagen-48-plate/kastenwagen-48-bottom.kicad_pcb; both read as 0 switches, so they are harmless, but a declines ruling should cover all four non-board files. Ruled: a moderator (fowlie) on /moderation (intake bot, backlog #117)."
 
 [[entry]]
 tree     = "qmk"
@@ -7000,8 +7000,8 @@ source   = "yoichiro/lunakey"
 path     = "mini"
 stated   = ""
 signal   = "dev-seed"
-verdict  = "drafted"
-note     = "QMK's own record states no url; its readme names Yoichiro Tanaka (github.com/yoichiro) as maintainer, matching the repo owner. Confirmed at HEAD d3a36e247d: not a fork, 42 stars, 'Lunakey License' -- CC-BY-NC-SA-4.0 with commercial use by permission. The repo holds THREE designs (macro, mini, pico), so `path` scopes this row: mini/rev6/pcb/lunakey_mini.kicad_pcb places 44 MX/Choc hotswap footprints at 44 positions, both halves in one file, two Pro Micro; the record declares LAYOUT_split_3x6_4 44, which matches. Batch 2 set this repo aside for the multi-design attribution problem; `path` is the answer the Scotto rows use. Measured the same way: pico/rev1 and pico/rev2 ALSO place 44 (the Pico is the RP2040 sibling, QMK yoichiro/lunakey_pico, also 44), and macro/rev3 places 11 (yoichiro/lunakey_macro, 11) -- so watch that the Mini's record does not attach to the Pico's boards under the board-first pass's count join."
+verdict  = "confirmed"
+note     = "QMK's own record states no url; its readme names Yoichiro Tanaka (github.com/yoichiro) as maintainer, matching the repo owner. Confirmed at HEAD d3a36e247d: not a fork, 42 stars, 'Lunakey License' -- CC-BY-NC-SA-4.0 with commercial use by permission. The repo holds THREE designs (macro, mini, pico), so `path` scopes this row: mini/rev6/pcb/lunakey_mini.kicad_pcb places 44 MX/Choc hotswap footprints at 44 positions, both halves in one file, two Pro Micro; the record declares LAYOUT_split_3x6_4 44, which matches. Batch 2 set this repo aside for the multi-design attribution problem; `path` is the answer the Scotto rows use. Measured the same way: pico/rev1 and pico/rev2 ALSO place 44 (the Pico is the RP2040 sibling, QMK yoichiro/lunakey_pico, also 44), and macro/rev3 places 11 (yoichiro/lunakey_macro, 11) -- so watch that the Mini's record does not attach to the Pico's boards under the board-first pass's count join. Ruled: a moderator (fowlie) on /moderation (intake bot, backlog #117)."
 
 # -- tree = "cheapino-vial" -----------------------------------------------------
 # A design whose FIRMWARE RECORD IS NOT UPSTREAM. Backlog #64, and the first row of
@@ -7121,8 +7121,8 @@ source   = "harrycutts/twentypad"
 path     = false
 stated   = "https://github.com/HarryCutts/twentypad/"
 signal   = "qmk-url"
-verdict  = "drafted"
-note     = ""
+verdict  = "confirmed"
+note     = "Ruled: a moderator (fowlie) on /moderation (intake bot, backlog #117)."
 
 [[entry]]
 tree     = "qmk"
@@ -7132,8 +7132,8 @@ source   = "keotl/11squares"
 path     = false
 stated   = "https://github.com/keotl/11squares"
 signal   = "qmk-url"
-verdict  = "drafted"
-note     = ""
+verdict  = "confirmed"
+note     = "Ruled: a moderator (fowlie) on /moderation (intake bot, backlog #117)."
 
 [[entry]]
 tree     = "qmk"
@@ -7143,8 +7143,8 @@ source   = "sanfeps/mithril_kb"
 path     = false
 stated   = "https://github.com/sanfeps/mithril_kb"
 signal   = "qmk-url"
-verdict  = "drafted"
-note     = ""
+verdict  = "confirmed"
+note     = "Ruled: a moderator (fowlie) on /moderation (intake bot, backlog #117)."
 
 [[entry]]
 tree     = "qmk"
