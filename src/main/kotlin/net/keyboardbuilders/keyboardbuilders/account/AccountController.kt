@@ -36,6 +36,8 @@ class AccountController(
     private val publishing: Publishing,
     private val site: SiteUrl,
     private val silhouettes: Silhouettes,
+    private val uploads: net.keyboardbuilders.keyboardbuilders.community.PhotoUploads,
+    private val contributors: net.keyboardbuilders.keyboardbuilders.community.Contributors,
 ) {
 
     @GetMapping("/account")
@@ -46,8 +48,9 @@ class AccountController(
         model.addAttribute("designs", seed.all().filter { it.isOwnedBy(login) }.map {
             OwnedDesign(it.core.slug.value, it.core.name.value, it.core.slug.value !in hidden, it.rowSilhouette(silhouettes))
         })
+        model.addAttribute("photos", photoSummary(login))
         model.addAttribute("csrf", csrf)
-        model.addAttribute("head", Head(title = "Your designs", indexable = false))
+        model.addAttribute("head", Head(title = "Your account", indexable = false))
         model.addAttribute("site", site)
         return "account"
     }
@@ -75,6 +78,23 @@ class AccountController(
     }
 
     /** GitHub's username. `getName()` is the numeric id under Spring's GitHub defaults. */
+    /**
+     * Where the build photos someone added stand, in one line (2026-11-24). Sign-in lands
+     * here, so a turned-down photo is found here, with a link to their page for the notes.
+     * Null for someone who never added one.
+     */
+    private fun photoSummary(login: String): String? {
+        val mine = uploads.byLogin(login)
+        if (mine.isEmpty()) return null
+        val by = mine.groupingBy { it.status }.eachCount()
+        val parts = listOfNotNull(
+            "${contributors.points(login)} points",
+            by[net.keyboardbuilders.keyboardbuilders.community.Upload.Status.REJECTED]?.let { "$it not accepted" },
+            by[net.keyboardbuilders.keyboardbuilders.community.Upload.Status.WAITING]?.let { "$it waiting for review" },
+        )
+        return parts.joinToString(", ") + "."
+    }
+
     private fun OAuth2User.login(): String =
         getAttribute<String>("login") ?: error("GitHub sent no login")
 }

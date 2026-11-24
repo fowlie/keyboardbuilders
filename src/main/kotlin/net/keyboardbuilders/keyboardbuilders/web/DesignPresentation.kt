@@ -370,6 +370,8 @@ data class PhotoView(
     val height: Int,
     val creditUrl: String? = null,
     val creditName: String? = null,
+    /** The login of whoever added it here; the caption then reads "Photo added by @x". */
+    val addedBy: String? = null,
 )
 
 /** `percent` is derived, never stored -- see `DesignCompleteness.percent` for the rounding rule.
@@ -872,6 +874,7 @@ fun Design.toPage(
                 url = photos.url(it), width = it.width, height = it.height,
                 creditUrl = it.credit,
                 creditName = it.credit?.let { c -> java.net.URI(c).host?.removePrefix("www.") ?: c },
+                addedBy = it.addedBy,
             )
         },
         completeness = completeness().let {

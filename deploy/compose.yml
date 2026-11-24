@@ -69,6 +69,12 @@ services:
     env_file:
       - path: github.env
         required: false
+      # THE BUCKET (2026-11-24): KB_S3_ACCESS_KEY and KB_S3_SECRET_KEY, the same two the
+      # intake bot has in /etc/intake/env, in s3.env beside this file (chmod 600). An
+      # approved build photo is copied to the bucket so it outlives this server. Without
+      # the file the app still runs, and approved photos stay on local disk only.
+      - path: s3.env
+        required: false
 
     environment:
       KB_DATABASE: /var/lib/keyboardbuilders/app.db

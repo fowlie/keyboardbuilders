@@ -1815,3 +1815,18 @@ table.build-grid ul.offers li.excluded { color: var(--muted); }
 .moderate-url input { font: inherit; padding: 0.4rem 0.5rem; }
 .moderate-url button { justify-self: start; }
 
+
+/* Build photos from people (2026-11-24). */
+.photo-offer { margin: 0.6rem 0 1.2rem; color: var(--muted); }
+.upload-preview, .review-shot img { display: block; max-width: 100%; height: auto; border-radius: 6px; }
+.review-photos { list-style: none; margin: 0; padding: 0; display: grid; gap: 1.4rem; }
+.review-form { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; }
+.review-form input[type=text] { flex: 1; min-width: 10rem; }
+.form-error { color: #b3261e; }
+.builder-who { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+.builder-points { font-size: 1.2rem; margin: 0; }
+.builder-photos { list-style: none; margin: 0 0 1rem; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 1rem; }
+.builder-photos li { display: flex; flex-direction: column; gap: 0.3rem; }
+.builder-photos img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 6px; display: block; }
+.builder-photos .rejected img { opacity: 0.5; }
+.builder-state { font-size: 0.85rem; color: var(--muted); }

@@ -3,6 +3,7 @@
 @import net.keyboardbuilders.keyboardbuilders.moderation.QuestionView
 @import net.keyboardbuilders.keyboardbuilders.moderation.QueueItem
 @import net.keyboardbuilders.keyboardbuilders.moderation.PendingAnswer
+@import net.keyboardbuilders.keyboardbuilders.moderation.WaitingPhoto
 @import org.springframework.security.web.csrf.CsrfToken
 @param head: Head
 @param site: SiteUrl
@@ -15,6 +16,8 @@
 @param invited: Boolean
 @param pending: List<PendingAnswer>
 @param checkNote: String?
+@param reviewer: Boolean = false
+@param photos: List<WaitingPhoto> = emptyList()
 
 <%--
     Backlog #117: the intake bot's questions, one at a time (ModerateController). Same
@@ -25,7 +28,36 @@
 @template.layout(head = head, site = site, content = @`
     <article class="settings moderate">
         <h1>Moderation</h1>
-        @if(!invited)
+        @if(reviewer)
+            <section class="settings-card" id="photos">
+                <h2>Build photos</h2>
+                @if(photos.isEmpty())
+                    <p class="settings-q">No photos waiting.</p>
+                @else
+                    <p class="settings-q">Say yes if it shows this board, assembled, keycaps on. Renders, bare circuit boards and diagrams get a no.</p>
+                    <ul class="review-photos">
+                        @for(p in photos)
+                            <li>
+                                <a href="${p.url}" class="review-shot"><img src="${p.url}" width="${p.width}" height="${p.height}" loading="lazy" alt="Build photo for ${p.name}"></a>
+                                <p><a href="/designs/${p.slug}">${p.name}</a>, added by <a href="/builders/${p.by}">@${p.by}</a></p>
+                                @if(p.mine)
+                                    <p class="settings-fine">Your own photo. Someone else reviews it.</p>
+                                @else
+                                    <form method="post" action="/moderation/photos/${p.id}" class="review-form">
+                                        <input type="hidden" name="${csrf.parameterName}" value="${csrf.token}">
+                                        <button type="submit" name="decision" value="yes" class="settings-save">Yes</button>
+                                        <input type="text" name="note" maxlength="200" placeholder="Why not? (optional)">
+                                        <button type="submit" name="decision" value="no" class="key-quiet">No</button>
+                                    </form>
+                                @endif
+                            </li>
+                        @endfor
+                    </ul>
+                @endif
+            </section>
+        @endif
+        @if(!invited && reviewer)
+        @elseif(!invited)
             <section class="settings-card">
                 <h2>Moderation is invite-only for now</h2>
                 <p class="settings-q">

@@ -7,6 +7,7 @@
 @param login: String
 @param designs: List<OwnedDesign>
 @param csrf: CsrfToken
+@param photos: String? = null
 
 <%--
     "Your designs", backlog #116 (AccountController). Built from /settings' pieces: the
@@ -15,7 +16,7 @@
 --%>
 @template.layout(head = head, site = site, content = @`
     <article class="settings account">
-        <h1>Your designs</h1>
+        <h1>Your account</h1>
         <div class="account-who">
             <p class="settings-lede">Signed in with GitHub as <strong>${login}</strong>.</p>
             <form method="post" action="/logout">
@@ -23,6 +24,13 @@
                 <button type="submit" class="settings-save">Sign out</button>
             </form>
         </div>
+
+        @if(photos != null)
+            <section class="settings-card">
+                <h2>Your build photos</h2>
+                <p class="settings-q">${photos} <a href="/builders/${login.lowercase()}">See your page</a></p>
+            </section>
+        @endif
 
         <section class="settings-card">
             @if(designs.isEmpty())

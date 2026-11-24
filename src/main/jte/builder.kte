@@ -1,0 +1,72 @@
+@import net.keyboardbuilders.keyboardbuilders.web.Head
+@import net.keyboardbuilders.keyboardbuilders.web.SiteUrl
+@import net.keyboardbuilders.keyboardbuilders.community.BuilderPhoto
+@import net.keyboardbuilders.keyboardbuilders.community.Upload
+@import org.springframework.security.web.csrf.CsrfToken
+@param head: Head
+@param site: SiteUrl
+@param login: String
+@param self: Boolean
+@param points: Int
+@param canReview: Boolean
+@param revoked: Boolean
+@param photos: List<BuilderPhoto>
+@param reviewed: Int
+@param manage: Boolean
+@param csrf: CsrfToken?
+
+<%--
+    Someone's page (BuilderController). NO BACKTICKS anywhere in this file -- one closes
+    the raw string the page is written in.
+--%>
+@template.layout(head = head, site = site, content = @`
+    <article class="settings builder">
+        <div class="builder-who">
+            <h1><a href="https://github.com/${login}" rel="nofollow noopener">@${login}</a></h1>
+            <p class="builder-points"><strong>${points}</strong> points</p>
+        </div>
+        @if(canReview)
+            <p class="settings-lede">Can review photos</p>
+        @elseif(revoked)
+            <p class="settings-lede">Review rights taken away</p>
+        @endif
+
+        <section class="settings-card">
+            !{val approved = photos.filter { it.status == Upload.Status.APPROVED }}
+            <h2>Photos (${approved.size})</h2>
+            @if(photos.isEmpty())
+                <p class="settings-q">None yet.@if(self) Open a design with no photo and add yours.@endif</p>
+            @else
+                <ul class="builder-photos">
+                    @for(p in photos)
+                        <li class="${p.status.name.lowercase()}">
+                            @if(p.status != Upload.Status.REJECTED)
+                                <a href="/designs/${p.slug}"><img src="${p.thumb}" alt="${p.name}" loading="lazy"></a>
+                            @endif
+                            <a href="/designs/${p.slug}">${p.name}</a>
+                            @if(p.status == Upload.Status.WAITING)
+                                <span class="builder-state">waiting for review</span>
+                            @elseif(p.status == Upload.Status.REJECTED)
+                                <span class="builder-state">not accepted@if(p.note != null): "${p.note}"@endif</span>
+                            @endif
+                        </li>
+                    @endfor
+                </ul>
+            @endif
+            <p class="settings-fine">Photos reviewed: ${reviewed}</p>
+        </section>
+
+        @if(manage && csrf != null)
+            <section class="settings-card">
+                <form method="post" action="/builders/${login}/review-rights">
+                    <input type="hidden" name="${csrf!!.parameterName}" value="${csrf!!.token}">
+                    @if(revoked)
+                        <button type="submit" name="action" value="restore" class="settings-save">Give back review rights</button>
+                    @else
+                        <button type="submit" name="action" value="revoke" class="key-quiet">Take away review rights</button>
+                    @endif
+                </form>
+            </section>
+        @endif
+    </article>
+`)

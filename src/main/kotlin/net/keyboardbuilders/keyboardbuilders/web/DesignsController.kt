@@ -49,6 +49,7 @@ class DesignsController(
      *  wireless support, as data since 2026-09-10 (`seed/firmwares.toml`). */
     private val firmwares: FirmwareCatalog,
     private val unpublished: net.keyboardbuilders.keyboardbuilders.persistence.Unpublished,
+    private val photoSlots: net.keyboardbuilders.keyboardbuilders.community.PhotoSlots,
 ) {
 
     /**
@@ -253,6 +254,8 @@ class DesignsController(
     fun show(
         @PathVariable slug: String,
         @CookieValue(HeroFirst.COOKIE, required = false) hero: String?,
+        @org.springframework.security.core.annotation.AuthenticationPrincipal
+        user: org.springframework.security.oauth2.core.user.OAuth2User?,
     ): ModelAndView {
         catalog.bySlug(slug)?.let { design ->
             val page = design.toPage(
@@ -271,6 +274,7 @@ class DesignsController(
                     "hearts" to hearts.count(design.core.slug.value),
                     // /settings: the render leads only where there is one to lead with.
                     "renderLeads" to (HeroFirst.of(hero) == HeroFirst.Render && page.render != null),
+                    "slot" to photoSlots.of(design, photos.of(design.core.slug.value), user?.getAttribute<String>("login")),
                 ),
             )
         }

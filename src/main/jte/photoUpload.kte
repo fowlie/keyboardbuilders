@@ -1,0 +1,53 @@
+@import net.keyboardbuilders.keyboardbuilders.web.Head
+@import net.keyboardbuilders.keyboardbuilders.web.SiteUrl
+@import org.springframework.security.web.csrf.CsrfToken
+@param head: Head
+@param site: SiteUrl
+@param slug: String
+@param name: String
+@param state: String
+@param error: String?
+@param photo: String?
+@param uploadId: Long?
+@param csrf: CsrfToken
+
+<%--
+    Add a build photo, or take one down (PhotoUploadController). state is add, waiting or
+    remove. NO BACKTICKS anywhere in this file -- one closes the raw string the page is
+    written in.
+--%>
+@template.layout(head = head, site = site, content = @`
+    <p class="crumb"><a href="/designs/${slug}">&larr; ${name}</a></p>
+    <article class="settings">
+        @if(state == "remove")
+            <h1>Remove the photo</h1>
+            <section class="settings-card">
+                <img class="upload-preview" src="${photo}" alt="The build photo of ${name}">
+                <p class="settings-q">The page goes back to having no photo, and whoever added it loses its 10 points.</p>
+                <form method="post" action="/designs/${slug}/photo/remove">
+                    <input type="hidden" name="${csrf.parameterName}" value="${csrf.token}">
+                    <input type="hidden" name="id" value="${uploadId}">
+                    <button type="submit" class="settings-save">Remove photo</button>
+                </form>
+            </section>
+        @elseif(state == "waiting")
+            <h1>Add a build photo for ${name}</h1>
+            <section class="settings-card">
+                <p class="settings-q">Someone's photo is already waiting for review.</p>
+            </section>
+        @else
+            <h1>Add a build photo for ${name}</h1>
+            <section class="settings-card">
+                <p class="settings-q">A photo of an assembled ${name}, keycaps on. Yours or one you found.</p>
+                @if(error != null)
+                    <p class="form-error">${error}</p>
+                @endif
+                <form method="post" action="/designs/${slug}/photo" enctype="multipart/form-data">
+                    <input type="hidden" name="${csrf.parameterName}" value="${csrf.token}">
+                    <input type="file" name="photo" accept="image/jpeg,image/png" required>
+                    <button type="submit" class="settings-save">Send for review</button>
+                </form>
+            </section>
+        @endif
+    </article>
+`)

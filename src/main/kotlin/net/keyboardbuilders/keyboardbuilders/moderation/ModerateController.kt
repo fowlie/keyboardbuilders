@@ -22,6 +22,12 @@ data class QuestionView(
     val takesUrl: Boolean,
 )
 
+/** A build photo waiting for a yes or no (owner, 2026-11-24). [mine] is the reviewer's own: they can't decide it. */
+data class WaitingPhoto(
+    val id: Long, val slug: String, val name: String, val url: String,
+    val width: Int, val height: Int, val by: String, val mine: Boolean,
+)
+
 /** One row of the queue under the question: every open question links to itself. */
 data class QueueItem(val title: String, val kind: String, val href: String, val current: Boolean)
 
@@ -62,6 +68,10 @@ class ModerateController(
     private val markdown: QuestionMarkdown,
     private val site: SiteUrl,
     private val lastCheck: LastCheck,
+    private val uploads: net.keyboardbuilders.keyboardbuilders.community.PhotoUploads,
+    private val contributors: net.keyboardbuilders.keyboardbuilders.community.Contributors,
+    private val catalog: net.keyboardbuilders.keyboardbuilders.catalog.DesignCatalog,
+    private val review: net.keyboardbuilders.keyboardbuilders.community.PhotoReview,
 ) {
 
     @GetMapping("/moderation")
@@ -74,9 +84,15 @@ class ModerateController(
         model.addAttribute("csrf", csrf)
         model.addAttribute("head", Head(title = "Moderation", indexable = false))
         model.addAttribute("site", site)
+        val login = user.getAttribute<String>("login")
+        // BUILD PHOTOS: moderators, and anyone with 50 points, review them here.
+        val reviewer = contributors.canReview(login)
+        model.addAttribute("reviewer", reviewer)
+        model.addAttribute("photos", if (reviewer) waitingPhotos(login!!) else emptyList<WaitingPhoto>())
         // NOT A MODERATOR: an invitation, not an error. The footer links here for everyone
-        // (owner, 2026-11-15), and the queue itself is never shown.
-        if (!moderators.includes(user.getAttribute<String>("login"))) {
+        // (owner, 2026-11-15), and the queue itself is never shown. A reviewer who isn't a
+        // moderator sees the photos and nothing of the bot's questions.
+        if (!moderators.includes(login)) {
             model.addAttribute("invited", false)
             model.addAttribute("question", null)
             model.addAttribute("prev", null); model.addAttribute("next", null)
@@ -101,6 +117,36 @@ class ModerateController(
         model.addAttribute("checkNote", checkNote(lastCheck.at(), Instant.now()))
         model.addAttribute("invited", true)
         return "moderation"
+    }
+
+    /** Yes or no to a waiting build photo. Nobody decides their own. */
+    @PostMapping("/moderation/photos/{id}")
+    fun decidePhoto(
+        @AuthenticationPrincipal user: OAuth2User,
+        @org.springframework.web.bind.annotation.PathVariable id: Long,
+        @RequestParam decision: String,
+        @RequestParam(required = false) note: String?,
+    ): String {
+        val login = user.getAttribute<String>("login")
+        if (!contributors.canReview(login)) throw ResponseStatusException(HttpStatus.FORBIDDEN, "Reviewers only.")
+        val upload = uploads.get(id) ?: throw ResponseStatusException(HttpStatus.NOT_FOUND, "no such photo")
+        if (upload.login.equals(login, ignoreCase = true)) {
+            throw ResponseStatusException(HttpStatus.FORBIDDEN, "Someone else has to review your own photo.")
+        }
+        when (decision) {
+            // A yes copies the photo to the bucket; a no deletes it and keeps the note.
+            "yes" -> review.approve(id, login!!)
+            "no" -> review.reject(id, login!!, note)
+            else -> throw ResponseStatusException(HttpStatus.BAD_REQUEST, "'$decision' is not yes or no")
+        }
+        return "redirect:/moderation#photos"
+    }
+
+    private fun waitingPhotos(login: String): List<WaitingPhoto> = uploads.waiting().map {
+        WaitingPhoto(
+            it.id, it.slug, catalog.bySlug(it.slug)?.core?.name?.value ?: it.slug, "/photos/${it.jpg}.jpg",
+            it.width, it.height, it.login, mine = it.login.equals(login, ignoreCase = true),
+        )
     }
 
     /**

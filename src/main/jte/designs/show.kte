@@ -6,6 +6,7 @@
 @param site: SiteUrl
 @param hearts: Int = 0
 @param renderLeads: Boolean = false
+@param slot: net.keyboardbuilders.keyboardbuilders.community.PhotoSlot = net.keyboardbuilders.keyboardbuilders.community.PhotoSlot()
 
 @template.layout(head = head, site = site, content = @`
     <p class="crumb"><a href="/designs">&larr; All designs</a></p>
@@ -112,7 +113,9 @@
                 <img src="${photo.url}" width="${photo.width}" height="${photo.height}"
                      alt="Photo of an assembled ${design.name}">
             </a>
-            @if(photo.creditUrl != null)
+            @if(photo.addedBy != null)
+                <figcaption>An assembled ${design.name}. Photo added by <a href="/builders/${photo.addedBy}">@${photo.addedBy}</a> &middot; ${slot.points} points.@if(slot.removeId != null) <a href="/designs/${design.slug}/photo">Remove</a>@endif</figcaption>
+            @elseif(photo.creditUrl != null)
                 <figcaption>An assembled ${design.name}. Photo: <a class="external" href="${photo.creditUrl}" rel="nofollow noopener" target="_blank" title="Opens in a new tab">${photo.creditName}<svg class="ext" viewBox="0 0 24 24" width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6"/><path d="M20 4 10 14"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>.</figcaption>
             @else
                 <figcaption>An assembled ${design.name}, from the project's own README.</figcaption>
@@ -135,6 +138,14 @@
                 No switches or keycaps: this is the board as manufactured.
             </figcaption>
         </figure>
+    @endif
+
+    <%-- BUILD PHOTOS FROM PEOPLE (owner, 2026-11-24): one photo per design, and the
+         invitation only where a page has none. --%>
+    @if(slot.waiting)
+        <p class="photo-offer">A build photo is waiting for review.</p>
+    @elseif(slot.canAdd)
+        <p class="photo-offer">No build photo yet. Built one? <a href="/designs/${design.slug}/photo">Add yours</a></p>
     @endif
 
     <%-- THE RAIL: this board's other pictures, small. Layout silhouettes deliberately do
@@ -160,7 +171,7 @@
                         <img src="${photo.url}" width="${photo.width}" height="${photo.height}" loading="lazy" alt="">
                         <span>Photo</span>
                     </a>
-                    <span class="shot-photo-caption" hidden>@if(photo.creditUrl != null)An assembled ${design.name}. Photo: <a class="external" href="${photo.creditUrl}" rel="nofollow noopener" target="_blank">${photo.creditName}</a>.@else An assembled ${design.name}, from the project's own README.@endif</span>
+                    <span class="shot-photo-caption" hidden>@if(photo.addedBy != null)An assembled ${design.name}. Photo added by @${photo.addedBy}.@elseif(photo.creditUrl != null)An assembled ${design.name}. Photo: <a class="external" href="${photo.creditUrl}" rel="nofollow noopener" target="_blank">${photo.creditName}</a>.@else An assembled ${design.name}, from the project's own README.@endif</span>
                 </li>
             @endif
             <li>

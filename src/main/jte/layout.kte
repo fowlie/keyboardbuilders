@@ -99,6 +99,8 @@
     @endif
 </head>
 <body>
+<%-- The signed-in GitHub login, or null: the last top-bar link and the footer read it (2026-11-24). --%>
+!{val me = net.keyboardbuilders.keyboardbuilders.web.SignedIn.login()}
 <header class="site">
     <%-- THE MARK, INLINE AND NOT AN img, so it inherits currentColor and needs no second
          file for the dark theme. Four keys stepped into a column stagger: pinky lowest,
@@ -115,13 +117,13 @@
         </svg>
         <span>keyboardbuilders</span>
     </a>
-    <nav class="bar-links"><a href="/designs">Designs</a> <a href="/favorites">Favorites</a> <a href="/settings">Settings</a></nav>
+    <nav class="bar-links"><a href="/designs">Designs</a> <a href="/favorites">Favorites</a> <a href="/settings">Settings</a>@if(me != null) <a href="/account">@${me}</a>@endif</nav>
     <%-- THE SAME LINKS BEHIND A MENU on a narrow screen, where they wrapped onto a second
          line (owner, 2026-10-02). A details element, so it opens without JavaScript;
          app.css shows exactly one of the two. --%>
     <details class="menu">
         <summary aria-label="Menu">&#9776;</summary>
-        <nav><a href="/designs">Designs</a> <a href="/favorites">Favorites</a> <a href="/settings">Settings</a></nav>
+        <nav><a href="/designs">Designs</a> <a href="/favorites">Favorites</a> <a href="/settings">Settings</a>@if(me != null) <a href="/account">@${me}</a>@endif</nav>
     </details>
     <%-- CLOSED BY A TAP OUTSIDE IT OR BY ESCAPE, as a menu is expected to (reader-reported,
          2026-10-04). `pageshow` closes it too: Back restores a page from the cache with the
@@ -177,7 +179,6 @@
         <nav class="foot-col" aria-label="About">
             <p class="foot-label">About</p>
             <a href="/about">About this site</a>
-            <a href="/account">Designers: sign in</a>
             <a href="mailto:hello@keyboardbuilders.net?subject=keyboardbuilders">hello@<wbr>keyboardbuilders.net</a>
             <%-- AGPL §13 asks a site running AGPL code to offer its source; every page does. --%>
             <a class="source-link external" href="https://github.com/fowlie/keyboardbuilders" rel="noopener" target="_blank"><svg class="gh" viewBox="0 0 16 16" width="13" height="13" fill="currentColor" aria-hidden="true" focusable="false"><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"/></svg>Source code<svg class="ext" viewBox="0 0 24 24" width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6"/><path d="M20 4 10 14"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
@@ -186,6 +187,10 @@
             <p class="foot-label">Support</p>
             <a class="support-link external" href="https://ko-fi.com/keyboardbuilders" rel="noopener" target="_blank">Buy me a beer 🍺<svg class="ext" viewBox="0 0 24 24" width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6"/><path d="M20 4 10 14"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
             <span class="foot-fine">or share the site with a friend</span>
+            <%-- Signed in, the top bar has their name instead (2026-11-24). --%>
+            @if(me == null)
+                <a href="/account">Sign in to add photos</a>
+            @endif
             <a href="/moderation">Moderation</a>
         </div>
     </div>

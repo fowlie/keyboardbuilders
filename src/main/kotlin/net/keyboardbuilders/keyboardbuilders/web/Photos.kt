@@ -1,5 +1,6 @@
 package net.keyboardbuilders.keyboardbuilders.web
 
+import net.keyboardbuilders.keyboardbuilders.community.PhotoUploads
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.core.io.Resource
 import org.springframework.stereotype.Component
@@ -29,6 +30,7 @@ import tools.jackson.module.kotlin.readValue
 class Photos(
     mapper: ObjectMapper,
     @Value("classpath:seed/photos.json") resource: Resource,
+    private val uploads: PhotoUploads? = null,
 ) {
     /**
      * `sourceUrl` names the repo the photo was approved from, so the copy is auditable --
@@ -45,12 +47,24 @@ class Photos(
         val height: Int,
         val sourceUrl: String,
         val credit: String? = null,
+        /** The GitHub login of whoever added it on this site (2026-11-24); null for the seed's. */
+        val addedBy: String? = null,
     )
 
     private val bySlug: Map<String, Photo> =
         resource.inputStream.use { mapper.readValue<Map<String, Photo>>(it) }
 
-    fun of(slug: String): Photo? = bySlug[slug]
+    /**
+     * AN APPROVED UPLOAD WINS OVER THE SEED'S PHOTO (owner, 2026-11-24): uploads are only
+     * taken where a page has no photo, so a seed photo beside one arrived later, from the
+     * nightly job, and the person's photo stays.
+     */
+    fun of(slug: String): Photo? =
+        uploads?.approvedFor(slug)?.let { Photo(it.jpg, it.width, it.height, sourceUrl = "", addedBy = it.login) }
+            ?: bySlug[slug]
+
+    /** The seed's photo alone, ignoring uploads. */
+    fun fromSeed(slug: String): Photo? = bySlug[slug]
 
     /**
      * Same-origin, through [PhotoAssetController] -- not the object store directly. A

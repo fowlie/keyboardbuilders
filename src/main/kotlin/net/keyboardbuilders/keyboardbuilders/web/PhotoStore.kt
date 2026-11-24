@@ -34,6 +34,21 @@ class PhotoStore(
 ) {
     fun bytes(digest: String): ByteArray? = fromDisk(digest) ?: fromBucket(digest)
 
+    /**
+     * Keeps a photo someone uploaded (2026-11-24). On disk only: the bucket is filled by
+     * `scripts/add_photo.py` from the dev machine, and an upload never passes through
+     * there. In production the directory is under /var/lib/keyboardbuilders, beside the
+     * database, so it lives as long as the database rows that point at it.
+     */
+    fun save(digest: String, jpeg: ByteArray) {
+        require(DIGEST.matches(digest)) { "not a digest: $digest" }
+        val target = Path.of(dir, "$digest.jpg")
+        Files.createDirectories(target.parent)
+        val tmp = Files.createTempFile(target.parent, "$digest.", ".jpg.tmp")
+        Files.write(tmp, jpeg)
+        Files.move(tmp, target, StandardCopyOption.ATOMIC_MOVE, StandardCopyOption.REPLACE_EXISTING)
+    }
+
     private fun fromDisk(digest: String): ByteArray? {
         val path: Path = Path.of(dir, "$digest.jpg")
         return if (Files.isRegularFile(path)) Files.readAllBytes(path) else null
@@ -60,6 +75,13 @@ class PhotoStore(
         val tmp = Files.createTempFile(target.parent, "$digest.", ".jpg.tmp")
         Files.write(tmp, bytes)
         Files.move(tmp, target, StandardCopyOption.ATOMIC_MOVE, StandardCopyOption.REPLACE_EXISTING)
+    }
+
+    /** Deletes an uploaded photo and its card copy from disk (a declined upload, 2026-11-24). */
+    fun delete(digest: String) {
+        require(DIGEST.matches(digest)) { "not a digest: $digest" }
+        Files.deleteIfExists(Path.of(dir, "$digest.jpg"))
+        Files.deleteIfExists(Path.of(dir, "$digest-card.jpg"))
     }
 
     /**
@@ -110,6 +132,7 @@ class PhotoStore(
     companion object {
         /** Twice the widest a card shows a photo (~320px), for 2x screens. */
         const val CARD_WIDTH = 640
+        private val DIGEST = Regex("[0-9a-f]{32}")
         private const val CARD_QUALITY = 0.82f
         private val TIMEOUT = Duration.ofSeconds(20).toMillis().toInt()
     }
