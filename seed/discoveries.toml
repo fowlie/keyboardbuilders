@@ -167,3 +167,13 @@ moderator = "auto"
 repo = "venc0r/mnhttn48-unibody"
 verdict = "design"
 moderator = "auto"
+
+[[entry]]
+repo = "CopperPilot/desktop-computer-retro"
+verdict = "not_design"
+moderator = "fowlie"
+
+[[entry]]
+repo = "DavidMolTor/ValkiriaSplit"
+verdict = "design"
+moderator = "fowlie"
