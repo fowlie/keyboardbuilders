@@ -182,3 +182,68 @@ moderator = "fowlie"
 repo = "Devildoggy-debug/keyboard-2"
 verdict = "not_design"
 moderator = "fowlie"
+
+[[entry]]
+repo = "68mschmitt/cleavboard"
+verdict = "design"
+moderator = "fowlie"
+
+[[entry]]
+repo = "AYUSH-pro-grammer/keyboard-v2"
+verdict = "design"
+moderator = "fowlie"
+
+[[entry]]
+repo = "AdJakub/Tznami-pw1.3"
+verdict = "design"
+moderator = "fowlie"
+
+[[entry]]
+repo = "Adnanosman9/Alice_keyboard"
+verdict = "design"
+moderator = "fowlie"
+
+[[entry]]
+repo = "Anisur0012/micropad"
+verdict = "design"
+moderator = "fowlie"
+
+[[entry]]
+repo = "AntonioAlbt/GamerPad"
+verdict = "design"
+moderator = "fowlie"
+
+[[entry]]
+repo = "Bananaking23/splittie"
+verdict = "design"
+moderator = "fowlie"
+
+[[entry]]
+repo = "BlaiseRideout/Yoga-Split-Keyboard"
+verdict = "design"
+moderator = "fowlie"
+
+[[entry]]
+repo = "Bobert3D/solemn-v1.1"
+verdict = "design"
+moderator = "fowlie"
+
+[[entry]]
+repo = "Cbeniaris/MagSplit"
+verdict = "design"
+moderator = "fowlie"
+
+[[entry]]
+repo = "ChenchuH/4x12_Keyboard_KiCad"
+verdict = "design"
+moderator = "fowlie"
+
+[[entry]]
+repo = "EDToaster/tapir"
+verdict = "design"
+moderator = "fowlie"
+
+[[entry]]
+repo = "FishyNavi/keyboard"
+verdict = "design"
+moderator = "fowlie"
