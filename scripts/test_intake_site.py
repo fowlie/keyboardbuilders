@@ -11,6 +11,8 @@ from unittest import mock
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 import intake_answer  # noqa: E402
+import intake_ask  # noqa: E402
+from intake_ask import uploaded_slugs  # noqa: E402
 from intake_ask import choices_for, discovery_questions, photo_question, write_questions_file  # noqa: E402
 from intake_answer import read_answers, site_answers, write_checked  # noqa: E402
 
@@ -204,3 +206,47 @@ class Checked(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+# The table V10__photo_upload.sql makes, as much of it as the bot reads.
+UPLOADS = """CREATE TABLE photo_upload (id INTEGER PRIMARY KEY, slug TEXT NOT NULL,
+             login TEXT NOT NULL, jpg TEXT NOT NULL, status TEXT NOT NULL)"""
+
+
+class UploadedPhotos(unittest.TestCase):
+    """2026-11-24: a design someone added a photo to on the site gets no photo question."""
+
+    def db(self, d, rows):
+        path = pathlib.Path(d) / "app.db"
+        con = sqlite3.connect(path)
+        con.execute(UPLOADS)
+        con.executemany("INSERT INTO photo_upload (slug, login, jpg, status) VALUES (?, 'alice', 'x', ?)", rows)
+        con.commit(); con.close()
+        return path
+
+    def test_waiting_and_approved_uploads_count_and_declined_ones_do_not(self):
+        with tempfile.TemporaryDirectory() as d:
+            db = self.db(d, [("abacus", "approved"), ("adalyn", "waiting"), ("4by3", "rejected")])
+            self.assertEqual({"abacus", "adalyn"}, uploaded_slugs(db))
+
+    def test_no_database_or_no_table_is_no_uploads(self):
+        with tempfile.TemporaryDirectory() as d:
+            self.assertEqual(set(), uploaded_slugs(pathlib.Path(d) / "missing.db"))
+            sqlite3.connect(pathlib.Path(d) / "old.db").close()
+            self.assertEqual(set(), uploaded_slugs(pathlib.Path(d) / "old.db"))
+
+    def test_a_design_with_an_uploaded_photo_gets_no_photo_question(self):
+        with tempfile.TemporaryDirectory() as d:
+            d = pathlib.Path(d)
+            (d / "designs.json").write_text(json.dumps([{"slug": "abacus", "name": "Abacus"},
+                                                        {"slug": "adalyn", "name": "Adalyn"}]))
+            (d / "photos.json").write_text("{}")
+            image = {"images": [{"url": "https://example.com/a.jpg"}], "repo": "https://github.com/a/b"}
+            (d / "candidates.json").write_text(json.dumps({"abacus": image, "adalyn": image}))
+            with mock.patch.object(intake_ask, "DESIGNS", d / "designs.json"), \
+                    mock.patch.object(intake_ask, "PHOTOS", d / "photos.json"), \
+                    mock.patch.object(intake_ask, "CANDIDATES", d / "candidates.json"), \
+                    mock.patch.object(intake_ask, "DECISIONS", d / "none.json"), \
+                    mock.patch.object(intake_ask, "DECLINES", d / "none.toml"):
+                asked = intake_ask.photo_questions("https://site", uploaded={"abacus"})
+            self.assertEqual(["adalyn"], [q["slug"] for q in asked])

@@ -55,6 +55,7 @@ import argparse
 import hashlib
 import json
 import pathlib
+import sqlite3
 import sys
 import tomllib
 from collections import defaultdict
@@ -92,7 +93,28 @@ def load_declines():
     return {r["slug"]: r["images"] for r in rows}
 
 
-def photo_questions(site):
+def uploaded_slugs(db):
+    """Designs someone added a photo to on the site, waiting or approved (2026-11-24).
+
+    The site takes an upload only where a page has no photo, and an approved upload wins
+    over a seed photo, so asking about the repo's images for these pages is wasted. Read
+    from the site's database READ-ONLY, as intake_answer.py reads answers. No database,
+    or one from before the table existed, is no uploads.
+    """
+    db = pathlib.Path(db)
+    if not db.exists():
+        return set()
+    con = sqlite3.connect(f"file:{db}?mode=ro", uri=True)
+    try:
+        return {slug for (slug,) in con.execute(
+            "SELECT slug FROM photo_upload WHERE status IN ('waiting', 'approved')")}
+    except sqlite3.OperationalError:
+        return set()
+    finally:
+        con.close()
+
+
+def photo_questions(site, uploaded=frozenset()):
     designs = {d["slug"]: d for d in json.loads(DESIGNS.read_text())}
     photos = json.loads(PHOTOS.read_text())
     decisions = json.loads(DECISIONS.read_text()) if DECISIONS.exists() else {}
@@ -112,7 +134,8 @@ def photo_questions(site):
     questions = []
     for slug, cand in sorted(candidates.items()):
         # A slug no longer published (renamed, declined) has no page to put a photo on.
-        if slug not in designs or slug in photos or slug in decisions or not cand["images"]:
+        if (slug not in designs or slug in photos or slug in decisions or slug in uploaded
+                or not cand["images"]):
             continue
         siblings = [s for s in by_images[fingerprint([i["url"] for i in cand["images"]])]
                     if s != slug]
@@ -394,9 +417,11 @@ def main():
                     help="where the site reads the questions")
     ap.add_argument("--cap", type=int, default=30)
     ap.add_argument("--site", default="https://keyboardbuilders.net")
+    ap.add_argument("--db", type=pathlib.Path, default=pathlib.Path("/var/lib/keyboardbuilders/app.db"),
+                    help="the site's database, for the designs people added photos to")
     args = ap.parse_args()
 
-    questions = (photo_questions(args.site) + board_questions() + source_questions()
+    questions = (photo_questions(args.site, uploaded_slugs(args.db)) + board_questions() + source_questions()
                  + discovery_questions())
     # The cap keeps a night's work bounded.
     todo = pick(questions, args.cap)
