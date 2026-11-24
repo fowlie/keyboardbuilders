@@ -180,6 +180,20 @@ class Answers(unittest.TestCase):
         self.assertEqual(self.apply(q, "1"), (([], []), []))
 
 
+class QuestionId(unittest.TestCase):
+    """Board and source keys carry their tree (`qmk:ai03/orbit`), so the key itself has a
+    colon. Splitting at the first two colons read every such answer as stale, and none
+    was ever applied (found 2026-11-25)."""
+
+    def test_a_key_with_its_tree_stays_whole(self):
+        self.assertEqual(intake_answer.parse_id("board:qmk:ai03/orbit:81d1cfd6e3f1"),
+                         ("board", "qmk:ai03/orbit", "81d1cfd6e3f1"))
+
+    def test_a_key_without_a_colon_still_parses(self):
+        self.assertEqual(intake_answer.parse_id("discovery:a/kbd:f96f40c55a58"),
+                         ("discovery", "a/kbd", "f96f40c55a58"))
+
+
 class Stale(unittest.TestCase):
 
     def test_an_answer_whose_question_changed_is_used_up_not_failed(self):

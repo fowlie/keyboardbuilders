@@ -286,7 +286,7 @@ def site_answers(run, questions_file, db, applied_file, checked=None):
         if qid in done or qid not in by_id:
             continue
         q = by_id[qid]
-        kind, key, fp = qid.split(":", 2)
+        kind, key, fp = parse_id(qid)
         if any(field not in q for field in NEEDS.get(kind, ())):
             continue
         try:
@@ -304,6 +304,14 @@ def site_answers(run, questions_file, db, applied_file, checked=None):
         else:
             ok.append(qid)
     return ok, failed
+
+
+def parse_id(qid):
+    """`kind:key:fingerprint` -> its three parts. A board or source key carries its tree
+    (`qmk:ai03/orbit`), so only the first and the last colon split."""
+    kind, rest = qid.split(":", 1)
+    key, fp = rest.rsplit(":", 1)
+    return kind, key, fp
 
 
 def write_checked(path, at):
