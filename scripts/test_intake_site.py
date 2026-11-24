@@ -40,6 +40,20 @@ class Choices(unittest.TestCase):
         self.assertEqual([c["reply"] for c in choices_for("board", 2)], ["1", "2", "none"])
 
 
+class BoardLink(unittest.TestCase):
+    """Two boards in one folder once linked to the same folder page (2026-11-24)."""
+
+    def test_each_board_file_opens_drawn_in_kicanvas(self):
+        self.assertEqual(
+            intake_ask.board_link("Aidan-OS/Mochi40", "PCB/Hotswap PCB.kicad_pcb"),
+            "https://kicanvas.org/?github=https%3A%2F%2Fgithub.com%2FAidan-OS%2FMochi40"
+            "%2Fblob%2FHEAD%2FPCB%2FHotswap%2520PCB.kicad_pcb")
+
+    def test_two_files_in_one_folder_get_two_links(self):
+        self.assertNotEqual(intake_ask.board_link("a/b", "PCB/PCB.kicad_pcb"),
+                            intake_ask.board_link("a/b", "PCB/Hotswap PCB.kicad_pcb"))
+
+
 class Question(unittest.TestCase):
 
     def setUp(self):

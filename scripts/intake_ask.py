@@ -58,6 +58,7 @@ import pathlib
 import sqlite3
 import sys
 import tomllib
+import urllib.parse
 from collections import defaultdict
 
 REPO = pathlib.Path(__file__).resolve().parent.parent
@@ -247,6 +248,13 @@ def design_name(row, key):
     return row.get("name") or key.split(":", 1)[-1].rsplit("/", 1)[-1]
 
 
+def board_link(repo, path):
+    """One board file, drawn by KiCanvas. Linking its folder gave two boards that share a
+    folder the same link, and GitHub shows a .kicad_pcb only as text."""
+    file = f"https://github.com/{repo}/blob/HEAD/{urllib.parse.quote(path)}"
+    return "https://kicanvas.org/?github=" + urllib.parse.quote(file, safe="")
+
+
 def board_body(key, c, counts, rctrl, split):
     from review_boards import history
     repo, row, free, scan = c["repo"], c["row"], c["free"], c["scan"]
@@ -269,11 +277,10 @@ def board_body(key, c, counts, rctrl, split):
                                   board["name"] or "?")
         switches = sorted({scan.get(f"{repo}\t{p}", {}).get("switches") for p in bset}
                           - {None})
-        folder = bset[0].rsplit("/", 1)[0] if "/" in bset[0] else ""
         lines += [
             f"### {n} — {name}",
             "",
-            f"[`{bset[0]}`](https://github.com/{repo}/tree/HEAD/{folder})"
+            f"[`{bset[0]}`]({board_link(repo, bset[0])})"
             + (f" (+{len(bset) - 1} more file(s))" if len(bset) > 1 else ""),
             "",
             f"{', '.join(fams)} · {ctrl} · "
