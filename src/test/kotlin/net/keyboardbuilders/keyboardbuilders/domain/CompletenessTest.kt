@@ -230,6 +230,18 @@ class CompletenessTest {
         assertEquals(1, six.fields.count { it.label == "Firmware targets" })
     }
 
+    /** The page prints no targets line when a known soldered chip already answers it, so
+     *  the accounting must not count one -- it would be a field the reader cannot see. */
+    @Test
+    fun `a known soldered chip carries no firmware-targets field`() {
+        val fields = design(
+            controller = Controller.Soldered(Recorded.Known(Mcu.Atmega32u4)),
+            firmware = Recorded.Known(setOf(FirmwareRef.Qmk(targetMcu = Recorded.Known(Mcu.Atmega32u4)))),
+        ).completeness().fields
+
+        assertTrue(fields.none { it.label == "Firmware targets" })
+    }
+
     @Test
     fun `the firmware-targets field is known if any one QMK record states it`() {
         val fields = design(

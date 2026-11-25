@@ -1,5 +1,6 @@
 package net.keyboardbuilders.keyboardbuilders.web
 
+import net.keyboardbuilders.keyboardbuilders.domain.chipIsSolderedAndKnown
 import net.keyboardbuilders.keyboardbuilders.domain.Connectivity
 import net.keyboardbuilders.keyboardbuilders.domain.completeness
 import net.keyboardbuilders.keyboardbuilders.catalog.ControllerBoard
@@ -777,8 +778,9 @@ fun Design.toPage(
             // A SET, because a design may cite several records. One design's two records
             // disagree today, and that is a fact about the design worth printing rather than
             // a conflict to resolve behind the reader's back.
-            // Absent with no record at all (#106): it is a fact about a record.
-            core.firmware.knownOrNull()?.map { (it as? FirmwareRef.Qmk)?.targetMcu ?: Recorded.Unknown }
+            // Absent with no record at all (#106): it is a fact about a record. Absent too
+            // when a known soldered chip already answers it -- see chipIsSolderedAndKnown.
+            core.firmware.takeUnless { core.chipIsSolderedAndKnown }?.knownOrNull()?.map { (it as? FirmwareRef.Qmk)?.targetMcu ?: Recorded.Unknown }
                 ?.mapNotNull { it.knownOrNull() }
                 ?.toSortedSet()
                 ?.let { chips ->

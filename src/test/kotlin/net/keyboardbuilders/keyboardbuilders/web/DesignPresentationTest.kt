@@ -146,6 +146,35 @@ class DesignPresentationTest {
         assertTrue(line.recorded)
     }
 
+    /**
+     * A KNOWN SOLDERED CHIP ALREADY ANSWERS IT. A record naming any other chip is dropped
+     * at seed build (2026-10-02), so the line could only repeat the Controller line --
+     * the owner, 2026-11-25: "isn't firmware target and controller much the same data?"
+     */
+    @Test
+    fun `a board with its chip soldered on prints no firmware targets line`() {
+        val page = design(
+            controller = Controller.Soldered(Recorded.Known(Mcu.Atmega32u4)),
+            firmware = Recorded.Known(setOf(FirmwareRef.Qmk("ferris/0_1", Recorded.Known(Mcu.Atmega32u4)))),
+        ).toPage(silhouettes)
+
+        assertTrue(page.spec.none { it.label == "Firmware targets" })
+    }
+
+    /** An unrecorded soldered chip leaves the firmware's target as the only chip fact. */
+    @Test
+    fun `a soldered board whose chip is not recorded keeps its firmware targets line`() {
+        val line = spec(
+            design(
+                controller = Controller.Soldered(Recorded.Unknown),
+                firmware = Recorded.Known(setOf(FirmwareRef.Qmk("x", Recorded.Known(Mcu.Rp2040)))),
+            ).toPage(silhouettes),
+            "Firmware targets",
+        )
+
+        assertEquals("RP2040", line.value)
+    }
+
     /** A shared QMK record states nothing about any one design that cites it, so the
      *  extractor withholds it and this must read as ignorance rather than as absence. */
     @Test

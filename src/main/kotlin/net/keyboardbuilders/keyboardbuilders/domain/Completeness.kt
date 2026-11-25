@@ -94,7 +94,7 @@ private fun Design.fields(): List<CompletenessField> = buildList {
     // .kt`'s `toPage()`). A design citing several QMK records must not read as several
     // firmware-target fields when the page only ever shows one.
     core.firmware.knownOrNull().orEmpty().filterIsInstance<FirmwareRef.Qmk>().let { qmkEntries ->
-        if (qmkEntries.isNotEmpty()) {
+        if (qmkEntries.isNotEmpty() && !core.chipIsSolderedAndKnown) {
             add(CompletenessField("Firmware targets", qmkEntries.any { it.targetMcu.known() }))
         }
     }
@@ -153,3 +153,12 @@ private fun Design.fields(): List<CompletenessField> = buildList {
 }
 
 fun Design.completeness(): DesignCompleteness = DesignCompleteness(fields())
+
+/**
+ * True when the board carries its own chip and the record names it. The page then prints
+ * no "Firmware targets" line and this file counts none: a QMK record built for any other
+ * chip is dropped at seed build (2026-10-02), so that line could only repeat Controller.
+ * A socketed board keeps it -- there it is the only chip fact the design has.
+ */
+val DesignCore.chipIsSolderedAndKnown: Boolean
+    get() = (controller as? Controller.Soldered)?.mcu is Recorded.Known
