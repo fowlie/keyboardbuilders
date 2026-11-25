@@ -56,6 +56,7 @@ from concurrent.futures import ThreadPoolExecutor
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 from attributed_boards import REPO, SCRATCH  # noqa: E402
+import board_refs  # noqa: E402
 import generated_boards  # noqa: E402
 from measure_controller_socket import socket_of  # noqa: E402
 from measure_extras import EXTRAS  # noqa: E402
@@ -272,9 +273,12 @@ def firmware_verdict(kind, texts):
 def fetch(cache, repo, path):
     if (text := generated_boards.read(repo, path)) is not None:
         return text
-    f = cache/(hashlib.sha1(f"{repo}\t{path}".encode()).hexdigest() + ".kicad_pcb")
+    # A pinned board's file is cached under its ref too, so pinning reads it afresh.
+    pin = board_refs.ref(repo, path)
+    key = f"{repo}\t{path}" + ("" if pin == "HEAD" else f"@{pin}")
+    f = cache/(hashlib.sha1(key.encode()).hexdigest() + ".kicad_pcb")
     if not f.exists():
-        url = f"https://raw.githubusercontent.com/{repo}/HEAD/" + urllib.parse.quote(path)
+        url = board_refs.raw_url(repo, path)
         with urllib.request.urlopen(url, timeout=120) as r:
             f.write_bytes(r.read())
     return f.read_text(errors="replace")

@@ -35,6 +35,7 @@ import sys
 from concurrent.futures import ThreadPoolExecutor
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+import board_refs  # noqa: E402
 from scan_boards import fetch  # noqa: E402
 from source_dossier import gh  # noqa: E402
 
@@ -46,13 +47,48 @@ BY_FILE = ["board-scan.json", "switch-positions.json", "switch-pad-scan.json"]
 BY_DESIGN = ["position-scan.json", "keycap-scan.json", "exposed-components-boards.json"]
 
 
-def listing(repo):
-    """`{path: (sha, size)}` for every file at the repo's HEAD, or None if unreadable."""
-    d = gh(f"repos/{repo}/git/trees/HEAD?recursive=1")
+def listing(repo, ref="HEAD"):
+    """`{path: (sha, size)}` for every file at the repo's `ref`, or None if unreadable."""
+    d = gh(f"repos/{repo}/git/trees/{ref}?recursive=1")
     if not d:
         return None
     return {e["path"]: (e["sha"], e.get("size")) for e in d.get("tree", [])
             if e.get("type") == "blob"}
+
+
+def with_pins(mapping, pinned):
+    """`mapping` plus every pinned board no published design holds yet.
+
+    A pin is usually set on a board taken off the site because HEAD was wrong, so the last
+    build's `design-boards.json` does not list it, and without this its HEAD readings would
+    stay cached and be what the build publishes from on the night it is pinned. Keyed
+    `pin:repo` -- no design-keyed cache has that key, so only the per-file caches are
+    evicted for it; the per-design ones follow the night after it publishes."""
+    held = {(m["repo"], p) for m in mapping.values() for p in m["paths"]}
+    extra = {}
+    for (repo, path) in pinned:
+        if (repo, path) not in held:
+            extra.setdefault(f"pin:{repo}", {"repo": repo, "paths": []})["paths"].append(path)
+    return {**mapping, **extra}
+
+
+def pinned_listing(repo, files, pinned, listing_at):
+    """`files` with each pinned path's blob taken at its pin (board_refs.py), not HEAD.
+
+    A pin is a person ruling the author's HEAD wrong, so HEAD moving is not a change to
+    the board we read. And a board read at HEAD and then pinned has a stored SHA that
+    differs from the pin's, so pinning it evicts the HEAD reading and the scans read the
+    pinned file instead."""
+    refs = {ref for (r, _), ref in pinned.items() if r == repo}
+    if not refs:
+        return files
+    out = dict(files)
+    for ref in refs:
+        at = listing_at(repo, ref) or {}
+        for (r, path), want in pinned.items():
+            if r == repo and want == ref and path in at:
+                out[path] = at[path]
+    return out
 
 
 def same_text(key, scanned):
@@ -62,8 +98,11 @@ def same_text(key, scanned):
     return text is not None and len(text) == scanned[key].get("bytes")
 
 
-def changed_files(mapping, listings, shas, scanned, verify=same_text):
-    """The `repo\\tpath` keys whose board file is not the one we read, and the new SHAs."""
+def changed_files(mapping, listings, shas, scanned, verify=same_text, pinned=frozenset()):
+    """The `repo\\tpath` keys whose board file is not the one we read, and the new SHAs.
+
+    A `pinned` key with no stored SHA is always changed: whatever is cached for it may be a
+    HEAD reading, and storing the pin's SHA beside it would trust that reading forever."""
     changed, current = [], {}
     for m in mapping.values():
         files = listings.get(m["repo"])
@@ -78,6 +117,8 @@ def changed_files(mapping, listings, shas, scanned, verify=same_text):
             if key in shas:
                 if shas[key] != sha:
                     changed.append(key)
+            elif key in pinned:
+                changed.append(key)
             elif (key in scanned and scanned[key].get("bytes") not in (None, size)
                   and not verify(key, scanned)):
                 changed.append(key)
@@ -114,12 +155,17 @@ def main():
     scanned = json.loads((SCRATCH/"board-scan.json").read_text())
     shas = json.loads(SHAS.read_text()) if SHAS.exists() else {}
 
+    pinned = board_refs.seed_pins()
+    mapping = with_pins(mapping, pinned)
     repos = sorted({m["repo"] for m in mapping.values()})
     with ThreadPoolExecutor(max_workers=args.jobs) as pool:
         listings = dict(zip(repos, pool.map(listing, repos)))
+    listings = {r: f if f is None else pinned_listing(r, f, pinned, listing)
+                for r, f in listings.items()}
     unread = [r for r, v in listings.items() if v is None]
 
-    changed, current = changed_files(mapping, listings, shas, scanned)
+    changed, current = changed_files(mapping, listings, shas, scanned,
+                                     pinned={f"{r}\t{p}" for r, p in pinned})
     designs, dropped = evict(changed, mapping, args.dry_run)
 
     if not args.dry_run:

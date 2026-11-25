@@ -27,7 +27,6 @@ import pathlib
 import re
 import sys
 import urllib.error
-import urllib.parse
 import urllib.request
 from collections import Counter, defaultdict
 from concurrent.futures import ThreadPoolExecutor
@@ -35,6 +34,7 @@ from itertools import combinations
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 from check_source_reachability import parse
+import board_refs
 import generated_boards
 import trees as tree_registry
 from extract_switch_footprints import (ABSOLUTE_NOT_A_SWITCH, FAMILY_TOKENS,
@@ -183,8 +183,7 @@ def fetch(slug, path, cap=CAP):
     # whole from the local cache; `cap` exists to spare the network, not the disk.
     if (text := generated_boards.read(slug, path)) is not None:
         return text, None, len(text.encode())
-    url = (f"https://raw.githubusercontent.com/{slug}/HEAD/"
-           + urllib.parse.quote(path))
+    url = board_refs.raw_url(slug, path)
     try:
         with urllib.request.urlopen(url, timeout=90) as r:
             data = r.read(cap) if cap else r.read()

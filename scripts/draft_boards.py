@@ -850,6 +850,8 @@ def render(recs):
         lines.append(f"verdict  = {toml_str(r['verdict'])}")
         lines.append(f"signal   = {toml_str(r['signal'])}")
         lines.append(f"note     = {toml_str(r['note'])}")
+        if r.get("ref"):  # a person's pin (board_refs.py); a redraft must not drop it
+            lines.append(f"ref      = {toml_str(r['ref'])}")
         lines.append("")
     return "\n".join(lines)
 

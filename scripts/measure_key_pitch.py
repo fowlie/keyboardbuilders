@@ -44,11 +44,11 @@ import math
 import pathlib
 import re
 import sys
-import urllib.parse
 import urllib.request
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 from extract_switch_footprints import classify as switch_families  # noqa: E402
+import board_refs  # noqa: E402
 import generated_boards  # noqa: E402
 
 REPO = pathlib.Path(__file__).resolve().parent.parent
@@ -103,7 +103,7 @@ def fetch(slug, path):
     nothing a one-off scan need worry about."""
     if (text := generated_boards.read(slug, path)) is not None:
         return text, None
-    url = f"https://raw.githubusercontent.com/{slug}/HEAD/" + urllib.parse.quote(path)
+    url = board_refs.raw_url(slug, path)
     try:
         with urllib.request.urlopen(url, timeout=90) as r:
             return r.read().decode("utf-8", "replace"), None
