@@ -1,6 +1,7 @@
 @import net.keyboardbuilders.keyboardbuilders.web.Head
 @import net.keyboardbuilders.keyboardbuilders.web.SiteUrl
 @import net.keyboardbuilders.keyboardbuilders.account.OwnedDesign
+@import net.keyboardbuilders.keyboardbuilders.account.PhotoTaskOffer
 @import org.springframework.security.web.csrf.CsrfToken
 @param head: Head
 @param site: SiteUrl
@@ -8,6 +9,7 @@
 @param designs: List<OwnedDesign>
 @param csrf: CsrfToken
 @param photos: String? = null
+@param task: PhotoTaskOffer? = null
 
 <%--
     "Your designs", backlog #116 (AccountController). Built from /settings' pieces: the
@@ -24,6 +26,23 @@
                 <button type="submit" class="settings-save">Sign out</button>
             </form>
         </div>
+
+        <%-- ONE TASK, the first thing after signing in (owner, 2026-11-25). --%>
+        @if(task != null)
+            <section class="settings-card task">
+                <h2>Have you built a ${task.name}?</h2>
+                <div class="owned-row">
+                    <span class="owned-pic">$unsafe{task.silhouette}</span>
+                    <span class="owned-text">
+                        <span class="owned-state">It has no build photo yet. A photo of yours earns 10 points once it is approved.</span>
+                    </span>
+                </div>
+                <p class="settings-q">
+                    <a class="task-go" href="/designs/${task.slug}/photo">Add your photo</a>
+                    &middot; <a href="/account?task=${task.next}">Not built one? Show another</a>
+                </p>
+            </section>
+        @endif
 
         @if(photos != null)
             <section class="settings-card">

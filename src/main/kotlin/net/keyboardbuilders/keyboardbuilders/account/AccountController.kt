@@ -19,6 +19,9 @@ import org.springframework.web.bind.annotation.PathVariable
 import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.server.ResponseStatusException
 
+/** The account page's one task: a design that has no build photo; [next] is "show another". */
+data class PhotoTaskOffer(val slug: String, val name: String, val silhouette: String, val next: Int)
+
 /** One row of "Your designs"; [silhouette] is trusted SVG, drawn by [Silhouettes]. */
 data class OwnedDesign(val slug: String, val name: String, val published: Boolean, val silhouette: String)
 
@@ -38,10 +41,14 @@ class AccountController(
     private val silhouettes: Silhouettes,
     private val uploads: net.keyboardbuilders.keyboardbuilders.community.PhotoUploads,
     private val contributors: net.keyboardbuilders.keyboardbuilders.community.Contributors,
+    private val photoTask: net.keyboardbuilders.keyboardbuilders.community.PhotoTask,
 ) {
 
     @GetMapping("/account")
-    fun account(@AuthenticationPrincipal user: OAuth2User, csrf: CsrfToken, model: Model): String {
+    fun account(
+        @AuthenticationPrincipal user: OAuth2User, csrf: CsrfToken, model: Model,
+        @org.springframework.web.bind.annotation.RequestParam(defaultValue = "1") task: Int,
+    ): String {
         val login = user.login()
         val hidden = unpublished.all()
         model.addAttribute("login", login)
@@ -49,6 +56,9 @@ class AccountController(
             OwnedDesign(it.core.slug.value, it.core.name.value, it.core.slug.value !in hidden, it.rowSilhouette(silhouettes))
         })
         model.addAttribute("photos", photoSummary(login))
+        model.addAttribute("task", photoTask.suggest(login, task)?.let {
+            PhotoTaskOffer(it.core.slug.value, it.core.name.value, it.rowSilhouette(silhouettes), next = task.coerceAtLeast(1) + 1)
+        })
         model.addAttribute("csrf", csrf)
         model.addAttribute("head", Head(title = "Your account", indexable = false))
         model.addAttribute("site", site)

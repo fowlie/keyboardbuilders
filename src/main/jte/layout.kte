@@ -99,7 +99,8 @@
     @endif
 </head>
 <body>
-<%-- The signed-in GitHub login, or null: the last top-bar link and the footer read it (2026-11-24). --%>
+<%-- The signed-in GitHub login, or null: the last top-bar link and the footer read it (2026-11-24).
+     Signed out, that link is "Sign in" -- the footer's alone was hard to find (owner, 2026-11-25). --%>
 !{val me = net.keyboardbuilders.keyboardbuilders.web.SignedIn.login()}
 <header class="site">
     <%-- THE MARK, INLINE AND NOT AN img, so it inherits currentColor and needs no second
@@ -117,13 +118,13 @@
         </svg>
         <span>keyboardbuilders</span>
     </a>
-    <nav class="bar-links"><a href="/designs">Designs</a> <a href="/favorites">Favorites</a> <a href="/settings">Settings</a>@if(me != null) <a href="/account">@${me}</a>@endif</nav>
+    <nav class="bar-links"><a href="/designs">Designs</a> <a href="/favorites">Favorites</a> <a href="/settings">Settings</a>@if(me != null) <a href="/account">@${me}</a>@else <a href="/account">Sign in</a>@endif</nav>
     <%-- THE SAME LINKS BEHIND A MENU on a narrow screen, where they wrapped onto a second
          line (owner, 2026-10-02). A details element, so it opens without JavaScript;
          app.css shows exactly one of the two. --%>
     <details class="menu">
         <summary aria-label="Menu">&#9776;</summary>
-        <nav><a href="/designs">Designs</a> <a href="/favorites">Favorites</a> <a href="/settings">Settings</a>@if(me != null) <a href="/account">@${me}</a>@endif</nav>
+        <nav><a href="/designs">Designs</a> <a href="/favorites">Favorites</a> <a href="/settings">Settings</a>@if(me != null) <a href="/account">@${me}</a>@else <a href="/account">Sign in</a>@endif</nav>
     </details>
     <%-- CLOSED BY A TAP OUTSIDE IT OR BY ESCAPE, as a menu is expected to (reader-reported,
          2026-10-04). `pageshow` closes it too: Back restores a page from the cache with the

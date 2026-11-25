@@ -20,6 +20,7 @@ import java.io.ByteArrayOutputStream
 import javax.imageio.ImageIO
 import kotlin.test.assertEquals
 import kotlin.test.assertFalse
+import kotlin.test.assertNotEquals
 import kotlin.test.assertNotNull
 import kotlin.test.assertNull
 import kotlin.test.assertTrue
@@ -279,5 +280,42 @@ class BuildPhotosTest {
         val anonymous = html("/about")
         assertTrue("<a href=\"/account\">Sign in to add photos</a>" in anonymous)
         assertFalse("@alice" in anonymous)
+    }
+
+    /** The one task the account page offers (owner, 2026-11-25): a photo where none is. */
+    private fun suggested(page: String) =
+        Regex("""<a class="task-go" href="/designs/([^/"]+)/photo">""").find(page)?.groupValues?.get(1)
+
+    @Test
+    fun `the account page offers one design that has no build photo`() {
+        val slug = assertNotNull(suggested(html("/account", alice)))
+        assertTrue("Add yours" in html("/designs/$slug"), "$slug has no photo")
+    }
+
+    @Test
+    fun `a design whose photo waits for review is not offered`() {
+        val first = assertNotNull(suggested(html("/account", alice)))
+        upload(first, bob)
+        assertNotEquals(first, suggested(html("/account", alice)))
+    }
+
+    @Test
+    fun `a designer is offered their own design first`() {
+        // abacus is nickolaij/Abacus_Rev2, with no seed photo.
+        assertEquals("abacus", suggested(html("/account", as_("nickolaij"))))
+    }
+
+    @Test
+    fun `not built that one shows another`() {
+        val first = assertNotNull(suggested(html("/account", alice)))
+        assertNotEquals(first, suggested(html("/account?task=2", alice)))
+    }
+
+    /** The footer link alone was hard for a new visitor to find (owner, 2026-11-25). */
+    @Test
+    fun `a signed-out visitor finds sign in in the top bar and the phone menu`() {
+        val signIn = Regex("""<a href="/account">Sign in</a>""")
+        assertEquals(2, signIn.findAll(html("/about")).count(), "top bar and phone menu")
+        assertEquals(0, signIn.findAll(html("/about", alice)).count())
     }
 }

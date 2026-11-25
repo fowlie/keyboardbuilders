@@ -48,6 +48,11 @@ class PhotoUploads(private val db: JdbcClient) {
         db.sql("$SELECT WHERE slug = ? AND status IN ('waiting', 'approved')").param(slug)
             .query(::row).optional().orElse(null)
 
+    /** Every slug with a photo waiting or approved, in one query -- for a whole-catalogue scan. */
+    fun slugsWithPhotoOrWaiting(): Set<String> =
+        db.sql("SELECT slug FROM photo_upload WHERE status IN ('waiting', 'approved')")
+            .query(String::class.java).list().filterNotNull().toSet()
+
     fun get(id: Long): Upload? = db.sql("$SELECT WHERE id = ?").param(id).query(::row).optional().orElse(null)
 
     /** Oldest first, so the photo that has waited longest is reviewed first. */
