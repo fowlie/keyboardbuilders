@@ -1,5 +1,5 @@
 {
- "fetchedAt": "2026-11-24T23:55:33Z",
+ "fetchedAt": "2026-11-25T02:59:17Z",
  "repos": {
   "0x544D/kuro65": {
    "stars": 2,
@@ -135,11 +135,6 @@
   "ai03-2725/jp60": {
    "stars": 30,
    "lastPush": "2023-04-18T13:41:15Z",
-   "archived": false
-  },
-  "ai03-2725/orbit": {
-   "stars": 87,
-   "lastPush": "2020-06-18T18:46:40Z",
    "archived": false
   },
   "ai03-2725/soyuz": {
@@ -798,7 +793,7 @@
    "archived": false
   },
   "kkatano/bakeneko-65": {
-   "stars": 313,
+   "stars": 314,
    "lastPush": "2022-04-19T04:43:08Z",
    "archived": false
   },
@@ -997,6 +992,11 @@
   "nilokr/cantor-remix": {
    "stars": 123,
    "lastPush": "2022-06-03T11:41:54Z",
+   "archived": false
+  },
+  "notquiterightx/AONAMI": {
+   "stars": 9,
+   "lastPush": "2026-11-24T11:03:11Z",
    "archived": false
   },
   "null-ll/basketweave": {
