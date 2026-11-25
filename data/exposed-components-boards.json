@@ -1971,9 +1971,9 @@
  },
  "orbit": {
   "Orbit-PCB/Orbit.kicad_pcb": {
-   "diodes": 62,
-   "exposed": 62,
-   "keys": 60
+   "diodes": 70,
+   "exposed": 0,
+   "keys": 70
   }
  },
  "orthocode": {

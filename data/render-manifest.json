@@ -4275,20 +4275,6 @@
    "png"
   ]
  },
- "orbit\tOrbit-PCB/Orbit.kicad_pcb": {
-  "board_sha256": "0cf949f2fccdab5aea515161dc2417e6335abe1ecc40fa9f65996907e3054120",
-  "glb": "c432dd201dbfc1e2de86b5826cabd5e8",
-  "glb_bytes": 3590624,
-  "glb_renderer": "kicad10.0.5-full/export-glb/mask-silk-tracks-opaquecore/3",
-  "path": "Orbit-PCB/Orbit.kicad_pcb",
-  "png": "88c6d3ab852af1169a4721b317aa1db8",
-  "png_renderer": "kicad10.0.5-full/render/high-persp-rot-30,0,25-transparent-1400x900/2",
-  "repo": "ai03-2725/orbit",
-  "uploaded": [
-   "glb",
-   "png"
-  ]
- },
  "orthocode\torthoCode.kicad_pcb": {
   "board_sha256": "870cff5397b6bcecf9704df6c0c62609f48f98327336a9672ceb7cbec8314753",
   "glb": "e0648caf131de750b539d1a69c102d2d",

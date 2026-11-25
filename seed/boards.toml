@@ -676,7 +676,8 @@ boards   = ["Orbit-PCB/Orbit.kicad_pcb"]
 name     = "Orbit"
 verdict  = "confirmed"
 signal   = "human"
-note     = "a moderator (fowlie) on /moderation (intake bot, backlog #117)"
+note     = "a moderator (fowlie) on /moderation (intake bot, backlog #117). Pinned 2026-11-25 on the owner's report: HEAD is an unplaced netlist import that aefbeea (2020, \"Update orbit-x to production copy\") wrote over the Rev 2.2 board; c65a933 is \"Generate Revision 2.2 production data\", pre-panelised with both halves."
+ref      = "c65a933fe382b127f75ae7cbf705756552c340e6"
 
 [[entry]]
 tree     = "qmk"

@@ -3271,33 +3271,47 @@
   "switches": 49
  },
  "ai03-2725/orbit\tOrbit-PCB/Orbit.kicad_pcb": {
+  "bytes": 1099176,
   "chips": [
    "atmega32u4"
   ],
   "families": [
+   "Alps",
    "MX"
   ],
-  "footprints": 184,
+  "footprints": 301,
   "kind": "board",
   "names": {
-   "Capacitor_SMD:C_0603_1608Metric": 13,
-   "Crystal:Crystal_SMD_3225-4Pin_3.2x2.5mm": 2,
-   "Diode_SMD:D_SOD-123": 63,
-   "Fiducial:Fiducial_1mm_Mask3mm": 6,
-   "Fuse:Fuse_1206_3216Metric": 2,
-   "MX_Alps_Hybrid:MX-1U": 60,
+   "Capacitors_SMD:C_0603": 14,
+   "Crystals:Crystal_SMD_3225-4pin_3.2x2.5mm": 2,
+   "Diodes_SMD:D_SOD-123": 70,
+   "Fiducials:Fiducial_1mm_Dia_2.54mm_Outer_CopperTop": 6,
+   "Fuse_Holders_and_Fuses:Fuse_SMD1206_Reflow": 2,
+   "Housings_DFN_QFN:QFN-44-1EP_7x7mm_Pitch0.5mm": 2,
+   "MX_Alps_Hybrid:ALPS-1.5U": 2,
+   "MX_Alps_Hybrid:MX-1U": 66,
+   "MX_Alps_Hybrid:MX-2U": 2,
+   "MX_Alps_Hybrid:MX-2U-ReversedStabilizers": 4,
+   "MX_Alps_Hybrid:MXOnly-1.5U-Vertical": 2,
    "Molex-0548190589:Reset_Pretty-Mask": 2,
-   "Package_DFN_QFN:QFN-44-1EP_7x7mm_P0.5mm_EP5.15x5.15mm": 2,
-   "Resistor_SMD:R_0603_1608Metric": 14,
+   "Mounting_Holes:MountingHole_5mm": 2,
+   "Resistors_SMD:R_0805": 90,
+   "TO_SOT_Packages_SMD:SOT-23": 2,
    "Type-C:HRO-TYPE-C-31-M-12-Assembly": 2,
+   "locallib:LED_D3.0mm": 6,
+   "locallib:Orbit": 2,
    "locallib:PJ-3200B-4A": 2,
    "locallib:SKQGADE010": 2,
    "locallib:SOT143B": 2,
+   "locallib:ai-outline-7.6": 1,
+   "locallib:ai-ring-6mm-Combined": 2,
+   "locallib:ai-ring-6mm-FancyAss": 2,
    "locallib:breakaway-mousebites": 12
   },
   "path": "Orbit-PCB/Orbit.kicad_pcb",
+  "pin_families": {},
   "plate_footprints": 0,
-  "switches": 60
+  "switches": 72
  },
  "ai03-2725/orbit\tOrbitX-PCB/Orbit.kicad_pcb": {
   "chips": [

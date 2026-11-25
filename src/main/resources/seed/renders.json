@@ -1553,13 +1553,6 @@
   "path": "Mithril.kicad_pcb",
   "png": "5f2c7046471466e69cd982a5f2ac14df"
  },
- "mithril-panneled": {
-  "alternates": 0,
-  "glb": "c2f5268b7b099caa5e12fd8ac1d0546c",
-  "glbBytes": 15552308,
-  "path": "Mithril-panneled/Mithril-panneled.kicad_pcb",
-  "png": "e75a70743c68cdf90be321ae5bc5378b"
- },
  "mochi40": {
   "alternates": 0,
   "glb": "57fdc523d268b28f3edbf7982fa7320e",
@@ -1685,13 +1678,6 @@
   "glbBytes": 12415888,
   "path": "hardware/OpenDeck32/opendeck.kicad_pcb",
   "png": "79d83e933d8ede2f0511aec780297a28"
- },
- "orbit": {
-  "alternates": 0,
-  "glb": "c432dd201dbfc1e2de86b5826cabd5e8",
-  "glbBytes": 3590624,
-  "path": "Orbit-PCB/Orbit.kicad_pcb",
-  "png": "88c6d3ab852af1169a4721b317aa1db8"
  },
  "orthocode": {
   "alternates": 1,

@@ -1063,23 +1063,30 @@
  },
  "ai03-2725/orbit\tOrbit-PCB/Orbit.kicad_pcb": {
   "accepts": {
-   "MX_Alps_Hybrid:MX-1U\tmillmax+solder": 60
+   "MX_Alps_Hybrid:ALPS-1.5U\tmillmax+solder": 2,
+   "MX_Alps_Hybrid:MX-1U\tmillmax+solder": 66,
+   "MX_Alps_Hybrid:MX-2U\tmillmax+solder": 2,
+   "MX_Alps_Hybrid:MXOnly-1.5U-Vertical\tmillmax+solder": 2
   },
   "drills": {
-   "MX 1.04": 120,
-   "MX 1.47": 240
+   "Alps 1.47": 4,
+   "MX 1.04": 140,
+   "MX 1.47": 276
   },
   "kinds": {
-   "solder": 60
+   "solder": 72
   },
   "names": {
-   "MX_Alps_Hybrid:MX-1U\tsolder\tthru_hole\t-": 60
+   "MX_Alps_Hybrid:ALPS-1.5U\tsolder\tthru_hole\t-": 2,
+   "MX_Alps_Hybrid:MX-1U\tsolder\tthru_hole\t-": 66,
+   "MX_Alps_Hybrid:MX-2U\tsolder\tthru_hole\t-": 2,
+   "MX_Alps_Hybrid:MXOnly-1.5U-Vertical\tsolder\tthru_hole\t-": 2
   },
   "positions": {
-   "millmax+solder": 60
+   "millmax+solder": 70
   },
   "sockets": {
-   "-": 60
+   "-": 72
   },
   "unnamed": {}
  },

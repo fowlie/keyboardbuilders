@@ -2549,16 +2549,6 @@
   ]
  },
  {
-  "slug": "mithril-panneled",
-  "hardest": "smd_fine",
-  "driven_by": [
-   "usb"
-  ],
-  "footprints": [
-   "usb_c_receptacle_hro_type-c-31-m-12"
-  ]
- },
- {
   "slug": "mochi40",
   "hardest": "through_hole",
   "driven_by": [
@@ -2771,7 +2761,7 @@
    "usb"
   ],
   "footprints": [
-   "qfn-44-1ep_7x7mm_p0.5mm_ep5.15x5.15mm",
+   "qfn-44-1ep_7x7mm_pitch0.5mm",
    "hro-type-c-31-m-12-assembly"
   ]
  },
