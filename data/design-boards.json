@@ -1397,12 +1397,6 @@
   ],
   "repo": "sanfeps/mithril_kb"
  },
- "mithril-panneled": {
-  "paths": [
-   "Mithril-panneled/Mithril-panneled.kicad_pcb"
-  ],
-  "repo": "sanfeps/mithril_kb"
- },
  "mochi40": {
   "paths": [
    "PCB/PCB.kicad_pcb"

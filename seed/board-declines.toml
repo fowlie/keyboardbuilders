@@ -156,3 +156,10 @@ path     = "pcb/osprette.kicad_pcb"
 verdict  = "confirmed"
 reason   = "moved"
 note     = "2026-11-16, owner: osprette == osprette v1. The file is gone from the repo; it lives on as v1/pcb/osprette.kicad_pcb (same blob), which publishes as osprette-v1."
+
+[[entry]]
+repo     = "sanfeps/mithril_kb"
+path     = "Mithril-panneled/Mithril-panneled.kicad_pcb"
+verdict  = "confirmed"
+reason   = "fabrication-panel"
+note     = "2026-11-25. The repo's README lists `Mithril-panneled/` as \"Panelised PCB for fabrication\" and says to order it instead of `Production/Mithril.zip` only \"if your fab requires a panel\". Same 54 MX switches as Mithril.kicad_pcb; it published as a second design, `mithril-panneled`, the night the source row was confirmed."
