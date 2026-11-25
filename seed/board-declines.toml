@@ -163,3 +163,10 @@ path     = "Mithril-panneled/Mithril-panneled.kicad_pcb"
 verdict  = "confirmed"
 reason   = "fabrication-panel"
 note     = "2026-11-25. The repo's README lists `Mithril-panneled/` as \"Panelised PCB for fabrication\" and says to order it instead of `Production/Mithril.zip` only \"if your fab requires a panel\". Same 54 MX switches as Mithril.kicad_pcb; it published as a second design, `mithril-panneled`, the night the source row was confirmed."
+
+[[entry]]
+repo     = "ai03-2725/orbit"
+path     = "Orbit-PCB/Orbit.kicad_pcb"
+verdict  = "confirmed"
+reason   = "overwritten-at-head"
+note     = "2026-11-25, owner's report: the render showed one rectangle with only the right half placed, in an ortho grid. The file at HEAD is not the board. Commit aefbeea (2020-03-30, \"Update orbit-x to production copy\") replaced the 1.1 MB Rev 2.2 board with a 421 KB unplaced netlist import: no outline, no tracks, no zones, 55 switches in a 20.2 mm grid and 5 stacked off to the side. The real Rev 2.2, pre-panelised with both halves and breakaway mousebites, is at c65a933 (2018-12-13, \"Generate Revision 2.2 production data\"). Declined until a board row can be pinned to that commit; the boards.toml row (board 2, a moderator's answer) is right and stays."
