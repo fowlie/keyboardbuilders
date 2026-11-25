@@ -151,12 +151,21 @@ keyboardbuilders.net {
       body <<PAGE
         <!doctype html><html lang="en"><meta charset="utf-8"><meta name="robots" content="noindex"><title>Keyboard Builders</title>
         <p id="m">Loading&hellip;</p>
-        <script>
-          document.cookie = "kb_human=1; Max-Age=31536000; Path=/; SameSite=Lax; Secure";
-          if (/(^|;\s*)kb_human=1(;|$)/.test(document.cookie)) location.reload();
-          else document.getElementById("m").innerHTML = 'Couldn\'t load these filters. <a href="/designs">See all designs</a>.';
-        </script>
+        <script src="/c.js"></script>
         PAGE
+    }
+  }
+  # The script for the page above, in a file of its own so the page shows nothing of it
+  # (owner, 2026-11-25). Cached a day: a person fetches it once, on the first filtered list.
+  handle /c.js {
+    header Content-Type "text/javascript; charset=utf-8"
+    header Cache-Control "public, max-age=86400"
+    respond 200 {
+      body <<ENDJS
+        document.cookie = "kb_human=1; Max-Age=31536000; Path=/; SameSite=Lax; Secure";
+        if (/(^|;\s*)kb_human=1(;|$)/.test(document.cookie)) location.reload();
+        else document.getElementById("m").innerHTML = 'Couldn\'t load these filters. <a href="/designs">See all designs</a>.';
+        ENDJS
     }
   }
   reverse_proxy host.docker.internal:8080
