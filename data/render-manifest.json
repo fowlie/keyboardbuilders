@@ -321,6 +321,20 @@
    "png"
   ]
  },
+ "aonami\tergogen/output/pcbs/aonami.kicad_pcb": {
+  "board_sha256": "9e34739d16b5fa22a5a1b86d5ed53d4a94645847531c1c5f68b70ace5fcdfdeb",
+  "glb": "294ca527deadd0d8c36397e6bfaba46d",
+  "glb_bytes": 9602632,
+  "glb_renderer": "kicad10.0.5-full/export-glb/mask-silk-tracks-opaquecore/3",
+  "path": "ergogen/output/pcbs/aonami.kicad_pcb",
+  "png": "c329c854df829e1805a019eaed4a9ffb",
+  "png_renderer": "kicad10.0.5-full/render/high-persp-rot-30,0,25-transparent-1400x900/2",
+  "repo": "notquiterightx/AONAMI",
+  "uploaded": [
+   "glb",
+   "png"
+  ]
+ },
  "architeuthis-dux\tArchiteuthis dux/architeuthis_dux.kicad_pcb": {
   "board_sha256": "7eba1b0cbee3ae50cb7d305f42c461698334ddfcabfdd07b5edfa039f2c15562",
   "glb": "30bc0ef14f4e02437e11b3ff8cc34377",

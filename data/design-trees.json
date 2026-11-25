@@ -58,6 +58,9 @@
  "andean-condor": [
   "qmk"
  ],
+ "aonami": [
+  "aonami"
+ ],
  "architeuthis-dux": [
   "qmk",
   "zmk"

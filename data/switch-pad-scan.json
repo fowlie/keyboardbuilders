@@ -7427,6 +7427,28 @@
   },
   "unnamed": {}
  },
+ "notquiterightx/AONAMI\tergogen/output/pcbs/aonami.kicad_pcb": {
+  "accepts": {
+   "SplitKB:SW_SKHLLCA010\tsolder": 1,
+   "ceoloide:switch_choc_v1_v2\tchoc": 20
+  },
+  "drills": {},
+  "kinds": {
+   "socket": 20
+  },
+  "names": {
+   "ceoloide:switch_choc_v1_v2\tsocket\tsmd\tchoc": 20
+  },
+  "positions": {
+   "choc": 20
+  },
+  "sockets": {
+   "choc": 20
+  },
+  "unnamed": {
+   "SplitKB:SW_SKHLLCA010\t-": 1
+  }
+ },
  "null-ll/basketweave\tbasketweave/basketweave.kicad_pcb": {
   "accepts": {
    "MX_Only:MXOnly-1.25U-NoLED\tmillmax+solder": 2,

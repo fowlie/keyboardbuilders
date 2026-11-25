@@ -147,6 +147,13 @@
    "keys": 48
   }
  },
+ "aonami": {
+  "ergogen/output/pcbs/aonami.kicad_pcb": {
+   "diodes": 20,
+   "exposed": 0,
+   "keys": 20
+  }
+ },
  "architeuthis-dux": {
   "Architeuthis dux/architeuthis_dux.kicad_pcb": {
    "diodes": 0,

@@ -142,3 +142,12 @@ ref     = "main"
 local   = "~/code/duckyb-urchin-zmk-module"
 records = "boards/shields"
 note    = "2026-11-15, owner's request (from Temper's list of similar keyboards). Urchin's shield is a ZMK module in the designer's own repo; duckyb/zmk-urchin, the user config, pulls it in through west.yml. Head a3ab64f (2024-11-14)."
+
+[[entry]]
+id      = "aonami"
+reader  = "zmk"
+url     = "https://github.com/notquiterightx/zmk-config-aonami"
+ref     = "main"
+local   = "~/code/notquiterightx-zmk-config-aonami"
+records = "boards/shields"
+note    = "2026-11-25, owner's request. AONAMI's ZMK shield was never submitted upstream; it lives in the designer's own config repo at boards/shields/aonami (id aonami, siblings aonami_left/aonami_right, requires seeeduino_xiao_ble), the shape `temper` has. Head a3e20f0 (2026-11-23)."

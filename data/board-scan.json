@@ -20674,6 +20674,29 @@
   "plate_footprints": 0,
   "switches": 50
  },
+ "notquiterightx/AONAMI\tergogen/output/pcbs/aonami.kicad_pcb": {
+  "bytes": 16557605,
+  "chips": [],
+  "families": [
+   "ChocV1"
+  ],
+  "footprints": 53,
+  "kind": "board",
+  "names": {
+   "SplitKB:SW_SKHLLCA010": 1,
+   "SplitKB:battery_connector_jst_ph_2": 1,
+   "SplitKB:power_switch_smd_side": 1,
+   "SplitKB:xiao-pogo-rev_v2.1": 1,
+   "ceoloide:diode_tht_sod123": 20,
+   "ceoloide:mounting_hole_plated": 8,
+   "ceoloide:rotary_encoder_ec11_ec12": 1,
+   "ceoloide:switch_choc_v1_v2": 20
+  },
+  "path": "ergogen/output/pcbs/aonami.kicad_pcb",
+  "pin_families": {},
+  "plate_footprints": 0,
+  "switches": 21
+ },
  "null-ll/basketweave\tbasketweave/basketweave.kicad_pcb": {
   "bytes": 1759617,
   "chips": [

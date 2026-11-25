@@ -1528,6 +1528,84 @@
   ]
  },
  {
+  "name": "AONAMI",
+  "slug": "aonami",
+  "sources": [
+   "https://github.com/notquiterightx/AONAMI"
+  ],
+  "firmware": [
+   {
+    "family": "zmk",
+    "path": null,
+    "shield": "aonami"
+   }
+  ],
+  "layouts": [
+   {
+    "keys": 40
+   }
+  ],
+  "switches": [
+   {
+    "kind": "choc_v1"
+   },
+   {
+    "kind": "choc_v2"
+   }
+  ],
+  "pitch": {
+   "kind": "choc_18x17",
+   "mm": 17.0
+  },
+  "buildMethod": {
+   "kind": "pcb"
+  },
+  "hardestComponent": {
+   "parts": [
+    "other"
+   ],
+   "tier": "smd_hand"
+  },
+  "controller": {
+   "kind": "socket",
+   "footprints": [
+    "seeed_xiao"
+   ]
+  },
+  "body": {
+   "kind": "split",
+   "halves": 2,
+   "reversible": null,
+   "link": []
+  },
+  "licensing": {
+   "hardware": [
+    "CERN-OHL-S-2.0"
+   ],
+   "firmware": [],
+   "documentation": [
+    "CERN-OHL-S-2.0"
+   ]
+  },
+  "hostPort": null,
+  "wiring": {
+   "kind": "matrix",
+   "rows": 5,
+   "cols": 5,
+   "diodes": "col_to_row"
+  },
+  "extensions": [
+   "encoder"
+  ],
+  "switchMounts": [
+   "choc_socket"
+  ],
+  "splay": true,
+  "stagger": "column",
+  "exposedComponents": false,
+  "powerSwitch": true
+ },
+ {
   "name": "architeuthis dux",
   "slug": "architeuthis-dux",
   "sources": [

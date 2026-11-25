@@ -213,3 +213,12 @@ documentation = ["MIT"]
 verdict       = "confirmed"
 signal        = "human"
 note          = "Owner's ruling 2026-11-16: the root LICENSE reads \"MIT License\", a 2017 copyright line, and a link to opensource.org/licenses/mit-license.php in place of the licence body -- so the scanner, which matches the body, called it unclassified. One file, one licence, all three slots."
+
+[[entry]]
+repo          = "notquiterightx/AONAMI"
+hardware      = ["CERN-OHL-S-2.0"]
+firmware      = []
+documentation = ["CERN-OHL-S-2.0"]
+verdict       = "confirmed"
+signal        = "human"
+note          = "Read 2026-11-25: one root LICENSE, CERN Open Hardware Licence v2 Strongly Reciprocal, covering the repo, which holds the Ergogen config, the PCB, the case and the docs. The firmware is not in this repo: it is the shield in notquiterightx/zmk-config-aonami, which states no licence, so firmware is Unstated."

@@ -1757,6 +1757,12 @@
   "mm": 17.0,
   "pitch": "choc_18x17"
  },
+ "notquiterightx/AONAMI\tergogen/output/pcbs/aonami.kicad_pcb": {
+  "confidence": 0.85,
+  "keys": 20,
+  "mm": 17.0,
+  "pitch": "choc_18x17"
+ },
  "null-ll/basketweave\tbasketweave/basketweave.kicad_pcb": {
   "confidence": 0.85,
   "keys": 54,

@@ -116,6 +116,12 @@
   ],
   "repo": "guidoism/andean-condor"
  },
+ "aonami": {
+  "paths": [
+   "ergogen/output/pcbs/aonami.kicad_pcb"
+  ],
+  "repo": "notquiterightx/AONAMI"
+ },
  "architeuthis-dux": {
   "paths": [
    "Architeuthis dux/architeuthis_dux.kicad_pcb"

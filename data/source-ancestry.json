@@ -2996,6 +2996,16 @@
   "root": null,
   "stargazers_count": 19
  },
+ "notquiterightx/AONAMI": {
+  "archived": false,
+  "description": "A wireless ergonomic split keyboard featuring 40 keys and 2 encoders designed around the Seeed Studio XIAO nRF52840",
+  "fork": false,
+  "full_name": "notquiterightx/AONAMI",
+  "parent": null,
+  "pushed_at": "2026-11-24T11:03:11Z",
+  "root": null,
+  "stargazers_count": 9
+ },
  "nrtkbb/keyboards": {
   "archived": false,
   "description": null,

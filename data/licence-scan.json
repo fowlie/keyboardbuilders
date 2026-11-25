@@ -4178,6 +4178,27 @@
   "status": "ok",
   "truncated": false
  },
+ "notquiterightx/AONAMI": {
+  "files": [
+   {
+    "first_line": "CERN Open Hardware Licence Version 2 - Strongly Reciprocal",
+    "licence": "CERN-OHL-S-2.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   },
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "ergogen/footprints/ceoloide/LICENSE",
+    "root": false,
+    "vendored": false
+   }
+  ],
+  "repo": "notquiterightx/AONAMI",
+  "status": "ok",
+  "truncated": false
+ },
  "nrtkbb/keyboards": {
   "files": [],
   "repo": "nrtkbb/keyboards",

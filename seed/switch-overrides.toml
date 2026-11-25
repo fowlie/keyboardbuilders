@@ -19,3 +19,7 @@ note     = "README: \"Kailh hotswap sockets for all the MX-style switches (choc 
 slug     = "eek"
 switches = ["alps", "choc_v1", "mx"]
 note     = "README: \"compatible with MX, Alps, and Choc style switches\", with a picture marking each family's legs in the one footprint, `eek_Library:UnivSwitch_SK6812-Mini-E`. Its name gives no family; the pin reader (2026-11-16) found the Choc v1 pins and side posts, and rightly nothing else: Alps has no centre post to read from, and the MX pins sit on compromise MX/Alps positions."
+[[entry]]
+slug     = "aonami"
+switches = ["choc_v1", "choc_v2"]
+note     = "README: \"Choc v1/v2 hot swappable switches\". The footprint, `ceoloide:switch_choc_v1_v2`, read 2026-11-25: a 5.0 mm centre hole (Choc v2's post; a v1's smaller post fits it too), 1.9 mm side posts at +/-5.5, and the v1 hotswap socket's holes -- the evidence that makes foostan's `choc12` both families in extract_switch_footprints.STATED_FAMILIES. Not added there by name: ceoloide's footprint can be built without v2 support, which shrinks that hole, so the name alone proves nothing."

@@ -190,6 +190,16 @@
   ]
  },
  {
+  "slug": "aonami",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "other"
+  ],
+  "footprints": [
+   "power_switch_smd_side"
+  ]
+ },
+ {
   "slug": "architeuthis-dux",
   "hardest": "through_hole",
   "driven_by": [
@@ -2751,18 +2761,6 @@
   ],
   "footprints": [
    "sot-23-6"
-  ]
- },
- {
-  "slug": "orbit",
-  "hardest": "smd_fine",
-  "driven_by": [
-   "mcu",
-   "usb"
-  ],
-  "footprints": [
-   "qfn-44-1ep_7x7mm_pitch0.5mm",
-   "hro-type-c-31-m-12-assembly"
   ]
  },
  {

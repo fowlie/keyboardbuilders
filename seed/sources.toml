@@ -7322,3 +7322,16 @@ stated   = "https://github.com/AYM1607/swept-crkbd"
 signal   = "dev-seed"
 verdict  = "confirmed"
 note     = "As swept-corne-3x5: Corne's ZMK firmware, per the README. Swept_3x6 places 42 switches across both halves in one file, Corne's 42-key arrangement."
+
+# AONAMI, 2026-11-25: added on the owner's request.
+[[entry]]
+tree     = "aonami"
+id       = "aonami"
+name     = "AONAMI"
+source   = "notquiterightx/AONAMI"
+keys     = 40
+path     = false
+stated   = "https://github.com/notquiterightx/AONAMI"
+signal   = "dev-seed"
+verdict  = "confirmed"
+note     = "Added on the owner's request. The firmware is the `aonami` shield in notquiterightx/zmk-config-aonami, which the README links as its ZMK source (the shield's own `url` points back here); the hardware repo notquiterightx/AONAMI holds the Ergogen config and its generated PCB, the case, the build guide and the LICENSE, so it is the source. Not a fork. README: wireless split, 40 keys and 2 encoders, Seeed XIAO nRF52840, reversible PCB, Choc v1/v2 hotswap at Choc spacing. `keys = 40`: the shield's physical layout has 42 positions because each half's encoder press is a key, but the board places 20 switches a half and the README says \"40 keys and 2 encoders\" -- the Cheapino ruling (36 + 1 encoder, backlog #65) applied to two encoders."

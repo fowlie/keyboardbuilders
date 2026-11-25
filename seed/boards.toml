@@ -5588,3 +5588,13 @@ name     = "Swept Corne 3x6"
 verdict  = "confirmed"
 signal   = "human"
 note     = "2026-11-15. 42 `Kailh_socket_PG1350_optional`, 42 diodes, two ProMicro footprints: both halves in one file."
+[[entry]]
+tree     = "aonami"
+id       = "aonami"
+source   = "notquiterightx/AONAMI"
+boards   = ["ergogen/output/pcbs/aonami.kicad_pcb"]
+name     = "AONAMI"
+verdict  = "confirmed"
+signal   = "human"
+note     = "2026-11-25. One reversible PCB used for both halves (README: \"Reversible PCB\"), Ergogen's committed output: 20 `ceoloide:switch_choc_v1_v2` and 20 diodes, one EC11 encoder, a XIAO, a power switch and a JST battery connector -- 2 x 20 = the README's 40 keys. The shield's physical layout has 42 positions, 21 a hand: the encoder's press is a key."
+

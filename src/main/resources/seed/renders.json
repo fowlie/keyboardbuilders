@@ -132,6 +132,13 @@
   "path": "andean-condor.kicad_pcb",
   "png": "ae7177384e29385b4777a02d7bd99b17"
  },
+ "aonami": {
+  "alternates": 0,
+  "glb": "294ca527deadd0d8c36397e6bfaba46d",
+  "glbBytes": 9602632,
+  "path": "ergogen/output/pcbs/aonami.kicad_pcb",
+  "png": "c329c854df829e1805a019eaed4a9ffb"
+ },
  "architeuthis-dux": {
   "alternates": 0,
   "glb": "30bc0ef14f4e02437e11b3ff8cc34377",
