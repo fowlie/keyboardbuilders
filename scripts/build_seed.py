@@ -780,6 +780,20 @@ def based_on_rulings(path):
     return out
 
 
+def check_family_credits(based_on, family_names):
+    """Stop the build on a `{kind = "family"}` credit naming no confirmed family.
+
+    Owner, 2026-11-25: a README crediting "Corne" credits the keyboard, so the credit
+    names the family rather than every member. A misspelt name would drop silently from
+    the page; like seed/families.toml itself, a ruling that no longer matches stops here.
+    """
+    for slug, ancestors in based_on.items():
+        for a in ancestors:
+            if a.get("kind") == "family" and a.get("name") not in family_names:
+                raise SystemExit(f"seed/based_on.toml: {slug!r} credits the family "
+                                 f"{a.get('name')!r}, which seed/families.toml does not confirm")
+
+
 SIZE_FIELDS = (("role", "role"), ("drawn", "drawn"), ("width_mm", "widthMm"),
                ("height_mm", "heightMm"), ("layers", "copperLayers"))
 
@@ -2384,6 +2398,8 @@ def main():
             d["family"] = families[d["slug"]]
     print(f"{len(families)} designs in {len(set(families.values()))} families "
           f"(seed/families.toml)")
+    check_family_credits({d["slug"]: d["basedOn"] for d in designs if d.get("basedOn")},
+                         set(families.values()))
 
     boards_out = REPO/"data/design-boards.json"
     boards_out.write_text(json.dumps(

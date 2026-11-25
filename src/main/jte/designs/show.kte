@@ -945,6 +945,17 @@
             @endfor
         </ul>
     @endif
+    <%-- The designs whose credit names this design's whole family (owner, 2026-11-25):
+         on every member's page, headed by the family, so it never claims they started
+         from this very board. --%>
+    @if(!design.derivedFromFamily.isEmpty() && design.family != null)
+        <h2 class="strip-head derived-head">Derived from the <a href="${design.family?.href}">${design.family?.name}</a> family</h2>
+        <ul class="strip derived-strip">
+            @for(card in design.derivedFromFamily)
+                <li>@template.designs.card(card = card, cls = "strip-card")</li>
+            @endfor
+        </ul>
+    @endif
 
     @if(!design.related.isEmpty())
         <h2 class="strip-head related-head">Similar designs</h2>

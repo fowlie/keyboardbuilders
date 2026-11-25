@@ -251,8 +251,8 @@ internal fun SeedWiring?.toWiring(): Recorded<KeyWiring> = when (this?.kind) {
     else -> Recorded.Unknown
 }
 
-/** `{"kind": "held", "slug": "arisu"}` or `{"kind": "external", "name": "Dactyl", "url": "..."}`
- *  — the two `Ancestor` variants, flat, same reasoning as every other `Seed*` type here. */
+/** `{"kind": "held", "slug": "arisu"}`, `{"kind": "external", "name": "Dactyl", "url": "..."}`
+ *  or `{"kind": "family", "name": "Corne"}` — the three `Ancestor` variants, flat, same reasoning as every other `Seed*` type here. */
 internal data class SeedAncestor(
     val kind: String,
     val slug: String? = null,
@@ -276,6 +276,7 @@ internal fun List<SeedAncestor>?.toBasedOn(): Recorded<Set<Ancestor>> =
                     name = requireNotNull(it.name) { "an external ancestor needs a name" },
                     url = requireNotNull(it.url) { "an external ancestor needs a url" },
                 )
+                "family" -> Ancestor.Family(FamilyName(requireNotNull(it.name) { "a family ancestor needs a name" }))
                 else -> throw IllegalArgumentException("unknown ancestor kind '${it.kind}'")
             }
         }

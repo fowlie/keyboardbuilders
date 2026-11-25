@@ -97,4 +97,16 @@ class CreditTest {
         assertTrue("href=\"/designs/cantor-remix\"" in derived, derived.take(300))
         assertTrue("href=\"/designs/cantor-remix\"" !in similar, similar.take(600))
     }
+
+    /** Owner, 2026-11-25: Lime credits the Sofle family, and on Sofle Choc it showed both
+     *  under "Derived from the Sofle family" and again under "Similar designs". */
+    @Test
+    fun `a design credited through the family is not repeated under similar designs`() {
+        val html = mockMvc.get("/designs/sofle-choc").andReturn().response.contentAsString
+        val family = html.substringAfter("Derived from the ", "").substringBefore("related-head")
+        val similar = html.substringAfter("related-head", "").substringBefore("</ul>")
+
+        assertTrue("href=\"/designs/lime\"" in family, family.take(300))
+        assertTrue("href=\"/designs/lime\"" !in similar, similar.take(600))
+    }
 }

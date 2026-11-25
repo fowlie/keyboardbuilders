@@ -13,6 +13,7 @@ import net.keyboardbuilders.keyboardbuilders.domain.DesignExtras
 import net.keyboardbuilders.keyboardbuilders.domain.DesignName
 import net.keyboardbuilders.keyboardbuilders.domain.FacetValue
 import net.keyboardbuilders.keyboardbuilders.domain.FirmwareRef
+import net.keyboardbuilders.keyboardbuilders.domain.FamilyName
 import net.keyboardbuilders.keyboardbuilders.domain.McuFamily
 import net.keyboardbuilders.keyboardbuilders.domain.FirmwareSupport
 import net.keyboardbuilders.keyboardbuilders.domain.FirmwareRules
@@ -1512,6 +1513,59 @@ class DesignPresentationTest {
         )).toPage(silhouettes, catalog = catalogOf(zed))
 
         assertEquals(listOf("Alpha", "Zed"), page.basedOn.map { it.name })
+    }
+
+    // -- a credit naming a family, owner 2026-11-25 -----------------------------------
+    //
+    // Lime's README says "Based on Lily58, Corne, Helix and Sofle": projects, not PCBs.
+    // Fanned out to every member, the line read "derived from Corne Cherry v4, Corne
+    // Chocolate v4, helix, Lily58, Lily58 Lite Rev3, ...".
+
+    private fun member(name: String, slug: String, family: String, basedOn: Set<Ancestor>? = null) =
+        named(name, slug, basedOn).let {
+            it.copy(extras = it.extras.copy(family = Recorded.Known(FamilyName(family))))
+        }
+
+    @Test
+    fun `a family credit reads as the family's name and links its page`() {
+        val cherry = member("Corne Cherry v4", "corne-cherry-v4", "Corne")
+        val choc = member("Corne Chocolate v4", "corne-chocolate-v4", "Corne")
+        val lime = named("Lime", "lime", setOf(Ancestor.Family(FamilyName("Corne"))))
+
+        val page = lime.toPage(silhouettes, catalog = catalogOf(cherry, choc, lime))
+
+        assertEquals(listOf(AncestorView("Corne", "/designs/families/corne", external = false)), page.basedOn)
+    }
+
+    /** A family with fewer than two members in the catalog has no page to link. */
+    @Test
+    fun `a family credit with no family page behind it is dropped, not broken`() {
+        val lime = named("Lime", "lime", setOf(Ancestor.Family(FamilyName("Corne"))))
+        val cherry = member("Corne Cherry v4", "corne-cherry-v4", "Corne")
+
+        assertTrue(lime.toPage(silhouettes, catalog = catalogOf(cherry, lime)).basedOn.isEmpty())
+    }
+
+    /**
+     * Every member's page says it, owner 2026-11-25 -- under its own heading, "derived from
+     * the Corne family", so Corne Chocolate's page never claims Lime started from that
+     * very board. A design crediting this one by slug stays in the first list only.
+     */
+    @Test
+    fun `every member lists the designs that credit its family, apart from its own credits`() {
+        val cherry = member("Corne Cherry v4", "corne-cherry-v4", "Corne")
+        val choc = member("Corne Chocolate v4", "corne-chocolate-v4", "Corne")
+        val lime = named("Lime", "lime", setOf(Ancestor.Family(FamilyName("Corne"))))
+        val both = named("Both", "both", setOf(Ancestor.Family(FamilyName("Corne")), Ancestor.Held(Slug("corne-chocolate-v4"))))
+        val catalog = catalogOf(cherry, choc, lime, both)
+
+        val chocPage = choc.toPage(silhouettes, catalog = catalog)
+        assertEquals(listOf("both"), chocPage.derivedFromThis.map { it.row.slug })
+        assertEquals(listOf("lime"), chocPage.derivedFromFamily.map { it.row.slug })
+
+        val cherryPage = cherry.toPage(silhouettes, catalog = catalog)
+        assertTrue(cherryPage.derivedFromThis.isEmpty())
+        assertEquals(listOf("both", "lime"), cherryPage.derivedFromFamily.map { it.row.slug })
     }
 
     // -- a photo from somewhere other than the design's own repo -------------------

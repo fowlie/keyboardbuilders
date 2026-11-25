@@ -1073,6 +1073,14 @@ sealed interface Ancestor {
      * ticket 22: "nothing infers what the target would have been called."
      */
     data class External(val name: String, val url: String) : Ancestor
+
+    /**
+     * A keyboard as its source credits it -- "Based on Lily58, Corne, Helix and Sofle" names
+     * projects, not PCBs (owner, 2026-11-25). Before this kind, such a credit was fanned
+     * out to every member of the family, and Lime read "derived from Corne Cherry v4,
+     * Corne Chocolate v4, ..., Lily58, Lily58 Lite Rev3, Lily58 Pro, ...".
+     */
+    data class Family(val name: FamilyName) : Ancestor
 }
 
 /**

@@ -1,6 +1,8 @@
 package net.keyboardbuilders.keyboardbuilders.catalog
 
+import net.keyboardbuilders.keyboardbuilders.domain.Ancestor
 import net.keyboardbuilders.keyboardbuilders.domain.BoardDrawn
+import net.keyboardbuilders.keyboardbuilders.domain.FamilyName
 import net.keyboardbuilders.keyboardbuilders.domain.BoardOutline
 import net.keyboardbuilders.keyboardbuilders.domain.BoardSize
 import net.keyboardbuilders.keyboardbuilders.domain.Body
@@ -454,5 +456,13 @@ class SeedDesignCatalogTest {
             catalog.all().any { it.core.licensing.hardware is LicenseState.Unstated },
             "no unstated licenses at all suggests absence is being dropped",
         )
+    }
+
+    /** Owner, 2026-11-25: a README crediting "Corne" credits the keyboard, not one PCB. */
+    @Test
+    fun `a family credit reads as an ancestor naming that family`() {
+        val read = listOf(SeedAncestor(kind = "family", name = "Corne")).toBasedOn()
+
+        assertEquals(Recorded.Known(setOf<Ancestor>(Ancestor.Family(FamilyName("Corne")))), read)
     }
 }

@@ -339,6 +339,9 @@ data class DesignPage(
      * the same card; empty, and no section, for the common case.
      */
     val derivedFromThis: List<DesignCard> = emptyList(),
+    /** The designs whose credit names this design's family, owner 2026-11-25. Same card,
+     *  its own heading: "Derived from the Corne family". */
+    val derivedFromFamily: List<DesignCard> = emptyList(),
     /** Backlog #107: the keyboard this board is one PCB of, with every board in it. Null
      *  for a design in no recorded family -- the page says nothing, like [basedOn]. */
     val family: FamilyView? = null,
@@ -538,8 +541,26 @@ private fun Set<Ancestor>.toAncestorViews(catalog: DesignCatalog?): List<Ancesto
                 AncestorView(name = it.core.name.value, href = "/designs/${ancestor.slug.value}", external = false)
             }
             is Ancestor.External -> AncestorView(name = ancestor.name, href = ancestor.url, external = true)
+            // Dropped like a stale Held credit when no family page stands behind it.
+            is Ancestor.Family -> catalog?.takeIf { familyMembers(ancestor.name, it).size >= 2 }?.let {
+                AncestorView(name = ancestor.name.value, href = familyHref(ancestor.name), external = false)
+            }
         }
     }.sortedBy { it.name.lowercase() }
+
+/**
+ * Every design whose confirmed `basedOn` credits this one's FAMILY, sorted by name, less
+ * those that also credit this design by slug -- they are already in [derivedFromThis].
+ * On every member's page, under its own heading (owner, 2026-11-25).
+ */
+private fun Design.derivedFromFamily(catalog: DesignCatalog?): List<Design> {
+    val family = extras.family.knownOrNull() ?: return emptyList()
+    val credit = Ancestor.Family(family)
+    val me = Ancestor.Held(core.slug)
+    return catalog?.all().orEmpty()
+        .filter { d -> d.extras.basedOn.knownOrNull().orEmpty().let { credit in it && me !in it } }
+        .sortedBy { it.core.name.value.lowercase() }
+}
 
 /** Every held design whose confirmed `basedOn` names this one, sorted by name. */
 private fun Design.derivedFromThis(catalog: DesignCatalog?): List<Design> {
@@ -593,6 +614,7 @@ fun Design.toPage(
         halves = halvesOrOne(),
     )
     val derived = derivedFromThis(catalog)
+    val derivedFamily = derivedFromFamily(catalog)
     return DesignPage(
         name = core.name.value,
         slug = core.slug.value,
@@ -601,8 +623,12 @@ fun Design.toPage(
             val counts = hearts?.forDesigns(children).orEmpty()
             children.map { it.toCard(it.toRow(silhouettes, activity, hearts = counts[it.core.slug.value]), photos, silhouettes) }
         },
+        derivedFromFamily = derivedFamily.let { children ->
+            val counts = hearts?.forDesigns(children).orEmpty()
+            children.map { it.toCard(it.toRow(silhouettes, activity, hearts = counts[it.core.slug.value]), photos, silhouettes) }
+        },
         family = catalog?.let { familyOf(this, it) },
-        related = related?.similarTo(this, exclude = derived.map { it.core.slug }.toSet())?.let { similar ->
+        related = related?.similarTo(this, exclude = (derived + derivedFamily).map { it.core.slug }.toSet())?.let { similar ->
             val counts = hearts?.forDesigns(similar.map { it.design }).orEmpty()
             similar.map {
                 RelatedDesignView(it.design.toCard(it.design.toRow(silhouettes, activity, hearts = counts[it.design.core.slug.value]), photos, silhouettes), it.reason)

@@ -14,6 +14,23 @@ import build_seed
 from firmware_records import BuiltFor
 
 
+class FamilyCredits(unittest.TestCase):
+    """A `{kind = "family"}` credit (owner, 2026-11-25) must name a confirmed family:
+    a misspelt one would silently drop from the page, the failure families.toml's own
+    strictness exists to stop."""
+
+    def test_a_credit_naming_a_known_family_passes(self):
+        build_seed.check_family_credits({"lime": [{"kind": "family", "name": "Corne"}]}, {"Corne"})
+
+    def test_a_credit_naming_no_family_stops_the_build(self):
+        with self.assertRaises(SystemExit):
+            build_seed.check_family_credits({"lime": [{"kind": "family", "name": "Crone"}]}, {"Corne"})
+
+    def test_held_and_external_credits_are_not_its_business(self):
+        build_seed.check_family_credits(
+            {"x": [{"kind": "held", "slug": "a"}, {"kind": "external", "name": "Dactyl", "url": "u"}]}, set())
+
+
 class SplitReadingHoldsTheKeys(unittest.TestCase):
     """A split shield's wiring is one half's scan; two halves must reach the design's keys."""
 
