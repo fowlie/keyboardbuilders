@@ -93,11 +93,29 @@ data class FamilyPage(
  * same fact reads on that variant's page -- the compare page's rule, for the same reason:
  * a second way of describing a design is a second place for the two to drift apart.
  *
- * Chosen for what tells two variants of one keyboard apart. Body, stagger and splay are
- * left out because the family rule (#107) already requires one body kind, and a row that
- * reads the same in every cell is noise in a table built to show differences.
+ * Two kinds of row (owner, 2026-11-25). [ALWAYS_COMPARED] is what a reader picks a variant
+ * by, shown even when every cell agrees: "all of them are hotswap" is worth reading. Every
+ * other spec line is shown only where the members differ -- Ferris 0.1 Base and 0.1
+ * Compact read alike on the fixed rows, and key spacing was the one difference.
  */
-private val COMPARED = listOf("Switch footprint", "Hotswap", "Controller", "Connectivity", "Firmware")
+private val ALWAYS_COMPARED = listOf(
+    "Switch footprint", "Key spacing", "Hotswap", "Controller", "Connectivity", "Firmware",
+)
+
+private fun FamilyMember.cell(label: String): FamilyCell =
+    // A line the page did not build at all (Connectivity, when the caller computed none)
+    // is a gap like any other: "not recorded", never blank.
+    page.spec.firstOrNull { it.label == label }
+        ?.let { FamilyCell(it.value, it.recorded, it.hint) }
+        ?: FamilyCell(NOT_RECORDED, false)
+
+/**
+ * A row outside [ALWAYS_COMPARED] earns its place by differing. A "not recorded" cell
+ * beside agreeing values counts as a difference: hiding that row would say the members are
+ * the same when we only know some of them. A row that is a gap in every cell says nothing.
+ */
+private fun FamilyCompareRow.differs(): Boolean =
+    cells.any { it.recorded } && cells.map { it.value to it.recorded }.distinct().size > 1
 
 /**
  * The page for [record], or null when fewer than two [members] are in the corpus -- a
@@ -118,15 +136,12 @@ fun familyPage(record: FamilyRecord, members: List<FamilyMember>): FamilyPage? {
             FamilyCompareRow("Keys", members.map { m ->
                 FamilyCell(m.design.core.layouts.map { it.keys.value }.sortedDescending().joinToString(" / "), true)
             }),
-        ) + COMPARED.map { label ->
-            FamilyCompareRow(label, members.map { m ->
-                // A line the page did not build at all (Connectivity, when the caller
-                // computed none) is a gap like any other: "not recorded", never blank.
-                m.page.spec.firstOrNull { it.label == label }
-                    ?.let { FamilyCell(it.value, it.recorded, it.hint) }
-                    ?: FamilyCell(NOT_RECORDED, false)
-            })
-        },
+        ) + ALWAYS_COMPARED.map { label -> FamilyCompareRow(label, members.map { it.cell(label) }) } +
+            // In the design page's own order, each label once across all members.
+            members.flatMap { m -> m.page.spec.map { it.label } }.distinct()
+                .filterNot { it in ALWAYS_COMPARED }
+                .map { label -> FamilyCompareRow(label, members.map { it.cell(label) }) }
+                .filter { it.differs() },
         cards = members.map { it.card },
     )
 }

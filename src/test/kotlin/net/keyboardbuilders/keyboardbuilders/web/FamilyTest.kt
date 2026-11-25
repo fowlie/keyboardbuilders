@@ -12,6 +12,8 @@ import net.keyboardbuilders.keyboardbuilders.domain.DesignName
 import net.keyboardbuilders.keyboardbuilders.domain.FamilyName
 import net.keyboardbuilders.keyboardbuilders.domain.FirmwareRef
 import net.keyboardbuilders.keyboardbuilders.domain.KeyCount
+import net.keyboardbuilders.keyboardbuilders.domain.KeyPitch
+import net.keyboardbuilders.keyboardbuilders.domain.Mcu
 import net.keyboardbuilders.keyboardbuilders.domain.Layout
 import net.keyboardbuilders.keyboardbuilders.domain.Licensing
 import net.keyboardbuilders.keyboardbuilders.domain.LicenseState
@@ -44,6 +46,7 @@ class FamilyTest {
         body: Body = Body.Unibody,
         firmware: Recorded<Set<FirmwareRef>> = Recorded.Known(setOf(FirmwareRef.Qmk())),
         source: String = "https://example.com/$name",
+        pitch: Recorded<KeyPitch> = Recorded.Unknown,
     ) = Design(
         core = DesignCore(
             name = DesignName(name),
@@ -52,6 +55,7 @@ class FamilyTest {
             firmware = firmware,
             layouts = setOf(Layout(KeyCount(keys))),
             switches = switches,
+            pitch = pitch,
             buildMethod = BuildMethod.Pcb(),
             controller = Controller.Socket(ControllerFootprint.ProMicro),
             body = body,
@@ -180,12 +184,61 @@ class FamilyTest {
 
         assertEquals(listOf("Corne Cherry v4", "Corne Chocolate v4"), page.variants.map { it.name })
         assertEquals("/designs/corne-cherry-v4", page.variants[0].href)
-        assertEquals(
-            listOf("Keys", "Switch footprint", "Hotswap", "Controller", "Connectivity", "Firmware"),
-            page.rows.map { it.label },
-        )
+        assertEquals(ALWAYS, page.rows.map { it.label })
         assertEquals(listOf("42", "34"), page.rows.first { it.label == "Keys" }.cells.map { it.value })
         assertEquals(listOf("MX", "Choc v1"), page.rows.first { it.label == "Switch footprint" }.cells.map { it.value })
+    }
+
+    private val ALWAYS = listOf(
+        "Keys", "Switch footprint", "Key spacing", "Hotswap", "Controller", "Connectivity", "Firmware",
+    )
+
+    private fun qmkFor(mcu: Recorded<Mcu>) = Recorded.Known(setOf(FirmwareRef.Qmk("x", mcu)))
+
+    /**
+     * THE BASIC ROWS, ALWAYS (owner, 2026-11-25): what a reader picks a variant by, shown
+     * even when every cell agrees, since "all of them are hotswap" is worth reading too.
+     */
+    @Test
+    fun `the basic rows show even when every member reads the same`() {
+        val page = familyPage(corne, listOf(member(design("A", "Corne")), member(design("B", "Corne"))))!!
+
+        assertEquals(ALWAYS, page.rows.map { it.label })
+    }
+
+    /**
+     * ANY OTHER ROW, ONLY WHERE MEMBERS DIFFER. Ferris 0.1 Base and 0.1 Compact read alike
+     * on the old fixed rows; key spacing was the one difference and the table never asked.
+     * A row where one cell is "not recorded" and the rest agree is shown too: hiding it
+     * would say the members are the same when we only know some of them.
+     */
+    @Test
+    fun `any other row shows only where the members differ, a gap counting as a difference`() {
+        fun rowsOf(a: Recorded<Mcu>, b: Recorded<Mcu>) = familyPage(corne, listOf(
+            member(design("A", "Corne", firmware = qmkFor(a))),
+            member(design("B", "Corne", firmware = qmkFor(b))),
+        ))!!.rows
+
+        val differ = rowsOf(Recorded.Known(Mcu.Atmega32u4), Recorded.Known(Mcu.Rp2040))
+        assertEquals(ALWAYS + "Firmware targets", differ.map { it.label })
+        assertEquals(listOf("ATmega32U4", "RP2040"), differ.last().cells.map { it.value })
+
+        assertEquals(ALWAYS + "Firmware targets", rowsOf(Recorded.Known(Mcu.Atmega32u4), Recorded.Unknown).map { it.label })
+        assertEquals(ALWAYS, rowsOf(Recorded.Known(Mcu.Rp2040), Recorded.Known(Mcu.Rp2040)).map { it.label })
+        assertEquals(ALWAYS, rowsOf(Recorded.Unknown, Recorded.Unknown).map { it.label })
+    }
+
+    @Test
+    fun `key spacing is a basic row, read as the design page reads it`() {
+        val page = familyPage(corne, listOf(
+            member(design("Base", "Corne", pitch = Recorded.Known(KeyPitch.Mx))),
+            member(design("Compact", "Corne", pitch = Recorded.Known(KeyPitch.Choc))),
+        ))!!
+
+        assertEquals(
+            listOf("MX spacing · 19.05 × 19.05 mm", "Choc spacing · 18 × 17 mm"),
+            page.rows.single { it.label == "Key spacing" }.cells.map { it.value },
+        )
     }
 
     /**
