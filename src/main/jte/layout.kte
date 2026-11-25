@@ -145,6 +145,26 @@
         })();
     </script>
 </header>
+<%-- CARDS CYCLE ON FROM THE LAYOUT POINTED AT (owner, 2026-11-25). Pointing at a number in
+     "52 / 44 keys" pauses the card's cycle on that layout (app.css); on leave, this moves
+     every animation in the card to the moment that layout's frame has just slid in, so the
+     cycle carries on from there instead of from wherever it was paused. Frame k's slot is
+     its animation's duration over the frame count, both read from the frame's classes. --%>
+<script>
+    document.addEventListener("mouseout", function (e) {
+        var count = e.target.closest && e.target.closest(".cycle-count");
+        if (!count || count.contains(e.relatedTarget)) return;
+        var card = count.closest("a.card");
+        var k = +(/\bf(\d)\b/.exec(count.className) || [])[1];
+        var frame = card && card.querySelector(".frame.f" + k);
+        if (!frame || !frame.getAnimations) return;
+        var mine = frame.getAnimations()[0];
+        var n = +(/\bn(\d)\b/.exec(frame.className) || [])[1];
+        if (!mine || !n) return;
+        var at = k * mine.effect.getTiming().duration / n;
+        card.getAnimations({ subtree: true }).forEach(function (a) { a.currentTime = at; });
+    });
+</script>
 <%-- `wide` is for scanning surfaces only -- 52rem stays right for a page of prose.
      `ResultsGridTest` holds that line. --%>
 <main class="${if (wide) "wide" else null}">

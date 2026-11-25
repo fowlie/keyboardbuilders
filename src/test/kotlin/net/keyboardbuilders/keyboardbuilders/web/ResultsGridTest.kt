@@ -123,4 +123,71 @@ class ResultsGridTest {
             "a design's own page took the wide measure; it is prose and 52rem is right for it",
         )
     }
+
+    /**
+     * Owner, 2026-11-25: filtered to 37-49 keys, Hillside 52's card says "52 / 44 keys"
+     * and rests on the 44-key drawing; hovering it must also show the 52.
+     */
+    @Test
+    fun `a card with two drawn layouts carries both, resting on the one the filter matched`() {
+        val html = mockMvc.get("/designs?keys=37-49&q=hillside").andReturn().response.contentAsString
+        val card = html.substringAfter("href=\"/designs/hillside-52\"").substringBefore("</a>")
+
+        val frames = Regex("""<span class="frame f(\d) n2"><svg[^>]*aria-label="([^"]*)"""").findAll(card)
+            .map { it.groupValues[1] to it.groupValues[2] }.toList()
+        assertEquals(2, frames.size, card)
+        assertTrue("44 keys" in frames[0].second, "resting frame should be the 44: $frames")
+        assertTrue("52 keys" in frames[1].second, "second frame should be the 52: $frames")
+        assertTrue(
+            """<span class="cycle-count f1 n2">52</span> / <span class="cycle-count f0 n2">44</span> keys""" in card,
+            card,
+        )
+    }
+
+    /** Motion only where a pointer can hover and the reader has not asked for less. */
+    @Test
+    fun `layouts cycle only for a hovering pointer that has not asked for reduced motion`() {
+        val guard = Regex("""@media \(prefers-reduced-motion: no-preference\) \{""")
+            .find(withoutComments)
+        assertTrue(guard != null, "no reduced-motion guard around the cycling")
+        val start = guard!!.range.last + 1
+        var depth = 1
+        var end = start
+        while (depth > 0) { if (withoutComments[end] == '{') depth++ else if (withoutComments[end] == '}') depth--; end++ }
+        val cycling = Regex("""animation[^;]*(frame-of|count-of|step-end)""")
+
+        assertTrue(cycling.containsMatchIn(withoutComments.substring(start, end)), "the guard sets no cycling")
+        assertFalse(cycling.containsMatchIn(withoutComments.removeRange(start, end)), "cycling is set outside the guard")
+    }
+
+    /**
+     * Owner, 2026-11-25: pointing at a number holds its layout, and leaving carries the cycle
+     * on from there. PAUSED, never `animation: none`: none discards the running animation,
+     * and the cycle then restarts from the first frame. A design has at most six layouts.
+     */
+    @Test
+    fun `pointing at any count pauses the cycle on its own frame`() {
+        assertTrue(
+            Regex("""a\.card:has\(\.cycle-count:hover\) \.frame,\s*a\.card:has\(\.cycle-count:hover\) \.cycle-count \{ animation-play-state: paused; \}""")
+                .containsMatchIn(withoutComments),
+            "nothing pauses the cycling while a count is pointed at",
+        )
+        assertFalse(
+            Regex("""cycle-count:hover\)[^{]*\{[^}]*animation:\s*none""").containsMatchIn(withoutComments),
+            "pointing at a count throws the animation away; leaving would restart the cycle",
+        )
+        // The pointed-at count is underlined by a selector strictly more specific than the
+        // one clearing every count's underline -- with equal or lower, the clearing won.
+        assertTrue(
+            "a.card:has(.cycle-count:hover) .cycle-count:hover { color: var(--fg) !important; text-decoration-line: underline !important; }"
+                in withoutComments,
+            "the count under the pointer loses its underline to the rule clearing the others",
+        )
+        (0..5).forEach { i ->
+            assertTrue(
+                "a.card:has(.cycle-count.f$i:hover) .frame.f$i" in withoutComments,
+                "pointing at count f$i does not show frame f$i",
+            )
+        }
+    }
 }

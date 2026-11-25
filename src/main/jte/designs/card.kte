@@ -1,4 +1,5 @@
 @import net.keyboardbuilders.keyboardbuilders.web.DesignCard
+@import gg.jte.Content
 @param card: DesignCard
 @param cls: String
 @param full: Boolean = false
@@ -15,19 +16,23 @@
 
      `reason` is "boards like this"'s one addition, ux.md 3.6: a related card must say why
      it is there. `href` and `rel` are the compare chooser's: the same card, leading to
-     the pair instead of the design. --%>
+     the pair instead of the design.
+
+     A card with several drawn layouts stacks one frame per layout and cycles them on
+     hover (app.css, "CYCLING LAYOUTS"); the key count chip marks the count on show. --%>
+!{val picture: Content = @`@if(card.row.cycles)<span class="cycle">@for(f in card.row.frames.withIndex())<span class="frame f${f.index} n${card.row.frames.size}">$unsafe{f.value.svg}</span>@endfor</span>@else$unsafe{card.row.silhouette}@endif`}
 <a class="${cls} card" href="${href ?: "/designs/" + card.row.slug}" rel="${rel}">
     @if(card.photo != null)
         <span class="card-photo">
             <img src="${card.photo}" alt="${card.row.name}@if(card.rendered), PCB render@else, built@endif" loading="lazy">
             <%-- The owner's favourite detail: the board's own drawing, small, over its
                  photo. Fit to its chip on purpose -- a label, not a size comparison. --%>
-            @if(card.drawn)<span class="card-badge">$unsafe{card.row.silhouette}</span>@endif
+            @if(card.drawn)<span class="card-badge">${picture}</span>@endif
             @if(card.row.stars != null || card.row.hearts != null)<span class="card-stars">@if(card.row.stars != null)<span title="GitHub stars">&#9733; ${card.row.stars}</span>@endif@if(card.row.stars != null && card.row.hearts != null) &middot; @endif@if(card.row.hearts != null)<span class="card-hearts" title="Hearts">&#9829; ${card.row.hearts}</span>@endif</span>@endif
         </span>
     @else
         <span class="card-photo no-photo">
-            <span class="card-drawn">$unsafe{card.row.silhouette}</span>
+            <span class="card-drawn">${picture}</span>
             @if(card.row.stars != null || card.row.hearts != null)<span class="card-stars">@if(card.row.stars != null)<span title="GitHub stars">&#9733; ${card.row.stars}</span>@endif@if(card.row.stars != null && card.row.hearts != null) &middot; @endif@if(card.row.hearts != null)<span class="card-hearts" title="Hearts">&#9829; ${card.row.hearts}</span>@endif</span>@endif
         </span>
     @endif
@@ -37,7 +42,7 @@
             @if(card.by != null)<span class="card-by">by ${card.by}</span>@endif
         </span>
         <span class="facts">
-            @for(chip in card.row.shape)<span>${chip}</span>@endfor
+            @for(chip in card.row.shape)@if(card.row.cycles && chip == card.row.keysChip)<span>@for(part in card.row.keyCounts.withIndex())@if(part.index > 0) / @endif@if(part.value.frame != null)<span class="cycle-count f${part.value.frame} n${card.row.frames.size}">${part.value.keys}</span>@else${part.value.keys}@endif@endfor keys</span>@else<span>${chip}</span>@endif@endfor
         </span>
         @if(full)
             <span class="facts">

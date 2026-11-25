@@ -254,7 +254,7 @@ ul.results li:has(.result-card:hover) { border-color: var(--accent); }
 
 /* The middot separators are drawn, not typed, so no facet has to carry punctuation. */
 .facts { margin: 0.3rem 0 0; color: var(--muted); font-size: 0.9rem; }
-.facts span + span::before { content: " · "; }
+.facts > span + span::before { content: " · "; }
 
 .summary { margin: 1rem 0 0; }
 
@@ -438,6 +438,96 @@ a.card { display: flex; flex-direction: column; align-items: stretch; gap: 0; pa
 }
 .card-badge { bottom: 0.5rem; width: 4.5rem; padding: 0.35rem 0.45rem; border-radius: 8px; }
 .card-badge svg { display: block; width: 100%; height: auto; }
+
+/* CYCLING LAYOUTS (owner, 2026-11-25). A card with several drawn layouts stacks one frame
+   per layout in one grid cell and plays through them on its own, 2.2s each, sliding in
+   from the right with an ease-out; the matching number in "52 / 44 keys" is underlined
+   while its frame shows. It starts on the layout the keys filter matched. Hidden frames
+   use visibility, so a screen reader hears the resting picture only. A reader who asked
+   for less motion keeps the still picture. */
+.cycle { display: grid; place-items: center; overflow: hidden; }
+.cycle > .frame { grid-area: 1 / 1; display: block; width: 100%; }
+.cycle > .frame:not(.f0) { visibility: hidden; }
+.card-drawn .cycle > .frame { width: auto; }
+@media (prefers-reduced-motion: no-preference) {
+    /* One class each after a.card, so the .nN rules below win by order alone. */
+    a.card .frame { animation: 2.2s linear infinite; }
+    a.card .cycle-count { animation: 2.2s step-end infinite; }
+    a.card .n2 { animation-name: frame-of-2; animation-duration: 4.4s; }
+    a.card .n3 { animation-name: frame-of-3; animation-duration: 6.6s; }
+    a.card .n4 { animation-name: frame-of-4; animation-duration: 8.8s; }
+    a.card .n5 { animation-name: frame-of-5; animation-duration: 11s; }
+    a.card .n6 { animation-name: frame-of-6; animation-duration: 13.2s; }
+    a.card .cycle-count.n2 { animation-name: count-of-2; }
+    a.card .cycle-count.n3 { animation-name: count-of-3; }
+    a.card .cycle-count.n4 { animation-name: count-of-4; }
+    a.card .cycle-count.n5 { animation-name: count-of-5; }
+    a.card .cycle-count.n6 { animation-name: count-of-6; }
+    /* Each delay is its slot less the 0.35s slide, so one frame leaves while the next
+       arrives, and the resting frame starts in place instead of sliding in. */
+    a.card .f0 { animation-delay: -0.35s; }
+    a.card .f1 { animation-delay: 1.85s; }
+    a.card .f2 { animation-delay: 4.05s; }
+    a.card .f3 { animation-delay: 6.25s; }
+    a.card .f4 { animation-delay: 8.45s; }
+    a.card .f5 { animation-delay: 10.65s; }
+}
+/* Pointing at a number in "52 / 44 keys" shows that layout and holds it until the pointer
+   leaves (owner, 2026-11-25). PAUSED, not stopped: `animation: none` threw the running
+   animation away and the cycle restarted from the first frame on leave. `!important`
+   because a running or paused animation outranks every normal declaration. On leave,
+   layout.kte's script moves the cycle on from the layout pointed at. Outside the
+   reduced-motion guard on purpose: the reader makes this swap, so a still card can still
+   show its other layouts. */
+@media (hover: hover) {
+    a.card:has(.cycle-count:hover) .frame,
+    a.card:has(.cycle-count:hover) .cycle-count { animation-play-state: paused; }
+    a.card:has(.cycle-count:hover) .frame { visibility: hidden !important; }
+    a.card:has(.cycle-count.f0:hover) .frame.f0,
+    a.card:has(.cycle-count.f1:hover) .frame.f1,
+    a.card:has(.cycle-count.f2:hover) .frame.f2,
+    a.card:has(.cycle-count.f3:hover) .frame.f3,
+    a.card:has(.cycle-count.f4:hover) .frame.f4,
+    a.card:has(.cycle-count.f5:hover) .frame.f5 { visibility: visible !important; opacity: 1 !important; transform: none !important; }
+    a.card:has(.cycle-count:hover) .cycle-count { color: inherit !important; text-decoration-line: none !important; }
+    /* The clearing rule's own selector plus :hover, so this one outranks it. */
+    a.card:has(.cycle-count:hover) .cycle-count:hover { color: var(--fg) !important; text-decoration-line: underline !important; }
+}
+@keyframes frame-of-2 {
+    0% { visibility: visible; opacity: 0; transform: translateX(40%); animation-timing-function: ease-out; }
+    7.955%, 50% { visibility: visible; opacity: 1; transform: none; animation-timing-function: ease-out; }
+    57.955% { visibility: visible; opacity: 0; transform: translateX(-40%); }
+    58.005%, 100% { visibility: hidden; opacity: 0; }
+}
+@keyframes frame-of-3 {
+    0% { visibility: visible; opacity: 0; transform: translateX(40%); animation-timing-function: ease-out; }
+    5.303%, 33.333% { visibility: visible; opacity: 1; transform: none; animation-timing-function: ease-out; }
+    38.636% { visibility: visible; opacity: 0; transform: translateX(-40%); }
+    38.686%, 100% { visibility: hidden; opacity: 0; }
+}
+@keyframes frame-of-4 {
+    0% { visibility: visible; opacity: 0; transform: translateX(40%); animation-timing-function: ease-out; }
+    3.977%, 25% { visibility: visible; opacity: 1; transform: none; animation-timing-function: ease-out; }
+    28.977% { visibility: visible; opacity: 0; transform: translateX(-40%); }
+    29.027%, 100% { visibility: hidden; opacity: 0; }
+}
+@keyframes frame-of-5 {
+    0% { visibility: visible; opacity: 0; transform: translateX(40%); animation-timing-function: ease-out; }
+    3.182%, 20% { visibility: visible; opacity: 1; transform: none; animation-timing-function: ease-out; }
+    23.182% { visibility: visible; opacity: 0; transform: translateX(-40%); }
+    23.232%, 100% { visibility: hidden; opacity: 0; }
+}
+@keyframes frame-of-6 {
+    0% { visibility: visible; opacity: 0; transform: translateX(40%); animation-timing-function: ease-out; }
+    2.652%, 16.667% { visibility: visible; opacity: 1; transform: none; animation-timing-function: ease-out; }
+    19.318% { visibility: visible; opacity: 0; transform: translateX(-40%); }
+    19.368%, 100% { visibility: hidden; opacity: 0; }
+}
+@keyframes count-of-2 { 0% { color: var(--fg); text-decoration-line: underline; } 50%, 100% { color: inherit; text-decoration-line: none; } }
+@keyframes count-of-3 { 0% { color: var(--fg); text-decoration-line: underline; } 33.333%, 100% { color: inherit; text-decoration-line: none; } }
+@keyframes count-of-4 { 0% { color: var(--fg); text-decoration-line: underline; } 25%, 100% { color: inherit; text-decoration-line: none; } }
+@keyframes count-of-5 { 0% { color: var(--fg); text-decoration-line: underline; } 20%, 100% { color: inherit; text-decoration-line: none; } }
+@keyframes count-of-6 { 0% { color: var(--fg); text-decoration-line: underline; } 16.667%, 100% { color: inherit; text-decoration-line: none; } }
 .card-stars {
     top: 0.5rem;
     padding: 0.2rem 0.55rem;

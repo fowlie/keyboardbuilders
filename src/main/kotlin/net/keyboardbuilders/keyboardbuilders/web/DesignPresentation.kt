@@ -200,7 +200,27 @@ data class DesignRow(
      *  card's chip -- a list of dozens stays scannable only if this is one word, never
      *  the field-by-field breakdown the detail page prints. */
     val completeness: Int,
-)
+    /**
+     * Every drawn layout, the one [silhouette] shows first, the rest largest first. A card
+     * with two or more cycles through them on hover (owner, 2026-11-25), so a reader sees
+     * the other layouts without opening the design. Not narrowed to the keys filter: the
+     * card prints every count, so it may picture every count. Empty for an undrawn design.
+     */
+    val frames: List<Frame> = emptyList(),
+    /** Every declared count, largest first, the way the shape chip prints them. */
+    val keyCounts: List<KeyCountPart> = emptyList(),
+) {
+    val cycles: Boolean get() = frames.size > 1
+
+    /** The shape chip that [keyCounts] spells out, so a template can find it in [shape]. */
+    val keysChip: String get() = keyCounts.joinToString(" / ") { it.keys.toString() } + " keys"
+}
+
+/** One layout's drawing on a card. [svg] is raw, like [DesignRow.silhouette]. */
+data class Frame(val keys: Int, val svg: String)
+
+/** One number in "52 / 44 keys", and the index of the [Frame] drawing it, if any. */
+data class KeyCountPart(val keys: Int, val frame: Int?)
 
 /**
  * A design as a card: its row, its build photo at card width, and who made it. Chosen
@@ -455,16 +475,52 @@ fun Design.toRow(
     activity: RepoActivity? = null,
     keysFilter: Set<Term> = emptySet(),
     hearts: Int? = null,
-) = DesignRow(
-    name = core.name.value,
-    slug = core.slug.value,
-    shape = shapeChips(brief = true),
-    electronics = electronicsChips(),
-    silhouette = matchedSilhouette(silhouettes, keysFilter),
-    stars = activity?.starsFor(this)?.let(::formatStars),
-    hearts = hearts,
-    completeness = completeness().percent,
-)
+): DesignRow {
+    val frames = cardFrames(silhouettes, keysFilter)
+    return DesignRow(
+        name = core.name.value,
+        slug = core.slug.value,
+        shape = shapeChips(brief = true),
+        electronics = electronicsChips(),
+        silhouette = frames.firstOrNull()?.svg ?: matchedSilhouette(silhouettes, keysFilter),
+        stars = activity?.starsFor(this)?.let(::formatStars),
+        hearts = hearts,
+        completeness = completeness().percent,
+        frames = frames,
+        keyCounts = core.layouts.map { it.keys.value }.distinct().sortedDescending().map { keys ->
+            KeyCountPart(keys, frames.indexOfFirst { it.keys == keys }.takeIf { it >= 0 })
+        },
+    )
+}
+
+/**
+ * The card's frames: each declared layout with a drawing of its own, or that the main
+ * drawing pictures. The resting frame leads -- the layout the keys filter matched when it
+ * is drawn, else the largest -- and the rest follow largest first.
+ *
+ * The main drawing pictures its own key count. Where that count is no declared layout's,
+ * it stands for the largest, which is what [matchedSilhouette] has always drawn.
+ */
+private fun Design.cardFrames(silhouettes: Silhouettes, keysFilter: Set<Term>): List<Frame> {
+    val slug = core.slug.value
+    val largest = largestKeyCount()
+    val counts = core.layouts.map { it.keys.value }.toSet()
+    val main = silhouettes.defaultLayout(slug)?.let { if (it in counts) it else largest }
+    val drawn = core.layouts.sortedByDescending { it.keys.value }.distinctBy { it.keys.value }.mapNotNull { layout ->
+        val keys = layout.keys.value
+        val svg = silhouettes.renderLayout(slug, keys, layoutLabel(layout), Silhouettes.ROW_UNIT, Silhouettes.ROW_CAP)
+            ?: if (keys == main) silhouettes.render(
+                slug = slug,
+                keyCount = keys,
+                label = if (keys == largest) silhouetteLabel() else layoutLabel(layout),
+                unit = Silhouettes.ROW_UNIT,
+                cap = Silhouettes.ROW_CAP,
+            ) else null
+        svg?.let { Frame(keys, it) }
+    }
+    val resting = layoutMatching(keysFilter)?.keys?.value?.takeIf { k -> drawn.any { it.keys == k } } ?: largest
+    return drawn.sortedByDescending { it.keys == resting }
+}
 
 /** The card's picture with no filter applied: the design's largest layout. For lists
  *  outside /designs, such as "Your designs" (#116). */

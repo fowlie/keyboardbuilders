@@ -492,6 +492,48 @@ class DesignPresentationTest {
         assertTrue(widthOf(filtered.silhouette) < widthOf(unfiltered.silhouette))
     }
 
+    /**
+     * A card cycles through every drawn layout on hover (owner, 2026-11-25), not only the
+     * ones the keys filter matched: the card already prints "52 / 44 keys", so the picture
+     * may show both. The filter picks which frame the card rests on, and that one is first.
+     */
+    @Test
+    fun `a card carries a frame per drawn layout, starting from the one it rests on`() {
+        val twoLayout = design(layouts = setOf(Layout(KeyCount(42)), Layout(KeyCount(36))))
+
+        val unfiltered = twoLayout.toRow(silhouettesWithLayouts)
+        val filtered = twoLayout.toRow(silhouettesWithLayouts, keysFilter = setOf(Term.Exact(FacetValue("36"))))
+
+        assertEquals(listOf(42, 36), unfiltered.frames.map { it.keys })
+        assertEquals(listOf(36, 42), filtered.frames.map { it.keys })
+        assertEquals(filtered.silhouette, filtered.frames.first().svg)
+        assertEquals(unfiltered.silhouette, unfiltered.frames.first().svg)
+    }
+
+    @Test
+    fun `a layout with no drawing of its own gets no frame, so a one-drawing card does not cycle`() {
+        val twoLayout = design(layouts = setOf(Layout(KeyCount(42)), Layout(KeyCount(36))))
+
+        // `silhouettes`, the class fixture, has no per-layout geometry at all.
+        val row = twoLayout.toRow(silhouettes)
+
+        assertEquals(listOf(42), row.frames.map { it.keys })
+        assertFalse(row.cycles)
+    }
+
+    /** The chip's numbers, each tied to the frame that draws it -- or to none. */
+    @Test
+    fun `the key count chip names which frame draws each count`() {
+        val threeLayout = design(
+            layouts = setOf(Layout(KeyCount(42)), Layout(KeyCount(39)), Layout(KeyCount(36))),
+        )
+
+        val row = threeLayout.toRow(silhouettesWithLayouts, keysFilter = setOf(Term.Exact(FacetValue("36"))))
+
+        assertEquals("42 / 39 / 36 keys", row.keysChip)
+        assertEquals(listOf(42 to 1, 39 to null, 36 to 0), row.keyCounts.map { it.keys to it.frame })
+    }
+
     @Test
     fun `a keys filter falls back to the largest layout when no separate geometry was ever recorded for the match`() {
         val twoLayout = design(
