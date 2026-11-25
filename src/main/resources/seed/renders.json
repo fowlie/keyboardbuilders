@@ -713,6 +713,13 @@
   "path": "pcb/dropout.kicad_pcb",
   "png": "c0b323176cb21641a4527cd3c072980b"
  },
+ "eco-rev2": {
+  "alternates": 0,
+  "glb": "6647ebcd6aca4843956d0cf9c4065349",
+  "glbBytes": 5972276,
+  "path": "ECO Keyboard/PCB Files/V2.1/Eco-Board.kicad_pcb",
+  "png": "82235557d0807293097dea80f47ec2a0"
+ },
  "eek": {
   "alternates": 0,
   "glb": "ed9e789ba8090218216bee9648cf7368",
@@ -923,6 +930,13 @@
   "path": "Frooastboard Nano/KiCad Project/Frooastboard Nano.kicad_pcb",
   "png": "89632012dd82d60f0cbddcbc2f14e5a9"
  },
+ "frooastboard-walnut": {
+  "alternates": 0,
+  "glb": "f808647e7e8bc5b05ce33d957bdc4466",
+  "glbBytes": 19718384,
+  "path": "Frooastboard Walnut/KiCad Project/Frooastboard Walnut.kicad_pcb",
+  "png": "20179ed95f4e43152deb052eafa18d57"
+ },
  "fruity60": {
   "alternates": 0,
   "glb": "11082b66c1274eeab98211776101a818",
@@ -1048,6 +1062,13 @@
   "glbBytes": 3838192,
   "path": "pcbs/left/GummyKey_Left.kicad_pcb",
   "png": "2a66f04e0e824a480b0c460a40b6acbd"
+ },
+ "handwired-twentypad": {
+  "alternates": 0,
+  "glb": "4be9ccfb451b0062b981ad540ca4239d",
+  "glbBytes": 3875920,
+  "path": "Teensy macro pad.kicad_pcb",
+  "png": "f90db200e0ed71db8ca142a6b2a47dce"
  },
  "helix": {
   "alternates": 0,
@@ -1266,6 +1287,13 @@
   "path": "PCB/keaboard_rev1/keaboard_rev1.kicad_pcb",
   "png": "cd1f6e8b9cef03baed7b14376ae90f63"
  },
+ "keotl-11squares": {
+  "alternates": 1,
+  "glb": "e8c8d571e9c9a18854b73613e619f94d",
+  "glbBytes": 63572,
+  "path": "11-squares/11-squares-plate.kicad_pcb",
+  "png": "de8f0762b09fd9a6573cedb75109ad22"
+ },
  "keyboar-layout": {
   "alternates": 0,
   "glb": "3fda72e0492971262837bcaa778d0634",
@@ -1300,6 +1328,13 @@
   "glbBytes": 12990896,
   "path": "PCB/Koca58.kicad_pcb",
   "png": "b64f401d11a30aaf4ac258fa9688a57c"
+ },
+ "ktec-ergodone": {
+  "alternates": 0,
+  "glb": "977c889f64a264e059be92b02dd77d84",
+  "glbBytes": 11424888,
+  "path": "ErgoDone.kicad_pcb",
+  "png": "e2585aeb62c830d15d66aaee12dc4012"
  },
  "kuro65": {
   "alternates": 0,
@@ -1398,6 +1433,13 @@
   "glbBytes": 7861900,
   "path": "lumberjack.kicad_pcb",
   "png": "a2403a86968ebb11f5e13782269dc7f0"
+ },
+ "lunakey-mini": {
+  "alternates": 0,
+  "glb": "e5729c332b2d6a663f5a2f2cfc3ec651",
+  "glbBytes": 10710644,
+  "path": "mini/rev6/pcb/lunakey_mini.kicad_pcb",
+  "png": "61afb7cb1b04dae46cd13ede898c95e5"
  },
  "m0110a-qmk": {
   "alternates": 0,
@@ -1503,6 +1545,27 @@
   "glbBytes": 4740112,
   "path": "PCB/minim.kicad_pcb",
   "png": "836c1f584985de26cb09945076cc9daf"
+ },
+ "mithril": {
+  "alternates": 0,
+  "glb": "4c435216a3f9e2687345aab12a7cbfbc",
+  "glbBytes": 14634956,
+  "path": "Mithril.kicad_pcb",
+  "png": "5f2c7046471466e69cd982a5f2ac14df"
+ },
+ "mithril-panneled": {
+  "alternates": 0,
+  "glb": "c2f5268b7b099caa5e12fd8ac1d0546c",
+  "glbBytes": 15552308,
+  "path": "Mithril-panneled/Mithril-panneled.kicad_pcb",
+  "png": "e75a70743c68cdf90be321ae5bc5378b"
+ },
+ "mochi40": {
+  "alternates": 0,
+  "glb": "57fdc523d268b28f3edbf7982fa7320e",
+  "glbBytes": 3996056,
+  "path": "PCB/PCB.kicad_pcb",
+  "png": "e6ae7d446a475afd535b0b5fce19cbb0"
  },
  "model-b": {
   "alternates": 0,
@@ -1622,6 +1685,13 @@
   "glbBytes": 12415888,
   "path": "hardware/OpenDeck32/opendeck.kicad_pcb",
   "png": "79d83e933d8ede2f0511aec780297a28"
+ },
+ "orbit": {
+  "alternates": 0,
+  "glb": "c432dd201dbfc1e2de86b5826cabd5e8",
+  "glbBytes": 3590624,
+  "path": "Orbit-PCB/Orbit.kicad_pcb",
+  "png": "88c6d3ab852af1169a4721b317aa1db8"
  },
  "orthocode": {
   "alternates": 1,

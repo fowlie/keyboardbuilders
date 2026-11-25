@@ -1156,6 +1156,10 @@
   ]
  },
  {
+  "slug": "eco-rev2",
+  "hardest": null
+ },
+ {
   "slug": "eek",
   "hardest": "smd_hand",
   "driven_by": [
@@ -1491,6 +1495,19 @@
   ]
  },
  {
+  "slug": "frooastboard-walnut",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "mcu",
+   "usb"
+  ],
+  "footprints": [
+   "qfn-40-1ep_5x5mm_p0.4mm_ep3.8x3.8mm",
+   "qfn-44-1ep_7x7mm_p0.5mm_ep5.2x5.2mm",
+   "hro-type-c-31-m-12"
+  ]
+ },
+ {
   "slug": "fruity60",
   "hardest": "smd_hand",
   "driven_by": [
@@ -1706,6 +1723,16 @@
   ],
   "footprints": [
    "d_sod-123"
+  ]
+ },
+ {
+  "slug": "handwired-twentypad",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "usb"
+  ],
+  "footprints": [
+   "usb_c_receptacle_hro_type-c-31-m-12"
   ]
  },
  {
@@ -2072,6 +2099,20 @@
   ]
  },
  {
+  "slug": "keotl-11squares",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "diode",
+   "mcu",
+   "other"
+  ],
+  "footprints": [
+   "d_sod-123",
+   "tqfp-44_10x10mm_p0.8mm",
+   "crystal_smd_3225-4pin_3.2x2.5mm"
+  ]
+ },
+ {
   "slug": "keyboar-layout",
   "hardest": "through_hole",
   "driven_by": [
@@ -2134,6 +2175,18 @@
    "c_0402_1005metric",
    "r_0402_1005metric",
    "usb_type-c-31-m-12"
+  ]
+ },
+ {
+  "slug": "ktec-ergodone",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "diode",
+   "other"
+  ],
+  "footprints": [
+   "mx_flip_diode_nosmd",
+   "mx_flip_xx_nosmd"
   ]
  },
  {
@@ -2294,6 +2347,16 @@
   ],
   "footprints": [
    "type-c-31-m-12"
+  ]
+ },
+ {
+  "slug": "lunakey-mini",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "led"
+  ],
+  "footprints": [
+   "led_ws2812b"
   ]
  },
  {
@@ -2473,6 +2536,38 @@
   ],
   "footprints": [
    "hro-type-c-31-m-12-assembly"
+  ]
+ },
+ {
+  "slug": "mithril",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "usb"
+  ],
+  "footprints": [
+   "usb_c_receptacle_hro_type-c-31-m-12"
+  ]
+ },
+ {
+  "slug": "mithril-panneled",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "usb"
+  ],
+  "footprints": [
+   "usb_c_receptacle_hro_type-c-31-m-12"
+  ]
+ },
+ {
+  "slug": "mochi40",
+  "hardest": "through_hole",
+  "driven_by": [
+   "diode",
+   "encoder"
+  ],
+  "footprints": [
+   "diode-hybrid-back",
+   "rotaryencoder_alps_ec11e-switch_vertical_h20mm"
   ]
  },
  {
@@ -2666,6 +2761,18 @@
   ],
   "footprints": [
    "sot-23-6"
+  ]
+ },
+ {
+  "slug": "orbit",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "mcu",
+   "usb"
+  ],
+  "footprints": [
+   "qfn-44-1ep_7x7mm_p0.5mm_ep5.15x5.15mm",
+   "hro-type-c-31-m-12-assembly"
   ]
  },
  {

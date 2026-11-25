@@ -453,6 +453,12 @@
   "status": "ok",
   "truncated": false
  },
+ "That-Canadian/Keyboard_Files": {
+  "files": [],
+  "repo": "That-Canadian/Keyboard_Files",
+  "status": "ok",
+  "truncated": false
+ },
  "That-Canadian/MiniDox_PCB": {
   "files": [
    {
@@ -2315,6 +2321,12 @@
   "status": "ok",
   "truncated": false
  },
+ "harrycutts/twentypad": {
+  "files": [],
+  "repo": "harrycutts/twentypad",
+  "status": "ok",
+  "truncated": false
+ },
  "hazels-garage/bad-wings": {
   "files": [
    {
@@ -3288,6 +3300,34 @@
   "status": "ok",
   "truncated": false
  },
+ "keotl/11squares": {
+  "files": [
+   {
+    "first_line": "Creative Commons Legal Code",
+    "licence": "CC0-1.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   },
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "libraries/Keebio-Parts.pretty/LICENSE",
+    "root": false,
+    "vendored": true
+   },
+   {
+    "first_line": "<a rel=\"license\" href=\"http://creativecommons.org/licenses/by-sa/4.0/\"><img alt=\"Creative ",
+    "licence": "CC-BY-SA-4.0",
+    "path": "libraries/keyswitches.pretty/LICENSE.md",
+    "root": false,
+    "vendored": true
+   }
+  ],
+  "repo": "keotl/11squares",
+  "status": "ok",
+  "truncated": false
+ },
  "keyzog/kapl": {
   "files": [
    {
@@ -3409,6 +3449,20 @@
    }
   ],
   "repo": "kraken-jokes/pteron-pcb",
+  "status": "ok",
+  "truncated": false
+ },
+ "ktec-hq/ErgoDone": {
+  "files": [
+   {
+    "first_line": "GNU GENERAL PUBLIC LICENSE",
+    "licence": "GPL-3.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "ktec-hq/ErgoDone",
   "status": "ok",
   "truncated": false
  },
@@ -4110,6 +4164,20 @@
   "status": "ok",
   "truncated": false
  },
+ "nopunin10did/kastenwagen": {
+  "files": [
+   {
+    "first_line": "# Kastenwagen Keyboard: License",
+    "licence": "CC-BY-SA-4.0",
+    "path": "LICENSE.md",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "nopunin10did/kastenwagen",
+  "status": "ok",
+  "truncated": false
+ },
  "nrtkbb/keyboards": {
   "files": [],
   "repo": "nrtkbb/keyboards",
@@ -4646,6 +4714,12 @@
  "samgowland/gowla-macro-board": {
   "files": [],
   "repo": "samgowland/gowla-macro-board",
+  "status": "ok",
+  "truncated": false
+ },
+ "sanfeps/mithril_kb": {
+  "files": [],
+  "repo": "sanfeps/mithril_kb",
   "status": "ok",
   "truncated": false
  },
@@ -5950,6 +6024,20 @@
    }
   ],
   "repo": "yiancar/gingham_pcb",
+  "status": "ok",
+  "truncated": false
+ },
+ "yoichiro/lunakey": {
+  "files": [
+   {
+    "first_line": "Lunakey License",
+    "licence": "CC-BY-NC-SA-4.0",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "yoichiro/lunakey",
   "status": "ok",
   "truncated": false
  },

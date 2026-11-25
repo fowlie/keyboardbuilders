@@ -74,6 +74,31 @@
   },
   "unnamed": {}
  },
+ "Aidan-OS/Mochi40\tPCB/PCB.kicad_pcb": {
+  "accepts": {
+   "mx footprints:MXOnly-1.25U-NoLED\tmillmax+solder": 8,
+   "mx footprints:MXOnly-1.5U-NoLED\tmillmax+solder": 2,
+   "mx footprints:MXOnly-1U-NoLED\tmillmax+solder": 40
+  },
+  "drills": {
+   "MX 1.47": 100
+  },
+  "kinds": {
+   "solder": 50
+  },
+  "names": {
+   "mx footprints:MXOnly-1.25U-NoLED\tsolder\tthru_hole\t-": 8,
+   "mx footprints:MXOnly-1.5U-NoLED\tsolder\tthru_hole\t-": 2,
+   "mx footprints:MXOnly-1U-NoLED\tsolder\tthru_hole\t-": 40
+  },
+  "positions": {
+   "millmax+solder": 50
+  },
+  "sockets": {
+   "-": 50
+  },
+  "unnamed": {}
+ },
  "Aidan-OS/Sango\tPCB/Sango/Sango.kicad_pcb": {
   "accepts": {
    "KiSwitch_Kailh_Hotswap:SW_Hotswap_Kailh_Choc_V1_1.00u\tchoc": 70,
@@ -393,6 +418,39 @@
   },
   "sockets": {
    "-": 2
+  },
+  "unnamed": {}
+ },
+ "Frooastside/Frooastboard\tFrooastboard Walnut/KiCad Project/Frooastboard Walnut.kicad_pcb": {
+  "accepts": {
+   "MX_Only:MXOnly-1.25U-NoLED\tmillmax+solder": 8,
+   "MX_Only:MXOnly-1.5U-NoLED\tmillmax+solder": 2,
+   "MX_Only:MXOnly-1.75U-NoLED\tmillmax+solder": 1,
+   "MX_Only:MXOnly-1U-NoLED\tmillmax+solder": 58,
+   "MX_Only:MXOnly-2.25U-NoLED\tmillmax+solder": 2,
+   "MX_Only:MXOnly-2.75U-NoLED\tmillmax+solder": 1,
+   "MX_Only:MXOnly-2U-NoLED\tmillmax+solder": 1
+  },
+  "drills": {
+   "MX 1.47": 146
+  },
+  "kinds": {
+   "solder": 73
+  },
+  "names": {
+   "MX_Only:MXOnly-1.25U-NoLED\tsolder\tthru_hole\t-": 8,
+   "MX_Only:MXOnly-1.5U-NoLED\tsolder\tthru_hole\t-": 2,
+   "MX_Only:MXOnly-1.75U-NoLED\tsolder\tthru_hole\t-": 1,
+   "MX_Only:MXOnly-1U-NoLED\tsolder\tthru_hole\t-": 58,
+   "MX_Only:MXOnly-2.25U-NoLED\tsolder\tthru_hole\t-": 2,
+   "MX_Only:MXOnly-2.75U-NoLED\tsolder\tthru_hole\t-": 1,
+   "MX_Only:MXOnly-2U-NoLED\tsolder\tthru_hole\t-": 1
+  },
+  "positions": {
+   "millmax+solder": 73
+  },
+  "sockets": {
+   "-": 73
   },
   "unnamed": {}
  },
@@ -740,6 +798,29 @@
   },
   "unnamed": {}
  },
+ "That-Canadian/Keyboard_Files\tECO Keyboard/PCB Files/V2.1/Eco-Board.kicad_pcb": {
+  "accepts": {
+   "canadian_footprints:Mx_Alps_100\tmillmax+solder": 56,
+   "canadian_footprints:Mx_Alps_200\tmillmax+solder": 3
+  },
+  "drills": {
+   "Alps+MX 1.5": 118
+  },
+  "kinds": {
+   "solder": 59
+  },
+  "names": {
+   "canadian_footprints:Mx_Alps_100\tsolder\tnp_thru_hole+thru_hole\t-": 56,
+   "canadian_footprints:Mx_Alps_200\tsolder\tnp_thru_hole+thru_hole\t-": 3
+  },
+  "positions": {
+   "millmax+solder": 59
+  },
+  "sockets": {
+   "-": 59
+  },
+  "unnamed": {}
+ },
  "That-Canadian/MiniDox_PCB\tMiniDox.kicad_pcb": {
   "accepts": {
    "canadian_footprints:Mx_Alps_100-dualside\tmillmax+solder": 17,
@@ -977,6 +1058,28 @@
   },
   "sockets": {
    "mx": 64
+  },
+  "unnamed": {}
+ },
+ "ai03-2725/orbit\tOrbit-PCB/Orbit.kicad_pcb": {
+  "accepts": {
+   "MX_Alps_Hybrid:MX-1U\tmillmax+solder": 60
+  },
+  "drills": {
+   "MX 1.04": 120,
+   "MX 1.47": 240
+  },
+  "kinds": {
+   "solder": 60
+  },
+  "names": {
+   "MX_Alps_Hybrid:MX-1U\tsolder\tthru_hole\t-": 60
+  },
+  "positions": {
+   "millmax+solder": 60
+  },
+  "sockets": {
+   "-": 60
   },
   "unnamed": {}
  },
@@ -4093,6 +4196,28 @@
   },
   "unnamed": {}
  },
+ "harrycutts/twentypad\tTeensy macro pad.kicad_pcb": {
+  "accepts": {
+   "CherryMX with bridge:SW_Cherry_MX_1.00u_PCB_with_bridge\tmillmax+solder": 20
+  },
+  "drills": {
+   "MX 1.0": 40,
+   "MX 1.5": 40
+  },
+  "kinds": {
+   "solder": 20
+  },
+  "names": {
+   "CherryMX with bridge:SW_Cherry_MX_1.00u_PCB_with_bridge\tsolder\tthru_hole\t-": 20
+  },
+  "positions": {
+   "millmax+solder": 20
+  },
+  "sockets": {
+   "-": 20
+  },
+  "unnamed": {}
+ },
  "hazels-garage/bad-wings\tbold/source/bad_wings_bold.kicad_pcb": {
   "accepts": {
    "0-badwings:Choc-1u-hotswap-solderable\tchoc+millmax+solder": 36
@@ -6000,6 +6125,34 @@
   },
   "unnamed": {}
  },
+ "keotl/11squares\t11-squares/11-squares-plate.kicad_pcb": {
+  "accepts": {},
+  "drills": {},
+  "kinds": {},
+  "names": {},
+  "positions": {},
+  "sockets": {},
+  "unnamed": {}
+ },
+ "keotl/11squares\t11-squares/11-squares.kicad_pcb": {
+  "accepts": {
+   "custom:SW_Hotswap_Kailh_MX_1.00u\tmx": 11
+  },
+  "drills": {},
+  "kinds": {
+   "socket": 11
+  },
+  "names": {
+   "custom:SW_Hotswap_Kailh_MX_1.00u\tsocket\tsmd\tmx": 11
+  },
+  "positions": {
+   "mx": 11
+  },
+  "sockets": {
+   "mx": 11
+  },
+  "unnamed": {}
+ },
  "keyzog/kapl\tpcb/Kapl.kicad_pcb": {
   "accepts": {
    "_Kapl:MX-ALPs-PG1350-rev\tmillmax+solder": 34
@@ -6144,6 +6297,34 @@
   },
   "sockets": {
    "-": 56
+  },
+  "unnamed": {}
+ },
+ "ktec-hq/ErgoDone\tErgoDone.kicad_pcb": {
+  "accepts": {
+   "ErgoDone:MX_FLIP\tmillmax+solder": 4,
+   "ErgoDone:MX_FLIP_DIODE_NOSMD\tmillmax+solder": 34,
+   "ErgoDone:MX_FLIP_XX_NOSMD\tmillmax+solder": 4
+  },
+  "drills": {
+   "MX 0.99": 152,
+   "MX 1.5": 184,
+   "MX 1.7": 80
+  },
+  "kinds": {
+   "solder": 42
+  },
+  "names": {
+   "ErgoDone:MX_FLIP\tsolder\tnp_thru_hole+thru_hole\t-": 4,
+   "ErgoDone:MX_FLIP_DIODE_NOSMD\tsolder\tnp_thru_hole+thru_hole\t-": 30,
+   "ErgoDone:MX_FLIP_DIODE_NOSMD\tsolder\tthru_hole\t-": 4,
+   "ErgoDone:MX_FLIP_XX_NOSMD\tsolder\tnp_thru_hole+thru_hole\t-": 4
+  },
+  "positions": {
+   "millmax+solder": 42
+  },
+  "sockets": {
+   "-": 42
   },
   "unnamed": {}
  },
@@ -8283,6 +8464,48 @@
   },
   "sockets": {
    "-": 29
+  },
+  "unnamed": {}
+ },
+ "sanfeps/mithril_kb\tMithril-panneled/Mithril-panneled.kicad_pcb": {
+  "accepts": {
+   "PCM_Switch_Keyboard_Hotswap_Kailh:SW_Hotswap_Kailh_MX_Plated_1.00u\tmx": 54
+  },
+  "drills": {
+   "MX 3.05": 108
+  },
+  "kinds": {
+   "either": 54
+  },
+  "names": {
+   "PCM_Switch_Keyboard_Hotswap_Kailh:SW_Hotswap_Kailh_MX_Plated_1.00u\teither\tsmd+thru_hole\tmx": 54
+  },
+  "positions": {
+   "mx": 54
+  },
+  "sockets": {
+   "mx": 54
+  },
+  "unnamed": {}
+ },
+ "sanfeps/mithril_kb\tMithril.kicad_pcb": {
+  "accepts": {
+   "PCM_Switch_Keyboard_Hotswap_Kailh:SW_Hotswap_Kailh_MX_Plated_1.00u\tmx": 54
+  },
+  "drills": {
+   "MX 3.05": 108
+  },
+  "kinds": {
+   "either": 54
+  },
+  "names": {
+   "PCM_Switch_Keyboard_Hotswap_Kailh:SW_Hotswap_Kailh_MX_Plated_1.00u\teither\tsmd+thru_hole\tmx": 54
+  },
+  "positions": {
+   "mx": 54
+  },
+  "sockets": {
+   "mx": 54
   },
   "unnamed": {}
  },
@@ -10656,6 +10879,25 @@
   "names": {},
   "positions": {},
   "sockets": {},
+  "unnamed": {}
+ },
+ "yoichiro/lunakey\tmini/rev6/pcb/lunakey_mini.kicad_pcb": {
+  "accepts": {
+   "Yoichiro:CherryMX_Choco_Hotswap\tchoc+mx": 44
+  },
+  "drills": {},
+  "kinds": {
+   "socket": 44
+  },
+  "names": {
+   "Yoichiro:CherryMX_Choco_Hotswap\tsocket\tsmd\tchoc+mx": 44
+  },
+  "positions": {
+   "choc+mx": 44
+  },
+  "sockets": {
+   "choc+mx": 44
+  },
   "unnamed": {}
  },
  "zykrah/slime88\tslime88.kicad_pcb": {

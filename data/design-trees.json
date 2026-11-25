@@ -322,6 +322,9 @@
  "dropout": [
   "qmk"
  ],
+ "eco-rev2": [
+  "qmk"
+ ],
  "eek": [
   "zmk"
  ],
@@ -414,6 +417,9 @@
  "frooastboard-nano": [
   "qmk"
  ],
+ "frooastboard-walnut": [
+  "qmk"
+ ],
  "fruity60": [
   "qmk"
  ],
@@ -461,6 +467,9 @@
   "qmk"
  ],
  "gummy-key": [
+  "qmk"
+ ],
+ "handwired-twentypad": [
   "qmk"
  ],
  "helix": [
@@ -563,6 +572,9 @@
  "keaboard-rev1": [
   "qmk"
  ],
+ "keotl-11squares": [
+  "qmk"
+ ],
  "keyboar-layout": [
   "qmk"
  ],
@@ -576,6 +588,9 @@
   "qmk"
  ],
  "koca58": [
+  "qmk"
+ ],
+ "ktec-ergodone": [
   "qmk"
  ],
  "kuro65": [
@@ -616,6 +631,9 @@
   "zmk"
  ],
  "lumberjack": [
+  "qmk"
+ ],
+ "lunakey-mini": [
   "qmk"
  ],
  "m0110a-qmk": [
@@ -661,6 +679,15 @@
   "qmk"
  ],
  "minim": [
+  "qmk"
+ ],
+ "mithril": [
+  "qmk"
+ ],
+ "mithril-panneled": [
+  "qmk"
+ ],
+ "mochi40": [
   "qmk"
  ],
  "model-b": [
@@ -712,6 +739,9 @@
   "qmk"
  ],
  "opendeck": [
+  "qmk"
+ ],
+ "orbit": [
   "qmk"
  ],
  "orthocode": [

@@ -17,6 +17,12 @@
   "mm": 17.1,
   "pitch": "choc_18x17"
  },
+ "Aidan-OS/Mochi40\tPCB/PCB.kicad_pcb": {
+  "confidence": 0.95,
+  "keys": 40,
+  "mm": 19.05,
+  "pitch": "mx_19.05"
+ },
  "Aidan-OS/Sango\tPCB/Sango/Sango.kicad_pcb": {
   "confidence": 0.89,
   "keys": 70,
@@ -86,6 +92,12 @@
  "Envious-Data/Env-MCRO\tMainPCB_ULP/EnvMCRO.kicad_pcb": {
   "confidence": 1.0,
   "keys": 12,
+  "mm": 19.05,
+  "pitch": "mx_19.05"
+ },
+ "Frooastside/Frooastboard\tFrooastboard Walnut/KiCad Project/Frooastboard Walnut.kicad_pcb": {
+  "confidence": 1.0,
+  "keys": 58,
   "mm": 19.05,
   "pitch": "mx_19.05"
  },
@@ -161,6 +173,12 @@
   "mm": 19.05,
   "pitch": "mx_19.05"
  },
+ "That-Canadian/Keyboard_Files\tECO Keyboard/PCB Files/V2.1/Eco-Board.kicad_pcb": {
+  "confidence": 1.0,
+  "keys": 56,
+  "mm": 19.05,
+  "pitch": "mx_19.05"
+ },
  "That-Canadian/MiniDox_PCB\tMiniDox.kicad_pcb": {
   "confidence": 0.88,
   "keys": 17,
@@ -214,6 +232,12 @@
   "keys": 55,
   "mm": 19.05,
   "pitch": "mx_19.05"
+ },
+ "ai03-2725/orbit\tOrbit-PCB/Orbit.kicad_pcb": {
+  "confidence": 0.92,
+  "keys": 60,
+  "mm": 20.2,
+  "pitch": "other"
  },
  "ai03-2725/soyuz\tSoyuz.kicad_pcb": {
   "confidence": 1.0,
@@ -995,6 +1019,12 @@
   "mm": 19.05,
   "pitch": "mx_19.05"
  },
+ "harrycutts/twentypad\tTeensy macro pad.kicad_pcb": {
+  "confidence": 1.0,
+  "keys": 20,
+  "mm": 19.0,
+  "pitch": "mx_19.05"
+ },
  "hazels-garage/bad-wings\tbold/source/bad_wings_bold.kicad_pcb": {
   "confidence": 0.83,
   "keys": 36,
@@ -1397,6 +1427,12 @@
   "mm": 19.05,
   "pitch": "mx_19.05"
  },
+ "keotl/11squares\t11-squares/11-squares.kicad_pcb": {
+  "confidence": 0.18,
+  "keys": 11,
+  "mm": 19.0,
+  "pitch": "mx_19.05"
+ },
  "keyzog/kapl\tpcb/Kapl.kicad_pcb": {
   "confidence": 0.94,
   "keys": 34,
@@ -1437,6 +1473,12 @@
   "confidence": 0.38,
   "keys": 56,
   "mm": 19.0,
+  "pitch": "mx_19.05"
+ },
+ "ktec-hq/ErgoDone\tErgoDone.kicad_pcb": {
+  "confidence": 0.94,
+  "keys": 34,
+  "mm": 19.05,
   "pitch": "mx_19.05"
  },
  "kulmajaba/tunks-keyboard\tergo33/ergo33.kicad_pcb": {
@@ -1983,6 +2025,18 @@
   "confidence": 0.93,
   "keys": 28,
   "mm": 19.05,
+  "pitch": "mx_19.05"
+ },
+ "sanfeps/mithril_kb\tMithril-panneled/Mithril-panneled.kicad_pcb": {
+  "confidence": 0.89,
+  "keys": 54,
+  "mm": 19.0,
+  "pitch": "mx_19.05"
+ },
+ "sanfeps/mithril_kb\tMithril.kicad_pcb": {
+  "confidence": 0.89,
+  "keys": 54,
+  "mm": 19.0,
   "pitch": "mx_19.05"
  },
  "satorusaka/15k-macropad\tSource/15k-macropad/15k-macropad.kicad_pcb": {
@@ -2534,6 +2588,12 @@
  "yiancar/gingham_pcb\tpcb/gingham.kicad_pcb": {
   "confidence": 0.98,
   "keys": 51,
+  "mm": 19.05,
+  "pitch": "mx_19.05"
+ },
+ "yoichiro/lunakey\tmini/rev6/pcb/lunakey_mini.kicad_pcb": {
+  "confidence": 0.82,
+  "keys": 44,
   "mm": 19.05,
   "pitch": "mx_19.05"
  },

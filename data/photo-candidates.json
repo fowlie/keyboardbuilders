@@ -3406,6 +3406,15 @@
       }
     ]
   },
+  "keotl-11squares": {
+    "repo": "https://github.com/keotl/11squares",
+    "images": [
+      {
+        "url": "https://raw.githubusercontent.com/keotl/11squares/master/banner.jpg",
+        "alt": "Banner"
+      }
+    ]
+  },
   "keyboar-layout": {
     "repo": "https://github.com/ncwhale/keyboard_design",
     "images": [
@@ -3532,6 +3541,16 @@
         "url": "https://raw.githubusercontent.com/tzarc/keyboards/main/Djinn/Rev2a/reversible-kicad/reversible-kicad-footprints/5Way-K1-1506DN-01.png",
         "alt": "",
         "path": "Djinn/Rev2a/reversible-kicad/reversible-kicad-footprints/5Way-K1-1506DN-01.png"
+      }
+    ]
+  },
+  "ktec-ergodone": {
+    "repo": "https://github.com/ktec-hq/ErgoDone",
+    "images": [
+      {
+        "url": "https://raw.githubusercontent.com/ktec-hq/ErgoDone/master/pro_micro_teensy_2.0_comparsion.png",
+        "alt": "",
+        "path": "pro_micro_teensy_2.0_comparsion.png"
       }
     ]
   },
@@ -4044,6 +4063,71 @@
       }
     ]
   },
+  "mochi40": {
+    "repo": "https://github.com/Aidan-OS/Mochi40",
+    "images": [
+      {
+        "url": "https://raw.githubusercontent.com/Aidan-OS/Mochi40/main/Blender%20Files/Renders/Jpgs/Butterfly%20Tea.jpg",
+        "alt": "",
+        "path": "Blender Files/Renders/Jpgs/Butterfly Tea.jpg"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/Aidan-OS/Mochi40/main/Blender%20Files/Renders/Jpgs/Liquorice.jpg",
+        "alt": "",
+        "path": "Blender Files/Renders/Jpgs/Liquorice.jpg"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/Aidan-OS/Mochi40/main/Blender%20Files/Renders/Jpgs/Matcha.jpg",
+        "alt": "",
+        "path": "Blender Files/Renders/Jpgs/Matcha.jpg"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/Aidan-OS/Mochi40/main/Blender%20Files/Renders/Jpgs/Plain.jpg",
+        "alt": "",
+        "path": "Blender Files/Renders/Jpgs/Plain.jpg"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/Aidan-OS/Mochi40/main/Blender%20Files/Renders/Jpgs/Red%20Bean.jpg",
+        "alt": "",
+        "path": "Blender Files/Renders/Jpgs/Red Bean.jpg"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/Aidan-OS/Mochi40/main/Blender%20Files/Renders/Jpgs/Strawberry.jpg",
+        "alt": "",
+        "path": "Blender Files/Renders/Jpgs/Strawberry.jpg"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/Aidan-OS/Mochi40/main/Blender%20Files/Renders/Jpgs/Taro.jpg",
+        "alt": "",
+        "path": "Blender Files/Renders/Jpgs/Taro.jpg"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/Aidan-OS/Mochi40/main/Blender%20Files/Renders/Jpgs/Tea%20%2B%20Taro.jpg",
+        "alt": "",
+        "path": "Blender Files/Renders/Jpgs/Tea + Taro.jpg"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/Aidan-OS/Mochi40/main/Blender%20Files/Renders/Jpgs/Waterdrop.jpg",
+        "alt": "",
+        "path": "Blender Files/Renders/Jpgs/Waterdrop.jpg"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/Aidan-OS/Mochi40/main/Images/Layout.png",
+        "alt": "",
+        "path": "Images/Layout.png"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/Aidan-OS/Mochi40/main/Blender%20Files/Renders/Butterfly%20Tea.png",
+        "alt": "",
+        "path": "Blender Files/Renders/Butterfly Tea.png"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/Aidan-OS/Mochi40/main/Blender%20Files/Renders/Liquorice.png",
+        "alt": "",
+        "path": "Blender Files/Renders/Liquorice.png"
+      }
+    ]
+  },
   "morizon-choc": {
     "repo": "https://github.com/skarrmann/morizon",
     "images": [
@@ -4248,6 +4332,49 @@
         "url": "https://raw.githubusercontent.com/cmdremily/opendeck/master/datasheets/Cherry%20MX%20RGB%20footprint.png",
         "alt": "",
         "path": "datasheets/Cherry MX RGB footprint.png"
+      }
+    ]
+  },
+  "orbit": {
+    "repo": "https://github.com/ai03-2725/orbit",
+    "images": [
+      {
+        "url": "https://raw.githubusercontent.com/ai03-2725/Orbit/master/Images/PCB-R2.0.jpg",
+        "alt": "Render Image"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/ai03-2725/Orbit/master/Images/Power.png",
+        "alt": "Diagram"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/ai03-2725/orbit/master/Images/PCB-R1.2.jpg",
+        "alt": "",
+        "path": "Images/PCB-R1.2.jpg"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/ai03-2725/orbit/master/Images/PCB-R1.5.jpg",
+        "alt": "",
+        "path": "Images/PCB-R1.5.jpg"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/ai03-2725/orbit/master/Images/PCB-R2.0.jpg",
+        "alt": "",
+        "path": "Images/PCB-R2.0.jpg"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/ai03-2725/orbit/master/Images/Power.png",
+        "alt": "",
+        "path": "Images/Power.png"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/ai03-2725/orbit/master/Images/Render.png",
+        "alt": "",
+        "path": "Images/Render.png"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/ai03-2725/orbit/master/Orbit-PCB/render.png",
+        "alt": "",
+        "path": "Orbit-PCB/render.png"
       }
     ]
   },

@@ -631,6 +631,12 @@
   ],
   "repo": "enochchau/dropout-numpad"
  },
+ "eco-rev2": {
+  "paths": [
+   "ECO Keyboard/PCB Files/V2.1/Eco-Board.kicad_pcb"
+  ],
+  "repo": "That-Canadian/Keyboard_Files"
+ },
  "eek": {
   "paths": [
    "eek_pcb/eek.kicad_pcb"
@@ -817,6 +823,12 @@
   ],
   "repo": "Frooastside/Frooastboard"
  },
+ "frooastboard-walnut": {
+  "paths": [
+   "Frooastboard Walnut/KiCad Project/Frooastboard Walnut.kicad_pcb"
+  ],
+  "repo": "Frooastside/Frooastboard"
+ },
  "fruity60": {
   "paths": [
    "fruity60/fruity60.kicad_pcb"
@@ -927,6 +939,12 @@
    "pcbs/right/GummyKey_Right.kicad_pcb"
   ],
   "repo": "gumorr/gummykey"
+ },
+ "handwired-twentypad": {
+  "paths": [
+   "Teensy macro pad.kicad_pcb"
+  ],
+  "repo": "harrycutts/twentypad"
  },
  "helix": {
   "paths": [
@@ -1133,6 +1151,13 @@
   ],
   "repo": "keawade/keaboard"
  },
+ "keotl-11squares": {
+  "paths": [
+   "11-squares/11-squares-plate.kicad_pcb",
+   "11-squares/11-squares.kicad_pcb"
+  ],
+  "repo": "keotl/11squares"
+ },
  "keyboar-layout": {
   "paths": [
    "Splite-Keyboard-v2/Keyboar-layout.kicad_pcb"
@@ -1162,6 +1187,12 @@
    "PCB/Koca58.kicad_pcb"
   ],
   "repo": "hardware7253/koca58"
+ },
+ "ktec-ergodone": {
+  "paths": [
+   "ErgoDone.kicad_pcb"
+  ],
+  "repo": "ktec-hq/ErgoDone"
  },
  "kuro65": {
   "paths": [
@@ -1264,6 +1295,12 @@
   ],
   "repo": "peej/lumberjack-keyboard"
  },
+ "lunakey-mini": {
+  "paths": [
+   "mini/rev6/pcb/lunakey_mini.kicad_pcb"
+  ],
+  "repo": "yoichiro/lunakey"
+ },
  "m0110a-qmk": {
   "paths": [
    "m0110a_qmk.kicad_pcb"
@@ -1353,6 +1390,24 @@
    "PCB/minim.kicad_pcb"
   ],
   "repo": "matthewdias/minim"
+ },
+ "mithril": {
+  "paths": [
+   "Mithril.kicad_pcb"
+  ],
+  "repo": "sanfeps/mithril_kb"
+ },
+ "mithril-panneled": {
+  "paths": [
+   "Mithril-panneled/Mithril-panneled.kicad_pcb"
+  ],
+  "repo": "sanfeps/mithril_kb"
+ },
+ "mochi40": {
+  "paths": [
+   "PCB/PCB.kicad_pcb"
+  ],
+  "repo": "Aidan-OS/Mochi40"
  },
  "model-b": {
   "paths": [
@@ -1458,6 +1513,12 @@
    "hardware/OpenDeck32/opendeck.kicad_pcb"
   ],
   "repo": "cmdremily/opendeck"
+ },
+ "orbit": {
+  "paths": [
+   "Orbit-PCB/Orbit.kicad_pcb"
+  ],
+  "repo": "ai03-2725/orbit"
  },
  "orthocode": {
   "paths": [

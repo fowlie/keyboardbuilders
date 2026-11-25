@@ -154,6 +154,7 @@
  "drink-me-usb-micro": [],
  "drink-me-usb-mini": [],
  "dropout": [],
+ "eco-rev2": [],
  "eek": [],
  "egg58v2": [
   "hotswap"
@@ -204,6 +205,7 @@
  "frankie-macropad": [],
  "friedrich": [],
  "frooastboard-nano": [],
+ "frooastboard-walnut": [],
  "fruity60": [],
  "g35": [],
  "game-hand": [],
@@ -238,6 +240,7 @@
  "gummy-key": [
   "hotswap"
  ],
+ "handwired-twentypad": [],
  "helix": [],
  "hem": [],
  "hillside-46": [
@@ -297,6 +300,9 @@
  "keaboard-rev1": [
   "hotswap"
  ],
+ "keotl-11squares": [
+  "hotswap"
+ ],
  "keyboar-layout": [],
  "kintsugi": [
   "hotswap"
@@ -308,6 +314,7 @@
  "koca58": [
   "hotswap"
  ],
+ "ktec-ergodone": [],
  "kuro65": [
   "hotswap"
  ],
@@ -336,6 +343,9 @@
   "hotswap"
  ],
  "lumberjack": [],
+ "lunakey-mini": [
+  "hotswap"
+ ],
  "m0110a-qmk": [],
  "m0116-usb": [],
  "m3n3van-rev2": [],
@@ -359,6 +369,13 @@
  "mini-e-li-xi-vy": [],
  "mini-ten-key-plus": [],
  "minim": [],
+ "mithril": [
+  "hotswap"
+ ],
+ "mithril-panneled": [
+  "hotswap"
+ ],
+ "mochi40": [],
  "model-b": [
   "hotswap"
  ],
@@ -388,6 +405,7 @@
   "hotswap"
  ],
  "opendeck": [],
+ "orbit": [],
  "orthocode": [],
  "osprangle": [
   "hotswap"

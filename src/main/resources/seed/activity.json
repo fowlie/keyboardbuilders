@@ -1,5 +1,5 @@
 {
- "fetchedAt": "2026-11-24T02:51:00Z",
+ "fetchedAt": "2026-11-24T23:55:33Z",
  "repos": {
   "0x544D/kuro65": {
    "stars": 2,
@@ -9,6 +9,11 @@
   "AYM1607/swept-crkbd": {
    "stars": 163,
    "lastPush": "2024-03-11T19:26:57Z",
+   "archived": false
+  },
+  "Aidan-OS/Mochi40": {
+   "stars": 70,
+   "lastPush": "2023-04-24T20:19:31Z",
    "archived": false
   },
   "Aidan-OS/Sango": {
@@ -91,6 +96,11 @@
    "lastPush": "2022-07-30T12:13:27Z",
    "archived": false
   },
+  "That-Canadian/Keyboard_Files": {
+   "stars": 13,
+   "lastPush": "2017-11-21T14:15:08Z",
+   "archived": false
+  },
   "That-Canadian/MiniDox_PCB": {
    "stars": 169,
    "lastPush": "2017-08-20T00:49:01Z",
@@ -118,13 +128,18 @@
    "archived": false
   },
   "ai03-2725/contra": {
-   "stars": 197,
+   "stars": 198,
    "lastPush": "2019-05-27T23:15:56Z",
    "archived": false
   },
   "ai03-2725/jp60": {
    "stars": 30,
    "lastPush": "2023-04-18T13:41:15Z",
+   "archived": false
+  },
+  "ai03-2725/orbit": {
+   "stars": 87,
+   "lastPush": "2020-06-18T18:46:40Z",
    "archived": false
   },
   "ai03-2725/soyuz": {
@@ -530,6 +545,11 @@
    "lastPush": "2026-08-27T10:11:01Z",
    "archived": false
   },
+  "harrycutts/twentypad": {
+   "stars": 0,
+   "lastPush": "2026-08-11T21:25:56Z",
+   "archived": false
+  },
   "hazels-garage/bad-wings": {
    "stars": 107,
    "lastPush": "2026-03-23T17:41:44Z",
@@ -767,6 +787,11 @@
    "lastPush": "2022-09-02T12:57:39Z",
    "archived": false
   },
+  "keotl/11squares": {
+   "stars": 0,
+   "lastPush": "2026-07-23T13:51:18Z",
+   "archived": false
+  },
   "keyzog/kapl": {
    "stars": 88,
    "lastPush": "2024-02-09T11:06:58Z",
@@ -795,6 +820,11 @@
   "kraken-jokes/pteron-pcb": {
    "stars": 30,
    "lastPush": "2021-12-17T22:55:40Z",
+   "archived": false
+  },
+  "ktec-hq/ErgoDone": {
+   "stars": 123,
+   "lastPush": "2019-06-25T08:04:49Z",
    "archived": false
   },
   "kulmajaba/tunks-keyboard": {
@@ -1074,6 +1104,11 @@
    "lastPush": "2019-05-22T01:52:17Z",
    "archived": false
   },
+  "sanfeps/mithril_kb": {
+   "stars": 1,
+   "lastPush": "2026-05-15T14:17:57Z",
+   "archived": false
+  },
   "sendyyeah/bevi": {
    "stars": 23,
    "lastPush": "2021-04-16T23:51:21Z",
@@ -1156,7 +1191,7 @@
    "archived": false
   },
   "squalius-cephalus/silakka54": {
-   "stars": 645,
+   "stars": 647,
    "lastPush": "2026-05-20T07:55:29Z",
    "archived": false
   },
@@ -1365,6 +1400,11 @@
   "yiancar/gingham_pcb": {
    "stars": 86,
    "lastPush": "2020-06-18T11:38:13Z",
+   "archived": false
+  },
+  "yoichiro/lunakey": {
+   "stars": 43,
+   "lastPush": "2022-10-03T06:29:59Z",
    "archived": false
   },
   "zykrah/slime88": {

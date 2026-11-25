@@ -797,6 +797,13 @@
    "keys": 18
   }
  },
+ "eco-rev2": {
+  "ECO Keyboard/PCB Files/V2.1/Eco-Board.kicad_pcb": {
+   "diodes": 56,
+   "exposed": 0,
+   "keys": 59
+  }
+ },
  "eek": {
   "eek_pcb/eek.kicad_pcb": {
    "diodes": 36,
@@ -1037,6 +1044,13 @@
    "keys": 2
   }
  },
+ "frooastboard-walnut": {
+  "Frooastboard Walnut/KiCad Project/Frooastboard Walnut.kicad_pcb": {
+   "diodes": 72,
+   "exposed": 0,
+   "keys": 73
+  }
+ },
  "fruity60": {
   "fruity60/fruity60.kicad_pcb": {
    "diodes": 61,
@@ -1176,6 +1190,13 @@
    "diodes": 29,
    "exposed": 0,
    "keys": 29
+  }
+ },
+ "handwired-twentypad": {
+  "Teensy macro pad.kicad_pcb": {
+   "diodes": 0,
+   "exposed": 0,
+   "keys": 20
   }
  },
  "helix": {
@@ -1444,6 +1465,18 @@
    "keys": 25
   }
  },
+ "keotl-11squares": {
+  "11-squares/11-squares-plate.kicad_pcb": {
+   "diodes": 0,
+   "exposed": 0,
+   "keys": 0
+  },
+  "11-squares/11-squares.kicad_pcb": {
+   "diodes": 11,
+   "exposed": 0,
+   "keys": 11
+  }
+ },
  "keyboar-layout": {
   "Splite-Keyboard-v2/Keyboar-layout.kicad_pcb": {
    "diodes": 0,
@@ -1477,6 +1510,13 @@
    "diodes": 0,
    "exposed": 0,
    "keys": 58
+  }
+ },
+ "ktec-ergodone": {
+  "ErgoDone.kicad_pcb": {
+   "diodes": 40,
+   "exposed": 0,
+   "keys": 42
   }
  },
  "kuro65": {
@@ -1662,6 +1702,13 @@
    "keys": 62
   }
  },
+ "lunakey-mini": {
+  "mini/rev6/pcb/lunakey_mini.kicad_pcb": {
+   "diodes": 44,
+   "exposed": 4,
+   "keys": 44
+  }
+ },
  "m0110a-qmk": {
   "m0110a_qmk.kicad_pcb": {
    "diodes": 80,
@@ -1764,6 +1811,27 @@
   "PCB/minim.kicad_pcb": {
    "diodes": 0,
    "exposed": 0,
+   "keys": 46
+  }
+ },
+ "mithril": {
+  "Mithril.kicad_pcb": {
+   "diodes": 54,
+   "exposed": 0,
+   "keys": 54
+  }
+ },
+ "mithril-panneled": {
+  "Mithril-panneled/Mithril-panneled.kicad_pcb": {
+   "diodes": 54,
+   "exposed": 0,
+   "keys": 54
+  }
+ },
+ "mochi40": {
+  "PCB/PCB.kicad_pcb": {
+   "diodes": 48,
+   "exposed": 4,
    "keys": 46
   }
  },
@@ -1899,6 +1967,13 @@
    "diodes": 34,
    "exposed": 2,
    "keys": 32
+  }
+ },
+ "orbit": {
+  "Orbit-PCB/Orbit.kicad_pcb": {
+   "diodes": 62,
+   "exposed": 62,
+   "keys": 60
   }
  },
  "orthocode": {

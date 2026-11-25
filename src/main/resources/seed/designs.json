@@ -8399,6 +8399,66 @@
   ]
  },
  {
+  "name": "ECO",
+  "slug": "eco-rev2",
+  "sources": [
+   "https://github.com/That-Canadian/Keyboard_Files"
+  ],
+  "firmware": [
+   {
+    "family": "qmk",
+    "path": "eco/rev2",
+    "shield": null,
+    "targetMcu": "atmega32u4"
+   }
+  ],
+  "layouts": [
+   {
+    "keys": 56
+   }
+  ],
+  "switches": [
+   {
+    "kind": "alps"
+   },
+   {
+    "kind": "mx"
+   }
+  ],
+  "pitch": null,
+  "buildMethod": {
+   "kind": "pcb"
+  },
+  "hardestComponent": null,
+  "controller": {
+   "kind": "socket",
+   "footprints": [
+    "pro_micro"
+   ]
+  },
+  "body": {
+   "kind": "unibody"
+  },
+  "licensing": {
+   "hardware": [],
+   "firmware": [],
+   "documentation": []
+  },
+  "hostPort": null,
+  "wiring": {
+   "kind": "matrix",
+   "rows": 4,
+   "cols": 14,
+   "diodes": "col_to_row"
+  },
+  "switchMounts": [
+   "millmax",
+   "solder"
+  ],
+  "exposedComponents": false,
+  "powerSwitch": false
+ },
+ {
   "name": "eek",
   "slug": "eek",
   "sources": [
@@ -10803,6 +10863,79 @@
   }
  },
  {
+  "name": "Frooastboard Walnut",
+  "slug": "frooastboard-walnut",
+  "sources": [
+   "https://github.com/Frooastside/Frooastboard"
+  ],
+  "firmware": [
+   {
+    "family": "qmk",
+    "path": "frooastboard/walnut",
+    "shield": null,
+    "targetMcu": "atmega32u4"
+   }
+  ],
+  "layouts": [
+   {
+    "keys": 72
+   },
+   {
+    "keys": 71
+   }
+  ],
+  "switches": [
+   {
+    "kind": "mx"
+   }
+  ],
+  "pitch": {
+   "kind": "mx_19.05",
+   "mm": 19.05
+  },
+  "buildMethod": {
+   "kind": "pcb"
+  },
+  "hardestComponent": {
+   "parts": [
+    "mcu",
+    "usb"
+   ],
+   "tier": "smd_fine"
+  },
+  "controller": {
+   "kind": "soldered",
+   "mcu": "atmega32u4"
+  },
+  "body": {
+   "kind": "unibody"
+  },
+  "licensing": {
+   "hardware": [
+    "GPL-3.0"
+   ],
+   "firmware": [
+    "GPL-3.0"
+   ],
+   "documentation": [
+    "GPL-3.0"
+   ]
+  },
+  "hostPort": "usb_c",
+  "wiring": {
+   "kind": "matrix",
+   "rows": 9,
+   "cols": 8,
+   "diodes": "col_to_row"
+  },
+  "switchMounts": [
+   "millmax",
+   "solder"
+  ],
+  "exposedComponents": false,
+  "powerSwitch": false
+ },
+ {
   "name": "fruity60",
   "slug": "fruity60",
   "sources": [
@@ -12155,6 +12288,65 @@
    "heightMm": 109.57,
    "copperLayers": 2
   }
+ },
+ {
+  "name": "TwentyPad",
+  "slug": "handwired-twentypad",
+  "sources": [
+   "https://github.com/harrycutts/twentypad"
+  ],
+  "firmware": [
+   {
+    "family": "qmk",
+    "path": "handwired/twentypad",
+    "shield": null,
+    "targetMcu": "atmega32u4"
+   }
+  ],
+  "layouts": [
+   {
+    "keys": 20
+   }
+  ],
+  "switches": [
+   {
+    "kind": "mx"
+   }
+  ],
+  "pitch": null,
+  "buildMethod": {
+   "kind": "pcb"
+  },
+  "hardestComponent": {
+   "parts": [
+    "usb"
+   ],
+   "tier": "smd_fine"
+  },
+  "controller": {
+   "kind": "soldered",
+   "mcu": "atmega32u4"
+  },
+  "body": {
+   "kind": "unibody"
+  },
+  "licensing": {
+   "hardware": [],
+   "firmware": [],
+   "documentation": []
+  },
+  "hostPort": "usb_c",
+  "wiring": {
+   "kind": "direct_pin",
+   "pins": 20
+  },
+  "switchMounts": [
+   "millmax",
+   "solder"
+  ],
+  "splay": false,
+  "stagger": "ortho",
+  "powerSwitch": false
  },
  {
   "name": "helix",
@@ -14963,6 +15155,75 @@
   ]
  },
  {
+  "name": "11squares",
+  "slug": "keotl-11squares",
+  "sources": [
+   "https://github.com/keotl/11squares"
+  ],
+  "firmware": [
+   {
+    "family": "qmk",
+    "path": "keotl/11squares",
+    "shield": null,
+    "targetMcu": "atmega32u4"
+   }
+  ],
+  "layouts": [
+   {
+    "keys": 11
+   }
+  ],
+  "switches": [
+   {
+    "kind": "mx"
+   }
+  ],
+  "pitch": null,
+  "buildMethod": {
+   "kind": "pcb"
+  },
+  "hardestComponent": {
+   "parts": [
+    "diode",
+    "mcu",
+    "other"
+   ],
+   "tier": "smd_hand"
+  },
+  "controller": {
+   "kind": "soldered",
+   "mcu": "atmega32u4"
+  },
+  "body": {
+   "kind": "unibody"
+  },
+  "licensing": {
+   "hardware": [
+    "CC0-1.0"
+   ],
+   "firmware": [
+    "CC0-1.0"
+   ],
+   "documentation": [
+    "CC0-1.0"
+   ]
+  },
+  "hostPort": "micro_b",
+  "wiring": {
+   "kind": "matrix",
+   "rows": 4,
+   "cols": 4,
+   "diodes": "col_to_row"
+  },
+  "switchMounts": [
+   "mx_socket"
+  ],
+  "splay": true,
+  "stagger": "column",
+  "exposedComponents": false,
+  "powerSwitch": false
+ },
+ {
   "name": "Keyboar layout",
   "slug": "keyboar-layout",
   "sources": [
@@ -15405,6 +15666,72 @@
     "copperLayers": 2
    }
   ]
+ },
+ {
+  "name": "ErgoDone",
+  "slug": "ktec-ergodone",
+  "sources": [
+   "https://github.com/ktec-hq/ErgoDone"
+  ],
+  "firmware": [
+   {
+    "family": "qmk",
+    "path": "ktec/ergodone",
+    "shield": null,
+    "targetMcu": "atmega32u4"
+   }
+  ],
+  "layouts": [
+   {
+    "keys": 80
+   },
+   {
+    "keys": 76
+   }
+  ],
+  "switches": [
+   {
+    "kind": "mx"
+   }
+  ],
+  "pitch": null,
+  "buildMethod": {
+   "kind": "pcb"
+  },
+  "hardestComponent": {
+   "parts": [
+    "diode",
+    "other"
+   ],
+   "tier": "smd_hand"
+  },
+  "controller": {
+   "kind": "socket",
+   "footprints": [
+    "pro_micro"
+   ]
+  },
+  "body": {
+   "kind": "unibody"
+  },
+  "licensing": {
+   "hardware": [
+    "GPL-3.0"
+   ],
+   "firmware": [
+    "GPL-3.0"
+   ],
+   "documentation": [
+    "GPL-3.0"
+   ]
+  },
+  "hostPort": "mini_b",
+  "switchMounts": [
+   "millmax",
+   "solder"
+  ],
+  "exposedComponents": false,
+  "powerSwitch": false
  },
  {
   "name": "kuro65",
@@ -16745,6 +17072,90 @@
   ]
  },
  {
+  "name": "lunakey mini",
+  "slug": "lunakey-mini",
+  "sources": [
+   "https://github.com/yoichiro/lunakey"
+  ],
+  "firmware": [
+   {
+    "family": "qmk",
+    "path": "yoichiro/lunakey_mini",
+    "shield": null,
+    "targetMcu": "atmega32u4"
+   }
+  ],
+  "layouts": [
+   {
+    "keys": 44
+   }
+  ],
+  "switches": [
+   {
+    "kind": "choc_v1"
+   },
+   {
+    "kind": "mx"
+   }
+  ],
+  "buildMethod": {
+   "kind": "pcb"
+  },
+  "hardestComponent": {
+   "parts": [
+    "led"
+   ],
+   "tier": "smd_hand"
+  },
+  "controller": {
+   "kind": "socket",
+   "footprints": [
+    "pro_micro"
+   ]
+  },
+  "body": {
+   "kind": "split",
+   "halves": 2,
+   "reversible": null,
+   "link": [
+    "trrs"
+   ]
+  },
+  "licensing": {
+   "hardware": [
+    "CC-BY-NC-SA-4.0"
+   ],
+   "firmware": [
+    "CC-BY-NC-SA-4.0"
+   ],
+   "documentation": [
+    "CC-BY-NC-SA-4.0"
+   ]
+  },
+  "pitch": {
+   "kind": "mx_19.05",
+   "mm": 19.05
+  },
+  "hostPort": null,
+  "wiring": {
+   "kind": "matrix",
+   "rows": 4,
+   "cols": 6,
+   "diodes": "col_to_row"
+  },
+  "extensions": [
+   "display"
+  ],
+  "switchMounts": [
+   "choc_socket",
+   "mx_socket"
+  ],
+  "splay": false,
+  "stagger": "column",
+  "exposedComponents": false,
+  "powerSwitch": false
+ },
+ {
   "name": "m0110a qmk",
   "slug": "m0110a-qmk",
   "sources": [
@@ -17944,6 +18355,226 @@
    "heightMm": 79.76,
    "copperLayers": 2
   }
+ },
+ {
+  "name": "Mithril",
+  "slug": "mithril",
+  "sources": [
+   "https://github.com/sanfeps/mithril_kb"
+  ],
+  "firmware": [
+   {
+    "family": "qmk",
+    "path": "mithril/rev1",
+    "shield": null,
+    "targetMcu": "atmega32u4"
+   }
+  ],
+  "layouts": [
+   {
+    "keys": 54
+   }
+  ],
+  "switches": [
+   {
+    "kind": "mx"
+   }
+  ],
+  "buildMethod": {
+   "kind": "pcb"
+  },
+  "hardestComponent": {
+   "parts": [
+    "usb"
+   ],
+   "tier": "smd_fine"
+  },
+  "controller": {
+   "kind": "soldered",
+   "mcu": "atmega32u4"
+  },
+  "body": {
+   "kind": "split",
+   "halves": 2,
+   "reversible": null,
+   "link": [
+    "trrs"
+   ]
+  },
+  "licensing": {
+   "hardware": [],
+   "firmware": [],
+   "documentation": []
+  },
+  "pitch": {
+   "kind": "mx_19.05",
+   "mm": 19.0
+  },
+  "hostPort": "usb_c",
+  "wiring": {
+   "kind": "matrix",
+   "rows": 5,
+   "cols": 7,
+   "diodes": "col_to_row"
+  },
+  "switchMounts": [
+   "mx_socket"
+  ],
+  "splay": false,
+  "stagger": "column",
+  "exposedComponents": false,
+  "powerSwitch": false
+ },
+ {
+  "name": "Mithril panneled",
+  "slug": "mithril-panneled",
+  "sources": [
+   "https://github.com/sanfeps/mithril_kb"
+  ],
+  "firmware": [
+   {
+    "family": "qmk",
+    "path": "mithril/rev1",
+    "shield": null,
+    "targetMcu": "atmega32u4"
+   }
+  ],
+  "layouts": [
+   {
+    "keys": 54
+   }
+  ],
+  "switches": [
+   {
+    "kind": "mx"
+   }
+  ],
+  "buildMethod": {
+   "kind": "pcb"
+  },
+  "hardestComponent": {
+   "parts": [
+    "usb"
+   ],
+   "tier": "smd_fine"
+  },
+  "controller": {
+   "kind": "soldered",
+   "mcu": "atmega32u4"
+  },
+  "body": {
+   "kind": "split",
+   "halves": 2,
+   "reversible": null,
+   "link": [
+    "trrs"
+   ]
+  },
+  "licensing": {
+   "hardware": [],
+   "firmware": [],
+   "documentation": []
+  },
+  "pitch": {
+   "kind": "mx_19.05",
+   "mm": 19.0
+  },
+  "hostPort": "usb_c",
+  "wiring": {
+   "kind": "matrix",
+   "rows": 5,
+   "cols": 7,
+   "diodes": "col_to_row"
+  },
+  "switchMounts": [
+   "mx_socket"
+  ],
+  "splay": false,
+  "stagger": "column",
+  "exposedComponents": false,
+  "powerSwitch": false
+ },
+ {
+  "name": "Mochi40",
+  "slug": "mochi40",
+  "sources": [
+   "https://github.com/Aidan-OS/Mochi40"
+  ],
+  "firmware": [
+   {
+    "family": "qmk",
+    "path": "aidansmithdotdev/fine40",
+    "shield": null,
+    "targetMcu": "atmega32u4"
+   }
+  ],
+  "layouts": [
+   {
+    "keys": 48
+   },
+   {
+    "keys": 47
+   },
+   {
+    "keys": 43
+   }
+  ],
+  "switches": [
+   {
+    "kind": "mx"
+   }
+  ],
+  "pitch": {
+   "kind": "mx_19.05",
+   "mm": 19.05
+  },
+  "buildMethod": {
+   "kind": "pcb"
+  },
+  "hardestComponent": {
+   "parts": [
+    "diode",
+    "encoder"
+   ],
+   "tier": "through_hole"
+  },
+  "controller": {
+   "kind": "socket",
+   "footprints": [
+    "pro_micro"
+   ]
+  },
+  "body": {
+   "kind": "unibody"
+  },
+  "licensing": {
+   "hardware": [
+    "MIT"
+   ],
+   "firmware": [
+    "MIT"
+   ],
+   "documentation": [
+    "MIT"
+   ]
+  },
+  "hostPort": null,
+  "wiring": {
+   "kind": "matrix",
+   "rows": 8,
+   "cols": 6,
+   "diodes": "col_to_row"
+  },
+  "extensions": [
+   "display",
+   "encoder"
+  ],
+  "switchMounts": [
+   "millmax",
+   "solder"
+  ],
+  "exposedComponents": false,
+  "powerSwitch": false
  },
  {
   "name": "model b",
@@ -19364,6 +19995,81 @@
    "heightMm": 106.68,
    "copperLayers": 2
   }
+ },
+ {
+  "name": "Orbit",
+  "slug": "orbit",
+  "sources": [
+   "https://github.com/ai03-2725/orbit"
+  ],
+  "firmware": [
+   {
+    "family": "qmk",
+    "path": "ai03/orbit",
+    "shield": null,
+    "targetMcu": "atmega32u4"
+   }
+  ],
+  "layouts": [
+   {
+    "keys": 68
+   }
+  ],
+  "switches": [
+   {
+    "kind": "mx"
+   }
+  ],
+  "pitch": {
+   "kind": "other",
+   "mm": 20.2
+  },
+  "buildMethod": {
+   "kind": "pcb"
+  },
+  "hardestComponent": {
+   "parts": [
+    "mcu",
+    "usb"
+   ],
+   "tier": "smd_fine"
+  },
+  "controller": {
+   "kind": "soldered",
+   "mcu": "atmega32u4"
+  },
+  "body": {
+   "kind": "split",
+   "halves": 2,
+   "reversible": null,
+   "link": [
+    "trrs"
+   ]
+  },
+  "licensing": {
+   "hardware": [
+    "GPL-3.0"
+   ],
+   "firmware": [
+    "GPL-3.0"
+   ],
+   "documentation": [
+    "GPL-3.0"
+   ]
+  },
+  "hostPort": "usb_c",
+  "wiring": {
+   "kind": "matrix",
+   "rows": 5,
+   "cols": 7,
+   "diodes": "col_to_row"
+  },
+  "switchMounts": [
+   "millmax",
+   "solder"
+  ],
+  "exposedComponents": true,
+  "powerSwitch": false
  },
  {
   "name": "orthocode",

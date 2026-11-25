@@ -172,6 +172,7 @@
  "dropout": [
   "encoder"
  ],
+ "eco-rev2": [],
  "eek": [],
  "egg58v2": [],
  "elcantorhs": [],
@@ -218,6 +219,7 @@
  ],
  "friedrich": [],
  "frooastboard-nano": [],
+ "frooastboard-walnut": [],
  "fruity60": [],
  "g35": [
   "display",
@@ -241,6 +243,7 @@
  "gud70": [],
  "guide68-assemble": [],
  "gummy-key": [],
+ "handwired-twentypad": [],
  "helix": [],
  "hem": [],
  "hillside-46": [
@@ -300,6 +303,7 @@
  "kbd-template": [],
  "kbic65": [],
  "keaboard-rev1": [],
+ "keotl-11squares": [],
  "keyboar-layout": [],
  "kintsugi": [
   "encoder"
@@ -313,6 +317,7 @@
  ],
  "kobold": [],
  "koca58": [],
+ "ktec-ergodone": [],
  "kuro65": [],
  "la-nc": [
   "display"
@@ -346,6 +351,9 @@
   "display"
  ],
  "lumberjack": [],
+ "lunakey-mini": [
+  "display"
+ ],
  "m0110a-qmk": [],
  "m0116-usb": [],
  "m3n3van-rev2": [
@@ -376,6 +384,12 @@
   "encoder"
  ],
  "minim": [],
+ "mithril": [],
+ "mithril-panneled": [],
+ "mochi40": [
+  "encoder",
+  "display"
+ ],
  "model-b": [
   "encoder"
  ],
@@ -401,6 +415,7 @@
  "numpad": [],
  "omega": [],
  "opendeck": [],
+ "orbit": [],
  "orthocode": [
   "encoder"
  ],

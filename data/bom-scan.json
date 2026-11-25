@@ -2757,6 +2757,87 @@
    }
   ]
  },
+ "harrycutts/twentypad\tTeensy macro pad.kicad_pcb": {
+  "bom": "production/bom.csv",
+  "column": "value",
+  "parts": [
+   {
+    "designator": "C1, C2",
+    "footprint": "0805",
+    "part": "1uF"
+   },
+   {
+    "designator": "C3, C4, C5, C6, C9",
+    "footprint": "0805",
+    "part": "0.1uF"
+   },
+   {
+    "designator": "C7, C8",
+    "footprint": "0603",
+    "part": "10pF"
+   },
+   {
+    "designator": "D1, D2",
+    "footprint": "LED_D5.0mm",
+    "part": "LED"
+   },
+   {
+    "designator": "J1",
+    "footprint": "USB_C_Receptacle_HRO_TYPE-C-31-M-12",
+    "part": "USB_C_Receptacle_USB2.0_14P"
+   },
+   {
+    "designator": "J2",
+    "footprint": "IDC-Header_2x03_P2.54mm_Vertical",
+    "part": "AVR-ISP-6"
+   },
+   {
+    "designator": "J3",
+    "footprint": "PinHeader_1x05_P2.54mm_Vertical",
+    "part": "Conn_01x05_Pin"
+   },
+   {
+    "designator": "R1, R2",
+    "footprint": "0805",
+    "part": "22"
+   },
+   {
+    "designator": "R3, R4",
+    "footprint": "0805",
+    "part": "5K1"
+   },
+   {
+    "designator": "R5, R6, R7",
+    "footprint": "0805",
+    "part": "1K"
+   },
+   {
+    "designator": "SW0,0, SW0,1, SW0,2, SW0,3, SW0,4, SW1,0, SW1,1, SW1,2, SW1,3, SW1,4, SW2,0, SW2,1, SW2,2, SW2,3, SW2,4, SW3,0, SW3,1, SW3,2, SW3,3, SW3,4",
+    "footprint": "SW_Cherry_MX_1.00u_PCB_with_bridge",
+    "part": "CherryMX"
+   },
+   {
+    "designator": "SWR1",
+    "footprint": "SW_Push_1P1T_XKB_TS-1187A",
+    "part": "SW_Push"
+   },
+   {
+    "designator": "TP_D+1, TP_D-1, TP_VBUS1, TP_XTAL1, TP_XTAL2",
+    "footprint": "TestPoint_Pad_D2.0mm",
+    "part": "TestPoint"
+   },
+   {
+    "designator": "U1",
+    "footprint": "TQFP-44_10x10mm_P0.8mm",
+    "part": "ATmega32U4-A"
+   },
+   {
+    "designator": "Y1",
+    "footprint": "Crystal_SMD_3225-4Pin_3.2x2.5mm",
+    "part": "16 MHz"
+   }
+  ]
+ },
  "hazels-garage/bad-wings\tpocket/source/bad_wings_pocket.kicad_pcb": {
   "bom": "pocket/BOM-bad_wings_pocket.csv",
   "column": "comment",
