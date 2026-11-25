@@ -54,3 +54,23 @@ class Mirrored(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class ReferenceCountingEncoderPushes(unittest.TestCase):
+    """Owner, 2026-11-25: Lime's halves were drawn swapped. Its QMK LAYOUT is 62 for 60
+    keys (an encoder push per half), so no reference was found and the thumb guess chose
+    the wrong hand. The record still states the left-right shape; use it for the hand."""
+
+    def test_a_layout_with_an_encoder_push_per_half_still_tells_the_hand(self):
+        import json
+        import tempfile
+        from build_silhouettes import firmware_reference
+        with tempfile.TemporaryDirectory() as root:
+            kb = pathlib.Path(root)/"kb"
+            kb.mkdir()
+            # Two keys a hand, and an encoder push beside each hand's inner key.
+            keys = [{"x": x, "y": 0} for x in (0, 1, 2, 5, 6, 7)]
+            (kb/"keyboard.json").write_text(json.dumps({"layouts": {"LAYOUT": {"layout": keys}}}))
+            ref = firmware_reference({"slug": "kb", "firmware": [{"path": "kb"}]}, {4},
+                                     pathlib.Path(root), {})
+        self.assertEqual(6, len(ref))

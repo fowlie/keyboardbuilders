@@ -976,7 +976,7 @@ def pcb_geometry(points, declared, split=False, reference=None, encoders=None):
         # sit at x 7.0, 0.5 and 1.6, spanning both edges, because Hillside drops its outer
         # column as low as its thumbs. The reference separates the two arrangements by
         # more than threefold, and agrees with every hand already verified by eye.
-        if reference and len(reference) == len(cells) * 2:
+        if reference and 0 <= len(reference) - len(cells) * 2 <= 2:
             lo_x = min(c[0] for c in cells)
             hi_x = max(c[0] for c in cells)
             flip = [(hi_x + lo_x - x, y) for x, y, _ in cells]
@@ -1598,6 +1598,10 @@ def firmware_reference(design, declared, root, index, centres=False):
     record = fw.get("path") or borrow(fw.get("shield") or design["slug"], max(declared), index)
     layouts = merged_layouts(record, root) if record else {}
     name, _ = choose(layouts, declared) if layouts else (None, None)
+    if not name and layouts:
+        # ONLY TO TELL THE HAND: a record counting an encoder push per half as a key
+        # (Lime's LAYOUT is 62 for 60 keys) still states the keyboard's left-right shape.
+        name, _ = choose(layouts, {d + extra for d in declared for extra in (1, 2)})
     if not name:
         return None
     return [(k["x"] + (k.get("w", 1) / 2 if centres else 0),
