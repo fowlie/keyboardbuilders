@@ -615,6 +615,8 @@ fun Design.toPage(
     )
     val derived = derivedFromThis(catalog)
     val derivedFamily = derivedFromFamily(catalog)
+    // Never suggested as similar (owner, 2026-11-25): the family line already links them.
+    val siblings = extras.family.knownOrNull()?.let { name -> catalog?.let { familyMembers(name, it) } }.orEmpty()
     return DesignPage(
         name = core.name.value,
         slug = core.slug.value,
@@ -628,7 +630,7 @@ fun Design.toPage(
             children.map { it.toCard(it.toRow(silhouettes, activity, hearts = counts[it.core.slug.value]), photos, silhouettes) }
         },
         family = catalog?.let { familyOf(this, it) },
-        related = related?.similarTo(this, exclude = (derived + derivedFamily).map { it.core.slug }.toSet())?.let { similar ->
+        related = related?.similarTo(this, exclude = (derived + derivedFamily + siblings).map { it.core.slug }.toSet())?.let { similar ->
             val counts = hearts?.forDesigns(similar.map { it.design }).orEmpty()
             similar.map {
                 RelatedDesignView(it.design.toCard(it.design.toRow(silhouettes, activity, hearts = counts[it.design.core.slug.value]), photos, silhouettes), it.reason)

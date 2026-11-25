@@ -109,4 +109,15 @@ class CreditTest {
         assertTrue("href=\"/designs/lime\"" in family, family.take(300))
         assertTrue("href=\"/designs/lime\"" !in similar, similar.take(600))
     }
+
+    /** Owner, 2026-11-25: Sofle Choc suggested Sofle v1 as similar. A sibling is one click
+     *  away through the family line, so suggesting it spends a slot on a known board. */
+    @Test
+    fun `a family member is not suggested as similar to its siblings`() {
+        val html = mockMvc.get("/designs/sofle-choc").andReturn().response.contentAsString
+        val similar = html.substringAfter("related-head", "").substringBefore("</ul>")
+
+        assertTrue("related-head" in html, "Sofle Choc has no Similar designs at all")
+        assertTrue("href=\"/designs/sofle-v1\"" !in similar, similar.take(600))
+    }
 }
