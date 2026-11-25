@@ -189,8 +189,8 @@ internal fun comparePage(
  * A label one side lacks is `not recorded` on that side rather than a missing cell.
  */
 private fun rows(a: DesignPage, b: DesignPage): List<CompareRow> {
-    val left = lines(a)
-    val right = lines(b)
+    val left = lines(a).byLabel()
+    val right = lines(b).byLabel()
     val labels = (left.keys + right.keys).distinct()
     return labels.map { label ->
         val x = left[label]
@@ -205,8 +205,19 @@ private fun rows(a: DesignPage, b: DesignPage): List<CompareRow> {
     }
 }
 
-/** A page's facts by label. Layouts first: it is what the picture above is of. */
-private fun lines(page: DesignPage): Map<String, SpecLine> =
+/**
+ * A page's facts by label. Layouts first: it is what the picture above is of.
+ *
+ * The licence rows get " license" added. On the design page they sit under their own
+ * heading, but this table has none, and "Firmware: MIT" replaced "Firmware: QMK" here
+ * (owner, 2026-11-25). A label that still repeats fails loudly rather than losing a row.
+ */
+private fun lines(page: DesignPage): List<SpecLine> =
     (listOf(SpecLine("Layouts", page.layouts.joinToString("; ") { it.label })) + page.spec +
-        page.stars + page.licenses)
-        .associateBy { it.label }
+        page.stars + page.licenses.map { it.copy(label = "${it.label} license") })
+        .also { all ->
+            val repeated = all.groupBy { it.label }.filterValues { it.size > 1 }.keys
+            check(repeated.isEmpty()) { "compare rows repeat a label, and one would be lost: $repeated" }
+        }
+
+private fun List<SpecLine>.byLabel(): Map<String, SpecLine> = associateBy { it.label }

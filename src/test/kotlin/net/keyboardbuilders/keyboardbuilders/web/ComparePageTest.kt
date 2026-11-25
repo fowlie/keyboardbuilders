@@ -186,6 +186,23 @@ class ComparePageTest {
     }
 
     /**
+     * Owner, 2026-11-25, comparing Stront MX-38 and MX-40: the table said "Firmware: MIT".
+     * The design page has two rows labelled "Firmware", one under Electronics and one
+     * under the licences, and the table keyed rows by label, so the licence replaced QMK.
+     */
+    @Test
+    fun `the firmware row is the firmware and its licence has a row of its own`() {
+        val page = html("a=mx-split&b=choc-split")
+        val firmware = row(page, "Firmware")!!
+        val licence = row(page, "Firmware license")
+
+        assertTrue("ZMK" in firmware, firmware)
+        assertFalse("MIT" in firmware, firmware)
+        assertTrue(licence != null && "MIT" in licence, "no Firmware license row: $licence")
+        assertTrue(row(page, "Hardware license") != null, "the hardware licence lost its row")
+    }
+
+    /**
      * ONLY TWO KNOWN VALUES CAN BE THE SAME. Both designs `not recorded` on Splay is not a
      * match, it is two gaps -- hiding the row would say "these agree" about a fact nobody
      * holds for either (`ux.md` §5.3: Unknown is a first-class value, not a blank).
