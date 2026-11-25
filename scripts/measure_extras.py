@@ -136,6 +136,12 @@ def main():
             root = reg.root(tree)
             if not root:
                 continue
+            # WIDENING 3, owner 2026-11-25: a joystick, which hangs off a generic
+            # connector no footprint name can show (Lime's 5-pin FPC).
+            if "joystick" not in found and qmk_metadata.joystick_enabled(fw["path"], root):
+                have["joystick"] += 1
+                found.append("joystick")
+                examples["joystick"]["JOYSTICK_ENABLE"] += 1
             driver = qmk_metadata.pointing_device_driver(fw["path"], root)
             if not driver:
                 continue

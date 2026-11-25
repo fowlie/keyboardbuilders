@@ -272,3 +272,36 @@ def pointing_device_driver(kb_id, qmk_root):
             if m:
                 return m.group(1).lower()
     return None
+
+
+def joystick_enabled(kb_id, qmk_root):
+    """True when QMK's record turns a joystick on; False is silence, never "none".
+
+    Owner, 2026-11-25, on Lime: a joystick on a generic 5-pin connector, which no
+    footprint name can show. QMK states it in `JOYSTICK_ENABLE = yes` (a `rules.mk`) or
+    `"features": {"joystick": true}`, at the keyboard's own levels or in its DEFAULT
+    keymap -- the author's shipped build. Lime's lives only there. Any other keymap is
+    one user's build, not the board's, and is not read. Same literal reading as
+    [pointing_device_driver]: no conditional or `include` is evaluated.
+    """
+    parts = kb_id.split("/")
+    for i in range(len(parts), 0, -1):
+        base = qmk_root.joinpath(*parts[:i])
+        for rules in (base/"rules.mk", base/"keymaps"/"default"/"rules.mk"):
+            if not rules.exists():
+                continue
+            for line in rules.read_text(errors="ignore").splitlines():
+                line = line.split("#", 1)[0].strip()
+                if re.match(r"JOYSTICK_ENABLE\s*[:+]?=\s*yes\b", line, re.I):
+                    return True
+        for name in ("keyboard.json", "info.json"):
+            path = base/name
+            if not path.exists():
+                continue
+            try:
+                features = json.loads(path.read_text(errors="ignore")).get("features") or {}
+            except ValueError:
+                continue
+            if features.get("joystick") is True:
+                return True
+    return False

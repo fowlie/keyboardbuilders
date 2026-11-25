@@ -73,4 +73,10 @@ class SeedExtensionsTest {
     fun `an extension name this build does not know fails the parse loudly`() {
         assertFailsWith<IllegalArgumentException> { parse("""["rgb_underglow"]""") }
     }
+
+    /** Owner, 2026-11-25: Lime's joystick, read from its QMK record's JOYSTICK_ENABLE. */
+    @Test
+    fun `a joystick comes through`() {
+        assertEquals(Recorded.Known(setOf(Extension.Joystick)), parse("""["joystick"]""").extras.extensions)
+    }
 }

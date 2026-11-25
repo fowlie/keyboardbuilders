@@ -137,6 +137,7 @@ class RelatedDesigns(private val catalog: DesignCatalog) {
         Extension.Haptic -> "haptic feedback"
         Extension.Trackball -> "a trackball"
         Extension.Trackpad -> "a trackpad"
+        Extension.Joystick -> "a joystick"
     }
 }
 

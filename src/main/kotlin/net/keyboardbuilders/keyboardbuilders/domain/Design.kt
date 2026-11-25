@@ -1015,7 +1015,8 @@ sealed interface Controller {
  * positions twice, once as a key and once as an encoder. A footprint is a hole, not a
  * part — the rule this codebase already applies to switches and controllers.
  */
-enum class Extension { Encoder, Display, Speaker, Haptic, Trackball, Trackpad }
+// Joystick added 2026-11-25 (owner, on Lime), read from QMK's JOYSTICK_ENABLE.
+enum class Extension { Encoder, Display, Speaker, Haptic, Trackball, Trackpad, Joystick }
 
 /** A USB receptacle's shape — what decides which cable a builder needs. Backlog #97. */
 enum class UsbPort { UsbC, MicroB, MiniB }

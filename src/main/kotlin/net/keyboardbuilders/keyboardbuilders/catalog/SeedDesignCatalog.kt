@@ -447,6 +447,7 @@ private fun String.toExtension(): Extension = when (this) {
     "haptic" -> Extension.Haptic
     "trackball" -> Extension.Trackball
     "trackpad" -> Extension.Trackpad
+    "joystick" -> Extension.Joystick
     else -> throw IllegalArgumentException("unknown extension '$this'")
 }
 

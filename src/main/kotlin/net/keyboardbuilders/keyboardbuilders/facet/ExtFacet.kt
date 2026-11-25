@@ -23,13 +23,14 @@ object ExtFacet : Facet(FacetKey.Ext) {
     // "Extensions" carries that without teaching a new word.
     override val heading = "Extensions & ports"
 
-    // All six extensions are projected and every one is a legal filter, but speaker (6),
-    // haptic (5), trackball (2) and trackpad (1) are exactly the sparsity backlog #41
-    // measured and declined to spend rail rows on. Encoder at 84 designs and display at
-    // 38 are real filters; the other four belong on the design's own page.
+    // All seven extensions are projected and every one is a legal filter, but speaker (6),
+    // haptic (5), trackball (2), trackpad (1) and joystick (1, Lime, 2026-11-25) are exactly
+    // the sparsity backlog #41 measured and declined to spend rail rows on. Encoder at 84
+    // designs and display at 38 are real filters; the other five belong on the design's
+    // own page.
     override val railValues = listOf("encoder", "display")
 
-    // The four the rail does not offer are still labelled: they are named on the
+    // The five the rail does not offer are still labelled: they are named on the
     // remainder line and a selected one renders its own checked box, and neither must
     // read `trackball` at the reader when every neighbour reads English.
     override val words = mapOf(
@@ -39,5 +40,6 @@ object ExtFacet : Facet(FacetKey.Ext) {
         "haptic" to "Haptic feedback",
         "trackball" to "Trackball",
         "trackpad" to "Trackpad",
+        "joystick" to "Joystick",
     )
 }

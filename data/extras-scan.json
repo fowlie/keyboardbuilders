@@ -344,7 +344,8 @@
  ],
  "lime": [
   "encoder",
-  "display"
+  "display",
+  "joystick"
  ],
  "litl": [
   "encoder"
