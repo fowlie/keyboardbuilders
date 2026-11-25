@@ -111,6 +111,54 @@ keyboardbuilders.net {
     header Retry-After 3600
     respond "Filtered lists are closed to this agent; see /robots.txt. The catalogue is at /designs and /sitemap.xml." 429
   }
+
+  # A SCRAPER ON RESIDENTIAL PROXIES, 2026-11-16: 25-30 filtered lists/s from 5,516 IPs
+  # for 5,562 requests (one or two per IP, so no per-IP limit sees it), faking Chrome
+  # 142-154 and sending Accept-Language, so the rule above passes it. What gives it away is
+  # a Referer no browser writes: the bare origin with no trailing slash (5,377 of 5,562).
+  # A browser sends the full page URL on this site, and an origin-only referer is still
+  # serialised as a URL, ending in "/". A bookmark or typed URL sends none, and is let
+  # through. UptimeRobot sends the same bare value, but only to "/", so this stays on
+  # /designs?. Check the 429s for browser-like clients after a day.
+  @bareRefererFacetCrawler {
+    path /designs
+    expression {query} != ""
+    header Referer https://keyboardbuilders.net
+  }
+  handle @bareRefererFacetCrawler {
+    header Retry-After 3600
+    respond "Filtered lists are closed to this client. The full list is at https://keyboardbuilders.net/designs" 429
+  }
+
+  # PROVE A BROWSER RUNS JAVASCRIPT, 2026-11-25. The residential-proxy scraper above came
+  # back sending full Referer URLs: ~1,050 filtered lists a minute from 32,065 IPs in half
+  # an hour, Chrome 150-154, Accept-Language set -- and it OOM-killed the app twice. It
+  # never loads app.css or the fonts (3 and 6 hits against 35,684 lists), so it runs no
+  # scripts. A filtered list without the kb_human cookie gets this page instead: the script
+  # sets the cookie and reloads, once a year per browser, and the app never sees the rest.
+  # Never a limit on how many filters a person uses (owner, 2026-11-25). If cookies are
+  # blocked, the page says so rather than reloading for ever. The cost: no-JS visitors
+  # lose filtered lists; the plain /designs list and every design page are untouched.
+  @noJsProof {
+    path /designs
+    expression {query} != ""
+    not header_regexp Cookie (^|;\s*)kb_human=1(;|$)
+  }
+  handle @noJsProof {
+    header Cache-Control "no-store"
+    header Content-Type "text/html; charset=utf-8"
+    respond 200 {
+      body <<HTML
+        <!doctype html><html lang="en"><meta charset="utf-8"><meta name="robots" content="noindex"><title>Keyboard Builders</title>
+        <p id="m">Loading&hellip;</p>
+        <script>
+          document.cookie = "kb_human=1; Max-Age=31536000; Path=/; SameSite=Lax; Secure";
+          if (/(^|;\s*)kb_human=1(;|$)/.test(document.cookie)) location.reload();
+          else document.getElementById("m").textContent = "Filtered lists need cookies. Allow them for keyboardbuilders.net, or browse the full list at /designs.";
+        </script>
+        HTML
+    }
+  }
   reverse_proxy host.docker.internal:8080
 }
 

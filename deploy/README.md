@@ -59,6 +59,13 @@ invisible until something was tested.
 Edit it here, copy it up, `caddy validate`, then `caddy reload` — and check every vhost
 afterwards, not just the one you changed.
 
+**The server's file is not this file.** Since 2026-11 it also serves the owner's
+`mattespillet.no`, which stays out of this public repo, so the `scp` below would take that
+site down. Diff first (`ssh <vps> cat /home/fowlie/caddy/Caddyfile | diff - deploy/Caddyfile`)
+and carry over only the `keyboardbuilders.net` block. Write it in place
+(`cat new > /home/fowlie/caddy/Caddyfile`): the file is bind-mounted alone, and a copy that
+replaces it gives it a new inode the container never sees.
+
 The host is spelled out and the `command` prefix is not decoration. `VPS:` used to stand
 here as though it were an ssh alias and cost a round trip on 2026-09-08 (`Could not resolve
 hostname vps`), and a bare `ssh host` with no command opens an interactive shell, so the

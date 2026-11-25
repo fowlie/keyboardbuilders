@@ -49,7 +49,14 @@ WORKDIR /opt/keyboardbuilders
 # the JVM reads the CGROUP limit rather than the host's RAM, so this is a percentage of
 # whatever `mem_limit` the compose file sets -- which is the behaviour we want and is
 # strictly better than the host case, where 75% of 3.8 GB competed with everything else.
-ENV JAVA_OPTS=-XX:MaxRAMPercentage=75
+#
+# 60, NOT 75, SINCE 2026-11-25. A scraper sent ~17 filtered lists a second and the kernel
+# OOM-killed the app twice inside its 1280m limit (06:18 and 06:22 UTC): the heap had grown
+# to its 75% (~960 MB), leaving ~320 MB for metaspace, code cache, SQLite and up to 200
+# request threads' stacks. At 60% the heap is ~770 MB -- above the 446 MB a quiet app uses,
+# and above the 576 MB that made the import thrash in September (compose.yml) -- and the
+# rest has ~510 MB, so a flood makes the JVM collect harder instead of getting killed.
+ENV JAVA_OPTS=-XX:MaxRAMPercentage=60
 
 # `exec` so the JVM is PID 1 and receives SIGTERM directly -- without it the shell is PID
 # 1, swallows the signal, and every deploy is a 10-second timeout followed by SIGKILL,
