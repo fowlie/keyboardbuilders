@@ -148,15 +148,15 @@ keyboardbuilders.net {
     header Cache-Control "no-store"
     header Content-Type "text/html; charset=utf-8"
     respond 200 {
-      body <<HTML
+      body <<PAGE
         <!doctype html><html lang="en"><meta charset="utf-8"><meta name="robots" content="noindex"><title>Keyboard Builders</title>
         <p id="m">Loading&hellip;</p>
         <script>
           document.cookie = "kb_human=1; Max-Age=31536000; Path=/; SameSite=Lax; Secure";
           if (/(^|;\s*)kb_human=1(;|$)/.test(document.cookie)) location.reload();
-          else document.getElementById("m").textContent = "Filtered lists need cookies. Allow them for keyboardbuilders.net, or browse the full list at /designs.";
+          else document.getElementById("m").innerHTML = 'Couldn\'t load these filters. <a href="/designs">See all designs</a>.';
         </script>
-        HTML
+        PAGE
     }
   }
   reverse_proxy host.docker.internal:8080
