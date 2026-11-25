@@ -42,6 +42,19 @@ main() {
       || echo "ntfy failed" >&2
   }
 
+  publish() {  # publish WHAT: rebase onto main and push (scripts/intake_publish.sh, #39)
+    echo "== push ($1)" >&2
+    local out code
+    out=$(scripts/intake_publish.sh 2>>"$log"); code=$?
+    case $code in
+      0) ;;
+      2) notify high "Intake nightly: main conflicted with the $1 commit" "$out. Tomorrow's run rebuilds it."
+         exit 1 ;;
+      *) notify high "Intake nightly FAILED to push the $1 commit" "$(grep -v "^[[:space:]]*$" "$log" | tail -n 4 | cut -c1-160)"
+         exit 1 ;;
+    esac
+  }
+
   step() {  # step NAME COMMAND...: run it, and on failure tell the phone which step died
     local name=$1; shift
     echo "== $name" >&2
@@ -54,6 +67,11 @@ main() {
   # Fetch and fast-forward rather than `git pull`, which a `pull.rebase = true` config turns
   # into a rebase that refuses to run beside any uncommitted file.
   step fetch  git fetch --quiet origin
+  # A NIGHT THAT COULD NOT PUSH left its commit here, and a fast-forward never gets past
+  # it (#39, 2026-11-25). Push it first, rebased onto whatever main became meanwhile.
+  if [ -n "$(git rev-list '@{u}..HEAD')" ]; then
+    publish leftover
+  fi
   step pull   git merge --ff-only --quiet '@{u}'
   step trees  python3 scripts/refresh_trees.py --shallow
   step refresh scripts/refresh_corpus.sh
@@ -100,7 +118,8 @@ main() {
     git commit --quiet -m "Refresh the corpus's derived files, nightly" \
       -m "Written by scripts/intake_nightly.sh (backlog #104): refresh_corpus.sh, draft_photo_candidates.py and fetch_activity.py re-run over the current rulings. $designs_before -> $designs_after designs." \
       -- $changed
-    step push git push --quiet origin HEAD:main
+    # Main may have moved in the 40 minutes since the pull: rebase onto it, then push.
+    publish nightly
     what="committed $(git rev-parse --short HEAD), $(printf '%s\n' "$changed" | wc -l) files, designs $designs_before → $designs_after"
   else
     what="nothing changed, $designs_after designs"
