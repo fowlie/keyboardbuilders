@@ -4756,12 +4756,8 @@
   },
   "basedOn": [
    {
-    "kind": "held",
-    "slug": "horizon-choc"
-   },
-   {
-    "kind": "held",
-    "slug": "horizon-mx"
+    "kind": "family",
+    "name": "Horizon"
    }
   ]
  },
@@ -13867,9 +13863,8 @@
   },
   "basedOn": [
    {
-    "kind": "external",
-    "name": "Corne (crkbd)",
-    "url": "https://github.com/foostan/crkbd"
+    "kind": "family",
+    "name": "Corne"
    }
   ],
   "family": "Jorne"
@@ -13968,9 +13963,8 @@
   },
   "basedOn": [
    {
-    "kind": "external",
-    "name": "Corne (crkbd)",
-    "url": "https://github.com/foostan/crkbd"
+    "kind": "family",
+    "name": "Corne"
    }
   ],
   "family": "Jorne"
@@ -14074,9 +14068,8 @@
   },
   "basedOn": [
    {
-    "kind": "external",
-    "name": "Corne (crkbd)",
-    "url": "https://github.com/foostan/crkbd"
+    "kind": "family",
+    "name": "Corne"
    }
   ],
   "family": "Jorne"
@@ -15570,12 +15563,8 @@
   },
   "basedOn": [
    {
-    "kind": "held",
-    "slug": "sofle-v1"
-   },
-   {
-    "kind": "held",
-    "slug": "sofle-choc"
+    "kind": "family",
+    "name": "Sofle"
    }
   ]
  },
@@ -16791,36 +16780,20 @@
   },
   "basedOn": [
    {
-    "kind": "held",
-    "slug": "lily58"
+    "kind": "family",
+    "name": "Lily58"
    },
    {
-    "kind": "held",
-    "slug": "lily58-lite-rev3"
-   },
-   {
-    "kind": "held",
-    "slug": "lily58-pro"
-   },
-   {
-    "kind": "held",
-    "slug": "corne-cherry-v4"
-   },
-   {
-    "kind": "held",
-    "slug": "corne-chocolate-v4"
+    "kind": "family",
+    "name": "Corne"
    },
    {
     "kind": "held",
     "slug": "helix"
    },
    {
-    "kind": "held",
-    "slug": "sofle-v1"
-   },
-   {
-    "kind": "held",
-    "slug": "sofle-choc"
+    "kind": "family",
+    "name": "Sofle"
    }
   ]
  },
@@ -18837,12 +18810,8 @@
   },
   "basedOn": [
    {
-    "kind": "held",
-    "slug": "horizon-choc"
-   },
-   {
-    "kind": "held",
-    "slug": "horizon-mx"
+    "kind": "family",
+    "name": "Horizon"
    }
   ],
   "family": "Morizon"
@@ -18926,12 +18895,8 @@
   },
   "basedOn": [
    {
-    "kind": "held",
-    "slug": "horizon-choc"
-   },
-   {
-    "kind": "held",
-    "slug": "horizon-mx"
+    "kind": "family",
+    "name": "Horizon"
    }
   ],
   "family": "Morizon"
@@ -23535,12 +23500,8 @@
   },
   "basedOn": [
    {
-    "kind": "held",
-    "slug": "corne-cherry-v4"
-   },
-   {
-    "kind": "held",
-    "slug": "corne-chocolate-v4"
+    "kind": "family",
+    "name": "Corne"
    },
    {
     "kind": "held",
@@ -25370,24 +25331,12 @@
   },
   "basedOn": [
    {
-    "kind": "held",
-    "slug": "lily58"
+    "kind": "family",
+    "name": "Lily58"
    },
    {
-    "kind": "held",
-    "slug": "lily58-lite-rev3"
-   },
-   {
-    "kind": "held",
-    "slug": "lily58-pro"
-   },
-   {
-    "kind": "held",
-    "slug": "corne-cherry-v4"
-   },
-   {
-    "kind": "held",
-    "slug": "corne-chocolate-v4"
+    "kind": "family",
+    "name": "Corne"
    },
    {
     "kind": "held",
@@ -25585,24 +25534,12 @@
   },
   "basedOn": [
    {
-    "kind": "held",
-    "slug": "lily58"
+    "kind": "family",
+    "name": "Lily58"
    },
    {
-    "kind": "held",
-    "slug": "lily58-lite-rev3"
-   },
-   {
-    "kind": "held",
-    "slug": "lily58-pro"
-   },
-   {
-    "kind": "held",
-    "slug": "corne-cherry-v4"
-   },
-   {
-    "kind": "held",
-    "slug": "corne-chocolate-v4"
+    "kind": "family",
+    "name": "Corne"
    },
    {
     "kind": "held",
@@ -27564,36 +27501,8 @@
   },
   "basedOn": [
    {
-    "kind": "held",
-    "slug": "ferris-0-1-base"
-   },
-   {
-    "kind": "held",
-    "slug": "ferris-0-1-compact"
-   },
-   {
-    "kind": "held",
-    "slug": "ferris-0-1-high"
-   },
-   {
-    "kind": "held",
-    "slug": "ferris-0-1-low"
-   },
-   {
-    "kind": "held",
-    "slug": "ferris-0-2-bling"
-   },
-   {
-    "kind": "held",
-    "slug": "ferris-0-2-compact"
-   },
-   {
-    "kind": "held",
-    "slug": "ferris-0-2-high"
-   },
-   {
-    "kind": "held",
-    "slug": "ferris-0-2-mini"
+    "kind": "family",
+    "name": "Ferris"
    }
   ],
   "family": "Sweep"
@@ -27672,36 +27581,8 @@
   },
   "basedOn": [
    {
-    "kind": "held",
-    "slug": "ferris-0-1-base"
-   },
-   {
-    "kind": "held",
-    "slug": "ferris-0-1-compact"
-   },
-   {
-    "kind": "held",
-    "slug": "ferris-0-1-high"
-   },
-   {
-    "kind": "held",
-    "slug": "ferris-0-1-low"
-   },
-   {
-    "kind": "held",
-    "slug": "ferris-0-2-bling"
-   },
-   {
-    "kind": "held",
-    "slug": "ferris-0-2-compact"
-   },
-   {
-    "kind": "held",
-    "slug": "ferris-0-2-high"
-   },
-   {
-    "kind": "held",
-    "slug": "ferris-0-2-mini"
+    "kind": "family",
+    "name": "Ferris"
    }
   ],
   "family": "Sweep"
@@ -27782,36 +27663,8 @@
   },
   "basedOn": [
    {
-    "kind": "held",
-    "slug": "ferris-0-1-base"
-   },
-   {
-    "kind": "held",
-    "slug": "ferris-0-1-compact"
-   },
-   {
-    "kind": "held",
-    "slug": "ferris-0-1-high"
-   },
-   {
-    "kind": "held",
-    "slug": "ferris-0-1-low"
-   },
-   {
-    "kind": "held",
-    "slug": "ferris-0-2-bling"
-   },
-   {
-    "kind": "held",
-    "slug": "ferris-0-2-compact"
-   },
-   {
-    "kind": "held",
-    "slug": "ferris-0-2-high"
-   },
-   {
-    "kind": "held",
-    "slug": "ferris-0-2-mini"
+    "kind": "family",
+    "name": "Ferris"
    }
   ],
   "family": "Sweep"
@@ -27893,36 +27746,8 @@
   },
   "basedOn": [
    {
-    "kind": "held",
-    "slug": "ferris-0-1-base"
-   },
-   {
-    "kind": "held",
-    "slug": "ferris-0-1-compact"
-   },
-   {
-    "kind": "held",
-    "slug": "ferris-0-1-high"
-   },
-   {
-    "kind": "held",
-    "slug": "ferris-0-1-low"
-   },
-   {
-    "kind": "held",
-    "slug": "ferris-0-2-bling"
-   },
-   {
-    "kind": "held",
-    "slug": "ferris-0-2-compact"
-   },
-   {
-    "kind": "held",
-    "slug": "ferris-0-2-high"
-   },
-   {
-    "kind": "held",
-    "slug": "ferris-0-2-mini"
+    "kind": "family",
+    "name": "Ferris"
    }
   ],
   "family": "Sweep"
@@ -28007,36 +27832,8 @@
   },
   "basedOn": [
    {
-    "kind": "held",
-    "slug": "ferris-0-1-base"
-   },
-   {
-    "kind": "held",
-    "slug": "ferris-0-1-compact"
-   },
-   {
-    "kind": "held",
-    "slug": "ferris-0-1-high"
-   },
-   {
-    "kind": "held",
-    "slug": "ferris-0-1-low"
-   },
-   {
-    "kind": "held",
-    "slug": "ferris-0-2-bling"
-   },
-   {
-    "kind": "held",
-    "slug": "ferris-0-2-compact"
-   },
-   {
-    "kind": "held",
-    "slug": "ferris-0-2-high"
-   },
-   {
-    "kind": "held",
-    "slug": "ferris-0-2-mini"
+    "kind": "family",
+    "name": "Ferris"
    }
   ],
   "family": "Sweep"
@@ -28118,36 +27915,8 @@
   },
   "basedOn": [
    {
-    "kind": "held",
-    "slug": "ferris-0-1-base"
-   },
-   {
-    "kind": "held",
-    "slug": "ferris-0-1-compact"
-   },
-   {
-    "kind": "held",
-    "slug": "ferris-0-1-high"
-   },
-   {
-    "kind": "held",
-    "slug": "ferris-0-1-low"
-   },
-   {
-    "kind": "held",
-    "slug": "ferris-0-2-bling"
-   },
-   {
-    "kind": "held",
-    "slug": "ferris-0-2-compact"
-   },
-   {
-    "kind": "held",
-    "slug": "ferris-0-2-high"
-   },
-   {
-    "kind": "held",
-    "slug": "ferris-0-2-mini"
+    "kind": "family",
+    "name": "Ferris"
    }
   ],
   "family": "Sweep"
@@ -28564,28 +28333,8 @@
   ],
   "basedOn": [
    {
-    "kind": "held",
-    "slug": "sweep-2"
-   },
-   {
-    "kind": "held",
-    "slug": "sweep-bling-lp"
-   },
-   {
-    "kind": "held",
-    "slug": "sweep-bling-mx"
-   },
-   {
-    "kind": "held",
-    "slug": "sweep-half-swept"
-   },
-   {
-    "kind": "held",
-    "slug": "sweep-high"
-   },
-   {
-    "kind": "held",
-    "slug": "sweep-high-m"
+    "kind": "family",
+    "name": "Sweep"
    }
   ]
  },
