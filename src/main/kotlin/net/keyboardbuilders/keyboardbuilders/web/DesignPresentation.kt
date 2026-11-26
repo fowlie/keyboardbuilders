@@ -16,6 +16,7 @@ import net.keyboardbuilders.keyboardbuilders.domain.CapFootprint
 import net.keyboardbuilders.keyboardbuilders.domain.BuildMethod
 import net.keyboardbuilders.keyboardbuilders.domain.Controller
 import net.keyboardbuilders.keyboardbuilders.domain.ControllerFootprint
+import net.keyboardbuilders.keyboardbuilders.domain.CorrectableFact
 import net.keyboardbuilders.keyboardbuilders.domain.Design
 import net.keyboardbuilders.keyboardbuilders.domain.DesignCore
 import net.keyboardbuilders.keyboardbuilders.domain.DiodeDirection
@@ -148,6 +149,8 @@ data class SpecLine(
      * into the hint is which other boards fit and why we say "nobody has recorded".
      */
     val hint: String? = null,
+    /** Where to correct this line, for the facts a person may correct (2026-11-26). */
+    val correctHref: String? = null,
     /**
      * The learn page that explains this line's LABEL, or null where none does (#108).
      *
@@ -299,6 +302,8 @@ data class SpecSectionView(val heading: String, val lines: List<SpecLine>)
  * [lines] under their [SpecSection]s. A section with no line on this design (a unibody's
  * Shape still has Body) is left out rather than printed as an empty heading.
  */
+private fun Design.correctHref(fact: CorrectableFact) = "/designs/${core.slug.value}/correct/${fact.token}"
+
 private fun sectioned(lines: List<SpecLine>): List<SpecSectionView> {
     val placed = SpecSection.entries.map { section ->
         SpecSectionView(section.heading, section.labels.mapNotNull { l -> lines.find { it.label == l } })
@@ -798,6 +803,7 @@ fun Design.toPage(
                         is Recorded.Known -> if (splay.value) "yes" else "no"
                     },
                     recorded = splay is Recorded.Known,
+                    correctHref = correctHref(CorrectableFact.Splay),
                 )
             },
             // Same shape as `Splay` just above, and for the same reason: a genuine
@@ -818,6 +824,7 @@ fun Design.toPage(
                     // Whatever the value, as Key spacing does: the label is itself the term
                     // a newcomer asks about, and the page says what "not recorded" means.
                     learnHref = "/learn/${LearnTopic.Stagger.slug}",
+                    correctHref = correctHref(CorrectableFact.Stagger),
                 )
             },
             SpecLine(
@@ -843,6 +850,7 @@ fun Design.toPage(
                     value,
                     recorded = known != null,
                     learnHref = "/learn/${LearnTopic.Hotswap.slug}",
+                    correctHref = correctHref(CorrectableFact.SwitchMounts),
                     terms = parts.map { SpecTerm(it.word(), "/designs?${FacetKey.Hotswap.param}=${it.token}") } +
                         listOfNotNull(SpecTerm("or solder the switches in", null)
                             .takeIf { parts.isNotEmpty() && SwitchMount.Solder in known.orEmpty() }),

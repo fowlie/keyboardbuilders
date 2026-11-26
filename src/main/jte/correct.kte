@@ -1,0 +1,42 @@
+@import net.keyboardbuilders.keyboardbuilders.community.CorrectionChoice
+@import net.keyboardbuilders.keyboardbuilders.web.Head
+@import net.keyboardbuilders.keyboardbuilders.web.SiteUrl
+@import org.springframework.security.web.csrf.CsrfToken
+@param head: Head
+@param site: SiteUrl
+@param slug: String
+@param name: String
+@param fact: String
+@param label: String
+@param many: Boolean
+@param choices: List<CorrectionChoice>
+@param designer: Boolean
+@param csrf: CsrfToken
+
+<%--
+    Correct one measured fact (CorrectionController). The current answer is checked.
+    NO BACKTICKS anywhere in this file -- one closes the raw string the page is written in.
+--%>
+@template.layout(head = head, site = site, content = @`
+    <p class="crumb"><a href="/designs/${slug}">&larr; ${name}</a></p>
+    <article class="settings">
+        <h1>${label} on ${name}</h1>
+        <section class="settings-card">
+            @if(designer)
+                <p class="settings-q">You designed this, so your answer goes on the page straight away.</p>
+                <form method="post" action="/designs/${slug}/correct/${fact}">
+                    <input type="hidden" name="${csrf.parameterName}" value="${csrf.token}">
+                    @for(c in choices)
+                        <label class="choice">
+                            <input type="${if (many) "checkbox" else "radio"}" name="value" value="${c.value}" checked="${c.checked}">
+                            ${c.label}
+                        </label>
+                    @endfor
+                    <button type="submit" class="settings-save">Save</button>
+                </form>
+            @else
+                <p class="settings-q">Only the designer can correct this for now. If it's wrong, email hello@keyboardbuilders.net.</p>
+            @endif
+        </section>
+    </article>
+`)

@@ -285,6 +285,11 @@ dl.spec dd { margin: 0; }
    value's own links; the accent on hover, as every link here does. */
 dl.spec dt a { color: inherit; text-decoration: underline dotted; text-underline-offset: 3px; }
 dl.spec dt a:hover { color: var(--accent); }
+/* "Not right?" under a fact a designer may correct (2026-11-26): small and muted, in the
+   value column, so it reads as a footnote to the answer and not as a row of its own. */
+dl.spec dd.spec-correct { grid-column: 2; margin-top: -0.3rem; font-size: 0.8rem; }
+dl.spec dd.spec-correct a { color: var(--muted); }
+dl.spec dd.spec-correct a:hover { color: var(--accent); }
 
 ul.layouts, ul.sources { margin: 0; padding-left: 1.1rem; }
 ul.sources { word-break: break-all; }
@@ -323,6 +328,7 @@ details summary { cursor: pointer; color: var(--muted); margin-top: 0.5rem; }
 @media (max-width: 34rem) {
     dl.spec { grid-template-columns: 1fr; gap: 0 0; }
     dl.spec dd { margin-bottom: 0.6rem; }
+    dl.spec dd.spec-correct { grid-column: auto; margin-top: -0.5rem; }
 }
 
 /* ux.md §3.5: the silhouette is the only image the product has. It inherits

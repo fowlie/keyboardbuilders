@@ -898,6 +898,10 @@
             @else
                 <dd class="unrecorded">&mdash; ${line.value} &mdash;</dd>
             @endif
+            @if(line.correctHref != null)
+                <%-- Measured facts a designer may correct (2026-11-26). --%>
+                <dd class="spec-correct"><a href="${line.correctHref}" rel="nofollow">Not right?</a></dd>
+            @endif
         @endfor
     </dl>
     @endfor

@@ -35,9 +35,11 @@ class SecurityConfig {
         val photo = PathPatternRequestMatcher.withDefaults().matcher("/designs/{slug}/photo")
         val photoAny = PathPatternRequestMatcher.withDefaults().matcher("/designs/{slug}/photo/**")
         val reviewRights = PathPatternRequestMatcher.withDefaults().matcher("/builders/{login}/review-rights")
+        // Correcting a measured fact (2026-11-26).
+        val correct = PathPatternRequestMatcher.withDefaults().matcher("/designs/{slug}/correct/{fact}")
         http
             .authorizeHttpRequests {
-                it.requestMatchers(accountRoot, account, moderate, moderateAny, photo, photoAny, reviewRights).authenticated()
+                it.requestMatchers(accountRoot, account, moderate, moderateAny, photo, photoAny, reviewRights, correct).authenticated()
                 it.anyRequest().permitAll()
             }
             // Straight to GitHub, not Spring's own "choose a provider" page: there is one.
@@ -50,7 +52,7 @@ class SecurityConfig {
             // /settings form are anonymous and write nothing tied to a person, and they post
             // without a token today; checking them would break them for no protection.
             .csrf { it.requireCsrfProtectionMatcher { r -> r.method == "POST" && (account.matches(r) || logout.matches(r) || moderateAny.matches(r) ||
-                photo.matches(r) || photoAny.matches(r) || reviewRights.matches(r)) } }
+                photo.matches(r) || photoAny.matches(r) || reviewRights.matches(r) || correct.matches(r)) } }
             // NO `no-store` ON EVERY RESPONSE. Spring Security's default would stop browsers
             // keeping /app.css, which is served without Cache-Control on purpose (Head.kt),
             // and it would override nothing the asset controllers set themselves.

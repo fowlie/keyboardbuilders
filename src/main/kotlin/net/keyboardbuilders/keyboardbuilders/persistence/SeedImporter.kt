@@ -7,6 +7,7 @@ import net.keyboardbuilders.keyboardbuilders.catalog.ControllerBoard
 import net.keyboardbuilders.keyboardbuilders.catalog.SeedDesignCatalog
 import net.keyboardbuilders.keyboardbuilders.domain.Design
 import net.keyboardbuilders.keyboardbuilders.domain.completeness
+import net.keyboardbuilders.keyboardbuilders.domain.corrected
 import net.keyboardbuilders.keyboardbuilders.domain.FacetKey
 import net.keyboardbuilders.keyboardbuilders.facet.Catalogue
 import net.keyboardbuilders.keyboardbuilders.facet.FirmwareFacet
@@ -64,6 +65,7 @@ class SeedImporter(
     @Value("classpath:seed/controllers.json") private val controllers: Resource,
     @Value("classpath:seed/firmwares.json") private val firmwares: Resource,
     private val unpublished: Unpublished,
+    private val corrections: Corrections,
 ) {
 
     /**
@@ -86,6 +88,9 @@ class SeedImporter(
     /** How many rows of each kind the last run wrote. Returned so a caller can log it. */
     data class Imported(val designs: Int, val facets: Int)
 
+    /** SYNCHRONIZED because two imports at once would both open with `DELETE FROM design`,
+     *  and unpublishing and correcting both re-run it from a click. */
+    @Synchronized
     fun importAll(): Imported = transactions.execute { _ ->
         val payloads = payloadsBySlug()
         val alive = aliveness()
@@ -95,7 +100,9 @@ class SeedImporter(
         // query filters on it -- DesignQueries reads `design_facet` as "live rows only" --
         // so a hidden row would still count on the rail. A row that is not here cannot.
         val withdrawn = unpublished.all()
-        val published = designs.filter { it.core.slug.value !in withdrawn }
+        // CORRECTIONS OVER THE SEED (2026-11-26), so the rail and search agree with the page.
+        val fixes = corrections.applied()
+        val published = designs.filter { it.core.slug.value !in withdrawn }.map { it.corrected(fixes) }
 
         var facets = 0
         for (design in published) {
