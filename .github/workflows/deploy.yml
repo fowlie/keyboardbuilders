@@ -147,3 +147,23 @@ jobs:
           for h in forgejo.keyboardbuilders.net; do
             curl -fsS -o /dev/null "https://$h/" || { echo "$h is down"; exit 1; }
           done
+
+      # A RED DEPLOY TELLS THE OWNER'S PHONE, issue #40. On 2026-11-25 the nightly bot's
+      # push failed the tests here, the site rightly stayed on the previous version, and
+      # main stayed red with nobody told: every later push would have failed the same way
+      # until someone happened to open the Actions tab. Same ntfy topic as the bot's
+      # (deploy/intake/README.md), so it covers the bot's pushes and people's alike.
+      #
+      # The subject comes from git, not the event payload: workflow_dispatch has no
+      # head_commit, and a commit message is never pasted into a `run:` line.
+      - name: Notify on failure
+        if: failure()
+        env:
+          NTFY_URL: ${{ secrets.NTFY_URL }}
+          RUN: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          [ -n "$NTFY_URL" ] || { echo "::warning::NTFY_URL is not set, nobody was told"; exit 0; }
+          subject=$(git log -1 --format=%s)
+          curl -fsS -H "Title: Deploy failed: ${GITHUB_SHA::7}" -H "Priority: high" \
+               -H "Tags: rotating_light" -H "Click: $RUN" \
+               -d "$subject — the site stays on the previous version. $RUN" "$NTFY_URL" >/dev/null
