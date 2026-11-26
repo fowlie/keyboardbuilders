@@ -26,7 +26,7 @@
                 @if(designer)
                     <p class="settings-lede">These were measured from the board files, and measuring gets some boards wrong. You designed this one, so what you save is on the page straight away.</p>
                 @else
-                    <p class="settings-lede">Only the designer can correct these for now. If one is wrong, email <a href="mailto:hello@keyboardbuilders.net">hello@keyboardbuilders.net</a>.</p>
+                    <p class="settings-lede">Only the designer can correct these for now. If one is wrong, email <a href="mailto:hello@keyboardbuilders.net">hello@keyboardbuilders.net</a>, open a <a href="https://github.com/fowlie/keyboardbuilders/issues/new">GitHub issue</a> or send a <a href="https://github.com/fowlie/keyboardbuilders/pulls">pull request</a>.</p>
                 @endif
             </div>
         </header>
