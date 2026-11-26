@@ -14,12 +14,14 @@ import org.springframework.test.web.servlet.MockMvc
 import org.springframework.test.web.servlet.get
 import org.springframework.test.web.servlet.post
 import org.springframework.test.web.servlet.request.RequestPostProcessor
+import kotlin.test.assertEquals
 import kotlin.test.assertFalse
 import kotlin.test.assertTrue
 
 /**
- * A designer corrects a measured fact on their own design's page (owner, 2026-11-26):
- * splay, stagger and switch mounts, picked from a list, never moderated, shown at once.
+ * A designer corrects measured facts on their own design (owner, 2026-11-26): splay,
+ * stagger and switch mounts, picked from a list, never moderated, shown at once. One link
+ * under Spec and one form for every fact, not a link per line (owner, 2026-11-27).
  *
  * sweep-2 is davidphilipbarr's (github.com/davidphilipbarr/sweep). Its seed says: not
  * splayed, column-staggered, Mill-Max or solder.
@@ -36,21 +38,22 @@ class CorrectionsTest {
     private val designer = as_("davidphilipbarr")
     private val stranger = as_("someone-else")
     private val slug = "sweep-2"
+    private val form = "/designs/$slug/correct"
 
     @BeforeEach @AfterEach fun clear() {
         db.sql("DELETE FROM correction").update()
         importer.importAll()
     }
 
-    private fun correct(fact: String, who: RequestPostProcessor, vararg values: String) =
-        mockMvc.post("/designs/$slug/correct/$fact") {
-            with(who); with(csrf()); values.forEach { param("value", it) }
-        }
+    private fun save(who: RequestPostProcessor, vararg fields: Pair<String, String>) =
+        mockMvc.post(form) { with(who); with(csrf()); fields.forEach { (k, v) -> param(k, v) } }
 
     private fun html(url: String, who: RequestPostProcessor? = null) =
         mockMvc.get(url) { who?.let { with(it) } }.andReturn().response.contentAsString
 
     private fun listed(query: String) = "href=\"/designs/$slug\"" in html("/designs?$query")
+
+    private fun rows() = db.sql("SELECT count(*) FROM correction").query(Int::class.java).single()
 
     @Test
     fun `the seed's values, before anyone corrects them`() {
@@ -61,7 +64,7 @@ class CorrectionsTest {
 
     @Test
     fun `the designer's correction shows on the page and in the filters at once`() {
-        correct("stagger", designer, "row").andExpect { status { is3xxRedirection() }; redirectedUrl("/designs/$slug") }
+        save(designer, "stagger" to "row").andExpect { status { is3xxRedirection() }; redirectedUrl("/designs/$slug") }
 
         val page = html("/designs/$slug")
         assertTrue("row-staggered" in page, page)
@@ -71,8 +74,26 @@ class CorrectionsTest {
     }
 
     @Test
+    fun `one save corrects several facts, and stores only the ones that changed`() {
+        save(designer, "splay" to "yes", "stagger" to "column", "switch_mounts" to "mx_socket", "switch_mounts" to "solder")
+
+        assertEquals(2, rows())
+        assertTrue(listed("splay=yes"))
+        assertTrue(listed("hotswap=kailh"))
+        assertFalse(listed("hotswap=millmax"))
+        val page = html("/designs/$slug")
+        assertTrue("Gateron socket" in page && "or solder the switches in" in page, page)
+    }
+
+    @Test
+    fun `saving the form unchanged stores nothing`() {
+        save(designer, "splay" to "no", "stagger" to "column", "switch_mounts" to "solder", "switch_mounts" to "millmax")
+        assertEquals(0, rows())
+    }
+
+    @Test
     fun `a correction outlives the next import, which every boot runs`() {
-        correct("splay", designer, "yes")
+        save(designer, "splay" to "yes")
         importer.importAll()
 
         assertTrue(listed("splay=yes"))
@@ -80,55 +101,58 @@ class CorrectionsTest {
     }
 
     @Test
-    fun `switch mounts take several values at once`() {
-        correct("switch_mounts", designer, "mx_socket", "solder")
-        val page = html("/designs/$slug")
-        assertTrue("Gateron socket" in page && "or solder the switches in" in page, page)
-        assertFalse("Mill-Max" in page.substringAfter(">Hotswap<").substringBefore("</dd>"))
-        assertTrue(listed("hotswap=kailh"))
-        assertFalse(listed("hotswap=millmax"))
-    }
-
-    @Test
     fun `the latest correction of a fact wins`() {
-        correct("stagger", designer, "row")
-        correct("stagger", designer, "ortho")
+        save(designer, "stagger" to "row")
+        save(designer, "stagger" to "ortho")
         assertTrue(listed("stagger=ortho"))
         assertFalse(listed("stagger=row"))
     }
 
     @Test
-    fun `a value that is not one of the fact's choices is refused`() {
-        correct("stagger", designer, "diagonal").andExpect { status { isBadRequest() } }
-        correct("switch_mounts", designer).andExpect { status { isBadRequest() } }
-        correct("colour", designer, "red").andExpect { status { isNotFound() } }
-        assertTrue(listed("stagger=column"))
+    fun `an answer that is not one of the fact's choices is refused, and nothing is stored`() {
+        save(designer, "splay" to "yes", "stagger" to "diagonal").andExpect { status { isBadRequest() } }
+        save(designer, "splay" to "yes", "splay" to "no").andExpect { status { isBadRequest() } }
+        assertEquals(0, rows())
     }
 
     @Test
     fun `someone who is not the designer does not change the page`() {
-        correct("stagger", stranger, "row")
+        save(stranger, "stagger" to "row").andExpect { status { isForbidden() } }
+        assertEquals(0, rows())
         assertTrue(listed("stagger=column"))
-        assertFalse(listed("stagger=row"))
     }
 
     @Test
     fun `correcting needs a GitHub sign-in`() {
-        mockMvc.get("/designs/$slug/correct/stagger").andExpect { status { is3xxRedirection() } }
+        mockMvc.get(form).andExpect { status { is3xxRedirection() } }
     }
 
     @Test
-    fun `the form offers the fact's choices with the current one marked`() {
-        val form = html("/designs/$slug/correct/stagger", designer)
-        listOf("ortho", "row", "column").forEach { assertTrue("value=\"$it\"" in form, form) }
-        assertTrue(Regex("""value="column"\s+checked""").containsMatchIn(form), form)
+    fun `the form holds every fact, each with its current answer picked`() {
+        val page = html(form, designer)
+        listOf("splay", "stagger", "switch_mounts").forEach { assertTrue("name=\"$it\"" in page, it) }
+        assertTrue(Regex("""name="stagger" value="column"\s+checked""").containsMatchIn(page), page)
+        assertTrue(Regex("""name="splay" value="no"\s+checked""").containsMatchIn(page))
+        assertTrue(Regex("""name="switch_mounts" value="millmax"\s+checked""").containsMatchIn(page))
+        assertFalse(Regex("""name="switch_mounts" value="mx_socket"\s+checked""").containsMatchIn(page))
     }
 
     @Test
-    fun `the design page links each correctable fact to its form`() {
+    fun `someone else sees the form's answers but cannot save them`() {
+        val page = html(form, stranger)
+        assertTrue("Only the designer" in page, page)
+        assertFalse("type=\"submit\"" in page.substringAfter("<article"))
+    }
+
+    @Test
+    fun `the design page links to the form once, under Spec, not per line`() {
         val page = html("/designs/$slug")
-        listOf("splay", "stagger", "switch_mounts").forEach {
-            assertTrue("/designs/$slug/correct/$it" in page, it)
-        }
+        assertEquals(1, Regex(Regex.escape("href=\"$form\"")).findAll(page).count(), page)
+        assertFalse("Not right?" in page)
+    }
+
+    @Test
+    fun `the designer's account lists an edit link for each of their designs`() {
+        assertTrue("href=\"$form\"" in html("/account", designer))
     }
 }

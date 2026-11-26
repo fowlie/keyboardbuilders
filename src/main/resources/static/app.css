@@ -285,11 +285,6 @@ dl.spec dd { margin: 0; }
    value's own links; the accent on hover, as every link here does. */
 dl.spec dt a { color: inherit; text-decoration: underline dotted; text-underline-offset: 3px; }
 dl.spec dt a:hover { color: var(--accent); }
-/* "Not right?" under a fact a designer may correct (2026-11-26): small and muted, in the
-   value column, so it reads as a footnote to the answer and not as a row of its own. */
-dl.spec dd.spec-correct { grid-column: 2; margin-top: -0.3rem; font-size: 0.8rem; }
-dl.spec dd.spec-correct a { color: var(--muted); }
-dl.spec dd.spec-correct a:hover { color: var(--accent); }
 
 ul.layouts, ul.sources { margin: 0; padding-left: 1.1rem; }
 ul.sources { word-break: break-all; }
@@ -328,7 +323,6 @@ details summary { cursor: pointer; color: var(--muted); margin-top: 0.5rem; }
 @media (max-width: 34rem) {
     dl.spec { grid-template-columns: 1fr; gap: 0 0; }
     dl.spec dd { margin-bottom: 0.6rem; }
-    dl.spec dd.spec-correct { grid-column: auto; margin-top: -0.5rem; }
 }
 
 /* ux.md §3.5: the silhouette is the only image the product has. It inherits
@@ -1926,3 +1920,76 @@ table.build-grid ul.offers li.excluded { color: var(--muted); }
 .builder-photos img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 6px; display: block; }
 .builder-photos .rejected img { opacity: 0.5; }
 .builder-state { font-size: 0.85rem; color: var(--muted); }
+
+
+/* CORRECTING A DESIGN (2026-11-27): /settings' cards and keys, one card per fact. An
+   answer is a key with a little drawing of what it means; the current answer is pressed.
+   The save bar sticks to the bottom so it is in reach after the last card. */
+.spec-fix { margin: 1rem 0 0; font-size: 0.88rem; }
+.spec-fix a { color: var(--muted); }
+.spec-fix a:hover { color: var(--accent); }
+.owned-edit { flex: none; text-decoration: none; }
+.correct-head { display: flex; align-items: center; gap: 1.1rem; margin: 0 0 1.6rem; }
+.correct-head h1 { margin: 0 0 0.35rem; }
+.correct-head .settings-lede { margin: 0; max-width: 34rem; }
+.correct-pic {
+    flex: 0 0 6.5rem;
+    padding: 0.55rem 0.65rem;
+    border-radius: 12px;
+    background: var(--sunk);
+}
+.correct-pic svg { display: block; width: 100%; height: auto; }
+.correct-card { min-width: 0; }
+.correct-card[disabled] .choice { cursor: default; }
+.correct-card[disabled] .choice:hover { transform: none; box-shadow: 0 4px 0 var(--edge); }
+.correct-card[disabled] .choice:not(:has(input:checked)) { opacity: 0.55; }
+.correct-legend {
+    float: left;
+    width: 100%;
+    margin: 0 0 0.3rem;
+    padding: 0;
+    font-family: var(--display);
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+.correct-legend + .settings-q { clear: both; color: var(--muted); }
+.fact-choices { display: grid; grid-template-columns: repeat(auto-fit, minmax(9.5rem, 1fr)); gap: 0.9rem; }
+.fact-choices-words { grid-template-columns: repeat(auto-fit, minmax(8.5rem, 1fr)); }
+.fact-pic { display: grid; place-items: center; padding: 0.9rem 0.6rem 0.4rem; background: var(--sunk); }
+.fact-ico { display: block; width: 100%; max-width: 7rem; height: auto; max-height: 4.2rem; overflow: visible; }
+.fact-ico rect { fill: var(--card); stroke: var(--fg); stroke-width: 1.1; }
+.choice:has(input:checked) .fact-ico rect { stroke: var(--accent); }
+.fact-choice .choice-text { padding-right: 2.2rem; }
+.correct-bar {
+    position: sticky;
+    bottom: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1.2rem;
+    margin: 0 -0.5rem;
+    padding: 0.9rem 0.5rem 1rem;
+    background: linear-gradient(to bottom, transparent, var(--bg) 35%);
+}
+.correct-cancel { color: var(--muted); }
+.key-primary {
+    padding: 0.6rem 1.6rem;
+    border: 1px solid var(--accent);
+    border-radius: 10px;
+    background: var(--accent);
+    color: var(--on-accent);
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 3px 0 color-mix(in srgb, var(--accent) 60%, #000);
+    transition: transform .08s, box-shadow .08s;
+}
+.key-primary:hover { transform: translateY(2px); box-shadow: 0 1px 0 color-mix(in srgb, var(--accent) 60%, #000); }
+.key-primary:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+@media (max-width: 34rem) {
+    .correct-head { align-items: flex-start; }
+    .correct-pic { flex-basis: 4.5rem; }
+    .fact-choices, .fact-choices-words { grid-template-columns: 1fr; gap: 0.7rem; }
+    .fact-choices .fact-choice { flex-direction: row; align-items: center; }
+    .fact-choices .fact-pic { flex: 0 0 6rem; align-self: stretch; padding: 0.5rem; }
+}

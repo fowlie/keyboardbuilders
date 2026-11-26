@@ -898,13 +898,11 @@
             @else
                 <dd class="unrecorded">&mdash; ${line.value} &mdash;</dd>
             @endif
-            @if(line.correctHref != null)
-                <%-- Measured facts a designer may correct (2026-11-26). --%>
-                <dd class="spec-correct"><a href="${line.correctHref}" rel="nofollow">Not right?</a></dd>
-            @endif
         @endfor
     </dl>
     @endfor
+    <%-- ONE way in to correcting, not a link per line (owner, 2026-11-27). --%>
+    <p class="spec-fix"><a href="/designs/${design.slug}/correct" rel="nofollow">Something wrong here? Correct it</a></p>
 
     <h2>Licensing</h2>
     <dl class="spec">

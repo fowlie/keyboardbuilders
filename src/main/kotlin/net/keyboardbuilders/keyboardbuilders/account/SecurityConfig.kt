@@ -36,7 +36,7 @@ class SecurityConfig {
         val photoAny = PathPatternRequestMatcher.withDefaults().matcher("/designs/{slug}/photo/**")
         val reviewRights = PathPatternRequestMatcher.withDefaults().matcher("/builders/{login}/review-rights")
         // Correcting a measured fact (2026-11-26).
-        val correct = PathPatternRequestMatcher.withDefaults().matcher("/designs/{slug}/correct/{fact}")
+        val correct = PathPatternRequestMatcher.withDefaults().matcher("/designs/{slug}/correct")
         http
             .authorizeHttpRequests {
                 it.requestMatchers(accountRoot, account, moderate, moderateAny, photo, photoAny, reviewRights, correct).authenticated()
