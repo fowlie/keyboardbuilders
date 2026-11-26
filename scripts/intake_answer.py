@@ -151,6 +151,7 @@ class Run:
         self.choices = None
         self.sources = None       # sources.toml text, edited in place, on first answer
         self.lines = []           # one line each for the commit message
+        self.stale = []           # ids whose question changed since it was answered (#38)
 
     def photo(self, q, picked, by, key, fp):
         if picked in ("none", "skip"):
@@ -298,12 +299,24 @@ def site_answers(run, questions_file, db, applied_file, checked=None):
             problem = "crashed, see the log"
         if problem == STALE:
             print(f"{qid}: its question changed since it was answered; not applied")
+            run.stale.append(qid)
             ok.append(qid)
         elif problem:
             failed.append(f"{qid}: {problem}")
         else:
             ok.append(qid)
     return ok, failed
+
+
+def stale_line(ids):
+    """The check's one line about answers thrown away as stale, or None if there were none.
+
+    SAID ON ITS OWN LINE, for intake_poll.sh to notify (#38). A stale answer counts as
+    handled, so the check ended with "no new answers" for nine days while every board and
+    source answer was being thrown away by a parsing bug."""
+    if not ids:
+        return None
+    return f"{len(ids)} answer(s) not applied, their question changed: " + ", ".join(ids)
 
 
 def parse_id(qid):
@@ -389,6 +402,8 @@ def main():
         print(f"committed {sha}: {len(run.lines)} answer(s)" + ("" if args.push else " -- not pushed"))
     else:
         print("no new answers")
+    if stale_line(run.stale):
+        print(stale_line(run.stale))
     # AFTER THE COMMIT, so a failed commit or push leaves them to be applied again.
     mark_applied(args.applied, ok)
     for f in failed:

@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
 # The intake bot's 10-minute answer check -- backlog #104, piece 6.
 #
-# Runs intake_answer.py --push. Tells the phone only when it committed something or
-# failed: an empty poll every ten minutes would be 144 notifications a day about nothing.
+# Runs intake_answer.py --push. Tells the phone only when it committed something, threw
+# answers away as stale, or failed: an empty poll every ten minutes would be 144
+# notifications a day about nothing.
 #
 # Environment: as scripts/intake_nightly.sh.
 set -uo pipefail
@@ -49,7 +50,12 @@ main() {
   fi
   echo "$out"
   case "$out" in
-    *committed*) notify low "Intake answers" "$(printf '%s' "$out" | tail -1)" ;;
+    *committed*) notify low "Intake answers" "$(printf '%s\n' "$out" | grep '^committed ')" ;;
   esac
+  # STALE ANSWERS SAY SO, issue #38. One now and then is expected: the repo's boards moved
+  # between the ask and the answer. Every board and source answer stale for nine days was
+  # a parsing bug nobody heard about, because a stale answer counts as handled.
+  stale=$(printf '%s\n' "$out" | grep ' not applied, their question changed: ' | cut -c1-300)
+  [ -z "$stale" ] || notify low "Intake answers thrown away" "$stale"
 }
 main "$@"; exit

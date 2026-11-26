@@ -194,20 +194,59 @@ class QuestionId(unittest.TestCase):
                          ("discovery", "a/kbd", "f96f40c55a58"))
 
 
-class Stale(unittest.TestCase):
+SOURCE_ROW = '''
+[[entry]]
+tree     = "qmk"
+id       = "ai03/orbit"
+source   = "ai03-2725/orbit"
+verdict  = "drafted"
+note     = ""
+'''
 
-    def test_an_answer_whose_question_changed_is_used_up_not_failed(self):
-        q = {"id": "source:qmk:x:fp0", "kind": "source", "slug": "qmk:x", "title": "t", "body": "",
-             "choices": choices_for("source", None)}
+
+class Stale(unittest.TestCase):
+    """Issue #38: for nine days every board and source answer was thrown away as stale,
+    and nothing said so. The ids here carry a tree, as real ones do: the old test's
+    `source:qmk:x:fp0` looked stale for the same wrong reason, so it passed."""
+
+    QID = "source:qmk:ai03/orbit:fp1"
+
+    def answer(self, now):
+        """Answer QID `y` while the source question currently stands as `now`."""
+        q = {"id": self.QID, "kind": "source", "slug": "qmk:ai03/orbit", "title": "t",
+             "body": "", "choices": choices_for("source", None)}
         with tempfile.TemporaryDirectory() as d:
             d = pathlib.Path(d)
             write_questions_file(d / "q.json", [q])
             db = Answers.db(None, d, [(q["id"], "y", "fowlie")])
-            with mock.patch.object(intake_answer, "source_choices", return_value={}):
+            (d / "sources.toml").write_text(SOURCE_ROW)
+            with mock.patch.object(intake_answer, "source_choices", return_value=now), \
+                    mock.patch.object(intake_answer, "SOURCES", d / "sources.toml"):
                 run = intake_answer.Run()
                 result = site_answers(run, d / "q.json", db, d / "applied.json")
-        self.assertEqual(result, ([q["id"]], []))
+        return run, result
+
+    def test_a_current_answer_with_a_tree_in_its_key_is_applied(self):
+        run, result = self.answer({"qmk:ai03/orbit": {"fp": "fp1"}})
+        self.assertEqual(result, ([self.QID], []))
+        self.assertEqual(run.stale, [])
+        self.assertEqual(run.lines, ["qmk:ai03/orbit: confirmed"])
+        self.assertIn('verdict  = "confirmed"', run.sources)
+
+    def test_an_answer_whose_question_changed_is_used_up_not_failed(self):
+        run, result = self.answer({"qmk:ai03/orbit": {"fp": "fp2"}})
+        self.assertEqual(result, ([self.QID], []))
         self.assertEqual(run.lines, [], "nothing to commit")
+
+    def test_a_stale_answer_is_counted_so_the_check_can_say_so(self):
+        run, _ = self.answer({"qmk:ai03/orbit": {"fp": "fp2"}})
+        self.assertEqual(run.stale, [self.QID])
+
+    def test_the_check_reports_how_many_were_thrown_away(self):
+        self.assertEqual(intake_answer.stale_line(["board:qmk:a/b:f", "source:zmk:c:g"]),
+                         "2 answer(s) not applied, their question changed: "
+                         "board:qmk:a/b:f, source:zmk:c:g")
+        self.assertIsNone(intake_answer.stale_line([]))
 
 
 class Checked(unittest.TestCase):
