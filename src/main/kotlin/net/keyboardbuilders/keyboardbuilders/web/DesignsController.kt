@@ -40,7 +40,6 @@ class DesignsController(
     private val site: SiteUrl,
     private val renames: SlugRenames,
     private val controllers: ControllerCatalog,
-    private val keycaps: KeycapCatalog,
     private val renders: Renders,
     private val photos: Photos,
     private val related: RelatedDesigns,
@@ -293,36 +292,15 @@ class DesignsController(
     }
 
     /**
-     * Door B (`ux.md` §2.9, ticket 16, backlog #58) — all three decided sections now:
-     * SWITCHES, CONTROLLER (#58) and KEYCAPS (#61).
-     *
-     * `indexable = false` STAYS, and it is now a narrower claim than it was. What the page
-     * still lacks is §2.9's *interactive* half — selection state in the query string, a
-     * pick narrowing the sections below it, "share this configuration" — which is backlog
-     * #59, and which is also what KEYCAPS' dependent state ("depends which switch you
-     * fit") is waiting for on 26 designs. Until then a crawler ranking this page for "what
-     * fits my Corne" would land a reader on a page that asks a question it cannot yet take
-     * an answer to. Nothing here is missing a *fact* any more, so this flag is the next
-     * thing to flip when #59 lands, not when more research arrives.
+     * Door B, "what fits this board", was removed 2026-11-27 (owner: "I never use it
+     * myself"). Its URL sends readers on to the design page, so an old link or bookmark
+     * still lands somewhere. It was `noindex`, so no search result points here.
      */
     @GetMapping("/designs/{slug}/compatible")
-    fun compatible(@PathVariable slug: String): ModelAndView {
-        catalog.bySlug(slug)?.let { design ->
-            return ModelAndView(
-                "designs/compatible",
-                mapOf(
-                    "page" to design.toCompatiblePage(controllers, keycaps, firmwares.rules),
-                    "head" to Head(title = "${design.core.name.value} — what fits", indexable = false),
-                ),
-            )
-        }
-        renames.currentFor(slug)?.let { current ->
-            return ModelAndView(
-                RedirectView("/designs/$current/compatible", true)
-                    .apply { setStatusCode(HttpStatus.MOVED_PERMANENTLY) }
-            )
-        }
-        throw ResponseStatusException(HttpStatus.NOT_FOUND, "no design with slug '$slug'")
+    fun compatible(@PathVariable slug: String): RedirectView {
+        val current = if (catalog.bySlug(slug) != null) slug else renames.currentFor(slug)
+            ?: throw ResponseStatusException(HttpStatus.NOT_FOUND, "no design with slug '$slug'")
+        return RedirectView("/designs/$current", true).apply { setStatusCode(HttpStatus.MOVED_PERMANENTLY) }
     }
 
     /**

@@ -50,12 +50,4 @@ class KailhXTest {
         assertEquals(301, response.status)
         assertEquals("/designs?switch_footprint=kailh_x&q=wings", response.getHeader("Location"))
     }
-
-    @Test
-    fun `the Kailh X keycap line does not call a commercial switch a one-off`() {
-        val compatible = page("/designs/bad-wings-slim/compatible")
-
-        assertTrue("one-off" !in compatible)
-        assertTrue("Kailh X" in compatible)
-    }
 }

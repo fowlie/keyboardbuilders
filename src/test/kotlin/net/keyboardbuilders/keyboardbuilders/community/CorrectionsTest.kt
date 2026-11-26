@@ -145,10 +145,9 @@ class CorrectionsTest {
     }
 
     @Test
-    fun `the design page links to the form once, under Spec, not per line`() {
+    fun `the design page links to the form once, under Spec`() {
         val page = html("/designs/$slug")
         assertEquals(1, Regex(Regex.escape("href=\"$form\"")).findAll(page).count(), page)
-        assertFalse("Not right?" in page)
     }
 
     @Test

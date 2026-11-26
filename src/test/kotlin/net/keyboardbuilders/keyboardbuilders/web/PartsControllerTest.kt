@@ -543,34 +543,4 @@ class PartsControllerTest {
         assertTrue("Pro Micro" in description, description)
         assertTrue("ZMK" in description, description)
     }
-
-    // -- the contract with Door B -------------------------------------------------
-
-    /**
-     * The cross-page contract, which neither page can check alone: Door B builds
-     * `/parts/dev-board/${'$'}{row.slug}` by hand in the template, and `ControllerBoard.slug`
-     * is explicit seed data rather than a derived value ("a URL is a promise", ticket 07
-     * decision 8). A typo in one seed row is a dead link on a shipped page, and it is
-     * invisible from either side.
-     *
-     * The design is found rather than fixed — the first one the corpus itself says
-     * sockets a Pro Micro — so this asserts the contract without asserting which
-     * keyboard happens to satisfy it.
-     */
-    @Test
-    fun `every controller Door B links to resolves`() {
-        val slug = Regex("""href="/designs/([a-z0-9-]+)"""")
-            .find(html("/designs?controller_footprint=pro_micro"))?.groupValues?.get(1)
-        assertNotNull(slug, "the corpus lists no design socketing a Pro Micro")
-
-        val links = Regex("""href="(/parts/dev-board/[^"]*)"""")
-            .findAll(html("/designs/$slug/compatible"))
-            .map { it.groupValues[1] }
-            .toSet()
-
-        assertTrue(links.isNotEmpty(), "Door B linked no controller for $slug")
-        for (link in links) {
-            assertEquals(200, status(link), "dead link on Door B: $link")
-        }
-    }
 }

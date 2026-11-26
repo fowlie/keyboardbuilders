@@ -186,24 +186,7 @@
         </ul>
     @endif
 
-    <%-- DOOR B'S ENTRY POINT. ux.md 2.9's own first sentence -- "reached from a prominent
-         link in the design page's stat block" -- and 3.1's mock puts it beside the stat
-         tiles as a prominent button. The tile grid itself is unbuilt, so the
-         chip rows above are what stands in for it and this sits directly under them.
-
-         Until this shipped the route had NO inbound link from anywhere on the site: it was
-         reachable only by typing the URL, which also left /parts/dev-board/:slug hanging
-         off a page nothing pointed at.
-
-         ux.md's mock shows a second button here for Door C, "build with parts I
-         have". It is deliberately absent: /build-with is out of scope by map ticket 29, and a
-         prominent link to a route that does not exist is worse than no link.
-
-         Every design gets it unconditionally, which is measured rather than assumed: 275
-         designs have wiring recorded so their SWITCHES section renders real rows, 187 are
-         socketed, and only 6 of 324 reach a page that is all sentences and no rows. --%>
     <p class="what-fits">
-        <a href="/designs/${design.slug}/compatible">What fits this board &rarr;</a>
         <%-- Backlog #47. NOFOLLOW: every design linking here is 329 doors into ~54,000
              noindexed pairs, and robots.txt closes the path anyway. The c key is ux.md 7.6's
              "compare with..." shortcut, additive over this link as that section requires. --%>
