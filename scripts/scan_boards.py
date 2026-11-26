@@ -198,6 +198,24 @@ def fetch(slug, path, cap=CAP):
         return None, f"{type(e).__name__}: {e}"[:80], 0
 
 
+# A shape drawn ON Edge.Cuts, in KiCad 5's bare and KiCad 6's quoted spelling. The layer
+# TABLE in every file's header names Edge.Cuts too, as `(44 Edge.Cuts user)`, which this
+# does not match: a table entry is not a drawing.
+EDGE_CUTS = re.compile(r'\(layer\s+"?Edge\.Cuts"?\s*\)')
+# A routed track, and NOT the setup block's `(segment_width 0.2)`, a design rule every
+# KiCad 5 file carries: counting it read Orbit's unrouted HEAD as one track, and missed it.
+SEGMENT = re.compile(r"\(segment\s")
+
+
+def outline_and_tracks(text):
+    """`(has an outline, routed segments)` for one WHOLE board file -- issue #41.
+
+    `ai03-2725/orbit`'s HEAD was an unplaced netlist import, no outline and no tracks, and
+    the site drew it as a rectangle and published facts read off its grid. Either one alone
+    is a real board: Ergogen draws an outline and routes nothing."""
+    return bool(EDGE_CUTS.search(text)), len(SEGMENT.findall(text))
+
+
 def switch_families(text, switch_names):
     """The families a board's switch footprints take, and which of them the PINS gave.
 
@@ -232,6 +250,7 @@ def classify(slug, path):
     fps = placed_names(text)
     trusted = stabilizer_switch_names(Counter(fps))
     sw = [f for f in fps if is_switch(f) or f in trusted]
+    whole = nbytes < CAP
     if nbytes >= CAP:
         # ANY FILE AT THE CAP IS RE-FETCHED WHOLE, not only one that looks switchless.
         #
@@ -248,8 +267,11 @@ def classify(slug, path):
         # corne-light 26 against 42. Every one is a file over the 1 MB cap, and none of
         # them tripped the old guard, because each had SOME switches in the first
         # megabyte. A wrong count is indistinguishable from a right one.
-        text, err, nbytes = fetch(slug, path, cap=0)
-        if text is not None:
+        # A FAILED RE-READ KEEPS THE FIRST MEGABYTE rather than crashing on None; `whole`
+        # stays False, so nothing is concluded from what the cap left out.
+        full, err, size = fetch(slug, path, cap=0)
+        if full is not None:
+            text, nbytes, whole = full, size, True
             fps = placed_names(text)
             trusted = stabilizer_switch_names(Counter(fps))
             sw = [f for f in fps if is_switch(f) or f in trusted]
@@ -261,7 +283,10 @@ def classify(slug, path):
     # name a *family*, so `keyswitches:Kailh_socket_plate_mount` x59 read as
     # zero switches and Phoebe read as a plate. Keeping the names means the
     # next wrong question is answerable without re-fetching 1.5 GB.
-    return {"path": path, "kind": kind, "bytes": len(text), "switches": len(sw),
+    # ONLY FROM A WHOLE FILE. An outline or a track past the cap would be missed, and a
+    # missed one reads as "unfinished": an extractor proves presence, never absence.
+    drawn = dict(zip(("outline", "tracks"), outline_and_tracks(text))) if whole else {}
+    return {"path": path, "kind": kind, "bytes": len(text), "switches": len(sw), **drawn,
             "footprints": len(fps), "plate_footprints": len(plates),
             "families": sorted(fam),
             "pin_families": by_pins,
@@ -297,6 +322,10 @@ def main():
     # family -- the only footprints the pins are ever asked about.
     ap.add_argument("--read-pins", action="store_true",
                     help="re-fetch cached boards with an unnamed switch footprint, read its pins")
+    # The outline and track reader landed 2026-11-26 (issue #41), after the whole cache was
+    # written. A board without the two fields is never held back, so this fills them.
+    ap.add_argument("--read-outline", action="store_true",
+                    help="re-fetch cached boards with no `outline`, record outline and tracks")
     args = ap.parse_args()
 
     rows = [r for r in parse(args.seed) if r.get("verdict") == "confirmed"]
@@ -352,6 +381,18 @@ def main():
                 if got is not None:
                     cache[key]["families"] = sorted(set(cache[key]["families"]) | got[0])
                     cache[key]["pin_families"] = got[1]
+        pathlib.Path(args.cache).write_text(json.dumps(cache, indent=1, sort_keys=True))
+    if args.read_outline:
+        stale = [k for k, v in cache.items() if v.get("kind") == "board" and "outline" not in v]
+        print(f"reading outlines of {len(stale)} cached board files", file=sys.stderr)
+
+        def outline(key):
+            text, err, _ = fetch(*key.split("\t", 1), cap=0)
+            return None if text is None else outline_and_tracks(text)
+        with ThreadPoolExecutor(max_workers=args.jobs) as pool:
+            for key, got in zip(stale, pool.map(outline, stale)):
+                if got is not None:
+                    cache[key]["outline"], cache[key]["tracks"] = got
         pathlib.Path(args.cache).write_text(json.dumps(cache, indent=1, sort_keys=True))
     if args.refresh_chips:
         stale = [k for k, v in cache.items() if v.get("kind") == "board" and "chips" not in v]

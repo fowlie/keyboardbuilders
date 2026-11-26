@@ -14,6 +14,21 @@ import build_seed
 from firmware_records import BuiltFor
 
 
+class Unfinished(unittest.TestCase):
+    """Issue #41: a board file with no outline and no tracks is not a design yet."""
+
+    def test_no_outline_and_no_tracks_is_unfinished(self):
+        self.assertTrue(build_seed.unfinished({"outline": False, "tracks": 0}))
+
+    def test_either_one_is_enough(self):
+        self.assertFalse(build_seed.unfinished({"outline": False, "tracks": 12}))
+        # Ergogen's boards are drawn and never routed: Pando58's bottom plate.
+        self.assertFalse(build_seed.unfinished({"outline": True, "tracks": 0}))
+
+    def test_a_board_scanned_before_the_check_is_unknown_not_unfinished(self):
+        self.assertFalse(build_seed.unfinished({"kind": "board"}))
+
+
 class FamilyCredits(unittest.TestCase):
     """A `{kind = "family"}` credit (owner, 2026-11-25) must name a confirmed family:
     a misspelt one would silently drop from the page, the failure families.toml's own

@@ -915,6 +915,18 @@ def licence_rulings(path):
             if e.get("verdict") == "confirmed"}
 
 
+UNFINISHED = "an unfinished board: no outline and no tracks"
+
+
+def unfinished(entry):
+    """Is this scanned board file an unplaced netlist import, not a board yet? Issue #41.
+
+    Both facts are needed: Ergogen draws an outline and routes nothing, and a board routed
+    before its outline was drawn is rarer but real. A file scanned before
+    `scan_boards.py --read-outline` has neither field and is Unknown, never unfinished."""
+    return entry.get("outline") is False and entry.get("tracks") == 0
+
+
 def board_declines(path):
     """Board-sets a person has ruled are not a design, keyed by any one of their paths.
 
@@ -1350,6 +1362,9 @@ def main():
             found = [e for e in (found or []) if e.get("path") in mine]
         if not found:
             defer("no readable board or plate", row); continue
+        if any(unfinished(e) for e in found):
+            defer(UNFINISHED, row, boards=sorted(e["path"] for e in found if unfinished(e)))
+            continue
         families, has_board, soldered = set(), False, False
         footprints = sockets_on_board(found)
         for entry in found:
@@ -1576,6 +1591,8 @@ def main():
                 deferB(why, repo, bset, name=name); continue
 
             found = [e for e in (boards.get(repo) or []) if e.get("path") in bset]
+            if any(unfinished(e) for e in found):
+                deferB(UNFINISHED, repo, bset, name=name); continue
             families, has_board, soldered = set(), False, False
             footprints = sockets_on_board(found)
             placed = 0
