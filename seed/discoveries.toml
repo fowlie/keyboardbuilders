@@ -247,3 +247,8 @@ moderator = "fowlie"
 repo = "FishyNavi/keyboard"
 verdict = "design"
 moderator = "fowlie"
+
+[[entry]]
+repo = "rubychill/ruby66"
+verdict = "design"
+moderator = "auto"
