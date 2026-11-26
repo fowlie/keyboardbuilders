@@ -117,12 +117,14 @@ class BuildPhotosTest {
     }
 
     @Test
-    fun `an approved photo shows on the page, credited, and earns 10 points`() {
+    fun `an approved photo shows on the page, uncredited, and earns 10 points`() {
         upload(bare[0], alice)
         decide(uploads.waiting().single().id, owner, "yes").andExpect { status { is3xxRedirection() } }
 
         val page = html("/designs/${bare[0]}")
-        assertTrue("Photo added by <a href=\"/builders/alice\">@alice</a> &middot; 10 points" in page, page)
+        assertTrue("<figcaption>An assembled " in page, page)
+        assertFalse("Photo added by" in page, page)
+        assertFalse("@alice" in page, page)
         assertEquals(10, contributors.points("alice"))
     }
 
@@ -240,7 +242,7 @@ class BuildPhotosTest {
     @Test
     fun `an approved upload wins over a seed photo that arrives later`() {
         uploads.approve(uploads.submit(pictured, "alice", "0".repeat(32), 40, 30), "fowlie")
-        assertTrue("@alice" in html("/designs/$pictured"))
+        assertTrue("/photos/${"0".repeat(32)}.jpg" in html("/designs/$pictured"))
         assertNotNull(uploads.approvedFor(pictured))
     }
 

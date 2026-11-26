@@ -7,13 +7,12 @@ import org.springframework.stereotype.Component
 
 /**
  * What a design page says about its build photo, beyond the photo itself:
- * who added it and their points, or that one is waiting, or the invitation to add one.
+ * who added it, or that one is waiting, or the invitation to add one.
  * [removeId] is set only for someone allowed to take the photo down: whoever added it,
  * a moderator, or the board's designer.
  */
 data class PhotoSlot(
     val addedBy: String? = null,
-    val points: Int = 0,
     val waiting: Boolean = false,
     val canAdd: Boolean = false,
     val removeId: Long? = null,
@@ -32,7 +31,6 @@ class PhotoSlots(private val uploads: PhotoUploads, private val contributors: Co
         val upload = uploads.approvedFor(slug)
         return PhotoSlot(
             addedBy = by,
-            points = contributors.points(by),
             removeId = upload?.id?.takeIf { viewer != null && mayRemove(design, upload, viewer) },
         )
     }

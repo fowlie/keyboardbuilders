@@ -394,7 +394,7 @@ data class PhotoView(
     val height: Int,
     val creditUrl: String? = null,
     val creditName: String? = null,
-    /** The login of whoever added it here; the caption then reads "Photo added by @x". */
+    /** The login of whoever added it here. Not shown on the page (owner, 2026-11-26: no credit line). */
     val addedBy: String? = null,
 )
 
