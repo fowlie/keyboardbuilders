@@ -252,3 +252,13 @@ moderator = "fowlie"
 repo = "rubychill/ruby66"
 verdict = "design"
 moderator = "auto"
+
+[[entry]]
+repo = "Chris-El-Hachem/custom-keyboard"
+verdict = "design"
+moderator = "fowlie"
+
+[[entry]]
+repo = "H3LLP/Ergo-Split"
+verdict = "design"
+moderator = "fowlie"

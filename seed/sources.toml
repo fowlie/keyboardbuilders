@@ -7198,8 +7198,8 @@ source   = "kaiec/rabbit68"
 path     = false
 stated   = ""
 signal   = "qmk-readme"
-verdict  = "drafted"
-note     = "QMK's own readme names this repo under Hardware Availability; `url` does not. Verified 2026-11-06 against the corpus's own gate: MIT licence, 1 board places a switch and names a controller, 1 star."
+verdict  = "confirmed"
+note     = "QMK's own readme names this repo under Hardware Availability; `url` does not. Verified 2026-11-06 against the corpus's own gate: MIT licence, 1 board places a switch and names a controller, 1 star. Ruled: a moderator (fowlie) on /moderation (intake bot, backlog #117)."
 
 [[entry]]
 tree     = "qmk"
@@ -7209,8 +7209,8 @@ source   = "swanmatch/silverbullet44"
 path     = false
 stated   = "https://swanmatch.booth.pm/items/1561270"
 signal   = "qmk-readme"
-verdict  = "drafted"
-note     = "QMK's own readme names this repo under Hardware Availability; `url` does not. Verified 2026-11-06 against the corpus's own gate: a custom (free for personal use, commercial use by asking) licence, 3 boards place a switch and name a controller, 6 stars."
+verdict  = "confirmed"
+note     = "QMK's own readme names this repo under Hardware Availability; `url` does not. Verified 2026-11-06 against the corpus's own gate: a custom (free for personal use, commercial use by asking) licence, 3 boards place a switch and name a controller, 6 stars. Ruled: a moderator (fowlie) on /moderation (intake bot, backlog #117)."
 
 [[entry]]
 tree     = "qmk"
