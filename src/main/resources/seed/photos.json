@@ -1037,5 +1037,11 @@
     "width": 1600,
     "height": 1200,
     "sourceUrl": "https://github.com/smores56/osprette"
+  },
+  "mochi40": {
+    "jpg": "1bef76f94be0408fdd07b5e1a0aa7d09",
+    "width": 1600,
+    "height": 900,
+    "sourceUrl": "https://github.com/Aidan-OS/Mochi40"
   }
 }

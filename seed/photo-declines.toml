@@ -388,3 +388,9 @@ slug = "eek"
 verdict = "none"
 images = "6bee1d52e224"
 moderator = "fowlie"
+
+[[entry]]
+slug = "ktec-ergodone"
+verdict = "none"
+images = "4a5b4c2ea5b8"
+moderator = "fowlie"

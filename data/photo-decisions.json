@@ -630,5 +630,9 @@
   "osprangle": {
     "url": "https://raw.githubusercontent.com/smores56/osprette/main/osprangle/images/osprangle-1.jpg",
     "repo": "https://github.com/smores56/osprette"
+  },
+  "mochi40": {
+    "url": "https://raw.githubusercontent.com/Aidan-OS/Mochi40/main/Blender%20Files/Renders/Jpgs/Liquorice.jpg",
+    "repo": "https://github.com/Aidan-OS/Mochi40"
   }
 }

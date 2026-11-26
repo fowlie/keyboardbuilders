@@ -7154,8 +7154,8 @@ source   = "nomis/keyboard-pcb-rpi-pico-25x1"
 path     = false
 stated   = "https://github.com/nomis/keyboard-pcb-rpi-pico-25x1"
 signal   = "qmk-url"
-verdict  = "drafted"
-note     = ""
+verdict  = "confirmed"
+note     = "Ruled: a moderator (fowlie) on /moderation (intake bot, backlog #117)."
 
 [[entry]]
 tree     = "qmk"
@@ -7165,8 +7165,8 @@ source   = "pablojimenezmateo/classic48"
 path     = false
 stated   = "https://github.com/pablojimenezmateo/classic48"
 signal   = "qmk-url"
-verdict  = "drafted"
-note     = ""
+verdict  = "confirmed"
+note     = "Ruled: a moderator (fowlie) on /moderation (intake bot, backlog #117)."
 
 [[entry]]
 tree     = "qmk"
@@ -7176,8 +7176,8 @@ source   = "kjeller/orbiter_keyboard"
 path     = false
 stated   = "https://github.com/kjeller/orbiter_keyboard"
 signal   = "qmk-url"
-verdict  = "drafted"
-note     = ""
+verdict  = "confirmed"
+note     = "Ruled: a moderator (fowlie) on /moderation (intake bot, backlog #117)."
 
 [[entry]]
 tree     = "qmk"
@@ -7187,8 +7187,8 @@ source   = "Biacco42/meishi2"
 path     = false
 stated   = ""
 signal   = "qmk-readme"
-verdict  = "drafted"
-note     = "QMK's own readme names this repo under Hardware Availability; `url` does not. Verified 2026-11-06 against the corpus's own gate: MIT licence, 1 board places a switch and names a controller, 22 stars."
+verdict  = "confirmed"
+note     = "QMK's own readme names this repo under Hardware Availability; `url` does not. Verified 2026-11-06 against the corpus's own gate: MIT licence, 1 board places a switch and names a controller, 22 stars. Ruled: a moderator (fowlie) on /moderation (intake bot, backlog #117)."
 
 [[entry]]
 tree     = "qmk"
