@@ -20427,6 +20427,74 @@
   "family": "Osprette"
  },
  {
+  "name": "classic48",
+  "slug": "pablojimenezmateo-classic48",
+  "sources": [
+   "https://github.com/pablojimenezmateo/classic48"
+  ],
+  "firmware": [
+   {
+    "family": "qmk",
+    "path": "pablojimenezmateo/classic48",
+    "shield": null,
+    "targetMcu": "rp2040"
+   }
+  ],
+  "layouts": [
+   {
+    "keys": 48
+   }
+  ],
+  "switches": [
+   {
+    "kind": "choc_v1"
+   }
+  ],
+  "pitch": null,
+  "buildMethod": {
+   "kind": "pcb"
+  },
+  "hardestComponent": {
+   "parts": [
+    "led"
+   ],
+   "tier": "smd_hand"
+  },
+  "controller": {
+   "kind": "socket",
+   "footprints": [
+    "pro_micro"
+   ]
+  },
+  "body": {
+   "kind": "split",
+   "halves": 2,
+   "reversible": null,
+   "link": [
+    "trrs"
+   ]
+  },
+  "licensing": {
+   "hardware": [],
+   "firmware": [],
+   "documentation": []
+  },
+  "hostPort": null,
+  "wiring": {
+   "kind": "matrix",
+   "rows": 4,
+   "cols": 6,
+   "diodes": "col_to_row"
+  },
+  "switchMounts": [
+   "choc_socket"
+  ],
+  "splay": false,
+  "stagger": "ortho",
+  "exposedComponents": false,
+  "powerSwitch": false
+ },
+ {
   "name": "Pancake v1",
   "slug": "pancake-v1",
   "sources": [
@@ -27343,6 +27411,80 @@
    "copperLayers": 2
   },
   "family": "Stront"
+ },
+ {
+  "name": "Orbiter",
+  "slug": "supercrisp-orbiter",
+  "sources": [
+   "https://github.com/kjeller/orbiter_keyboard"
+  ],
+  "firmware": [
+   {
+    "family": "qmk",
+    "path": "supercrisp/orbiter",
+    "shield": null,
+    "targetMcu": "stm32f072"
+   }
+  ],
+  "layouts": [
+   {
+    "keys": 52
+   }
+  ],
+  "switches": [
+   {
+    "kind": "choc_v1"
+   }
+  ],
+  "pitch": null,
+  "buildMethod": {
+   "kind": "pcb"
+  },
+  "hardestComponent": {
+   "parts": [
+    "ic",
+    "led",
+    "usb"
+   ],
+   "tier": "smd_fine"
+  },
+  "controller": {
+   "kind": "soldered",
+   "mcu": "stm32f072"
+  },
+  "body": {
+   "kind": "split",
+   "halves": 2,
+   "reversible": null,
+   "link": [
+    "trrs"
+   ]
+  },
+  "licensing": {
+   "hardware": [
+    "MIT"
+   ],
+   "firmware": [
+    "MIT"
+   ],
+   "documentation": [
+    "MIT"
+   ]
+  },
+  "hostPort": "usb_c",
+  "wiring": {
+   "kind": "matrix",
+   "rows": 5,
+   "cols": 6,
+   "diodes": "col_to_row"
+  },
+  "switchMounts": [
+   "solder"
+  ],
+  "splay": false,
+  "stagger": "column",
+  "exposedComponents": false,
+  "powerSwitch": false
  },
  {
   "name": "supersplit",

@@ -6850,6 +6850,15 @@
       }
     ]
   },
+  "supercrisp-orbiter": {
+    "repo": "https://github.com/kjeller/orbiter_keyboard",
+    "images": [
+      {
+        "url": "https://raw.githubusercontent.com/kjeller/orbiter_keyboard/main/banner.jpg",
+        "alt": "Split keyword showcase"
+      }
+    ]
+  },
   "supersplit": {
     "repo": "https://github.com/tarneaux/supersplit",
     "images": [

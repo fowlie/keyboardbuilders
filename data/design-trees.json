@@ -759,6 +759,9 @@
  "osprette-v3": [
   "zmk"
  ],
+ "pablojimenezmateo-classic48": [
+  "qmk"
+ ],
  "pancake-v1": [
   "zmk"
  ],
@@ -1011,6 +1014,9 @@
  ],
  "stront-mx-40": [
   "stront-vial"
+ ],
+ "supercrisp-orbiter": [
+  "qmk"
  ],
  "supersplit": [
   "qmk"

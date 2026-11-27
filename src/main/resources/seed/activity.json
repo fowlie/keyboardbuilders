@@ -1,5 +1,5 @@
 {
- "fetchedAt": "2026-11-26T02:59:54Z",
+ "fetchedAt": "2026-11-27T02:50:56Z",
  "repos": {
   "0x544D/kuro65": {
    "stars": 2,
@@ -7,7 +7,7 @@
    "archived": false
   },
   "AYM1607/swept-crkbd": {
-   "stars": 163,
+   "stars": 164,
    "lastPush": "2024-03-11T19:26:57Z",
    "archived": false
   },
@@ -67,12 +67,12 @@
    "archived": false
   },
   "GEIGEIGEIST/TOTEM": {
-   "stars": 2090,
+   "stars": 2091,
    "lastPush": "2025-05-02T16:37:21Z",
    "archived": false
   },
   "MangoIV/dracuLad": {
-   "stars": 230,
+   "stars": 231,
    "lastPush": "2024-03-07T10:09:39Z",
    "archived": false
   },
@@ -210,7 +210,7 @@
    "archived": false
   },
   "brickbots/chocv": {
-   "stars": 188,
+   "stars": 189,
    "lastPush": "2023-01-24T19:30:34Z",
    "archived": false
   },
@@ -235,7 +235,7 @@
    "archived": false
   },
   "climent/atreyu": {
-   "stars": 63,
+   "stars": 64,
    "lastPush": "2023-05-21T07:03:59Z",
    "archived": false
   },
@@ -275,7 +275,7 @@
    "archived": false
   },
   "cyril279/keyboards": {
-   "stars": 74,
+   "stars": 75,
    "lastPush": "2022-07-01T11:54:26Z",
    "archived": false
   },
@@ -300,7 +300,7 @@
    "archived": false
   },
   "davidphilipbarr/sweep": {
-   "stars": 2132,
+   "stars": 2133,
    "lastPush": "2025-12-14T10:23:10Z",
    "archived": false
   },
@@ -325,7 +325,7 @@
    "archived": false
   },
   "dlip/chouchou": {
-   "stars": 28,
+   "stars": 29,
    "lastPush": "2025-10-07T02:50:46Z",
    "archived": false
   },
@@ -355,7 +355,7 @@
    "archived": false
   },
   "duckyb/urchin": {
-   "stars": 611,
+   "stars": 612,
    "lastPush": "2026-10-02T21:44:10Z",
    "archived": false
   },
@@ -485,7 +485,7 @@
    "archived": false
   },
   "foostan/crkbd": {
-   "stars": 7768,
+   "stars": 7769,
    "lastPush": "2026-11-14T14:36:39Z",
    "archived": false
   },
@@ -521,7 +521,7 @@
    "archived": false
   },
   "guidoism/andean-condor": {
-   "stars": 8,
+   "stars": 9,
    "lastPush": "2026-03-20T03:36:51Z",
    "archived": false
   },
@@ -546,7 +546,7 @@
    "archived": false
   },
   "hazels-garage/bad-wings": {
-   "stars": 107,
+   "stars": 108,
    "lastPush": "2026-03-23T17:41:44Z",
    "archived": false
   },
@@ -792,6 +792,11 @@
    "lastPush": "2024-02-09T11:06:58Z",
    "archived": false
   },
+  "kjeller/orbiter_keyboard": {
+   "stars": 0,
+   "lastPush": "2026-07-05T20:10:59Z",
+   "archived": false
+  },
   "kkatano/bakeneko-65": {
    "stars": 314,
    "lastPush": "2022-04-19T04:43:08Z",
@@ -995,7 +1000,7 @@
    "archived": false
   },
   "notquiterightx/AONAMI": {
-   "stars": 10,
+   "stars": 13,
    "lastPush": "2026-11-24T11:03:11Z",
    "archived": false
   },
@@ -1024,8 +1029,13 @@
    "lastPush": "2022-05-15T01:51:39Z",
    "archived": false
   },
+  "pablojimenezmateo/classic48": {
+   "stars": 0,
+   "lastPush": "2025-07-31T19:04:42Z",
+   "archived": false
+  },
   "pashutk/chocofi": {
-   "stars": 787,
+   "stars": 788,
    "lastPush": "2023-12-10T21:23:39Z",
    "archived": false
   },
@@ -1075,7 +1085,7 @@
    "archived": true
   },
   "raeedcho/temper": {
-   "stars": 490,
+   "stars": 491,
    "lastPush": "2026-06-25T17:48:45Z",
    "archived": false
   },
@@ -1165,7 +1175,7 @@
    "archived": false
   },
   "smores56/osprette": {
-   "stars": 63,
+   "stars": 64,
    "lastPush": "2026-10-18T22:52:10Z",
    "archived": false
   },
@@ -1292,7 +1302,7 @@
    "archived": false
   },
   "tompi/cheapino": {
-   "stars": 1196,
+   "stars": 1197,
    "lastPush": "2026-09-25T21:25:24Z",
    "archived": false
   },
@@ -1343,7 +1353,7 @@
    "archived": false
   },
   "vlkv/chocofly": {
-   "stars": 75,
+   "stars": 76,
    "lastPush": "2026-05-10T16:09:51Z",
    "archived": false
   },
@@ -1368,7 +1378,7 @@
    "archived": false
   },
   "weteor/3w6": {
-   "stars": 489,
+   "stars": 490,
    "lastPush": "2022-12-12T09:07:30Z",
    "archived": false
   },
@@ -1418,7 +1428,7 @@
    "archived": false
   },
   "zzeneg/stront": {
-   "stars": 354,
+   "stars": 355,
    "lastPush": "2024-11-06T06:19:25Z",
    "archived": false
   }

@@ -2830,6 +2830,16 @@
   ]
  },
  {
+  "slug": "pablojimenezmateo-classic48",
+  "hardest": "smd_hand",
+  "driven_by": [
+   "led"
+  ],
+  "footprints": [
+   "led_sk6812-mini-e"
+  ]
+ },
+ {
   "slug": "pancake-v1",
   "hardest": "through_hole",
   "driven_by": [
@@ -3733,6 +3743,20 @@
   ],
   "footprints": [
    "connector_hro-type-c-31-m-12-data"
+  ]
+ },
+ {
+  "slug": "supercrisp-orbiter",
+  "hardest": "smd_fine",
+  "driven_by": [
+   "ic",
+   "led",
+   "usb"
+  ],
+  "footprints": [
+   "sot-23-6",
+   "led_ws2812b-2020_plcc4_2.0x2.0mm",
+   "usb_c_receptacle_xkb_u262-16xn-4bvc11"
   ]
  },
  {

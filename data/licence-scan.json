@@ -180,6 +180,20 @@
   "status": "ok",
   "truncated": false
  },
+ "Biacco42/meishi2": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "unclassified",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "Biacco42/meishi2",
+  "status": "ok",
+  "truncated": false
+ },
  "Dbroqua/DK60": {
   "files": [
    {
@@ -3002,6 +3016,20 @@
   "status": "ok",
   "truncated": false
  },
+ "kaiec/rabbit68": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "kaiec/rabbit68",
+  "status": "ok",
+  "truncated": false
+ },
  "kata0510/lily58": {
   "files": [
    {
@@ -3353,6 +3381,20 @@
    }
   ],
   "repo": "kgoh/jian-info",
+  "status": "ok",
+  "truncated": false
+ },
+ "kjeller/orbiter_keyboard": {
+  "files": [
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "kjeller/orbiter_keyboard",
   "status": "ok",
   "truncated": false
  },
@@ -4164,6 +4206,20 @@
   "status": "ok",
   "truncated": false
  },
+ "nomis/keyboard-pcb-rpi-pico-25x1": {
+  "files": [
+   {
+    "first_line": "CERN Open Hardware Licence Version 2 - Strongly Reciprocal",
+    "licence": "CERN-OHL-S-2.0",
+    "path": "COPYING",
+    "root": true,
+    "vendored": false
+   }
+  ],
+  "repo": "nomis/keyboard-pcb-rpi-pico-25x1",
+  "status": "ok",
+  "truncated": false
+ },
  "nopunin10did/kastenwagen": {
   "files": [
    {
@@ -4398,6 +4454,12 @@
    }
   ],
   "repo": "omkbd/ergodash",
+  "status": "ok",
+  "truncated": false
+ },
+ "pablojimenezmateo/classic48": {
+  "files": [],
+  "repo": "pablojimenezmateo/classic48",
   "status": "ok",
   "truncated": false
  },
@@ -5184,6 +5246,48 @@
  "suikagiken/suika85ergo": {
   "files": [],
   "repo": "suikagiken/suika85ergo",
+  "status": "ok",
+  "truncated": false
+ },
+ "swanmatch/silverbullet44": {
+  "files": [
+   {
+    "first_line": "\u30e9\u30a4\u30bb\u30f3\u30b9",
+    "licence": "unclassified",
+    "path": "LICENSE",
+    "root": true,
+    "vendored": false
+   },
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "pcb/foostan/LICENSE",
+    "root": false,
+    "vendored": false
+   },
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "shield/foostan/LICENSE",
+    "root": false,
+    "vendored": false
+   },
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "shield_L/foostan/LICENSE",
+    "root": false,
+    "vendored": false
+   },
+   {
+    "first_line": "MIT License",
+    "licence": "MIT",
+    "path": "shield_R/foostan/LICENSE",
+    "root": false,
+    "vendored": false
+   }
+  ],
+  "repo": "swanmatch/silverbullet44",
   "status": "ok",
   "truncated": false
  },

@@ -2037,6 +2037,13 @@
    "keys": 34
   }
  },
+ "pablojimenezmateo-classic48": {
+  "v0/classic48/classic48.kicad_pcb": {
+   "diodes": 50,
+   "exposed": 0,
+   "keys": 48
+  }
+ },
  "pancake-v1": {
   "Keyboards/Pancake/V1/kicad/dropin.kicad_pcb": {
    "diodes": 48,
@@ -2696,6 +2703,13 @@
    "diodes": 42,
    "exposed": 0,
    "keys": 40
+  }
+ },
+ "supercrisp-orbiter": {
+  "pcb/orbiter-wired/orbiter.kicad_pcb": {
+   "diodes": 29,
+   "exposed": 0,
+   "keys": 26
   }
  },
  "supersplit": {

@@ -509,7 +509,7 @@
   "glb_bytes": 0,
   "glb_renderer": "kicad10.0.5-full/export-glb/mask-silk-tracks-opaquecore/3",
   "notes": [
-   "glb absent after exit 2: 02:50:50: Font 'a Another Tag' not found; substituting 'DejaVu Sans Book'."
+   "glb absent after exit 2: 02:40:07: Font 'a Another Tag' not found; substituting 'DejaVu Sans Book'."
   ],
   "path": "slim/source/bad_wings_slim.kicad_pcb",
   "png": "b568018013106c6ddabe0c3a4997cdc3",
@@ -4401,6 +4401,20 @@
    "png"
   ]
  },
+ "pablojimenezmateo-classic48\tv0/classic48/classic48.kicad_pcb": {
+  "board_sha256": "1e1a80c5aa064cc614bc1d6d3451036d7e6222fb1458849a38e135ff4ebd8988",
+  "glb": "347f4924175738382a6f50b7ec5d11d7",
+  "glb_bytes": 8667844,
+  "glb_renderer": "kicad10.0.5-full/export-glb/mask-silk-tracks-opaquecore/3",
+  "path": "v0/classic48/classic48.kicad_pcb",
+  "png": "d244daea0c11b63717c54ed1fd6c6b3c",
+  "png_renderer": "kicad10.0.5-full/render/high-persp-rot-30,0,25-transparent-1400x900/2",
+  "repo": "pablojimenezmateo/classic48",
+  "uploaded": [
+   "glb",
+   "png"
+  ]
+ },
  "pancake-v1\tKeyboards/Pancake/V1/kicad/dropin.kicad_pcb": {
   "board_sha256": "589b5f9612d3f3809c142cbc6856e8a22918ef540fc8287603f27020bab4529b",
   "glb": "c646e3b943c31e61854860f928e1eff4",
@@ -5827,6 +5841,20 @@
   "png": "ae50a67e9cb6def6af2ac3ee8018e9be",
   "png_renderer": "kicad10.0.5-full/render/high-persp-rot-30,0,25-transparent-1400x900/2",
   "repo": "zzeneg/stront",
+  "uploaded": [
+   "glb",
+   "png"
+  ]
+ },
+ "supercrisp-orbiter\tpcb/orbiter-wired/orbiter.kicad_pcb": {
+  "board_sha256": "975b118049fd3e0bf1ba5c58b1271ef7d184b9b00e9723c37d429cd5797f1af2",
+  "glb": "7d983b04f780b74b480a4949adb5722d",
+  "glb_bytes": 13062720,
+  "glb_renderer": "kicad10.0.5-full/export-glb/mask-silk-tracks-opaquecore/3",
+  "path": "pcb/orbiter-wired/orbiter.kicad_pcb",
+  "png": "9287b89e0febaa063a896f5cae9171a9",
+  "png_renderer": "kicad10.0.5-full/render/high-persp-rot-30,0,25-transparent-1400x900/2",
+  "repo": "kjeller/orbiter_keyboard",
   "uploaded": [
    "glb",
    "png"

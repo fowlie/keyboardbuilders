@@ -6183,6 +6183,27 @@
   },
   "unnamed": {}
  },
+ "kjeller/orbiter_keyboard\tpcb/orbiter-wired/orbiter.kicad_pcb": {
+  "accepts": {
+   "PCM_Switch_Keyboard_Kailh_Reversible:SW_Kailh_Choc_V2_1.00u_Reversible\tsolder": 26
+  },
+  "drills": {
+   "ChocV1 1.2": 78
+  },
+  "kinds": {
+   "solder": 26
+  },
+  "names": {
+   "PCM_Switch_Keyboard_Kailh_Reversible:SW_Kailh_Choc_V2_1.00u_Reversible\tsolder\tthru_hole\t-": 26
+  },
+  "positions": {
+   "solder": 26
+  },
+  "sockets": {
+   "-": 26
+  },
+  "unnamed": {}
+ },
  "kkatano/bakeneko-65\tpcb/bakeneko-65-pcb.kicad_pcb": {
   "accepts": {
    "MX_Only:MXOnly-1.25U-NoLED\tmillmax+solder": 6,
@@ -7743,6 +7764,25 @@
   },
   "sockets": {
    "-": 63
+  },
+  "unnamed": {}
+ },
+ "pablojimenezmateo/classic48\tv0/classic48/classic48.kicad_pcb": {
+  "accepts": {
+   "pjimenez:Switch_ChocV1-hotswap\tchoc": 48
+  },
+  "drills": {},
+  "kinds": {
+   "socket": 48
+  },
+  "names": {
+   "pjimenez:Switch_ChocV1-hotswap\tsocket\tsmd\tchoc": 48
+  },
+  "positions": {
+   "choc": 48
+  },
+  "sockets": {
+   "choc": 48
   },
   "unnamed": {}
  },

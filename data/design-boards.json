@@ -1551,6 +1551,12 @@
   ],
   "repo": "smores56/osprette"
  },
+ "pablojimenezmateo-classic48": {
+  "paths": [
+   "v0/classic48/classic48.kicad_pcb"
+  ],
+  "repo": "pablojimenezmateo/classic48"
+ },
  "pancake-v1": {
   "paths": [
    "Keyboards/Pancake/V1/kicad/dropin.kicad_pcb"
@@ -2058,6 +2064,12 @@
    "pcb/mx40/pcb.kicad_pcb"
   ],
   "repo": "zzeneg/stront"
+ },
+ "supercrisp-orbiter": {
+  "paths": [
+   "pcb/orbiter-wired/orbiter.kicad_pcb"
+  ],
+  "repo": "kjeller/orbiter_keyboard"
  },
  "supersplit": {
   "paths": [

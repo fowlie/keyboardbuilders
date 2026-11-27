@@ -1439,6 +1439,12 @@
   "mm": 19.05,
   "pitch": "mx_19.05"
  },
+ "kjeller/orbiter_keyboard\tpcb/orbiter-wired/orbiter.kicad_pcb": {
+  "confidence": 1.0,
+  "keys": 26,
+  "mm": 20.0,
+  "pitch": "other"
+ },
  "kkatano/bakeneko-65\tpcb/bakeneko-65-pcb.kicad_pcb": {
   "confidence": 0.98,
   "keys": 57,
@@ -1840,6 +1846,12 @@
   "keys": 32,
   "mm": 19.05,
   "pitch": "mx_19.05"
+ },
+ "pablojimenezmateo/classic48\tv0/classic48/classic48.kicad_pcb": {
+  "confidence": 1.0,
+  "keys": 48,
+  "mm": 17.0,
+  "pitch": "choc_18x17"
  },
  "pashutk/chocofi\tpcb/chocofi.kicad_pcb": {
   "confidence": 0.83,

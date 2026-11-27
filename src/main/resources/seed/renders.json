@@ -1728,6 +1728,13 @@
   "path": "v3/pcb/osprette_v3.kicad_pcb",
   "png": "95c91bbd863d196f502f22c9c94313ed"
  },
+ "pablojimenezmateo-classic48": {
+  "alternates": 0,
+  "glb": "347f4924175738382a6f50b7ec5d11d7",
+  "glbBytes": 8667844,
+  "path": "v0/classic48/classic48.kicad_pcb",
+  "png": "d244daea0c11b63717c54ed1fd6c6b3c"
+ },
  "pancake-v1": {
   "alternates": 0,
   "glb": "c646e3b943c31e61854860f928e1eff4",
@@ -2301,6 +2308,13 @@
   "glbBytes": 13701112,
   "path": "pcb/mx40/pcb.kicad_pcb",
   "png": "ae50a67e9cb6def6af2ac3ee8018e9be"
+ },
+ "supercrisp-orbiter": {
+  "alternates": 0,
+  "glb": "7d983b04f780b74b480a4949adb5722d",
+  "glbBytes": 13062720,
+  "path": "pcb/orbiter-wired/orbiter.kicad_pcb",
+  "png": "9287b89e0febaa063a896f5cae9171a9"
  },
  "supersplit": {
   "alternates": 0,
