@@ -634,5 +634,9 @@
   "mochi40": {
     "url": "https://raw.githubusercontent.com/Aidan-OS/Mochi40/main/Blender%20Files/Renders/Jpgs/Liquorice.jpg",
     "repo": "https://github.com/Aidan-OS/Mochi40"
+  },
+  "supercrisp-orbiter": {
+    "url": "https://raw.githubusercontent.com/kjeller/orbiter_keyboard/main/banner.jpg",
+    "repo": "https://github.com/kjeller/orbiter_keyboard"
   }
 }
