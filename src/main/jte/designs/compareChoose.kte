@@ -44,7 +44,7 @@
              of to the design, so a reader already knows how to read it. --%>
         <ul class="strip">
             @for(item in chooser.candidates)
-                <li>@template.designs.card(card = item.card, cls = "strip-card", reason = item.reason, href = item.href, rel = "nofollow")</li>
+                <li>@template.designs.card(card = item.card, cls = "strip-card", reason = item.reason, href = item.href, rel = "nofollow", compare = false)</li>
             @endfor
         </ul>
     @endif

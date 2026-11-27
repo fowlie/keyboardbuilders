@@ -428,7 +428,7 @@ class LearnTest {
 
         // The Mill-Max list draws designs, and only designs whose pads take Mill-Max.
         val section = page.substringAfter("Takes Mill-Max sockets").substringBefore("learn-list-head")
-        val listed = Regex("""href="/designs/([^"/]+)"""").findAll(section).map { it.groupValues[1] }.toList()
+        val listed = Regex("""href="/designs/([^"/?]+)"""").findAll(section).map { it.groupValues[1] }.toList()
         assertTrue(listed.isNotEmpty(), "no live list of Mill-Max designs")
         val bySlug = catalog.all().associateBy { it.core.slug.value }
         for (slug in listed) {

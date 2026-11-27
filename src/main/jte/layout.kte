@@ -243,6 +243,7 @@
 <%-- Every heart button on the page, cards and byline alike (2026-11-27). The login tells it
      whether the list is this browser's or the account's. --%>
 <script src="${site.heartsScript}" defer data-login="${me}"></script>
+<script src="${site.compareScript}" defer></script>
 @if(site.hasAnalytics)
     <script data-goatcounter="${site.analyticsOrigin}/count"
             async src="${site.analyticsScript}"></script>

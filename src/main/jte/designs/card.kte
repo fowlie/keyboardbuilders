@@ -6,6 +6,7 @@
 @param reason: String? = null
 @param href: String? = null
 @param rel: String? = null
+@param compare: Boolean = true
 <%-- ONE CARD, TWO SURFACES: the home page's daily strip ("strip-card") and the /designs
      grid ("result-card"), which box it differently -- the strip's box is the link, the
      grid's is its li, whose measured size OffscreenRowsTest holds. `full` adds the
@@ -54,6 +55,12 @@
         @if(reason != null)<span class="related-reason">${reason}</span>@endif
     </span>
 </a>
+<%-- COMPARE, BOTTOM LEFT (owner, 2026-11-27): press it on one card, then on another, and
+     the pair opens -- static/compare.js, which keeps the first pick for this tab. Without
+     the script it is what it looks like, a link to the page that asks for the second
+     design. Off on the compare chooser's own cards, which already lead to a pair.
+     NOFOLLOW for the design page's compare link's reason: 54,000 noindexed pairs. --%>
+@if(compare)<a class="card-compare" href="/designs/compare?a=${card.row.slug}" rel="nofollow" data-slug="${card.row.slug}" data-name="${card.row.name}">Compare</a>@endif
 <%-- THE HEART BUTTON, BOTTOM RIGHT, BESIDE THE LINK AND NOT IN IT (owner, 2026-11-27): a
      count in the photo's chip "doesn't look clickable", so it is a real button with an
      edge, and it carries the count the chip used to. A button inside an <a> is invalid

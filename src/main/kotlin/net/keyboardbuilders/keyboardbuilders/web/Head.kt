@@ -134,6 +134,9 @@ class SiteUrl(
     /** The heart buttons' script (2026-11-27), hashed for the same reason. */
     val heartsScript: String = hashed("/hearts.js")
 
+    /** Compare from the cards (2026-11-27). */
+    val compareScript: String = hashed("/compare.js")
+
     private fun hashed(path: String): String = "$path?v=" + (javaClass.getResourceAsStream("/static$path")
         ?.use { MessageDigest.getInstance("SHA-256").digest(it.readBytes()) }
         ?.joinToString("") { "%02x".format(it) }?.take(10) ?: "0")

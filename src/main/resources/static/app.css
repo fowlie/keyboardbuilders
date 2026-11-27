@@ -567,8 +567,60 @@ a.card { display: flex; flex-direction: column; align-items: stretch; gap: 0; pa
 .heart.card-heart:not(:disabled):hover { border-color: var(--accent); }
 .heart.card-heart:not(:disabled):active { transform: translateY(2px); box-shadow: 0 0 0 var(--edge); }
 .heart.card-heart[aria-pressed="true"] { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 12%, var(--card)); }
-.card-wrap:has(> .strip-card:hover) > .card-heart { transform: translateY(2px); }
-.card-wrap:has(> .strip-card:active) > .card-heart { transform: translateY(5px); }
+/* COMPARE, the bottom row's left end (owner, 2026-11-27): the heart's shape, so the row
+   reads as two keys. A link, styled as a button, because without static/compare.js it is
+   one. "Picked" while it waits for a second design. */
+.card-compare {
+    position: absolute;
+    left: 0.9rem;
+    bottom: 0.85rem;
+    z-index: 1;
+    padding: 0.2rem 0.75rem;
+    border: 1px solid var(--edge);
+    border-radius: 999px;
+    background: var(--card);
+    box-shadow: 0 2px 0 var(--edge);
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--fg);
+    text-decoration: none;
+}
+.card-compare:hover { border-color: var(--accent); }
+.card-compare:active { transform: translateY(2px); box-shadow: 0 0 0 var(--edge); }
+.card-compare.picked { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 12%, var(--card)); }
+.card-wrap:has(> .strip-card:hover) > .card-heart, .card-wrap:has(> .strip-card:hover) > .card-compare { transform: translateY(2px); }
+.card-wrap:has(> .strip-card:active) > .card-heart, .card-wrap:has(> .strip-card:active) > .card-compare { transform: translateY(5px); }
+
+/* The bar a first Compare press shows, until the second (compare.js). */
+.compare-bar {
+    position: fixed;
+    left: 50%;
+    bottom: 1rem;
+    transform: translateX(-50%);
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    max-width: calc(100vw - 2rem);
+    padding: 0.6rem 0.6rem 0.6rem 1rem;
+    border: 1px solid var(--accent);
+    border-radius: 12px;
+    background: var(--card);
+    box-shadow: 0 3px 0 var(--edge), 0 6px 24px rgba(0, 0, 0, .18);
+    color: var(--fg);
+    font-size: 0.92rem;
+}
+.compare-bar[hidden] { display: none; }
+.compare-bar button {
+    font: inherit;
+    padding: 0.25rem 0.75rem;
+    border: 1px solid var(--edge);
+    border-radius: 999px;
+    background: var(--card);
+    color: var(--fg);
+    cursor: pointer;
+}
+.compare-bar button:hover { border-color: var(--accent); }
 .stars.hearts { color: var(--accent); }
 
 .card-text { display: flex; flex-direction: column; gap: 0.15rem; padding: 0.75rem 0.9rem 0.85rem; }
