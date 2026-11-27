@@ -5,8 +5,8 @@ import org.springframework.jdbc.core.simple.JdbcClient
 import org.springframework.stereotype.Component
 
 /**
- * The heart totals -- `V6__heart.sql`. The only table besides Flyway's own that the seed
- * import never touches, which is the property [HeartsTest] pins.
+ * The heart totals -- `V6__heart.sql` -- and a signed-in person's own hearts,
+ * `V12__account_heart.sql`. Neither is touched by the seed import, which [HeartsTest] pins.
  */
 @Component
 class Hearts(private val db: JdbcClient) {
@@ -46,6 +46,11 @@ class Hearts(private val db: JdbcClient) {
             ).params(current, count).update()
             moved++
         }
+        // An account's hearts move too. OR IGNORE: someone who hearted both slugs keeps one.
+        for ((former, current) in renames) {
+            db.sql("UPDATE OR IGNORE account_heart SET slug = ? WHERE slug = ?").params(current, former).update()
+            db.sql("DELETE FROM account_heart WHERE slug = ?").param(former).update()
+        }
         return moved
     }
 
@@ -62,4 +67,35 @@ class Hearts(private val db: JdbcClient) {
     fun remove(slug: String): Int =
         db.sql("UPDATE heart SET count = max(count - 1, 0) WHERE slug = ? RETURNING count")
             .param(slug).query(Int::class.java).optional().orElse(0)
+
+    /** The designs [login] has hearted, in the order hearted. */
+    fun of(login: String): List<String> =
+        db.sql("SELECT slug FROM account_heart WHERE login = ? ORDER BY id")
+            .param(login.lowercase()).query { rs, _ -> rs.getString("slug") }.list()
+
+    /** A signed-in heart: counted once per person, however often it is pressed. The total. */
+    fun addFor(login: String, slug: String): Int {
+        val new = db.sql("INSERT OR IGNORE INTO account_heart (login, slug) VALUES (?, ?)")
+            .params(login.lowercase(), slug).update()
+        return if (new == 1) add(slug) else count(slug)
+    }
+
+    /** A signed-in heart taken back: the total drops only if this person had hearted it. */
+    fun removeFor(login: String, slug: String): Int {
+        val gone = db.sql("DELETE FROM account_heart WHERE login = ? AND slug = ?")
+            .params(login.lowercase(), slug).update()
+        return if (gone == 1) remove(slug) else count(slug)
+    }
+
+    /**
+     * A browser's hearts joining its account on sign-in. NOT COUNTED AGAIN: each was added
+     * to the total when it was pressed. Returns the account's whole list afterwards.
+     */
+    fun merge(login: String, slugs: List<String>): List<String> {
+        for (slug in slugs) {
+            db.sql("INSERT OR IGNORE INTO account_heart (login, slug) VALUES (?, ?)")
+                .params(login.lowercase(), slug).update()
+        }
+        return of(login)
+    }
 }

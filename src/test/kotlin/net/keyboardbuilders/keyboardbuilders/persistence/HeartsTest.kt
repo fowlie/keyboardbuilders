@@ -29,7 +29,10 @@ class HeartsTest {
 
     /** After as well as before: the context is shared (#114), and a heart left behind
      *  would show on another class's design page. */
-    @BeforeEach @AfterEach fun clear() { db.sql("DELETE FROM heart").update() }
+    @BeforeEach @AfterEach fun clear() {
+        db.sql("DELETE FROM heart").update()
+        db.sql("DELETE FROM account_heart").update()
+    }
 
     @Test
     fun `a design nobody has hearted counts zero`() {
@@ -111,5 +114,80 @@ class HeartsTest {
     fun `counts for many designs come back in one call, zeros included`() {
         hearts.add("sweep-2")
         assertEquals(mapOf("sweep-2" to 1, "lily58" to 0), hearts.counts(listOf("sweep-2", "lily58")))
+    }
+
+    // -- a signed-in person's hearts (owner, 2026-11-27: "both, merged on login") ------
+
+    /** One person, one heart: pressing it twice from two devices still counts once. */
+    @Test
+    fun `a signed-in heart counts once per person`() {
+        assertEquals(1, hearts.addFor("alice", "sweep-2"))
+        assertEquals(1, hearts.addFor("alice", "sweep-2"))
+        assertEquals(2, hearts.addFor("bob", "sweep-2"))
+        assertEquals(listOf("sweep-2"), hearts.of("alice"))
+    }
+
+    @Test
+    fun `a signed-in heart taken back removes one, and only if it was there`() {
+        hearts.addFor("alice", "sweep-2")
+        hearts.addFor("bob", "sweep-2")
+
+        assertEquals(1, hearts.removeFor("alice", "sweep-2"))
+        assertEquals(1, hearts.removeFor("alice", "sweep-2"))
+        assertEquals(emptyList(), hearts.of("alice"))
+    }
+
+    /** GitHub logins are case-insensitive, and the session carries whatever case GitHub sent. */
+    @Test
+    fun `a login is the same person in any case`() {
+        hearts.addFor("Alice", "sweep-2")
+        assertEquals(1, hearts.addFor("alice", "sweep-2"))
+        assertEquals(listOf("sweep-2"), hearts.of("ALICE"))
+    }
+
+    /**
+     * THE MERGE ON SIGN-IN. The browser's hearts were counted when they were pressed, so
+     * they join the account without being counted again; what the account already had stays.
+     */
+    @Test
+    fun `merging a browser's hearts into an account adds them without counting them twice`() {
+        hearts.add("lily58")              // pressed anonymously, already in the total
+        hearts.addFor("alice", "sweep-2")
+
+        assertEquals(listOf("sweep-2", "lily58"), hearts.merge("alice", listOf("lily58", "sweep-2")))
+
+        assertEquals(1, hearts.count("lily58"))
+        assertEquals(1, hearts.count("sweep-2"))
+    }
+
+    /** The account's list is in the order hearted, the order /favorites shows. */
+    @Test
+    fun `an account's hearts come back in the order they were hearted`() {
+        hearts.addFor("alice", "lily58")
+        hearts.addFor("alice", "sweep-2")
+        hearts.merge("alice", listOf("corne"))
+        assertEquals(listOf("lily58", "sweep-2", "corne"), hearts.of("alice"))
+    }
+
+    @Test
+    fun `a renamed design stays in the accounts that hearted it`() {
+        hearts.addFor("alice", "sweepv2")
+        hearts.addFor("bob", "sweepv2")
+        hearts.addFor("bob", "sweep-2")
+
+        hearts.carry(mapOf("sweepv2" to "sweep-2"))
+
+        assertEquals(listOf("sweep-2"), hearts.of("alice"))
+        assertEquals(listOf("sweep-2"), hearts.of("bob"))
+    }
+
+    /** A merged heart was never counted by this server if the browser's list outlived the
+     *  count (an old database, a hand-edited list); taking it back must still stop at zero. */
+    @Test
+    fun `taking back a merged heart never drives the count below zero`() {
+        hearts.merge("alice", listOf("sweep-2"))
+        assertEquals(0, hearts.removeFor("alice", "sweep-2"))
+        assertEquals(0, hearts.count("sweep-2"))
+        assertEquals(0, hearts.removeFor("alice", "sweep-2"))
     }
 }

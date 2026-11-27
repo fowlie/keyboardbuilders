@@ -5,6 +5,7 @@
 @param cards: List<net.keyboardbuilders.keyboardbuilders.web.DesignCard> = listOf()
 @param asked: Boolean = false
 @param renamed: Map<String, String> = mapOf()
+@param account: Boolean = false
 
 <%-- A visitor's shortlist (FavouritesController). NO BACKTICKS in this file: one closes
      the raw string the page is written in. --%>
@@ -13,10 +14,10 @@
     @if(cards.isEmpty())
         <p class="favorites-empty">
             Nothing hearted yet. Press the &#9825; on any design to keep it here.
-            Your hearts stay in this browser; nobody else sees which ones you picked.
+            @if(account)Your hearts are kept with your account@else Your hearts stay in this browser@endif; nobody else sees which ones you picked.
         </p>
     @else
-        <p class="favorites-note">Kept in this browser.</p>
+        <p class="favorites-note">@if(account)Kept with your account.@else Kept in this browser.@endif</p>
         <%-- results-col, because the card grid is scoped to it: without the wrapper the
              cards were plain full-width blocks. --%>
         <div class="results-col">

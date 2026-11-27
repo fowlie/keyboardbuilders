@@ -22,6 +22,7 @@
      A card with several drawn layouts stacks one frame per layout and cycles them on
      hover (app.css, "CYCLING LAYOUTS"); the key count chip marks the count on show. --%>
 !{val picture: Content = @`@if(card.row.cycles)<span class="cycle">@for(f in card.row.frames.withIndex())<span class="frame f${f.index} n${card.row.frames.size}">$unsafe{f.value.svg}</span>@endfor</span>@else$unsafe{card.row.silhouette}@endif`}
+<div class="card-wrap">
 <a class="${cls} card" href="${href ?: "/designs/" + card.row.slug}" rel="${rel}">
     @if(card.photo != null)
         <span class="card-photo">
@@ -29,12 +30,12 @@
             <%-- The owner's favourite detail: the board's own drawing, small, over its
                  photo. Fit to its chip on purpose -- a label, not a size comparison. --%>
             @if(card.drawn)<span class="card-badge">${picture}</span>@endif
-            @if(card.row.stars != null || card.row.hearts != null)<span class="card-stars">@if(card.row.stars != null)<span title="GitHub stars">&#9733; ${card.row.stars}</span>@endif@if(card.row.stars != null && card.row.hearts != null) &middot; @endif@if(card.row.hearts != null)<span class="card-hearts" title="Hearts">&#9829; ${card.row.hearts}</span>@endif</span>@endif
+            @if(card.row.stars != null)<span class="card-stars" title="GitHub stars">&#9733; ${card.row.stars}</span>@endif
         </span>
     @else
         <span class="card-photo no-photo">
             <span class="card-drawn">${picture}</span>
-            @if(card.row.stars != null || card.row.hearts != null)<span class="card-stars">@if(card.row.stars != null)<span title="GitHub stars">&#9733; ${card.row.stars}</span>@endif@if(card.row.stars != null && card.row.hearts != null) &middot; @endif@if(card.row.hearts != null)<span class="card-hearts" title="Hearts">&#9829; ${card.row.hearts}</span>@endif</span>@endif
+            @if(card.row.stars != null)<span class="card-stars" title="GitHub stars">&#9733; ${card.row.stars}</span>@endif
         </span>
     @endif
     <span class="card-text">
@@ -53,3 +54,10 @@
         @if(reason != null)<span class="related-reason">${reason}</span>@endif
     </span>
 </a>
+<%-- THE HEART BUTTON, BOTTOM RIGHT, BESIDE THE LINK AND NOT IN IT (owner, 2026-11-27): a
+     count in the photo's chip "doesn't look clickable", so it is a real button with an
+     edge, and it carries the count the chip used to. A button inside an <a> is invalid
+     HTML, hence `.card-wrap`; app.css places it and leaves the card text room for it.
+     Disabled until static/hearts.js wakes it, so without JS the count still reads. --%>
+<button type="button" class="heart card-heart" data-slug="${card.row.slug}" aria-pressed="false" disabled title="Heart ${card.row.name}"><span class="heart-icon" aria-hidden="true">&#9825;</span>@if(card.row.hearts != null) <span class="heart-count">${card.row.hearts}</span>@endif</button>
+</div>

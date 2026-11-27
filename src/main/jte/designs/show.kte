@@ -49,8 +49,8 @@
         @endif
         <%-- OUR OWN HEARTS, beside GitHub's stars for now: every design starts at zero, so
              the stars stay until hearts mean something to sort by. The count is the
-             server's; whether YOU hearted it is this browser's, filled in by the script
-             at the end of the page. Disabled until then, so it does nothing without JS. --%>
+             server's; whether YOU hearted it is this browser's or your account's, filled in
+             by static/hearts.js. Disabled until then, so it does nothing without JS. --%>
         &middot; <button type="button" class="heart" data-slug="${design.slug}" aria-pressed="false" disabled
                 title="Heart this design to keep it in your favorites"><span class="heart-icon" aria-hidden="true">&#9825;</span> <span class="heart-count">${hearts}</span></button>
     </p>
@@ -245,42 +245,6 @@
         </div>
         <p class="share-status" role="status" aria-live="polite"></p>
     </div>
-    <%-- The heart (see the byline). localStorage "kb-hearts" is this browser's list, in the
-         order hearted; the server only keeps totals. A failed request puts the button
-         back, so the list and the count never disagree for long. --%>
-    <script>
-        (function () {
-            var btn = document.querySelector("button.heart");
-            if (!btn) return;
-            var slug = btn.getAttribute("data-slug");
-            function load() {
-                try { var v = JSON.parse(localStorage.getItem("kb-hearts") || "[]"); return Array.isArray(v) ? v : []; }
-                catch (e) { return []; }
-            }
-            function save(list) { try { localStorage.setItem("kb-hearts", JSON.stringify(list)); } catch (e) {} }
-            function show(on) {
-                btn.setAttribute("aria-pressed", on ? "true" : "false");
-                btn.querySelector(".heart-icon").textContent = on ? "\u2665" : "\u2661";
-            }
-            show(load().indexOf(slug) !== -1);
-            btn.disabled = false;
-            btn.addEventListener("click", function () {
-                var list = load();
-                var on = list.indexOf(slug) === -1;
-                save(on ? list.concat([slug]) : list.filter(function (s) { return s !== slug; }));
-                show(on);
-                btn.disabled = true;
-                fetch("/designs/" + encodeURIComponent(slug) + "/heart", { method: on ? "PUT" : "DELETE" })
-                    .then(function (r) { if (!r.ok) throw r; return r.json(); })
-                    .then(function (t) { btn.querySelector(".heart-count").textContent = t.count; })
-                    .catch(function () {
-                        save(load().filter(function (s) { return s !== slug; }).concat(on ? [] : [slug]));
-                        show(!on);
-                    })
-                    .finally(function () { btn.disabled = false; });
-            });
-        })();
-    </script>
 
     <script>
         (function () {

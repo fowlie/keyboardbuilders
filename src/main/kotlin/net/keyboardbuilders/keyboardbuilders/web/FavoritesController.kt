@@ -28,7 +28,11 @@ class FavoritesController(
     private val renames: SlugRenames,
 ) {
     @GetMapping("/favorites")
-    fun favorites(@RequestParam(name = "d", required = false) slugs: List<String>?, model: Model): String {
+    fun favorites(@RequestParam(name = "d", required = false) asked: List<String>?, model: Model): String {
+        // SIGNED IN, BARE /favorites IS THE ACCOUNT'S LIST (2026-11-27): drawn here, so a
+        // new device shows it before its browser has heard of any of it.
+        val account = if (asked == null) SignedIn.login()?.let { hearts.of(it) } else null
+        val slugs = asked ?: account
         // The visitor's order, duplicates dropped, and a slug that no longer publishes
         // skipped: a browser keeps hearts across renames and removals it cannot see.
         // A RENAMED SLUG IS FOLLOWED, the way `/designs/{slug}` 301s it: the browser keeps
@@ -40,7 +44,8 @@ class FavoritesController(
         model.addAttribute("renamed", renamed)
         val counts = hearts.forDesigns(designs)
         model.addAttribute("cards", designs.map { it.toCard(it.toRow(silhouettes, activity, hearts = counts[it.core.slug.value]), photos, silhouettes) })
-        model.addAttribute("asked", slugs.orEmpty().isNotEmpty())
+        model.addAttribute("asked", slugs.orEmpty().isNotEmpty() || account != null)
+        model.addAttribute("account", account != null)
         model.addAttribute("head", Head(
             title = "My favorites",
             description = "The keyboards you have hearted.",

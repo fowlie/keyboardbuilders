@@ -240,6 +240,9 @@
     `async` so it never blocks render. The index is 85% inline SVG and the parse cost is
     the page's real expense (ux.md); this must not add to it.
 --%>
+<%-- Every heart button on the page, cards and byline alike (2026-11-27). The login tells it
+     whether the list is this browser's or the account's. --%>
+<script src="${site.heartsScript}" defer data-login="${me}"></script>
 @if(site.hasAnalytics)
     <script data-goatcounter="${site.analyticsOrigin}/count"
             async src="${site.analyticsScript}"></script>

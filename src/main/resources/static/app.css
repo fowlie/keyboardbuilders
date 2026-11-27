@@ -399,11 +399,12 @@ ul.results li {
     grid-template-columns: repeat(auto-fill, minmax(var(--card-min), 1fr));
     gap: 0.75rem;
 }
-/* Re-measured for the PHOTO card, 2026-09-26, not carried over from the line-drawing
-   card's 147px. The number estimates a grid TRACK -- as tall as its tallest card -- so
-   it is the mean: desktop at 1400px, three across, tracks 322-343px, mean 332. Measured
-   in headless Chromium over all 50 cards of page 1, with content-visibility switched off. */
-.results-col ul.results li { margin-bottom: 0; height: 100%; padding: 0; overflow: hidden; contain-intrinsic-size: auto 332px; }
+/* Re-measured 2026-11-27 for the card with its heart-button row and without the
+   "% complete" line (first measured for the photo card 2026-09-26, 332px). The number
+   estimates a grid TRACK -- as tall as its tallest card -- so it is the mean: desktop at
+   1400px, three across, tracks 329-350px, mean 339. Measured in headless Chromium over
+   all 50 cards of page 1, with content-visibility switched off. */
+.results-col ul.results li { margin-bottom: 0; height: 100%; padding: 0; overflow: hidden; contain-intrinsic-size: auto 339px; }
 .results-col .result-card { height: 100%; }
 
 /* ---------------------------------------------------------------------------
@@ -537,10 +538,37 @@ a.card { display: flex; flex-direction: column; align-items: stretch; gap: 0; pa
     font-variant-numeric: tabular-nums;
 }
 
-/* Hearts (2026-10-01): inside the stars' own chip, top-right, "★ 2.1k · ♥ 3" -- one
-   place for how much a design is liked. The owner moved it there from a second chip in
-   the top-left corner. The heart takes the accent; zero shows too. */
-.card-hearts { color: var(--accent); }
+/* THE CARD'S HEART BUTTON (owner, 2026-11-27), bottom right. It replaced the "♥ 3" in
+   the stars chip, which didn't look clickable, so this one looks like a key: an edge, a
+   raised shadow, a press. It sits beside the card's link in `.card-wrap` (card.kte), so
+   the card text keeps a row free at the bottom for it. The strip card moves on hover and
+   press; the button goes with it. */
+.card-wrap { position: relative; height: 100%; }
+.card-wrap .card-text { padding-bottom: 2.9rem; }
+.heart.card-heart {
+    position: absolute;
+    right: 0.9rem;
+    bottom: 0.85rem;
+    z-index: 1;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.2rem 0.65rem;
+    border: 1px solid var(--edge);
+    border-radius: 999px;
+    background: var(--card);
+    box-shadow: 0 2px 0 var(--edge);
+    font-size: 0.85rem;
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+    color: var(--fg);
+}
+.card-heart .heart-icon { color: var(--accent); font-size: 1rem; line-height: 1; }
+.heart.card-heart:not(:disabled):hover { border-color: var(--accent); }
+.heart.card-heart:not(:disabled):active { transform: translateY(2px); box-shadow: 0 0 0 var(--edge); }
+.heart.card-heart[aria-pressed="true"] { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 12%, var(--card)); }
+.card-wrap:has(> .strip-card:hover) > .card-heart { transform: translateY(2px); }
+.card-wrap:has(> .strip-card:active) > .card-heart { transform: translateY(5px); }
 .stars.hearts { color: var(--accent); }
 
 .card-text { display: flex; flex-direction: column; gap: 0.15rem; padding: 0.75rem 0.9rem 0.85rem; }
@@ -756,8 +784,8 @@ figure.hero figcaption {
     .thumb { width: auto; }
 
     /* The card is this shape at every width already, so only the height differs.
-       Photo card at 390px, one column: 342-364px, mean 342 (2026-09-26). */
-    .results-col ul.results li { contain-intrinsic-size: auto 342px; }
+       Card at 390px, one column: 349-371px, mean 350 (2026-11-27). */
+    .results-col ul.results li { contain-intrinsic-size: auto 350px; }
 }
 
 /* ux.md §2.7's paging links. Plain anchors, because they are the no-JS path and

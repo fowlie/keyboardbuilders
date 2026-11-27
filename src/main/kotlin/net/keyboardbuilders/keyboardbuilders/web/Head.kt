@@ -129,7 +129,12 @@ class SiteUrl(
      * for as long as its own heuristic says; the owner's phone kept the pre-hover one
      * (2026-10-02). Hashed once at startup, which is when the file can change.
      */
-    val stylesheet: String = "/app.css?v=" + (javaClass.getResourceAsStream("/static/app.css")
+    val stylesheet: String = hashed("/app.css")
+
+    /** The heart buttons' script (2026-11-27), hashed for the same reason. */
+    val heartsScript: String = hashed("/hearts.js")
+
+    private fun hashed(path: String): String = "$path?v=" + (javaClass.getResourceAsStream("/static$path")
         ?.use { MessageDigest.getInstance("SHA-256").digest(it.readBytes()) }
         ?.joinToString("") { "%02x".format(it) }?.take(10) ?: "0")
 }
