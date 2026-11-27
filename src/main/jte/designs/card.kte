@@ -9,7 +9,8 @@
 <%-- ONE CARD, TWO SURFACES: the home page's daily strip ("strip-card") and the /designs
      grid ("result-card"), which box it differently -- the strip's box is the link, the
      grid's is its li, whose measured size OffscreenRowsTest holds. `full` adds the
-     electronics line and the completeness chip the index has always shown.
+     electronics line. (The "N% complete" chip went 2026-11-27: owner, not useful while
+     browsing; the percentage stays on the design page.)
 
      No photo means the drawing fills the photo's place at the catalogue's own scale, so
      every card has one shape and sizes still compare.
@@ -48,8 +49,6 @@
             <span class="facts">
                 @for(chip in card.row.electronics)<span>${chip}</span>@endfor
             </span>
-            <%-- Backlog #46: ux.md 2.3's meta line, the percentage only. --%>
-            <span class="facts completeness-chip"><span>${card.row.completeness}% complete</span></span>
         @endif
         @if(reason != null)<span class="related-reason">${reason}</span>@endif
     </span>
