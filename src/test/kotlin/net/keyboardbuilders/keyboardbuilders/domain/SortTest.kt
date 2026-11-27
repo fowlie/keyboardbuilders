@@ -8,14 +8,15 @@ import kotlin.test.assertFailsWith
 class SortTest {
 
     @Test
-    fun `absent or blank defaults to stars, the site's long-standing order`() {
-        assertEquals(Sort.Stars, Sort.of(null))
-        assertEquals(Sort.Stars, Sort.of(""))
-        assertEquals(Sort.Stars, Sort.of("   "))
+    fun `absent or blank defaults to hearts, then stars (owner, 2026-11-27)`() {
+        assertEquals(Sort.Hearts, Sort.of(null))
+        assertEquals(Sort.Hearts, Sort.of(""))
+        assertEquals(Sort.Hearts, Sort.of("   "))
     }
 
     @Test
     fun `every value this build documents parses back to itself`() {
+        assertEquals(Sort.Hearts, Sort.of("hearts"))
         assertEquals(Sort.Stars, Sort.of("stars"))
         assertEquals(Sort.Name, Sort.of("name"))
         assertEquals(Sort.Keys, Sort.of("keys"))
@@ -34,7 +35,7 @@ class SortTest {
         val refused = assertFailsWith<UnreadableQuery> { Sort.of("stars2") }
         assertEquals(
             "`sort=stars2` is not a value this build reads; sort is one of " +
-                "stars, name, keys, updated, complete",
+                "hearts, stars, name, keys, updated, complete",
             refused.message,
         )
     }

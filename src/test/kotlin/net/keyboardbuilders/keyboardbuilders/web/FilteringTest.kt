@@ -450,12 +450,12 @@ class FilteringTest {
 
     /** The default sort is invisible in every way that matters: no ticket regresses. */
     @Test
-    fun `sort=stars is the default and behaves exactly as an absent sort does`() {
+    fun `sort=hearts is the default and behaves exactly as an absent sort does`() {
         assertEquals(
             slugs(page("").contentAsString),
-            slugs(page("?sort=stars").contentAsString),
+            slugs(page("?sort=hearts").contentAsString),
         )
-        val head = page("?sort=stars").contentAsString.substringAfter("<head>").substringBefore("</head>")
+        val head = page("?sort=hearts").contentAsString.substringAfter("<head>").substringBefore("</head>")
         assertTrue("""content="noindex""" !in head, "the default sort was noindexed: $head")
     }
 

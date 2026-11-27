@@ -7,14 +7,18 @@ package net.keyboardbuilders.keyboardbuilders.domain
  * a query parameter no facet owns, and until now nothing else read it either — a 200 that
  * looked like it worked and did not, "tolerated, not honoured" in the ticket's own words.
  *
- * FOUR VALUES, NOT A FREE STRING, for the same reason a facet value is never a bare
- * caller string reaching SQL: `stars`, `name`, `keys` and `updated` are also the only
+ * A FIXED SET, NOT A FREE STRING, for the same reason a facet value is never a bare
+ * caller string reaching SQL: these are also the only
  * columns `DesignQueries` knows how to order by, so this allowlist and that ORDER BY
  * fragment cannot drift into two different vocabularies for the same parameter.
  */
 enum class Sort(val param: String) {
-    /** The site's long-standing default. Every URL that never mentioned `sort` keeps
-     *  meaning exactly what it meant before this type existed. */
+    /** THE DEFAULT SINCE 2026-11-27 (owner): our own hearts first, GitHub stars to break
+     *  ties, so pressing a heart visibly moves a design up and is worth doing. Hearts only
+     *  go up when a person presses one -- no Unknown upstream feeds them. */
+    Hearts("hearts"),
+
+    /** The default until 2026-11-27, and still what `?sort=stars` asks for: stars alone. */
     Stars("stars"),
 
     /** The only way to find something alphabetically without the search box. */
@@ -34,7 +38,7 @@ enum class Sort(val param: String) {
     Complete("complete");
 
     companion object {
-        val DEFAULT = Stars
+        val DEFAULT = Hearts
 
         /**
          * `sort` read the way every other query parameter is — REFUSED, not silently

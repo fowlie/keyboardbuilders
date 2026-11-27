@@ -177,7 +177,7 @@ class DesignQueries(private val db: JdbcClient) {
     private fun ranked(ids: Set<Long>, sort: Sort = Sort.DEFAULT): List<String> {
         if (ids.isEmpty()) return emptyList()
         val holes = ids.joinToString(",") { "?" }
-        return db.sql("SELECT slug FROM design_search WHERE design_id IN ($holes) ${sort.orderBy()}")
+        return db.sql("SELECT design_search.slug FROM $RANKED WHERE design_id IN ($holes) ${sort.orderBy()}")
             .params(ids.toList()).query(String::class.java).list().filterNotNull()
     }
 
@@ -191,7 +191,7 @@ class DesignQueries(private val db: JdbcClient) {
      * It was invented once, as `catalog.all()`, and the answer was alphabetical.
      */
     fun allRanked(sort: Sort = Sort.DEFAULT): List<String> =
-        db.sql("SELECT slug FROM design_search ${sort.orderBy()}").query(String::class.java)
+        db.sql("SELECT design_search.slug FROM $RANKED ${sort.orderBy()}").query(String::class.java)
             .list().filterNotNull()
 
     /**
@@ -227,7 +227,12 @@ class DesignQueries(private val db: JdbcClient) {
          * check is what stops a fifth [Sort] value from reaching SQL with no clause of
          * its own, at compile time rather than as a runtime `NullPointerException`.
          */
+        /** The heart totals beside each design, for [Sort.Hearts]. A LEFT JOIN on slug:
+         *  `heart` never references `design` (V6), and an unhearted design has no row. */
+        const val RANKED = "design_search LEFT JOIN heart ON heart.slug = design_search.slug"
+
         private fun Sort.orderBy(): String = "ORDER BY archived ASC, " + when (this) {
+            Sort.Hearts -> "COALESCE(heart.count, 0) DESC, stars DESC, last_commit DESC, name ASC"
             Sort.Stars -> "stars DESC, last_commit DESC, name ASC"
             Sort.Name -> "name ASC"
             Sort.Keys -> "keys ASC, name ASC"

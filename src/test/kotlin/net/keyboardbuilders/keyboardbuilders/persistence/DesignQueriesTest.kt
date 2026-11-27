@@ -129,6 +129,47 @@ class DesignQueriesTest {
         assertEquals("choc-archived", hits.last(), "archived must sort last despite 9,000 stars")
     }
 
+    // -- hearts first, then stars (owner, 2026-11-27) -----------------------------------
+
+    private fun heart(slug: String, count: Int) =
+        db.sql("INSERT INTO heart (slug, count) VALUES (?, ?)").params(slug, count).update()
+
+    /** A heart outranks any number of stars: the order is there to make hearts matter. */
+    @Test
+    fun `the default order puts the most hearted first, whatever their stars`() {
+        heart("quiet-two", 2)
+        heart("mx-one", 1)
+
+        assertEquals(
+            listOf("quiet-two", "mx-one", "choc-one", "choc-two", "quiet-one", "choc-archived"),
+            queries.allRanked(),
+        )
+    }
+
+    /** Equal hearts -- zero, mostly, for now -- fall back to stars, the old default. */
+    @Test
+    fun `designs with equal hearts are ordered by stars`() {
+        heart("quiet-one", 3)
+        heart("choc-two", 3)
+
+        assertEquals(listOf("choc-two", "quiet-one", "choc-one", "mx-one"), queries.allRanked().take(4))
+    }
+
+    /** Still archived last: a hearted stale repo does not jump the live ones. */
+    @Test
+    fun `an archived design sinks below the live ones however hearted`() {
+        heart("choc-archived", 50)
+        assertEquals("choc-archived", queries.allRanked().last())
+    }
+
+    /** `sort=stars` still means stars alone. */
+    @Test
+    fun `sorting by stars ignores hearts`() {
+        heart("quiet-two", 5)
+        assertEquals(listOf("choc-one", "choc-two", "mx-one", "quiet-one", "quiet-two", "choc-archived"),
+            queries.allRanked(Sort.Stars))
+    }
+
     @Test
     fun `no query selects nothing in particular, which is not the same as selecting none`() {
         assertEquals(null, queries.slugsMatching(Facets.none))
