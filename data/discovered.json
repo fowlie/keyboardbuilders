@@ -741,6 +741,19 @@
    "switches": 17,
    "firmware": []
   },
+  "VivekSharma0502/peach83": {
+   "description": "Peach83: an 83-key wired hotswap mechanical keyboard. KiCad PCB, RP2040-Zero, QMK firmware, plate and full build docs.",
+   "stars": 0,
+   "licence": null,
+   "created": "2026-11-27",
+   "pcb": [
+    "kicad/keyboard83.kicad_pcb"
+   ],
+   "switches": 87,
+   "firmware": [
+    "qmk"
+   ]
+  },
   "WGRL/split-keyboard": {
    "description": "Split keyboard with ble and usb. Custom pcb based on nrf52840 mcu module with specific firmware written in  C (Zephyr)",
    "stars": 0,
@@ -1735,7 +1748,7 @@
    "created": "2026-11-10T08:58:16Z"
   },
   "147qaz258-ead/AURA-X5": {
-   "pushed": "2026-11-24T16:50:27Z",
+   "pushed": "2026-11-27T13:46:29Z",
    "created": "2026-11-24T07:37:50Z"
   },
   "19medved91-web/Dark-Project-KD87A-NumPad": {
@@ -1787,7 +1800,7 @@
    "created": "2026-11-06T13:40:40Z"
   },
   "68mschmitt/cleavboard": {
-   "pushed": "2026-11-23T17:16:14Z",
+   "pushed": "2026-11-28T02:17:13Z",
    "created": "2026-11-09T01:22:04Z"
   },
   "9-bai/dsh-external-toolbox": {
@@ -1870,6 +1883,10 @@
    "pushed": "2026-11-24T19:19:50Z",
    "created": "2026-11-23T20:39:21Z"
   },
+  "Aider-AI/close-enough": {
+   "pushed": "2026-11-27T21:11:22Z",
+   "created": "2026-11-27T20:51:20Z"
+  },
   "AkiraMisawa/keyballer": {
    "pushed": "2026-11-23T01:59:23Z",
    "created": "2026-11-21T21:00:38Z"
@@ -1887,7 +1904,7 @@
    "created": "2026-11-15T17:38:19Z"
   },
   "Alex-2-Graf/ZX-Spectrum-Keyboard-Led": {
-   "pushed": "2026-11-26T22:07:50Z",
+   "pushed": "2026-11-27T21:58:51Z",
    "created": "2026-11-26T18:31:14Z"
   },
   "Alex-Zor/PentaDiv3Plus": {
@@ -1923,11 +1940,11 @@
    "created": "2026-11-15T22:58:46Z"
   },
   "Aneesh495/etch": {
-   "pushed": "2026-11-09T15:35:29Z",
+   "pushed": "2026-11-27T16:48:34Z",
    "created": "2026-11-09T14:48:25Z"
   },
   "AngheloBR/nodirt-tui": {
-   "pushed": "2026-11-25T19:30:39Z",
+   "pushed": "2026-11-27T03:03:30Z",
    "created": "2026-11-24T21:57:40Z"
   },
   "Anisur0012/micropad": {
@@ -2007,7 +2024,7 @@
    "created": "2026-11-06T06:58:34Z"
   },
   "Atik203/okkhor": {
-   "pushed": "2026-11-26T18:50:29Z",
+   "pushed": "2026-11-27T11:12:29Z",
    "created": "2026-11-22T21:04:04Z"
   },
   "Aturm4/keylab": {
@@ -2058,10 +2075,6 @@
    "pushed": "2026-11-19T20:09:34Z",
    "created": "2026-11-15T14:15:11Z"
   },
-  "BenLewies/Accent": {
-   "pushed": "2026-11-25T02:42:34Z",
-   "created": "2026-10-28T08:20:58Z"
-  },
   "Bettencourtzw/ghub-linuxported": {
    "pushed": "2026-11-06T18:23:26Z",
    "created": "2026-11-05T20:34:24Z"
@@ -2111,11 +2124,11 @@
    "created": "2026-11-06T02:07:49Z"
   },
   "BrunoGG69/macropad": {
-   "pushed": "2026-11-01T17:17:21Z",
+   "pushed": "2026-11-27T17:23:06Z",
    "created": "2026-11-01T10:58:09Z"
   },
   "C0depAnic/Feima": {
-   "pushed": "2026-11-26T21:47:40Z",
+   "pushed": "2026-11-27T17:02:55Z",
    "created": "2026-11-26T21:23:24Z"
   },
   "CC066610/socd": {
@@ -2125,6 +2138,10 @@
   "CHStudios-X/pivot": {
    "pushed": "2026-11-07T13:34:14Z",
    "created": "2026-10-31T06:34:03Z"
+  },
+  "CLOUDWERX-DEV/Ghosthand": {
+   "pushed": "2026-11-27T22:12:01Z",
+   "created": "2026-11-27T03:26:41Z"
   },
   "CTO-DRS/neokey-public": {
    "pushed": "2026-11-25T00:33:18Z",
@@ -2143,11 +2160,11 @@
    "created": "2026-11-05T03:44:28Z"
   },
   "Cbeniaris/MagSplit": {
-   "pushed": "2026-11-26T04:49:01Z",
+   "pushed": "2026-11-27T20:49:10Z",
    "created": "2026-11-21T04:40:34Z"
   },
   "ChanhoZ/numpad-fix": {
-   "pushed": "2026-11-26T19:31:54Z",
+   "pushed": "2026-11-27T18:11:28Z",
    "created": "2026-11-26T18:55:03Z"
   },
   "Chen99999999/NaiwaType": {
@@ -2182,10 +2199,6 @@
    "pushed": "2026-11-26T19:37:05Z",
    "created": "2026-11-26T19:12:58Z"
   },
-  "Cisplat1n/trident_split": {
-   "pushed": "2026-10-31T00:03:46Z",
-   "created": "2026-10-28T20:56:49Z"
-  },
   "ClementV74/capglow": {
    "pushed": "2026-11-13T19:56:19Z",
    "created": "2026-11-13T17:05:34Z"
@@ -2199,7 +2212,7 @@
    "created": "2026-11-14T17:58:14Z"
   },
   "Cmoen11/kns": {
-   "pushed": "2026-11-26T20:51:48Z",
+   "pushed": "2026-11-27T07:08:48Z",
    "created": "2026-11-23T18:13:11Z"
   },
   "CodeGator/Dunbrec": {
@@ -2247,11 +2260,11 @@
    "created": "2026-11-20T09:34:55Z"
   },
   "ConsciousNode/Triton": {
-   "pushed": "2026-11-25T07:17:31Z",
+   "pushed": "2026-11-27T13:30:48Z",
    "created": "2026-11-11T09:11:36Z"
   },
   "ConsciousNode/Triton-card-computer": {
-   "pushed": "2026-11-25T05:25:27Z",
+   "pushed": "2026-11-27T06:37:57Z",
    "created": "2026-11-20T09:37:20Z"
   },
   "Controller-Companion/Controller-Companion": {
@@ -2291,7 +2304,7 @@
    "created": "2026-11-05T23:31:58Z"
   },
   "Crossprobe-AI/crossprobe-core": {
-   "pushed": "2026-11-25T10:18:19Z",
+   "pushed": "2026-11-27T06:56:05Z",
    "created": "2026-11-16T18:13:09Z"
   },
   "Cryptoblade9623/Gamepad": {
@@ -2323,7 +2336,7 @@
    "created": "2026-11-18T19:25:16Z"
   },
   "DAmesberger/sparksmith": {
-   "pushed": "2026-11-26T13:43:46Z",
+   "pushed": "2026-11-27T07:00:15Z",
    "created": "2026-11-09T06:04:53Z"
   },
   "DIY23/macropad-manager": {
@@ -2402,10 +2415,6 @@
    "pushed": "2026-11-23T07:16:57Z",
    "created": "2026-11-23T07:08:33Z"
   },
-  "Diddlik/hallforge": {
-   "pushed": "2026-11-12T16:58:16Z",
-   "created": "2026-10-28T12:38:40Z"
-  },
   "DidoucheinSTI2D/R75-Customiser": {
    "pushed": "2026-11-08T22:24:36Z",
    "created": "2026-11-08T15:15:28Z"
@@ -2421,6 +2430,10 @@
   "DiogoSantoss/bcorne_layout": {
    "pushed": "2026-11-24T11:08:15Z",
    "created": "2026-11-10T16:09:16Z"
+  },
+  "DippyCoder/open-kb-layout": {
+   "pushed": "2026-11-23T00:24:17Z",
+   "created": "2026-11-22T23:06:03Z"
   },
   "DmytroNevl/MacroPad": {
    "pushed": "2026-11-26T19:56:25Z",
@@ -2466,6 +2479,10 @@
    "pushed": "2026-11-07T20:31:21Z",
    "created": "2026-11-01T17:05:09Z"
   },
+  "Ed13S/WireFrame": {
+   "pushed": "2026-11-28T00:03:54Z",
+   "created": "2026-11-22T22:33:43Z"
+  },
   "Elaad-Adar/shift-happens": {
    "pushed": "2026-11-20T13:11:20Z",
    "created": "2026-11-14T17:39:04Z"
@@ -2507,7 +2524,7 @@
    "created": "2026-11-05T15:13:26Z"
   },
   "EngineersNeedArt/ADAM77": {
-   "pushed": "2026-11-27T02:47:36Z",
+   "pushed": "2026-11-28T02:05:17Z",
    "created": "2026-11-24T15:00:41Z"
   },
   "EshamAaqib/Halcyon": {
@@ -2603,12 +2620,16 @@
    "created": "2026-10-31T16:35:12Z"
   },
   "Gabritech14/cyd-deck": {
-   "pushed": "2026-11-24T22:06:19Z",
+   "pushed": "2026-11-27T15:27:04Z",
    "created": "2026-11-21T21:28:22Z"
   },
   "Gaerisson/redblade-aurora-openrgb": {
    "pushed": "2026-11-14T18:04:51Z",
    "created": "2026-11-03T23:25:16Z"
+  },
+  "Gamer201317/split-keyboard": {
+   "pushed": "2026-11-27T16:48:14Z",
+   "created": "2026-11-27T16:39:06Z"
   },
   "Gaparamet/universal-control-helper": {
    "pushed": "2026-11-11T16:22:53Z",
@@ -2703,7 +2724,7 @@
    "created": "2026-11-16T03:38:05Z"
   },
   "HansJ69/DE2-DSKY": {
-   "pushed": "2026-11-26T17:49:03Z",
+   "pushed": "2026-11-27T18:04:33Z",
    "created": "2026-11-11T15:06:27Z"
   },
   "Hardsummer/Corne-Num-SF-01": {
@@ -2746,13 +2767,13 @@
    "pushed": "2026-11-08T12:38:38Z",
    "created": "2026-10-30T09:21:14Z"
   },
+  "HiaPaes/BitHero": {
+   "pushed": "2026-11-28T02:41:26Z",
+   "created": "2026-11-27T22:37:11Z"
+  },
   "HiramBenroth/PerplexForge": {
    "pushed": "2026-11-24T10:05:43Z",
    "created": "2026-11-22T07:47:30Z"
-  },
-  "HiroKws/PechiPechiEnter": {
-   "pushed": "2026-11-05T00:38:50Z",
-   "created": "2026-10-28T03:17:27Z"
   },
   "Hitorirt/klyro": {
    "pushed": "2026-11-26T13:07:03Z",
@@ -2822,10 +2843,6 @@
    "pushed": "2026-10-29T21:40:25Z",
    "created": "2026-10-29T08:30:33Z"
   },
-  "JH-2108/KEEBS-Keyboard": {
-   "pushed": "2026-11-08T14:10:09Z",
-   "created": "2026-10-28T15:54:57Z"
-  },
   "JKD-0/Keyboard-Input-Simulation": {
    "pushed": "2026-11-11T10:55:04Z",
    "created": "2026-11-04T10:09:28Z"
@@ -2851,7 +2868,7 @@
    "created": "2026-11-12T09:37:46Z"
   },
   "JanLunge/jmk": {
-   "pushed": "2026-11-27T02:48:24Z",
+   "pushed": "2026-11-28T02:52:08Z",
    "created": "2026-11-15T03:03:26Z"
   },
   "JasonYANG170/AJAZZ-AK650-QMK": {
@@ -2866,10 +2883,6 @@
    "pushed": "2026-11-19T18:29:47Z",
    "created": "2026-11-17T20:07:38Z"
   },
-  "Javamomma/awesome-meta-ray-ban-display-apps": {
-   "pushed": "2026-11-10T04:10:51Z",
-   "created": "2026-10-28T17:10:27Z"
-  },
   "Jaxsilure/-zmk-config-macropad": {
    "pushed": "2026-11-26T10:16:48Z",
    "created": "2026-11-26T10:16:01Z"
@@ -2879,7 +2892,7 @@
    "created": "2026-11-11T11:20:16Z"
   },
   "Jessebnda/WRO_FE_2026_FoxRobotics": {
-   "pushed": "2026-11-26T23:32:51Z",
+   "pushed": "2026-11-27T22:08:28Z",
    "created": "2026-11-22T08:24:57Z"
   },
   "JiaRanmeme/Hack-macropad": {
@@ -2898,13 +2911,13 @@
    "pushed": "2026-11-01T07:31:24Z",
    "created": "2026-10-29T18:39:29Z"
   },
+  "Joko-26/dance-pad": {
+   "pushed": "2026-11-27T20:35:46Z",
+   "created": "2026-11-06T20:05:14Z"
+  },
   "JonahLee1999/TypeCount": {
    "pushed": "2026-11-13T09:37:48Z",
    "created": "2026-11-13T06:25:26Z"
-  },
-  "JoniBach/rulecad-archive": {
-   "pushed": "2026-11-23T06:43:46Z",
-   "created": "2026-10-28T13:42:16Z"
   },
   "JoseJimenez-M/tronsmart-elite-linux-rgb": {
    "pushed": "2026-10-29T19:16:35Z",
@@ -2931,7 +2944,7 @@
    "created": "2026-11-15T04:01:09Z"
   },
   "Jvcon/trime-theme-editor": {
-   "pushed": "2026-11-26T11:03:28Z",
+   "pushed": "2026-11-27T05:46:26Z",
    "created": "2026-11-25T13:13:37Z"
   },
   "KC1VCN/waveform-generator": {
@@ -2994,10 +3007,6 @@
    "pushed": "2026-11-26T16:31:35Z",
    "created": "2026-11-10T17:40:00Z"
   },
-  "Kyan-vd-anker/SAGE": {
-   "pushed": "2026-11-19T13:25:06Z",
-   "created": "2026-10-28T14:26:26Z"
-  },
   "Kymopsis/radar-auto-lock": {
    "pushed": "2026-11-12T09:21:48Z",
    "created": "2026-10-31T13:44:10Z"
@@ -3011,7 +3020,7 @@
    "created": "2026-11-22T17:37:22Z"
   },
   "LargeAkon/WirelessBattery": {
-   "pushed": "2026-11-26T01:52:40Z",
+   "pushed": "2026-11-27T09:05:28Z",
    "created": "2026-11-23T06:05:20Z"
   },
   "Lawsinex/aula-s98-pro-companion-macos": {
@@ -3023,7 +3032,7 @@
    "created": "2026-11-25T15:42:42Z"
   },
   "LeanBitLab/LeanType-Language-Packs": {
-   "pushed": "2026-11-26T16:34:45Z",
+   "pushed": "2026-11-27T17:55:40Z",
    "created": "2026-11-22T12:36:50Z"
   },
   "LeanBitLab/leantype-whisper-models": {
@@ -3039,12 +3048,8 @@
    "created": "2026-10-30T21:04:08Z"
   },
   "Leonixttv/keymap-studio": {
-   "pushed": "2026-11-26T22:01:40Z",
+   "pushed": "2026-11-27T16:26:53Z",
    "created": "2026-11-25T22:08:11Z"
-  },
-  "Libin-Labs/react-split-pane": {
-   "pushed": "2026-10-28T13:43:04Z",
-   "created": "2026-10-28T13:42:39Z"
   },
   "Lihaila/keyghost": {
    "pushed": "2026-11-24T16:37:45Z",
@@ -3078,10 +3083,6 @@
    "pushed": "2026-11-13T12:21:06Z",
    "created": "2026-11-13T12:18:14Z"
   },
-  "LuciusChen/keydock": {
-   "pushed": "2026-11-05T04:10:14Z",
-   "created": "2026-10-28T02:43:00Z"
-  },
   "Luis0Antonio/FindR": {
    "pushed": "2026-11-07T04:28:46Z",
    "created": "2026-11-02T05:40:22Z"
@@ -3111,7 +3112,7 @@
    "created": "2026-11-01T00:23:30Z"
   },
   "MaitrePoulier/ESP32-BLE-bridge-for-Fenix-and-IC4": {
-   "pushed": "2026-11-23T17:26:05Z",
+   "pushed": "2026-11-27T15:54:33Z",
    "created": "2026-11-20T15:41:43Z"
   },
   "Maka8295/Badge2026": {
@@ -3119,7 +3120,7 @@
    "created": "2026-11-21T15:44:12Z"
   },
   "Maka8295/lazydragon64": {
-   "pushed": "2026-11-26T06:22:31Z",
+   "pushed": "2026-11-27T17:53:57Z",
    "created": "2026-11-07T07:31:16Z"
   },
   "Malorn44/steam-frame-polykey": {
@@ -3137,10 +3138,6 @@
   "Mammux/tdv2200kbd": {
    "pushed": "2026-11-25T15:23:05Z",
    "created": "2026-11-03T19:25:47Z"
-  },
-  "Mamorup/apple-iigs-ui12-ui14-rp2350": {
-   "pushed": "2026-10-28T15:51:34Z",
-   "created": "2026-10-28T15:45:00Z"
   },
   "ManofKimchi08/keyreflex-studio": {
    "pushed": "2026-11-21T14:28:00Z",
@@ -3202,10 +3199,6 @@
    "pushed": "2026-11-25T01:03:50Z",
    "created": "2026-10-31T18:10:48Z"
   },
-  "MehmetEmreee/memrazer-cynosa": {
-   "pushed": "2026-10-28T23:09:09Z",
-   "created": "2026-10-28T22:46:55Z"
-  },
   "MeiRR17/typing-he": {
    "pushed": "2026-11-23T09:56:23Z",
    "created": "2026-11-12T13:39:23Z"
@@ -3231,11 +3224,11 @@
    "created": "2026-11-13T15:52:55Z"
   },
   "Mikachu2333/winsize_plus": {
-   "pushed": "2026-11-26T14:55:27Z",
+   "pushed": "2026-11-27T07:59:27Z",
    "created": "2026-11-19T03:26:53Z"
   },
   "MikeHildner/SynthMageCape": {
-   "pushed": "2026-11-25T22:08:17Z",
+   "pushed": "2026-11-27T13:52:12Z",
    "created": "2026-11-21T16:52:49Z"
   },
   "MinThantZinTun21/Akkhara": {
@@ -3271,7 +3264,7 @@
    "created": "2026-11-07T14:10:57Z"
   },
   "MoustacheBob/Hackpad": {
-   "pushed": "2026-11-26T22:27:06Z",
+   "pushed": "2026-11-27T23:44:22Z",
    "created": "2026-11-22T21:15:01Z"
   },
   "Moxter-FC/teclado-rgb-usb-hid": {
@@ -3367,7 +3360,7 @@
    "created": "2026-11-18T02:26:55Z"
   },
   "Ninnix/lokey": {
-   "pushed": "2026-11-26T23:00:02Z",
+   "pushed": "2026-11-27T17:46:31Z",
    "created": "2026-11-06T12:05:37Z"
   },
   "Nithin1777/aula-f75-linux-control": {
@@ -3410,6 +3403,10 @@
    "pushed": "2026-11-10T15:53:37Z",
    "created": "2026-11-10T15:53:35Z"
   },
+  "Ownistic/nuphy-updater": {
+   "pushed": "2026-11-27T22:01:32Z",
+   "created": "2026-11-27T22:01:26Z"
+  },
   "OyatsuSuki/crush80-studio": {
    "pushed": "2026-11-25T01:12:02Z",
    "created": "2026-11-20T11:44:04Z"
@@ -3423,7 +3420,7 @@
    "created": "2026-11-05T05:03:33Z"
   },
   "PainfulDiodes/Bean65": {
-   "pushed": "2026-11-25T10:28:52Z",
+   "pushed": "2026-11-27T12:57:33Z",
    "created": "2026-11-21T17:14:56Z"
   },
   "Panaix/PurrLock": {
@@ -3454,6 +3451,10 @@
    "pushed": "2026-11-14T21:53:45Z",
    "created": "2026-11-14T21:53:43Z"
   },
+  "PonlawatP/CapsLangSwitch": {
+   "pushed": "2026-11-27T16:58:46Z",
+   "created": "2026-11-27T16:58:26Z"
+  },
   "Pr0curo/Mondi": {
    "pushed": "2026-11-15T14:14:28Z",
    "created": "2026-11-14T19:52:56Z"
@@ -3467,7 +3468,7 @@
    "created": "2026-11-03T21:48:43Z"
   },
   "PrinceAlii/keyboard-rgb": {
-   "pushed": "2026-11-20T10:55:17Z",
+   "pushed": "2026-11-27T10:55:14Z",
    "created": "2026-11-13T06:55:08Z"
   },
   "Prinn-Liam/MessageMotion": {
@@ -3530,6 +3531,10 @@
    "pushed": "2026-11-11T00:21:44Z",
    "created": "2026-11-08T01:57:04Z"
   },
+  "RaffaeleBiondi/Coppernicus": {
+   "pushed": "2026-11-27T16:00:21Z",
+   "created": "2026-11-24T17:10:29Z"
+  },
   "Rak-Pozareny/PocketZen": {
    "pushed": "2026-11-26T20:50:51Z",
    "created": "2026-11-24T19:25:29Z"
@@ -3562,10 +3567,6 @@
    "pushed": "2026-11-21T18:51:30Z",
    "created": "2026-11-21T18:19:06Z"
   },
-  "RealKHFan/tasto": {
-   "pushed": "2026-11-19T16:57:20Z",
-   "created": "2026-10-28T23:49:22Z"
-  },
   "RehberSingh/OpenMacropad": {
    "pushed": "2026-11-03T22:19:51Z",
    "created": "2026-11-03T21:47:08Z"
@@ -3595,7 +3596,7 @@
    "created": "2026-10-30T20:56:53Z"
   },
   "Retr0Plus95/Maker-Forge-Bench": {
-   "pushed": "2026-11-25T20:04:29Z",
+   "pushed": "2026-11-28T00:58:51Z",
    "created": "2026-11-12T13:02:14Z"
   },
   "RetroSanity/Resident-Access-HD": {
@@ -3630,10 +3631,6 @@
    "pushed": "2026-11-05T05:41:11Z",
    "created": "2026-11-02T03:45:29Z"
   },
-  "Roserrosie/f87pro-web-driver": {
-   "pushed": "2026-10-28T11:58:29Z",
-   "created": "2026-10-28T11:58:22Z"
-  },
   "Rossnkama/zmk-config-totem": {
    "pushed": "2026-10-31T15:32:01Z",
    "created": "2026-10-31T15:31:55Z"
@@ -3654,6 +3651,10 @@
    "pushed": "2026-11-10T15:25:24Z",
    "created": "2026-11-09T12:22:56Z"
   },
+  "S007mason/Macropad-Maker": {
+   "pushed": "2026-11-27T21:47:14Z",
+   "created": "2026-11-27T21:46:41Z"
+  },
   "SA-GIMA/work100-mac": {
    "pushed": "2026-11-10T06:53:34Z",
    "created": "2026-11-10T06:47:15Z"
@@ -3671,7 +3672,7 @@
    "created": "2026-11-16T14:20:43Z"
   },
   "Samdasoo1076/dasoo_split": {
-   "pushed": "2026-11-25T06:20:43Z",
+   "pushed": "2026-11-27T05:49:57Z",
    "created": "2026-11-22T22:19:27Z"
   },
   "Samdasoo1076/teaQueen-split_keyboard": {
@@ -3682,9 +3683,9 @@
    "pushed": "2026-11-09T01:39:42Z",
    "created": "2026-11-09T01:37:43Z"
   },
-  "Samuelonly/chatterkill": {
-   "pushed": "2026-11-20T08:37:04Z",
-   "created": "2026-10-28T11:54:32Z"
+  "ScaleDIN/btbridge": {
+   "pushed": "2026-11-28T02:27:25Z",
+   "created": "2026-11-27T16:03:22Z"
   },
   "ScideCodes/ReHUB-for-ATK": {
    "pushed": "2026-11-04T23:12:53Z",
@@ -3705,6 +3706,10 @@
   "Senolalpoglu/islpcb": {
    "pushed": "2026-10-30T23:43:16Z",
    "created": "2026-10-30T23:03:00Z"
+  },
+  "Sensory-Exosuit/kiwi-keys": {
+   "pushed": "2026-11-27T18:43:51Z",
+   "created": "2026-11-24T14:02:13Z"
   },
   "Seo650/FnCaps": {
    "pushed": "2026-11-23T13:50:02Z",
@@ -3766,6 +3771,10 @@
    "pushed": "2026-11-25T18:24:09Z",
    "created": "2026-11-25T12:13:36Z"
   },
+  "Skiidig/KEYFORM": {
+   "pushed": "2026-11-27T18:00:07Z",
+   "created": "2026-11-26T06:36:22Z"
+  },
   "Slighting4275/gungnir-fm": {
    "pushed": "2026-11-21T23:29:33Z",
    "created": "2026-11-21T22:50:25Z"
@@ -3774,17 +3783,17 @@
    "pushed": "2026-11-25T03:08:37Z",
    "created": "2026-10-31T13:13:41Z"
   },
-  "Snieffy/pnglyph": {
-   "pushed": "2026-11-25T10:35:58Z",
-   "created": "2026-10-28T17:19:52Z"
-  },
   "Solarity-AI/claude-enter-newline": {
    "pushed": "2026-11-25T20:13:36Z",
    "created": "2026-11-03T01:57:33Z"
   },
   "Spider19996/VBESTLIFE-Macropad": {
-   "pushed": "2026-11-26T17:58:26Z",
+   "pushed": "2026-11-27T15:35:05Z",
    "created": "2026-11-26T17:58:06Z"
+  },
+  "Squidly1408/AusLan-Hands": {
+   "pushed": "2026-11-27T06:07:02Z",
+   "created": "2026-11-27T06:06:56Z"
   },
   "Sravankumartangudu/peekaboo-keys": {
    "pushed": "2026-10-29T10:14:34Z",
@@ -3805,6 +3814,10 @@
   "StudioNovaWorks/LangSwap": {
    "pushed": "2026-11-21T16:55:15Z",
    "created": "2026-11-21T16:14:44Z"
+  },
+  "Stvn444/keyd-mac-keyboard": {
+   "pushed": "2026-11-27T08:02:52Z",
+   "created": "2026-11-22T19:59:04Z"
   },
   "Sucareto/Hidora": {
    "pushed": "2026-11-01T14:02:13Z",
@@ -3834,6 +3847,10 @@
    "pushed": "2026-10-31T16:34:44Z",
    "created": "2026-10-29T11:20:13Z"
   },
+  "SynthwaveFox/protogen": {
+   "pushed": "2026-11-27T09:22:48Z",
+   "created": "2026-11-27T09:11:05Z"
+  },
   "TaherValiji/macropad": {
    "pushed": "2026-11-06T11:15:16Z",
    "created": "2026-11-06T11:15:10Z"
@@ -3847,7 +3864,7 @@
    "created": "2026-10-30T09:40:22Z"
   },
   "Tekcify/hushboard": {
-   "pushed": "2026-11-26T20:25:01Z",
+   "pushed": "2026-11-28T01:14:03Z",
    "created": "2026-11-12T14:15:23Z"
   },
   "Telooss/NULL-PAD": {
@@ -3870,9 +3887,17 @@
    "pushed": "2026-11-17T04:53:57Z",
    "created": "2026-11-17T04:38:34Z"
   },
+  "The-habib/Typewriter": {
+   "pushed": "2026-11-27T23:12:45Z",
+   "created": "2026-11-27T22:16:18Z"
+  },
   "TheDominator54/blackpane-for-reddit": {
    "pushed": "2026-11-24T19:07:50Z",
    "created": "2026-11-21T04:46:04Z"
+  },
+  "TheEPROM9/EuroBEEB-EuroCUBE-65-EPROM-Dumps": {
+   "pushed": "2026-11-27T03:51:03Z",
+   "created": "2026-11-10T18:36:59Z"
   },
   "TheInsidiousMachine/gaze-keyboard": {
    "pushed": "2026-11-25T18:58:08Z",
@@ -3899,7 +3924,7 @@
    "created": "2026-11-16T23:31:56Z"
   },
   "Timception/goblit-no-dongle": {
-   "pushed": "2026-11-26T07:26:24Z",
+   "pushed": "2026-11-27T14:55:40Z",
    "created": "2026-11-21T06:19:23Z"
   },
   "TitanCSA/AutoHotInterceptor": {
@@ -3934,9 +3959,9 @@
    "pushed": "2026-11-22T02:10:43Z",
    "created": "2026-11-22T02:10:12Z"
   },
-  "Toysoft/apple-iigs-ui12-ui14-rp2350": {
-   "pushed": "2026-10-28T17:34:31Z",
-   "created": "2026-10-28T17:32:50Z"
+  "TriptoAfsin/rKey": {
+   "pushed": "2026-11-27T17:42:14Z",
+   "created": "2026-11-27T12:14:08Z"
   },
   "Tu2607/Diodeless-nrf52840-corne-v3": {
    "pushed": "2026-11-17T07:59:04Z",
@@ -3975,7 +4000,7 @@
    "created": "2026-11-07T13:46:48Z"
   },
   "UnimeType/unimetype": {
-   "pushed": "2026-11-22T18:33:15Z",
+   "pushed": "2026-11-27T15:57:38Z",
    "created": "2026-11-15T01:31:55Z"
   },
   "UniquePratham/pratham-keyboard": {
@@ -3991,7 +4016,7 @@
    "created": "2026-11-14T14:23:52Z"
   },
   "VexingVertigo/LeanType-ContextLM": {
-   "pushed": "2026-11-26T06:40:18Z",
+   "pushed": "2026-11-27T06:31:22Z",
    "created": "2026-11-15T23:39:42Z"
   },
   "Vibhors-Tech-Hub/Ki-pad": {
@@ -4010,6 +4035,10 @@
    "pushed": "2026-11-25T15:07:48Z",
    "created": "2026-11-25T14:33:28Z"
   },
+  "VivekSharma0502/peach83": {
+   "pushed": "2026-11-27T21:45:36Z",
+   "created": "2026-11-27T18:39:04Z"
+  },
   "VolanDeVovan/zent75-rs": {
    "pushed": "2026-11-27T00:14:49Z",
    "created": "2026-11-25T18:42:56Z"
@@ -4023,7 +4052,7 @@
    "created": "2026-11-18T19:45:32Z"
   },
   "WardBeckSystems/MODULES.COMMUNICATION.M718-Talkback-Address-Module": {
-   "pushed": "2026-11-27T02:40:32Z",
+   "pushed": "2026-11-28T01:09:20Z",
    "created": "2026-11-25T06:01:00Z"
   },
   "Wellux/awesome-mcp-connectors": {
@@ -4038,10 +4067,6 @@
    "pushed": "2026-11-10T03:15:27Z",
    "created": "2026-11-10T02:57:05Z"
   },
-  "WhatTFF/linux-ajazz-ak820-pro-gtk": {
-   "pushed": "2026-11-02T19:34:10Z",
-   "created": "2026-10-28T15:09:37Z"
-  },
   "WilliamOpenshaw/split-keyboard-duotractyl": {
    "pushed": "2026-11-06T14:27:08Z",
    "created": "2026-11-06T14:00:53Z"
@@ -4049,6 +4074,10 @@
   "Willow056/windows-software-kvm-mouse-keyboard-share": {
    "pushed": "2026-11-26T21:50:35Z",
    "created": "2026-11-26T21:50:06Z"
+  },
+  "WoaDmulL/letme": {
+   "pushed": "2026-11-27T14:05:57Z",
+   "created": "2026-11-26T15:59:10Z"
   },
   "Woofson/macropup": {
    "pushed": "2026-11-20T11:28:00Z",
@@ -4063,7 +4092,7 @@
    "created": "2026-11-05T08:18:48Z"
   },
   "YSER14/SuperFaye-Macro": {
-   "pushed": "2026-11-25T12:27:08Z",
+   "pushed": "2026-11-27T15:16:11Z",
    "created": "2026-11-24T06:34:00Z"
   },
   "Yeamin-Talukder/jolpai-keyboard": {
@@ -4083,7 +4112,7 @@
    "created": "2026-11-11T19:19:31Z"
   },
   "YuanZhe-99/Kotomo": {
-   "pushed": "2026-11-23T17:22:24Z",
+   "pushed": "2026-11-28T01:45:19Z",
    "created": "2026-11-14T16:18:04Z"
   },
   "Yxonyx/ios-keyboard-for-android": {
@@ -4129,10 +4158,6 @@
   "a-user-of-python/KiCad-IOS": {
    "pushed": "2026-11-13T18:22:24Z",
    "created": "2026-11-04T23:53:34Z"
-  },
-  "a-wiseguy/kwikmail": {
-   "pushed": "2026-11-02T22:45:43Z",
-   "created": "2026-10-28T14:37:19Z"
   },
   "aa123480/Pokemon-Tamagotchi-Macropad": {
    "pushed": "2026-11-10T03:36:18Z",
@@ -4194,6 +4219,10 @@
    "pushed": "2026-10-31T22:28:54Z",
    "created": "2026-10-31T22:28:21Z"
   },
+  "adson-souza/MacKeys": {
+   "pushed": "2026-11-27T17:24:36Z",
+   "created": "2026-11-27T02:16:43Z"
+  },
   "afalagangilpatrick-oss/thunderobot-kbd-rgb": {
    "pushed": "2026-11-20T13:47:59Z",
    "created": "2026-11-20T13:47:50Z"
@@ -4215,7 +4244,7 @@
    "created": "2026-11-11T17:25:05Z"
   },
   "ailater/LaterKey": {
-   "pushed": "2026-11-26T06:38:52Z",
+   "pushed": "2026-11-27T03:54:38Z",
    "created": "2026-11-23T08:47:19Z"
   },
   "aipno/mchose-linux": {
@@ -4229,14 +4258,6 @@
   "ajisrawi/subvocal-radar-v2": {
    "pushed": "2026-11-03T08:37:14Z",
    "created": "2026-11-03T08:36:42Z"
-  },
-  "akai-hana/shiro-layout": {
-   "pushed": "2026-11-13T01:08:44Z",
-   "created": "2026-10-28T07:09:41Z"
-  },
-  "akai-hana/shirolyzer": {
-   "pushed": "2026-11-26T18:22:45Z",
-   "created": "2026-10-28T07:09:41Z"
   },
   "akarmanov2022/rmk-battery-center": {
    "pushed": "2026-11-01T09:00:18Z",
@@ -4266,16 +4287,12 @@
    "pushed": "2026-11-25T17:34:33Z",
    "created": "2026-11-11T10:40:17Z"
   },
-  "alexandercantu009-maker/Hackpad": {
-   "pushed": "2026-10-28T01:49:04Z",
-   "created": "2026-10-28T01:49:02Z"
-  },
   "alexandere58/ableton-live-win": {
    "pushed": "2026-11-21T16:08:12Z",
    "created": "2026-11-21T16:02:57Z"
   },
   "alexandrewillame/shark-deck": {
-   "pushed": "2026-11-26T14:54:29Z",
+   "pushed": "2026-11-27T15:44:28Z",
    "created": "2026-11-03T17:05:03Z"
   },
   "alexbortamski-ui/LeanType-Offline-RU": {
@@ -4303,7 +4320,7 @@
    "created": "2026-11-24T12:03:58Z"
   },
   "alinvarat/agent-skills": {
-   "pushed": "2026-11-27T01:09:25Z",
+   "pushed": "2026-11-28T01:11:37Z",
    "created": "2026-11-24T20:46:51Z"
   },
   "aljamesamir4090/DeskMouse-Releases": {
@@ -4371,7 +4388,7 @@
    "created": "2026-11-11T18:09:34Z"
   },
   "andreroshkin/sofle-trainer": {
-   "pushed": "2026-11-26T15:28:14Z",
+   "pushed": "2026-11-27T12:05:43Z",
    "created": "2026-11-22T16:08:51Z"
   },
   "andretmarques/Kinetic": {
@@ -4391,7 +4408,7 @@
    "created": "2026-10-31T22:35:48Z"
   },
   "ankitanandchoudhary2006-eng/HACKPAD": {
-   "pushed": "2026-11-15T20:20:23Z",
+   "pushed": "2026-11-27T11:06:06Z",
    "created": "2026-11-15T19:15:25Z"
   },
   "ankitanandchoudhary2006-eng/Keyboard": {
@@ -4426,10 +4443,6 @@
    "pushed": "2026-11-23T01:09:39Z",
    "created": "2026-11-23T01:09:03Z"
   },
-  "arcadien/spit": {
-   "pushed": "2026-11-07T13:29:40Z",
-   "created": "2026-10-28T09:04:23Z"
-  },
   "arch-revan-dev/KeyCraft": {
    "pushed": "2026-11-26T21:01:30Z",
    "created": "2026-11-25T22:30:17Z"
@@ -4437,10 +4450,6 @@
   "arounamounchili/smartrover": {
    "pushed": "2026-11-20T17:29:37Z",
    "created": "2026-11-20T16:28:35Z"
-  },
-  "arsovskiteodor/mini-pdeck": {
-   "pushed": "2026-11-19T18:41:32Z",
-   "created": "2026-10-28T14:12:33Z"
   },
   "ash-dgx-ai/trackball-cs-2-akdk": {
    "pushed": "2026-11-18T21:00:37Z",
@@ -4522,16 +4531,12 @@
    "pushed": "2026-11-16T18:03:39Z",
    "created": "2026-10-30T15:10:45Z"
   },
-  "badjeff/zmk-input-processor-cirque": {
-   "pushed": "2026-11-05T16:50:05Z",
-   "created": "2026-10-28T11:05:32Z"
-  },
   "balx/keysong": {
    "pushed": "2026-11-26T18:09:55Z",
    "created": "2026-11-26T17:54:31Z"
   },
   "bangbang0103/wireless-battery": {
-   "pushed": "2026-11-26T16:16:11Z",
+   "pushed": "2026-11-27T11:46:10Z",
    "created": "2026-11-21T15:47:53Z"
   },
   "bbadawee/Roadie": {
@@ -4622,10 +4627,6 @@
    "pushed": "2026-11-26T08:04:34Z",
    "created": "2026-11-26T00:50:33Z"
   },
-  "brantshin/dsh-hotkey-enhance": {
-   "pushed": "2026-10-28T09:56:52Z",
-   "created": "2026-10-28T06:44:35Z"
-  },
   "braycarlson/locker": {
    "pushed": "2026-11-15T18:25:36Z",
    "created": "2026-11-15T18:25:27Z"
@@ -4650,6 +4651,10 @@
    "pushed": "2026-11-08T07:03:06Z",
    "created": "2026-11-07T02:12:28Z"
   },
+  "bti0497-gif/key-comunicater": {
+   "pushed": "2026-11-27T23:35:41Z",
+   "created": "2026-11-27T09:15:35Z"
+  },
   "buhuipao/hidpad": {
    "pushed": "2026-11-18T03:32:24Z",
    "created": "2026-11-12T04:17:04Z"
@@ -4663,7 +4668,7 @@
    "created": "2026-11-07T16:12:26Z"
   },
   "burinworks/slashlight": {
-   "pushed": "2026-11-20T11:39:15Z",
+   "pushed": "2026-11-27T03:45:25Z",
    "created": "2026-10-29T17:50:05Z"
   },
   "bwlol457581/dialkey": {
@@ -4763,7 +4768,7 @@
    "created": "2026-11-12T08:16:26Z"
   },
   "charent/WhaleIME": {
-   "pushed": "2026-11-22T03:05:42Z",
+   "pushed": "2026-11-28T02:53:34Z",
    "created": "2026-11-08T09:26:21Z"
   },
   "chasebad8/a_macropad": {
@@ -4779,7 +4784,7 @@
    "created": "2026-11-05T14:11:04Z"
   },
   "chr-schreiber/rTerm2": {
-   "pushed": "2026-11-26T22:05:06Z",
+   "pushed": "2026-11-27T22:25:55Z",
    "created": "2026-11-26T21:08:51Z"
   },
   "christianjeromeilustre/Embedded-Engineering-Roadmap-control": {
@@ -4787,7 +4792,7 @@
    "created": "2026-11-16T11:42:32Z"
   },
   "christophetoularastel-eng/OSM39": {
-   "pushed": "2026-11-26T04:54:32Z",
+   "pushed": "2026-11-27T16:56:24Z",
    "created": "2026-11-01T17:09:01Z"
   },
   "chudoyoodo/ajazz-ak820-max-he": {
@@ -4795,15 +4800,19 @@
    "created": "2026-11-17T08:11:40Z"
   },
   "chuidi-12/1": {
-   "pushed": "2026-11-26T10:23:22Z",
+   "pushed": "2026-11-27T10:28:28Z",
    "created": "2026-11-17T11:49:20Z"
+  },
+  "ciarancoffey/macropad": {
+   "pushed": "2026-11-27T19:29:18Z",
+   "created": "2026-11-27T19:25:58Z"
   },
   "cjber/zerosprey42-binds": {
    "pushed": "2026-11-26T11:46:34Z",
    "created": "2026-11-02T15:56:45Z"
   },
   "claire-yuan-xi/g2pad": {
-   "pushed": "2026-11-27T02:43:10Z",
+   "pushed": "2026-11-27T04:07:28Z",
    "created": "2026-11-23T10:30:19Z"
   },
   "clamclaw/cmdhitotap": {
@@ -4823,7 +4832,7 @@
    "created": "2026-11-03T06:17:22Z"
   },
   "coldsofttech/SaccadeKeyboards": {
-   "pushed": "2026-11-23T07:58:50Z",
+   "pushed": "2026-11-27T12:36:01Z",
    "created": "2026-10-30T21:30:56Z"
   },
   "coqfu/velvet-mech": {
@@ -4845,10 +4854,6 @@
   "crixster/cardputer-macropad": {
    "pushed": "2026-11-10T08:52:45Z",
    "created": "2026-11-06T01:01:36Z"
-  },
-  "cronomantic/ZX-V": {
-   "pushed": "2026-11-26T22:22:57Z",
-   "created": "2026-10-28T14:18:11Z"
   },
   "cross-aint/sk64-configurator": {
    "pushed": "2026-11-04T17:30:34Z",
@@ -4914,6 +4919,10 @@
    "pushed": "2026-11-17T12:26:03Z",
    "created": "2026-11-17T12:24:41Z"
   },
+  "darylcamzworkwithme-cmd/claude-usage-meter": {
+   "pushed": "2026-11-27T17:47:35Z",
+   "created": "2026-11-27T17:12:02Z"
+  },
   "datbluepony/btkbd-macos": {
    "pushed": "2026-11-16T16:23:58Z",
    "created": "2026-11-16T16:23:51Z"
@@ -4923,7 +4932,7 @@
    "created": "2026-11-12T08:26:33Z"
   },
   "daver99999/8BitHWSimulator": {
-   "pushed": "2026-11-26T19:04:56Z",
+   "pushed": "2026-11-27T21:03:10Z",
    "created": "2026-11-15T14:42:38Z"
   },
   "daver99999/PetHWSimulator": {
@@ -4983,7 +4992,7 @@
    "created": "2026-11-01T19:07:48Z"
   },
   "dengxuezhao/TypeFree": {
-   "pushed": "2026-11-26T08:20:32Z",
+   "pushed": "2026-11-27T14:05:26Z",
    "created": "2026-11-05T15:07:00Z"
   },
   "desnibreanna/3D-printing-for-macropad": {
@@ -5014,20 +5023,12 @@
    "pushed": "2026-11-18T16:08:10Z",
    "created": "2026-11-15T11:02:31Z"
   },
-  "dhtoan/Dokey": {
-   "pushed": "2026-11-03T10:23:41Z",
-   "created": "2026-10-28T21:45:21Z"
-  },
-  "dhtoan/Dokey-Android": {
-   "pushed": "2026-11-02T21:44:27Z",
-   "created": "2026-10-28T21:15:38Z"
-  },
   "dicky4x/lingxi-yizhi": {
    "pushed": "2026-11-26T06:11:53Z",
    "created": "2026-11-15T13:54:48Z"
   },
   "didi2sk/RoboOS": {
-   "pushed": "2026-11-26T23:06:26Z",
+   "pushed": "2026-11-27T23:24:30Z",
    "created": "2026-11-16T19:21:25Z"
   },
   "diditek8-byte/Macropad": {
@@ -5094,12 +5095,16 @@
    "pushed": "2026-11-20T03:26:05Z",
    "created": "2026-11-13T18:32:21Z"
   },
+  "dpetzel/pi400-boardview": {
+   "pushed": "2026-11-27T13:29:04Z",
+   "created": "2026-11-27T13:01:25Z"
+  },
   "draarivpatel-ui/padcraft": {
-   "pushed": "2026-11-26T17:16:14Z",
+   "pushed": "2026-11-28T01:34:08Z",
    "created": "2026-11-08T23:26:40Z"
   },
   "draarivpatel-ui/tinypulse-412": {
-   "pushed": "2026-11-26T17:23:04Z",
+   "pushed": "2026-11-28T01:49:05Z",
    "created": "2026-11-09T02:57:30Z"
   },
   "dracula74644/phonepad": {
@@ -5115,7 +5120,7 @@
    "created": "2026-11-03T04:50:02Z"
   },
   "druby-luke/ak820-dongle-linux-fix": {
-   "pushed": "2026-11-17T11:42:01Z",
+   "pushed": "2026-11-27T15:37:52Z",
    "created": "2026-11-17T11:36:40Z"
   },
   "dsaldamarco/Tapp": {
@@ -5174,12 +5179,16 @@
    "pushed": "2026-11-24T20:22:43Z",
    "created": "2026-11-03T19:42:16Z"
   },
+  "edwin99701/BattDock": {
+   "pushed": "2026-11-27T17:48:44Z",
+   "created": "2026-11-26T03:52:11Z"
+  },
   "edwin99701/wireless-peripheral-battery-monitor": {
    "pushed": "2026-11-26T17:37:43Z",
    "created": "2026-11-26T03:52:11Z"
   },
   "edwindertien/picomusic": {
-   "pushed": "2026-11-14T20:22:33Z",
+   "pushed": "2026-11-27T10:35:32Z",
    "created": "2026-11-14T19:56:56Z"
   },
   "egehankara/keybosu": {
@@ -5197,6 +5206,10 @@
   "eldarc/bosnian-macos-keyboard": {
    "pushed": "2026-11-14T15:52:36Z",
    "created": "2026-11-12T22:09:12Z"
+  },
+  "eliasehmann/afterglow-komplete-kontrol": {
+   "pushed": "2026-11-27T19:04:02Z",
+   "created": "2026-11-27T17:12:05Z"
   },
   "enesreyhan/armeno-turkce-q": {
    "pushed": "2026-11-12T13:45:01Z",
@@ -5226,10 +5239,6 @@
    "pushed": "2026-11-10T22:18:51Z",
    "created": "2026-11-10T15:49:34Z"
   },
-  "eshankiyer/x16-fpga-board": {
-   "pushed": "2026-10-28T21:48:39Z",
-   "created": "2026-10-28T21:47:09Z"
-  },
   "ethanwheatthin/8-key-macropad-pad-studio": {
    "pushed": "2026-11-02T03:44:53Z",
    "created": "2026-10-31T21:25:22Z"
@@ -5243,7 +5252,7 @@
    "created": "2026-11-07T23:48:16Z"
   },
   "ewertonvitor468-bot/materialkeyboard": {
-   "pushed": "2026-11-21T20:18:11Z",
+   "pushed": "2026-11-27T12:21:52Z",
    "created": "2026-11-16T19:34:07Z"
   },
   "ezeren76neptune/razer-orbweaver-qmk": {
@@ -5262,21 +5271,9 @@
    "pushed": "2026-11-26T10:41:22Z",
    "created": "2026-11-10T22:14:54Z"
   },
-  "fablackner/keysatron": {
-   "pushed": "2026-10-28T09:38:54Z",
-   "created": "2026-10-28T09:27:24Z"
-  },
   "fabmax/pcb-designer": {
    "pushed": "2026-11-21T23:56:09Z",
    "created": "2026-11-09T11:48:21Z"
-  },
-  "fabriciopecanha/keyboard-split-manager": {
-   "pushed": "2026-11-01T15:27:42Z",
-   "created": "2026-10-28T14:55:31Z"
-  },
-  "fabriciopecanha/qmk-layer-rgb-underglow": {
-   "pushed": "2026-10-28T14:56:15Z",
-   "created": "2026-10-28T14:55:44Z"
   },
   "fabrilino/nzxt-function2-ansi-signalrgb": {
    "pushed": "2026-11-16T09:33:16Z",
@@ -5346,8 +5343,12 @@
    "pushed": "2026-11-19T22:05:07Z",
    "created": "2026-11-19T11:59:41Z"
   },
+  "fordpepper/slipline": {
+   "pushed": "2026-11-27T09:28:56Z",
+   "created": "2026-11-27T08:54:53Z"
+  },
   "forkacper/battray": {
-   "pushed": "2026-11-24T19:07:02Z",
+   "pushed": "2026-11-27T11:56:12Z",
    "created": "2026-11-23T21:47:54Z"
   },
   "fragiola/splitter": {
@@ -5366,16 +5367,12 @@
    "pushed": "2026-11-05T20:29:03Z",
    "created": "2026-11-04T19:52:58Z"
   },
-  "frty2-ai/keyboard": {
-   "pushed": "2026-10-28T08:40:53Z",
-   "created": "2026-10-28T08:39:44Z"
-  },
   "fsocietyshinjuu/MaKT": {
    "pushed": "2026-11-14T01:17:41Z",
    "created": "2026-11-11T04:37:53Z"
   },
   "fstark/bodgewire": {
-   "pushed": "2026-11-27T00:44:26Z",
+   "pushed": "2026-11-28T00:36:09Z",
    "created": "2026-11-22T09:57:18Z"
   },
   "futao-awa/EWEADN_x87_Agreement": {
@@ -5414,10 +5411,6 @@
    "pushed": "2026-11-01T14:32:36Z",
    "created": "2026-11-01T13:30:15Z"
   },
-  "gagafes/blind-pew": {
-   "pushed": "2026-11-20T06:55:09Z",
-   "created": "2026-10-28T14:35:21Z"
-  },
   "garvita4/split": {
    "pushed": "2026-11-13T18:23:59Z",
    "created": "2026-11-13T09:57:30Z"
@@ -5451,7 +5444,7 @@
    "created": "2026-11-08T19:34:48Z"
   },
   "gelocci/palavras-ptbr": {
-   "pushed": "2026-11-20T14:13:22Z",
+   "pushed": "2026-11-28T02:34:30Z",
    "created": "2026-11-20T14:10:02Z"
   },
   "gemerte/rymicro-studio": {
@@ -5510,10 +5503,6 @@
    "pushed": "2026-11-03T01:18:46Z",
    "created": "2026-11-02T21:01:38Z"
   },
-  "gunner6666/Tape-Board": {
-   "pushed": "2026-11-13T18:28:31Z",
-   "created": "2026-10-28T00:03:34Z"
-  },
   "guoymwork/macos-numpad-numlock-fix": {
    "pushed": "2026-11-14T06:59:24Z",
    "created": "2026-11-02T12:47:27Z"
@@ -5555,7 +5544,7 @@
    "created": "2026-10-30T15:44:50Z"
   },
   "halitsever/keycream": {
-   "pushed": "2026-11-26T14:20:55Z",
+   "pushed": "2026-11-28T01:47:19Z",
    "created": "2026-10-29T01:23:23Z"
   },
   "halleyscomet-99/Voca12PiaN0": {
@@ -5599,7 +5588,7 @@
    "created": "2026-11-01T19:53:29Z"
   },
   "helgurt574-cpu/kurmanci-klavye": {
-   "pushed": "2026-11-26T08:45:01Z",
+   "pushed": "2026-11-27T19:04:53Z",
    "created": "2026-11-26T08:25:58Z"
   },
   "hemanthtechey/knob-brightness": {
@@ -5610,16 +5599,12 @@
    "pushed": "2026-11-15T10:28:58Z",
    "created": "2026-11-11T07:57:26Z"
   },
-  "heyq02/keyboard-source-locker": {
-   "pushed": "2026-11-25T19:55:20Z",
-   "created": "2026-10-28T02:20:00Z"
-  },
   "hgonen/mac-mini-setup": {
    "pushed": "2026-11-18T15:25:27Z",
    "created": "2026-11-18T15:24:58Z"
   },
   "hhoozzii/tab5-split-keyboard": {
-   "pushed": "2026-11-26T22:10:08Z",
+   "pushed": "2026-11-28T01:43:09Z",
    "created": "2026-11-21T04:06:55Z"
   },
   "hidetzu/lapkbd": {
@@ -5639,16 +5624,20 @@
    "created": "2026-11-19T13:03:49Z"
   },
   "hmzakhalid/hop": {
-   "pushed": "2026-11-25T13:02:57Z",
+   "pushed": "2026-11-27T22:49:09Z",
    "created": "2026-11-25T10:51:26Z"
   },
   "hnz1102/GPIB-Server": {
-   "pushed": "2026-11-25T13:08:38Z",
+   "pushed": "2026-11-27T14:22:42Z",
    "created": "2026-11-25T12:57:39Z"
   },
   "hodgekou/keyfari": {
-   "pushed": "2026-11-26T11:48:15Z",
+   "pushed": "2026-11-28T00:57:31Z",
    "created": "2026-11-21T15:18:48Z"
+  },
+  "hollow-445/windows-keyboard-manager": {
+   "pushed": "2026-11-27T15:16:42Z",
+   "created": "2026-11-27T15:16:16Z"
   },
   "hotdog-Studio/Open-Macro-Builder": {
    "pushed": "2026-11-27T02:25:30Z",
@@ -5683,11 +5672,11 @@
    "created": "2026-11-09T19:37:13Z"
   },
   "i-mabu/yorukana-ime": {
-   "pushed": "2026-11-25T22:53:46Z",
+   "pushed": "2026-11-28T02:44:47Z",
    "created": "2026-11-17T10:21:20Z"
   },
   "iasnezhkov/kumi": {
-   "pushed": "2026-11-27T02:24:33Z",
+   "pushed": "2026-11-28T01:23:51Z",
    "created": "2026-11-25T08:00:07Z"
   },
   "icangotoanywhere/ClearRDP": {
@@ -5731,7 +5720,7 @@
    "created": "2026-11-20T12:33:44Z"
   },
   "imanubdesigner/omarchy-ak820-pro-sentinel": {
-   "pushed": "2026-11-11T22:14:06Z",
+   "pushed": "2026-11-27T12:39:03Z",
    "created": "2026-10-31T13:27:50Z"
   },
   "imnotacube/kbl": {
@@ -5763,8 +5752,12 @@
    "created": "2026-11-16T16:53:05Z"
   },
   "iseohyun/virtual-mouse": {
-   "pushed": "2026-11-24T16:04:13Z",
+   "pushed": "2026-11-27T10:37:41Z",
    "created": "2026-11-23T19:48:20Z"
+  },
+  "ishandutta2007/Awesome-Keystroke-Analytics-Keyboard-Firmware": {
+   "pushed": "2026-11-27T14:40:04Z",
+   "created": "2026-11-27T11:14:03Z"
   },
   "itgeeky/macropad-ch57x": {
    "pushed": "2026-11-05T16:40:38Z",
@@ -5811,27 +5804,27 @@
    "created": "2026-11-06T15:26:59Z"
   },
   "j0p3s/AK980-Manager": {
-   "pushed": "2026-11-26T06:48:37Z",
+   "pushed": "2026-11-28T00:32:22Z",
    "created": "2026-11-22T03:07:27Z"
+  },
+  "jaNNberKK/klavye-testi-merkezi": {
+   "pushed": "2026-11-27T08:45:47Z",
+   "created": "2026-11-27T07:01:48Z"
   },
   "jack-kitto/couchpad": {
    "pushed": "2026-11-20T00:55:06Z",
    "created": "2026-11-20T00:54:59Z"
   },
   "jackiewong2020/PawKey": {
-   "pushed": "2026-11-26T00:33:44Z",
+   "pushed": "2026-11-27T04:47:38Z",
    "created": "2026-11-25T15:46:52Z"
   },
   "jaipandya/vimninja-obsidian": {
    "pushed": "2026-11-25T01:26:39Z",
    "created": "2026-11-24T15:53:15Z"
   },
-  "jaklimoff/qmk_userspace": {
-   "pushed": "2026-10-28T21:15:35Z",
-   "created": "2026-10-28T19:44:05Z"
-  },
   "jamesK1000011/AgentLink-FreeCAD": {
-   "pushed": "2026-11-27T02:23:13Z",
+   "pushed": "2026-11-28T00:30:33Z",
    "created": "2026-11-14T13:39:34Z"
   },
   "jaredBevis/digipi64": {
@@ -5841,6 +5834,10 @@
   "jarhsays/hydra65": {
    "pushed": "2026-11-17T02:55:13Z",
    "created": "2026-11-17T02:55:04Z"
+  },
+  "jasonlau971114/JayK-Pro": {
+   "pushed": "2026-11-27T15:34:33Z",
+   "created": "2026-11-27T15:23:31Z"
   },
   "jaysonnt/stem-deck": {
    "pushed": "2026-11-18T20:37:33Z",
@@ -5867,7 +5864,7 @@
    "created": "2026-10-29T21:32:59Z"
   },
   "jdswain/Mini816": {
-   "pushed": "2026-11-23T20:04:43Z",
+   "pushed": "2026-11-27T22:09:49Z",
    "created": "2026-11-23T20:03:48Z"
   },
   "jeffreymurdock/keyboard-ki-configurator": {
@@ -5891,7 +5888,7 @@
    "created": "2026-11-22T08:01:32Z"
   },
   "jiekemt/CapsLockLite": {
-   "pushed": "2026-11-25T12:40:58Z",
+   "pushed": "2026-11-27T07:04:11Z",
    "created": "2026-11-16T13:05:49Z"
   },
   "jimbro1000/DragonBetaKeyboard": {
@@ -5905,10 +5902,6 @@
   "jisro/leankey-compact": {
    "pushed": "2026-11-01T02:14:23Z",
    "created": "2026-11-01T02:13:27Z"
-  },
-  "jiutian303jeff/Desktop-Agent-Console": {
-   "pushed": "2026-10-28T21:31:50Z",
-   "created": "2026-10-28T21:28:45Z"
   },
   "jjamesmartiin/interlock-ergo": {
    "pushed": "2026-11-11T21:11:16Z",
@@ -5971,11 +5964,11 @@
    "created": "2026-11-10T15:32:53Z"
   },
   "jpwarwick92-maker/Synth": {
-   "pushed": "2026-11-23T02:46:33Z",
+   "pushed": "2026-11-27T20:36:10Z",
    "created": "2026-11-11T12:56:01Z"
   },
   "jroark/rnse": {
-   "pushed": "2026-11-25T22:53:41Z",
+   "pushed": "2026-11-27T21:34:05Z",
    "created": "2026-11-19T15:44:37Z"
   },
   "jroark/rnse-hardware": {
@@ -5991,7 +5984,7 @@
    "created": "2026-11-12T18:42:13Z"
   },
   "julianol1berato/Avell-MAG": {
-   "pushed": "2026-11-27T02:43:48Z",
+   "pushed": "2026-11-28T00:32:57Z",
    "created": "2026-11-26T05:21:09Z"
   },
   "juning98/yogodot_go": {
@@ -6005,6 +5998,10 @@
   "jyap808/pando-rmk": {
    "pushed": "2026-11-21T08:11:40Z",
    "created": "2026-11-14T09:10:30Z"
+  },
+  "kaandgnsh/use-this-instead": {
+   "pushed": "2026-11-28T02:04:39Z",
+   "created": "2026-11-28T00:51:33Z"
   },
   "kaiizu/openkey": {
    "pushed": "2026-11-17T20:22:29Z",
@@ -6078,10 +6075,6 @@
    "pushed": "2026-11-02T23:45:17Z",
    "created": "2026-10-31T15:22:40Z"
   },
-  "klbk/aura-switcher": {
-   "pushed": "2026-11-25T21:50:31Z",
-   "created": "2026-10-28T19:43:40Z"
-  },
   "kleidos-dev/boards": {
    "pushed": "2026-11-26T02:18:25Z",
    "created": "2026-11-18T08:37:51Z"
@@ -6138,6 +6131,10 @@
    "pushed": "2026-11-21T21:36:49Z",
    "created": "2026-11-11T18:24:29Z"
   },
+  "krims31/Macropad-keyboard-3x3-KiCad": {
+   "pushed": "2026-11-27T16:55:03Z",
+   "created": "2026-11-27T16:22:49Z"
+  },
   "krishhgg/boardmap": {
    "pushed": "2026-11-12T04:24:31Z",
    "created": "2026-11-10T05:05:21Z"
@@ -6151,11 +6148,11 @@
    "created": "2026-11-10T14:15:03Z"
   },
   "ksr/System-5": {
-   "pushed": "2026-11-26T17:50:59Z",
+   "pushed": "2026-11-27T17:16:07Z",
    "created": "2026-11-16T13:27:11Z"
   },
   "kurpeeren/copperflow": {
-   "pushed": "2026-11-26T03:55:50Z",
+   "pushed": "2026-11-27T17:49:33Z",
    "created": "2026-11-03T12:52:03Z"
   },
   "kwistof/javier": {
@@ -6226,9 +6223,13 @@
    "pushed": "2026-11-26T18:16:15Z",
    "created": "2026-11-26T17:43:47Z"
   },
-  "liaoyuhan520/keyboard-lab": {
-   "pushed": "2026-11-25T07:47:15Z",
-   "created": "2026-10-28T04:26:25Z"
+  "lie-jiu/nut108-driver": {
+   "pushed": "2026-11-28T02:17:11Z",
+   "created": "2026-11-27T17:29:04Z"
+  },
+  "lie-jiu/nut108-signalrgb": {
+   "pushed": "2026-11-27T17:48:23Z",
+   "created": "2026-11-27T17:45:34Z"
   },
   "lie-jiu/nut108-via": {
    "pushed": "2026-11-23T08:04:11Z",
@@ -6251,7 +6252,7 @@
    "created": "2026-11-01T12:32:48Z"
   },
   "liwut/nut65-driver": {
-   "pushed": "2026-11-01T11:13:09Z",
+   "pushed": "2026-11-27T12:40:07Z",
    "created": "2026-11-01T11:11:20Z"
   },
   "ljbergmann/k10-battery": {
@@ -6259,7 +6260,7 @@
    "created": "2026-11-05T12:59:07Z"
   },
   "ljunker/e-reader": {
-   "pushed": "2026-11-27T00:48:18Z",
+   "pushed": "2026-11-27T11:24:38Z",
    "created": "2026-11-18T12:36:22Z"
   },
   "lle1ya/vorotex-k13-studio": {
@@ -6270,20 +6271,24 @@
    "pushed": "2026-11-12T03:35:59Z",
    "created": "2026-11-11T09:17:41Z"
   },
+  "loremdifr/larper": {
+   "pushed": "2026-11-27T07:37:19Z",
+   "created": "2026-11-04T16:34:12Z"
+  },
   "lstavares84/CorePad": {
    "pushed": "2026-11-23T00:19:05Z",
    "created": "2026-11-22T12:26:34Z"
+  },
+  "lucasteixeira31/deskflow-syncfix": {
+   "pushed": "2026-11-27T15:16:18Z",
+   "created": "2026-11-27T14:17:56Z"
   },
   "lukybrou/voiceime": {
    "pushed": "2026-11-09T19:04:30Z",
    "created": "2026-11-09T17:42:35Z"
   },
-  "lungkao/RightType-mac": {
-   "pushed": "2026-10-28T06:37:40Z",
-   "created": "2026-10-28T06:30:49Z"
-  },
   "lvschouwen/lichenos-why2025-badge": {
-   "pushed": "2026-11-25T19:10:43Z",
+   "pushed": "2026-11-27T22:36:58Z",
    "created": "2026-10-31T06:40:15Z"
   },
   "lyutobor/LyuBoard": {
@@ -6310,6 +6315,10 @@
    "pushed": "2026-11-09T08:00:20Z",
    "created": "2026-11-09T07:59:03Z"
   },
+  "maistroalcon/macropad": {
+   "pushed": "2026-11-27T12:23:55Z",
+   "created": "2026-11-27T12:17:37Z"
+  },
   "make18sei-beep/zmk-config": {
    "pushed": "2026-11-21T12:40:29Z",
    "created": "2026-11-20T14:33:25Z"
@@ -6325,10 +6334,6 @@
   "malte-hansen/qmk-config": {
    "pushed": "2026-11-12T12:03:14Z",
    "created": "2026-11-12T10:15:08Z"
-  },
-  "manepalliteja37/awesome-free-electronics": {
-   "pushed": "2026-11-27T00:31:39Z",
-   "created": "2026-10-28T08:13:51Z"
   },
   "marcinx64/bc-250-power": {
    "pushed": "2026-11-18T12:20:58Z",
@@ -6395,7 +6400,7 @@
    "created": "2026-11-09T14:58:58Z"
   },
   "mcleinn/openxen": {
-   "pushed": "2026-11-27T01:47:15Z",
+   "pushed": "2026-11-27T21:58:36Z",
    "created": "2026-11-06T18:33:09Z"
   },
   "mctechnology17/zmk-peripheral-status-sync": {
@@ -6409,10 +6414,6 @@
   "meraworks/lamina": {
    "pushed": "2026-11-19T09:52:52Z",
    "created": "2026-11-06T10:39:36Z"
-  },
-  "metehanboy/RgbAmbient": {
-   "pushed": "2026-10-28T23:46:36Z",
-   "created": "2026-10-28T23:46:13Z"
   },
   "meywd/macropad-hud": {
    "pushed": "2026-11-27T02:19:15Z",
@@ -6446,6 +6447,10 @@
    "pushed": "2026-11-15T11:32:54Z",
    "created": "2026-11-15T10:52:14Z"
   },
+  "mist-8659/windows-mouse-keyboard-sharing-kvm": {
+   "pushed": "2026-11-27T15:28:38Z",
+   "created": "2026-11-27T15:27:54Z"
+  },
   "miyakostarry/split_board": {
    "pushed": "2026-11-09T04:50:26Z",
    "created": "2026-11-08T07:35:46Z"
@@ -6462,6 +6467,10 @@
    "pushed": "2026-11-16T23:48:58Z",
    "created": "2026-11-16T19:17:54Z"
   },
+  "moloyb301-eng/universal-keyboard": {
+   "pushed": "2026-11-27T08:33:14Z",
+   "created": "2026-11-27T06:34:06Z"
+  },
   "mondieuu/aula-f75-alternative": {
    "pushed": "2026-11-15T15:27:55Z",
    "created": "2026-11-10T05:55:58Z"
@@ -6469,6 +6478,10 @@
   "monstercameron/OmarKeyboard": {
    "pushed": "2026-11-18T23:22:57Z",
    "created": "2026-11-18T18:26:07Z"
+  },
+  "morganlowe/BenchBear": {
+   "pushed": "2026-11-28T01:26:57Z",
+   "created": "2026-11-27T20:03:29Z"
   },
   "mottery/macropads": {
    "pushed": "2026-11-18T14:04:18Z",
@@ -6487,7 +6500,7 @@
    "created": "2026-11-13T11:09:44Z"
   },
   "msch32/KB2040-Macropad": {
-   "pushed": "2026-11-25T21:19:57Z",
+   "pushed": "2026-11-27T21:04:11Z",
    "created": "2026-11-03T07:35:20Z"
   },
   "msk-1/xx-split-trackball-keyboard": {
@@ -6526,10 +6539,6 @@
    "pushed": "2026-11-16T17:10:01Z",
    "created": "2026-11-06T20:16:49Z"
   },
-  "nagy/tired": {
-   "pushed": "2026-11-27T00:09:50Z",
-   "created": "2026-10-28T21:20:14Z"
-  },
   "naibaf7/OpenDynKVM": {
    "pushed": "2026-11-25T22:33:04Z",
    "created": "2026-11-12T03:28:57Z"
@@ -6549,10 +6558,6 @@
   "naringrekarchinmay/keylume": {
    "pushed": "2026-11-19T03:32:06Z",
    "created": "2026-11-19T02:31:03Z"
-  },
-  "nathanvonhatten/voidos": {
-   "pushed": "2026-11-23T22:11:07Z",
-   "created": "2026-10-28T08:27:38Z"
   },
   "nathawatc/lenovo-media-keys-fix": {
    "pushed": "2026-11-04T10:34:35Z",
@@ -6579,7 +6584,7 @@
    "created": "2026-11-21T22:16:29Z"
   },
   "negimatare/bloom-macos": {
-   "pushed": "2026-11-25T09:38:53Z",
+   "pushed": "2026-11-27T08:52:14Z",
    "created": "2026-11-24T15:43:23Z"
   },
   "neknaut/nj81-config": {
@@ -6663,19 +6668,15 @@
    "created": "2026-11-18T23:13:42Z"
   },
   "notomar2014-ui/keyware": {
-   "pushed": "2026-11-26T19:43:00Z",
+   "pushed": "2026-11-27T14:56:35Z",
    "created": "2026-10-31T11:10:36Z"
-  },
-  "nounoussa12/Macropad": {
-   "pushed": "2026-10-28T19:10:23Z",
-   "created": "2026-10-28T19:02:04Z"
   },
   "noxiousbonds/keyglass": {
    "pushed": "2026-11-20T14:03:24Z",
    "created": "2026-11-20T14:01:27Z"
   },
   "nozaqk/Bright-OS": {
-   "pushed": "2026-11-27T02:40:39Z",
+   "pushed": "2026-11-28T02:39:09Z",
    "created": "2026-11-20T09:06:07Z"
   },
   "nriveras/magic-keyboard-windows": {
@@ -6719,7 +6720,7 @@
    "created": "2026-11-25T12:41:43Z"
   },
   "oiv-an/ivol-keyboard": {
-   "pushed": "2026-11-27T02:49:01Z",
+   "pushed": "2026-11-27T05:04:02Z",
    "created": "2026-11-24T07:00:30Z"
   },
   "olafont/PanelBoss": {
@@ -6778,10 +6779,6 @@
    "pushed": "2026-11-05T10:17:24Z",
    "created": "2026-11-04T17:27:41Z"
   },
-  "ouor/pocket-board": {
-   "pushed": "2026-11-04T06:49:51Z",
-   "created": "2026-10-28T11:28:06Z"
-  },
   "ovanbiervliet/oryx-diff": {
    "pushed": "2026-11-17T08:25:46Z",
    "created": "2026-11-04T13:26:59Z"
@@ -6795,7 +6792,7 @@
    "created": "2026-11-20T12:48:24Z"
   },
   "p1ngb4ck/esphome-hid": {
-   "pushed": "2026-11-14T16:32:22Z",
+   "pushed": "2026-11-27T18:43:08Z",
    "created": "2026-10-31T20:17:35Z"
   },
   "pablontiv/zmk-config": {
@@ -6818,24 +6815,24 @@
    "pushed": "2026-11-25T11:00:07Z",
    "created": "2026-11-18T04:47:48Z"
   },
-  "pavel-one/rainy75-zmk-app": {
-   "pushed": "2026-10-28T22:56:10Z",
-   "created": "2026-10-28T10:23:14Z"
+  "paulorsv01/keychron-k3-max-firmware": {
+   "pushed": "2026-11-28T02:30:24Z",
+   "created": "2026-10-30T14:49:58Z"
+  },
+  "paulorsv01/rgbctl": {
+   "pushed": "2026-11-28T02:30:52Z",
+   "created": "2026-10-30T14:44:17Z"
   },
   "pbolkhovitin/aula-f75-linux": {
    "pushed": "2026-11-14T00:17:47Z",
    "created": "2026-11-07T22:34:58Z"
-  },
-  "pdsdm/QuietGPT": {
-   "pushed": "2026-11-26T18:24:09Z",
-   "created": "2026-10-28T19:33:34Z"
   },
   "peepeecaca/pcb-keyboard1": {
    "pushed": "2026-11-06T03:33:20Z",
    "created": "2026-11-06T03:33:18Z"
   },
   "peerasak-u/Wao": {
-   "pushed": "2026-11-22T16:53:57Z",
+   "pushed": "2026-11-28T02:32:04Z",
    "created": "2026-11-21T10:58:54Z"
   },
   "peerasak-u/thai-wow-keyboard": {
@@ -6879,7 +6876,7 @@
    "created": "2026-11-19T18:01:08Z"
   },
   "pingolindev/keyboard-public": {
-   "pushed": "2026-11-26T04:20:10Z",
+   "pushed": "2026-11-27T06:57:08Z",
    "created": "2026-11-22T02:16:46Z"
   },
   "pipiBRH/hhkb-vim-mode": {
@@ -6914,10 +6911,6 @@
    "pushed": "2026-11-12T09:26:31Z",
    "created": "2026-11-11T23:07:13Z"
   },
-  "qpneruy/xinmeng-m87-qmk": {
-   "pushed": "2026-11-09T07:53:45Z",
-   "created": "2026-10-28T10:30:10Z"
-  },
   "qualzed/ru-en-fixer": {
    "pushed": "2026-11-25T11:53:44Z",
    "created": "2026-11-20T16:06:08Z"
@@ -6927,7 +6920,7 @@
    "created": "2026-11-24T07:20:40Z"
   },
   "radekmocy/zmk-config-totem": {
-   "pushed": "2026-11-26T20:32:45Z",
+   "pushed": "2026-11-27T16:58:50Z",
    "created": "2026-11-14T21:46:30Z"
   },
   "rafabittt/tectec": {
@@ -6935,7 +6928,7 @@
    "created": "2026-11-16T13:18:24Z"
   },
   "rafaelromao/prisma": {
-   "pushed": "2026-11-26T23:11:50Z",
+   "pushed": "2026-11-27T15:56:35Z",
    "created": "2026-11-08T14:42:02Z"
   },
   "raghavt20/aula-f75-macos": {
@@ -6998,21 +6991,17 @@
    "pushed": "2026-11-19T14:37:42Z",
    "created": "2026-11-17T03:37:09Z"
   },
-  "restuindrawan/fabready": {
-   "pushed": "2026-10-30T09:47:58Z",
-   "created": "2026-10-28T02:18:52Z"
-  },
-  "retsyx/LAD": {
-   "pushed": "2026-11-26T03:37:56Z",
-   "created": "2026-10-28T06:47:23Z"
-  },
   "retsyx/RAD": {
-   "pushed": "2026-11-23T05:17:27Z",
+   "pushed": "2026-11-27T07:11:12Z",
    "created": "2026-11-18T03:11:11Z"
   },
   "rgund26/rgund26.github.io": {
    "pushed": "2026-11-19T23:54:08Z",
    "created": "2026-11-19T06:08:55Z"
+  },
+  "rhymezip/TapType": {
+   "pushed": "2026-11-27T22:21:06Z",
+   "created": "2026-11-27T21:44:27Z"
   },
   "rileyr/cascade-qmk": {
    "pushed": "2026-11-11T14:54:38Z",
@@ -7091,11 +7080,11 @@
    "created": "2026-11-10T21:44:51Z"
   },
   "rover-001/anarc": {
-   "pushed": "2026-11-26T06:11:23Z",
+   "pushed": "2026-11-27T12:09:49Z",
    "created": "2026-11-10T10:43:53Z"
   },
   "ruapotato/hackerslide": {
-   "pushed": "2026-11-27T02:49:20Z",
+   "pushed": "2026-11-27T18:41:52Z",
    "created": "2026-11-24T18:55:45Z"
   },
   "rubychill/ruby66": {
@@ -7151,7 +7140,7 @@
    "created": "2026-11-22T06:28:49Z"
   },
   "saumypandey745/codetyper": {
-   "pushed": "2026-11-26T12:50:31Z",
+   "pushed": "2026-11-27T12:19:20Z",
    "created": "2026-10-30T10:56:27Z"
   },
   "sayhere556/InputStickKVM": {
@@ -7165,6 +7154,10 @@
   "scarletkc/typeling": {
    "pushed": "2026-11-05T19:39:52Z",
    "created": "2026-11-04T17:02:02Z"
+  },
+  "scunmax-web/ESP32-MacroPad": {
+   "pushed": "2026-11-27T15:16:58Z",
+   "created": "2026-11-27T14:41:21Z"
   },
   "sdpursley/AJAZZ_AK820_PRO_Custom_App": {
    "pushed": "2026-11-15T04:32:54Z",
@@ -7199,7 +7192,7 @@
    "created": "2026-11-18T22:59:34Z"
   },
   "serephus/cornix": {
-   "pushed": "2026-11-25T06:23:02Z",
+   "pushed": "2026-11-27T11:54:54Z",
    "created": "2026-11-24T14:29:45Z"
   },
   "serieh/FantasTech": {
@@ -7235,7 +7228,7 @@
    "created": "2026-11-24T10:26:39Z"
   },
   "shnarazk/35Engram-code": {
-   "pushed": "2026-11-26T23:22:42Z",
+   "pushed": "2026-11-27T08:54:45Z",
    "created": "2026-11-24T10:26:39Z"
   },
   "shogunxfortnite-cyber/COD-themed-human-radar": {
@@ -7278,16 +7271,12 @@
    "pushed": "2026-11-20T10:23:34Z",
    "created": "2026-11-06T10:25:15Z"
   },
-  "silber-star/ax-key12-macropad-mac": {
-   "pushed": "2026-10-28T20:25:48Z",
-   "created": "2026-10-28T20:13:50Z"
-  },
   "silent-command/mega-keybridge": {
    "pushed": "2026-11-18T00:03:07Z",
    "created": "2026-11-17T23:40:05Z"
   },
   "siliconwitch/keyboard": {
-   "pushed": "2026-11-26T13:20:18Z",
+   "pushed": "2026-11-27T16:18:45Z",
    "created": "2026-11-23T12:27:39Z"
   },
   "sillyhappydog/tiltboy": {
@@ -7295,7 +7284,7 @@
    "created": "2026-11-07T16:21:32Z"
   },
   "silvercenturion36-hash/custom-macropad-3d-model": {
-   "pushed": "2026-11-26T11:00:33Z",
+   "pushed": "2026-11-27T10:13:44Z",
    "created": "2026-11-26T09:24:59Z"
   },
   "singhabhinav02/Italics-Keyboard": {
@@ -7322,12 +7311,20 @@
    "pushed": "2026-11-18T04:28:15Z",
    "created": "2026-11-13T03:55:38Z"
   },
+  "slowlane112/Midi-Box": {
+   "pushed": "2026-11-27T09:01:51Z",
+   "created": "2026-11-26T07:12:34Z"
+  },
+  "smulewsk/picoradio": {
+   "pushed": "2026-11-27T22:22:41Z",
+   "created": "2026-11-27T09:42:53Z"
+  },
   "snark013/pc-card-basilea": {
    "pushed": "2026-11-13T16:26:12Z",
    "created": "2026-11-13T16:12:07Z"
   },
   "sneakylizard123-4/KaiCad": {
-   "pushed": "2026-11-27T00:50:13Z",
+   "pushed": "2026-11-27T22:43:45Z",
    "created": "2026-11-06T15:23:16Z"
   },
   "soallabs-AZ/soal-macropad": {
@@ -7335,7 +7332,7 @@
    "created": "2026-11-05T16:12:42Z"
   },
   "sobh/fullerene": {
-   "pushed": "2026-11-23T22:36:54Z",
+   "pushed": "2026-11-27T23:54:12Z",
    "created": "2026-11-13T07:59:35Z"
   },
   "sohrabcreative-sketch/nova75-studio": {
@@ -7363,7 +7360,7 @@
    "created": "2026-11-25T10:18:41Z"
   },
   "southgrovelab/RP2040_Mini_Keyboard": {
-   "pushed": "2026-11-26T19:56:13Z",
+   "pushed": "2026-11-27T04:02:57Z",
    "created": "2026-11-26T19:56:06Z"
   },
   "sp9r/keyball44-layer6-jis": {
@@ -7422,16 +7419,8 @@
    "pushed": "2026-11-25T21:09:07Z",
    "created": "2026-11-22T21:10:37Z"
   },
-  "stephenkrolikowskiUD/-MacroPad": {
-   "pushed": "2026-10-29T17:44:53Z",
-   "created": "2026-10-28T18:28:38Z"
-  },
-  "steveed/a1200kb-external-case": {
-   "pushed": "2026-10-28T19:20:53Z",
-   "created": "2026-10-28T01:32:44Z"
-  },
   "steveed/c128-led-keyboard": {
-   "pushed": "2026-11-25T18:59:24Z",
+   "pushed": "2026-11-28T02:52:20Z",
    "created": "2026-11-23T17:41:25Z"
   },
   "sthifen/aleta": {
@@ -7449,6 +7438,10 @@
   "stovness/womier-driver-linux": {
    "pushed": "2026-11-19T05:04:27Z",
    "created": "2026-11-02T23:13:08Z"
+  },
+  "strumalong9779/StrumAlong": {
+   "pushed": "2026-11-27T21:21:14Z",
+   "created": "2026-11-24T20:00:02Z"
   },
   "sudohakan/trklavye": {
    "pushed": "2026-11-06T21:15:15Z",
@@ -7531,11 +7524,11 @@
    "created": "2026-11-17T08:51:48Z"
   },
   "te9no/zmk-config-CaGiMe": {
-   "pushed": "2026-11-21T23:47:15Z",
+   "pushed": "2026-11-27T03:53:25Z",
    "created": "2026-11-18T11:08:19Z"
   },
   "team-mirae/bada": {
-   "pushed": "2026-11-26T09:05:12Z",
+   "pushed": "2026-11-28T00:43:20Z",
    "created": "2026-11-23T21:37:14Z"
   },
   "techkayacodes/astro-kbd": {
@@ -7598,12 +7591,8 @@
    "pushed": "2026-11-14T17:22:01Z",
    "created": "2026-11-09T22:57:10Z"
   },
-  "theGBguy/nepali-unicode-keyboard": {
-   "pushed": "2026-11-24T13:48:09Z",
-   "created": "2026-10-28T09:01:13Z"
-  },
   "theNeonTerminal/MacroPad-V2": {
-   "pushed": "2026-11-26T17:32:48Z",
+   "pushed": "2026-11-27T17:17:56Z",
    "created": "2026-11-14T06:36:55Z"
   },
   "thebenedict/tinkerbadge-web": {
@@ -7635,7 +7624,7 @@
    "created": "2026-11-17T03:39:17Z"
   },
   "theman6660/PadSplit": {
-   "pushed": "2026-11-23T04:16:38Z",
+   "pushed": "2026-11-27T03:57:08Z",
    "created": "2026-11-23T04:04:12Z"
   },
   "thiago-carneiro/AutoLayout": {
@@ -7666,8 +7655,12 @@
    "pushed": "2026-11-14T14:25:22Z",
    "created": "2026-11-14T05:48:56Z"
   },
+  "tiberiuichim/keyboard-programmer": {
+   "pushed": "2026-11-27T07:45:08Z",
+   "created": "2026-11-27T07:23:27Z"
+  },
   "tienduc120/cuakey": {
-   "pushed": "2026-11-27T02:47:18Z",
+   "pushed": "2026-11-27T10:02:24Z",
    "created": "2026-11-21T00:52:59Z"
   },
   "tieumoc2811/macropad15": {
@@ -7695,7 +7688,7 @@
    "created": "2026-11-01T09:14:28Z"
   },
   "timoncool/aurora-desktop-profile": {
-   "pushed": "2026-11-26T12:50:26Z",
+   "pushed": "2026-11-27T12:43:20Z",
    "created": "2026-11-09T16:14:02Z"
   },
   "timur-code-guy/Key-Helper": {
@@ -7711,7 +7704,7 @@
    "created": "2026-11-24T10:12:37Z"
   },
   "tomandesMSH/mk-pkg": {
-   "pushed": "2026-11-03T12:17:13Z",
+   "pushed": "2026-11-27T20:36:47Z",
    "created": "2026-11-03T11:31:43Z"
   },
   "tommythorn/dactyl-xlcc": {
@@ -7742,6 +7735,10 @@
    "pushed": "2026-11-25T18:41:50Z",
    "created": "2026-11-25T18:38:20Z"
   },
+  "tungmv/hyprkey": {
+   "pushed": "2026-11-27T10:20:36Z",
+   "created": "2026-11-27T10:20:29Z"
+  },
   "tupinikeebs/Cygnus_ZMK": {
    "pushed": "2026-11-17T12:55:47Z",
    "created": "2026-11-17T12:51:14Z"
@@ -7759,7 +7756,7 @@
    "created": "2026-11-13T12:01:32Z"
   },
   "tyevco/prettycoolboards": {
-   "pushed": "2026-11-27T02:41:08Z",
+   "pushed": "2026-11-27T21:50:55Z",
    "created": "2026-11-08T00:35:15Z"
   },
   "tyk1225/flydek": {
@@ -7777,10 +7774,6 @@
   "ujjwal11805234/Windows-Keyboard-Key-Disabler": {
    "pushed": "2026-11-19T08:54:38Z",
    "created": "2026-11-19T08:32:17Z"
-  },
-  "ulkden/zmk-yakme": {
-   "pushed": "2026-11-07T10:03:37Z",
-   "created": "2026-10-28T05:19:38Z"
   },
   "uniwuyuan/banzi": {
    "pushed": "2026-11-12T02:33:39Z",
@@ -7814,20 +7807,12 @@
    "pushed": "2026-11-23T20:55:23Z",
    "created": "2026-11-21T16:08:00Z"
   },
-  "valentinsaint28-cloud/MECHANICAL-OPEN-SOURCE-KEYBOARD": {
-   "pushed": "2026-10-28T09:09:51Z",
-   "created": "2026-10-28T09:09:49Z"
-  },
-  "valentinsaint28-cloud/Python_Learning_Game": {
-   "pushed": "2026-11-26T09:37:39Z",
-   "created": "2026-10-28T09:09:49Z"
-  },
   "valeronm/open-dongle": {
    "pushed": "2026-11-17T22:11:02Z",
    "created": "2026-11-11T12:22:53Z"
   },
   "valeronm/spare-dongle": {
-   "pushed": "2026-11-27T01:50:04Z",
+   "pushed": "2026-11-28T01:57:17Z",
    "created": "2026-11-11T12:22:53Z"
   },
   "vampir551/Lapskey": {
@@ -7847,7 +7832,7 @@
    "created": "2026-10-29T06:57:10Z"
   },
   "ved0el/triokey": {
-   "pushed": "2026-11-27T02:25:38Z",
+   "pushed": "2026-11-27T07:54:22Z",
    "created": "2026-11-25T10:50:57Z"
   },
   "vegetables-awa/splitplay": {
@@ -7875,7 +7860,7 @@
    "created": "2026-11-01T11:17:59Z"
   },
   "vipulgupta2048/clacketier": {
-   "pushed": "2026-11-26T14:36:20Z",
+   "pushed": "2026-11-27T15:57:38Z",
    "created": "2026-11-25T20:51:31Z"
   },
   "virkanmol191/custom-keyboard-planner": {
@@ -7887,7 +7872,7 @@
    "created": "2026-11-26T07:26:38Z"
   },
   "visiuun/expressive-keyboard": {
-   "pushed": "2026-11-14T18:21:37Z",
+   "pushed": "2026-11-27T19:28:51Z",
    "created": "2026-11-02T20:26:49Z"
   },
   "viton13com/nabor": {
@@ -7895,7 +7880,7 @@
    "created": "2026-11-14T21:23:46Z"
   },
   "vitormoreiradesenvolvedor/dragonize": {
-   "pushed": "2026-11-08T05:00:22Z",
+   "pushed": "2026-11-27T18:10:36Z",
    "created": "2026-11-07T01:58:05Z"
   },
   "vlad-rey/wireless-battery-monitor": {
@@ -7923,20 +7908,12 @@
    "created": "2026-11-12T23:44:38Z"
   },
   "vsydorenko91/lofree-flow-via": {
-   "pushed": "2026-11-11T19:27:00Z",
+   "pushed": "2026-11-28T00:38:40Z",
    "created": "2026-11-09T18:35:50Z"
-  },
-  "vtubeadmirer/simple-macropad": {
-   "pushed": "2026-10-28T08:03:49Z",
-   "created": "2026-10-28T07:51:30Z"
   },
   "w0rxbend/macropad-obs": {
    "pushed": "2026-11-21T11:40:25Z",
    "created": "2026-11-15T20:40:13Z"
-  },
-  "w0rxbend/worxboard": {
-   "pushed": "2026-11-12T18:47:31Z",
-   "created": "2026-10-28T21:35:51Z"
   },
   "w0rxbend/worxboard-ergo": {
    "pushed": "2026-11-14T10:20:25Z",
@@ -8007,7 +7984,7 @@
    "created": "2026-11-13T16:30:35Z"
   },
   "worxbend/macropad": {
-   "pushed": "2026-11-26T21:39:21Z",
+   "pushed": "2026-11-27T20:29:44Z",
    "created": "2026-11-12T18:39:30Z"
   },
   "worxbend/worxpad": {
@@ -8018,10 +7995,6 @@
    "pushed": "2026-11-15T17:10:00Z",
    "created": "2026-11-15T17:09:59Z"
   },
-  "wquguru/tryboard": {
-   "pushed": "2026-10-29T00:24:49Z",
-   "created": "2026-10-28T14:42:25Z"
-  },
   "wsj-br/esp32-KMJ": {
    "pushed": "2026-11-22T01:30:40Z",
    "created": "2026-11-17T23:28:46Z"
@@ -8029,6 +8002,10 @@
   "wujacz/steelseries-apex7-linux": {
    "pushed": "2026-11-07T22:10:33Z",
    "created": "2026-11-07T22:10:26Z"
+  },
+  "wuyongkunko/key-burst": {
+   "pushed": "2026-11-27T06:09:19Z",
+   "created": "2026-11-27T06:05:27Z"
   },
   "wyxu95/Gamepad2KBM": {
    "pushed": "2026-11-20T21:59:25Z",
@@ -8049,6 +8026,10 @@
   "xaviermsd/evofox-ronin-configurator": {
    "pushed": "2026-11-11T16:29:24Z",
    "created": "2026-10-31T17:32:22Z"
+  },
+  "xavigonzalvo/screen-mutex": {
+   "pushed": "2026-11-27T21:30:56Z",
+   "created": "2026-11-27T19:44:51Z"
   },
   "xhugoliu/p31n": {
    "pushed": "2026-11-20T08:51:31Z",
@@ -8099,7 +8080,7 @@
    "created": "2026-10-29T07:34:22Z"
   },
   "y974352-svg/Hack-Club-Forge-first-project": {
-   "pushed": "2026-11-21T02:16:31Z",
+   "pushed": "2026-11-27T02:58:13Z",
    "created": "2026-11-16T01:16:34Z"
   },
   "yApple11/SquirclePad": {
@@ -8126,13 +8107,17 @@
    "pushed": "2026-11-18T05:21:09Z",
    "created": "2026-11-17T14:23:43Z"
   },
+  "yeisme/clavis": {
+   "pushed": "2026-11-27T16:17:47Z",
+   "created": "2026-11-14T14:45:29Z"
+  },
   "yeroo/op36-helper": {
    "pushed": "2026-11-05T05:41:05Z",
    "created": "2026-10-30T10:10:03Z"
   },
-  "yi-yezhiqiu/WuwaTappo-IdleHelper": {
-   "pushed": "2026-10-31T08:06:28Z",
-   "created": "2026-10-28T15:24:15Z"
+  "yesilyurtahmeteren/math-keyboard-macos": {
+   "pushed": "2026-11-27T12:49:57Z",
+   "created": "2026-11-27T12:49:49Z"
   },
   "yilmazedis/KeyRepeater": {
    "pushed": "2026-11-11T15:24:45Z",
@@ -8151,7 +8136,7 @@
    "created": "2026-11-18T17:49:51Z"
   },
   "yourpwnguy/redragon-k617": {
-   "pushed": "2026-11-09T07:35:02Z",
+   "pushed": "2026-11-27T17:09:12Z",
    "created": "2026-11-09T07:29:39Z"
   },
   "yousefwa7eed/KeyConv": {
@@ -8239,23 +8224,19 @@
    "created": "2026-11-10T04:24:40Z"
   },
   "zhuyansen/awesome-3d-skills": {
-   "pushed": "2026-11-26T18:09:15Z",
+   "pushed": "2026-11-27T17:54:23Z",
    "created": "2026-11-07T09:52:53Z"
   },
   "zjncn/aula-keyboard-tool": {
    "pushed": "2026-11-16T11:53:24Z",
    "created": "2026-11-16T11:49:14Z"
   },
-  "zphilFOW/macropad": {
-   "pushed": "2026-10-29T20:32:16Z",
-   "created": "2026-10-28T17:16:44Z"
-  },
   "zpqnzpqn/KeyKey-Keyboard": {
    "pushed": "2026-11-01T09:09:06Z",
    "created": "2026-11-01T05:45:33Z"
   },
   "zrecore/kicad-em-fdtd": {
-   "pushed": "2026-11-27T02:38:30Z",
+   "pushed": "2026-11-28T02:45:06Z",
    "created": "2026-11-19T21:53:49Z"
   },
   "zrong-me/Auto_Typer": {
